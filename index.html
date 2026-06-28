@@ -160,7 +160,7 @@
 <button class="pill" onclick="showSection('Physical-Safety')" style="color:var(--ps)">🤖 <span class="tax-id nav-id">P2</span> Physical Safety</button>
 <button class="pill" onclick="showSection('Interaction-Safety')" style="color:var(--is)">🤝 <span class="tax-id nav-id">I2</span> Interaction Safety</button>
 <button class="pill" onclick="showSection('Societal-Safety')" style="color:var(--ss)">🏛 <span class="tax-id nav-id">S2</span> Societal Safety</button>
-<button class="pill" onclick="jumpToCriteria()">3H1R 기준</button>
+<button class="pill" onclick="jumpToCriteria()">3H1R 프레임워크</button>
 </div>
 <div class="main">
 <div class="summary-box">
@@ -2762,9 +2762,9 @@
 </div></div>
 </section>
 <details class="criteria-section" id="three-h-one-r-criteria">
-<summary>3H1R 기준</summary>
+<summary>3H1R 프레임워크와 리스크 Taxonomy 설계 원칙</summary>
 <div class="criteria-body">
-<p>3H1R은 피지컬 AI가 어떤 <strong>정렬 가치(alignment value)</strong>를 실패하고 있는가를 판정하는 분석 프레임워크이다. 본 절은 <strong>1. 개념적 정의 → 2. Physical AI 적용 기준(판별 규칙) → 3. 구조적 관계 → 4. 표기 원칙</strong>의 순서로 기술하여, 동일한 카드에 대해 누가 태깅하더라도 같은 결과가 나오도록(재현 가능하도록) 판정 규칙을 명시한다.</p>
+<p>3H1R은 피지컬 AI가 어떤 <strong>정렬 가치(alignment value)</strong>를 실패하고 있는가를 판정하는 분석 프레임워크이다. 본 절은 <strong>3H1R 정렬 프레임워크(1–4)</strong>와, 그 판정을 리스크로 구조화·축적하는 <strong>리스크 Taxonomy 설계 원칙(5)</strong>을 함께 기술한다. 순서는 1. 개념적 정의 → 2. Physical AI 적용 기준(판별 규칙) → 3. 구조적 관계 → 4. 표기 원칙 → 5. 리스크 Taxonomy 설계 원칙이며, 동일한 카드에 대해 누가 태깅하더라도 같은 결과가 나오도록(재현 가능하도록) 규칙을 명시한다.</p>
 
 <h3>1. 3H1R의 개념적 정의</h3>
 <p>3H(Helpful·Harmless·Honest)는 대규모 언어모델 정렬의 <strong>HHH 기준</strong>(Askell et al., 2021<sup class="cite"><a href="#ref1">1</a></sup>)에서, 1R(Role Consistency)은 <strong>헌법적 AI 및 역할·행동 제약</strong> 연구(Bai et al., 2022<sup class="cite"><a href="#ref2">2</a></sup>; Sermanet et al., 2025<sup class="cite"><a href="#ref3">3</a></sup>)에서 가져와 Physical AI로 확장한 것이다. Physical AI 안전성 평가의 최근 경험적 기반으로는 ASIMOV Benchmark v1<sup class="cite"><a href="#ref3">3</a></sup>·v2<sup class="cite"><a href="#ref4">4</a></sup>를 참조한다. 아래는 각 차원의 가치 정의이며, 물리 맥락으로의 번역은 2절에서 다룬다.</p>
@@ -2828,6 +2828,19 @@
 <tr><td><strong>Secondary</strong></td><td>그 실패가 전개될 때 파생적으로 관여하는 차원</td><td><span class="criteria-code">H3 Honest[S]</span></td></tr>
 </tbody>
 </table>
+
+<h3>5. 리스크 Taxonomy 설계 원칙</h3>
+<p>1–4절이 <em>가치 축</em>의 판정 규칙이라면, 본 절은 그 판정을 리스크로 구조화·축적하는 <em>분류체계(Taxonomy) 축</em>의 설계 원칙이다.</p>
+<table class="criteria-table">
+<thead><tr><th>원칙</th><th>내용</th></tr></thead>
+<tbody>
+<tr><td><strong>계층 구조</strong></td><td>L0 소유권 수준 → L1 Physical AI Risks → L2 범주 → L3 하위범주 → L4 리스크 카드의 5계층으로 조직한다.</td></tr>
+<tr><td><strong>범주화 기준</strong></td><td>포괄성(coverage)과 상호배타성(MECE)을 실무적으로 지향하되, 경계 사례는 임의 흡수하지 않고 명시적 이관 결정과 이력 기록으로 처리한다.</td></tr>
+<tr><td><strong>리스크 카드 스키마</strong></td><td>단일 실패 단위(한 카드 = 하나의 식별 가능한 실패 모드), 조작적 정의(행동·제약·상태), 출처·벤치마크 링크(카드당 ≤5), 심각도·확률 프록시, 3H1R 태깅(인과 근접성), 분류 위치를 갖춘다.</td></tr>
+<tr><td><strong>거버넌스·재현성</strong></td><td>출처 중복(DOI·제목·URL) 배제, 저관련성 출처 정리, 계층 이관 이력 관리로 동일한 근거와 판별 규칙에서 동일한 분류가 재현되도록 한다.</td></tr>
+</tbody>
+</table>
+<div class="criteria-note"><strong>두 축의 결합:</strong> 각 리스크 카드는 <em>분류체계 축</em>에서 하나의 리스크 유형 위치를 갖고, <em>가치 축</em>에서 3H1R Primary/Secondary 태그를 가진다(3절의 2축 매핑).</div>
 </div>
 </details>
 <section class="refs-section" id="references">
