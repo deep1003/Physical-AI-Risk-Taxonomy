@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">3H1R structural relationship for Physical AI risk review</title>
+  <desc id="desc">Helpful and Harmless are in tension. Honest mediates the two, and Role Consistency stabilizes all three across contexts.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#121826" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b42318"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#175cd3"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6941c6"/>
+    </marker>
+  </defs>
+
+  <rect width="980" height="520" rx="18" fill="#fbfcff"/>
+  <rect x="32" y="28" width="916" height="464" rx="16" fill="#ffffff" stroke="#e6eaf2" filter="url(#shadow)"/>
+
+  <text x="70" y="72" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="24" font-weight="800" fill="#202939">3H1R 구조적 관계</text>
+  <text x="70" y="102" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" fill="#667085">Physical AI 리스크 카드의 Primary / Secondary 정렬 기준</text>
+
+  <rect x="92" y="162" width="210" height="78" rx="18" fill="#ecfdf3" stroke="#12b76a" stroke-width="2"/>
+  <text x="197" y="194" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="23" font-weight="800" fill="#166534">H2 Helpful</text>
+  <text x="197" y="219" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" fill="#475467">작업 완수와 실제 도움</text>
+
+  <rect x="678" y="162" width="210" height="78" rx="18" fill="#fef3f2" stroke="#f04438" stroke-width="2"/>
+  <text x="783" y="194" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="23" font-weight="800" fill="#991b1b">H1 Harmless</text>
+  <text x="783" y="219" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" fill="#475467">피지컬 피해 방지</text>
+
+  <line x1="320" y1="201" x2="660" y2="201" stroke="#b42318" stroke-width="3" marker-start="url(#arrow-red)" marker-end="url(#arrow-red)"/>
+  <rect x="437" y="176" width="106" height="42" rx="21" fill="#fff1f3" stroke="#fda29b"/>
+  <text x="490" y="202" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="18" font-weight="800" fill="#b42318">긴장</text>
+
+  <rect x="350" y="292" width="280" height="80" rx="18" fill="#eff8ff" stroke="#2e90fa" stroke-width="2"/>
+  <text x="490" y="324" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="23" font-weight="800" fill="#1849a9">H3 Honest</text>
+  <text x="490" y="349" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" fill="#475467">인지·판단·불확실성으로 중재</text>
+
+  <path d="M410 292 C330 276 260 256 220 240" fill="none" stroke="#175cd3" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <path d="M570 292 C650 276 720 256 760 240" fill="none" stroke="#175cd3" stroke-width="3" marker-end="url(#arrow-blue)"/>
+
+  <rect x="306" y="414" width="368" height="52" rx="18" fill="#f4f3ff" stroke="#7a5af8" stroke-width="2"/>
+  <text x="490" y="435" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="20" font-weight="800" fill="#5925dc">RC Role Consistency</text>
+  <text x="490" y="457" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" fill="#475467">맥락 변화 속에서 3H를 안정화</text>
+
+  <line x1="490" y1="414" x2="490" y2="382" stroke="#6941c6" stroke-width="3" marker-end="url(#arrow-purple)"/>
+  <path d="M348 440 C235 420 160 333 180 252" fill="none" stroke="#6941c6" stroke-width="2.4" stroke-dasharray="7 6" marker-end="url(#arrow-purple)"/>
+  <path d="M632 440 C745 420 820 333 800 252" fill="none" stroke="#6941c6" stroke-width="2.4" stroke-dasharray="7 6" marker-end="url(#arrow-purple)"/>
+
+  <text x="70" y="132" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" fill="#344054">
+    Helpful-Harmless tradeoff를 H3가 중재하고, RC가 세 축을 맥락 전반에서 안정화한다.
+  </text>
+</svg>

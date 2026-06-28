@@ -92,11 +92,6 @@
       font-size: 11px;
     }
 
-    
-    /* ── 3H1R alignment legend (v7) ── */
-    .hhh-legend{display:flex;flex-wrap:wrap;gap:6px;padding:9px 32px 8px;background:#fffef8;border-bottom:1px solid #ece8d6;font-size:11px;align-items:center;}
-    .hhh-legend-title{font-size:11px;font-weight:700;color:#555;margin-right:6px;}
-
   .tax-id{display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;line-height:1;padding:3px 6px;border-radius:6px;background:#f0f2f5;color:#333;margin-right:6px;letter-spacing:0;}
   .l2-id{background:#1b1b2f;color:#fff;}
   .l3-id,.summary-id,.nav-id{background:#eef2f7;color:#344054;border:1px solid #d6dce5;}
@@ -111,6 +106,19 @@
   .card-justification .just-item:last-child::after{content:".";}
   @keyframes targetFlash{0%{box-shadow:0 0 0 0 rgba(227,179,65,.65);}100%{box-shadow:0 0 0 8px rgba(227,179,65,0);}}
   .l2-section.jump-highlight .l2-header,.l3-group.jump-highlight>.l3-header{animation:targetFlash 1.2s ease-out;background:#fffaf0;}
+  .criteria-section{scroll-margin-top:74px;background:#fff;border-radius:8px;margin:4px 0 28px;box-shadow:0 1px 4px rgba(0,0,0,.08);overflow:hidden;}
+  .criteria-section summary{cursor:pointer;list-style:none;padding:16px 20px;font-size:15px;font-weight:700;display:flex;align-items:center;gap:10px;border-left:4px solid #1a1a2e;}
+  .criteria-section summary::-webkit-details-marker{display:none;}
+  .criteria-section summary::before{content:"▶";font-size:10px;color:#888;transition:transform .2s;}
+  .criteria-section[open] summary::before{transform:rotate(90deg);}
+  .criteria-body{padding:0 20px 20px;border-top:1px solid #f0f0f0;}
+  .criteria-body p{font-size:12px;color:#667085;line-height:1.6;margin:12px 0;}
+  .criteria-figure{margin:14px 0 16px;background:#f8fafc;border:1px solid #e6eaf2;border-radius:8px;padding:12px;}
+  .criteria-figure img{display:block;width:100%;max-width:980px;margin:0 auto;height:auto;}
+  .criteria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:12px;}
+  .criteria-card{border:1px solid #edf0f5;border-radius:8px;padding:12px;background:#fbfcff;}
+  .criteria-card strong{display:block;font-size:12px;margin-bottom:5px;color:#202939;}
+  .criteria-card span{display:block;font-size:12px;color:#667085;line-height:1.5;}
 </style>
 </head>
 <body>
@@ -126,8 +134,8 @@
 <button class="pill" onclick="showSection('Societal-Safety')" style="color:var(--ss)">🏛 <span class="tax-id nav-id">S2</span> Societal Safety</button>
 <button class="pill" onclick="expandAll()">전체 펼치기</button>
 <button class="pill" onclick="collapseAll()">전체 접기</button>
+<button class="pill" onclick="jumpToCriteria()">3H1R 기준</button>
 </div>
-<div class="hhh-legend"><span class="hhh-legend-title">3H1R 정렬</span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H1 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#1b5e20;color:#fff;border:1.5px solid #1b5e20;font-weight:700">H2 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#0d47a1;color:#fff;border:1.5px solid #0d47a1;font-weight:700">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="color:#ccc;margin:0 2px">│</span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#fff;color:#b71c1c;border:1.5px solid #e91e63;font-weight:400">H1 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#fff;color:#2e7d32;border:1.5px solid #4caf50;font-weight:400">H2 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#fff;color:#1565c0;border:1.5px solid #42a5f5;font-weight:400">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#fff;color:#6a1b9a;border:1.5px solid #9c27b0;font-weight:400">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="color:#999;margin-left:8px;font-style:italic">P=Primary, S=Secondary · 2026-06-24</span></div>
 <div class="main">
 <div class="summary-box">
 <h2>분류 현황</h2>
@@ -2727,6 +2735,23 @@
 </div>
 </div></div>
 </section>
+<details class="criteria-section" id="three-h-one-r-criteria">
+<summary>3H1R 기준</summary>
+<div class="criteria-body">
+<p>AI2X-3H1R 관점에서 Physical AI 기준을 발췌·요약했다. 3H1R은 L4 리스크 카드의 실패 차원을 Primary와 Secondary로 구분하기 위한 판정 기준이다.</p>
+<figure class="criteria-figure">
+<img alt="Helpful과 Harmless의 긴장을 Honest가 중재하고 Role Consistency가 3H를 안정화하는 3H1R 구조적 관계" src="../assets/3h1r-structural-relationship.svg"/>
+</figure>
+<div class="criteria-grid">
+<div class="criteria-card"><strong>H1 Harmless</strong><span>신체 상해, 재산 피해, 환경 피해처럼 피지컬 피해가 발생하거나 발생할 수 있는가를 본다.</span></div>
+<div class="criteria-card"><strong>H2 Helpful</strong><span>물리 작업 완수와 안전 요구사항 사이의 균형 실패를 본다.</span></div>
+<div class="criteria-card"><strong>H3 Honest</strong><span>센서 인지 오류, 상황 판단 오류, 불확실성 과소평가나 미전파를 본다.</span></div>
+<div class="criteria-card"><strong>RC Role Consistency</strong><span>역할, 안전 제약, 행동 원칙이 적대적 입력이나 엣지 케이스에서도 유지되는지 본다.</span></div>
+<div class="criteria-card"><strong>Primary</strong><span>카드 정의에서 직접 드러나는 핵심 실패 차원이다.</span></div>
+<div class="criteria-card"><strong>Secondary</strong><span>리스크가 발생할 때 파생적으로 함께 관여하는 실패 차원이다.</span></div>
+</div>
+</div>
+</details>
 </div>
 <script>
 function toggle(el){
@@ -2778,6 +2803,13 @@ function jumpToTaxId(taxId){
   target.classList.add('jump-highlight');
   window.setTimeout(()=>target.classList.remove('jump-highlight'),1300);
   if(history.replaceState) history.replaceState(null,'',taxHash(taxId));
+}
+function jumpToCriteria(){
+  const target=document.getElementById('three-h-one-r-criteria');
+  if(!target) return;
+  target.open=true;
+  scrollToTaxTarget(target);
+  if(history.replaceState) history.replaceState(null,'','#three-h-one-r-criteria');
 }
 function initSummaryNavigation(){
   document.querySelectorAll('#summary-tbody tr').forEach(row=>{
