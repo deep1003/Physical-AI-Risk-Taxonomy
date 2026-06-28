@@ -20,6 +20,13 @@ Human decision on 2026-06-28 moved `S3.10` Lack of Robustness in Unseen Environm
 
 ## 2. 3H1R Alignment Rule
 
+The current 3H1R axis order is:
+
+- `H1 Harmless`: physical and social non-harm, safety constraints, and refusal of unsafe action,
+- `H2 Helpful`: task utility, successful assistance, and useful completion of intended work,
+- `H3 Honest`: truthful sensing, calibrated uncertainty, and accurate representation of limits,
+- `RC Role`: role, authority, control boundary, and deployment-context governance.
+
 3H1R Primary marks identify the main failure mechanism, not every downstream consequence. A card should normally have one Primary axis and may have at most two Primary axes when there is a clear tradeoff or explicit causal branch.
 
 Three Primary axes are allowed only as documented exceptions. Each exception must state why three axes are simultaneously causal rather than merely downstream. The current exception list is published in `data/three_h_one_r_primary_exceptions_20260628.csv` and `.json`.
