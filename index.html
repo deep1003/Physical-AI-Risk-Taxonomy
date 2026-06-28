@@ -143,8 +143,6 @@
 <button class="pill" onclick="showSection('Physical-Safety')" style="color:var(--ps)">🤖 <span class="tax-id nav-id">P2</span> Physical Safety</button>
 <button class="pill" onclick="showSection('Interaction-Safety')" style="color:var(--is)">🤝 <span class="tax-id nav-id">I2</span> Interaction Safety</button>
 <button class="pill" onclick="showSection('Societal-Safety')" style="color:var(--ss)">🏛 <span class="tax-id nav-id">S2</span> Societal Safety</button>
-<button class="pill" onclick="expandAll()">전체 펼치기</button>
-<button class="pill" onclick="collapseAll()">전체 접기</button>
 <button class="pill" onclick="jumpToCriteria()">3H1R 기준</button>
 </div>
 <div class="main">
@@ -2799,7 +2797,6 @@ function toggle(el){
   ch.style.transform=body.classList.contains('collapsed')?'':'rotate(90deg)';
 }
 function expandAll(){document.querySelectorAll('.l3-body').forEach(b=>{b.classList.remove('collapsed');b.previousElementSibling.querySelector('.chevron').style.transform='rotate(90deg)';});}
-function collapseAll(){document.querySelectorAll('.l3-body').forEach(b=>{b.classList.add('collapsed');b.previousElementSibling.querySelector('.chevron').style.transform='';});}
 function openTaxonomyHome(){
   window.location.href='https://deep1003.github.io/Physical-AI-Risk-Taxonomy/';
 }
