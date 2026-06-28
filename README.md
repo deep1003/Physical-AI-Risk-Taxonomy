@@ -1,6 +1,6 @@
-# Physical AI Risk Taxonomy
+# Responsible AI Risk Taxonomy v2.0
 
-This repository publishes an interactive L4 risk-card taxonomy for Physical AI systems: embodied AI, humanoids, robots, drones, autonomous vehicles, cyber-physical systems, and other AI systems that perceive, decide, and act in the physical world.
+This repository publishes an interactive Responsible AI risk taxonomy for Physical AI Risks: embodied AI, humanoids, robots, drones, autonomous vehicles, cyber-physical systems, and other AI systems that perceive, decide, and act in the physical world.
 
 Live page:
 
@@ -9,7 +9,7 @@ Live page:
 ## Contents
 
 - `index.html` — public GitHub Pages entry point for the interactive taxonomy.
-- `docs/pai_risk_taxonomy_bilingual_v1.0.html` — versioned copy of the taxonomy HTML.
+- `docs/pai_risk_taxonomy_bilingual_v2.0.html` — versioned copy of the taxonomy HTML.
 - `data/l4_cards.csv` and `data/l4_cards.json` — extracted L4 card metadata.
 - `data/l4_references.csv` and `data/l4_references.json` — card-level reference and justification table.
 - `data/taxonomy_migrations.json` — human-approved hierarchy migration notes.
@@ -29,7 +29,7 @@ Live page:
 
 ## Taxonomy IDs
 
-The root L1 category is Physical AI. Its three L2 children use short stable IDs: `P2` for Physical Safety, `I2` for Interaction Safety, and `S2` for Societal Safety.
+The root L1 category is Physical AI Risks. Its three L2 children use short stable IDs: `P2` for Physical Safety, `I2` for Interaction Safety, and `S2` for Societal Safety.
 
 L3 categories use the same domain prefix and the L3 level number, followed by a local sequence number. For example, `P3.1` means the first L3 category under Physical Safety. L4 risks keep their original card IDs, such as `PHYSBENCH-REF-0017`.
 

@@ -1,12 +1,12 @@
 {
-  "title": "Physical AI Risk Taxonomy",
-  "version": "v1.0",
+  "title": "Responsible AI Risk Taxonomy v2.0",
+  "version": "v2.0",
   "cards": 182,
   "references": 321,
   "linked_references": 314,
   "max_references_per_card": 5,
   "cards_over_5_references": 0,
-  "id_scheme": "L1: Physical AI; L2: P2/I2/S2; L3: domain prefix + level 3 + sequence, e.g., P3.1. S3.10 migrated to P3.9 on 2026-06-28.",
+  "id_scheme": "L1: Physical AI Risks; L2: P2/I2/S2; L3: domain prefix + level 3 + sequence, e.g., P3.1. S3.10 migrated to P3.9 on 2026-06-28.",
   "hierarchy": [
     {
       "l2_id": "P2",
@@ -168,6 +168,7 @@
   "three_h_one_r_primary_rule": "Primary is normally 1 axis, at most 2 axes. Three Primary axes require an explicit exception reason.",
   "l1": {
     "level": "L1",
-    "name": "Physical AI"
-  }
+    "name": "Physical AI Risks"
+  },
+  "subtitle": "L1 Physical AI Risks · L2 Categories · L3 Sub-categories · L4 Risk Cards"
 }
