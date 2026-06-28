@@ -8,8 +8,8 @@ Live page:
 
 ## Contents
 
-- `index.html` — public GitHub Pages entry point for the interactive taxonomy.
-- `docs/pai_risk_taxonomy_bilingual_v2.0.html` — versioned copy of the taxonomy HTML.
+- `index.html` — master public GitHub Pages entry point for the interactive taxonomy.
+- `docs/pai_risk_taxonomy_bilingual_v2.0.html` — versioned copy synced from `index.html` with docs-relative asset paths.
 - `data/l4_cards.csv` and `data/l4_cards.json` — extracted L4 card metadata.
 - `data/l4_references.csv` and `data/l4_references.json` — card-level reference and justification table.
 - `data/taxonomy_migrations.json` — human-approved hierarchy migration notes.
