@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="580" viewBox="0 0 1000 580" role="img" aria-labelledby="title desc" font-family="Helvetica, Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="600" viewBox="0 0 1040 600" role="img" aria-labelledby="title desc" font-family="Helvetica, Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
   <title id="title">3H1R structural relationship for Physical AI risk review</title>
-  <desc id="desc">Harmless on the left and Helpful on the right are in tension. Honest mediates the two, and Role Consistency stabilizes all three across contexts. Monochrome schematic.</desc>
+  <desc id="desc">Harmless on the left and Helpful on the right are in tension. Honest mediates the two, and Role Consistency stabilizes all three across contexts. Monochrome schematic, centered node text.</desc>
   <defs>
     <marker id="ah-solid" markerWidth="10" markerHeight="10" refX="6.5" refY="3.2" orient="auto" markerUnits="userSpaceOnUse">
       <path d="M0,0 L7,3.2 L0,6.4 z" fill="#1f1f1f"/>
@@ -13,59 +13,65 @@
     </marker>
   </defs>
 
-  <rect width="1000" height="580" fill="#ffffff"/>
-  <rect x="20" y="20" width="960" height="540" rx="8" fill="#ffffff" stroke="#dcdcdc" stroke-width="1"/>
+  <rect width="1040" height="600" fill="#ffffff"/>
+  <rect x="20" y="20" width="1000" height="560" rx="8" fill="#ffffff" stroke="#dcdcdc" stroke-width="1"/>
 
   <text x="52" y="58" font-size="22" font-weight="700" fill="#141414">3H1R 구조적 관계</text>
   <text x="52" y="84" font-size="13" fill="#6b6b6b">Physical AI 리스크 카드의 Primary / Secondary 정렬 구조 — 무해성(좌) ↔ 유용성(우)</text>
-  <line x1="52" y1="100" x2="948" y2="100" stroke="#ededed" stroke-width="1"/>
+  <line x1="52" y1="100" x2="988" y2="100" stroke="#ededed" stroke-width="1"/>
 
   <!-- ===== H1 Harmless (LEFT) ===== -->
-  <rect x="66" y="150" width="262" height="104" rx="10" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6"/>
-  <rect x="82" y="166" width="34" height="20" rx="4" fill="#111111"/>
-  <text x="99" y="180" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">H1</text>
-  <text x="126" y="182" font-size="16" font-weight="700" fill="#141414">Harmless · 무해성</text>
-  <text x="84" y="212" font-size="12.5" fill="#555555">사람·재산·환경에 대한</text>
-  <text x="84" y="232" font-size="12.5" fill="#555555">물리적 위해의 예방·완화</text>
+  <rect x="60" y="150" width="300" height="120" rx="10" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6"/>
+  <rect x="195" y="166" width="30" height="18" rx="4" fill="#111111"/>
+  <text x="210" y="179" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">H1</text>
+  <text x="210" y="208" text-anchor="middle" font-size="16" font-weight="700" fill="#141414">Harmless · 무해성</text>
+  <text x="210" y="234" text-anchor="middle" font-size="12.5" fill="#555555">의도적·비의도적</text>
+  <text x="210" y="254" text-anchor="middle" font-size="12.5" fill="#555555">물리적 위해의 예방 및 완화</text>
 
   <!-- ===== H2 Helpful (RIGHT) ===== -->
-  <rect x="672" y="150" width="262" height="104" rx="10" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6"/>
-  <rect x="688" y="166" width="34" height="20" rx="4" fill="#444444"/>
-  <text x="705" y="180" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">H2</text>
-  <text x="732" y="182" font-size="16" font-weight="700" fill="#141414">Helpful · 유용성</text>
-  <text x="690" y="212" font-size="12.5" fill="#555555">사용자 의도에 맞게</text>
-  <text x="690" y="232" font-size="12.5" fill="#555555">작업을 안전하게 완수</text>
+  <rect x="680" y="150" width="300" height="120" rx="10" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6"/>
+  <rect x="815" y="166" width="30" height="18" rx="4" fill="#444444"/>
+  <text x="830" y="179" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">H2</text>
+  <text x="830" y="208" text-anchor="middle" font-size="16" font-weight="700" fill="#141414">Helpful · 유용성</text>
+  <text x="830" y="234" text-anchor="middle" font-size="12.5" fill="#555555">사용자 의도·맥락에 부합하는</text>
+  <text x="830" y="254" text-anchor="middle" font-size="12.5" fill="#555555">과업의 안전한 수행</text>
 
   <!-- tension link -->
-  <line x1="336" y1="202" x2="664" y2="202" stroke="#1f1f1f" stroke-width="1.8" marker-start="url(#ah-solid-start)" marker-end="url(#ah-solid)"/>
-  <rect x="450" y="184" width="100" height="36" rx="6" fill="#ffffff" stroke="#bdbdbd" stroke-width="1"/>
-  <text x="500" y="207" text-anchor="middle" font-size="13" font-weight="700" fill="#222222">긴장 · tradeoff</text>
+  <line x1="368" y1="210" x2="672" y2="210" stroke="#1f1f1f" stroke-width="1.8" marker-start="url(#ah-solid-start)" marker-end="url(#ah-solid)"/>
+  <rect x="464" y="192" width="112" height="34" rx="6" fill="#ffffff" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="520" y="214" text-anchor="middle" font-size="13" font-weight="700" fill="#222222">긴장 · tradeoff</text>
 
   <!-- ===== H3 Honest (CENTER, mediator) ===== -->
-  <rect x="372" y="306" width="256" height="104" rx="10" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6"/>
-  <rect x="388" y="322" width="34" height="20" rx="4" fill="#333333"/>
-  <text x="405" y="336" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">H3</text>
-  <text x="432" y="338" font-size="16" font-weight="700" fill="#141414">Honest · 정직성</text>
-  <text x="390" y="368" font-size="12.5" fill="#555555">세계를 정확히 인식하고</text>
-  <text x="390" y="388" font-size="12.5" fill="#555555">불확실성을 전달</text>
+  <rect x="370" y="300" width="300" height="120" rx="10" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6"/>
+  <rect x="505" y="316" width="30" height="18" rx="4" fill="#333333"/>
+  <text x="520" y="329" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">H3</text>
+  <text x="520" y="358" text-anchor="middle" font-size="16" font-weight="700" fill="#141414">Honest · 정직성</text>
+  <text x="520" y="384" text-anchor="middle" font-size="12.5" fill="#555555">정확한 상황 인식과</text>
+  <text x="520" y="404" text-anchor="middle" font-size="12.5" fill="#555555">불확실성의 전달</text>
 
-  <!-- Honest mediates both -->
-  <path d="M420 306 C360 280 252 260 200 254" fill="none" stroke="#1f1f1f" stroke-width="1.8" marker-end="url(#ah-solid)"/>
-  <path d="M580 306 C640 280 748 260 800 254" fill="none" stroke="#1f1f1f" stroke-width="1.8" marker-end="url(#ah-solid)"/>
-  <text x="300" y="286" text-anchor="middle" font-size="11.5" fill="#3a3a3a">중재 · mediates</text>
-  <text x="700" y="286" text-anchor="middle" font-size="11.5" fill="#3a3a3a">중재 · mediates</text>
+  <!-- Honest mediates both (arcs) -->
+  <path d="M430 300 C360 287 280 280 232 272" fill="none" stroke="#1f1f1f" stroke-width="1.8" marker-end="url(#ah-solid)"/>
+  <path d="M610 300 C680 287 760 280 808 272" fill="none" stroke="#1f1f1f" stroke-width="1.8" marker-end="url(#ah-solid)"/>
+  <!-- mediates labels: white chip, lifted off the arcs -->
+  <rect x="258" y="246" width="116" height="24" rx="6" fill="#ffffff"/>
+  <text x="316" y="263" text-anchor="middle" font-size="11.5" fill="#3a3a3a">중재 · mediates</text>
+  <rect x="666" y="246" width="116" height="24" rx="6" fill="#ffffff"/>
+  <text x="724" y="263" text-anchor="middle" font-size="11.5" fill="#3a3a3a">중재 · mediates</text>
 
   <!-- ===== RC Role Consistency (BASE, stabilizer) ===== -->
-  <rect x="356" y="462" width="288" height="82" rx="10" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6"/>
-  <rect x="372" y="478" width="38" height="20" rx="4" fill="#222222"/>
-  <text x="391" y="492" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">RC</text>
-  <text x="420" y="494" font-size="16" font-weight="700" fill="#141414">Role Consistency · 역할 일관성</text>
-  <text x="374" y="524" font-size="12.5" fill="#555555">맥락이 바뀌어도 역할·안전 원칙을 유지</text>
+  <rect x="350" y="452" width="340" height="104" rx="10" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.6"/>
+  <rect x="505" y="468" width="30" height="18" rx="4" fill="#222222"/>
+  <text x="520" y="481" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">RC</text>
+  <text x="520" y="510" text-anchor="middle" font-size="16" font-weight="700" fill="#141414">Role Consistency · 역할 일관성</text>
+  <text x="520" y="536" text-anchor="middle" font-size="12.5" fill="#555555">맥락 변화에도 역할·안전 원칙의 일관된 유지</text>
 
   <!-- RC -> Honest (solid) -->
-  <line x1="500" y1="462" x2="500" y2="414" stroke="#1f1f1f" stroke-width="1.8" marker-end="url(#ah-solid)"/>
+  <line x1="520" y1="452" x2="520" y2="424" stroke="#1f1f1f" stroke-width="1.8" marker-end="url(#ah-solid)"/>
+  <!-- stabilizes label: shifted to the RIGHT of the vertical arrow -->
+  <rect x="540" y="426" width="128" height="24" rx="6" fill="#ffffff"/>
+  <text x="604" y="443" text-anchor="middle" font-size="11.5" fill="#3a3a3a">안정화 · stabilizes</text>
+
   <!-- RC -> Harmless / Helpful (dashed, stabilize) -->
-  <path d="M398 484 C250 468 150 360 176 256" fill="none" stroke="#6b6b6b" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#ah-dash)"/>
-  <path d="M602 484 C750 468 850 360 824 256" fill="none" stroke="#6b6b6b" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#ah-dash)"/>
-  <text x="500" y="442" text-anchor="middle" font-size="11.5" fill="#3a3a3a">안정화 · stabilizes</text>
+  <path d="M404 474 C250 458 150 360 180 274" fill="none" stroke="#6b6b6b" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#ah-dash)"/>
+  <path d="M636 474 C790 458 890 360 860 274" fill="none" stroke="#6b6b6b" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#ah-dash)"/>
 </svg>
