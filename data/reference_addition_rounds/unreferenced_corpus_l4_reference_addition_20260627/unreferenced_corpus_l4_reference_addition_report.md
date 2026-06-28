@@ -1,0 +1,108 @@
+# Unreferenced Corpus L4 Reference Addition Report
+
+- Access-checked unreferenced Top 200: 200
+- 2024+ papers/reports in Top 200: 140
+- 2023+ papers/reports in Top 200: 168
+- Applied after quality review: 23
+- Removed after quality review: 24
+- Cards touched: 23
+- Card reference limit: max 5, over-limit 0
+
+## Applied Additions
+
+- **PHYSBENCH-REF-0025** 임계 이격 거리 위반 (Critical separation-distance violation) -> A Multimodal Approach to Human Safety in Collaborative Robotic Workcells (2022)
+  - 근거: 피지컬 AI 시스템에서 '임계 이격 거리 위반' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; A Multimodal Approach to Huma… (Costanzo et al., 2022)
+  - URL: https://doi.org/10.1109/tase.2020.3043286
+- **PHYSBENCH-REF-0032** 안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation) -> Explainable and Safety Aware Deep Reinforcement Learning-Based Control of Nonlinear Discrete-Time Systems Usi… (2025)
+  - 근거: 설명 가능한 안전 제어에서 '안전 강화학습 제약 위반' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Explainable and Safety Aware… (Farzanegan et al., 2025)
+  - URL: https://doi.org/10.1109/tase.2025.3554431
+- **PHYSBENCH-REF-0045** 제약 모니터링 실패 (Constraint monitoring failure) -> Personalized Assistance in Robotic Rehabilitation: Real-Time Adaptation via Energy-Based Performance Monitori… (2025)
+  - 근거: 피지컬 AI 시스템에서 '제약 모니터링 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Personalized Assistance in Ro… (Pezeshki et al., 2025)
+  - URL: https://doi.org/10.1109/tase.2025.3552446
+- **PHYSBENCH-REF-0048** 위험 작업 계획 실패 (Hazardous task planning failure) -> Agentic LLM-based robotic systems for real-world applications: a review on their agenticness and ethics (2025)
+  - 근거: 피지컬 AI 시스템에서 '위험 작업 계획 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Agentic LLM-based robotic sys… (Raptis et al., 2025)
+  - URL: https://doi.org/10.3389/frobt.2025.1605405
+- **PHYSBENCH-REF-0053** 장애물 개입 충돌 (Obstacle intervention collision) -> Deep reinforcement learning-based local path planning in dynamic environments for mobile robot☆ (2024)
+  - 근거: 불확실한 환경의 경로 계획에서 '장애물 개입 충돌' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Deep reinforcement learning-b… (Tao et al., 2024)
+  - URL: https://doi.org/10.1016/j.jksuci.2024.102254
+- **PHYSBENCH-REF-0054** 안전-성능 균형 실패 (Safety-performance trade-off failure) -> Personalized Assistance in Robotic Rehabilitation: Real-Time Adaptation via Energy-Based Performance Monitori… (2025)
+  - 근거: 피지컬 AI 시스템에서 '안전-성능 균형 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Personalized Assistance in Ro… (Pezeshki et al., 2025)
+  - URL: https://doi.org/10.1109/tase.2025.3552446
+- **PHYSBENCH-REF-0055** 제어 장벽 함수 실패 (Control barrier function safety-filter failure) -> Explainable and Safety Aware Deep Reinforcement Learning-Based Control of Nonlinear Discrete-Time Systems Usi… (2025)
+  - 근거: 설명 가능한 안전 제어에서 '제어 장벽 함수 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Explainable and Safety Aware… (Farzanegan et al., 2025)
+  - URL: https://doi.org/10.1109/tase.2025.3554431
+- **PHYSBENCH-REF-0061** 접촉 조작 힘 감지 실패 (Contact-rich manipulation force-sensing failure) -> Learning-Based High-Precision Force Estimation and Compliant Control for Small-Scale Continuum Robot (2024)
+  - 근거: 피지컬 AI 시스템에서 '접촉 조작 힘 감지 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Learning-Based High-Precision… (Xiang et al., 2024)
+  - URL: https://doi.org/10.1109/tase.2023.3311179
+- **PHYSBENCH-REF-0066** 전신 이동 충돌 위험 (Whole-body locomotion collision risk) -> Socially Acceptable Bipedal Robot Navigation via Social Zonotope Network Model Predictive Control (2025)
+  - 근거: 불확실한 환경의 경로 계획에서 '전신 이동 충돌 위험' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Socially Acceptable Bipedal R… (Shamsah et al., 2025)
+  - URL: https://doi.org/10.1109/tase.2024.3519012
+- **PHYSBENCH-REF-0068** 정밀 휴머노이드 접촉력 위험 (Dexterous humanoid contact-force risk) -> Reactive motion planning framework based on control barrier function and sampling-based MPC for humanoid uppe… (2025)
+  - 근거: 제어 장벽 함수 기반 모션 계획에서 '정밀 휴머노이드 접촉력 위험' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Reactive motion planning fram… (Chen et al., 2025)
+  - URL: https://doi.org/10.1007/s11431-025-3053-1
+- **PHYSBENCH-REF-0069** 전신 도달 한계 위반 (Whole-body reach-limit violation) -> Reactive motion planning framework based on control barrier function and sampling-based MPC for humanoid uppe… (2025)
+  - 근거: 제어 장벽 함수 기반 모션 계획에서 '전신 도달 한계 위반' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Reactive motion planning fram… (Chen et al., 2025)
+  - URL: https://doi.org/10.1007/s11431-025-3053-1
+- **PHYSBENCH-REF-0073** 보조 로봇 개입 타이밍 실패 (Assistive robot intervention mistiming) -> Personalized Assistance in Robotic Rehabilitation: Real-Time Adaptation via Energy-Based Performance Monitori… (2025)
+  - 근거: 피지컬 AI 시스템에서 '보조 로봇 개입 타이밍 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Personalized Assistance in Ro… (Pezeshki et al., 2025)
+  - URL: https://doi.org/10.1109/tase.2025.3552446
+- **PHYSBENCH-REF-0076** 인간 모방 분포 이동 (Human-mimicking distribution shift) -> Toward Reliable Imitation Learning With Limited Expert Demonstrations via Search-Based Inverse Dynamic Learni… (2026)
+  - 근거: 피지컬 AI 시스템에서 '인간 모방 분포 이동' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Toward Reliable Imitation Lea… (Lin et al., 2026)
+  - URL: https://doi.org/10.1109/tase.2026.3668970
+- **PHYSBENCH-REF-0086** 오픈월드 조작 커버리지 공백 (Open-world humanoid manipulation coverage gap) -> Lyapunov-Regularized Meta-Learning Adaptive Control for a Vision-Language Model-Guided Wheeled Humanoid Robot… (2026)
+  - 근거: 피지컬 AI 시스템에서 '오픈월드 조작 커버리지 공백' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Lyapunov-Regularized Meta-Lea… (Ran et al., 2026)
+  - URL: https://doi.org/10.1109/tase.2026.3670845
+- **PHYSBENCH-REF-0091** 잠재 상태 압축 안전 손실 (Latent-state compression safety loss) -> Learning-Based Risk-Bounded Path Planning Under Environmental Uncertainty (2024)
+  - 근거: 불확실한 환경의 경로 계획에서 '잠재 상태 압축 안전 손실' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Learning-Based Risk-Bounded P… (Meng et al., 2024)
+  - URL: https://doi.org/10.1109/tase.2023.3297176
+- **PHYSBENCH-REF-0099** 가정 비안전 행동 미검출 (Household unsafe-action false negative) -> IEI-TIA: Industrial Embodied Intelligence Trustworthy Interpretable Agent for Robotic Long-Horizon and Repeti… (2026)
+  - 근거: 피지컬 AI 시스템에서 '가정 비안전 행동 미검출' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; IEI-TIA: Industrial Embodied… (Dong et al., 2026)
+  - URL: https://doi.org/10.1109/tase.2026.3687369
+- **PHYSBENCH-REF-0104** 휴머노이드 충돌력 초과 (Humanoid collision-force exceedance) -> Reactive motion planning framework based on control barrier function and sampling-based MPC for humanoid uppe… (2025)
+  - 근거: 제어 장벽 함수 기반 모션 계획에서 '휴머노이드 충돌력 초과' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Reactive motion planning fram… (Chen et al., 2025)
+  - URL: https://doi.org/10.1007/s11431-025-3053-1
+- **PHYSBENCH-REF-0105** 휴머노이드 파지력 초과 (Humanoid grip-force exceedance) -> TacSuit: A Wearable Large-Area, Bioinspired Multimodal Tactile Skin for Collaborative Robots (2024)
+  - 근거: 촉각·힘 센서 기반 로봇 제어에서 '휴머노이드 파지력 초과' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; TacSuit: A Wearable Large-Are… (Zhou et al., 2024)
+  - URL: https://doi.org/10.1109/tie.2023.3253921
+- **PHYSRISK-REF-0001** 가림에 의한 충돌 (Occlusion-induced collision) -> NR-RRT: Neural Risk-Aware Near-Optimal Path Planning in Uncertain Nonconvex Environments (2024)
+  - 근거: 불확실한 환경의 경로 계획에서 '가림에 의한 충돌' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; NR-RRT: Neural Risk-Aware Nea… (Meng et al., 2024)
+  - URL: https://doi.org/10.1109/tase.2022.3215562
+- **PHYSRISK-REF-0003** 다중 센서 융합 충돌 (Multimodal sensor fusion conflict) -> A Multimodal Approach to Human Safety in Collaborative Robotic Workcells (2022)
+  - 근거: 피지컬 AI 시스템에서 '다중 센서 융합 충돌' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; A Multimodal Approach to Huma… (Costanzo et al., 2022)
+  - URL: https://doi.org/10.1109/tase.2020.3043286
+- **PHYSRISK-REF-0011** 속도·힘 한계 위반 (Speed and force limit violation) -> Learning Neural Force Manifolds for Sim2Real Robotic Symmetrical Paper Folding (2025)
+  - 근거: 피지컬 AI 시스템에서 '속도·힘 한계 위반' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Learning Neural Force Manifol… (Choi et al., 2025)
+  - URL: https://doi.org/10.1109/tase.2024.3366909
+- **PHYSRISK-REF-0039** 드론 공역 충돌 (Drone airspace conflict) -> Hybrid AI-based 4D trajectory management system for dense low altitude operations and Urban Air Mobility (2024)
+  - 근거: 피지컬 AI 시스템에서 '드론 공역 충돌' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Hybrid AI-based 4D trajectory… (Xie et al., 2024)
+  - URL: https://doi.org/10.1016/j.ast.2024.109422
+- **PHYSRISK-REF-0040** 창고 로봇 보행자 충돌 (Warehouse robot pedestrian conflict) -> Socially Acceptable Bipedal Robot Navigation via Social Zonotope Network Model Predictive Control (2025)
+  - 근거: 불확실한 환경의 경로 계획에서 '창고 로봇 보행자 충돌' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Socially Acceptable Bipedal R… (Shamsah et al., 2025)
+  - URL: https://doi.org/10.1109/tase.2024.3519012
+
+## Removed After Quality Review
+
+- **PHYSBENCH-REF-0005** A Hybrid Framework Based on Bio-Signal and Built-in Force Sensor for Human-Robot Active Co-Carrying (2025)
+- **PHYSBENCH-REF-0029** Cooperative Path Planning for Heterogeneous UAV Swarms: A Stackelberg Game Approach (2025)
+- **PHYSBENCH-REF-0031** Enhancing Dynamic Security Assessment in Smart Grids Through Quantum Federated Learning (2026)
+- **PHYSBENCH-REF-0034** MultiSentimentArcs: a novel method to measure coherence in multimodal sentiment analysis for long-f… (2024)
+- **PHYSBENCH-REF-0036** Advances in low-altitude airspace management for uncrewed aircraft and advanced air mobility (2025)
+- **PHYSBENCH-REF-0040** Standardizing an Ontology for Ethically Aligned Robotic and Autonomous Systems (2024)
+- **PHYSBENCH-REF-0063** Advancements and prospects in key technologies for robotic pollination in greenhouse pepper breedin… (2026)
+- **PHYSBENCH-REF-0067** Practical Mixed Palletizing Manipulator System: Incorporating Practical Reinforcement Learning and… (2026)
+- **PHYSBENCH-REF-0079** Design and Experimental Validation of Deep Reinforcement Learning-Based Fast Trajectory Planning an… (2024)
+- **PHYSBENCH-REF-0081** Estimated Informed Anytime Search for Sampling-Based Planning via Adaptive Sampler (2025)
+- **PHYSBENCH-REF-0083** Toward Reliable Imitation Learning With Limited Expert Demonstrations via Search-Based Inverse Dyna… (2026)
+- **PHYSBENCH-REF-0085** Vision-and Tactile-Based Continuous Multimodal Intention and Attention Recognition for Safer Physic… (2024)
+- **PHYSBENCH-REF-0088** Estimated Informed Anytime Search for Sampling-Based Planning via Adaptive Sampler (2025)
+- **PHYSBENCH-REF-0092** Socially Acceptable Bipedal Robot Navigation via Social Zonotope Network Model Predictive Control (2025)
+- **PHYSKR-REF-009** Admittance-Based Controller Design for Physical Human-Robot Interaction in the Constrained Task Spa… (2020)
+- **PHYSRISK-REF-0002** Practical Mixed Palletizing Manipulator System: Incorporating Practical Reinforcement Learning and… (2026)
+- **PHYSRISK-REF-0004** A Neural Computing-Based Access Control Protocol for AI-Driven Intelligent Flying Vehicles in Indus… (2024)
+- **PHYSRISK-REF-0009** AI-based low-altitude delivery fresh food supply Chain: Research progress and trends (2025)
+- **PHYSRISK-REF-0014** Constrained Reinforcement Learning Using Distributional Representation for Trustworthy Quadrotor UA… (2025)
+- **PHYSRISK-REF-0020** Toward Realization of Low-Altitude Economy Networks: Core Architecture, Integrated Technologies, an… (2025)
+- **PHYSRISK-REF-0024** A comprehensive survey of Federated Intrusion Detection Systems: Techniques, challenges and solutio… (2025)
+- **PHYSRISK-REF-0027** Unveiling the core of IoT: comprehensive review on data security challenges and mitigation strategi… (2024)
+- **PHYSRISK-REF-0029** AI-based low-altitude delivery fresh food supply Chain: Research progress and trends (2025)
+- **PHYSRISK-REF-0036** Standardizing an Ontology for Ethically Aligned Robotic and Autonomous Systems (2024)

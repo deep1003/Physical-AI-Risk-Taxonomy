@@ -1,0 +1,240 @@
+match_score,card_idx,card_badge,card_label,card_refs_before,overlap_tags,rank,source_file,year,title,abstract,venue,institution,document_type,doi,url,landing_page_url,pdf_url,authors,first_author,citations,record_id,matched_terms,matched_l3,record_type,title_key,doi_key,candidate_url,url_key,score,selection_reason,checked_url,access_ok,status_code,final_url,content_type,access_error,justification,refs_after
+1.31,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,drone;privacy;vehicle,58,,2025,"Significant Advancements in UAV Technology for Reliable Oil and Gas
+   Pipeline Monitoring","Unmanned aerial vehicles (UAVs) technology is rapidly advancing,
+   offering innovative solutions for various industries, including the
+   critical task of oil and gas pipeline surveillance. However, the limited
+   flight time of conventional UAVs presents a significant challenge to
+   comprehensive and continuous monitoring, which is crucial for
+   maintaining the integrity of pipeline infrastructure. This review paper
+   evaluates methods for extending UAV flight endurance, focusing on their
+   potential application in pipeline inspection. Through an extensive
+   literature review, this study identifies the latest advancements in UAV
+   technology, evaluates their effectiveness, and highlights the existing
+   gaps in achieving prolonged flight operations. Advanced techniques,
+   including artificial intelligence (AI), machine learning (ML), and deep
+   learning (DL), are reviewed for their roles in pipeline monitoring.
+   Notably, DL algorithms like You Only Look Once (YOLO) are explored for
+   autonomous flight in UAV-based inspections, real-time defect detection,
+   such as cracks, corrosion, and leaks, enhancing reliability and
+   accuracy. A vital aspect of this research is the proposed deployment of
+   a hybrid drone design combining lighter-than-air (LTA) and
+   heavier-than-air (HTA) principles, achieving a balance of endurance and
+   maneuverability. LTA vehicles utilize buoyancy to reduce energy
+   consumption, thereby extending flight durations. The paper details the
+   methodology for designing LTA vehicles, presenting an analysis of design
+   parameters that align with the requirements for effective pipeline
+   surveillance. The ongoing work is currently at Technology Readiness
+   Level (TRL) 4, where key components have been validated in laboratory
+   conditions, with fabrication and flight testing planned for the next
+   phase. Initial design analysis indicates that LTA configurations could
+   offer significant advantages in flight endurance compared to traditional
+   UAV designs. These findings lay the groundwork for future fabrication
+   and testing phases, which will be critical in validating and assessing
+   the proposed approach's real- world applicability. By outlining the
+   technical complexities and proposing specialized techniques tailored for
+   pipeline monitoring, this paper provides a foundational framework for
+   advancing UAV capabilities in the oil and gas sector. Researchers and
+   industry practitioners can use this roadmap to further develop
+   UAV-enabled surveillance solutions, aiming to improve the reliability,
+   efficiency, and safety of pipeline monitoring.",CMES-COMPUTER MODELING IN ENGINEERING \& SCIENCES,,Review,10.32604/cmes.2025.058598,,,,"Aromoye, Ibrahim Akinjobi and Lo, Hai Hiung and Sebastian, Patrick and
+   Abro, Ghulam E. Mustafa and Ayinla, Shehu Lukman",,21.0,WOS:001399736300001,,,paper,significant advancements in uav technology for reliable oil and gas pipeline monitoring,10.32604/cmes.2025.058598,https://doi.org/10.32604/cmes.2025.058598,https://doi.org/10.32604/cmes.2025.058598,173.275,citations=21; year=2025; risk_terms=3; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.32604/cmes.2025.058598,True,200.0,https://www.techscience.com/CMES/v142n2/59374,text/html; charset=UTF-8,,"드론·저고도 비행 안전에서 실시간 지연 및 동기화 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Significant Advancements in U… (Aromoye et al., 2025)",4
+1.305,119,PHYSRISK-REF-0001,가림에 의한 충돌 (Occlusion-induced collision),4,collision;navigation;vehicle,178,,2023,"Nexus of Deep Reinforcement Learning and Leader-Follower Approach for
+   AIoT Enabled Aerial Networks","The Industrial Internet of Things (IIoT) is a new industrial 4.0
+   paradigm that combines IoT, robotics, cyber-physical systems, and other
+   future industrial advancements. Unmanned aerial vehicles (UAVs), part of
+   the IIoT infrastructure, have a significant potential for civil and
+   military purposes. Through the artificial intelligence of things (AIoT),
+   a well-organized group of UAVs outperforms a single large UAV in terms
+   of device scalability, maintenance, and expense. Therefore, the UAV
+   swarm with industry 4.0 intelligence can be used for a wide range of
+   24/7 security and remote monitoring applications. Though multi-UAV
+   systems are beneficial, their application has many challenges. There is
+   a high risk of collision in the multi-UAV system without coordination.
+   This article proposes an AIoT-based navigation and formation control
+   (AIoT-NFC) mechanism to scale down the collision risk by combining deep
+   reinforcement learning (DRL) with the leader-follower approach. In
+   AIoT-NFC, a deep deterministic policy gradient (DDPG) based algorithm is
+   proposed to navigate UAVs in remote surveillance without colliding with
+   obstacles and other UAVs. Furthermore, the AIoT-NFC system incorporates
+   a fault tolerance mechanism that can handle the scenario of a leader's
+   failure due to actuator malfunction. Experimental results show that the
+   AIoT-NFC achieves faster convergence with a lower collision rate.
+   AIoT-NFC reduced the collision rate by 14.99\% compared to existing
+   navigation methods in successful formation without colliding with the
+   other UAVs.",IEEE TRANSACTIONS ON INDUSTRIAL INFORMATICS,,Article,10.1109/TII.2022.3226529,,,,"Raja, Gunasekaran and Essaky, Selvam and Ganapathisubramaniyan,
+   Aishwarya and Baskar, Yashvandh",,26.0,WOS:001030673600057,,,paper,nexus of deep reinforcement learning and leader follower approach for aiot enabled aerial networks,10.1109/tii.2022.3226529,https://doi.org/10.1109/tii.2022.3226529,https://doi.org/10.1109/tii.2022.3226529,158.142,citations=26; year=2023; risk_terms=5; physical_terms=7,https://doi.org/10.1109/tii.2022.3226529,True,202.0,https://ieeexplore.ieee.org/document/9969936/,text/html; charset=UTF-8,,"안전 강화학습에서 가림에 의한 충돌이 실제 안전 문제로 이어질 수 있음을 다룬다; Nexus of Deep Reinforcement L… (Raja et al., 2023)",5
+1.197,54,PHYSBENCH-REF-0055,제어 장벽 함수 실패 (Control barrier function safety-filter failure),2,collision;uncertainty,34,,2024,"Adaptive Fault-Tolerant Tracking Control for Affine Nonlinear Systems
+   With Unknown Dynamics via Reinforcement Learning","This paper investigates the optimal fault-tolerant tracking control
+   (FTTC) problem for unknown affine nonlinear continuous-time systems with
+   process and actuator faults in the framework of reinforcement learning
+   (RL). The proposed novel active FTTC scheme is based on adaptive optimal
+   control theory. In this way, the FTTC problem is formulated as an
+   optimal regulation problem for the augmented system, which consists of
+   the controlled system and the reference trajectory. To solve the
+   Hamilton-Jacobi-Bellman (HJB) equation of the augmented system, an
+   identifier-critic-based online RL strategy is employed with a dual
+   neural network (NN) approximation structure. Initially, in order to
+   remove the requirement of prior knowledge of the system dynamics, an
+   adaptive NN identifier is designed. The forgetting factor in the
+   proposed identifier update law is variable and a function of the
+   filtered state estimation error and filtered state error. Choosing this
+   variable forgetting factor increases the convergence speed and decreases
+   the estimation error of identifier NN weights compared to the constant
+   one while maintaining its robustness. When a fault occurs, the system
+   continues to operate under the former FTTC until the fault is detected.
+   Meanwhile, the optimal FTTC design in the RL framework requires the
+   initial admissible control condition. In order to make it possible to
+   initiate the FTTC learning process from the former FTTC, we employed a
+   stabilizing term in the critical update rule. The Uniformly Ultimately
+   Boundedness (UUB) of identifier and critic NN weight errors and, as a
+   result, the convergence of the control input to the neighborhood of the
+   optimal solution are all proved by Lyapunov theory. In the proposed
+   method, changes in the values of faults are detected by comparing the
+   HJB error to a predefined threshold. Finally, the simulation results are
+   given to validate the effectiveness of the developed method. Note to
+   Practitioners-long-time operations and the influence of external
+   perturbations often make the faults inevitable for many practical
+   engineering systems which can lead to unpredictable behaviors and
+   catastrophic impacts. In general, the faults are naturally uncertain in
+   time, value, and pattern, that is, it is unknown when, how much, and
+   which system components fail. Therefore, the control system must be able
+   to tolerate an extensive set of component faults. The design of optimal
+   model-free FTTC strategies in an adaptive manner is challenging in
+   nonlinear systems. The proposed method is suitable for a large class of
+   nonlinear systems with input-affine form, and guarantees the system
+   stability in the presence of process and actuator faults.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2022.3223702,,,,"Roshanravan, Sajad and Shamaghdari, Saeed",,45.0,WOS:000903462000001,,,paper,adaptive fault tolerant tracking control for affine nonlinear systems with unknown dynamics via reinforcement learning,10.1109/tase.2022.3223702,https://doi.org/10.1109/tase.2022.3223702,https://doi.org/10.1109/tase.2022.3223702,178.601,citations=45; year=2024; risk_terms=2; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2022.3223702,True,202.0,https://ieeexplore.ieee.org/document/9994664/,text/html; charset=UTF-8,,"안전 강화학습에서 제어 장벽 함수 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Adaptive Fault-Tolerant Track… (Roshanravan et al., 2024)",3
+1.185,64,PHYSBENCH-REF-0085,가정 장기 계획 조작 위험 (Household long-horizon manipulation risk),1,collision;manipulation,184,,2025,"Multimodal Perception for Indoor Mobile Robotics Navigation and Safe
+   Manipulation","Indoor mobile robotics (IMR) has gained significant attention due to its
+   potential applications in various domains, such as healthcare,
+   logistics, and domestic assistance. However, navigating through indoor
+   environments and performing safe manipulations still pose intractable
+   challenges in terms of navigation accuracy and obstacle avoidance. To
+   solve these issues, this article presents an artificial intelligence
+   (AI) embodied multimodal perception framework for IMR intelligent
+   navigation and safe manipulation. To ensure the navigation accuracy and
+   robustness, we employ the complementary forward RGB camera, downward QR
+   vision sensor, and wheel encoder measurements in a unified framework.
+   The visual residuals and wheel odometry residuals are jointly minimized
+   to estimate the robot states. To guarantee the safety of robotic
+   manipulation tasks, we have developed an AI model that integrates
+   transformer network with convolutional neural network, to associate the
+   long-range RGB \& depth patches and aggregate the multiscale obstacle
+   features, enabling the precise detection and segmentation of obstacles
+   in RGB-D images. Afterwards, the depths of detected obstacles are
+   regressed, providing the robot with crucial information for collision
+   avoidance. Eventually, we design a refined robot manipulation system
+   that dynamically adjusts the robot behavior to ensure effective
+   collision avoidance and to minimize potential damage to its mechanical
+   components by constantly evaluating the spatial relationships between
+   the robot and its surroundings. By incorporating advanced obstacle
+   detection and the avoidance mechanism, mobile robots can navigate
+   reliably in indoor environments with a reduced risk of collisions and
+   realtime decision making. The presented method has been evaluated on the
+   developed IMR platform. On the collected dataset, the estimated IMR
+   absolute position and orientation errors are less than 0.18 m and
+   5(degrees), respectively. Besides, it achieves 89\% mAP on obstacle
+   detection. The maximum of the estimated obstacle relative depth \&
+   orientation errors are less than 0.4 m and 2(degrees), respectively,
+   which proves competitiveness against the state-ofthe-art in both robot
+   navigation and safe manipulation.",IEEE TRANSACTIONS ON COGNITIVE AND DEVELOPMENTAL SYSTEMS,,Article,10.1109/TCDS.2024.3481457,,,,"Zhang, Yinlong and Liu, Yuanhao and Liu, Shuai and Liang, Wei and Wang,
+   Chu and Wang, Kai",,11.0,WOS:001592218900024,,,paper,multimodal perception for indoor mobile robotics navigation and safe manipulation,10.1109/tcds.2024.3481457,https://doi.org/10.1109/tcds.2024.3481457,https://doi.org/10.1109/tcds.2024.3481457,157.789,citations=11; year=2025; risk_terms=5; physical_terms=6,https://doi.org/10.1109/tcds.2024.3481457,True,202.0,https://ieeexplore.ieee.org/document/10720537/,text/html; charset=UTF-8,,"불확실한 환경의 경로 계획에서 가정 장기 계획 조작 위험이 실제 안전 문제로 이어질 수 있음을 다룬다; Multimodal Perception for Ind… (Zhang et al., 2025)",2
+1.135,58,PHYSBENCH-REF-0068,정밀 휴머노이드 접촉력 위험 (Dexterous humanoid contact-force risk),3,collision;humanoid,130,,2024,"Biomimetic tapered soft manipulator with precision and load-bearing
+   capacity","Designing a soft manipulator that effectively serves human applications
+   presents significant challenges, especially in motion robustness and
+   accuracy. The elephant trunk, with its flexibility, strong load-bearing
+   capacity, and dexterous yet soft tip, provides an inspiring model.
+   Inspired by the elephant trunk's thrust-deformation mechanism under
+   multi-muscle action, we present the design principles of a composite
+   tendon and pneumatic hybrid-driven tapered soft manipulator (TSM).
+   Simulation and testing show that the TSM achieves a repeatability
+   accuracy of 0.69 G 0.43 mm and single-axis errors below 2 mm. With a
+   2-kg load, it maintains less than 37 mm of deformation in all poses.
+   Additionally, the TSM reduces contact pressure by 35.7\% through active
+   softening. These results highlight the manipulator's strengths in motion
+   stability, load- bearing capacity, and safety during human contact,
+   showcasing its potential as a flexible limb for mobile or humanoid
+   robots.",CELL REPORTS PHYSICAL SCIENCE,,Article,10.1016/j.xcrp.2024.102210,,,,"Li, Xianglong and Zhang, Shouyi and Xiong, Quan and Sui, Dongbao and
+   Zhang, Qinghua and Wang, Ziqi and Luan, Lingkai and Zheng, Tianjiao and
+   Fan, Jizhuang and Zhao, Jie and Zhu, Yanhe",,6.0,WOS:001337157000001,,,paper,biomimetic tapered soft manipulator with precision and load bearing capacity,10.1016/j.xcrp.2024.102210,https://doi.org/10.1016/j.xcrp.2024.102210,https://doi.org/10.1016/j.xcrp.2024.102210,162.243,citations=6; year=2024; risk_terms=3; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.xcrp.2024.102210,True,200.0,https://linkinghub.elsevier.com/retrieve/pii/S2666386424005034,text/html;charset=UTF-8,,"피지컬 AI 시스템에서 정밀 휴머노이드 접촉력 위험이 실제 안전 문제로 이어질 수 있음을 다룬다; Biomimetic tapered soft manip… (Li et al., 2024)",4
+1.118,117,PHYSBENCH-REF-0063,시각-촉각 모달리티 불일치 (Visual-tactile modality mismatch),2,collision;manipulation,116,,2025,"Investigating the impacts of auditory and visual feedback in advanced
+   driver assistance systems: a pilot study on driver behavior and
+   emotional response","In the autonomous vehicle industry, Advanced Driver Assistance Systems
+   (ADAS) are recognized for their capacity to enhance service quality,
+   improve on-road safety, and increase driver comfort. Driver Assistance
+   Systems are able to provide multi-modal feedback including auditory
+   cues, visual cues, vibrotactile cues and so on. The study will
+   concentrate on assessing the impacts of auditory and visual feedback
+   from assistive driving systems on drivers. A group consisting of five
+   participants (N = 5) was recruited to take part in two sets of driving
+   experiments. During the experimental sessions, they were exposed to
+   several reminders designed for drivers in audio-only format and
+   audio-visual format, respectively. Their driving behaviors and
+   performances were under researcher's observation, while their emotions
+   were evaluated by YOLO v5 detecting model. The results reveal that the
+   participants higher compliance rate and strong emotional reactions
+   (especially the feelings of anger, sadness and surprise) towards the
+   unimodal feedback of audio-only driving reminders. There is no strong
+   evidence showing that the bimodal ADAS feedback of audio-visual cues
+   effectively improve drivers' performance during driving period. However,
+   both the emotion data and user satisfaction results indicate that
+   participants experienced an increase in feelings of happiness when they
+   were able to visualize the AI assistant while hearing the audio
+   reminders from the assistant. The study serves as one of the pioneering
+   studies aimed at enhancing the theoretical foundation in the field of
+   automotive user interface design, particularly concerning the design of
+   auditory functions.",FRONTIERS IN COMPUTER SCIENCE,,Article,10.3389/fcomp.2024.1499165,,,,"Zou, Zhao and Khan, Aila and Lwin, Michael and Alnajjar, Fady and Mubin,
+   Omar",,10.0,WOS:001406763000001,,,paper,investigating the impacts of auditory and visual feedback in advanced driver assistance systems a pilot study on driver behavior and emotional response,10.3389/fcomp.2024.1499165,https://doi.org/10.3389/fcomp.2024.1499165,https://doi.org/10.3389/fcomp.2024.1499165,163.571,citations=10; year=2025; risk_terms=2; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.3389/fcomp.2024.1499165,True,200.0,https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2024.1499165/full,text/html;charset=utf-8,,"피지컬 AI 시스템에서 시각-촉각 모달리티 불일치이 실제 안전 문제로 이어질 수 있음을 다룬다; Investigating the impacts of… (Zou et al., 2025)",3
+1.115,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,177,,2019,A Reinforcement Learning Approach to Robust Scheduling of Semiconductor Manufacturing Facilities,"As semiconductor manufacturers, recently, have focused on producing multichip products (MCPs), scheduling semiconductor manufacturing operations become complicated due to the constraints related to reentrant production flows, sequence-dependent setups, and alternative machines. At the same time, the scheduling problems need to be solved frequently to effectively manage the variabilities in production requirements, available machines, and initial setup status. To minimize the makespan for an MCP scheduling problem, we propose a setup change scheduling method using reinforcement learning (RL) in which each agent determines setup decisions in a decentralized manner and learns a centralized policy by sharing a neural network among the agents to deal with the changes in the number of machines. Furthermore, novel definitions of state, action, and reward are proposed to address the variabilities in production requirements and initial setup status. Numerical experiments demonstrate that the proposed approach outperforms the rule-based, metaheuristic, and other RL methods in terms of the makespan while incurring shorter computation time than the metaheuristics considered.",IEEE Transactions on Automation Science and Engineering,Institute of Electrical and Electronics Engineers,article,10.1109/tase.2019.2956762,https://openalex.org/W2997873913,https://doi.org/10.1109/tase.2019.2956762,,"['In-Beom Park', 'Jaeseok Huh', 'Joong-Kyun Kim', 'Jonghun Park']",In-Beom Park,185.0,https://openalex.org/W2997873913,cps,Deep Reinforcement Learning for Energy Systems,paper,a reinforcement learning approach to robust scheduling of semiconductor manufacturing facilities,10.1109/tase.2019.2956762,https://doi.org/10.1109/tase.2019.2956762,https://doi.org/10.1109/tase.2019.2956762,158.16,citations=185; year=2019; risk_terms=1; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2019.2956762,True,202.0,https://ieeexplore.ieee.org/document/8946870/,text/html; charset=UTF-8,,"안전 강화학습에서 안전 강화학습 제약 위반이 실제 안전 문제로 이어질 수 있음을 다룬다; A Reinforcement Learning Appr… (Park et al., 2019)",5
+1.11,143,PHYSRISK-REF-0036,피지컬 자동화 노동 대체 (Embodied automation labor displacement),1,medical;security,189,,2024,"Increasing Trends of Artificial Intelligence With Robotic Process
+   Automation in Health Care: A Narrative Review","This review explores the fast-growing importance of artificial
+   intelligence (AI) with robotic process automation (RPA) in healthcare.
+   AI uses intelligent algorithms to analyze data, while RPA automates
+   repetitive tasks to improve efficiency and accuracy. These technologies
+   are swiftly revolutionizing health care by improving diagnostic
+   precision, accelerating administrative tasks, reducing operation timing,
+   and improving patient care. Application of these technologies requires
+   good technical understanding, preparedness for continuous learning, and
+   adaptability to new challenges. This review aims to provide an in-depth
+   study of the potential applications, present implementations,
+   challenges, and future scope of AI with RPA in healthcare. It can
+   provide information to researchers, professionals, and decision-makers
+   regarding the application of the technologies under consideration for
+   better productivity, increased security and accuracy of data, cost
+   reduction, and personalization of healthcare provided to patients. The
+   main results are that AI and RPA can ensure greater data security,
+   provide supporting work in administration, like scheduling appointments
+   and medical billing, make better decisions, enable telehealth and remote
+   patient monitoring, reduce human error, and increase overall health
+   outcomes. This review overviews the challenges in implementing robotics
+   technology, focusing mainly on secondary source journals, scholarly
+   articles, and reference books. Key findings indicate that this study
+   reveals how robotics could alleviate healthcare professionals. Further
+   research, investment, and collaboration will be needed to enable these
+   technologies to reach their full potential for healthcare delivery.
+   However, challenges such as data privacy and security concerns, high
+   implementation costs, and regulatory and ethical considerations must be
+   addressed. The conclusion emphasizes that while these technologies are
+   revolutionizing healthcare by increasing efficiency and personalizing
+   patient care, ongoing research, investment, and collaboration are
+   essential for their successful adoption.",CUREUS JOURNAL OF MEDICAL SCIENCE,,Review,10.7759/cureus.69680,,,,"Nimkar, Prashant and Kanyal, Deepika and Sabale, Shantanu R.",,6.0,WOS:001319846800003,,,paper,increasing trends of artificial intelligence with robotic process automation in health care a narrative review,10.7759/cureus.69680,https://doi.org/10.7759/cureus.69680,https://doi.org/10.7759/cureus.69680,157.243,citations=6; year=2024; risk_terms=3; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.7759/cureus.69680,True,200.0,https://www.cureus.com/articles/285919-increasing-trends-of-artificial-intelligence-with-robotic-process-automation-in-health-care-a-narrative-review,text/html; charset=utf-8,,"의료·돌봄 로봇에서 피지컬 자동화 노동 대체이 실제 안전 문제로 이어질 수 있음을 다룬다; Increasing Trends of Artifici… (Nimkar et al., 2024)",2
+1.088,66,PHYSBENCH-REF-0104,휴머노이드 충돌력 초과 (Humanoid collision-force exceedance),3,collision;manipulation,66,,2024,"Toward Safe Distributed Multi-Robot Navigation Coupled With Variational
+   Bayesian Model","Designing a safe and effective collision avoidance policy for multiple
+   robots is essential in decentralized scenarios, where each robot is
+   responsible for generating its own paths, to ensure their safe
+   operation. Recently, the utilization of reinforcement learning to
+   develop decentralized policies that enable multiple robots to move
+   cooperatively and accomplish tasks has yielded positive outcomes.
+   However, the presence of exploration unsafe actions during the
+   reinforcement learning training process results in inadequate safety. We
+   seek to enhance the safety of distributed multi-robot navigation
+   policies and propose a new imitation learning framework based on the
+   variational Bayesian model, which enables robots to learn safe actions
+   by anticipating the subsequent state they are expected to reach. In
+   addition, a new policy neural network structure for multi-robot
+   navigation is proposed by introducing the transformer structure, which
+   encodes the significance of nearby robots in relation to their
+   forthcoming conditions. Experiments demonstrated that our policy can
+   more safely guide robots to navigate in multi-robot environments under
+   conditions of limited information, outperforming the state-of-the-art
+   RL-RVO method in terms of success rate.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2023.3346049,,,,"Chen, Lin and Wang, Yaonan and Miao, Zhiqiang and Feng, Mingtao and
+   Zhou, Zhen and Wang, Hesheng and Wang, Danwei",,19.0,WOS:001165504600001,,,paper,toward safe distributed multi robot navigation coupled with variational bayesian model,10.1109/tase.2023.3346049,https://doi.org/10.1109/tase.2023.3346049,https://doi.org/10.1109/tase.2023.3346049,171.94,citations=19; year=2024; risk_terms=3; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2023.3346049,True,202.0,https://ieeexplore.ieee.org/document/10374312/,text/html; charset=UTF-8,,"불확실한 환경의 경로 계획에서 휴머노이드 충돌력 초과이 실제 안전 문제로 이어질 수 있음을 다룬다; Toward Safe Distributed Multi… (Chen et al., 2024)",4

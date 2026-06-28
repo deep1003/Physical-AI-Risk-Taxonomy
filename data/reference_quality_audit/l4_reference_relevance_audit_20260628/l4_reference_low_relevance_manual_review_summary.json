@@ -1,0 +1,5 @@
+{
+  "remove_candidates": 10,
+  "review_candidates": 13,
+  "manual_review_csv": "/Users/deep1003/data3/AI_Topic_Space.github.io/data/l4_reference_relevance_audit_20260628/l4_reference_low_relevance_manual_review.csv"
+}

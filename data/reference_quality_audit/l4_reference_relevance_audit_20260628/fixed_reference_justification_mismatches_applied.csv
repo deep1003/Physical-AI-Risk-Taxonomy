@@ -1,0 +1,5 @@
+card_badge,reference_index,old_justification,new_justification
+PHYSKR-REF-009,1,"돌봄 로봇이 몸을 제대로 받치지 못하거나 방치하면 낙상과 존엄성 침해가 생긴다 (ISO 13482, 2014)","돌봄 로봇은 노인의 독립성과 돌봄 관계를 바꿀 수 있어, 방치와 존엄성 침해 문제를 함께 봐야 한다 (Granny and the robots, 2010)"
+PHYSKR-REF-009,2,"로봇 사용에서 동의, 책임, 취약 사용자 보호 문제를 다룬다 (Granny and the robots: ethical issues in r…, 2010)","정신건강 로봇 사용에서 동의, 책임, 취약 사용자 보호 문제가 직접 제기된다 (Your Robot Therapist Will See You Now, 2019)"
+PHYSKR-REF-009,3,"정신건강 돌봄 로봇의 윤리 문제를 다뤄, 노인·환자 돌봄 방치 및 존엄성 침해가 사생활·존엄성 침해로 번질 수 있다 (Your Robot Therapist Will See You Now (2019))","의료 AI 신뢰성과 설명 가능성 논의는 환자 보호와 책임 문제를 점검하게 한다 (Trustworthy and explainable AI in healthcare, 2023)"
+PHYSRISK-REF-0055,1,"규제가 약한 지역을 골라 배포하면 위험한 로봇 서비스가 감독을 피할 수 있다 (IGLOO, 2026)","로봇 표준과 공공 규제가 어긋나면 감독이 약한 기준을 골라 배포할 여지가 생긴다 (Robots, standards and the law, 2019)"

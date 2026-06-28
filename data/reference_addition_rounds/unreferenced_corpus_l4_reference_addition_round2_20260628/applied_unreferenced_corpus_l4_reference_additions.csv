@@ -1,0 +1,74 @@
+match_score,card_idx,card_badge,card_label,card_refs_before,overlap_tags,rank,source_file,year,title,abstract,venue,institution,document_type,doi,url,landing_page_url,pdf_url,authors,first_author,citations,record_id,matched_terms,matched_l3,record_type,title_key,doi_key,candidate_url,url_key,score,selection_reason,checked_url,access_ok,status_code,final_url,content_type,access_error,justification,refs_after
+1.503,53,PHYSBENCH-REF-0053,장애물 개입 충돌 (Obstacle intervention collision),4,collision;manipulation;navigation,184,,2025,"Multimodal Perception for Indoor Mobile Robotics Navigation and Safe
+   Manipulation","Indoor mobile robotics (IMR) has gained significant attention due to its
+   potential applications in various domains, such as healthcare,
+   logistics, and domestic assistance. However, navigating through indoor
+   environments and performing safe manipulations still pose intractable
+   challenges in terms of navigation accuracy and obstacle avoidance. To
+   solve these issues, this article presents an artificial intelligence
+   (AI) embodied multimodal perception framework for IMR intelligent
+   navigation and safe manipulation. To ensure the navigation accuracy and
+   robustness, we employ the complementary forward RGB camera, downward QR
+   vision sensor, and wheel encoder measurements in a unified framework.
+   The visual residuals and wheel odometry residuals are jointly minimized
+   to estimate the robot states. To guarantee the safety of robotic
+   manipulation tasks, we have developed an AI model that integrates
+   transformer network with convolutional neural network, to associate the
+   long-range RGB \& depth patches and aggregate the multiscale obstacle
+   features, enabling the precise detection and segmentation of obstacles
+   in RGB-D images. Afterwards, the depths of detected obstacles are
+   regressed, providing the robot with crucial information for collision
+   avoidance. Eventually, we design a refined robot manipulation system
+   that dynamically adjusts the robot behavior to ensure effective
+   collision avoidance and to minimize potential damage to its mechanical
+   components by constantly evaluating the spatial relationships between
+   the robot and its surroundings. By incorporating advanced obstacle
+   detection and the avoidance mechanism, mobile robots can navigate
+   reliably in indoor environments with a reduced risk of collisions and
+   realtime decision making. The presented method has been evaluated on the
+   developed IMR platform. On the collected dataset, the estimated IMR
+   absolute position and orientation errors are less than 0.18 m and
+   5(degrees), respectively. Besides, it achieves 89\% mAP on obstacle
+   detection. The maximum of the estimated obstacle relative depth \&
+   orientation errors are less than 0.4 m and 2(degrees), respectively,
+   which proves competitiveness against the state-ofthe-art in both robot
+   navigation and safe manipulation.",IEEE TRANSACTIONS ON COGNITIVE AND DEVELOPMENTAL SYSTEMS,,Article,10.1109/TCDS.2024.3481457,,,,"Zhang, Yinlong and Liu, Yuanhao and Liu, Shuai and Liang, Wei and Wang,
+   Chu and Wang, Kai",,11.0,WOS:001592218900024,,,paper,multimodal perception for indoor mobile robotics navigation and safe manipulation,10.1109/tcds.2024.3481457,https://doi.org/10.1109/tcds.2024.3481457,https://doi.org/10.1109/tcds.2024.3481457,157.789,citations=11; year=2025; risk_terms=5; physical_terms=6,https://doi.org/10.1109/tcds.2024.3481457,True,202.0,https://ieeexplore.ieee.org/document/10720537/,text/html; charset=UTF-8,,"실내 이동 로봇의 멀티모달 인식·안전 조작을 다뤄, 장애물 개입 충돌이 실제 내비게이션 위험으로 이어질 수 있다 (Zhang et al., 2025)",5
+1.34,56,PHYSBENCH-REF-0061,접촉 조작 힘 감지 실패 (Contact-rich manipulation force-sensing failure),4,collision;manipulation;privacy,91,,2023,"Integrated Task Sensing and Whole Body Control for Mobile Manipulation
+   With Series Elastic Actuators","In this paper, an integrated framework consisting of the sensing,
+   navigation and control is proposed for an autonomous mobile manipulator
+   driven by series elastic actuators (SEAs) to preform mobile manipulation
+   tasks in unknown environments. First, ORB-SLAM2 technique is combined
+   into the environment sensing by extracting the ORB features, automatic
+   initialization, repositioning and loop detection for real-time posture
+   estimation. Then, the navigation function is designed for generating
+   collision-free trajectory in an environment with obstacles. To realize
+   kinematic and dynamic control of the mobile manipulator with the
+   developed SEA joints, the whole body dynamics is considered and
+   described. And to handle dynamic uncertainties and the SEA inherent
+   saturation limits, a novel adaptive neural network control considering
+   the whole body dynamics is proposed. Without knowing the exact
+   parameters of the whole body model, the designed controller merely
+   requires the position and velocity of the actuators and links, which can
+   make the tracking errors converge to zero and keep all signals uniformly
+   bounded in the closed-loop system. The performance and efficiency of the
+   proposed method are verified by extensive experiments.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2022.3156127,,,,"Ren, Xiaoqian and Liu, Yueyue and Hu, Yingbai and Li, Zhijun",,28.0,WOS:000767853800001,,,paper,integrated task sensing and whole body control for mobile manipulation with series elastic actuators,10.1109/tase.2022.3156127,https://doi.org/10.1109/tase.2022.3156127,https://doi.org/10.1109/tase.2022.3156127,166.142,citations=28; year=2023; risk_terms=1; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2022.3156127,True,202.0,https://ieeexplore.ieee.org/document/9732182/,text/html; charset=UTF-8,,"이동 조작 로봇의 작업 감지와 전신 제어를 다뤄, 접촉 힘 감지 실패가 조작 안전을 흔들 수 있다 (Ren et al., 2023)",5
+1.299,59,PHYSBENCH-REF-0069,전신 도달 한계 위반 (Whole-body reach-limit violation),3,collision;manipulation,91,,2023,"Integrated Task Sensing and Whole Body Control for Mobile Manipulation
+   With Series Elastic Actuators","In this paper, an integrated framework consisting of the sensing,
+   navigation and control is proposed for an autonomous mobile manipulator
+   driven by series elastic actuators (SEAs) to preform mobile manipulation
+   tasks in unknown environments. First, ORB-SLAM2 technique is combined
+   into the environment sensing by extracting the ORB features, automatic
+   initialization, repositioning and loop detection for real-time posture
+   estimation. Then, the navigation function is designed for generating
+   collision-free trajectory in an environment with obstacles. To realize
+   kinematic and dynamic control of the mobile manipulator with the
+   developed SEA joints, the whole body dynamics is considered and
+   described. And to handle dynamic uncertainties and the SEA inherent
+   saturation limits, a novel adaptive neural network control considering
+   the whole body dynamics is proposed. Without knowing the exact
+   parameters of the whole body model, the designed controller merely
+   requires the position and velocity of the actuators and links, which can
+   make the tracking errors converge to zero and keep all signals uniformly
+   bounded in the closed-loop system. The performance and efficiency of the
+   proposed method are verified by extensive experiments.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2022.3156127,,,,"Ren, Xiaoqian and Liu, Yueyue and Hu, Yingbai and Li, Zhijun",,28.0,WOS:000767853800001,,,paper,integrated task sensing and whole body control for mobile manipulation with series elastic actuators,10.1109/tase.2022.3156127,https://doi.org/10.1109/tase.2022.3156127,https://doi.org/10.1109/tase.2022.3156127,166.142,citations=28; year=2023; risk_terms=1; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2022.3156127,True,202.0,https://ieeexplore.ieee.org/document/9732182/,text/html; charset=UTF-8,,"이동 조작 로봇의 전신 제어를 다뤄, 도달 한계 위반이 접촉·충돌 위험으로 이어질 수 있다 (Ren et al., 2023)",4

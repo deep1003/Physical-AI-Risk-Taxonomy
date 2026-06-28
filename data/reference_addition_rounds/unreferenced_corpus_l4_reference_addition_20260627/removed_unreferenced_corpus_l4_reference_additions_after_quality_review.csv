@@ -1,0 +1,881 @@
+match_score,card_idx,card_badge,card_label,card_refs_before,overlap_tags,rank,source_file,year,title,abstract,venue,institution,document_type,doi,url,landing_page_url,pdf_url,authors,first_author,citations,record_id,matched_terms,matched_l3,record_type,title_key,doi_key,candidate_url,url_key,score,selection_reason,checked_url,access_ok,status_code,final_url,content_type,access_error,justification,refs_after
+1.385,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,drone;privacy;vehicle,86,,2025,"Toward Realization of Low-Altitude Economy Networks: Core Architecture, Integrated Technologies, and Future Directions","The rise of the low-altitude economy (LAE) is propelling urban development and emerging industries by integrating advanced technologies to enhance efficiency, safety, and sustainability in low-altitude operations. The widespread adoption of unmanned aerial vehicles (UAVs) and electric vertical takeoff and landing (eVTOL) aircraft plays a crucial role in enabling key applications within LAE, such as urban logistics, emergency rescue, and aerial mobility. However, unlike traditional UAV networks, LAE networks encounter increased airspace management demands due to dense flying nodes and potential interference with ground communication systems. In addition, there are heightened and extended security risks in real-time operations, particularly the vulnerability of low-altitude aircraft to cyberattacks from ground-based threats. To address these, this paper first explores related standards and core architecture that support the development of LAE networks. Subsequently, we highlight the integration of technologies such as communication, sensing, computing, positioning, navigation, surveillance, flight control, and airspace management. We also analyze how generative artificial intelligence (GAI) contributes to this integration by enabling intelligent adaptation, uncertainty modeling, and real-time optimization. This synergy of multi-technology drives the advancement of real-world LAE applications, particularly in improving operational efficiency, optimizing airspace usage, and ensuring safety. Finally, we outline future research directions for LAE networks, such as intelligent and adaptive optimization, security and privacy protection, sustainable energy and power management, quantum-driven coordination, generative governance, and three-dimensional (3D) airspace coverage, which collectively underscore the potential of collaborative technologies to advance LAE networks.",IEEE Transactions on Cognitive Communications and Networking,Institute of Electrical and Electronics Engineers,article,10.1109/tccn.2025.3601015,https://openalex.org/W4413371312,https://doi.org/10.1109/tccn.2025.3601015,,"['Yixian Wang', 'Geng Sun', 'Zemin Sun', 'Jiacheng Wang', 'Jiahui Li', 'Changyuan Zhao', 'Jing Wu', 'Shuang Liang', 'Minghao Yin', 'Pengfei Wang', 'Dusit Niyato', 'Sumei Sun', 'Dong In Kim']",Yixian Wang,59.0,https://openalex.org/W4413371312,navigation | uav | unmanned,AI for Wireless Networks,paper,toward realization of low altitude economy networks core architecture integrated technologies and future directions,10.1109/tccn.2025.3601015,https://doi.org/10.1109/tccn.2025.3601015,https://doi.org/10.1109/tccn.2025.3601015,170.321,citations=59; year=2025; risk_terms=7; physical_terms=3,https://doi.org/10.1109/tccn.2025.3601015,True,202.0,https://ieeexplore.ieee.org/document/11131292/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 실시간 지연 및 동기화 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Toward Realization of Low-Alt… (Wang et al., 2025)",4
+1.311,65,PHYSBENCH-REF-0088,이동-조작 통합 실패 (Locomotion-integrated manipulation failure),1,collision;humanoid;manipulation,154,,2025,"Estimated Informed Anytime Search for Sampling-Based Planning via
+   Adaptive Sampler","Path planning in robotics often involves solving continuously valued,
+   high-dimensional problems. Popular informed approaches include
+   graph-based searches, such as A{*}, and sampling-based methods, such as
+   Informed RRT{*}, which utilize informed set and anytime strategies to
+   expedite path optimization incrementally. Informed sampling-based
+   planners define informed sets as subsets of the problem domain based on
+   the current best solution cost. However, when no solution is found,
+   these planners re-sample and explore the entire configuration space,
+   which is time-consuming and computationally expensive. This article
+   introduces Multi-Informed Trees (MIT{*}), a novel planner that
+   constructs estimated informed sets based on prior admissible solution
+   costs before finding the initial solution, thereby accelerating the
+   initial convergence rate. Moreover, MIT{*} employs an adaptive sampler
+   that dynamically adjusts the sampling strategy based on the exploration
+   process. Furthermore, MIT{*} utilizes length-related adaptive sparse
+   collision checks to guide lazy reverse search. These features enhance
+   path cost efficiency and computation times while ensuring high success
+   rates in confined scenarios. Through a series of simulations and
+   real-world experiments, it is confirmed that MIT{*} outperforms existing
+   single-query, sampling-based planners for problems in
+   \$\textbackslash{}mathbb \{R\}<\^{}>\{4\}\$ to \$\textbackslash{}mathbb
+   \{R\}<\^{}>\{16\}\$ and has been successfully applied to real-world
+   robot manipulation tasks. A video showcasing our experimental results is
+   available at: https://youtu.be/30RsBIdexTU Note to Practitioners-The
+   motivation for this work stems from the challenges faced by existing
+   informed path planners in high-dimensional, continuously valued
+   environments, particularly when an initial feasible solution is
+   difficult to find. Traditional asymmetric bidirectional planners rely on
+   the best current solution to define problem subsets. When a lazy path
+   has been found through lazy reverse search, these planners tend to
+   re-sample and explore the entire problem space, which could hinder the
+   path planning process. Our proposed MIT{*} algorithm addresses this
+   issue by constructing an estimated informed set based on prior
+   admissible solution costs before finding the initial solution. This
+   estimated set helps to narrow the search area, thereby accelerating the
+   initial convergence rate. MIT{*} also integrates an adaptive sampling
+   strategy that dynamically adjusts based on the ongoing exploration
+   process, enhancing the planner's ability to efficiently navigate through
+   challenging spaces. Furthermore, MIT{*} employs adaptive sparse
+   collision checks, which guide the lazy reverse search that balances
+   computational efficiency with accuracy in pathfinding. The proposed
+   algorithm can be applied to industrial robots, humanoid robots, or
+   service robots to achieve efficient path planning.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3590084,,,,"Zhang, Liding and Cai, Kuanqi and Zhang, Yu and Bing, Zhenshan and Wang,
+   Chaoqun and Wu, Fan and Haddadin, Sami and Knoll, Alois",,6.0,WOS:001534494100020,,,paper,estimated informed anytime search for sampling based planning via adaptive sampler,10.1109/tase.2025.3590084,https://doi.org/10.1109/tase.2025.3590084,https://doi.org/10.1109/tase.2025.3590084,162.243,citations=6; year=2025; risk_terms=1; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3590084,True,202.0,https://ieeexplore.ieee.org/document/11083625/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 이동-조작 통합 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Estimated Informed Anytime Se… (Zhang et al., 2025)",2
+1.23,111,PHYSBENCH-REF-0092,미래 접촉 예측 실패 (Future contact prediction failure),1,collision;humanoid,149,,2025,"Socially Acceptable Bipedal Robot Navigation via Social Zonotope Network
+   Model Predictive Control","This study addresses the challenge of social bipedal navigation in a
+   dynamic, human-crowded environment, a research area largely
+   underexplored in legged robot navigation. We present a zonotope-based
+   framework that couples prediction and motion planning for a bipedal
+   ego-agent to account for bidirectional influence with the surrounding
+   pedestrians. This framework incorporates a Social Zonotope Network
+   (SZN), a neural network that predicts future pedestrian reachable sets
+   and plans future socially acceptable reachable set for the ego-agent.
+   SZN generates the reachable sets as zonotopes for efficient
+   reachability-based planning, collision checking, and online uncertainty
+   parameterization. Locomotion-specific losses are added to the SZN
+   training process to adhere to the dynamic limits of the bipedal robot
+   that are not explicitly present in the human crowds data set. These loss
+   functions enable the SZN to generate locomotion paths that are more
+   dynamically feasible for improved tracking. SZN is integrated with a
+   Model Predictive Controller (SZN-MPC) for footstep planning for our
+   bipedal robot Digit. SZN-MPC solves for collision-free trajectory by
+   optimizing through SZN's gradients. Our results demonstrate the
+   framework's effectiveness in producing a socially acceptable path, with
+   consistent locomotion velocity, and optimality. The SZN-MPC framework is
+   validated with extensive simulations and hardware experiments. Note to
+   Practitioners-This paper is motivated by the challenge of navigating
+   bipedal robots through dynamic, human-crowded environments in a socially
+   acceptable manner. Existing methods for social navigation often only
+   address obstacle avoidance and are demonstrated on a robot with simple
+   dynamics. This paper proposes the Social Zonotope Network (SZN), a novel
+   neural network that couples pedestrian future trajectory prediction and
+   robot motion planning to facilitate socially aware navigation for
+   bipedal robots such as Digit, designed by Agility Robotics. The social
+   behaviors are learned from real open-sourced pedestrian data using the
+   SZN, which outputs the future predictions as reachable sets for each
+   agent in the environment. The SZN is then integrated into a trajectory
+   optimization problem that takes into account personal space preferences
+   and bipedal robot capabilities to design trajectories that are both
+   collision-free and socially acceptable. This work also highlights the
+   computational efficiency of the SZN design that makes it suitable for
+   real-time integration with motion planners. The framework is validated
+   through extensive simulations and hardware experiments. From a practical
+   standpoint, this research provides a framework that can be applied to
+   bipedal robots to improve automation in human-populated environments
+   such as hospitals, shopping centers, and airports. The framework's
+   ability to automatically adapt to surrounding human movement helps
+   minimize disruptions and ensures that the robot's presence is not a
+   hindrance to the flow of human traffic. Future work will focus on
+   outdoor deployment, which will require onboard perception capabilities
+   to detect surrounding pedestrians.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2024.3519012,,,,"Shamsah, Abdulaziz and Agarwal, Krishanu and Katta, Nigam and Raju,
+   Abirath and Kousik, Shreyas and Zhao, Ye",,4.0,WOS:001381481000001,,,paper,socially acceptable bipedal robot navigation via social zonotope network model predictive control,10.1109/tase.2024.3519012,https://doi.org/10.1109/tase.2024.3519012,https://doi.org/10.1109/tase.2024.3519012,162.532,citations=4; year=2025; risk_terms=2; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2024.3519012,True,202.0,https://ieeexplore.ieee.org/document/10810741/,text/html; charset=UTF-8,,"불확실한 환경의 경로 계획에서 미래 접촉 예측 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Socially Acceptable Bipedal R… (Shamsah et al., 2025)",2
+1.163,168,PHYSKR-REF-009,노인·환자 돌봄 방치 및 존엄성 침해 (Elderly and patient care neglect and dignity harm),4,medical,9,,2020,"Admittance-Based Controller Design for Physical Human-Robot Interaction
+   in the Constrained Task Space","In this article, an admittance-based controller for physical human-robot
+   interaction (pHRI) is presented to perform the coordinated operation in
+   the constrained task space. An admittance model and a soft saturation
+   function are employed to generate a differentiable reference trajectory
+   to ensure that the end-effector motion of the manipulator complies with
+   the human operation and avoids collision with surroundings. Then, an
+   adaptive neural network (NN) controller involving integral barrier
+   Lyapunov function (IBLF) is designed to deal with tracking issues.
+   Meanwhile, the controller can guarantee the end-effector of the
+   manipulator limited in the constrained task space. A learning method
+   based on the radial basis function NN (RBFNN) is involved in controller
+   design to compensate for the dynamic uncertainties and improve tracking
+   performance. The IBLF method is provided to prevent violations of the
+   constrained task space. We prove that all states of the closed-loop
+   system are semiglobally uniformly ultimately bounded (SGUUB) by
+   utilizing the Lyapunov stability principles. At last, the effectiveness
+   of the proposed algorithm is verified on a Baxter robot experiment
+   platform. Note to Practitioners-This work is motivated by the neglect of
+   safety in existing controller design in physical human-robot interaction
+   (pHRI), which exists in industry and services, such as assembly and
+   medical care. It is considerably required in the controller design for
+   rigorously handling constraints. Therefore, in this article, we propose
+   a novel admittance-based human-robot interaction controller. The
+   developed controller has the following functionalities: 1) ensuring
+   reference trajectory remaining in the constrained task space: a
+   differentiable reference trajectory is shaped by the desired admittance
+   model and a soft saturation function; 2) solving uncertainties of
+   robotic dynamics: a learning approach based on radial basis function
+   neural network (RBFNN) is involved in controller design; and 3) ensuring
+   the end-effector of the manipulator remaining in the constrained task
+   space: different from other barrier Lyapunov function (BLF), integral
+   BLF (IBLF) is proposed to constrain system output directly rather than
+   tracking error, which may be more convenient for controller designers.
+   The controller can be potentially applied in many areas. First, it can
+   be used in the rehabilitation robot to avoid injuring the patient by
+   limiting the motion. Second, it can ensure the end-effector of the
+   industrial manipulator in a prescribed task region. In some industrial
+   tasks, dangerous or damageable tools are mounted on the end-effector,
+   and it will hurt humans and bring damage to the robot when the
+   end-effector is out of the prescribed task region. Third, it may bring a
+   new idea to the designed controller for avoiding collisions in pHRI when
+   collisions occur in the prescribed trajectory of end-effector.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2020.2983225,,,,"He, Wei and Xue, Chengqian and Yu, Xinbo and Li, Zhijun and Yang,
+   Chenguang",,282.0,WOS:000579640900021,,,paper,admittance based controller design for physical human robot interaction in the constrained task space,10.1109/tase.2020.2983225,https://doi.org/10.1109/tase.2020.2983225,https://doi.org/10.1109/tase.2020.2983225,194.036,citations=282; year=2020; risk_terms=3; physical_terms=7; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2020.2983225,True,202.0,https://ieeexplore.ieee.org/document/9075439/,text/html; charset=UTF-8,,"사람-로봇 상호작용 안전에서 노인·환자 돌봄 방치 및 존엄성 침해이 실제 안전 문제로 이어질 수 있음을 다룬다; Admittance-Based Controller D… (He et al., 2020)",5
+1.16,121,PHYSRISK-REF-0004,적대적 물체·표지 조작 (Adversarial object or sign manipulation),2,security;vehicle,171,,2024,"A Neural Computing-Based Access Control Protocol for AI-Driven
+   Intelligent Flying Vehicles in Industry 5.0-Assisted Consumer
+   Electronics","The continuous revolution in Artificial Intelligence (AI) has played a
+   significant role in the development of key consumer applications,
+   including Industry 5.0, autonomous decision-making, fault diagnosis,
+   etc. In practice, autonomous and intelligent robots and flying vehicles
+   (i.e., drones) are also becoming the integral part of Industry 5.0.
+   These vehicles are attaining significant importance nowadays because of
+   their applications in consumer electronics. However, there may be
+   numerous privacy issues in such an infrastructure. Nevertheless, neural
+   computing-driven security solutions have played a significant role in
+   overcoming the security and privacy issues of AI-driven intelligent
+   flying vehicles. Motivated by these facts, this article presents a
+   neural computing-based access control protocol for AI-driven flying
+   vehicles to prevent all possible security threats. A detailed security
+   evaluation of the devised protocol is done formally using the
+   extensively recognized Real-Or-Random (ROR) oracle model. Similarly, the
+   informal security analysis ensures the resistance of our scheme against
+   various potential attacks under the assumptions of CK and DY adversarial
+   models. Moreover, detailed performance scrutiny of the devised protocol
+   with various existing schemes shows the robustness and supremacy of our
+   scheme in terms of computation, communication overhead, and security
+   attributes.",IEEE TRANSACTIONS ON CONSUMER ELECTRONICS,,Article,10.1109/TCE.2023.3276066,,,,"Mahmood, Khalid and Tariq, Tayyaba and Sangaiah, Arun Kumar and Ghaffar,
+   Zahid and Saleem, Muhammad Asad and Shamshad, Salman",,29.0,WOS:001244900800434,,,paper,a neural computing based access control protocol for ai driven intelligent flying vehicles in industry 5 0 assisted consumer electronics,10.1109/tce.2023.3276066,https://doi.org/10.1109/tce.2023.3276066,https://doi.org/10.1109/tce.2023.3276066,160.617,citations=29; year=2024; risk_terms=6; physical_terms=3,https://doi.org/10.1109/tce.2023.3276066,True,202.0,https://ieeexplore.ieee.org/document/10129927/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 적대적 물체·표지 조작이 실제 안전 문제로 이어질 수 있음을 다룬다; A Neural Computing-Based Acce… (Mahmood et al., 2024)",3
+1.144,117,PHYSBENCH-REF-0063,시각-촉각 모달리티 불일치 (Visual-tactile modality mismatch),2,collision;manipulation,124,,2026,"Advancements and prospects in key technologies for robotic pollination
+   in greenhouse pepper breeding: a review","Robotic pollination represents a pivotal component of smart agriculture,
+   with foundational architectures for target recognition, path planning,
+   and motion control having been progressively established. However,
+   developing an efficient and robust pollination system that integrates
+   perception, decision-making, and execution within real-world scenarios
+   remains confronted with complex challenges. This study systematically
+   reviews recent advancements in the field and distills the core technical
+   issues of greenhouse robotic pollination into three primary domains:
+   target detection and pose estimation, end-effector design, and
+   pollination strategies combined with motion control. Focusing on the
+   visual perception of flowers, actuator architecture, and operational
+   tactics, this review synthesizes existing academic findings to evaluate
+   the state-of-the-art in flower detection and pose estimation,
+   characterize diverse end-effector designs, and analyze the evolutionary
+   trajectory of motion control techniques. Specifically, the analysis
+   encompasses the impact of detection algorithms on recognition accuracy
+   and robustness, the structural classification and performance attributes
+   of pollination mechanisms, and the optimization of control strategies.
+   Furthermore, the study categorizes global research backgrounds,
+   technical methodologies, and paradigmatic system cases, offering a
+   critical evaluation of experiences in constructing automated pollination
+   systems. Despite these advances, current robotic pollination
+   technologies for peppers (chili) face significant bottlenecks
+   characterized by immature methods for precise flower detection and pose
+   estimation, the need for optimized specialized end-effector designs, and
+   insufficient robustness in decision-making systems under dynamic
+   environmental conditions. To address these issues, future development
+   should prioritize constructing diverse, large-scale flower image and
+   pose datasets while developing detection algorithms adaptable to complex
+   environments to achieve high-precision identification. Additionally,
+   implementing this system requires a hierarchical architecture where
+   perception drives adaptive actuation. Deep learning models must localize
+   flower targets and assess maturity in real-time, feeding coordinates to
+   path planners that generate collision-free trajectories through foliage.
+   These trajectories are executed via multimodal motion control,
+   synchronizing the rigid manipulator with soft end-effectors. By
+   embedding tactile feedback into the machine learning loop, the system
+   creates a unified sensorimotor framework. This enables dynamic force
+   modulation based on physical resistance, ensuring precise,
+   non-destructive pollination tailored to chili plants.",FRONTIERS IN PLANT SCIENCE,,Review,10.3389/fpls.2026.1778541,,,,"Kuang, Minqiu and Li, Xiaojian and Xie, Fangping and Zou, Xuejie and
+   Xiang, Yang and Zhang, Yuxuan and Liu, Dawei and Zou, Xiangjun and Li,
+   Xu",,3.0,WOS:001713144400001,,,paper,advancements and prospects in key technologies for robotic pollination in greenhouse pepper breeding a review,10.3389/fpls.2026.1778541,https://doi.org/10.3389/fpls.2026.1778541,https://doi.org/10.3389/fpls.2026.1778541,164.408,citations=3; year=2026; risk_terms=2; physical_terms=7; prestige_venue=mandatory_candidate,https://doi.org/10.3389/fpls.2026.1778541,True,200.0,https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2026.1778541/full,text/html;charset=utf-8,,"피지컬 AI 시스템에서 시각-촉각 모달리티 불일치이 실제 안전 문제로 이어질 수 있음을 다룬다; Advancements and prospects in… (Kuang et al., 2026)",3
+1.11,98,PHYSBENCH-REF-0036,배포 전 검증 공백 (Pre-deployment validation gap),3,security;uncertainty,47,,2025,"Advances in low-altitude airspace management for uncrewed aircraft and
+   advanced air mobility","Contemporary trends in Uncrewed Aircraft Systems Traffic Management
+   (UTM) and Advanced Air Mobility (AAM) are redefining low-altitude
+   airspace operations, particularly in urban and suburban settings where
+   traditional airspace management approaches are inadequate to support the
+   predicted air transport demands. To address these challenges, the
+   development of an integrated Low-Altitude Airspace Management (LAAM)
+   framework is seen as an essential next step, requiring new flight
+   systems and infrastructure tailored to the distinct challenges of these
+   environments. Cyber technologies, including automation and Artificial
+   Intelligence (AI), play a crucial role in LAAM by integrating data from
+   Communication, Navigation, and Surveillance (CNS) systems to support
+   real-time and automated decision-making for separation assurance and
+   flow management. While human operators and social interactions retain a
+   very important role in LAAM collaborative decision-making processes, the
+   reliance on automation is expected to continue growing, driven by the
+   need to effectively manage the challenges arising from the increasing
+   number and diversity of highly automated and uncrewed aircraft.
+   Regulatory frameworks must adapt to accommodate the unique
+   characteristics of AAM operations, ensuring the adequacy of safety
+   standards and airspace regulations. In particular, airspace design is
+   bound to evolve to accommodate Vertical/Short Take-off and Landing
+   (V/STOL) aircraft's distinct capabilities and requirements. The
+   deployment of AI in safety-critical systems will require rigorous
+   verification, validation, and certification processes to ensure
+   reliability and trustworthiness. To address these complex and
+   interrelated challenges, a harmonized LAAM Concept of Operations
+   (CONOPS) is needed, which should encapsulate both UTM and emerging AAM
+   requirements, while clearly specifying the role of human operators for
+   various levels of automation. Additionally, new system functionalities
+   should be developed to enhance human-machine teaming by focussing on CNS
+   performance-based airspace modeling and dynamic airspace management.
+   Based on these premises, an integrated approach to Multi-Domain Traffic
+   Management (MDTM) is emerging, with promising future perspectives for
+   the safe, efficient and sustainable operation of highly automated and
+   autonomous flight systems in all present and likely future classes of
+   airspace.",PROGRESS IN AEROSPACE SCIENCES,,Review,10.1016/j.paerosci.2025.101085,,,,"Pongsakornsathien, Nichakorn and Safwat, Nour El-Din and Xie, Yibing and
+   Gardi, Alessandro and Sabatini, Roberto",,14.0,WOS:001487760900001,,,paper,advances in low altitude airspace management for uncrewed aircraft and advanced air mobility,10.1016/j.paerosci.2025.101085,https://doi.org/10.1016/j.paerosci.2025.101085,https://doi.org/10.1016/j.paerosci.2025.101085,177.913,citations=14; year=2025; risk_terms=6; physical_terms=1; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.paerosci.2025.101085,True,200.0,https://linkinghub.elsevier.com/retrieve/pii/S0376042125000119,text/html;charset=UTF-8,,"드론·저고도 비행 안전에서 배포 전 검증 공백이 실제 안전 문제로 이어질 수 있음을 다룬다; Advances in low-altitude airs… (Pongsakornsathien et al., 2025)",4
+1.075,82,PHYSBENCH-REF-0067,휴머노이드 자기 충돌 위험 (Humanoid self-collision risk),1,collision;ethics,113,,2026,"Practical Mixed Palletizing Manipulator System: Incorporating Practical
+   Reinforcement Learning and Configuration-Space Motion Planning","Palletizing, also known as the 3D bin packing problem, is important for
+   optimizing space utilization and automating packing processes,
+   especially in the logistics industry. In practice, handling mixed
+   palletizing scenarios, where a variety of boxes of different sizes are
+   received in real time, is considerably challenging. Existing methods for
+   solving the mixed palletizing problem often overlook practical
+   constraints encountered in real-world applications, such as those
+   pertaining to stability and robustness. In this paper, we propose a
+   practical mixed palletizing manipulator system designed for structured
+   real-world warehouse environments. Our manipulator system has two main
+   components: a practical mixed palletizing model based on reinforcement
+   learning (PMP-RL), which can facilitate stable and efficient box
+   placing, and a configuration-space motion planning network (CMPNet),
+   which can help achieve robust and efficient collision-free robot
+   movement. The PMP-RL model is designed to maximize the pallet volume
+   utilization while incorporating practical reward functions that enhance
+   stability. CMPNet is used to directly predict motion trajectories in a
+   3D configuration space, and it facilitates real-time motion generation
+   by effectively imitating expert-level paths. Overall, the manipulator
+   system, comprising an automated conveyor belt, a camera-based
+   recognition system, the PMP-RL model, and CMPNet, provide a robust and
+   practical framework for mixed palletizing. Experiments conducted via
+   simulations and in real-world environments have shown that the
+   manipulator system can handle complex palletizing tasks with high
+   efficiency and high stability. Note to Practitioners-This work
+   introduces a practical robotic palletizing system that stacks boxes of
+   various sizes in real time, addressing common issues such as unstable
+   stacking and inefficient robot motion. By combining reinforcement
+   learning for box placement with fast, collision-free motion planning,
+   the system improves efficiency and reliability in warehouse automation.
+   The approach operates in real-world settings using standard hardware
+   like conveyor belts, cameras, and robot arms, and can reduce manual
+   workload. The current implementation is designed for structured
+   warehouse environments with rigid cuboidal boxes, which allows efficient
+   perception and reliable placement decisions. While this assumption
+   simplifies deployment, it also limits direct applicability to
+   irregular-shaped items or unstructured scenarios. Moreover, the present
+   framework has been optimized for 3-DoF manipulators; extending it to
+   higher-DoF robots may require additional consideration of computational
+   efficiency in learning and motion planning. It is suitable for
+   industrial use and can be extended to more complex environments through
+   enhanced perception and manipulation modules, with further
+   customization.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3637854,,,,"Ahn, Woo-Jin and Choi, Kyuwon and Kang, Seong-Woo and Rho, Cheol-Kyun
+   and Pae, Dong-Sung and Lim, Myo-Taeg",,2.0,WOS:001655706200030,,,paper,practical mixed palletizing manipulator system incorporating practical reinforcement learning and configuration space motion planning,10.1109/tase.2025.3637854,https://doi.org/10.1109/tase.2025.3637854,https://doi.org/10.1109/tase.2025.3637854,165.381,citations=2; year=2026; risk_terms=3; physical_terms=6; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3637854,True,202.0,https://ieeexplore.ieee.org/document/11270909/,text/html; charset=UTF-8,,"안전 강화학습에서 휴머노이드 자기 충돌 위험이 실제 안전 문제로 이어질 수 있음을 다룬다; Practical Mixed Palletizing M… (Ahn et al., 2026)",2
+1.064,115,PHYSBENCH-REF-0034,시각 기반 안전 RL 제약 실패 (Vision-only safe RL constraint failure),2,learning;manipulation,133,,2024,"MultiSentimentArcs: a novel method to measure coherence in multimodal
+   sentiment analysis for long-form narratives in film","Affective artificial intelligence and multimodal sentiment analysis play
+   critical roles in designing safe and effective human-computer
+   interactions and are in diverse applications ranging from social
+   chatbots to eldercare robots. However emotionally intelligent artificial
+   intelligence can also manipulate, persuade, and otherwise compromise
+   human autonomy. We face a constant stream of ever more capable models
+   that can better understand nuanced, complex, and interrelated sentiments
+   across different modalities including text, vision, and speech. This
+   paper introduces MultiSentimentArcs, combination of an open and
+   extensible multimodal sentiment analysis framework, a challenging movie
+   dataset, and a novel benchmark. This enables the quantitative and
+   qualitative identification, comparison, and prioritization of
+   conflicting sentiments commonly arising from different models and
+   modalities. Diachronic multimodal sentiment analysis is especially
+   challenging in film narratives where actors, directors, cinematographers
+   and editors use dialog, characters, and other elements in contradiction
+   with each other to accentuate dramatic tension. MultiSentimentArcs uses
+   local open-source software models to democratize artificial
+   intelligence. We demonstrate how a simple 2-step pipeline of specialized
+   open-source software with a large multimodal model followed by a large
+   language model can approximate video sentiment analysis of a commercial
+   state-of-the-art Claude 3 Opus. To the best of our knowledge,
+   MultiSentimentArcs is the first fully open-source diachronic multimodal
+   sentiment analysis framework, dataset, and benchmark to enable automatic
+   or human-in-the-loop exploration, analysis, and critique of multimodal
+   sentiment analysis on long-form narratives. We demonstrate two novel
+   coherence metrics and a methodology to identify, quantify, and explain
+   real-world sentiment models and modalities. MultiSentimentArcs
+   integrates artificial intelligence with traditional narrative studies
+   and related fields like film, linguistic and cultural studies. It also
+   contributes to eXplainable artificial intelligence and artificial
+   intelligence safety by enhancing artificial intelligence transparency in
+   surfacing emotional persuasion, manipulation, and deception techniques.
+   Finally, it can filter noisy emotional input and prioritize information
+   rich channels to build more performant real-world human computer
+   interface applications in fields like e-learning and medicine. This
+   research contributes to the field of Digital Humanities by giving
+   non-artificial intelligence experts access to directly engage in
+   analysis and critique of research around affective artificial
+   intelligence and human-AI alignment. Code and non-copyrighted data will
+   be available at https://github.com/jon-chun/multisentimentarcs.",FRONTIERS IN COMPUTER SCIENCE,,Article,10.3389/fcomp.2024.1444549,,,,"Chun, Jon",,7.0,WOS:001348538300001,,,paper,multisentimentarcs a novel method to measure coherence in multimodal sentiment analysis for long form narratives in film,10.3389/fcomp.2024.1444549,https://doi.org/10.3389/fcomp.2024.1444549,https://doi.org/10.3389/fcomp.2024.1444549,164.112,citations=7; year=2024; risk_terms=3; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.3389/fcomp.2024.1444549,True,200.0,https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2024.1444549/full,text/html;charset=utf-8,,"피지컬 AI 시스템에서 시각 기반 안전 RL 제약 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; MultiSentimentArcs: a novel m… (Chun et al., 2024)",3
+1.06,88,PHYSRISK-REF-0027,센서 스푸핑 및 신호 주입 (Sensor spoofing and signal injection),1,privacy;security,141,,2024,"Unveiling the core of IoT: comprehensive review on data security
+   challenges and mitigation strategies","The Internet of Things (IoT) is a collection of devices such as sensors
+   for collecting data, actuators that perform mechanical actions on the
+   sensor's collected data, and gateways used as an interface for effective
+   communication with the external world. The IoT has been successfully
+   applied to various fields, from small households to large industries.
+   The IoT environment consists of heterogeneous networks and billions of
+   devices increasing daily, making the system more complex and this need
+   for privacy and security of IoT devices become a major concern. The
+   critical components of IoT are device identification, a large number of
+   sensors, hardware operating systems, and IoT semantics and services. The
+   layers of a core IoT application are presented in this paper with the
+   protocols used in each layer. The security challenges at various IoT
+   layers are unveiled in this review paper along with the existing
+   mitigation strategies such as machine learning, deep learning,
+   lightweight encryption techniques, and Intrusion Detection Systems (IDS)
+   to overcome these security challenges and future scope. It has been
+   concluded after doing an intensive review that Spoofing and Distributed
+   Denial of Service (DDoS) attacks are two of the most common attacks in
+   IoT applications. While spoofing tricks systems by impersonating
+   devices, DDoS attacks flood IoT systems with traffic. IoT security is
+   also compromised by other attacks, such as botnet attacks, man-in-middle
+   attacks etc. which call for strong defenses including IDS framework,
+   deep neural networks, and multifactor authentication system.",FRONTIERS IN COMPUTER SCIENCE,,Review,10.3389/fcomp.2024.1420680,,,,"Kaur, Kawalpreet and Kaur, Amanpreet and Gulzar, Yonis and Gandhi,
+   Vidhyotma",,10.0,WOS:001268431100001,,,paper,unveiling the core of iot comprehensive review on data security challenges and mitigation strategies,10.3389/fcomp.2024.1420680,https://doi.org/10.3389/fcomp.2024.1420680,https://doi.org/10.3389/fcomp.2024.1420680,163.571,citations=10; year=2024; risk_terms=3; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.3389/fcomp.2024.1420680,True,200.0,https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2024.1420680/full,text/html;charset=utf-8,,"피지컬 AI 시스템에서 센서 스푸핑 및 신호 주입이 실제 안전 문제로 이어질 수 있음을 다룬다; Unveiling the core of IoT: co… (Kaur et al., 2024)",2
+1.055,70,PHYSRISK-REF-0009,동적 장애물 반응 실패 (Dynamic obstacle response failure),4,navigation;vehicle,28,,2025,"AI-based low-altitude delivery fresh food supply Chain: Research
+   progress and trends","Background: Fresh food is an indispensable part of daily life and is
+   consumed by people in relatively large quantities. However, it is a
+   perishable food, which can easily lead to a decline in freshness and a
+   decrease in nutritional value during the supply chain process, and
+   therefore the efficient operation of its supply chain is crucial for
+   ensuring product quality, reducing wastage, lowering costs, and
+   improving customer satisfaction. Scope and approach: Here, we examine
+   how integrating low-altitude delivery technologies-such as unmanned
+   aerial vehicles (UAVs)-with artificial intelligence (AI) can transform
+   freshness preservation and operational sustainability. The combination
+   of low-altitude delivery technology (e.g., UAVs) and AI provides a new
+   paradigm for the efficiency and intelligence of fresh food supply chain.
+   This paper analyzes the important role of AI in demand forecasting and
+   inventory management, path optimization and dynamic scheduling, quality
+   monitoring and management, Autonomous obstacle avoidance and safety
+   control, and highlighting the innovation potential of UAV-enabled supply
+   chain delivery. The challenges and future development direction of
+   AIlow-altitude delivery in fresh food supply chain are discussed. Key
+   findings and conclusions: This review shows that AI-driven low-altitude
+   delivery can improve the efficiency and sustainability of the fresh food
+   supply chain and help to protect the quality characteristics of fresh
+   food. However, technological and public acceptability hurdles remain,
+   including the need for low-noise UAVs, continued advancements in drone
+   capabilities, the establishment of robust regulatory standards, and the
+   protection of data security. Despite these challenges, the integration
+   of AI-driven low-altitude delivery technologies into fresh food supply
+   chains represents an emerging trend in delivery innovation. Integrating
+   UAVs with unmanned electric refrigerated vehicles and delivery robots is
+   expected to form an efficient and environmentally sustainable delivery
+   model. Adopting shared-use UAV fleets for low-altitude fresh food
+   delivery can reduce operational costs while supporting multifunctional
+   applications in drone delivery. By adopting these innovations,
+   AI-enabled low-altitude delivery systems could transform fresh food
+   supply chains, minimizing waste, and aligning with global sustainability
+   goals.",TRENDS IN FOOD SCIENCE \& TECHNOLOGY,,Article,10.1016/j.tifs.2025.105056,,,,"Zhao, Yonggan and Zhang, Min and Mujumdar, Arun S. and Adhikari, Benu
+   and Rui, Luming",,12.0,WOS:001487621100001,,,paper,ai based low altitude delivery fresh food supply chain research progress and trends,10.1016/j.tifs.2025.105056,https://doi.org/10.1016/j.tifs.2025.105056,https://doi.org/10.1016/j.tifs.2025.105056,180.909,citations=12; year=2025; risk_terms=4; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.tifs.2025.105056,True,200.0,https://linkinghub.elsevier.com/retrieve/pii/S092422442500192X,text/html;charset=UTF-8,,"피지컬 AI 시스템에서 동적 장애물 반응 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; AI-based low-altitude deliver… (Zhao et al., 2025)",5
+0.975,61,PHYSBENCH-REF-0079,이동형 양팔 협조 실패 (Mobile bimanual coordination failure),1,collision;manipulation,104,,2024,"Design and Experimental Validation of Deep Reinforcement Learning-Based
+   Fast Trajectory Planning and Control for Mobile Robot in Unknown
+   Environment","This article is concerned with the problem of planning optimal maneuver
+   trajectories and guiding the mobile robot toward target positions in
+   uncertain environments for exploration purposes. A hierarchical deep
+   learning-based control framework is proposed which consists of an upper
+   level motion planning layer and a lower level waypoint tracking layer.
+   In the motion planning phase, a recurrent deep neural network
+   (RDNN)-based algorithm is adopted to predict the optimal maneuver
+   profiles for the mobile robot. This approach is built upon a recently
+   proposed idea of using deep neural networks (DNNs) to approximate the
+   optimal motion trajectories, which has been validated that a fast
+   approximation performance can be achieved. To further enhance the
+   network prediction performance, a recurrent network model capable of
+   fully exploiting the inherent relationship between preoptimized system
+   state and control pairs is advocated. In the lower level, a deep
+   reinforcement learning (DRL)-based collision-free control algorithm is
+   established to achieve the waypoint tracking task in an uncertain
+   environment (e.g., the existence of unexpected obstacles). Since this
+   approach allows the control policy to directly learn from human
+   demonstration data, the time required by the training process can be
+   significantly reduced. Moreover, a noisy prioritized experience replay
+   (PER) algorithm is proposed to improve the exploring rate of control
+   policy. The effectiveness of applying the proposed deep learning-based
+   control is validated by executing a number of simulation and
+   experimental case studies. The simulation result shows that the proposed
+   DRL method outperforms the vanilla PER algorithm in terms of training
+   speed. Experimental videos are also uploaded, and the corresponding
+   results confirm that the proposed strategy is able to fulfill the
+   autonomous exploration mission with improved motion planning
+   performance, enhanced collision avoidance ability, and less training
+   time.",IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS,,Article,10.1109/TNNLS.2022.3209154,,,,"Chai, Runqi and Niu, Hanlin and Carrasco, Joaquin and Arvin, Farshad and
+   Yin, Hujun and Lennox, Barry",,276.0,WOS:000869051000001,,,paper,design and experimental validation of deep reinforcement learning based fast trajectory planning and control for mobile robot in unknown environment,10.1109/tnnls.2022.3209154,https://doi.org/10.1109/tnnls.2022.3209154,https://doi.org/10.1109/tnnls.2022.3209154,166.736,citations=276; year=2024; risk_terms=1; physical_terms=3,https://doi.org/10.1109/tnnls.2022.3209154,True,202.0,https://ieeexplore.ieee.org/document/9913936/,text/html; charset=UTF-8,,"안전 강화학습에서 이동형 양팔 협조 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Design and Experimental Valid… (Chai et al., 2024)",2
+0.975,35,PHYSBENCH-REF-0081,휴머노이드 제로샷 전이 불안정성 (Zero-shot humanoid sim-to-real instability),2,collision;humanoid,154,,2025,"Estimated Informed Anytime Search for Sampling-Based Planning via
+   Adaptive Sampler","Path planning in robotics often involves solving continuously valued,
+   high-dimensional problems. Popular informed approaches include
+   graph-based searches, such as A{*}, and sampling-based methods, such as
+   Informed RRT{*}, which utilize informed set and anytime strategies to
+   expedite path optimization incrementally. Informed sampling-based
+   planners define informed sets as subsets of the problem domain based on
+   the current best solution cost. However, when no solution is found,
+   these planners re-sample and explore the entire configuration space,
+   which is time-consuming and computationally expensive. This article
+   introduces Multi-Informed Trees (MIT{*}), a novel planner that
+   constructs estimated informed sets based on prior admissible solution
+   costs before finding the initial solution, thereby accelerating the
+   initial convergence rate. Moreover, MIT{*} employs an adaptive sampler
+   that dynamically adjusts the sampling strategy based on the exploration
+   process. Furthermore, MIT{*} utilizes length-related adaptive sparse
+   collision checks to guide lazy reverse search. These features enhance
+   path cost efficiency and computation times while ensuring high success
+   rates in confined scenarios. Through a series of simulations and
+   real-world experiments, it is confirmed that MIT{*} outperforms existing
+   single-query, sampling-based planners for problems in
+   \$\textbackslash{}mathbb \{R\}<\^{}>\{4\}\$ to \$\textbackslash{}mathbb
+   \{R\}<\^{}>\{16\}\$ and has been successfully applied to real-world
+   robot manipulation tasks. A video showcasing our experimental results is
+   available at: https://youtu.be/30RsBIdexTU Note to Practitioners-The
+   motivation for this work stems from the challenges faced by existing
+   informed path planners in high-dimensional, continuously valued
+   environments, particularly when an initial feasible solution is
+   difficult to find. Traditional asymmetric bidirectional planners rely on
+   the best current solution to define problem subsets. When a lazy path
+   has been found through lazy reverse search, these planners tend to
+   re-sample and explore the entire problem space, which could hinder the
+   path planning process. Our proposed MIT{*} algorithm addresses this
+   issue by constructing an estimated informed set based on prior
+   admissible solution costs before finding the initial solution. This
+   estimated set helps to narrow the search area, thereby accelerating the
+   initial convergence rate. MIT{*} also integrates an adaptive sampling
+   strategy that dynamically adjusts based on the ongoing exploration
+   process, enhancing the planner's ability to efficiently navigate through
+   challenging spaces. Furthermore, MIT{*} employs adaptive sparse
+   collision checks, which guide the lazy reverse search that balances
+   computational efficiency with accuracy in pathfinding. The proposed
+   algorithm can be applied to industrial robots, humanoid robots, or
+   service robots to achieve efficient path planning.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3590084,,,,"Zhang, Liding and Cai, Kuanqi and Zhang, Yu and Bing, Zhenshan and Wang,
+   Chaoqun and Wu, Fan and Haddadin, Sami and Knoll, Alois",,6.0,WOS:001534494100020,,,paper,estimated informed anytime search for sampling based planning via adaptive sampler,10.1109/tase.2025.3590084,https://doi.org/10.1109/tase.2025.3590084,https://doi.org/10.1109/tase.2025.3590084,162.243,citations=6; year=2025; risk_terms=1; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3590084,True,202.0,https://ieeexplore.ieee.org/document/11083625/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 휴머노이드 제로샷 전이 불안정성이 실제 안전 문제로 이어질 수 있음을 다룬다; Estimated Informed Anytime Se… (Zhang et al., 2025)",3
+0.972,7,PHYSBENCH-REF-0031,영상-행동 공격 안전 위반 (Safety violation under video-action attack),1,security,80,,2026,"Enhancing Dynamic Security Assessment in Smart Grids Through Quantum
+   Federated Learning","Dynamic Security Assessment (DSA) is critical for maintaining stability
+   in large-scale smart grids, especially with the growing integration of
+   renewable energy sources and the inherent uncertainties. Traditional
+   model-based analytical methods are increasingly inadequate under these
+   complex conditions. To address these challenges, we propose a pioneering
+   Quantum Federated Learning-based DSA (QFLDSA) method by combining hybrid
+   quantum-classical machine learning and federated learning. QFLDSA offers
+   an effective way to deal with high-dimensional data and uncertainties
+   inherent in the grid. Moreover, QFLDSA leverages the unique capabilities
+   of quantum computing to enhance the processing of differential-algebraic
+   equations that underpin grid stability. This paper demonstrates through
+   extensive simulations that QFLDSA significantly outperforms traditional
+   methods, achieving the highest average F1-score performance at 97.94\%,
+   while maintaining 97.67 \$\textbackslash{}pm\$ 0.17\% prediction
+   accuracy on both classical and quantum computing devices only with fewer
+   transmitted model parameters (reducing up to \$\textbackslash{}sim\$
+   1000X). These enhancements enable more reliable and rapid deployment of
+   preventive stability control measures across smart grids. Our results
+   underscore QFLDSA's potential as a robust solution for the dynamic
+   security challenges of modern smart grids, paving the way for future
+   innovations in grid management technology. Note to Practitioners-In the
+   rapidly evolving world of smart cyber-physical grids, ensuring the
+   stability of electric power systems is paramount. Failures in these
+   systems can lead to catastrophic blackouts, affecting countless homes
+   and businesses. Traditional DSA methods to assess and ensure this
+   stability, while effective, are becoming increasingly complex and
+   vulnerable to single points of failure or cyberattacks. Enter the QFLDSA
+   method, a novel approach we introduce in this paper. In simple terms,
+   this method combines the strengths of quantum machine learning and
+   federated learning to analyze data efficiently across a distributed
+   system. Here's why these matters: 1) Localized Analysis: Instead of
+   relying on a central hub to analyze all data, QFLDSA allows for
+   localized data analysis. This means that if one part of the system
+   fails, it does not bring down the entire grid's analysis capabilities.
+   It is akin to having multiple control rooms instead of one, ensuring
+   that a problem in one room does not halt the entire operation. 2)
+   Future-Ready: As we move towards a future where quantum computing
+   becomes more prevalent, QFLDSA is designed to work seamlessly with both
+   today's classical devices and tomorrow's quantum devices. This ensures
+   that as technology evolves, our method remains relevant and efficient.
+   3) Proven Performance: We have not just introduced a new method; we have
+   rigorously tested it. Our theoretical proofs and practical tests confirm
+   that QFLDSA offers accurate and efficient data analysis for smart grids.
+   For industry professionals, the takeaway is clear: if looking for a
+   resilient, future-ready, and proven method to ensure the stability of
+   smart grid, QFLDSA offers a compelling solution.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2024.3486070,,,,"Ren, Chao and Dong, Zhao Yang and Skoglund, Mikael and Gao, Yulan and
+   Wang, Tianjing and Zhang, Rui",,18.0,WOS:001358248400001,,,paper,enhancing dynamic security assessment in smart grids through quantum federated learning,10.1109/tase.2024.3486070,https://doi.org/10.1109/tase.2024.3486070,https://doi.org/10.1109/tase.2024.3486070,171.222,citations=18; year=2026; risk_terms=4; physical_terms=1; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2024.3486070,True,202.0,https://ieeexplore.ieee.org/document/10750145/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 영상-행동 공격 안전 위반이 실제 안전 문제로 이어질 수 있음을 다룬다; Enhancing Dynamic Security As… (Ren et al., 2026)",2
+0.958,39,PHYSBENCH-REF-0005,그리퍼 형상·유형 제약 위반 (Gripper geometry and type constraint violation),2,collision;manipulation,11,,2025,"A Hybrid Framework Based on Bio-Signal and Built-in Force Sensor for
+   Human-Robot Active Co-Carrying","Human-robot collaboration represents a promising avenue for applications
+   in future factory scenarios. Existing work predominantly concentrates on
+   passive assistance based on real-time sensing sensor like force sensors,
+   while only a few studies have ventured into the exploration and
+   realization of active assistance provided by robots with the assistance
+   of predictive sensors. This paper proposes an innovative hybrid
+   framework that combines human bio-signal information with built-in robot
+   force sensors to implement human-robot active collaboration. First, a
+   Hill-type muscle-skeleton model is adopted and calibrated through
+   partial swarm optimization (PSO). With this model, surface
+   electromyography(sEMG) is used to estimate human limb stiffness. Then,
+   an Radial Basis Function neural network (RBFNN) compensator is developed
+   to account for the uncertainty in human-object-robot dynamics.
+   Subsequently, we propose an adaptive variable impedance controller,
+   incorporating a global bias into the neural network architecture. This
+   innovative modification serves to augment the system's robustness,
+   streamline the network configuration by curtailing the number of hidden
+   neurons, and consequently, facilitate more consistent and efficient
+   human-robot interaction behavior. Finally, we substantiate the
+   effectiveness of the proposed methodology through a two-link robotic
+   simulation experiment and a real-world co-carrying task employing with
+   the Baxter robot and human partner. These rigorous evaluations unveil a
+   significant alleviation of task-related human workload attributed to our
+   proposed framework. Note to Practitioners-This framework aims to address
+   the existing research gap in human-robot collaboration, particularly
+   involving bio-signal utilization, to facilitate perceptive active
+   assistance within a typical industrial assembly scenario. In such
+   representative tasks, many studies primarily employ real-time sensors
+   such as force, position. These sensors, while essential, are limited by
+   their detection principles and require collaborative operation to
+   ascertain stiffness and realize passive assistance. Conversely,
+   bio-signals intrinsically contain stiffness information and exhibit
+   prospective characteristics that can be leveraged for stiffness
+   prediction. In this typical task, we design a human-robot co-transport
+   system with two crucial characteristics: first, the robot is capable of
+   detecting human stiffness tendencies and comprehending human intent,
+   leading to self-adjusting robotic behavior that provides enhanced
+   protection for the transported object. Secondly, the newly proposed
+   controller can manage sudden disturbances and execute self-repairs, thus
+   increasing the task success rate and ensuring worker safety.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2024.3395921,,,,"Hu, Leyun and Zhai, Di-Hua and Yu, Dongdong and Xia, Yuanqing",,9.0,WOS:001218677900001,,,paper,a hybrid framework based on bio signal and built in force sensor for human robot active co carrying,10.1109/tase.2024.3395921,https://doi.org/10.1109/tase.2024.3395921,https://doi.org/10.1109/tase.2024.3395921,192.236,citations=9; year=2025; risk_terms=5; physical_terms=6; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2024.3395921,True,202.0,https://ieeexplore.ieee.org/document/10521602/,text/html; charset=UTF-8,,"사람-로봇 상호작용 안전에서 그리퍼 형상·유형 제약 위반이 실제 안전 문제로 이어질 수 있음을 다룬다; A Hybrid Framework Based on B… (Hu et al., 2025)",3
+0.95,143,PHYSRISK-REF-0036,피지컬 자동화 노동 대체 (Embodied automation labor displacement),1,medical;security,160,,2024,"Standardizing an Ontology for Ethically Aligned Robotic and Autonomous
+   Systems","Domain-specific ontologies support system design and can establish a
+   framework for fulfilling user-level, safety, or ethical requirements.
+   The IEEE 7007-2021 Ontological Standard for ethically driven robotics
+   and automation systems is the first industry standard to introduce a
+   structure of ontologies concerning robot ethics and related fields, such
+   as data privacy, transparency, responsibility, and accountability,
+   offering a systems science approach to support the ethically aligned
+   design of complex cyber-physical systems (CPSs) and robots particularly.
+   This article provides a comprehensive overview of the main ontological
+   commitments composing the foundation of the standard, the rationale
+   behind their development, together with use cases of applications.
+   Future directions for ethically aligned robotics and artificial
+   intelligence (AI)-based systems along IEEE 7007-2021 are outlined,
+   taking into account the exponentially growing fields of service and
+   medical robotics.",IEEE TRANSACTIONS ON SYSTEMS MAN CYBERNETICS-SYSTEMS,,Article,10.1109/TSMC.2023.3330981,,,,"Houghtaling, Michael A. and Fiorini, Sandro Rama and Fabiano, Nicola and
+   Goncalves, Paulo J. S. and Ulgen, Ozlem and Haidegger, Tamas and
+   Carbonera, Joel Luis and Olszewska, Joanna Isabelle and Page, Brian and
+   Murahwi, Zvikomborero and Prestes, Edson",,31.0,WOS:001112832200001,,,paper,standardizing an ontology for ethically aligned robotic and autonomous systems,10.1109/tsmc.2023.3330981,https://doi.org/10.1109/tsmc.2023.3330981,https://doi.org/10.1109/tsmc.2023.3330981,161.52,citations=31; year=2024; risk_terms=5; physical_terms=4,https://doi.org/10.1109/tsmc.2023.3330981,True,202.0,https://ieeexplore.ieee.org/document/10335707/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 피지컬 자동화 노동 대체이 실제 안전 문제로 이어질 수 있음을 다룬다; Standardizing an Ontology for… (Houghtaling et al., 2024)",2
+0.932,75,PHYSRISK-REF-0014,정밀 운동 제어 불안정성 (Fine motor control instability),1,manipulation;medical,57,,2025,"Constrained Reinforcement Learning Using Distributional Representation
+   for Trustworthy Quadrotor UAV Tracking Control","Simultaneously accurate and reliable tracking control for quadrotors in
+   complex dynamic environments is challenging. The chaotic nature of
+   aerodynamics, derived from drag forces and moment variations, makes
+   precise identification difficult. Consequently, many existing quadrotor
+   tracking systems treat these aerodynamic effects as simple
+   `disturbances' in conventional control approaches. We propose a novel
+   and interpretable trajectory tracker integrating a distributional
+   Reinforcement Learning (RL) disturbance estimator for unknown
+   aerodynamic effects with a Stochastic Model Predictive Controller
+   (SMPC). Specifically, the proposed estimator `Constrained Distributional
+   REinforced-Disturbance-estimator' (ConsDRED) effectively identifies
+   uncertainties between the true and estimated values of aerodynamic
+   effects. Control parameterization employs simplified affine disturbance
+   feedback to ensure convexity, which is seamlessly integrated with the
+   SMPC. We theoretically guarantee that ConsDRED achieves an optimal
+   global convergence rate, and sublinear rates if constraints are violated
+   with certain error decreases as neural network dimensions increase. To
+   demonstrate practicality, we show convergent training, in simulation and
+   real-world experiments, and empirically verify that ConsDRED is less
+   sensitive to hyperparameter settings compared with canonical constrained
+   RL. Our system substantially improves accumulative tracking errors by at
+   least 70\%, compared with the recent art. Importantly, the proposed
+   ConsDRED-SMPC framework balances the trade-off between pursuing high
+   performance and obeying conservative constraints for practical
+   implementations. Note to Practitioners-This work is motivated by
+   challenges in training Reinforcement Learning (RL) for autonomous
+   navigation in unmanned aerial vehicles, but its implications extend to
+   other high-criticality applications in, for example, healthcare and
+   financial services. The implementation of RL algorithm policies may
+   exhibit various deficiencies, including (i) opaque or unstable training
+   due to the blackbox nature of deep neural networks, (ii) difficulty in
+   reproducing RL outcomes, and (iii) heightened costs associated with
+   robustness investigation, e.g., hyperparameter tuning and
+   generalization. We present a novel `Constrained Distributional
+   REinforced-Disturbance-estimator' (ConsDRED) to identify uncertainties
+   arising from aerodynamic disturbances in agile flight. The proposed
+   algorithm demonstrates at least an optimal convergence rate for both
+   global optimization and constraint violations. Theoretical guarantees
+   offered by this approach can make training convergence processes more
+   transparent and provide a degree of confidence in the expected
+   convergence outcomes in real-world applications, thereby addressing, to
+   a considerable extent, the deficiencies related to (i) and (ii). Our
+   robustness investigation, related to (iii), empirically demonstrates
+   that ConsDRED is significantly less sensitive to hyperparameter settings
+   compared to traditional constrained RL approaches. The experiments
+   further showcase the generalization capability of ConsDRED by
+   introducing new and previously unseen external forces in real-world
+   scenarios. While ConsDRED strikes a reasonable balance between
+   performance and interpretability, there remains a trade-off with
+   conservative decision-making. Hence, we must strike a balance between
+   the desired degree of interpretability and the acceptable level of
+   scalability in RL algorithms.
+   Our proposed flight control framework evidences such a balance between
+   high performance and safety constraints. A fundamental limitation is the
+   computational complexity, where we sample at 16 Hz for disturbance
+   estimation owing to limited onboard computational resources. This may be
+   improved in the future by implementing dedicated hardware.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2024.3432405,,,,"Wang, Yanran and Boyle, David",,13.0,WOS:001283793500001,,,paper,constrained reinforcement learning using distributional representation for trustworthy quadrotor uav tracking control,10.1109/tase.2024.3432405,https://doi.org/10.1109/tase.2024.3432405,https://doi.org/10.1109/tase.2024.3432405,176.947,citations=13; year=2025; risk_terms=4; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2024.3432405,True,202.0,https://ieeexplore.ieee.org/document/10614102/,text/html; charset=UTF-8,,"드론·저고도 비행 안전에서 정밀 운동 제어 불안정성이 실제 안전 문제로 이어질 수 있음을 다룬다; Constrained Reinforcement Lea… (Wang et al., 2025)",2
+0.93,38,PHYSBENCH-REF-0040,기반 모델 고유의 리스크 (Foundation-model-specific robot risk),1,security,160,,2024,"Standardizing an Ontology for Ethically Aligned Robotic and Autonomous
+   Systems","Domain-specific ontologies support system design and can establish a
+   framework for fulfilling user-level, safety, or ethical requirements.
+   The IEEE 7007-2021 Ontological Standard for ethically driven robotics
+   and automation systems is the first industry standard to introduce a
+   structure of ontologies concerning robot ethics and related fields, such
+   as data privacy, transparency, responsibility, and accountability,
+   offering a systems science approach to support the ethically aligned
+   design of complex cyber-physical systems (CPSs) and robots particularly.
+   This article provides a comprehensive overview of the main ontological
+   commitments composing the foundation of the standard, the rationale
+   behind their development, together with use cases of applications.
+   Future directions for ethically aligned robotics and artificial
+   intelligence (AI)-based systems along IEEE 7007-2021 are outlined,
+   taking into account the exponentially growing fields of service and
+   medical robotics.",IEEE TRANSACTIONS ON SYSTEMS MAN CYBERNETICS-SYSTEMS,,Article,10.1109/TSMC.2023.3330981,,,,"Houghtaling, Michael A. and Fiorini, Sandro Rama and Fabiano, Nicola and
+   Goncalves, Paulo J. S. and Ulgen, Ozlem and Haidegger, Tamas and
+   Carbonera, Joel Luis and Olszewska, Joanna Isabelle and Page, Brian and
+   Murahwi, Zvikomborero and Prestes, Edson",,31.0,WOS:001112832200001,,,paper,standardizing an ontology for ethically aligned robotic and autonomous systems,10.1109/tsmc.2023.3330981,https://doi.org/10.1109/tsmc.2023.3330981,https://doi.org/10.1109/tsmc.2023.3330981,161.52,citations=31; year=2024; risk_terms=5; physical_terms=4,https://doi.org/10.1109/tsmc.2023.3330981,True,202.0,https://ieeexplore.ieee.org/document/10335707/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 기반 모델 고유의 리스크이 실제 안전 문제로 이어질 수 있음을 다룬다; Standardizing an Ontology for… (Houghtaling et al., 2024)",2
+0.925,64,PHYSBENCH-REF-0085,가정 장기 계획 조작 위험 (Household long-horizon manipulation risk),1,collision;manipulation,12,,2024,"Vision-and Tactile-Based Continuous Multimodal Intention and Attention
+   Recognition for Safer Physical Human-Robot Interaction","Employing skin-like tactile sensors on robots enhances both the safety
+   and usability of collaborative robots by adding the capability to detect
+   human contact. Unfortunately, simple binary tactile sensors alone cannot
+   determine the context of the human contact-whether it is a deliberate
+   interaction or an unintended collision that requires safety manoeuvres.
+   Many published methods classify discrete interactions using more
+   advanced tactile sensors or by analysing joint torques. Instead, we
+   propose to augment the intention recognition capabilities of simple
+   binary tactile sensors by adding a robot-mounted camera for human
+   posture analysis. Different interaction characteristics, including touch
+   location, human pose, and gaze direction, are used to train a supervised
+   machine learning algorithm to classify whether a touch is intentional or
+   not with an F1-score of 86\%. We demonstrate that multimodal intention
+   recognition is significantly more accurate than monomodal analyses with
+   the collaborative robot Baxter. Furthermore, our method can also
+   continuously monitor interactions that fluidly change between
+   intentional or unintentional by gauging the user's attention through
+   gaze. If a user stops paying attention mid-task, the proposed intention
+   and attention recognition algorithm can activate safety features to
+   prevent unsafe interactions. We also employ a feature reduction
+   technique that reduces the number of inputs to five to achieve a more
+   generalized low-dimensional classifier. This simplification both reduces
+   the amount of training data required and improves real-world
+   classification accuracy. It also renders the method potentially agnostic
+   to the robot and touch sensor architectures while achieving a high
+   degree of task adaptability.Note to Practitioners-Whenever a user
+   interacts physically with a robot, such as in collaborative
+   manufacturing, the robot may respond to unintended touch inputs from the
+   user. This may be through body collisions or that the user is suddenly
+   distracted and is no longer paying attention to what they are doing. We
+   propose an easy-to-implement method to augment safety of physical
+   human-robot collaboration by determining whether the touch from a user
+   is intentional or not through the use of robot-mounted basic touch
+   sensors and computer vision. The algorithm examines the location of the
+   user's hands relative to the touched sensors in addition to observing
+   where the user is looking. Machine learning is then used to classify in
+   real-time, with an F1-score of 86\%, whether a touch is intentional or
+   not such that the robot can react accordingly. The method is
+   particularly applicable in collaborative manufacturing contexts, but can
+   also be applied anywhere where a user physically interacts with a robot.
+   We demonstrate the utility of the method in enhancing safety during
+   human-robot collaboration through a simulated collaborative
+   manufacturing scenario with the robot Baxter, but the method can easily
+   be adapted to other systems.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2023.3276856,,,,"Wong, Christopher Yee and Vergez, Lucas and Suleiman, Wael",,26.0,WOS:001005759800001,,,paper,vision and tactile based continuous multimodal intention and attention recognition for safer physical human robot interaction,10.1109/tase.2023.3276856,https://doi.org/10.1109/tase.2023.3276856,https://doi.org/10.1109/tase.2023.3276856,191.142,citations=26; year=2024; risk_terms=3; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2023.3276856,True,202.0,https://ieeexplore.ieee.org/document/10144527/,text/html; charset=UTF-8,,"사람-로봇 상호작용 안전에서 가정 장기 계획 조작 위험이 실제 안전 문제로 이어질 수 있음을 다룬다; Vision-and Tactile-Based Cont… (Wong et al., 2024)",2
+0.903,167,PHYSRISK-REF-0024,신체 자율성 침해 (Bodily autonomy intrusion),2,medical;security,64,,2025,"A comprehensive survey of Federated Intrusion Detection Systems:
+   Techniques, challenges and solutions","Cyberattacks have increased radically over the last years, while the
+   exploitation of Artificial Intelligence (AI) leads to the implementation
+   of even smarter attacks which subsequently require solutions that will
+   efficiently confront them. This need is indulged by incorporating
+   Federated Intrusion Detection Systems (FIDS), which have been widely
+   employed in multiple scenarios involving communication in cyber-physical
+   systems. These include, but are not limited to, the Internet of Things
+   (IoT) devices, Industrial IoT (IIoT), healthcare systems (Internet of
+   Medical Things/IoMT), Internet of Vehicles (IoV), Smart Manufacturing
+   (SM), Supervisory Control and Data Acquisition (SCADA) systems,
+   Multi-access Edge Computing (MEC) devices, among others. Tackling the
+   challenge of cyberthreats in all the aforementioned scenarios is of
+   utmost importance for assuring the safety and continuous functionality
+   of the operations, crucial for maintaining proper procedures in all
+   Critical Infrastructures (CIs). For this purpose, pertinent knowledge of
+   the current status in state-of-the-art (SOTA) federated intrusion
+   detection methods is mandatory, towards encompassing while
+   simultaneously evolving them in order to timely detect and mitigate
+   cyberattack incidents. In this study, we address this challenge and
+   provide the readers with an overview of FL implementations regarding
+   Intrusion Detection in several CIs. Additionally, the distinct
+   communication protocols, attack types and datasets utilized are
+   thoroughly discussed. Finally, the latest Machine Learning (ML) and Deep
+   Learning (DL) frameworks and libraries to implement such methods are
+   also provided.",COMPUTER SCIENCE REVIEW,,Review,10.1016/j.cosrev.2024.100717,,,,"Makris, Ioannis and Karampasi, Aikaterini and Radoglou-Grammatikis,
+   Panagiotis and Episkopos, Nikolaos and Iturbe, Eider and Rios, Erkuden
+   and Piperigkos, Nikos and Lalos, Aris and Xenakis, Christos and Lagkas,
+   Thomas and Argyriou, Vasileios and Sarigiannidis, Panagiotis",,17.0,WOS:001392500300001,,,paper,a comprehensive survey of federated intrusion detection systems techniques challenges and solutions,10.1016/j.cosrev.2024.100717,https://doi.org/10.1016/j.cosrev.2024.100717,https://doi.org/10.1016/j.cosrev.2024.100717,175.465,citations=17; year=2025; risk_terms=3; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.cosrev.2024.100717,True,200.0,https://linkinghub.elsevier.com/retrieve/pii/S157401372400100X,text/html;charset=UTF-8,,"공격·스푸핑 탐지에서 신체 자율성 침해이 실제 안전 문제로 이어질 수 있음을 다룬다; A comprehensive survey of Fed… (Makris et al., 2025)",3
+0.887,63,PHYSBENCH-REF-0083,휴머노이드 보행 강건성 실패 (Humanoid gait robustness failure),2,humanoid;uncertainty,182,,2026,"Toward Reliable Imitation Learning With Limited Expert Demonstrations
+   via Search-Based Inverse Dynamic Learning","Imitation learning (IL) shows its superiority in faster strategy
+   optimization by leveraging expert demonstrations. However, as one of the
+   powerful IL methods, behavior cloning (BC) suffers from covariate shift
+   problems, where the agent's policy drifts away from the expert's,
+   leading to compounding errors and decreased generalization performance.
+   To this end, we propose Search-based Inverse Dynamics Imitation
+   Learning, namely SIDIL, to enhance the robustness of imitation learning
+   by augmenting expert demonstrations via trajectory perturbation and
+   stitching. Specifically, SIDIL first employs a nearest-neighbor search
+   method to find the closest points between expert and perturbed data,
+   generating new actions near the expert data via a stitching strategy. By
+   exploiting this, the agent can recover from deviations and complete
+   tasks under a wider range of conditions. Experimental results on various
+   robotic tasks show that SIDIL outperforms baseline algorithms with
+   higher success rates across multiple tasks. Meanwhile, SIDIL is allowed
+   to expand the attractive region around expert demonstrations by
+   stitching states from expert demonstrations, enjoying a higher task
+   completion success rate even for states outside the expert distribution.
+   These results highlight our potential to enhance humanoid locomotion and
+   dexterous robotic hand manipulation, making it particularly suitable for
+   industrial manufacturing automation where adaptability, robustness, and
+   safety are essential.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2026.3668970,,,,"Lin, Zhiliang and Chen, Zhuangzhuang and Zhu, Guanming and Wang, Li and
+   Li, Jianqiang",,1.0,WOS:001711114800003,,,paper,toward reliable imitation learning with limited expert demonstrations via search based inverse dynamic learning,10.1109/tase.2026.3668970,https://doi.org/10.1109/tase.2026.3668970,https://doi.org/10.1109/tase.2026.3668970,159.704,citations=1; year=2026; risk_terms=3; physical_terms=7; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2026.3668970,True,202.0,https://ieeexplore.ieee.org/document/11417181/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 휴머노이드 보행 강건성 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Toward Reliable Imitation Lea… (Lin et al., 2026)",3
+0.88,52,PHYSBENCH-REF-0029,금지 대상 충돌 (Forbidden-object collision),3,collision,99,,2025,"Cooperative Path Planning for Heterogeneous UAV Swarms: A Stackelberg
+   Game Approach","The coordinated operations of Stealth Unmanned Aerial Vehicle (SUAV) and
+   Swarming Drones (SD) have demonstrated formidable power in the military
+   domain. Efficient path planning is a critical technology that enhances
+   combat effectiveness. This paper proposes a game-theoretic optimization
+   approach to achieve cooperative penetration and target search path
+   planning for swarm UAVs. Multi-task and multi-objective optimization
+   models are developed for complex scenarios whose optimal solutions are
+   NP-hard. Consequently, SUAV and SD are defined as leader and followers,
+   respectively. The formulated Stackelberg game model enables distributed
+   intelligent decision-making for SUAV and SD. We theoretically prove that
+   by selecting an appropriate potential function, subgames within the
+   leader-level and followers-level become an Ordinal Potential Game (OPG)
+   with a Nash equilibrium, thereby ensuring the existence of a Stackelberg
+   Equilibrium (SE) through leader-follower interactions. We propose a
+   Gradient-based Hierarchical Learning and Optimization Algorithm (GHLOA)
+   to achieve SE. At the leader-level, a Stochastic Gradient Ascent (SGA)
+   algorithm optimizes the penetration path for SUAV, while in the
+   followers-level, we demonstrate that the designed Hybrid Learning-based
+   Multimodal Adaptive Pigeon-Inspired Optimization (HLMAPIO) algorithm
+   converges with probability one to the suboptimal solution for each SD.
+   Numerical results indicate that our approach is suboptimal, scalable,
+   and fast adaptable to dynamical scenarios, and it outperforms the
+   state-of-the-art techniques. Note to Practitioners-With the rapid
+   advancement of artificial intelligence technologies, the coordinated
+   operations of stealth unmanned aerial vehicle (SUAV) and swarming drones
+   (SD) have demonstrated immense potential in modern high-tech warfare.
+   This paper investigates a heterogeneous UAV swarm system comprising a
+   single SUAV and several, or even dozens of, SDs deployed in complex,
+   dynamic scenarios with moving threats during the execution of diverse
+   tasks. Our core concept is to propose a game-theoretic swarm
+   intelligence decision-making framework that optimizes the rewards and
+   costs of swarm members. This approach effectively mitigates potential
+   conflicts, ensures suboptimal and collision-free paths, and enhances the
+   scalability, adaptability, and robustness of the swarm system in dynamic
+   environments. Notably, our method theoretically guarantees system
+   stability and solution suboptimality. Numerical results show that the
+   proposed approach significantly improves the swarm system's overall
+   utility while ensuring the safety of individual UAVs. Even when the
+   number of UAVs and targets increase by a factor of five, the
+   computational time remains within an acceptable range. Future work will
+   focus on integrating game theory with reinforcement learning to explore
+   decision-making and autonomous planning technologies for multi-objective
+   and multi-task scenarios across larger-scale scenarios.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3585946,,,,"Zhang, Zhe and Jiang, Ju and Ling, Keck Voon and Wang, Xinhua and Zhang,
+   Wen-An",,10.0,WOS:001534494100007,,,paper,cooperative path planning for heterogeneous uav swarms a stackelberg game approach,10.1109/tase.2025.3585946,https://doi.org/10.1109/tase.2025.3585946,https://doi.org/10.1109/tase.2025.3585946,168.571,citations=10; year=2025; risk_terms=4; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3585946,True,202.0,https://ieeexplore.ieee.org/document/11071864/,text/html; charset=UTF-8,,"불확실한 환경의 경로 계획에서 금지 대상 충돌이 실제 안전 문제로 이어질 수 있음을 다룬다; Cooperative Path Planning for… (Zhang et al., 2025)",4
+0.874,86,PHYSRISK-REF-0029,로봇 군집 하이재킹 (Fleet hijacking),3,drone;vehicle,28,,2025,"AI-based low-altitude delivery fresh food supply Chain: Research
+   progress and trends","Background: Fresh food is an indispensable part of daily life and is
+   consumed by people in relatively large quantities. However, it is a
+   perishable food, which can easily lead to a decline in freshness and a
+   decrease in nutritional value during the supply chain process, and
+   therefore the efficient operation of its supply chain is crucial for
+   ensuring product quality, reducing wastage, lowering costs, and
+   improving customer satisfaction. Scope and approach: Here, we examine
+   how integrating low-altitude delivery technologies-such as unmanned
+   aerial vehicles (UAVs)-with artificial intelligence (AI) can transform
+   freshness preservation and operational sustainability. The combination
+   of low-altitude delivery technology (e.g., UAVs) and AI provides a new
+   paradigm for the efficiency and intelligence of fresh food supply chain.
+   This paper analyzes the important role of AI in demand forecasting and
+   inventory management, path optimization and dynamic scheduling, quality
+   monitoring and management, Autonomous obstacle avoidance and safety
+   control, and highlighting the innovation potential of UAV-enabled supply
+   chain delivery. The challenges and future development direction of
+   AIlow-altitude delivery in fresh food supply chain are discussed. Key
+   findings and conclusions: This review shows that AI-driven low-altitude
+   delivery can improve the efficiency and sustainability of the fresh food
+   supply chain and help to protect the quality characteristics of fresh
+   food. However, technological and public acceptability hurdles remain,
+   including the need for low-noise UAVs, continued advancements in drone
+   capabilities, the establishment of robust regulatory standards, and the
+   protection of data security. Despite these challenges, the integration
+   of AI-driven low-altitude delivery technologies into fresh food supply
+   chains represents an emerging trend in delivery innovation. Integrating
+   UAVs with unmanned electric refrigerated vehicles and delivery robots is
+   expected to form an efficient and environmentally sustainable delivery
+   model. Adopting shared-use UAV fleets for low-altitude fresh food
+   delivery can reduce operational costs while supporting multifunctional
+   applications in drone delivery. By adopting these innovations,
+   AI-enabled low-altitude delivery systems could transform fresh food
+   supply chains, minimizing waste, and aligning with global sustainability
+   goals.",TRENDS IN FOOD SCIENCE \& TECHNOLOGY,,Article,10.1016/j.tifs.2025.105056,,,,"Zhao, Yonggan and Zhang, Min and Mujumdar, Arun S. and Adhikari, Benu
+   and Rui, Luming",,12.0,WOS:001487621100001,,,paper,ai based low altitude delivery fresh food supply chain research progress and trends,10.1016/j.tifs.2025.105056,https://doi.org/10.1016/j.tifs.2025.105056,https://doi.org/10.1016/j.tifs.2025.105056,180.909,citations=12; year=2025; risk_terms=4; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.tifs.2025.105056,True,200.0,https://linkinghub.elsevier.com/retrieve/pii/S092422442500192X,text/html;charset=UTF-8,,"피지컬 AI 시스템에서 로봇 군집 하이재킹이 실제 안전 문제로 이어질 수 있음을 다룬다; AI-based low-altitude deliver… (Zhao et al., 2025)",4
+0.87,123,PHYSRISK-REF-0002,악천후 인지 실패 (Adverse weather perception failure),3,manipulation;privacy,113,,2026,"Practical Mixed Palletizing Manipulator System: Incorporating Practical
+   Reinforcement Learning and Configuration-Space Motion Planning","Palletizing, also known as the 3D bin packing problem, is important for
+   optimizing space utilization and automating packing processes,
+   especially in the logistics industry. In practice, handling mixed
+   palletizing scenarios, where a variety of boxes of different sizes are
+   received in real time, is considerably challenging. Existing methods for
+   solving the mixed palletizing problem often overlook practical
+   constraints encountered in real-world applications, such as those
+   pertaining to stability and robustness. In this paper, we propose a
+   practical mixed palletizing manipulator system designed for structured
+   real-world warehouse environments. Our manipulator system has two main
+   components: a practical mixed palletizing model based on reinforcement
+   learning (PMP-RL), which can facilitate stable and efficient box
+   placing, and a configuration-space motion planning network (CMPNet),
+   which can help achieve robust and efficient collision-free robot
+   movement. The PMP-RL model is designed to maximize the pallet volume
+   utilization while incorporating practical reward functions that enhance
+   stability. CMPNet is used to directly predict motion trajectories in a
+   3D configuration space, and it facilitates real-time motion generation
+   by effectively imitating expert-level paths. Overall, the manipulator
+   system, comprising an automated conveyor belt, a camera-based
+   recognition system, the PMP-RL model, and CMPNet, provide a robust and
+   practical framework for mixed palletizing. Experiments conducted via
+   simulations and in real-world environments have shown that the
+   manipulator system can handle complex palletizing tasks with high
+   efficiency and high stability. Note to Practitioners-This work
+   introduces a practical robotic palletizing system that stacks boxes of
+   various sizes in real time, addressing common issues such as unstable
+   stacking and inefficient robot motion. By combining reinforcement
+   learning for box placement with fast, collision-free motion planning,
+   the system improves efficiency and reliability in warehouse automation.
+   The approach operates in real-world settings using standard hardware
+   like conveyor belts, cameras, and robot arms, and can reduce manual
+   workload. The current implementation is designed for structured
+   warehouse environments with rigid cuboidal boxes, which allows efficient
+   perception and reliable placement decisions. While this assumption
+   simplifies deployment, it also limits direct applicability to
+   irregular-shaped items or unstructured scenarios. Moreover, the present
+   framework has been optimized for 3-DoF manipulators; extending it to
+   higher-DoF robots may require additional consideration of computational
+   efficiency in learning and motion planning. It is suitable for
+   industrial use and can be extended to more complex environments through
+   enhanced perception and manipulation modules, with further
+   customization.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3637854,,,,"Ahn, Woo-Jin and Choi, Kyuwon and Kang, Seong-Woo and Rho, Cheol-Kyun
+   and Pae, Dong-Sung and Lim, Myo-Taeg",,2.0,WOS:001655706200030,,,paper,practical mixed palletizing manipulator system incorporating practical reinforcement learning and configuration space motion planning,10.1109/tase.2025.3637854,https://doi.org/10.1109/tase.2025.3637854,https://doi.org/10.1109/tase.2025.3637854,165.381,citations=2; year=2026; risk_terms=3; physical_terms=6; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3637854,True,202.0,https://ieeexplore.ieee.org/document/11270909/,text/html; charset=UTF-8,,"안전 강화학습에서 악천후 인지 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Practical Mixed Palletizing M… (Ahn et al., 2026)",4

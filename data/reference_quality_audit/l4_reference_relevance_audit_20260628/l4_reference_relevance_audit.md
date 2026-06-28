@@ -1,0 +1,1197 @@
+# L4 Reference Relevance Audit
+
+- Cards audited: 182
+- References audited: 314
+- Flagged candidates: 198
+- By severity: {'high': 147, 'medium': 51}
+
+## High And Medium Candidates
+
+- **PHYSBENCH-REF-0001** 저빈도 가정 위험 대응 실패 (Long-tail household injury scenario failure)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 드문 가정 사고 장면은 데이터에 적어 로봇이 위험을 과소평가하기 쉽다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0004** 부상 심각도 오분류 (Injury severity misclassification)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 부상 상황을 가볍게 판단하면 경고와 개입 강도가 부족해진다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0005** 그리퍼 형상·유형 제약 위반 (Gripper geometry and type constraint violation)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 그리퍼 모양과 종류를 무시하면 물체를 놓치거나 사람을 집을 수 있다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0006** 재료 특성 제약 위반 (Material property constraint violation)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 깨지기 쉽거나 미끄러운 재료 특성을 모르면 잡기와 이동이 위험해진다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0007** 물리적 상식 위반 (Commonsense physicality violation)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 무게, 불, 날카로움 같은 상식을 놓치면 안전하지 않은 행동을 고른다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0008** 열·온도 제약 위반 (Thermal constraint violation)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 뜨거움, 냉기, 방사 같은 온도 제약을 무시하면 화상이나 손상이 생긴다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0009** 기구학·도달 범위 제약 위반 (Kinematics and reach constraint violation)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 관절 한계와 도달 범위를 넘는 계획은 충돌이나 넘어짐으로 이어질 수 있다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0010** 다중 암 협조 제약 위반 (Multi-arm coordination constraint violation)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 여러 팔이 서로의 공간을 고려하지 않으면 팔끼리 또는 사람과 부딪힐 수 있다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0011** 운용 프로토콜 위반 (Operational protocol violation)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 현장 절차와 체크리스트를 건너뛰면 안전장치가 있어도 사고가 날 수 있다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0012** 복합 물리적 제약 위반 (Compositional physical constraint violation)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 따로 보면 안전한 동작도 조합되면 충돌이나 낙하 같은 위험이 될 수 있다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0013** 탑재 하중 제약 위반 (Payload constraint violation)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 하중 한계를 넘기면 물체가 떨어지거나 로봇 관절이 손상될 수 있다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0014** 작업 공간 한계 위반 (Workspace limit violation)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 정해진 작업 구역을 벗어나면 사람이나 장비와 충돌할 수 있다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0015** 허용 대상물 제약 위반 (Permissible object constraint violation)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 만지면 안 되는 물체를 조작하면 파손, 오염, 상해가 생길 수 있다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0016** 하드웨어 한계 리스크 (Embodiment-specific hardware limitation failure)
+  - Ref: ASIMOV-2.0: Can AI Perceive Physical Danger and In…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇 몸의 힘, 관절, 센서 한계를 무시하면 실행 단계에서 위험해진다 (ASIMOV-2.0, 2025)
+  - URL: https://arxiv.org/pdf/2509.21651
+- **PHYSBENCH-REF-0018** 언어-행동 안전 정렬 실패 (Linguistic-action safety misalignment)
+  - Ref: BadRobot: Jailbreaking Embodied LLM Agents in the …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 위험한 행동도 말만 바꾸면 로봇이 안전한 작업으로 착각할 수 있다 (Zhang et al., 2024)
+  - URL: https://arxiv.org/pdf/2407.20242
+- **PHYSBENCH-REF-0019** 물리적 행동 기만 (Conceptual deception in physical action)
+  - Ref: BadRobot: Jailbreaking Embodied LLM Agents in the …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 위험한 대상을 다른 말로 숨기면 로봇이 해로운 피지컬 행동을 그대로 실행할 수 있다 (Zhang et al., 2024)
+  - URL: https://arxiv.org/pdf/2407.20242
+- **PHYSBENCH-REF-0021** 피지컬 AI 프라이버시 침해 (Embodied privacy violation)
+  - Ref: BadRobot: Jailbreaking Embodied LLM Agents in the …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 카메라와 마이크로 사적 공간을 엿보거나 민감정보를 모을 수 있다 (Zhang et al., 2024)
+  - URL: https://arxiv.org/pdf/2407.20242
+- **PHYSBENCH-REF-0022** 피지컬 AI 파괴 행위 (Embodied sabotage)
+  - Ref: BadRobot: Jailbreaking Embodied LLM Agents in the …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 장비나 시설을 망가뜨리도록 유도되면 피지컬 피해가 바로 생긴다 (Zhang et al., 2024)
+  - URL: https://arxiv.org/pdf/2407.20242
+- **PHYSBENCH-REF-0023** 사기·불법 실행 및 지원 (Embodied fraud or illegal-action execution)
+  - Ref: BadRobot: Jailbreaking Embodied LLM Agents in the …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 사기, 절도, 무단 침입 같은 불법 행동의 실행 도구가 될 수 있다 (Zhang et al., 2024)
+  - URL: https://arxiv.org/pdf/2407.20242
+- **PHYSBENCH-REF-0024** 피지컬 AI의 혐오·학대 행동 (Hateful or abusive embodied action)
+  - Ref: BadRobot: Jailbreaking Embodied LLM Agents in the …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 사람을 향해 차별적이거나 위협적인 행동을 직접 수행할 수 있다 (Zhang et al., 2024)
+  - URL: https://arxiv.org/pdf/2407.20242
+- **PHYSBENCH-REF-0025** 임계 이격 거리 위반 (Critical separation-distance violation)
+  - Ref: Robots
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 사람과의 안전거리를 깨면 작은 움직임도 곧바로 부상으로 이어질 수 있다 (Huang et al., 2025)
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSBENCH-REF-0025** 임계 이격 거리 위반 (Critical separation-distance violation)
+  - Ref: Robotics
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 임계 분리 거리 위반 탐지, 안전 영역 이탈 선행 지표 포함 (Robotics Human Proximity Safety, HF)
+  - URL: https://huggingface.co/datasets/ClarusC64/robotics-human-proximity-safety-coherence-risk-v0.1
+- **PHYSBENCH-REF-0026** 위험 도구 작업 공간 침입 (Hazardous-tool workspace intrusion)
+  - Ref: Robots
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 위험 도구를 든 로봇이 사람 작업구역에 들어오면 피하기 전에 다칠 수 있다 (Huang et al., 2025)
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSBENCH-REF-0027** 엔드이펙터 속도 초과 (Excessive end-effector velocity)
+  - Ref: Robots
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇 끝부분이나 몸이 너무 빠르게 움직이면 충돌 충격이 커진다 (Huang et al., 2025)
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSBENCH-REF-0028** 조기 물체 해제 (Premature object release)
+  - Ref: Robots
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 물체를 안전한 위치 전에 놓으면 낙하, 파손, 2차 사고가 생긴다 (Huang et al., 2025)
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSBENCH-REF-0029** 금지 대상 충돌 (Forbidden-object collision)
+  - Ref: Robots
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 부딪히면 안 되는 물체와 충돌하면 사람, 장비, 환경에 피해가 난다 (Huang et al., 2025)
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSBENCH-REF-0029** 금지 대상 충돌 (Forbidden-object collision)
+  - Ref: Safe Learning in Robotics: From Learning-Based Control to Safe Reinforcement Learning
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 안전 학습이 충돌·제약을 별도 비용으로 다루는 만큼, 금지 대상 충돌은 보상만으로 해결되지 않는다 (Safe Learning in Robotics (2022))
+  - URL: https://doi.org/10.1146/annurev-control-042920-020211
+- **PHYSBENCH-REF-0030** 감각 교란 기반 비안전 행동 (Adversarial sensory perturbation induced unsafe action)
+  - Ref: Advanced Sensor Systems for Robotics and Autonomous Vehicles
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 센서 입력이 틀어지면 로봇의 상황 판단도 함께 틀어진다 (Advanced Sensor Systems for Robotics and A…, 2023)
+  - URL: https://doi.org/10.1007/978-3-031-28715-2_14
+- **PHYSBENCH-REF-0030** 감각 교란 기반 비안전 행동 (Adversarial sensory perturbation induced unsafe action)
+  - Ref: AV Raw Sensor Telemetry (born5149)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: AV 센서 원시 데이터, 적대적 센서 교란 주입 효과 측정 기준 (AV Raw Sensor Telemetry, HF)
+  - URL: https://huggingface.co/datasets/born5149/autonomous-vehicle-sensor-fusion
+- **PHYSBENCH-REF-0033** 다중 에이전트 안전 제약 위반 (Multi-agent safety constraint violation)
+  - Ref: Safety-Gymnasium: A Unified Safe Reinforcement Lea…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 여러 에이전트가 각자 안전해 보여도 함께 움직이면 충돌과 역할 충돌이 생긴다 (Safety-Gymnasium, 2023)
+  - URL: https://arxiv.org/pdf/2310.12567
+- **PHYSBENCH-REF-0033** 다중 에이전트 안전 제약 위반 (Multi-agent safety constraint violation)
+  - Ref: On infusing reachability-based safety assurance within planning frameworks for human–robot vehicle interactions
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 사람-로봇 차량 상호작용에서 reachability 기반 안전 보증을 다뤄, 다중 에이전트 안전 제약 위반의 궤적·충돌 회피가 계획 단계 이슈가 된다 (On infusing reachability-based safety assurance within planning… (2020))
+  - URL: https://doi.org/10.1177/0278364920950795
+- **PHYSBENCH-REF-0035** 제약 비용 과소평가 (Constraint-cost underestimation)
+  - Ref: Safety-Gymnasium: A Unified Safe Reinforcement Lea…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 작은 안전 비용을 낮게 잡으면 여러 번의 행동 끝에 큰 위험이 누적된다 (Safety-Gymnasium, 2023)
+  - URL: https://arxiv.org/pdf/2310.12567
+- **PHYSBENCH-REF-0036** 배포 전 검증 공백 (Pre-deployment validation gap)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 배포 전 검증이 부족하면 현장에 나간 뒤 처음으로 위험이 드러난다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0036** 배포 전 검증 공백 (Pre-deployment validation gap)
+  - Ref: Testing machine learning based systems: a systematic mapping
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: ML 기반 시스템을 배포 전에 시험해야 하는 이유를 안전 검증 관점에서 다룬다 (Testing machine learning based systems: a …, 2020)
+  - URL: https://doi.org/10.1007/s10664-020-09881-0
+- **PHYSBENCH-REF-0036** 배포 전 검증 공백 (Pre-deployment validation gap)
+  - Ref: pi0.5 LIBERO Robot Initial Failures (d3d3shan)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: LIBERO 로봇 초기 상태 실패 아티팩트, 배포 전 검증 갭 정량적 측정 (pi0.5 LIBERO Robot Initial Failures, HF)
+  - URL: https://huggingface.co/datasets/d3d3shan/pi05-libero-plus-robot-initial-failures
+- **PHYSBENCH-REF-0037** 사고 전 위험 완화 공백 (Pre-incident mitigation gap)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 사고 전에 위험을 낮추는 절차가 없으면 이상 징후가 곧바로 사고로 번진다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0037** 사고 전 위험 완화 공백 (Pre-incident mitigation gap)
+  - Ref: REPORT ON SAFETY AND LIABILITY IMPLICATIONS OF ARTIFICIAL INTELLIGENCE, THE INTERNET OF THINGS AND ROBOTICS
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 제도와 표준의 빈틈이 안전 책임과 인증 공백을 만든다 (REPORT ON SAFETY AND LIABILITY IMPLICATION…, 2020)
+  - URL: https://ec.europa.eu/info/publications/commission-report-safety-and-liability-implications-ai-internet-things-and-robotics-0_en
+- **PHYSBENCH-REF-0038** 사고 후 복구 공백 (Post-incident recovery gap)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 사고 뒤 원인 분석과 개선이 약하면 같은 위험이 다시 반복된다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0039** 물리적 상호작용 안전 공백 (Physical interaction safety control gap)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 사람과 가까이 닿는 로봇은 힘, 속도, 거리 제어가 빠지면 바로 다칠 수 있다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0040** 기반 모델 고유의 리스크 (Foundation-model-specific robot risk)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 기반모델의 환각과 지시 오해는 로봇의 잘못된 움직임으로 바로 이어질 수 있다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0041** 로봇 레드팀 커버리지 공백 (Red-team coverage gap for robotics)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇 레드팀이 좁으면 실제 공격자가 쓸 피지컬 우회 방법을 놓친다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0042** 물리적 적대 패치 취약성 (Physical adversarial patch vulnerability)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 적대적 표지나 물체가 센서를 속이면 로봇이 잘못된 방향으로 움직일 수 있다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0043** 로봇 백도어 공격 취약성 (Robotic backdoor attack vulnerability)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 숨겨진 트리거가 로봇 정책에 남아 있으면 특정 상황에서 위험 행동이 켜진다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0044** 언어 명령 기반 로봇 정책 공격 (Language-instruction attack on robot policy)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 악성 언어 명령이 로봇 정책을 바꾸면 안전하지 않은 행동이 실행될 수 있다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0045** 제약 모니터링 실패 (Constraint monitoring failure)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 속도, 힘, 작업 구역 같은 제약을 감시하지 못하면 위험 행동을 놓친다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0046** 분포 외 환경 배포 실패 (Out-of-distribution physical deployment failure)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 훈련 때와 다른 피지컬 현장에 나가면 로봇이 익숙한 상황처럼 착각할 수 있다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0046** 분포 외 환경 배포 실패 (Out-of-distribution physical deployment failure)
+  - Ref: Robotics
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 학습 데이터 품질·분포 편이로 인한 조작 실패, OOD 배포 실패 패턴 (Haptal Robotics Failure Benchmark, HF)
+  - URL: https://huggingface.co/datasets/HaptalAI/robotics-failure-benchmark
+- **PHYSBENCH-REF-0047** 위험 예측 실패 (Hazard prediction failure)
+  - Ref: A Comprehensive Survey on Physical Risk Control in…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 위험이 커지는 흐름을 미리 못 보면 사고 직전에야 반응하게 된다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSBENCH-REF-0047** 위험 예측 실패 (Hazard prediction failure)
+  - Ref: A review: On path planning strategies for navigation of mobile robot
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇 이동 계획이 충돌과 작업공간 안전에 직접 연결된다 (A review: On path planning strategies for …, 2019)
+  - URL: https://doi.org/10.1016/j.dt.2019.04.011
+- **PHYSBENCH-REF-0047** 위험 예측 실패 (Hazard prediction failure)
+  - Ref: HAN Contextual Risk Assessment (ariefansclub)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 동적 환경 상황 위험 수준 및 권장 행동 데이터셋, 위험 예측 실패 평가 (HAN Contextual Risk Assessment, HF)
+  - URL: https://huggingface.co/datasets/ariefansclub/han-contextual-risk-assessment-v1
+- **PHYSBENCH-REF-0048** 위험 작업 계획 실패 (Hazardous task planning failure)
+  - Ref: Instruction Risk Assessment EN-ID (YosepMulia)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 자연어 명령 실행 전 위험 평가 이중언어 데이터셋, 위험 작업 계획 평가 (Instruction Risk Assessment EN-ID, HF)
+  - URL: https://huggingface.co/datasets/YosepMulia/instruction-risk-assessment-en-id
+- **PHYSBENCH-REF-0049** 명시적 위험 명령 거부 실패 (Explicit hazard non-rejection)
+  - Ref: SafeAgentBench: A Benchmark for Safe Task Planning…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 뻔히 위험한 지시를 거절하지 못하면 실제 사고로 이어질 수 있다 (SafeAgentBench, 2024)
+  - URL: https://arxiv.org/pdf/2412.13178
+- **PHYSBENCH-REF-0049** 명시적 위험 명령 거부 실패 (Explicit hazard non-rejection)
+  - Ref: LLM Physical Safety Benchmark (TrustSafeAI)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 명시적 물리 위험 명령에 대한 LLM 거부 여부 측정 데이터셋 (LLM Physical Safety Benchmark, HF)
+  - URL: https://huggingface.co/datasets/TrustSafeAI/llm_physical_safety_benchmark
+- **PHYSBENCH-REF-0050** 암묵적 위험 명령 거부 실패 (Implicit hazard non-rejection)
+  - Ref: SafeAgentBench: A Benchmark for Safe Task Planning…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 위험이 숨겨진 평범한 지시를 로봇이 그대로 따르면 사고가 날 수 있다 (SafeAgentBench, 2024)
+  - URL: https://arxiv.org/pdf/2412.13178
+- **PHYSBENCH-REF-0050** 암묵적 위험 명령 거부 실패 (Implicit hazard non-rejection)
+  - Ref: LLM Physical Safety Benchmark (TrustSafeAI)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 암묵적 위험 명령(위장 쿼리)에 대한 LLM 반응 평가 기준 (LLM Physical Safety Benchmark, HF)
+  - URL: https://huggingface.co/datasets/TrustSafeAI/llm_physical_safety_benchmark
+- **PHYSBENCH-REF-0051** 다중 에이전트 협조 실행 위험 (Multi-agent embodied execution hazard)
+  - Ref: SafeAgentBench: A Benchmark for Safe Task Planning…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 여러 로봇이 역할을 잘못 나누면 서로의 동선을 막고 위험 작업을 동시에 실행할 수 있다 (SafeAgentBench, 2024)
+  - URL: https://arxiv.org/pdf/2412.13178
+- **PHYSBENCH-REF-0052** 피지컬 AI 안전 인식 실패 (Embodied safety awareness failure)
+  - Ref: SafeAgentBench: A Benchmark for Safe Task Planning…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 말로 된 목표를 행동으로 바꿀 때 위험 상황을 알아차리지 못할 수 있다 (SafeAgentBench, 2024)
+  - URL: https://arxiv.org/pdf/2412.13178
+- **PHYSBENCH-REF-0053** 장애물 개입 충돌 (Obstacle intervention collision)
+  - Ref: VLSA: Vision-Language-Action Models with Plug-and-…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 장애물 회피 중 끼어들기 상황을 잘못 처리하면 충돌이 난다 (VLSA, 2025)
+  - URL: https://arxiv.org/pdf/2512.11891
+- **PHYSBENCH-REF-0053** 장애물 개입 충돌 (Obstacle intervention collision)
+  - Ref: Safe Learning in Robotics: From Learning-Based Control to Safe Reinforcement Learning
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 안전 학습이 충돌·제약을 별도 비용으로 다루는 만큼, 장애물 개입 충돌은 보상만으로 해결되지 않는다 (Safe Learning in Robotics (2022))
+  - URL: https://doi.org/10.1146/annurev-control-042920-020211
+- **PHYSBENCH-REF-0054** 안전-성능 균형 실패 (Safety-performance trade-off failure)
+  - Ref: VLSA: Vision-Language-Action Models with Plug-and-…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 작업 성공만 높이면 충돌 회피 같은 안전 조건이 뒤로 밀릴 수 있다 (VLSA, 2025)
+  - URL: https://arxiv.org/pdf/2512.11891
+- **PHYSBENCH-REF-0055** 제어 장벽 함수 실패 (Control barrier function safety-filter failure)
+  - Ref: VLSA: Vision-Language-Action Models with Plug-and-…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 안전 필터가 실패하면 금지된 동작을 제어 단계에서 막지 못한다 (VLSA, 2025)
+  - URL: https://arxiv.org/pdf/2512.11891
+- **PHYSBENCH-REF-0056** VLA 조작 제약 위반 (VLA manipulation constraint violation)
+  - Ref: VLSA: Vision-Language-Action Models with Plug-and-…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: VLA 모델이 언어 목표만 따라가면 물체 조작의 안전 제약을 놓칠 수 있다 (VLSA, 2025)
+  - URL: https://arxiv.org/pdf/2512.11891
+- **PHYSBENCH-REF-0058** 로봇 형태 전이 리스크 (Robot morphology transfer risk)
+  - Ref: Open X-Embodiment: Robotic Learning Datasets and R…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 몸 구조가 다른 로봇에 같은 기술을 옮기면 균형과 접촉 위험이 달라진다 (Open X-Embodiment, 2023)
+  - URL: https://arxiv.org/pdf/2310.08864
+- **PHYSBENCH-REF-0059** 데이터 혼합 커버리지 편향 (Dataset mixture coverage bias)
+  - Ref: Open X-Embodiment: Robotic Learning Datasets and R…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 데이터가 특정 로봇과 상황에 치우치면 빠진 환경에서 안전 실패가 생긴다 (Open X-Embodiment, 2023)
+  - URL: https://arxiv.org/pdf/2310.08864
+- **PHYSBENCH-REF-0060** 분포 외 기술 전이 실패 (Out-of-distribution skill transfer failure)
+  - Ref: Open X-Embodiment: Robotic Learning Datasets and R…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 훈련 밖 환경으로 기술을 옮기면 익숙한 동작도 물체나 사람 앞에서 실패할 수 있다 (Open X-Embodiment, 2023)
+  - URL: https://arxiv.org/pdf/2310.08864
+- **PHYSBENCH-REF-0061** 접촉 조작 힘 감지 실패 (Contact-rich manipulation force-sensing failure)
+  - Ref: RH20T: A Comprehensive Robotic Dataset for Learnin…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 접촉 조작에서 힘을 잘못 읽으면 로봇이 눌러야 할 때와 멈춰야 할 때를 구분하지 못한다 (RH20T, 2023)
+  - URL: https://arxiv.org/pdf/2307.00595
+- **PHYSBENCH-REF-0062** 원격 조작 시연 안전 편향 (Teleoperation demonstration safety bias)
+  - Ref: RH20T: A Comprehensive Robotic Dataset for Learnin…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 원격 조작 시연 데이터가 안전한 상황에 치우치면 실제 위험 대응을 못 배운다 (RH20T, 2023)
+  - URL: https://arxiv.org/pdf/2307.00595
+- **PHYSBENCH-REF-0063** 시각-촉각 모달리티 불일치 (Visual-tactile modality mismatch)
+  - Ref: RH20T: A Comprehensive Robotic Dataset for Learnin…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 보이는 정보와 만지는 정보가 어긋나면 힘 조절과 접촉 판단이 틀어진다 (RH20T, 2023)
+  - URL: https://arxiv.org/pdf/2307.00595
+- **PHYSBENCH-REF-0064** 인간 시연 전이 모호성 (Human demonstration transfer ambiguity)
+  - Ref: RH20T: A Comprehensive Robotic Dataset for Learnin…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 사람 시연을 겉동작만 따라 하면 언제 조심해야 하는지 숨은 맥락을 놓친다 (RH20T, 2023)
+  - URL: https://arxiv.org/pdf/2307.00595
+- **PHYSBENCH-REF-0065** 휴머노이드 균형 상실 및 낙상 위험 (Humanoid balance-loss and fall risk)
+  - Ref: Robotics
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 600개 조작 실패 에피소드, 균형 손실·낙상 선행 패턴 분석 가능 (Haptal Robotics Failure Benchmark, HF)
+  - URL: https://huggingface.co/datasets/HaptalAI/robotics-failure-benchmark
+- **PHYSBENCH-REF-0066** 전신 이동 충돌 위험 (Whole-body locomotion collision risk)
+  - Ref: Safe Learning in Robotics: From Learning-Based Control to Safe Reinforcement Learning
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 안전 학습이 충돌·제약을 별도 비용으로 다루는 만큼, 전신 이동 충돌 위험은 보상만으로 해결되지 않는다 (Safe Learning in Robotics (2022))
+  - URL: https://doi.org/10.1146/annurev-control-042920-020211
+- **PHYSBENCH-REF-0070** 휴머노이드 보상 과적합 위험 (Humanoid reward overfitting risk)
+  - Ref: Self-Imitative Reinforcement Learning for Reproduc…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 휴머노이드가 보상 점수에만 맞추면 안전하지 않은 편법 동작을 배울 수 있다 (Self-Imitative RL, 2025)
+  - URL: https://arxiv.org/pdf/2502.17322
+- **PHYSBENCH-REF-0071** 휴머노이드 행동 재현성 공백 (Humanoid behavior reproducibility gap)
+  - Ref: Self-Imitative Reinforcement Learning for Reproduc…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 같은 휴머노이드 행동이 반복 재현되지 않으면 안전 검증 결과를 믿기 어렵다 (Self-Imitative RL, 2025)
+  - URL: https://arxiv.org/pdf/2502.17322
+- **PHYSBENCH-REF-0071** 휴머노이드 행동 재현성 공백 (Humanoid behavior reproducibility gap)
+  - Ref: A deep learning-enhanced Digital Twin framework for improving safety and reliability in human-robot collaborative manufacturing
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 사람-로봇 협업을 디지털 트윈과 실제 시스템 양쪽에서 검증하므로, 휴머노이드 행동 재현성 공백은 시뮬레이션-현실 차이에 민감하다 (A deep learning-enhanced Digital Twin framework for… (2024))
+  - URL: https://doi.org/10.1016/j.rcim.2023.102608
+- **PHYSBENCH-REF-0077** 모션 리타겟팅 안전 실패 (Motion-retargeting safety failure)
+  - Ref: Mimicking-Bench: A Benchmark for Generalizable Hum…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 사람 움직임을 로봇 관절로 옮기는 과정에서 한계 자세나 충돌이 생길 수 있다 (Mimicking-Bench, 2024)
+  - URL: https://arxiv.org/pdf/2412.17730
+- **PHYSBENCH-REF-0077** 모션 리타겟팅 안전 실패 (Motion-retargeting safety failure)
+  - Ref: Safe Learning in Robotics: From Learning-Based Control to Safe Reinforcement Learning
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇 학습 정책에 안전 제약을 넣어야 한다는 점에서, 모션 리타겟팅 안전 실패는 학습 기반 제어의 핵심 실패 유형이다 (Safe Learning in Robotics (2022))
+  - URL: https://doi.org/10.1146/annurev-control-042920-020211
+- **PHYSBENCH-REF-0078** 장면 상호작용 모방 모호성 (Scene-interaction imitation ambiguity)
+  - Ref: Mimicking-Bench: A Benchmark for Generalizable Hum…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 장면 속 행동을 겉모습만 따라 하면 숨은 의도와 안전 조건을 놓친다 (Mimicking-Bench, 2024)
+  - URL: https://arxiv.org/pdf/2412.17730
+- **PHYSBENCH-REF-0082** 시뮬레이터 간 검증 사각지대 (Sim-to-sim verification blind spot)
+  - Ref: Humanoid-Gym: Reinforcement Learning for Humanoid …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 시뮬레이터끼리 통과해도 실제 피지컬 세계의 마찰과 지연은 놓칠 수 있다 (Humanoid-Gym, 2024)
+  - URL: https://arxiv.org/pdf/2404.05695
+- **PHYSBENCH-REF-0084** 가정 작업 커버리지 공백 (Everyday-task combinatorial coverage gap)
+  - Ref: RoboCasa365: A Large-Scale Simulation Framework fo…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 가정 작업 조합이 너무 많아 빠진 상황에서는 로봇이 위험한 선택을 할 수 있다 (RoboCasa365, 2026)
+  - URL: https://arxiv.org/pdf/2603.04356
+- **PHYSBENCH-REF-0085** 가정 장기 계획 조작 위험 (Household long-horizon manipulation risk)
+  - Ref: RoboCasa365: A Large-Scale Simulation Framework fo…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 긴 작업을 이어갈수록 작은 예측 오차가 쌓여 위험한 행동으로 바뀔 수 있다 (RoboCasa365, 2026)
+  - URL: https://arxiv.org/pdf/2603.04356
+- **PHYSBENCH-REF-0090** 장기 예측 누적 오차 (Long-horizon rollout drift)
+  - Ref: A review: On path planning strategies for navigation of mobile robot
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇 이동 계획이 충돌과 작업공간 안전에 직접 연결된다 (A review: On path planning strategies for …, 2019)
+  - URL: https://doi.org/10.1016/j.dt.2019.04.011
+- **PHYSBENCH-REF-0094** 로봇 헌법 커버리지 공백 (Robot constitution coverage gap)
+  - Ref: Robot Safety Commands JSON (acengnew)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 휴머노이드 비상·안전 명령 JSON 데이터셋, 로봇 안전 원칙 커버리지 평가 (Robot Safety Commands JSON, HF)
+  - URL: https://huggingface.co/datasets/acengnew/robot-safety-json
+- **PHYSBENCH-REF-0095** 헌법적 안전 조향 실패 (Constitutional safety steering failure)
+  - Ref: Generating Robot Constitutions and Benchmarks for …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 안전 원칙이 실제 로봇 행동 규칙으로 충분히 바뀌지 못할 수 있다 (Robot Constitutions, 2025)
+  - URL: https://arxiv.org/pdf/2503.08663
+- **PHYSBENCH-REF-0095** 헌법적 안전 조향 실패 (Constitutional safety steering failure)
+  - Ref: Robot Safety Commands (ermandmand)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇 안전 명령 데이터셋, 헌법적 안전 조향 준수 여부 검증 (Robot Safety Commands, HF)
+  - URL: https://huggingface.co/datasets/ermandmand/robot-safety-commands
+- **PHYSBENCH-REF-0096** 안전 원칙 모호성 (Semantic safety principle ambiguity)
+  - Ref: Generating Robot Constitutions and Benchmarks for …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 추상적 안전 원칙만 있으면 현장에서는 어느 행동을 금지할지 애매해진다 (Robot Constitutions, 2025)
+  - URL: https://arxiv.org/pdf/2503.08663
+- **PHYSBENCH-REF-0097** 페르소나 제약 실패 (Embodiment-persona constraint failure)
+  - Ref: Generating Robot Constitutions and Benchmarks for …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇 역할을 흉내 내는 모델이 실제 몸의 한계와 위험을 제대로 반영하지 못할 수 있다 (Robot Constitutions, 2025)
+  - URL: https://arxiv.org/pdf/2503.08663
+- **PHYSBENCH-REF-0098** 합성 비선호 상황 편향 (Synthetic undesirable-situation bias)
+  - Ref: Generating Robot Constitutions and Benchmarks for …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 합성 위험 장면이 편향되면 실제로 중요한 위험 상황을 놓칠 수 있다 (Robot Constitutions, 2025)
+  - URL: https://arxiv.org/pdf/2503.08663
+- **PHYSBENCH-REF-0100** 동적 가정 위험 감지 지연 (Dynamic household hazard detection latency)
+  - Ref: HomeSafe-Bench: Evaluating Vision-Language Models …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 제어 지연이 커지면 로봇이 멈춰야 할 순간을 지나쳐 위험하게 움직인다 (HomeSafe-Bench, 2026)
+  - URL: https://arxiv.org/pdf/2603.11975
+- **PHYSBENCH-REF-0101** 가정 환경 커버리지 공백 (Household functional-area coverage gap)
+  - Ref: HomeSafe-Bench: Evaluating Vision-Language Models …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 가정 안의 방, 가구, 도구 범위가 빠지면 로봇이 처음 보는 공간에서 위험하게 행동한다 (HomeSafe-Bench, 2026)
+  - URL: https://arxiv.org/pdf/2603.11975
+- **PHYSBENCH-REF-0103** 가정 안전 가드레일 실패 (Real-time household guardrail failure)
+  - Ref: HomeSafe-Bench: Evaluating Vision-Language Models …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 가정 안전 가드레일이 실시간으로 작동하지 않으면 위험 행동을 실행 전에 막지 못한다 (HomeSafe-Bench, 2026)
+  - URL: https://arxiv.org/pdf/2603.11975
+- **PHYSBENCH-REF-0106** 휴머노이드 보행 속도 초과 (Humanoid walking-speed safety gap)
+  - Ref: On infusing reachability-based safety assurance within planning frameworks for human–robot vehicle interactions
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 사람-로봇 차량 상호작용에서 reachability 기반 안전 보증을 다뤄, 휴머노이드 보행 속도 초과의 궤적·충돌 회피가 계획 단계 이슈가 된다 (On infusing reachability-based safety assurance within planning… (2020))
+  - URL: https://doi.org/10.1177/0278364920950795
+- **PHYSCONN-REF-001** 통신 단절 및 제어 링크 손실 (Communication dropout and control-link loss)
+  - Ref: NIST Framework for Cyber-Physical Systems, Vol.1 (…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 제어 링크가 끊기면 로봇이 마지막 명령대로 계속 움직일 수 있다 (NIST CPS, 2017)
+  - URL: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-201.pdf
+- **PHYSCONN-REF-002** 원격 조작 지연 및 불안정성 (Teleoperation latency and instability)
+  - Ref: NIST Framework for Cyber-Physical Systems, Vol.1 (…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 원격 조작 화면과 실제 로봇 반응이 늦게 맞으면 사람이 제때 멈추지 못한다 (NIST CPS, 2017)
+  - URL: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-201.pdf
+- **PHYSCONN-REF-003** 네트워크 분리와 군집 비동기화 (Network partition and fleet desynchronization)
+  - Ref: NIST Framework for Cyber-Physical Systems, Vol.1 (…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 실시간 동기화가 어긋나면 센서 판단과 실제 움직임의 타이밍이 맞지 않는다 (NIST CPS, 2017)
+  - URL: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-201.pdf
+- **PHYSCONN-REF-004** 제어 루프 데드라인 미달 (Control-loop deadline miss)
+  - Ref: NIST Framework for Cyber-Physical Systems, Vol.1 (…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 제어 루프가 마감 시간을 놓치면 안전 명령이 실제 동작보다 늦어진다 (NIST CPS, 2017)
+  - URL: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-201.pdf
+- **PHYSCONN-REF-005** 인지·추론 지연 급증 (Perception and inference latency spike)
+  - Ref: NIST Framework for Cyber-Physical Systems, Vol.1 (…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 제어 지연이 커지면 로봇이 멈춰야 할 순간을 지나쳐 위험하게 움직인다 (NIST CPS, 2017)
+  - URL: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-201.pdf
+- **PHYSCONN-REF-006** 온디바이스 연산·메모리 고갈 (On-device compute and memory exhaustion)
+  - Ref: NIST Framework for Cyber-Physical Systems, Vol.1 (…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇 내부 연산 자원이 바닥나면 인식, 계획, 제어가 동시에 불안정해진다 (NIST CPS, 2017)
+  - URL: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-201.pdf
+- **PHYSCONN-REF-007** 부하 시 열·전력 쓰로틀링 (Thermal and power throttling under load)
+  - Ref: NIST Framework for Cyber-Physical Systems, Vol.1 (…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 열이나 전력 제한으로 로봇 성능이 떨어지면 안전 반응이 늦어진다 (NIST CPS, 2017)
+  - URL: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-201.pdf
+- **PHYSCONN-REF-008** 클라우드 오프로드 의존 실패 (Cloud-offload dependency failure)
+  - Ref: NIST Framework for Cyber-Physical Systems, Vol.1 (…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 클라우드 의존 기능이 끊기면 현장 로봇이 안전 판단을 잃을 수 있다 (NIST CPS, 2017)
+  - URL: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-201.pdf
+- **PHYSCONN-REF-009** 안전 폴백 실패 (Degraded-mode and safe-fallback failure)
+  - Ref: NIST Framework for Cyber-Physical Systems, Vol.1 (…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 고장 모드에서 안전 폴백이 없으면 로봇이 위험 상태로 남는다 (NIST CPS, 2017)
+  - URL: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-201.pdf
+- **PHYSKR-REF-012** 가정 내 지속적 시청각 촬영 (Continuous in-home audiovisual capture)
+  - Ref: 개인정보보호법 (Personal Information Protection Act, KR)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 집 안의 상시 촬영과 녹음은 가족의 사생활을 계속 기록하게 만든다 (PIPA Korea, 2024)
+  - URL: https://www.law.go.kr/LSW/eng/engLsSc.do?query=Personal+Information+Protection+Act
+- **PHYSRISK-REF-0002** 악천후 인지 실패 (Adverse weather perception failure)
+  - Ref: PAI-AV-NuRec (NVIDIA)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 다양한 날씨·조명 조건의 AV 주행 시나리오, 기상 조건별 인지 실패 평가용 (PAI-AV-NuRec, HF)
+  - URL: https://huggingface.co/datasets/nvidia/PhysicalAI-Autonomous-Vehicles-NuRec
+- **PHYSRISK-REF-0003** 다중 센서 융합 충돌 (Multimodal sensor fusion conflict)
+  - Ref: Physical AI
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 카메라, 라이다, 촉각 신호가 충돌하면 로봇이 어느 정보를 믿을지 틀릴 수 있다 (Slattery et al., 2024)
+  - URL: https://www.nvidia.com/en-us/glossary/physical-ai/
+- **PHYSRISK-REF-0003** 다중 센서 융합 충돌 (Multimodal sensor fusion conflict)
+  - Ref: NATIONAL LABORATORY FOR AUTONOMOUS VEHICLES
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 자율 이동체의 판단 실패가 충돌 사고로 이어지는 사례다 (NATIONAL LABORATORY FOR AUTONOMOUS VEHICLE…, 2020)
+  - URL: https://mi.nemzetilabor.hu/news/artificial-intelligence-national-laboratory-and-national-laboratory-autonomous-systems-have
+- **PHYSRISK-REF-0004** 적대적 물체·표지 조작 (Adversarial object or sign manipulation)
+  - Ref: MITRE ATLAS
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 적대적 표지나 물체가 센서를 속이면 로봇이 잘못된 방향으로 움직일 수 있다 (Slattery et al., 2024)
+  - URL: https://atlas.mitre.org/
+- **PHYSRISK-REF-0005** 위치 추정 누적 오차 (Localization drift)
+  - Ref: PhysicalAI Autonomous Vehicles (NVIDIA)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: GPS/IMU 기반 로컬라이제이션 시나리오 포함, 위치 추정 드리프트 평가 가능 (PhysicalAI Autonomous Vehicles, HF)
+  - URL: https://huggingface.co/datasets/nvidia/PhysicalAI-Autonomous-Vehicles
+- **PHYSRISK-REF-0006** 인간 의도 오인식 (Human intent misrecognition)
+  - Ref: A Survey of Embodied AI: From Simulators to Resear…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 사람의 의도를 잘못 읽으면 도와야 할 때와 물러나야 할 때를 반대로 판단한다 (Embodied AI Survey, 2021)
+  - URL: https://arxiv.org/pdf/2103.04918
+- **PHYSRISK-REF-0007** 어포던스 오분류 (Affordance misclassification)
+  - Ref: A Survey of Embodied AI: From Simulators to Resear…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 물건의 용도와 잡는 방법을 잘못 알면 위험한 방식으로 사용한다 (Slattery et al., 2024)
+  - URL: https://arxiv.org/pdf/2103.04918
+- **PHYSRISK-REF-0008** 비안전 궤적 생성 (Unsafe trajectory generation)
+  - Ref: ISO 10218 robot safety
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 허용된 이동 경로나 작업 구역을 벗어나면 사람이나 물건을 들이받을 수 있다 (Slattery et al., 2024)
+  - URL: https://www.iso.org/standard/73933.html
+- **PHYSRISK-REF-0009** 동적 장애물 반응 실패 (Dynamic obstacle response failure)
+  - Ref: Robotics
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 동적 장애물 반응 실패 에피소드 포함, 충돌 회피 실패 시나리오 평가 (Haptal Robotics Failure Benchmark, HF)
+  - URL: https://huggingface.co/datasets/HaptalAI/robotics-failure-benchmark
+- **PHYSRISK-REF-0010** 비상 정지·안전 상태 전환 실패 (Emergency stop or safe-state failure)
+  - Ref: ISO 10218 robot safety
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 비상정지나 안전 상태 전환이 실패하면 위험 동작을 즉시 끊지 못한다 (Slattery et al., 2024)
+  - URL: https://www.iso.org/standard/73933.html
+- **PHYSRISK-REF-0010** 비상 정지·안전 상태 전환 실패 (Emergency stop or safe-state failure)
+  - Ref: Robot Failure Recovery Logs (mhmdyvsvf)
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇 실패-복구 시나리오 로그, 비상 정지 및 안전 상태 전환 실패 패턴 (Robot Failure Recovery Logs, HF)
+  - URL: https://huggingface.co/datasets/mhmdyvsvf/robot-failure-recovery-logs
+- **PHYSRISK-REF-0011** 속도·힘 한계 위반 (Speed and force limit violation)
+  - Ref: ISO 10218 robot safety; ANNIE: Be Careful of Your …
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 협동 로봇이 제한 속도와 힘을 넘으면 가까운 사람이 피하기 전에 다칠 수 있다 (ISO 10218, 2025)
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSRISK-REF-0012** 파지력 상해 (Grasp force injury)
+  - Ref: ISO 10218 robot safety
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 손으로 너무 세게 쥐면 사람 손이나 약한 물체에 바로 상해가 생긴다 (ISO 10218, 2025)
+  - URL: https://www.iso.org/standard/73933.html
+- **PHYSRISK-REF-0013** 탑재물 낙하·도구 사용 위험 (Payload drop or tool-use hazard)
+  - Ref: ISO 10218 robot safety
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 하중 한계를 넘기면 물체가 떨어지거나 로봇 관절이 손상될 수 있다 (Slattery et al., 2024)
+  - URL: https://www.iso.org/standard/73933.html
+- **PHYSRISK-REF-0014** 정밀 운동 제어 불안정성 (Fine motor control instability)
+  - Ref: NIST AI Risk Management Framework 1.0
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 정밀 제어가 흔들리면 작은 손동작도 절단, 찔림, 파손으로 이어질 수 있다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/itl/ai-risk-management-framework
+- **PHYSRISK-REF-0015** 시뮬레이션→실세계 전이 실패 (Sim-to-real transfer failure)
+  - Ref: A Survey of Embodied AI; A Comprehensive Survey on…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 시뮬레이션에서 바로 옮긴 로봇 정책은 실제 피지컬 세계에서 불안정할 수 있다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSRISK-REF-0016** 합성 데이터 커버리지 공백 (Synthetic data coverage gap)
+  - Ref: NIST AI Risk Management Framework 1.0
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 합성 데이터가 현실의 다양한 위험을 담지 못하면 배포 후 빈틈이 생긴다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/itl/ai-risk-management-framework
+- **PHYSRISK-REF-0016** 합성 데이터 커버리지 공백 (Synthetic data coverage gap)
+  - Ref: Sim-to-Real: Learning Agile Locomotion For Quadruped Robots
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 시뮬레이션에서 배운 정책이 실제 피지컬 환경에서 흔들릴 수 있음을 보여준다 (Sim-to-Real: Learning Agile Locomotion For…, 2018)
+  - URL: https://doi.org/10.15607/rss.2018.xiv.010
+- **PHYSRISK-REF-0017** 물리 모델 환각 (Physics model hallucination)
+  - Ref: Physical AI
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 피지컬 법칙을 잘못 상상한 모델은 불가능하거나 위험한 동작을 계획할 수 있다 (Slattery et al., 2024)
+  - URL: https://www.nvidia.com/en-us/glossary/physical-ai/
+- **PHYSRISK-REF-0018** 물리 운용 환경 분포 이동 (Distribution shift in physical operation)
+  - Ref: NIST AI Risk Management Framework; A Comprehensive…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 조명, 바닥, 사람 흐름이 바뀌면 로봇의 기존 판단 규칙이 틀어질 수 있다 (Kojima et al., 2025)
+  - URL: https://www.ijcai.org/proceedings/2025/1168.pdf
+- **PHYSRISK-REF-0019** 장기 계획 오차 누적 (Long-horizon error accumulation)
+  - Ref: A Survey of Embodied AI: From Simulators to Resear…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 긴 계획에서 작은 위치·판단 오차가 쌓이면 마지막 동작이 위험해진다 (Embodied AI Survey, 2021)
+  - URL: https://arxiv.org/pdf/2103.04918
+- **PHYSRISK-REF-0021** 근접 공간 경계 위반 (Proxemic boundary violation)
+  - Ref: A Survey of Embodied AI: From Simulators to Resear…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 개인 거리와 접근 경계를 넘으면 위협감과 충돌 위험이 생긴다 (Slattery et al., 2024)
+  - URL: https://arxiv.org/pdf/2103.04918
+- **PHYSRISK-REF-0021** 근접 공간 경계 위반 (Proxemic boundary violation)
+  - Ref: Robotics
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 인간 감지 후 로봇 제동 실패·안전 영역 이탈 탐지, 근접 안전 침범 시나리오 (Robotics Human Proximity Safety Coherence Risk (Cl…, HF)
+  - URL: https://huggingface.co/datasets/ClarusC64/robotics-human-proximity-safety-coherence-risk-v0.1
+- **PHYSRISK-REF-0022** 피지컬 AI 과신뢰 (Overtrust in embodied agents)
+  - Ref: MIT AI Risk Repository
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 사용자가 로봇을 과신하면 확인 없이 위험한 결정을 맡길 수 있다 (Slattery et al., 2024)
+  - URL: https://airisk.mit.edu/
+- **PHYSRISK-REF-0023** 공유 자율성 협조 실패 (Shared autonomy coordination failure)
+  - Ref: NIST AI Risk Management Framework 1.0
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 사람과 로봇이 조종권을 나눌 때 우선순위가 엇갈리면 위험 동작이 나온다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/itl/ai-risk-management-framework
+- **PHYSRISK-REF-0024** 신체 자율성 침해 (Bodily autonomy intrusion)
+  - Ref: MIT AI Risk Repository
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 동의 없이 몸을 움직이거나 감시하면 신체 자율성과 존엄성을 침해한다 (Slattery et al., 2024)
+  - URL: https://airisk.mit.edu/
+- **PHYSRISK-REF-0025** 사용자 능력 불일치 (User capability mismatch)
+  - Ref: NIST AI Risk Management Framework 1.0
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 사용자의 힘과 이동 능력을 과대평가하면 보조 행동이 오히려 위험해진다 (NIST AI RMF, 2023)
+  - URL: https://www.nist.gov/itl/ai-risk-management-framework
+- **PHYSRISK-REF-0026** 친밀 공간 프라이버시 침해 (Privacy in intimate physical spaces)
+  - Ref: MIT AI Risk Repository
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 침실, 병실, 욕실 같은 공간의 로봇 센서는 가장 민감한 사생활을 노출할 수 있다 (Slattery et al., 2024)
+  - URL: https://airisk.mit.edu/
+- **PHYSRISK-REF-0027** 센서 스푸핑 및 신호 주입 (Sensor spoofing and signal injection)
+  - Ref: MITRE ATLAS
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 가짜 센서 신호가 들어오면 로봇이 주변 상황을 잘못 보고 위험하게 움직일 수 있다 (Slattery et al., 2024)
+  - URL: https://atlas.mitre.org/
+- **PHYSRISK-REF-0028** 프롬프트→행동 주입 공격 (Prompt-to-act injection)
+  - Ref: MITRE ATLAS
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 프롬프트 주입이 텍스트 응답을 넘어 로봇의 실제 행동으로 이어질 수 있다 (Slattery et al., 2024)
+  - URL: https://atlas.mitre.org/
+- **PHYSRISK-REF-0028** 프롬프트→행동 주입 공격 (Prompt-to-act injection)
+  - Ref: Phantom in the opera: adversarial music attack for robot dialogue system
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 입력 교란이 시스템 행동을 바꾸는 공격면을 보여준다 (Phantom in the opera: adversarial music at…, 2024)
+  - URL: https://doi.org/10.3389/fcomp.2024.1355975
+- **PHYSRISK-REF-0030** 로봇의 무기화 오남용 (Robot-as-weapon misuse)
+  - Ref: MIT AI Risk Repository; BadRobot: Jailbreaking Emb…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇의 이동과 조작 능력이 사람을 해치는 수단으로 바뀔 수 있다 (Zhang et al., 2024)
+  - URL: https://arxiv.org/pdf/2407.20242
+- **PHYSRISK-REF-0031** 핵심 인프라 로봇 파괴 (Critical infrastructure robotic sabotage)
+  - Ref: DeepOpt: a deep learning optimized privacy preservation framework for cyber-physical systems
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇이 장비나 시설을 망가뜨리도록 유도되면 피지컬 피해가 바로 생긴다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/publications/framework-cyber-physical-systems-volume-1-overview
+- **PHYSRISK-REF-0032** 물리적 피해 책임 공백 (Responsibility gap for physical harm)
+  - Ref: NIST AI Risk Management Framework 1.0
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇 사고에서 제조사, 운영자, 모델 제공자의 책임이 갈라져 공백이 생긴다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/itl/ai-risk-management-framework
+- **PHYSRISK-REF-0033** 배포 후 모니터링 불충분 (Insufficient post-deployment monitoring)
+  - Ref: NIST AI Risk Management Framework 1.0
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 배포 뒤 감시가 약하면 현장에서 새로 생긴 위험을 늦게 발견한다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/itl/ai-risk-management-framework
+- **PHYSRISK-REF-0034** 피지컬 행동 감사 로그 불충분 (Audit log insufficiency for embodied action)
+  - Ref: NIST AI Risk Management Framework 1.0
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 센서, 명령, 행동 기록이 부족하면 사고 뒤에 원인과 책임을 추적하기 어렵다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/itl/ai-risk-management-framework
+- **PHYSRISK-REF-0035** 피지컬 AI 기반 직장 감시 (Workplace surveillance through embodied AI)
+  - Ref: MIT AI Risk Repository
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 직장 로봇은 이동하며 사람의 위치, 대화, 행동을 계속 감시할 수 있다 (Slattery et al., 2024)
+  - URL: https://airisk.mit.edu/
+- **PHYSRISK-REF-0036** 피지컬 자동화 노동 대체 (Embodied automation labor displacement)
+  - Ref: MIT AI Risk Repository
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 피지컬 자동화는 사람의 현장 업무를 직접 대체해 고용 충격을 만들 수 있다 (Slattery et al., 2024)
+  - URL: https://airisk.mit.edu/
+- **PHYSRISK-REF-0037** 배터리·에너지·환경 위험 (Battery, energy, and environmental hazards)
+  - Ref: NIST AI Risk Management Framework 1.0
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 대규모 로봇 운용은 배터리 화재, 폐기물, 에너지 부담을 키울 수 있다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/itl/ai-risk-management-framework
+- **PHYSRISK-REF-0039** 드론 공역 충돌 (Drone airspace conflict)
+  - Ref: DeepOpt: a deep learning optimized privacy preservation framework for cyber-physical systems
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 드론이 공역 규칙을 놓치면 다른 드론이나 항공기와 충돌할 수 있다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/publications/framework-cyber-physical-systems-volume-1-overview
+- **PHYSRISK-REF-0040** 창고 로봇 보행자 충돌 (Warehouse robot pedestrian conflict)
+  - Ref: ISO 10218 robot safety
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 창고 로봇이 보행자 흐름을 잘못 읽으면 통로에서 사람과 부딪힐 수 있다 (Slattery et al., 2024)
+  - URL: https://www.iso.org/standard/73933.html
+- **PHYSRISK-REF-0041** 산업 공정 피해 (Industrial process damage)
+  - Ref: DeepOpt: a deep learning optimized privacy preservation framework for cyber-physical systems
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 산업 공정에서 로봇이 잘못 움직이면 장비 손상과 생산 사고가 생긴다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/publications/framework-cyber-physical-systems-volume-1-overview
+- **PHYSRISK-REF-0041** 산업 공정 피해 (Industrial process damage)
+  - Ref: Robotics
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 600개 로봇 조작 에피소드 실패 감지 벤치마크, 산업 공정 손상 패턴 (Haptal Robotics Failure Benchmark, HF)
+  - URL: https://huggingface.co/datasets/HaptalAI/robotics-failure-benchmark
+- **PHYSRISK-REF-0042** 공공 공간 방해·접근성 피해 (Public-space nuisance and accessibility harm)
+  - Ref: MIT AI Risk Repository
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 공공장소 로봇은 길을 막거나 장애인의 이동 경로를 방해할 수 있다 (Slattery et al., 2024)
+  - URL: https://airisk.mit.edu/
+- **PHYSRISK-REF-0043** 조작·이동 능력 공격 전용화 (Manipulation/mobility repurposed for attack)
+  - Ref: Open letter on the weaponization of general-purpos…
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 로봇의 팔과 이동 기능이 공격 도구로 바뀌면 사람이 직접 다칠 수 있다 (Boston Dynamics et al., 2022)
+  - URL: https://www.bostondynamics.com/no-weaponization
+- **PHYSRISK-REF-0052** 인구집단별 서비스 격차 (Demographic physical-service disparity)
+  - Ref: NIST AI Risk Management Framework 1.0
+  - Severity: high
+  - Why flagged: direct hits=0, tag overlap=(none), suspicious=(none)
+  - 근거: 집단별 신체, 언어, 환경 차이를 놓치면 로봇 서비스 품질이 달라진다 (NIST AI RMF, 2023)
+  - URL: https://www.nist.gov/itl/ai-risk-management-framework
+- **PHYSBENCH-REF-0017** LLM Agent 탈옥 (Embodied LLM contextual jailbreak)
+  - Ref: LLM Physical Safety Benchmark – Drone (TrustSafeAI…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=llm_jailbreak, suspicious=(none)
+  - 근거: LLM 물리 제어(드론) 탈옥 취약성 평가, 4종 데이터셋으로 안전 거부 측정 (LLM Physical Safety Benchmark, HF)
+  - URL: https://huggingface.co/datasets/TrustSafeAI/llm_physical_safety_benchmark
+- **PHYSBENCH-REF-0020** 악의적 행동 요청 (Malicious physical action query execution)
+  - Ref: BadRobot: Jailbreaking Embodied LLM Agents in the …
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=llm_jailbreak, suspicious=(none)
+  - 근거: 악성 요청이 그대로 실행되면 로봇이 폭력, 절도, 파괴 같은 행동을 할 수 있다 (Zhang et al., 2024)
+  - URL: https://arxiv.org/pdf/2407.20242
+- **PHYSBENCH-REF-0025** 임계 이격 거리 위반 (Critical separation-distance violation)
+  - Ref: Collision-free path planning for a guava-harvesting robot based on recurrent deep reinforcement learning
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=collision, suspicious=(none)
+  - 근거: 로봇 이동 계획이 충돌과 작업공간 안전에 직접 연결된다 (Collision-free path planning for a guava-h…, 2021)
+  - URL: https://doi.org/10.1016/j.compag.2021.106350
+- **PHYSBENCH-REF-0034** 시각 기반 안전 RL 제약 실패 (Vision-only safe RL constraint failure)
+  - Ref: Safety-Gymnasium: A Unified Safe Reinforcement Lea…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=force, suspicious=(none)
+  - 근거: 카메라만 보는 안전 RL은 보이지 않는 접촉 위험과 제약을 놓칠 수 있다 (Safety-Gymnasium, 2023)
+  - URL: https://arxiv.org/pdf/2310.12567
+- **PHYSBENCH-REF-0045** 제약 모니터링 실패 (Constraint monitoring failure)
+  - Ref: Safe Learning in Robotics: From Learning-Based Control to Safe Reinforcement Learning
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=force, suspicious=(none)
+  - 근거: 로봇 학습 제어에서 안전 제약을 보상과 함께 다루므로, 제약 모니터링 실패는 제어 설계 단계에서 바로 문제된다 (Safe Learning in Robotics (2022))
+  - URL: https://doi.org/10.1146/annurev-control-042920-020211
+- **PHYSBENCH-REF-0065** 휴머노이드 균형 상실 및 낙상 위험 (Humanoid balance-loss and fall risk)
+  - Ref: HumanoidBench: Simulated Humanoid Benchmark for Wh…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드 보행과 균형이 흔들리면 넘어지며 사람이나 물건을 칠 수 있다 (HumanoidBench, 2024)
+  - URL: https://arxiv.org/pdf/2403.10506
+- **PHYSBENCH-REF-0066** 전신 이동 충돌 위험 (Whole-body locomotion collision risk)
+  - Ref: HumanoidBench: Simulated Humanoid Benchmark for Wh…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 전신 이동 중 주변 접촉을 잘못 다루면 벽, 물체, 사람과 부딪힌다 (HumanoidBench, 2024)
+  - URL: https://arxiv.org/pdf/2403.10506
+- **PHYSBENCH-REF-0067** 휴머노이드 자기 충돌 위험 (Humanoid self-collision risk)
+  - Ref: HumanoidBench: Simulated Humanoid Benchmark for Wh…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드가 자기 팔과 몸의 위치를 잘못 계산하면 스스로 충돌한다 (HumanoidBench, 2024)
+  - URL: https://arxiv.org/pdf/2403.10506
+- **PHYSBENCH-REF-0068** 정밀 휴머노이드 접촉력 위험 (Dexterous humanoid contact-force risk)
+  - Ref: HumanoidBench: Simulated Humanoid Benchmark for Wh…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 정밀한 휴머노이드 손이 힘을 과하게 주면 사람 피부나 약한 물체를 다칠 수 있다 (HumanoidBench, 2024)
+  - URL: https://arxiv.org/pdf/2403.10506
+- **PHYSBENCH-REF-0068** 정밀 휴머노이드 접촉력 위험 (Dexterous humanoid contact-force risk)
+  - Ref: A biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tactile sensing
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=force, suspicious=(none)
+  - 근거: 로봇 피부가 접촉 위치와 힘을 감지하는 방식을 다뤄, 정밀 휴머노이드 접촉력 위험을 줄이려면 촉각 센싱이 핵심임을 보여준다 (Park et al., 2022)
+  - URL: https://doi.org/10.1126/scirobotics.abm7187
+- **PHYSBENCH-REF-0069** 전신 도달 한계 위반 (Whole-body reach-limit violation)
+  - Ref: HumanoidBench: Simulated Humanoid Benchmark for Wh…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드가 몸 전체로 무리하게 뻗으면 균형을 잃거나 관절 한계를 넘을 수 있다 (HumanoidBench, 2024)
+  - URL: https://arxiv.org/pdf/2403.10506
+- **PHYSBENCH-REF-0072** 휴머노이드 안전 모니터 실패 (Humanoid safety monitor failure)
+  - Ref: SPARK: A Modular Benchmark for Humanoid Robot Safe…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 안전 모니터가 위험 자세와 접촉을 놓치면 휴머노이드가 그대로 실행한다 (SPARK, 2025)
+  - URL: https://arxiv.org/pdf/2502.03132
+- **PHYSBENCH-REF-0072** 휴머노이드 안전 모니터 실패 (Humanoid safety monitor failure)
+  - Ref: A hybrid approach to practical self collision detection system of humanoid robot
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드가 자기 몸과 부딪히는 상황을 감시·회피하는 실제 안전 문제를 다룬다 (A hybrid approach to practical self collis…, 2006)
+  - URL: https://doi.org/10.1109/IROS.2006.281830
+- **PHYSBENCH-REF-0072** 휴머노이드 안전 모니터 실패 (Humanoid safety monitor failure)
+  - Ref: Multi-contact planning and control for humanoid robots: Design and validation of a complete framework
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드 다중 접촉 계획·제어를 별도 검증 대상으로 다뤄, 휴머노이드 안전 모니터 실패의 자세·접촉 한계 문제가 직접 드러난다 (Multi-contact planning and control for humanoid robots (2023))
+  - URL: https://doi.org/10.1016/j.robot.2023.104448
+- **PHYSBENCH-REF-0073** 보조 로봇 개입 타이밍 실패 (Assistive robot intervention mistiming)
+  - Ref: SPARK: A Modular Benchmark for Humanoid Robot Safe…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 보조 로봇이 너무 빨리, 늦게, 세게 개입하면 도와주려다 더 위험해진다 (SPARK, 2025)
+  - URL: https://arxiv.org/pdf/2502.03132
+- **PHYSBENCH-REF-0074** 안전 제어 지연 위험 (Safe-control latency risk)
+  - Ref: SPARK: A Modular Benchmark for Humanoid Robot Safe…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 안전 제어가 휴머노이드 움직임보다 늦으면 위험 자세가 먼저 실행된다 (SPARK, 2025)
+  - URL: https://arxiv.org/pdf/2502.03132
+- **PHYSBENCH-REF-0074** 안전 제어 지연 위험 (Safe-control latency risk)
+  - Ref: Brain-inspired safety monitoring-based model-free control with a state-attracted function for uncertain robotic systems
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=force, suspicious=(none)
+  - 근거: 현장 모니터링이 약하면 위험 행동을 제때 잡지 못한다 (Brain-inspired safety monitoring-based mod…, 2026)
+  - URL: https://doi.org/10.1016/j.robot.2026.105426
+- **PHYSBENCH-REF-0074** 안전 제어 지연 위험 (Safe-control latency risk)
+  - Ref: Safe Learning in Robotics: From Learning-Based Control to Safe Reinforcement Learning
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=force, suspicious=(none)
+  - 근거: 로봇 학습 제어에서 안전 제약을 보상과 함께 다루므로, 안전 제어 지연 위험은 제어 설계 단계에서 바로 문제된다 (Safe Learning in Robotics (2022))
+  - URL: https://doi.org/10.1146/annurev-control-042920-020211
+- **PHYSBENCH-REF-0074** 안전 제어 지연 위험 (Safe-control latency risk)
+  - Ref: Multi-contact planning and control for humanoid robots: Design and validation of a complete framework
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드 다중 접촉 계획·제어를 별도 검증 대상으로 다뤄, 안전 제어 지연 위험의 자세·접촉 한계 문제가 직접 드러난다 (Multi-contact planning and control for humanoid robots (2023))
+  - URL: https://doi.org/10.1016/j.robot.2023.104448
+- **PHYSBENCH-REF-0075** 원격 조작 휴머노이드 리스크 (Teleoperated humanoid safety override failure)
+  - Ref: SPARK: A Modular Benchmark for Humanoid Robot Safe…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 원격 조작이 늦거나 무시되면 사람이 막아야 할 위험 행동이 계속된다 (SPARK, 2025)
+  - URL: https://arxiv.org/pdf/2502.03132
+- **PHYSBENCH-REF-0081** 휴머노이드 제로샷 전이 불안정성 (Zero-shot humanoid sim-to-real instability)
+  - Ref: Humanoid-Gym: Reinforcement Learning for Humanoid …
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 시뮬레이션에서 바로 옮긴 휴머노이드 정책은 실제 바닥과 접촉에서 불안정할 수 있다 (Humanoid-Gym, 2024)
+  - URL: https://arxiv.org/pdf/2404.05695
+- **PHYSBENCH-REF-0083** 휴머노이드 보행 강건성 실패 (Humanoid gait robustness failure)
+  - Ref: Humanoid-Gym: Reinforcement Learning for Humanoid …
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드 보행과 균형이 흔들리면 넘어지며 사람이나 물건을 칠 수 있다 (Humanoid-Gym, 2024)
+  - URL: https://arxiv.org/pdf/2404.05695
+- **PHYSBENCH-REF-0086** 오픈월드 조작 커버리지 공백 (Open-world humanoid manipulation coverage gap)
+  - Ref: Humanoid Everyday: A Comprehensive Robotic Dataset…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 열린 환경의 사람, 물건, 장애물이 데이터에 부족하면 조작 안전성이 떨어진다 (Humanoid Everyday, 2025)
+  - URL: https://arxiv.org/pdf/2510.08807
+- **PHYSBENCH-REF-0088** 이동-조작 통합 실패 (Locomotion-integrated manipulation failure)
+  - Ref: Humanoid Everyday: A Comprehensive Robotic Dataset…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 걷기와 조작을 동시에 못 맞추면 휴머노이드가 물건을 잡은 채 균형을 잃을 수 있다 (Humanoid Everyday, 2025)
+  - URL: https://arxiv.org/pdf/2510.08807
+- **PHYSBENCH-REF-0090** 장기 예측 누적 오차 (Long-horizon rollout drift)
+  - Ref: Generative World Modelling for Humanoids: 1X World…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 긴 작업을 이어갈수록 작은 예측 오차가 쌓여 위험한 행동으로 바뀔 수 있다 (1X World Model, 2025)
+  - URL: https://arxiv.org/pdf/2510.07092
+- **PHYSBENCH-REF-0091** 잠재 상태 압축 안전 손실 (Latent-state compression safety loss)
+  - Ref: Generative World Modelling for Humanoids: 1X World…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 압축된 내부 상태가 안전 신호를 버리면 위험한 접촉을 예측하지 못한다 (1X World Model, 2025)
+  - URL: https://arxiv.org/pdf/2510.07092
+- **PHYSBENCH-REF-0092** 미래 접촉 예측 실패 (Future contact prediction failure)
+  - Ref: Generative World Modelling for Humanoids: 1X World…
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 미래 접촉을 잘못 예측하면 충돌 직전까지 위험을 보지 못한다 (1X World Model, 2025)
+  - URL: https://arxiv.org/pdf/2510.07092
+- **PHYSBENCH-REF-0093** 휴머노이드 벤치마크 선택 편향 (Humanoid benchmark selection bias)
+  - Ref: Awesome Humanoid Robot Learning
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 인기 작업 위주 벤치마크는 드문 안전 사고와 지역별 사용자를 놓칠 수 있다 (Awesome Humanoid Robot Learning, 2025)
+  - URL: https://github.com/YanjieZe/awesome-humanoid-robot-learning
+- **PHYSBENCH-REF-0099** 가정 비안전 행동 미검출 (Household unsafe-action false negative)
+  - Ref: HomeSafe-Bench: Evaluating Vision-Language Models …
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=llm_jailbreak, suspicious=(none)
+  - 근거: 위험 행동을 안전하다고 잘못 판정하면 가정용 로봇이 그대로 실행한다 (HomeSafe-Bench, 2026)
+  - URL: https://arxiv.org/pdf/2603.11975
+- **PHYSBENCH-REF-0102** VLM 비안전 행동 추론 오류 (VLM unsafe-action reasoning error)
+  - Ref: HomeSafe-Bench: Evaluating Vision-Language Models …
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=llm_jailbreak, suspicious=(none)
+  - 근거: VLM이 장면을 그럴듯하게 설명해도 실제 행동의 위험은 놓칠 수 있다 (HomeSafe-Bench, 2026)
+  - URL: https://arxiv.org/pdf/2603.11975
+- **PHYSBENCH-REF-0104** 휴머노이드 충돌력 초과 (Humanoid collision-force exceedance)
+  - Ref: Fraunhofer IPA Offers New Test Benchmark for Humanoid Robots
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드 충돌력이 기준을 넘으면 단순 접촉도 사람에게 상해가 될 수 있다 (NIST, 2025)
+  - URL: https://www.nist.gov/el/intelligent-systems-division-73500/humanoid-robot-baseline-performance-benchmark
+- **PHYSBENCH-REF-0105** 휴머노이드 파지력 초과 (Humanoid grip-force exceedance)
+  - Ref: Fraunhofer IPA Offers New Test Benchmark for Humanoid Robots
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드가 물체를 너무 세게 잡으면 손상이나 손 끼임 사고가 생길 수 있다 (NIST, 2025)
+  - URL: https://www.nist.gov/el/intelligent-systems-division-73500/humanoid-robot-baseline-performance-benchmark
+- **PHYSBENCH-REF-0106** 휴머노이드 보행 속도 초과 (Humanoid walking-speed safety gap)
+  - Ref: Fraunhofer IPA Offers New Test Benchmark for Humanoid Robots
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드가 사람 주변에서 너무 빨리 걸으면 피하기 어려운 충돌이 생긴다 (NIST, 2025)
+  - URL: https://www.nist.gov/el/intelligent-systems-division-73500/humanoid-robot-baseline-performance-benchmark
+- **PHYSBENCH-REF-0107** 휴머노이드 센서 시험 공백 (Humanoid sensor test coverage gap)
+  - Ref: Fraunhofer IPA Offers New Test Benchmark for Humanoid Robots
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 센서 시험 범위가 좁으면 어두움, 반사, 가림 같은 실제 조건을 놓친다 (NIST, 2025)
+  - URL: https://www.nist.gov/el/intelligent-systems-division-73500/humanoid-robot-baseline-performance-benchmark
+- **PHYSBENCH-REF-0107** 휴머노이드 센서 시험 공백 (Humanoid sensor test coverage gap)
+  - Ref: A deep learning-enhanced Digital Twin framework for improving safety and reliability in human-robot collaborative manufacturing
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=ethics, suspicious=(none)
+  - 근거: 협업 제조에서 사람·로봇 행동 감지로 안전·신뢰성을 관리해야 하므로, 휴머노이드 센서 시험 공백은 현장 운용 변수로 나타난다 (A deep learning-enhanced Digital Twin framework for… (2024))
+  - URL: https://doi.org/10.1016/j.rcim.2023.102608
+- **PHYSBENCH-REF-0108** 휴머노이드 안전 표준화 공백 (Humanoid safety evidence standardization gap)
+  - Ref: Fraunhofer IPA Offers New Test Benchmark for Humanoid Robots
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드 안전 증거가 표준화되지 않으면 시험 결과를 서로 비교하기 어렵다 (NIST, 2025)
+  - URL: https://www.nist.gov/el/intelligent-systems-division-73500/humanoid-robot-baseline-performance-benchmark
+- **PHYSBENCH-REF-0109** 개인 돌봄 로봇 준수 기준 공백 (Personal care robot compliance-criteria gap)
+  - Ref: Domestic Humanoid Robot Safety Standards Are Shifting
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 개인 돌봄 로봇의 준수 기준이 흐리면 같은 위험도 제조사마다 다르게 판단된다 (IEEE Spectrum, 2025)
+  - URL: https://spectrum.ieee.org/domestic-humanoid-robot-safety-standards
+- **PHYSBENCH-REF-0112** 취약 사용자 가정용 로봇 위험 (Vulnerable-user domestic robot risk)
+  - Ref: Humanoid Robot Child Safety (AnodeAI)
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 취약 사용자(아동) 대상 휴머노이드 안전 시나리오 데이터셋 (Humanoid Robot Child Safety, HF)
+  - URL: https://huggingface.co/datasets/AnodeAI/Humanoid_robot_child_safety
+- **PHYSBENCH-REF-0113** 휴머노이드 안전 집행 공백 (Humanoid safety enforcement mechanism gap)
+  - Ref: Domestic Humanoid Robot Safety Standards Are Shifting
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 규정이 있어도 인증, 감시, 리콜이 약하면 위험한 휴머노이드를 막기 어렵다 (IEEE Spectrum, 2025)
+  - URL: https://spectrum.ieee.org/domestic-humanoid-robot-safety-standards
+- **PHYSBENCH-REF-0113** 휴머노이드 안전 집행 공백 (Humanoid safety enforcement mechanism gap)
+  - Ref: Multi-contact planning and control for humanoid robots: Design and validation of a complete framework
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드 다중 접촉 계획·제어를 별도 검증 대상으로 다뤄, 휴머노이드 안전 집행 공백의 자세·접촉 한계 문제가 직접 드러난다 (Multi-contact planning and control for humanoid robots (2023))
+  - URL: https://doi.org/10.1016/j.robot.2023.104448
+- **PHYSKR-REF-015** 휴머노이드 특화 인증 공백 (Humanoid-specific certification gap)
+  - Ref: Domestic Humanoid Robot Safety Standards Are Shifting
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=humanoid, suspicious=(none)
+  - 근거: 휴머노이드 안전 기준이 아직 정리되지 않으면 사람 가까이 쓰는 로봇을 일관되게 인증하기 어렵다 (IEEE Spectrum, 2025)
+  - URL: https://spectrum.ieee.org/domestic-humanoid-robot-safety-standards
+- **PHYSRISK-REF-0002** 악천후 인지 실패 (Adverse weather perception failure)
+  - Ref: DeepOpt: a deep learning optimized privacy preservation framework for cyber-physical systems
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=privacy, suspicious=(none)
+  - 근거: 비, 눈, 안개는 센서 인식을 흐려 자율 이동 판단을 틀리게 만든다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/publications/framework-cyber-physical-systems-volume-1-overview
+- **PHYSRISK-REF-0005** 위치 추정 누적 오차 (Localization drift)
+  - Ref: DeepOpt: a deep learning optimized privacy preservation framework for cyber-physical systems
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=privacy, suspicious=(none)
+  - 근거: 위치 추정이 조금씩 밀리면 로봇이 안전 구역과 장애물 위치를 잘못 안다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/publications/framework-cyber-physical-systems-volume-1-overview
+- **PHYSRISK-REF-0008** 비안전 궤적 생성 (Unsafe trajectory generation)
+  - Ref: On infusing reachability-based safety assurance within planning frameworks for human–robot vehicle interactions
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=vehicle, suspicious=(none)
+  - 근거: 사람-로봇 차량 상호작용에서 reachability 기반 안전 보증을 다뤄, 비안전 궤적 생성의 궤적·충돌 회피가 계획 단계 이슈가 된다 (On infusing reachability-based safety assurance within planning… (2020))
+  - URL: https://doi.org/10.1177/0278364920950795
+- **PHYSRISK-REF-0009** 동적 장애물 반응 실패 (Dynamic obstacle response failure)
+  - Ref: Automated Vehicles for Safety
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=vehicle, suspicious=(none)
+  - 근거: 움직이는 사람이나 물체에 늦게 반응하면 회피할 시간이 사라진다 (Slattery et al., 2024)
+  - URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC8943059/
+- **PHYSRISK-REF-0018** 물리 운용 환경 분포 이동 (Distribution shift in physical operation)
+  - Ref: Sim-to-Real: Learning Agile Locomotion For Quadruped Robots
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=uncertainty, suspicious=(none)
+  - 근거: 시뮬레이션에서 배운 정책이 실제 피지컬 환경에서 흔들릴 수 있음을 보여준다 (Sim-to-Real: Learning Agile Locomotion For…, 2018)
+  - URL: https://doi.org/10.15607/rss.2018.xiv.010
+- **PHYSRISK-REF-0022** 피지컬 AI 과신뢰 (Overtrust in embodied agents)
+  - Ref: A deep learning-enhanced Digital Twin framework for improving safety and reliability in human-robot collaborative manufacturing
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=ethics, suspicious=(none)
+  - 근거: 협업 제조에서 사람·로봇 행동 감지로 안전·신뢰성을 관리해야 하므로, 피지컬 AI 과신뢰는 현장 운용 변수로 나타난다 (A deep learning-enhanced Digital Twin framework for… (2024))
+  - URL: https://doi.org/10.1016/j.rcim.2023.102608
+- **PHYSRISK-REF-0023** 공유 자율성 협조 실패 (Shared autonomy coordination failure)
+  - Ref: A deep learning-enhanced Digital Twin framework for improving safety and reliability in human-robot collaborative manufacturing
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=ethics, suspicious=(none)
+  - 근거: 협업 제조에서 사람·로봇 행동 감지로 안전·신뢰성을 관리해야 하므로, 공유 자율성 협조 실패는 현장 운용 변수로 나타난다 (A deep learning-enhanced Digital Twin framework for… (2024))
+  - URL: https://doi.org/10.1016/j.rcim.2023.102608
+- **PHYSRISK-REF-0029** 로봇 군집 하이재킹 (Fleet hijacking)
+  - Ref: DeepOpt: a deep learning optimized privacy preservation framework for cyber-physical systems
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=security, suspicious=(none)
+  - 근거: 여러 로봇이 한꺼번에 탈취되면 충돌, 침입, 서비스 마비가 동시에 생긴다 (Slattery et al., 2024)
+  - URL: https://www.nist.gov/publications/framework-cyber-physical-systems-volume-1-overview
+- **PHYSRISK-REF-0029** 로봇 군집 하이재킹 (Fleet hijacking)
+  - Ref: Detection of Cyber-attacks to indoor real time localization systems for autonomous robots
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=security, suspicious=(none)
+  - 근거: 로봇 시스템이 사이버 공격을 받으면 피지컬 행동도 흔들릴 수 있다 (Detection of Cyber-attacks to indoor real …, 2018)
+  - URL: https://doi.org/10.1016/j.robot.2017.10.006
+- **PHYSRISK-REF-0040** 창고 로봇 보행자 충돌 (Warehouse robot pedestrian conflict)
+  - Ref: On infusing reachability-based safety assurance within planning frameworks for human–robot vehicle interactions
+  - Severity: medium
+  - Why flagged: direct hits=0, tag overlap=vehicle, suspicious=(none)
+  - 근거: 사람-로봇 차량 상호작용에서 reachability 기반 안전 보증을 다뤄, 창고 로봇 보행자 충돌의 궤적·충돌 회피가 계획 단계 이슈가 된다 (On infusing reachability-based safety assurance within planning… (2020))
+  - URL: https://doi.org/10.1177/0278364920950795

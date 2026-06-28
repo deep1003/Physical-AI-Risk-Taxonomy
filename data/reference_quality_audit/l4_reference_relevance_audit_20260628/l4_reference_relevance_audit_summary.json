@@ -1,0 +1,11 @@
+{
+  "cards": 182,
+  "references": 314,
+  "flagged_total": 198,
+  "by_severity": {
+    "high": 147,
+    "medium": 51
+  },
+  "output_all": "/Users/deep1003/data3/AI_Topic_Space.github.io/data/l4_reference_relevance_audit_20260628/l4_reference_relevance_audit_all.csv",
+  "output_candidates": "/Users/deep1003/data3/AI_Topic_Space.github.io/data/l4_reference_relevance_audit_20260628/l4_reference_low_relevance_candidates.csv"
+}

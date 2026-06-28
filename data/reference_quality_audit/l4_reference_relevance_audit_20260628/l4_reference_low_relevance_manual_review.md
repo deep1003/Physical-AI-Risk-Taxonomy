@@ -1,0 +1,112 @@
+# L4 Low-Relevance Reference Manual Review
+
+- 제거 후보: 10
+- 검토 후보: 13
+
+## 제거 후보
+
+- **PHYSBENCH-REF-0018** 언어-행동 안전 정렬 실패 (Linguistic-action safety misalignment)
+  - Ref #2: Safety Moderation Benchmark (mvrcii)
+  - 이유: 일반 텍스트 안전 분류 벤치마크라서 embodied 행동 정렬 실패의 피지컬 실행 맥락을 직접 보강하지 못함
+  - 현재 근거: 9개 정책 도메인 언어 안전 분류 벤치마크, 언어-행동 정렬 실패 탐지 (Safety Moderation Benchmark, HF)
+  - URL: https://huggingface.co/datasets/mvrcii/safety-moderation-benchmark
+- **PHYSBENCH-REF-0019** 물리적 행동 기만 (Conceptual deception in physical action)
+  - Ref #2: DynamoAI Safety Benchmark (DynamoAI)
+  - 이유: 콘텐츠 조정 벤치마크로 보이며 물리적 행동 기만이나 로봇 실행 사례와 직접 연결이 약함
+  - 현재 근거: 콘텐츠 조정 실제 시나리오 벤치마크, 물리 행동 기만 탐지 평가 기준 (DynamoAI Safety Benchmark, HF)
+  - URL: https://huggingface.co/datasets/dynamoai/dynamoai-benchmark-safety
+- **PHYSBENCH-REF-0020** 악의적 행동 요청 (Malicious physical action query execution)
+  - Ref #2: Harmful Behaviors (mlabonne)
+  - 이유: 일반 유해 프롬프트 데이터셋이라 악의적 피지컬 행동 실행과 embodied 맥락이 부족함
+  - 현재 근거: 유해 행동 요청 프롬프트 벤치마크(16K+ 다운로드), 악의적 쿼리 거부 평가 (Harmful Behaviors, HF)
+  - URL: https://huggingface.co/datasets/mlabonne/harmful_behaviors
+- **PHYSBENCH-REF-0024** 피지컬 AI의 혐오·학대 행동 (Hateful or abusive embodied action)
+  - Ref #2: Harmful Behaviors (mlabonne)
+  - 이유: 일반 유해 행동 프롬프트 데이터셋이라 혐오·학대 행동의 로봇 실행 근거로는 약함
+  - 현재 근거: 혐오·학대 행동 요청 시나리오 포함 벤치마크, 거부 분류 정확도 측정 (Harmful Behaviors, HF)
+  - URL: https://huggingface.co/datasets/mlabonne/harmful_behaviors
+- **PHYSBENCH-REF-0031** 영상-행동 공격 안전 위반 (Safety violation under video-action attack)
+  - Ref #1: Robots
+  - 이유: 제목이 광범위한 Robots 문헌으로, 영상-행동 공격이나 비디오 입력 조작 안전 위반을 직접 다루는 근거로는 약함
+  - 현재 근거: 조작된 영상이나 행동 입력은 로봇을 멈춰야 할 때도 계속 움직이게 만들 수 있다 (Huang et al., 2025)
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSBENCH-REF-0030** 감각 교란 기반 비안전 행동 (Adversarial sensory perturbation induced unsafe action)
+  - Ref #1: Robots
+  - 이유: 광범위한 Robots 문헌으로, 감각 교란·적대적 센서 공격을 직접 다루는 문헌은 아님
+  - 현재 근거: 감각 입력을 조금만 교란해도 로봇 정책이 위험 행동을 고를 수 있다 (Huang et al., 2025)
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSCONN-REF-003** 네트워크 분리와 군집 비동기화 (Network partition and fleet desynchronization)
+  - Ref #2: An efficient neural network approach to dynamic robot motion planning
+  - 이유: 동적 로봇 모션 계획 논문이지 네트워크 분리나 군집 비동기화를 다루는 문헌이 아님
+  - 현재 근거: 통신과 네트워크 문제는 로봇 제어 지연과 연결된다 (An efficient neural network approach to dy…, 2000)
+  - URL: https://doi.org/10.1016/S0893-6080(99)00103-3
+- **PHYSCONN-REF-004** 제어 루프 데드라인 미달 (Control-loop deadline miss)
+  - Ref #2: A bioinspired neural network for real-time concurrent map building and complete coverage robot navigation in unknown environments
+  - 이유: 실시간 지도작성·커버리지 내비게이션 논문으로, 제어 루프 deadline miss의 근거로는 직접성이 낮음
+  - 현재 근거: 통신과 네트워크 문제는 로봇 제어 지연과 연결된다 (A bioinspired neural network for real-time…, 2008)
+  - URL: https://doi.org/10.1109/TNN.2008.2000394
+- **PHYSCONN-REF-005** 인지·추론 지연 급증 (Perception and inference latency spike)
+  - Ref #2: Adaptive network fuzzy inference system based navigation controller for mobile robot
+  - 이유: 여기서 network는 퍼지/신경망 의미에 가깝고, 인지·추론 지연 급증을 직접 다루지 않음
+  - 현재 근거: 통신과 네트워크 문제는 로봇 제어 지연과 연결된다 (Adaptive network fuzzy inference system ba…, 2019)
+  - URL: https://doi.org/10.1631/FITEE.1700206
+- **PHYSCONN-REF-009** 안전 폴백 실패 (Degraded-mode and safe-fallback failure)
+  - Ref #2: An efficient neural network approach to dynamic robot motion planning
+  - 이유: 동적 로봇 모션 계획 논문이지 degraded mode나 safe fallback 실패를 다루는 근거가 아님
+  - 현재 근거: 통신과 네트워크 문제는 로봇 제어 지연과 연결된다 (An efficient neural network approach to dy…, 2000)
+  - URL: https://doi.org/10.1016/S0893-6080(99)00103-3
+
+## 검토 후보
+
+- **PHYSBENCH-REF-0025** 임계 이격 거리 위반 (Critical separation-distance violation)
+  - Ref #1: Robots
+  - 이유: 로봇 일반 문헌이라 임계 이격 거리 위반 자체보다는 로봇 안전의 일반 배경에 가까움
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSBENCH-REF-0026** 위험 도구 작업 공간 침입 (Hazardous-tool workspace intrusion)
+  - Ref #1: Robots
+  - 이유: 위험 도구 작업 공간 침입이라는 구체 L4에 비해 Robots 문헌이 너무 일반적임
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSBENCH-REF-0027** 엔드이펙터 속도 초과 (Excessive end-effector velocity)
+  - Ref #1: Robots
+  - 이유: 엔드이펙터 속도 초과라는 구체 제어 리스크에 비해 Robots 문헌이 너무 일반적임
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSBENCH-REF-0028** 조기 물체 해제 (Premature object release)
+  - Ref #1: Robots
+  - 이유: 조기 물체 해제라는 조작 실패에 비해 Robots 문헌이 너무 일반적임
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSBENCH-REF-0029** 금지 대상 충돌 (Forbidden-object collision)
+  - Ref #1: Robots
+  - 이유: 금지 대상 충돌이라는 구체 상황에 비해 Robots 문헌이 일반 배경 수준임
+  - URL: https://arxiv.org/pdf/2509.03383
+- **PHYSBENCH-REF-0070** 휴머노이드 보상 과적합 위험 (Humanoid reward overfitting risk)
+  - Ref #2: Sim-to-Real: Learning Agile Locomotion For Quadruped Robots
+  - 이유: 사족 보행 sim-to-real 문헌이라 휴머노이드 reward overfitting 근거로는 우회적임
+  - URL: https://doi.org/10.15607/rss.2018.xiv.010
+- **PHYSBENCH-REF-0081** 휴머노이드 제로샷 전이 불안정성 (Zero-shot humanoid sim-to-real instability)
+  - Ref #2: Sim-to-Real: Learning Agile Locomotion For Quadruped Robots
+  - 이유: 사족 보행 sim-to-real 문헌이라 휴머노이드 zero-shot 전이 불안정성 근거로는 우회적임
+  - URL: https://doi.org/10.15607/rss.2018.xiv.010
+- **PHYSBENCH-REF-0071** 휴머노이드 행동 재현성 공백 (Humanoid behavior reproducibility gap)
+  - Ref #2: A deep learning-enhanced Digital Twin framework for improving safety and reliability in human-robot collaborative manufacturing
+  - 이유: 협동 제조 디지털트윈 문헌이라 휴머노이드 행동 재현성 공백과 직접 연결은 약함
+  - URL: https://doi.org/10.1016/j.rcim.2023.102608
+- **PHYSBENCH-REF-0107** 휴머노이드 센서 시험 공백 (Humanoid sensor test coverage gap)
+  - Ref #2: A deep learning-enhanced Digital Twin framework for improving safety and reliability in human-robot collaborative manufacturing
+  - 이유: 협동 제조 디지털트윈 문헌이라 휴머노이드 센서 시험 공백과 직접 연결은 약함
+  - URL: https://doi.org/10.1016/j.rcim.2023.102608
+- **PHYSRISK-REF-0022** 피지컬 AI 과신뢰 (Overtrust in embodied agents)
+  - Ref #2: A deep learning-enhanced Digital Twin framework for improving safety and reliability in human-robot collaborative manufacturing
+  - 이유: 협동 제조 안전·신뢰성 문헌이지 피지컬 AI 과신뢰 자체를 다루는 문헌은 아님
+  - URL: https://doi.org/10.1016/j.rcim.2023.102608
+- **PHYSRISK-REF-0023** 공유 자율성 협조 실패 (Shared autonomy coordination failure)
+  - Ref #2: A deep learning-enhanced Digital Twin framework for improving safety and reliability in human-robot collaborative manufacturing
+  - 이유: 협동 제조 디지털트윈 문헌으로 공유 자율성 협조 실패와는 간접 연결 수준임
+  - URL: https://doi.org/10.1016/j.rcim.2023.102608
+- **PHYSKR-REF-009** 노인·환자 돌봄 방치 및 존엄성 침해 (Elderly and patient care neglect and dignity harm)
+  - Ref #2: Your Robot Therapist Will See You Now: Ethical Implications of Embodied Artificial Intelligence in Psychiatry, Psychology, and Psychotherapy
+  - 이유: Robot Therapist 문헌 자체는 의료 AI 윤리와 관련되지만, 현재 근거 문장의 인용명이 Granny and the robots로 잘못 붙어 있어 정합성 수정이 필요함
+  - URL: https://doi.org/10.2196/13216
+- **PHYSRISK-REF-0055** 관할권 간 규제 차익 거래 (Regulatory arbitrage across jurisdictions)
+  - Ref #1: Robots, standards and the law: Rivalries between private standards and public policymaking for robot governance
+  - 이유: 로봇 표준과 법 문헌은 규제와 관련되지만, 현재 근거 문장의 IGLOO 2026 표기가 실제 레퍼런스 제목과 맞지 않음
+  - URL: https://doi.org/10.1016/j.clsr.2018.12.009

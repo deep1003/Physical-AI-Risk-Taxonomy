@@ -1,0 +1,850 @@
+match_score,card_idx,card_badge,card_label,card_refs_before,overlap_tags,rank,source_file,year,title,abstract,venue,institution,document_type,doi,url,landing_page_url,pdf_url,authors,first_author,citations,record_id,matched_terms,matched_l3,record_type,title_key,doi_key,candidate_url,url_key,score,selection_reason,checked_url,access_ok,status_code,final_url,content_type,access_error,justification,refs_after
+1.575,56,PHYSBENCH-REF-0061,접촉 조작 힘 감지 실패 (Contact-rich manipulation force-sensing failure),3,collision;manipulation;privacy,66,,2024,"Learning-Based High-Precision Force Estimation and Compliant Control for
+   Small-Scale Continuum Robot","Small-scale continuum robot-assisted minimally invasive surgery has
+   received crucial attention due to its smaller incisions and high
+   dexterity. In medical scenarios such as radiofrequency ablation and
+   nasal/throat swab sampling, monitoring and controlling the forces
+   applied to human tissue can help improve the safety and comfort level of
+   the procedure. However, the tip-sensor-based force detection method can
+   barely be deployed due to the miniature size of the continuum robot;
+   meanwhile, the mechanical modeling-based high-precision force estimation
+   cannot be realized on account of the continuum robots' complex structure
+   with high nonlinear properties. To address the high-precision force
+   estimation challenge for further compliant control during minimally
+   invasive interventions, a learning-based high-precision force estimation
+   method via long short-term memory (LSTM) is proposed in this paper. On
+   this basis, compliance control and high-precision force tracking can be
+   further realized for small-scale continuum robot. The compliance control
+   ensures a smooth and stable transition during the interaction between
+   the robot and the environment, and force tracking can be utilized for
+   maintaining or precisely controlling the force applied to the human
+   tissue. Finally, the contact force sensing and control experiments are
+   carried out on a small-scale continuum robot system prototype, and a
+   demonstration using a human nasal cavity model is conducted. The results
+   validate that the proposed LSTM neural network fits the mechanical model
+   of the continuum robot well with the root mean square error of 3.44mN,
+   and the control method can significantly compensate for the
+   instantaneous impact during contact with an attenuation of 59.3\% and
+   rapidly respond to keep the force accurately at the expected value with
+   the mean absolute error of 2.41mN.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2023.3311179,,,,"Xiang, Pingyu and Zhang, Jingyu and Sun, Danying and Qiu, Ke and Fang,
+   Qin and Mi, Xiangyu and Wang, Yue and Xiong, Rong and Lu, Haojian",,24.0,WOS:001064623800001,,,paper,learning based high precision force estimation and compliant control for small scale continuum robot,10.1109/tase.2023.3311179,https://doi.org/10.1109/tase.2023.3311179,https://doi.org/10.1109/tase.2023.3311179,175.064,citations=24; year=2024; risk_terms=2; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2023.3311179,True,202.0,https://ieeexplore.ieee.org/document/10242341/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 '접촉 조작 힘 감지 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Learning-Based High-Precision… (Xiang et al., 2024)",4
+1.503,53,PHYSBENCH-REF-0053,장애물 개입 충돌 (Obstacle intervention collision),3,collision;manipulation;navigation,164,,2024,"Deep reinforcement learning-based local path planning in dynamic
+   environments for mobile robot☆","Path planning for robots in dynamic environments is a challenging task,
+   as it requires balancing obstacle avoidance, trajectory smoothness, and
+   path length during real-time planning.This paper proposes an algorithm
+   called Adaptive Soft Actor-Critic (ASAC), which combines the Soft
+   Actor-Critic (SAC) algorithm, tile coding, and the Dynamic Window
+   Approach (DWA) to enhance path planning capabilities. ASAC leverages SAC
+   with an automatic entropy adjustment mechanism to balance exploration
+   and exploitation, integrates tile coding for improved feature
+   representation, and utilizes DWA to define the action space through
+   parameters such as target heading, obstacle distance, and velocity In
+   this framework, the action space is defined by DWA's three weighting
+   parameters: target heading deviation, distance to the nearest obstacle,
+   and velocity. To facilitate the learning process, a non-sparse reward
+   function is designed, incorporating factors such as Time- to-Collision
+   (TTC), heading, and velocity. To validate the effectiveness of the
+   algorithm, experiments were conducted in four different environments,
+   and the algorithm was evaluated based on metrics such as trajectory
+   deviation, smoothness, and time to reach the end point. The results
+   demonstrate that ASAC outperforms existing algorithms in terms of
+   trajectory smoothness, arrival time, and overall adaptability across
+   various scenarios, effectively enabling path planning in dynamic
+   environments.",JOURNAL OF KING SAUD UNIVERSITY-COMPUTER AND INFORMATION SCIENCES,,Article,10.1016/j.jksuci.2024.102254,,,,"Tao, Bodong and Kim, Jae-Hoon",,26.0,WOS:001373302400001,,,paper,deep reinforcement learning based local path planning in dynamic environments for mobile robot,10.1016/j.jksuci.2024.102254,https://doi.org/10.1016/j.jksuci.2024.102254,https://doi.org/10.1016/j.jksuci.2024.102254,161.142,citations=26; year=2024; risk_terms=1; physical_terms=1; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.jksuci.2024.102254,True,200.0,https://linkinghub.elsevier.com/retrieve/pii/S1319157824003434,text/html;charset=UTF-8,,"불확실한 환경의 경로 계획에서 '장애물 개입 충돌' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Deep reinforcement learning-b… (Tao et al., 2024)",4
+1.471,66,PHYSBENCH-REF-0104,휴머노이드 충돌력 초과 (Humanoid collision-force exceedance),2,collision;humanoid;manipulation,184,,2025,"Reactive motion planning framework based on control barrier function and
+   sampling-based MPC for humanoid upper-body robots","Future humanoid robots must be reactive and dexterous when operating in
+   dynamic, human-centered environments. To address the challenges of
+   task-space constrained manipulation and reactive motion planning
+   resulting in locally optimal robot motion in complex unstructured
+   environments, we propose a general framework for humanoid upper-body
+   robots (HUBRs), which enables three distinct reactive motion modes, to
+   fill the research gap about unifying tightly coupled coordinated
+   bimanual manipulation, reactive motion, and overcoming the local minima
+   of reactive motion planning: (1) Tightly coupled coordinated bimanual
+   reactive collision-free motion for any type of obstacles, which is
+   achieved by vector field (VF), cooperative dual task space (CDTS), and
+   our proposed safety filter based on control barrier function (CBF). (2)
+   The robot arms proactively escape from the local minima induced by
+   concave obstacles and reactive motion via the proposed local VF
+   modulation strategy that incorporates the novel force navigation kernel
+   and the kernel parameter optimization based on sampling-based model
+   predictive control (MPPI). This motion mode is automatically activated
+   by evaluating an efficient scalar-valued activation function. (3)
+   Reactive coordinated waist-arm motion based on the dual-arm reachability
+   analysis for dual-arm workspace expansion. This motion mode is triggered
+   when dual-arm manipulability or the tilt angle of the dual-arm
+   end-effectors reach the threshold value. Various planning methods are
+   thoroughly validated in cluttered and dynamic simulation scenarios. The
+   proposed framework out-performs existing solutions in constrained
+   manipulation tasks. We also demonstrate the benefits of the proposed
+   framework in real-world experiments.",SCIENCE CHINA-TECHNOLOGICAL SCIENCES,,Article,10.1007/s11431-025-3053-1,,,,"Chen, Zhaoyang and Fan, Xinyang and Ni, Fenglei and Ren, Yi and Liu,
+   Hong",,1.0,WOS:001600488000004,,,paper,reactive motion planning framework based on control barrier function and sampling based mpc for humanoid upper body robots,10.1007/s11431-025-3053-1,https://doi.org/10.1007/s11431-025-3053-1,https://doi.org/10.1007/s11431-025-3053-1,159.704,citations=1; year=2025; risk_terms=3; physical_terms=6; prestige_venue=mandatory_candidate,https://doi.org/10.1007/s11431-025-3053-1,True,200.0,https://link.springer.com/article/10.1007/s11431-025-3053-1,text/html; charset=utf-8,,"제어 장벽 함수 기반 모션 계획에서 '휴머노이드 충돌력 초과' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Reactive motion planning fram… (Chen et al., 2025)",3
+1.445,59,PHYSBENCH-REF-0069,전신 도달 한계 위반 (Whole-body reach-limit violation),2,collision;humanoid;manipulation,184,,2025,"Reactive motion planning framework based on control barrier function and
+   sampling-based MPC for humanoid upper-body robots","Future humanoid robots must be reactive and dexterous when operating in
+   dynamic, human-centered environments. To address the challenges of
+   task-space constrained manipulation and reactive motion planning
+   resulting in locally optimal robot motion in complex unstructured
+   environments, we propose a general framework for humanoid upper-body
+   robots (HUBRs), which enables three distinct reactive motion modes, to
+   fill the research gap about unifying tightly coupled coordinated
+   bimanual manipulation, reactive motion, and overcoming the local minima
+   of reactive motion planning: (1) Tightly coupled coordinated bimanual
+   reactive collision-free motion for any type of obstacles, which is
+   achieved by vector field (VF), cooperative dual task space (CDTS), and
+   our proposed safety filter based on control barrier function (CBF). (2)
+   The robot arms proactively escape from the local minima induced by
+   concave obstacles and reactive motion via the proposed local VF
+   modulation strategy that incorporates the novel force navigation kernel
+   and the kernel parameter optimization based on sampling-based model
+   predictive control (MPPI). This motion mode is automatically activated
+   by evaluating an efficient scalar-valued activation function. (3)
+   Reactive coordinated waist-arm motion based on the dual-arm reachability
+   analysis for dual-arm workspace expansion. This motion mode is triggered
+   when dual-arm manipulability or the tilt angle of the dual-arm
+   end-effectors reach the threshold value. Various planning methods are
+   thoroughly validated in cluttered and dynamic simulation scenarios. The
+   proposed framework out-performs existing solutions in constrained
+   manipulation tasks. We also demonstrate the benefits of the proposed
+   framework in real-world experiments.",SCIENCE CHINA-TECHNOLOGICAL SCIENCES,,Article,10.1007/s11431-025-3053-1,,,,"Chen, Zhaoyang and Fan, Xinyang and Ni, Fenglei and Ren, Yi and Liu,
+   Hong",,1.0,WOS:001600488000004,,,paper,reactive motion planning framework based on control barrier function and sampling based mpc for humanoid upper body robots,10.1007/s11431-025-3053-1,https://doi.org/10.1007/s11431-025-3053-1,https://doi.org/10.1007/s11431-025-3053-1,159.704,citations=1; year=2025; risk_terms=3; physical_terms=6; prestige_venue=mandatory_candidate,https://doi.org/10.1007/s11431-025-3053-1,True,200.0,https://link.springer.com/article/10.1007/s11431-025-3053-1,text/html; charset=utf-8,,"제어 장벽 함수 기반 모션 계획에서 '전신 도달 한계 위반' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Reactive motion planning fram… (Chen et al., 2025)",3
+1.44,58,PHYSBENCH-REF-0068,정밀 휴머노이드 접촉력 위험 (Dexterous humanoid contact-force risk),2,collision;humanoid;manipulation,184,,2025,"Reactive motion planning framework based on control barrier function and
+   sampling-based MPC for humanoid upper-body robots","Future humanoid robots must be reactive and dexterous when operating in
+   dynamic, human-centered environments. To address the challenges of
+   task-space constrained manipulation and reactive motion planning
+   resulting in locally optimal robot motion in complex unstructured
+   environments, we propose a general framework for humanoid upper-body
+   robots (HUBRs), which enables three distinct reactive motion modes, to
+   fill the research gap about unifying tightly coupled coordinated
+   bimanual manipulation, reactive motion, and overcoming the local minima
+   of reactive motion planning: (1) Tightly coupled coordinated bimanual
+   reactive collision-free motion for any type of obstacles, which is
+   achieved by vector field (VF), cooperative dual task space (CDTS), and
+   our proposed safety filter based on control barrier function (CBF). (2)
+   The robot arms proactively escape from the local minima induced by
+   concave obstacles and reactive motion via the proposed local VF
+   modulation strategy that incorporates the novel force navigation kernel
+   and the kernel parameter optimization based on sampling-based model
+   predictive control (MPPI). This motion mode is automatically activated
+   by evaluating an efficient scalar-valued activation function. (3)
+   Reactive coordinated waist-arm motion based on the dual-arm reachability
+   analysis for dual-arm workspace expansion. This motion mode is triggered
+   when dual-arm manipulability or the tilt angle of the dual-arm
+   end-effectors reach the threshold value. Various planning methods are
+   thoroughly validated in cluttered and dynamic simulation scenarios. The
+   proposed framework out-performs existing solutions in constrained
+   manipulation tasks. We also demonstrate the benefits of the proposed
+   framework in real-world experiments.",SCIENCE CHINA-TECHNOLOGICAL SCIENCES,,Article,10.1007/s11431-025-3053-1,,,,"Chen, Zhaoyang and Fan, Xinyang and Ni, Fenglei and Ren, Yi and Liu,
+   Hong",,1.0,WOS:001600488000004,,,paper,reactive motion planning framework based on control barrier function and sampling based mpc for humanoid upper body robots,10.1007/s11431-025-3053-1,https://doi.org/10.1007/s11431-025-3053-1,https://doi.org/10.1007/s11431-025-3053-1,159.704,citations=1; year=2025; risk_terms=3; physical_terms=6; prestige_venue=mandatory_candidate,https://doi.org/10.1007/s11431-025-3053-1,True,200.0,https://link.springer.com/article/10.1007/s11431-025-3053-1,text/html; charset=utf-8,,"제어 장벽 함수 기반 모션 계획에서 '정밀 휴머노이드 접촉력 위험' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Reactive motion planning fram… (Chen et al., 2025)",3
+1.305,119,PHYSRISK-REF-0001,가림에 의한 충돌 (Occlusion-induced collision),3,collision;navigation;vehicle,14,,2024,"NR-RRT: Neural Risk-Aware Near-Optimal Path Planning in Uncertain
+   Nonconvex Environments","Balancing the trade-off between safety and efficiency is of significant
+   importance for path planning under uncertainty. Many developed
+   risk-aware path planners explicitly limit the probability of collision
+   to an acceptable bound in uncertain environments. However, convex
+   obstacles or Gaussian uncertainties are usually assumed to make the
+   problem tractable in the existing method. These assumptions limit the
+   generalization and application of path planners in real-world
+   implementations. In this article, we propose to apply deep learning
+   methods to the sampling-based planner, developing a novel risk bounded
+   near-optimal path planning algorithm named neural risk-aware RRT
+   (NR-RRT). Specifically, a deterministic risk contours map is maintained
+   by perceiving the probabilistic nonconvex obstacles, and a neural
+   network sampler is proposed to predict the next most-promising safe
+   state. Furthermore, the recursive divide-and-conquer planning and
+   bidirectional search strategies are used to accelerate the convergence
+   to a near-optimal solution with guaranteed bounded risk. Worst-case
+   theoretical guarantees can also be proven owing to a standby safety
+   guaranteed planner utilizing a uniform sampling distribution. Simulation
+   experiments demonstrate that the proposed algorithm outperforms the
+   state-of-the-art for finding risk bounded low-cost paths in uncertain
+   nonconvex environments with seen and unseen scene layouts. Note to
+   Practitioners-This article is motivated by developing an efficient
+   risk-aware path planner that can quickly find risk bounded solutions in
+   uncertain nonconvex environments for practical applications, such as
+   autonomous vehicles and search-and-rescue robots. Sampling-based
+   planning approaches such as rapidly-exploring random tree (RRT) and its
+   variants are popular for their good performance in exploring the state
+   space. However, it is quite time-consuming to look for risk bounded
+   paths in uncertain environments, especially under nonconvex and
+   non-Gaussian constraints. The initial paths are often of poor quality.
+   Therefore, we propose the NR-RRT algorithm to rapidly find near-optimal
+   solutions with guaranteed bounded risk. It utilizes an informed
+   bidirectional search strategy after having past experiences in the
+   challenging environments. It can be applied in not only seen uncertain
+   scenarios but also those have unseen scene layouts different from the
+   training scenarios. However, the algorithm cannot handle the problem in
+   environments that contain entirely unseen obstacles. In future research,
+   we will address the problem of planning under robot model uncertainty.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2022.3215562,,,,"Meng, Fei and Chen, Liangliang and Ma, Han and Wang, Jiankun and Meng,
+   Max Q. -H.",,34.0,WOS:001139915600032,,,paper,nr rrt neural risk aware near optimal path planning in uncertain nonconvex environments,10.1109/tase.2022.3215562,https://doi.org/10.1109/tase.2022.3215562,https://doi.org/10.1109/tase.2022.3215562,189.775,citations=34; year=2024; risk_terms=5; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2022.3215562,True,202.0,https://ieeexplore.ieee.org/document/9928264/,text/html; charset=UTF-8,,"불확실한 환경의 경로 계획에서 '가림에 의한 충돌' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; NR-RRT: Neural Risk-Aware Nea… (Meng et al., 2024)",4
+1.251,67,PHYSBENCH-REF-0105,휴머노이드 파지력 초과 (Humanoid grip-force exceedance),1,collision;humanoid;manipulation,161,,2024,"TacSuit: A Wearable Large-Area, Bioinspired Multimodal Tactile Skin for
+   Collaborative Robots","Robots are now working more and more closely with humans outside of
+   traditional fences in industrial scenes. Their real-time tactile
+   interaction perception is crucial to the safety of human-robot
+   collaboration (HRC). In this work, we present a customized, wearable,
+   and modular robot skin (TacSuit), which is scalable for large-area
+   surface coverage of robot with easily accessible multimodal sensors,
+   including pressure, proximity, acceleration, and temperature sensors.
+   The TacSuit is co-designed for mechanical structure and data fusion
+   algorithm, consisting of three levels of design: sensor, cell (of
+   multimodal sensors), and block (of multiple cells). These sensors are
+   stored with custom-designed and 3-D printed capsules to achieve the
+   conformity, scalability, and easy installation to the arbitrary robot
+   surface. A multilevel event-driven data fusion algorithm enables
+   efficient information processing for large number of tactile sensors.
+   Furthermore, a virtual interaction force fusion method takes both the
+   proximity and force perception information into consideration in order
+   to achieve safety of whole interaction process before and after direct
+   physical contacts. A humanoid robotic platform successfully realizes the
+   TacSuit wear of 159 tactile cells. Validation experiments of obstacle
+   detection demonstrate the effective collision avoidance capability of
+   the TacSuit for safe HRC.",IEEE TRANSACTIONS ON INDUSTRIAL ELECTRONICS,,Article,10.1109/TIE.2023.3253921,,,,"Zhou, Yanmin and Zhao, Jiangang and Lu, Ping and Wang, Zhipeng and He,
+   Bin",,31.0,WOS:001051778100057,,,paper,tacsuit a wearable large area bioinspired multimodal tactile skin for collaborative robots,10.1109/tie.2023.3253921,https://doi.org/10.1109/tie.2023.3253921,https://doi.org/10.1109/tie.2023.3253921,161.52,citations=31; year=2024; risk_terms=3; physical_terms=7,https://doi.org/10.1109/tie.2023.3253921,True,202.0,https://ieeexplore.ieee.org/document/10068344/,text/html; charset=UTF-8,,"촉각·힘 센서 기반 로봇 제어에서 '휴머노이드 파지력 초과' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; TacSuit: A Wearable Large-Are… (Zhou et al., 2024)",2
+1.249,54,PHYSBENCH-REF-0055,제어 장벽 함수 실패 (Control barrier function safety-filter failure),1,collision;uncertainty,52,,2025,"Explainable and Safety Aware Deep Reinforcement Learning-Based Control
+   of Nonlinear Discrete-Time Systems Using Neural Network Gradient
+   Decomposition","This paper presents an explainable deep-reinforcement learning
+   (DRL)-based safety-aware optimal adaptive tracking (SOAT) scheme for a
+   class of nonlinear discrete-time (DT) affine systems subject to state
+   inequality constraints. The DRL-based SOAT utilizes a multilayer neural
+   network (MNN)-based actor-critic to estimate the cost function and
+   optimal policy while the MNN update laws are tuned both using the
+   singular value decomposition (SVD) of activation function gradient in
+   order to mitigate the vanishing gradient issue and safety-aware Bellman
+   error at each layer. An approximate safety-aware optimal policy is
+   developed using Karush-Kuhn-Tucker (KKT) conditions by incorporating the
+   higher-order control barrier function (HOCBF) into the Hamiltonian
+   through the Lagrangian multiplier. The resulting safety-aware Bellman
+   error helps with safe exploration both during online learning phase and
+   at steady state without any explicit actor-critic MNN update law
+   changes. To study the explainability and gain insights, we employ the
+   Shapley Additive Explanations (SHAP) method to construct an explainer
+   model for the DRL-based SOAT scheme in order to identify the important
+   features in determining the optimal policy. The overall stability is
+   established. Finally, the effectiveness of the proposed method is
+   demonstrated on Shipboard Power Systems (SPS), achieving over a 35\%
+   reduction in cumulative cost compared to the existing actor-critic MNN
+   optimal control policy. Note to Practitioners-In practical control
+   systems, meeting safety constraints is often critical since ignoring
+   constraints can lead to degraded performance or damage to equipment.
+   This paper addresses the challenge of a safe DRL-based control approach
+   that not only optimizes performance but also integrates robust safety
+   assurances. Our DRL-based SOAT scheme specifically targets nonlinear
+   discrete-time systems that must satisfy state inequality constraints.
+   The successful proposed control performance in simulations on a
+   Shipboard Power System demonstrates the potential for practical
+   applications. DRL-based SOAT employs an MNN with an actor-critic
+   framework for continuous learning and policy adaptation. Integrating
+   HOCBFs directly into the optimization ensures safe operation, even
+   during online learning, which is critical for real-time applications.
+   The addition of SHAP enhances transparency by identifying key features
+   that influence control decisions. Future work could adapt this framework
+   to other constrained environments, such as autonomous vehicles,
+   robotics, and industrial automation, where safety, optimality, and
+   explainability are essential.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3554431,,,,"Farzanegan, Behzad and Jagannathan, Sarangapani",,6.0,WOS:001470389400016,,,paper,explainable and safety aware deep reinforcement learning based control of nonlinear discrete time systems using neural network gradient decomposition,10.1109/tase.2025.3554431,https://doi.org/10.1109/tase.2025.3554431,https://doi.org/10.1109/tase.2025.3554431,177.243,citations=6; year=2025; risk_terms=4; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3554431,True,202.0,https://ieeexplore.ieee.org/document/10938298/,text/html; charset=UTF-8,,"설명 가능한 안전 제어에서 '제어 장벽 함수 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Explainable and Safety Aware… (Farzanegan et al., 2025)",2
+1.24,33,PHYSBENCH-REF-0076,인간 모방 분포 이동 (Human-mimicking distribution shift),1,humanoid;uncertainty,182,,2026,"Toward Reliable Imitation Learning With Limited Expert Demonstrations
+   via Search-Based Inverse Dynamic Learning","Imitation learning (IL) shows its superiority in faster strategy
+   optimization by leveraging expert demonstrations. However, as one of the
+   powerful IL methods, behavior cloning (BC) suffers from covariate shift
+   problems, where the agent's policy drifts away from the expert's,
+   leading to compounding errors and decreased generalization performance.
+   To this end, we propose Search-based Inverse Dynamics Imitation
+   Learning, namely SIDIL, to enhance the robustness of imitation learning
+   by augmenting expert demonstrations via trajectory perturbation and
+   stitching. Specifically, SIDIL first employs a nearest-neighbor search
+   method to find the closest points between expert and perturbed data,
+   generating new actions near the expert data via a stitching strategy. By
+   exploiting this, the agent can recover from deviations and complete
+   tasks under a wider range of conditions. Experimental results on various
+   robotic tasks show that SIDIL outperforms baseline algorithms with
+   higher success rates across multiple tasks. Meanwhile, SIDIL is allowed
+   to expand the attractive region around expert demonstrations by
+   stitching states from expert demonstrations, enjoying a higher task
+   completion success rate even for states outside the expert distribution.
+   These results highlight our potential to enhance humanoid locomotion and
+   dexterous robotic hand manipulation, making it particularly suitable for
+   industrial manufacturing automation where adaptability, robustness, and
+   safety are essential.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2026.3668970,,,,"Lin, Zhiliang and Chen, Zhuangzhuang and Zhu, Guanming and Wang, Li and
+   Li, Jianqiang",,1.0,WOS:001711114800003,,,paper,toward reliable imitation learning with limited expert demonstrations via search based inverse dynamic learning,10.1109/tase.2026.3668970,https://doi.org/10.1109/tase.2026.3668970,https://doi.org/10.1109/tase.2026.3668970,159.704,citations=1; year=2026; risk_terms=3; physical_terms=7; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2026.3668970,True,202.0,https://ieeexplore.ieee.org/document/11417181/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 '인간 모방 분포 이동' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Toward Reliable Imitation Lea… (Lin et al., 2026)",2
+1.204,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),3,learning;manipulation,52,,2025,"Explainable and Safety Aware Deep Reinforcement Learning-Based Control
+   of Nonlinear Discrete-Time Systems Using Neural Network Gradient
+   Decomposition","This paper presents an explainable deep-reinforcement learning
+   (DRL)-based safety-aware optimal adaptive tracking (SOAT) scheme for a
+   class of nonlinear discrete-time (DT) affine systems subject to state
+   inequality constraints. The DRL-based SOAT utilizes a multilayer neural
+   network (MNN)-based actor-critic to estimate the cost function and
+   optimal policy while the MNN update laws are tuned both using the
+   singular value decomposition (SVD) of activation function gradient in
+   order to mitigate the vanishing gradient issue and safety-aware Bellman
+   error at each layer. An approximate safety-aware optimal policy is
+   developed using Karush-Kuhn-Tucker (KKT) conditions by incorporating the
+   higher-order control barrier function (HOCBF) into the Hamiltonian
+   through the Lagrangian multiplier. The resulting safety-aware Bellman
+   error helps with safe exploration both during online learning phase and
+   at steady state without any explicit actor-critic MNN update law
+   changes. To study the explainability and gain insights, we employ the
+   Shapley Additive Explanations (SHAP) method to construct an explainer
+   model for the DRL-based SOAT scheme in order to identify the important
+   features in determining the optimal policy. The overall stability is
+   established. Finally, the effectiveness of the proposed method is
+   demonstrated on Shipboard Power Systems (SPS), achieving over a 35\%
+   reduction in cumulative cost compared to the existing actor-critic MNN
+   optimal control policy. Note to Practitioners-In practical control
+   systems, meeting safety constraints is often critical since ignoring
+   constraints can lead to degraded performance or damage to equipment.
+   This paper addresses the challenge of a safe DRL-based control approach
+   that not only optimizes performance but also integrates robust safety
+   assurances. Our DRL-based SOAT scheme specifically targets nonlinear
+   discrete-time systems that must satisfy state inequality constraints.
+   The successful proposed control performance in simulations on a
+   Shipboard Power System demonstrates the potential for practical
+   applications. DRL-based SOAT employs an MNN with an actor-critic
+   framework for continuous learning and policy adaptation. Integrating
+   HOCBFs directly into the optimization ensures safe operation, even
+   during online learning, which is critical for real-time applications.
+   The addition of SHAP enhances transparency by identifying key features
+   that influence control decisions. Future work could adapt this framework
+   to other constrained environments, such as autonomous vehicles,
+   robotics, and industrial automation, where safety, optimality, and
+   explainability are essential.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3554431,,,,"Farzanegan, Behzad and Jagannathan, Sarangapani",,6.0,WOS:001470389400016,,,paper,explainable and safety aware deep reinforcement learning based control of nonlinear discrete time systems using neural network gradient decomposition,10.1109/tase.2025.3554431,https://doi.org/10.1109/tase.2025.3554431,https://doi.org/10.1109/tase.2025.3554431,177.243,citations=6; year=2025; risk_terms=4; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3554431,True,202.0,https://ieeexplore.ieee.org/document/10938298/,text/html; charset=UTF-8,,"설명 가능한 안전 제어에서 '안전 강화학습 제약 위반' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Explainable and Safety Aware… (Farzanegan et al., 2025)",4
+1.166,27,PHYSBENCH-REF-0054,안전-성능 균형 실패 (Safety-performance trade-off failure),2,collision;manipulation,115,,2025,"Personalized Assistance in Robotic Rehabilitation: Real-Time Adaptation
+   via Energy-Based Performance Monitoring","Recent studies underscore the importance of the patient's active
+   contribution and voluntary effort in enhancing therapy outcomes in
+   physical rehabilitation. This paper presents an adaptive control scheme
+   to implement active robotic rehabilitation. The primary goal is to
+   dynamically regulate robotic assistance based on the patient's
+   performance and individual conditions, encouraging active participation,
+   and effective therapy. To achieve this, a Lyapunov-based adaptive
+   algorithm is developed that dynamically adjusts the admittance
+   parameters by balancing the error and effort minimization. A novel
+   performance index based on human energy input enables real-time
+   identification of the intended human sharing role. This index is used as
+   an adaptive rate in the proposed algorithm to enhance the control
+   system's dynamic responsiveness to changes in human performance. The
+   proposed approach achieves two main rehabilitation objectives. First, it
+   encourages active and safe human participation. Second, it enhances the
+   therapy by providing personalized assistance, tailored to individual
+   abilities and conditions, and thus reduces the need for therapist
+   intervention. The performance of the proposed approach is illustrated in
+   experimental studies. The results demonstrate the adaptability of the
+   algorithm, ensuring compliant and safe interaction and effective task
+   completion. Note to Practitioners-In a human-robot cooperation (HRC)
+   framework, the automatic adaptation of the robot's role as well as safe
+   and stable interaction are crucial. These aspects are amplified in the
+   context of robotic rehabilitation due to the special conditions of the
+   human participants. Classic control methods, in shared control, lack
+   system intelligence and automation in role allocation. However, the
+   shared role of humans in HRC, particularly in rehabilitation
+   applications, introduces real-time and unpredictable variations. This
+   study addresses the shortcomings of classic control methods, by
+   integrating intelligence into the control system through an adaptive
+   Neural Network algorithm in shared autonomy. To emulate human-like
+   adaptability, two crucial aspects are considered. Firstly, it
+   incorporates safety assurance embedded in the adaptive algorithm via
+   Lyapunov-based adaptation. Secondly, it detects the human's role within
+   the control loop through a novel energy-based performance index, which
+   views the human as an active contributor to the system's dynamic energy
+   flow. This ensures robust behavior by dynamically adjusting the
+   trade-off between task completion and minimal robot intervention. A
+   standout feature of our algorithm lies in its expendability to
+   exoskeleton systems, making it highly versatile for use in robotic
+   rehabilitation and assistive technologies. The algorithm's design allows
+   for straightforward integration with exoskeletons, requiring only
+   interaction force measurements in the joint space. It facilitates
+   monitoring of a patient's performance in each joint using the proposed
+   performance index based on the human energy entry into the system.
+   Beyond rehabilitation, the algorithm's ability to adjust autonomy levels
+   through adaptation makes it applicable to a wide range of Human-Robot
+   Cooperation scenarios where automatic role allocation is necessary.
+   Preliminary experiments underscore the adaptive algorithm's robust
+   responsiveness to changes in human performance.
+   Future investigations should involve clinical experiments addressing
+   real-life challenges associated with various movement deficiencies and
+   responding to real-time issues that may arise during rehabilitation
+   sessions.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3552446,,,,"Pezeshki, Leilaalsadat and Sadeghian, Hamid and Mohebbi, Abolfazl and
+   Keshmiri, Mehdi and Haddadin, Sami",,5.0,WOS:001470389400006,,,paper,personalized assistance in robotic rehabilitation real time adaptation via energy based performance monitoring,10.1109/tase.2025.3552446,https://doi.org/10.1109/tase.2025.3552446,https://doi.org/10.1109/tase.2025.3552446,165.085,citations=5; year=2025; risk_terms=3; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3552446,True,202.0,https://ieeexplore.ieee.org/document/10930887/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 '안전-성능 균형 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Personalized Assistance in Ro… (Pezeshki et al., 2025)",3
+1.16,57,PHYSBENCH-REF-0066,전신 이동 충돌 위험 (Whole-body locomotion collision risk),4,collision;humanoid,149,,2025,"Socially Acceptable Bipedal Robot Navigation via Social Zonotope Network
+   Model Predictive Control","This study addresses the challenge of social bipedal navigation in a
+   dynamic, human-crowded environment, a research area largely
+   underexplored in legged robot navigation. We present a zonotope-based
+   framework that couples prediction and motion planning for a bipedal
+   ego-agent to account for bidirectional influence with the surrounding
+   pedestrians. This framework incorporates a Social Zonotope Network
+   (SZN), a neural network that predicts future pedestrian reachable sets
+   and plans future socially acceptable reachable set for the ego-agent.
+   SZN generates the reachable sets as zonotopes for efficient
+   reachability-based planning, collision checking, and online uncertainty
+   parameterization. Locomotion-specific losses are added to the SZN
+   training process to adhere to the dynamic limits of the bipedal robot
+   that are not explicitly present in the human crowds data set. These loss
+   functions enable the SZN to generate locomotion paths that are more
+   dynamically feasible for improved tracking. SZN is integrated with a
+   Model Predictive Controller (SZN-MPC) for footstep planning for our
+   bipedal robot Digit. SZN-MPC solves for collision-free trajectory by
+   optimizing through SZN's gradients. Our results demonstrate the
+   framework's effectiveness in producing a socially acceptable path, with
+   consistent locomotion velocity, and optimality. The SZN-MPC framework is
+   validated with extensive simulations and hardware experiments. Note to
+   Practitioners-This paper is motivated by the challenge of navigating
+   bipedal robots through dynamic, human-crowded environments in a socially
+   acceptable manner. Existing methods for social navigation often only
+   address obstacle avoidance and are demonstrated on a robot with simple
+   dynamics. This paper proposes the Social Zonotope Network (SZN), a novel
+   neural network that couples pedestrian future trajectory prediction and
+   robot motion planning to facilitate socially aware navigation for
+   bipedal robots such as Digit, designed by Agility Robotics. The social
+   behaviors are learned from real open-sourced pedestrian data using the
+   SZN, which outputs the future predictions as reachable sets for each
+   agent in the environment. The SZN is then integrated into a trajectory
+   optimization problem that takes into account personal space preferences
+   and bipedal robot capabilities to design trajectories that are both
+   collision-free and socially acceptable. This work also highlights the
+   computational efficiency of the SZN design that makes it suitable for
+   real-time integration with motion planners. The framework is validated
+   through extensive simulations and hardware experiments. From a practical
+   standpoint, this research provides a framework that can be applied to
+   bipedal robots to improve automation in human-populated environments
+   such as hospitals, shopping centers, and airports. The framework's
+   ability to automatically adapt to surrounding human movement helps
+   minimize disruptions and ensures that the robot's presence is not a
+   hindrance to the flow of human traffic. Future work will focus on
+   outdoor deployment, which will require onboard perception capabilities
+   to detect surrounding pedestrians.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2024.3519012,,,,"Shamsah, Abdulaziz and Agarwal, Krishanu and Katta, Nigam and Raju,
+   Abirath and Kousik, Shreyas and Zhao, Ye",,4.0,WOS:001381481000001,,,paper,socially acceptable bipedal robot navigation via social zonotope network model predictive control,10.1109/tase.2024.3519012,https://doi.org/10.1109/tase.2024.3519012,https://doi.org/10.1109/tase.2024.3519012,162.532,citations=4; year=2025; risk_terms=2; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2024.3519012,True,202.0,https://ieeexplore.ieee.org/document/10810741/,text/html; charset=UTF-8,,"불확실한 환경의 경로 계획에서 '전신 이동 충돌 위험' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Socially Acceptable Bipedal R… (Shamsah et al., 2025)",5
+1.145,120,PHYSRISK-REF-0003,다중 센서 융합 충돌 (Multimodal sensor fusion conflict),3,privacy,25,,2022,A Multimodal Approach to Human Safety in Collaborative Robotic Workcells,"This article investigates the problem of controlling the speed of robots
+   in collaborative workcells for automated manufacturing. The solution is
+   tailored to robotic cells for cooperative assembly of aircraft fuselage
+   panels, where only structural elements are present and robots and humans
+   can share the same workspace, but no physical contact is allowed, unless
+   it happens at zero robot speed. The proposed approach addresses the
+   problem of satisfying the minimal set of requirements of an industrial
+   human-robot collaboration (HRC) task: precision and reliability of human
+   detection and tracking in the shared workspace; correct robot task
+   execution with minimum cycle time while assuring safety for human
+   operators. These requirements are often conflicting with each other. The
+   former does not only concern with safety only but also with the need of
+   avoiding unnecessary robot stops or slowdowns in case of false-positive
+   human detection. The latter, according to the current regulations,
+   concerns with the need of computing the minimum protective separation
+   distance between the human operator and the robots by adjusting their
+   speed when dangerous situations happen. This article proposes a novel
+   fuzzy inference approach to control robot speed enforcing safety while
+   maximizing the level of productivity of the robot minimizing cycle time
+   as well. The approach is supported by a sensor fusion algorithm that
+   merges the images acquired from different depth sensors with those
+   obtained from a thermal camera, by using a machine learning approach.
+   The methodology is experimentally validated in two experiments: the
+   first one at a lab-scale and the second one performed on a full-scale
+   robotic workcell for cooperative assembly of aeronautical structural
+   parts.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2020.3043286,,,,"Costanzo, Marco and De Maria, Giuseppe and Lettera, Gaetano and Natale,
+   Ciro",,52.0,WOS:000732130100001,,,paper,a multimodal approach to human safety in collaborative robotic workcells,10.1109/tase.2020.3043286,https://doi.org/10.1109/tase.2020.3043286,https://doi.org/10.1109/tase.2020.3043286,182.584,citations=52; year=2022; risk_terms=3; physical_terms=7; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2020.3043286,True,202.0,https://ieeexplore.ieee.org/document/9314214/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 '다중 센서 융합 충돌' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; A Multimodal Approach to Huma… (Costanzo et al., 2022)",4
+1.096,176,PHYSBENCH-REF-0086,오픈월드 조작 커버리지 공백 (Open-world humanoid manipulation coverage gap),2,humanoid;manipulation,177,,2026,"Lyapunov-Regularized Meta-Learning Adaptive Control for a
+   Vision-Language Model-Guided Wheeled Humanoid Robot in Power Station
+   Maintenance","This paper addresses the critical task of grounding clamp removal during
+   live substation maintenance by developing an integrated
+   perception-navigation-control framework for autonomous power station
+   robots. The proposed system comprises three key components: 1) a
+   vision-language navigation model that interprets natural-language
+   commands and visual inputs for task-oriented motion planning; 2) a
+   vision-language perception module that localizes grounding clamps
+   through multimodal reasoning; and 3) a Lyapunov-regularized
+   meta-learning adaptive control framework. While an integral Lyapunov
+   function and a disturbance observer are utilized to construct the
+   baseline robust controller, our primary control contribution lies in
+   overcoming the persistent generalization bottlenecks of heuristic
+   tuning. To achieve rapid adaptation under unmodeled dynamics and limited
+   demonstration data, an offline neural dynamics model is first
+   established to capture the robot's highly nonlinear behaviors. Building
+   upon this, we introduce a novel meta-optimization objective explicitly
+   constrained by a Lyapunov stability penalty. This physics-informed
+   meta-learning mechanism empowers the controller to autonomously extract
+   generalized, stability-aware parameter initializations across diverse
+   historical trajectories, thereby guaranteeing both data-driven
+   adaptability and strict physical safety during complex substation tasks.
+   The complete framework is validated on a wheeled humanoid robot
+   performing live grounding operations in substation environments.
+   Experimental results demonstrate that the proposed method achieves
+   reliable autonomous navigation, accurate target manipulation, and
+   significantly improved adaptability and stability compared to
+   conventional and non-meta-learned controllers. Note to
+   Practitioners-This work is motivated by the increasing need for
+   autonomous robotic systems to perform live maintenance tasks in complex,
+   unstructured environments such as electrical substations. Traditional
+   robot control and perception modules often fail to generalize across
+   diverse scenarios due to unmodeled dynamics and limited data. To address
+   this, we propose a comprehensive framework combining a vision-language
+   navigation model with a meta-learning-enhanced adaptive control scheme.
+   The former enables high-level semantic navigation and object
+   localization from multimodal input, while the latter leverages prior
+   trajectory data to optimize control parameters through meta-learning,
+   ensuring adaptability and stability under uncertainty. Practitioners
+   aiming to deploy robots for high-risk, high-precision industrial
+   tasks-such as grounding clamp removal-may benefit from this approach,
+   which reduces reliance on prior modeling and improves generalization to
+   unseen conditions. The integrated method was validated on a wheeled
+   humanoid robot, demonstrating robust performance in real-world
+   substation maintenance scenarios.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2026.3670845,,,,"Ran, Lujia and Hu, Zongjie and Li, Zhijun",,0.0,WOS:001719519600022,,,paper,lyapunov regularized meta learning adaptive control for a vision language model guided wheeled humanoid robot in power station maintenance,10.1109/tase.2026.3670845,https://doi.org/10.1109/tase.2026.3670845,https://doi.org/10.1109/tase.2026.3670845,160.0,citations=0; year=2026; risk_terms=5; physical_terms=8; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2026.3670845,True,202.0,https://ieeexplore.ieee.org/document/11422943/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 '오픈월드 조작 커버리지 공백' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Lyapunov-Regularized Meta-Lea… (Ran et al., 2026)",3
+1.037,135,PHYSRISK-REF-0040,창고 로봇 보행자 충돌 (Warehouse robot pedestrian conflict),3,collision;vehicle,149,,2025,"Socially Acceptable Bipedal Robot Navigation via Social Zonotope Network
+   Model Predictive Control","This study addresses the challenge of social bipedal navigation in a
+   dynamic, human-crowded environment, a research area largely
+   underexplored in legged robot navigation. We present a zonotope-based
+   framework that couples prediction and motion planning for a bipedal
+   ego-agent to account for bidirectional influence with the surrounding
+   pedestrians. This framework incorporates a Social Zonotope Network
+   (SZN), a neural network that predicts future pedestrian reachable sets
+   and plans future socially acceptable reachable set for the ego-agent.
+   SZN generates the reachable sets as zonotopes for efficient
+   reachability-based planning, collision checking, and online uncertainty
+   parameterization. Locomotion-specific losses are added to the SZN
+   training process to adhere to the dynamic limits of the bipedal robot
+   that are not explicitly present in the human crowds data set. These loss
+   functions enable the SZN to generate locomotion paths that are more
+   dynamically feasible for improved tracking. SZN is integrated with a
+   Model Predictive Controller (SZN-MPC) for footstep planning for our
+   bipedal robot Digit. SZN-MPC solves for collision-free trajectory by
+   optimizing through SZN's gradients. Our results demonstrate the
+   framework's effectiveness in producing a socially acceptable path, with
+   consistent locomotion velocity, and optimality. The SZN-MPC framework is
+   validated with extensive simulations and hardware experiments. Note to
+   Practitioners-This paper is motivated by the challenge of navigating
+   bipedal robots through dynamic, human-crowded environments in a socially
+   acceptable manner. Existing methods for social navigation often only
+   address obstacle avoidance and are demonstrated on a robot with simple
+   dynamics. This paper proposes the Social Zonotope Network (SZN), a novel
+   neural network that couples pedestrian future trajectory prediction and
+   robot motion planning to facilitate socially aware navigation for
+   bipedal robots such as Digit, designed by Agility Robotics. The social
+   behaviors are learned from real open-sourced pedestrian data using the
+   SZN, which outputs the future predictions as reachable sets for each
+   agent in the environment. The SZN is then integrated into a trajectory
+   optimization problem that takes into account personal space preferences
+   and bipedal robot capabilities to design trajectories that are both
+   collision-free and socially acceptable. This work also highlights the
+   computational efficiency of the SZN design that makes it suitable for
+   real-time integration with motion planners. The framework is validated
+   through extensive simulations and hardware experiments. From a practical
+   standpoint, this research provides a framework that can be applied to
+   bipedal robots to improve automation in human-populated environments
+   such as hospitals, shopping centers, and airports. The framework's
+   ability to automatically adapt to surrounding human movement helps
+   minimize disruptions and ensures that the robot's presence is not a
+   hindrance to the flow of human traffic. Future work will focus on
+   outdoor deployment, which will require onboard perception capabilities
+   to detect surrounding pedestrians.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2024.3519012,,,,"Shamsah, Abdulaziz and Agarwal, Krishanu and Katta, Nigam and Raju,
+   Abirath and Kousik, Shreyas and Zhao, Ye",,4.0,WOS:001381481000001,,,paper,socially acceptable bipedal robot navigation via social zonotope network model predictive control,10.1109/tase.2024.3519012,https://doi.org/10.1109/tase.2024.3519012,https://doi.org/10.1109/tase.2024.3519012,162.532,citations=4; year=2025; risk_terms=2; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2024.3519012,True,202.0,https://ieeexplore.ieee.org/document/10810741/,text/html; charset=UTF-8,,"불확실한 환경의 경로 계획에서 '창고 로봇 보행자 충돌' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Socially Acceptable Bipedal R… (Shamsah et al., 2025)",4
+0.976,142,PHYSRISK-REF-0039,드론 공역 충돌 (Drone airspace conflict),3,drone,121,,2024,"Hybrid AI-based 4D trajectory management system for dense low altitude
+   operations and Urban Air Mobility","Urban Air Mobility (UAM) has emerged as a promising solution to address
+   some of the challenges of transportation congestion and associated
+   pollution, especially in large cities. However, the development of drone
+   transportation and UAM services is limited by the capacity of the low
+   altitude airspace where these new vehicles will operate. Without
+   suitable regulatory advancements and associated traffic management
+   systems, air traffic in the densest low-altitude sectors may incur
+   congestion, which, in addition to affecting operational efficiency, can
+   increase systemic risk and fuel emergency occurrences, thereby affecting
+   the safety of people and property in the air and on the ground. To
+   address these challenges, this study aims to develop an intelligent
+   Uncrewed Aircraft Traffic Management (UTM) system that leverages the
+   complementary strengths of metaheuristic and machine learning algorithms
+   for an effective management of dense low altitude airspace. The UTM
+   system determines time-based three-dimensional airspace Demand-Capacity
+   Balancing (DCB) solutions by processing real-time data updates and
+   dynamically replanning flight paths and DCB decisions in any given
+   context, while also providing UAM operators with relevant inputs for
+   autonomous decision-making. Simulation-based verification activities in
+   representative conditions show that the proposed UTM system has the
+   ability to effectively resolve overload instances and minimize potential
+   conflicts in low-altitude airspace, with an operationally acceptable
+   running time. We conclude that the proposed hybrid algorithm can support
+   a successful implementation of UAM services in and around cities, and it
+   has high potential to address critical airspace resource constraints
+   also in traditional Air Traffic Flow Management (ATFM).",AEROSPACE SCIENCE AND TECHNOLOGY,,Article,10.1016/j.ast.2024.109422,,,,"Xie, Yibing and Gardi, Alessandro and Liang, Man and Sabatini, Roberto",,11.0,WOS:001299287900001,,,paper,hybrid ai based 4d trajectory management system for dense low altitude operations and urban air mobility,10.1016/j.ast.2024.109422,https://doi.org/10.1016/j.ast.2024.109422,https://doi.org/10.1016/j.ast.2024.109422,164.789,citations=11; year=2024; risk_terms=4; physical_terms=1; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.ast.2024.109422,True,200.0,https://linkinghub.elsevier.com/retrieve/pii/S1270963824005534,text/html;charset=UTF-8,,"피지컬 AI 시스템에서 '드론 공역 충돌' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Hybrid AI-based 4D trajectory… (Xie et al., 2024)",4
+0.966,48,PHYSBENCH-REF-0025,임계 이격 거리 위반 (Critical separation-distance violation),3,collision,25,,2022,A Multimodal Approach to Human Safety in Collaborative Robotic Workcells,"This article investigates the problem of controlling the speed of robots
+   in collaborative workcells for automated manufacturing. The solution is
+   tailored to robotic cells for cooperative assembly of aircraft fuselage
+   panels, where only structural elements are present and robots and humans
+   can share the same workspace, but no physical contact is allowed, unless
+   it happens at zero robot speed. The proposed approach addresses the
+   problem of satisfying the minimal set of requirements of an industrial
+   human-robot collaboration (HRC) task: precision and reliability of human
+   detection and tracking in the shared workspace; correct robot task
+   execution with minimum cycle time while assuring safety for human
+   operators. These requirements are often conflicting with each other. The
+   former does not only concern with safety only but also with the need of
+   avoiding unnecessary robot stops or slowdowns in case of false-positive
+   human detection. The latter, according to the current regulations,
+   concerns with the need of computing the minimum protective separation
+   distance between the human operator and the robots by adjusting their
+   speed when dangerous situations happen. This article proposes a novel
+   fuzzy inference approach to control robot speed enforcing safety while
+   maximizing the level of productivity of the robot minimizing cycle time
+   as well. The approach is supported by a sensor fusion algorithm that
+   merges the images acquired from different depth sensors with those
+   obtained from a thermal camera, by using a machine learning approach.
+   The methodology is experimentally validated in two experiments: the
+   first one at a lab-scale and the second one performed on a full-scale
+   robotic workcell for cooperative assembly of aeronautical structural
+   parts.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2020.3043286,,,,"Costanzo, Marco and De Maria, Giuseppe and Lettera, Gaetano and Natale,
+   Ciro",,52.0,WOS:000732130100001,,,paper,a multimodal approach to human safety in collaborative robotic workcells,10.1109/tase.2020.3043286,https://doi.org/10.1109/tase.2020.3043286,https://doi.org/10.1109/tase.2020.3043286,182.584,citations=52; year=2022; risk_terms=3; physical_terms=7; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2020.3043286,True,202.0,https://ieeexplore.ieee.org/document/9314214/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 '임계 이격 거리 위반' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; A Multimodal Approach to Huma… (Costanzo et al., 2022)",4
+0.965,72,PHYSRISK-REF-0011,속도·힘 한계 위반 (Speed and force limit violation),2,manipulation,37,,2025,"Learning Neural Force Manifolds for Sim2Real Robotic Symmetrical Paper
+   Folding","Robotic manipulation of slender objects is challenging, especially when
+   the induced deformations are large and nonlinear. Traditionally,
+   learning-based control approaches, such as imitation learning, have been
+   used to address deformable material manipulation. These approaches lack
+   generality and often suffer critical failure from a simple switch of
+   material, geometric, and/or environmental (e.g., friction) properties.
+   This article tackles a fundamental but difficult deformable manipulation
+   task: forming a predefined fold in paper with only a single manipulator.
+   A sim2real framework combining physically-accurate simulation and
+   machine learning is used to train a deep neural network capable of
+   predicting the external forces induced on the manipulated paper given a
+   grasp position. We frame the problem using scaling analysis, resulting
+   in a control framework robust against material and geometric changes.
+   Path planning is then carried out over the generated ``neural force
+   manifold{''} to produce robot manipulation trajectories optimized to
+   prevent sliding, with offline trajectory generation finishing 15x faster
+   than previous physics-based folding methods. The inference speed of the
+   trained model enables the incorporation of real-time visual feedback to
+   achieve closed-loop model-predictive control. Realworld experiments
+   demonstrate that our framework can greatly improve robotic manipulation
+   performance compared to state-of-the-art folding strategies, even when
+   manipulating paper objects of various materials and shapes.
+   Note to Practitioners-This article is motivated by the need for
+   efficient robotic folding strategies for stiff materials such as paper.
+   Previous robot folding strategies have focused primarily on soft
+   materials (e.g., cloth) possessing minimal bending resistance or relied
+   on multiple complex manipulators and sensors, significantly increasing
+   computational and monetary costs. In contrast, we formulate a robust,
+   sim2real, physics-based method capable of folding papers of varying
+   stiffness with a single manipulator. The proposed folding scheme is
+   limited to papers of homogeneous material and folding along symmetric
+   centerlines. Future work will involve formulating efficient methods for
+   folding along arbitrary geometries and preexisting creases.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2024.3366909,,,,"Choi, Andrew and Tong, Dezhong and Terzopoulos, Demetri and Joo,
+   Jungseock and Jawed, Mohammad Khalid",,11.0,WOS:001181546300001,,,paper,learning neural force manifolds for sim2real robotic symmetrical paper folding,10.1109/tase.2024.3366909,https://doi.org/10.1109/tase.2024.3366909,https://doi.org/10.1109/tase.2024.3366909,179.789,citations=11; year=2025; risk_terms=2; physical_terms=6; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2024.3366909,True,202.0,https://ieeexplore.ieee.org/document/10445527/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 '속도·힘 한계 위반' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Learning Neural Force Manifol… (Choi et al., 2025)",3
+0.932,23,PHYSBENCH-REF-0045,제약 모니터링 실패 (Constraint monitoring failure),3,collision;manipulation,115,,2025,"Personalized Assistance in Robotic Rehabilitation: Real-Time Adaptation
+   via Energy-Based Performance Monitoring","Recent studies underscore the importance of the patient's active
+   contribution and voluntary effort in enhancing therapy outcomes in
+   physical rehabilitation. This paper presents an adaptive control scheme
+   to implement active robotic rehabilitation. The primary goal is to
+   dynamically regulate robotic assistance based on the patient's
+   performance and individual conditions, encouraging active participation,
+   and effective therapy. To achieve this, a Lyapunov-based adaptive
+   algorithm is developed that dynamically adjusts the admittance
+   parameters by balancing the error and effort minimization. A novel
+   performance index based on human energy input enables real-time
+   identification of the intended human sharing role. This index is used as
+   an adaptive rate in the proposed algorithm to enhance the control
+   system's dynamic responsiveness to changes in human performance. The
+   proposed approach achieves two main rehabilitation objectives. First, it
+   encourages active and safe human participation. Second, it enhances the
+   therapy by providing personalized assistance, tailored to individual
+   abilities and conditions, and thus reduces the need for therapist
+   intervention. The performance of the proposed approach is illustrated in
+   experimental studies. The results demonstrate the adaptability of the
+   algorithm, ensuring compliant and safe interaction and effective task
+   completion. Note to Practitioners-In a human-robot cooperation (HRC)
+   framework, the automatic adaptation of the robot's role as well as safe
+   and stable interaction are crucial. These aspects are amplified in the
+   context of robotic rehabilitation due to the special conditions of the
+   human participants. Classic control methods, in shared control, lack
+   system intelligence and automation in role allocation. However, the
+   shared role of humans in HRC, particularly in rehabilitation
+   applications, introduces real-time and unpredictable variations. This
+   study addresses the shortcomings of classic control methods, by
+   integrating intelligence into the control system through an adaptive
+   Neural Network algorithm in shared autonomy. To emulate human-like
+   adaptability, two crucial aspects are considered. Firstly, it
+   incorporates safety assurance embedded in the adaptive algorithm via
+   Lyapunov-based adaptation. Secondly, it detects the human's role within
+   the control loop through a novel energy-based performance index, which
+   views the human as an active contributor to the system's dynamic energy
+   flow. This ensures robust behavior by dynamically adjusting the
+   trade-off between task completion and minimal robot intervention. A
+   standout feature of our algorithm lies in its expendability to
+   exoskeleton systems, making it highly versatile for use in robotic
+   rehabilitation and assistive technologies. The algorithm's design allows
+   for straightforward integration with exoskeletons, requiring only
+   interaction force measurements in the joint space. It facilitates
+   monitoring of a patient's performance in each joint using the proposed
+   performance index based on the human energy entry into the system.
+   Beyond rehabilitation, the algorithm's ability to adjust autonomy levels
+   through adaptation makes it applicable to a wide range of Human-Robot
+   Cooperation scenarios where automatic role allocation is necessary.
+   Preliminary experiments underscore the adaptive algorithm's robust
+   responsiveness to changes in human performance.
+   Future investigations should involve clinical experiments addressing
+   real-life challenges associated with various movement deficiencies and
+   responding to real-time issues that may arise during rehabilitation
+   sessions.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3552446,,,,"Pezeshki, Leilaalsadat and Sadeghian, Hamid and Mohebbi, Abolfazl and
+   Keshmiri, Mehdi and Haddadin, Sami",,5.0,WOS:001470389400006,,,paper,personalized assistance in robotic rehabilitation real time adaptation via energy based performance monitoring,10.1109/tase.2025.3552446,https://doi.org/10.1109/tase.2025.3552446,https://doi.org/10.1109/tase.2025.3552446,165.085,citations=5; year=2025; risk_terms=3; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3552446,True,202.0,https://ieeexplore.ieee.org/document/10930887/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 '제약 모니터링 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Personalized Assistance in Ro… (Pezeshki et al., 2025)",4
+0.925,101,PHYSBENCH-REF-0099,가정 비안전 행동 미검출 (Household unsafe-action false negative),1,learning,119,,2026,"IEI-TIA: Industrial Embodied Intelligence Trustworthy Interpretable
+   Agent for Robotic Long-Horizon and Repetitive Tasks","With the rapid advancement of generative artificial intelligence,
+   embodied intelligence is increasingly being integrated into robotic
+   tasks within smart manufacturing. Industrial operations typically
+   feature long-horizon sequences and demand high precision. However,
+   although embodied models, particularly Vision-Language-Action (VLA)
+   models, have shown significant promise in autonomous control with
+   superior generalization capabilities, their inherent closed-box nature
+   lacks the transparency and trustworthiness essential for manufacturing
+   tasks. To address this challenge, we propose the Industrial Embodied
+   Intelligence Trustworthy Interpretable Agent (IEI-TIA), a high-level
+   trustworthy supervisory agent designed for industrial sorting and
+   palletizing tasks. Rather than directly generating low-level control
+   commands, IEI-TIA monitors robotic execution, diagnoses possible failure
+   types at key operational stages, and provides corrective next-step
+   instruction via invoked skills, thereby improving the reliability and
+   interpretability of long-horizon and repetitive robotic tasks. An
+   alignment-enhanced parameter-efficient finetuning method is proposed
+   utilizing paired vision-language data to enable robust trustworthiness
+   identification across various possible robotic failure types in
+   different subtasks in sorting and palletizing. Additionally, we
+   construct a specialized dataset and establish benchmarks for industrial
+   embodied intelligence behavior diagnosis and instructions. Experimental
+   results demonstrate that the fine-tuned trustworthy agent achieves
+   93.7\% diagnosis accuracy for various task failures, representing a
+   substantial improvement of approximately 38\% over baseline
+   general-purpose large models. By integrating the agent's step-by-step
+   operational instructions, the success rate of robotic long-horizon and
+   repetitive tasks is improved by 14.0\%. Note to Practitioners-This paper
+   addresses a critical problem in industrial automation, the lack of
+   interpretability and transparency of AI-driven robotic control in
+   multi-stage and long-horizon tasks. In high-precision environments such
+   as sorting or palletizing, AI closed-box models, including
+   Vision-Language-Action (VLA) models, often fail to provide safety
+   guarantees required for manufacturing tasks, as minor execution errors
+   can rapidly propagate and affect the entire sequence negatively.
+   Therefore, we propose IEI-TIA, an autonomous supervisory agent that
+   contributes to the shift from open-loop task execution to closed-loop
+   trustworthy control with capability of providing diagnosis and
+   instructions. Beyond identifying potential robotic failures like
+   off-center grasps or misplaced parts, the agent also provides actionable
+   next-step instructions that allow the embodied intelligence system to
+   self-correct before errors escalate. A key practical advantage is that
+   our industrial alignment-enhanced parameter-efficient finetuning
+   (fine-tuning) method empowers the agent utilizing vision-language models
+   with high failure-identification accuracy 93.7\%, and corrective
+   closed-loop logic without the need for retraining. The corresponding
+   dataset and benchmarks offer a standardized framework for practitioners
+   to evaluate and deploy interpretable embodied intelligence within
+   existing automation pipelines. By implementing this agent, when using
+   embodied intelligence models in manufacturing, factories can
+   significantly reduce downtime caused by errors or mistakes made by
+   untrustworthy AI robots, to achieve more robust and autonomous control
+   in long-horizon robotic tasks.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2026.3687369,,,,"Dong, Jiabao and Yang, Lingyuan and Fang, Pengji and Li, Shixiang and
+   Kong, Yusheng and Ren, Lei",,0.0,WOS:001764917400029,,,paper,iei tia industrial embodied intelligence trustworthy interpretable agent for robotic long horizon and repetitive tasks,10.1109/tase.2026.3687369,https://doi.org/10.1109/tase.2026.3687369,https://doi.org/10.1109/tase.2026.3687369,165.0,citations=0; year=2026; risk_terms=6; physical_terms=7; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2026.3687369,True,202.0,https://ieeexplore.ieee.org/document/11494811/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 '가정 비안전 행동 미검출' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; IEI-TIA: Industrial Embodied… (Dong et al., 2026)",2
+0.905,110,PHYSBENCH-REF-0091,잠재 상태 압축 안전 손실 (Latent-state compression safety loss),1,collision,20,,2024,"Learning-Based Risk-Bounded Path Planning Under Environmental
+   Uncertainty","Building a general and efficient path planning framework in uncertain
+   nonconvex environments is challenging due to the safety constraints and
+   complex configuration. Traditional avenues usually involve convexifying
+   obstacles and presume Gaussian distribution, which are not universal.
+   Meanwhile, the fast convergence of high-quality solutions is not
+   guaranteed. Therefore, we develop a novel neural risk-bounded path
+   planner to quickly find near-optimal solutions that have an acceptable
+   collision probability in the complex environments. Firstly, we retrieve
+   the nonconvex obstacles with arbitrary probabilistic uncertainties in
+   the form of a deterministic point cloud map. A neural network sampler
+   encodes it into a latent embedding and is trained with sufficient expert
+   demonstrations, predicting states in the potential subspace. We
+   construct a neural cost estimator to select the best informed state from
+   those samples. Then, we recursively use the simple yet effective neural
+   networks to march toward the start and goal bidirectionally. The
+   collision risk of the intermediate connections is verified based on
+   sum-of-squares optimization. Simulation results show that our approach
+   significantly saves time and resources in finding comparable solutions
+   over the state-of-the-art methods in the seen and unseen challenging
+   environments.
+   Note to Practitioners-More and more robots are deployed in unstructured
+   environments, such as forests and subterranean caves. However,
+   uncertainty in the environment situational awareness usually causes
+   accidents. To quickly generate safe paths without over-conservation in
+   uncertain complex environments, we propose a neural risk-bounded
+   sampling-based path planner. Conventional methods consume lots of
+   computation time and resources to generate satisfactory results. Our
+   learning-based risk-bounded path planning framework can efficiently find
+   paths with a guaranteed risk tolerance avoiding uncertain nonconvex
+   static obstacles. It imitates the expert to generate informed states in
+   a subspace that potentially contains the optimal solution. In practice,
+   we need to formulate the observed uncertain obstacle at a grid map into
+   the polynomial containing random variables and determine their
+   probability distributions.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2023.3297176,,,,"Meng, Fei and Chen, Liangliang and Ma, Han and Wang, Jiankun and Meng,
+   Max Q. -H.",,24.0,WOS:001043270300001,,,paper,learning based risk bounded path planning under environmental uncertainty,10.1109/tase.2023.3297176,https://doi.org/10.1109/tase.2023.3297176,https://doi.org/10.1109/tase.2023.3297176,185.064,citations=24; year=2024; risk_terms=6; physical_terms=1; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2023.3297176,True,202.0,https://ieeexplore.ieee.org/document/10207032/,text/html; charset=UTF-8,,"불확실한 환경의 경로 계획에서 '잠재 상태 압축 안전 손실' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Learning-Based Risk-Bounded P… (Meng et al., 2024)",2
+0.905,129,PHYSBENCH-REF-0073,보조 로봇 개입 타이밍 실패 (Assistive robot intervention mistiming),1,medical,115,,2025,"Personalized Assistance in Robotic Rehabilitation: Real-Time Adaptation
+   via Energy-Based Performance Monitoring","Recent studies underscore the importance of the patient's active
+   contribution and voluntary effort in enhancing therapy outcomes in
+   physical rehabilitation. This paper presents an adaptive control scheme
+   to implement active robotic rehabilitation. The primary goal is to
+   dynamically regulate robotic assistance based on the patient's
+   performance and individual conditions, encouraging active participation,
+   and effective therapy. To achieve this, a Lyapunov-based adaptive
+   algorithm is developed that dynamically adjusts the admittance
+   parameters by balancing the error and effort minimization. A novel
+   performance index based on human energy input enables real-time
+   identification of the intended human sharing role. This index is used as
+   an adaptive rate in the proposed algorithm to enhance the control
+   system's dynamic responsiveness to changes in human performance. The
+   proposed approach achieves two main rehabilitation objectives. First, it
+   encourages active and safe human participation. Second, it enhances the
+   therapy by providing personalized assistance, tailored to individual
+   abilities and conditions, and thus reduces the need for therapist
+   intervention. The performance of the proposed approach is illustrated in
+   experimental studies. The results demonstrate the adaptability of the
+   algorithm, ensuring compliant and safe interaction and effective task
+   completion. Note to Practitioners-In a human-robot cooperation (HRC)
+   framework, the automatic adaptation of the robot's role as well as safe
+   and stable interaction are crucial. These aspects are amplified in the
+   context of robotic rehabilitation due to the special conditions of the
+   human participants. Classic control methods, in shared control, lack
+   system intelligence and automation in role allocation. However, the
+   shared role of humans in HRC, particularly in rehabilitation
+   applications, introduces real-time and unpredictable variations. This
+   study addresses the shortcomings of classic control methods, by
+   integrating intelligence into the control system through an adaptive
+   Neural Network algorithm in shared autonomy. To emulate human-like
+   adaptability, two crucial aspects are considered. Firstly, it
+   incorporates safety assurance embedded in the adaptive algorithm via
+   Lyapunov-based adaptation. Secondly, it detects the human's role within
+   the control loop through a novel energy-based performance index, which
+   views the human as an active contributor to the system's dynamic energy
+   flow. This ensures robust behavior by dynamically adjusting the
+   trade-off between task completion and minimal robot intervention. A
+   standout feature of our algorithm lies in its expendability to
+   exoskeleton systems, making it highly versatile for use in robotic
+   rehabilitation and assistive technologies. The algorithm's design allows
+   for straightforward integration with exoskeletons, requiring only
+   interaction force measurements in the joint space. It facilitates
+   monitoring of a patient's performance in each joint using the proposed
+   performance index based on the human energy entry into the system.
+   Beyond rehabilitation, the algorithm's ability to adjust autonomy levels
+   through adaptation makes it applicable to a wide range of Human-Robot
+   Cooperation scenarios where automatic role allocation is necessary.
+   Preliminary experiments underscore the adaptive algorithm's robust
+   responsiveness to changes in human performance.
+   Future investigations should involve clinical experiments addressing
+   real-life challenges associated with various movement deficiencies and
+   responding to real-time issues that may arise during rehabilitation
+   sessions.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3552446,,,,"Pezeshki, Leilaalsadat and Sadeghian, Hamid and Mohebbi, Abolfazl and
+   Keshmiri, Mehdi and Haddadin, Sami",,5.0,WOS:001470389400006,,,paper,personalized assistance in robotic rehabilitation real time adaptation via energy based performance monitoring,10.1109/tase.2025.3552446,https://doi.org/10.1109/tase.2025.3552446,https://doi.org/10.1109/tase.2025.3552446,165.085,citations=5; year=2025; risk_terms=3; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3552446,True,202.0,https://ieeexplore.ieee.org/document/10930887/,text/html; charset=UTF-8,,"피지컬 AI 시스템에서 '보조 로봇 개입 타이밍 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Personalized Assistance in Ro… (Pezeshki et al., 2025)",2
+0.875,24,PHYSBENCH-REF-0048,위험 작업 계획 실패 (Hazardous task planning failure),2,learning,178,,2025,"Agentic LLM-based robotic systems for real-world applications: a review
+   on their agenticness and ethics","Agentic AI refers to autonomous systems that can perceive their
+   environment, make decisions, and take actions to achieve goals with
+   minimal or no human intervention. Recent advances in Large Language
+   Models (LLMs) have opened new pathways to imbue robots with such
+   ``agentic{''} behaviors by leveraging the LLMs' vast knowledge and
+   reasoning capabilities for planning and control. This survey provides
+   the first comprehensive exploration of LLM-based robotic systems
+   integration into agentic behaviors that have been validated in
+   real-world applications. We systematically categorized these systems
+   across navigation, manipulation, multi-agent, and general-purpose
+   multi-task robots, reflecting the range of applications explored. We
+   introduce a novel, first-of-its-kind agenticness classification that
+   evaluates existing LLM-driven robotic works based on their degree of
+   autonomy, goal-directed behavior, adaptability, and decision-making.
+   Additionally, central to our contribution is an evaluation framework
+   explicitly addressing ethical, safety, and transparency
+   principles-including bias mitigation, fairness, robustness, safety
+   guardrails, human oversight, explainability, auditability, and
+   regulatory compliance. By jointly mapping the landscape of agentic
+   capabilities and ethical safeguards, we uncover key gaps, tensions, and
+   design trade-offs in current approaches. We believe that this work
+   serves as both a diagnostic and a call to action: as LLM-empowered
+   robots grow more capable, ensuring they remain comprehensible,
+   controllable, and aligned with societal norms is not optional-it is
+   essential.",FRONTIERS IN ROBOTICS AND AI,,Review,10.3389/frobt.2025.1605405,,,,"Raptis, Emmanuel K. and Kapoutsis, Athanasios Ch. and Kosmatopoulos,
+   Elias B.",,13.0,WOS:001563672300001,,,paper,agentic llm based robotic systems for real world applications a review on their agenticness and ethics,10.3389/frobt.2025.1605405,https://doi.org/10.3389/frobt.2025.1605405,https://doi.org/10.3389/frobt.2025.1605405,159.947,citations=13; year=2025; risk_terms=6; physical_terms=5,https://doi.org/10.3389/frobt.2025.1605405,True,200.0,https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1605405/full,text/html;charset=utf-8,,"피지컬 AI 시스템에서 '위험 작업 계획 실패' 문제가 실제 안전 문제로 이어질 수 있음을 다룬다; Agentic LLM-based robotic sys… (Raptis et al., 2025)",3

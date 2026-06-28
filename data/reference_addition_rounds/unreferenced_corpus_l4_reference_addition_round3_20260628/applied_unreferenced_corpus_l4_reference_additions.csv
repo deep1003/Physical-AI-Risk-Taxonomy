@@ -1,0 +1,100 @@
+match_score,card_idx,card_badge,card_label,card_refs_before,overlap_tags,rank,source_file,year,title,abstract,venue,institution,document_type,doi,url,landing_page_url,pdf_url,authors,first_author,citations,record_id,matched_terms,matched_l3,record_type,title_key,doi_key,candidate_url,url_key,score,selection_reason,checked_url,access_ok,status_code,final_url,content_type,access_error,justification,refs_after
+1.465,58,PHYSBENCH-REF-0068,정밀 휴머노이드 접촉력 위험 (Dexterous humanoid contact-force risk),3,collision;humanoid;manipulation,10,,2022,A biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tactile sensing,"Human skin perceives physical stimuli applied to the body and mitigates the risk of physical interaction through its soft and resilient mechanical properties. Social robots would benefit from whole-body robotic skin (or tactile sensors) resembling human skin in realizing a safe, intuitive, and contact-rich human-robot interaction. However, existing soft tactile sensors show several drawbacks (complex structure, poor scalability, and fragility), which limit their application in whole-body robotic skin. Here, we introduce biomimetic robotic skin based on hydrogel-elastomer hybrids and tomographic imaging. The developed skin consists of a tough hydrogel and a silicone elastomer forming a skin-inspired multilayer structure, achieving sufficient softness and resilience for protection. The sensor structure can also be easily repaired with adhesives even after severe damage (incision). For multimodal tactile sensation, electrodes and microphones are deployed in the sensor structure to measure local resistance changes and vibration due to touch. The ionic hydrogel layer is deformed owing to an external force, and the resulting local conductivity changes are measured via electrodes. The microphones also detect the vibration generated from touch to determine the location and type of dynamic tactile stimuli. The measurement data are then converted into multimodal tactile information through tomographic imaging and deep neural networks. We further implement a sensorized cosmetic prosthesis, demonstrating that our design could be used to implement deformable or complex-shaped robotic skin.",Science Robotics,American Association for the Advancement of Science,article,10.1126/scirobotics.abm7187,https://openalex.org/W4282912956,https://doi.org/10.1126/scirobotics.abm7187,,"['Kyungseo Park', 'Hyunwoo Yuk', 'Min Jin Yang', 'Junhwi Cho', 'Hyosang Lee', 'Jung Kim']",Kyungseo Park,249.0,https://openalex.org/W4282912956,autonomous system | autonomous systems | robot | robotic | robotics,Human-Robot Interaction,paper,a biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tactile sensing,10.1126/scirobotics.abm7187,https://doi.org/10.1126/scirobotics.abm7187,https://doi.org/10.1126/scirobotics.abm7187,194.3,citations=249; year=2022; risk_terms=2; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1126/scirobotics.abm7187,True,200,https://www.science.org/doi/10.1126/scirobotics.abm7187,text/html;charset=UTF-8,,"로봇 피부가 접촉 위치와 힘을 감지하는 방식을 다뤄, 정밀 휴머노이드 접촉력 위험을 줄이려면 촉각 센싱이 핵심임을 보여준다 (Park et al., 2022)",4
+1.249,54,PHYSBENCH-REF-0055,제어 장벽 함수 실패 (Control barrier function safety-filter failure),2,collision;uncertainty,253,,2025,"Meta-Learning-Based Safety-Critical Control in Multi-Obstacles
+   Environments","Autonomous robots operating in diverse scenarios are expected to safely
+   and efficiently adapt to new, unknown, and cluttered environments. In
+   this paper, we introduce a real-time goal-seeking and exploration
+   framework incorporating novel meta-signed distance functions (MetaSDFs)
+   and meta-buffer robust control barrier functions (Meta-BRCBFs). To adapt
+   to environmental changes in real time, we employ Bayesian meta-learning
+   to construct MetaSDFs. Deep neural network weights are initially trained
+   offline, followed by efficient online adaptation at the last Bayesian
+   layer, allowing for online updates at linear time complexity. Each
+   MetaSDF is individually trained for its corresponding obstacle class,
+   enhancing online distance estimation accuracy. Subsequently, buffer
+   zones are constructed around the MetaSDFs to establish corresponding
+   Meta-BRCBFs. These Meta-BRCBFs are activated only when the robot enters
+   these zones, substantially reducing the number of CBFs required. Outside
+   these specified buffer zones, the robot remains in goal-seeking mode,
+   focusing on task completion. After entering a buffer zone, it
+   transitions to exploration mode, prioritizing safety and exploring safe
+   pathways, effectively balancing task execution with environmental
+   adaptability. We demonstrate that, under this framework, the system
+   achieves both safety and asymptotic stabilization. Extensive simulations
+   and experiments are conducted to demonstrate our framework's
+   effectiveness in both simulated scenarios and real-world environments.
+   These tests confirm our framework's real-time capabilities and safety
+   assurances in dynamic settings where state-of-the-art methods fail. The
+   video is available at: https://www.youtube.com/watch?v=C6eshldAMxA Note
+   to Practitioners-This paper is motivated by enhancing safety for
+   autonomous robots operating in diverse and changing environments.
+   Existing methods, which utilize traditional or incremental neural
+   networks, fail to perceive environmental changes and obtain the nearest
+   distances to obstacles for safety in real time. Additionally, with the
+   increased number of obstacles, the real-time performance of optimization
+   solvers for such approaches is further reduced, which quickly causes
+   error motions. To overcome these challenges, this paper introduces a
+   novel approach enabling online updates of the trained neural network so
+   that it adapts to unknown environments rapidly. Buffer zones are
+   established around obstacles, allowing us to focus solely on those that
+   the robot enters into these zones. This eliminates the need to consider
+   all obstacles simultaneously, significantly reducing the time required
+   for the optimization solver. The safety and asymptotic stability have
+   been rigorously proven through mathematical validations. Extensive
+   simulations and physical experiments demonstrate the framework's
+   real-time and safety performance in complex and variable scenarios.
+   Future research will extend this approach to robots with
+   higher-dimensional control systems, such as robotic manipulators.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3565524,,,,"Zhang, Yu and Wen, Long and Huang, Yuhong and Sun, Siming and Bing,
+   Zhenshan and He, Wei and Knoll, Alois",,2.0,WOS:001494111500015,,,paper,meta learning based safety critical control in multi obstacles environments,10.1109/tase.2025.3565524,https://doi.org/10.1109/tase.2025.3565524,https://doi.org/10.1109/tase.2025.3565524,155.381,citations=2; year=2025; risk_terms=3; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3565524,True,202,https://ieeexplore.ieee.org/document/10980124/,text/html; charset=UTF-8,,"여러 장애물 환경의 safety-critical control을 다뤄, 안전 필터가 실패하면 제어 장벽이 의도한 충돌 회피를 보장하지 못할 수 있다 (Zhang et al., 2025)",3
+1.174,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,264,,2025,"3D RVO-enhanced multi-agent deep reinforcement learning for collision
+   avoidance in urban structured airspace","During the initial phase of urban air mobility development, establishing
+   predefined air routes and constructing structured airspace for unmanned
+   aerial vehicles (UAVs) is fundamental to ensuring safe and efficient
+   operations. This underscores the critical need for research on multi-UAV
+   collision avoidance methodologies in structured airspace. The primary
+   challenge of collision avoidance in structured airspace lies in
+   reconciling airspace structural constraints with the safety-efficiency
+   tradeoff while guaranteeing collision-free operations. This study
+   presents a reinforcement learning-based framework for resolving
+   multi-UAV conflicts in structured airspace. Firstly, a conflict
+   characterization model is established using the 3D Reciprocal Velocity
+   Obstacles (RVO) principle, where the 3D RVO regions of neighbouring UAVs
+   are computed to generate single-agent observation vectors, enabling
+   quantitative conflict situation awareness. Subsequently, a neural
+   network architecture processing variable-dimensional inputs is devised
+   to directly map dynamic observations to UAV control commands.
+   Furthermore, a multi-objective reward function incorporating 3D RVO
+   regions, path deviation, time-to-collision prediction, and velocity
+   preservation is formulated, with collision avoidance policy optimization
+   achieved through an actor-critic algorithm. Experimental results
+   demonstrate that the proposed method effectively avoids collision while
+   optimizing resolution costs. In crossing conflict scenario involving up
+   to four UAVs, the framework attains a 100 \% resolution success rate,
+   with path deviations constrained within 5.8 meters and additional flight
+   distances below 10 \%. Notably, the flight trajectory smoothness shows
+   significant improvement. In an eight-UAV structured airspace scenario,
+   all vehicles successfully reach sequential waypoints in collision-free
+   trajectories.",AEROSPACE SCIENCE AND TECHNOLOGY,,Article,10.1016/j.ast.2025.110378,,,,"Zhong, Gang and Liu, Yupu and Du, Sen and Wang, Fei and Zhou, Jinlun and
+   Zhang, Honghai",,5.0,WOS:001506699000001,,,paper,3d rvo enhanced multi agent deep reinforcement learning for collision avoidance in urban structured airspace,10.1016/j.ast.2025.110378,https://doi.org/10.1016/j.ast.2025.110378,https://doi.org/10.1016/j.ast.2025.110378,155.085,citations=5; year=2025; risk_terms=3; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.ast.2025.110378,True,200,https://linkinghub.elsevier.com/retrieve/pii/S1270963825004493,text/html;charset=UTF-8,,"다중 에이전트 강화학습으로 도시 공역 충돌 회피를 다뤄, 안전 제약이 빠진 학습 정책은 충돌 위험을 남길 수 있다 (Zhong et al., 2025)",5
+1.135,121,PHYSRISK-REF-0004,적대적 물체·표지 조작 (Adversarial object or sign manipulation),2,security;vehicle,248,,2024,Deep learning adversarial attacks and defenses in autonomous vehicles: a systematic literature review from a safety perspective,"The integration of Deep Learning (DL) algorithms in Autonomous Vehicles (AVs) has revolutionized their precision in navigating various driving scenarios, ranging from anti-fatigue safe driving to intelligent route planning. Despite their proven effectiveness, concerns regarding the safety and reliability of DL algorithms in AVs have emerged, particularly in light of the escalating threat of adversarial attacks, as emphasized by recent research. These digital or physical attacks present formidable challenges to AV safety, relying extensively on collecting and interpreting environmental data through integrated sensors and DL. This paper addresses this pressing issue through a systematic survey that meticulously explores robust adversarial attacks and defenses, specifically focusing on DL in AVs from a safety perspective. Going beyond a review of existing research papers on adversarial attacks and defenses, the paper introduces a safety scenarios taxonomy matrix Inspired by SOTIF designed to augment the safety of DL in AVs. This matrix categorizes safety scenarios into four distinct areas and classifies attacks into those areas in three scenarios, along with two defense scenarios. Furthermore, the paper investigates the testing and evaluation measurements critical for assessing attacks in the context of DL for AVs. It further explores the dynamic landscape of datasets and simulation platforms. This contribution significantly enriches the ongoing discourse surrounding the assurance of safety and reliability in autonomous vehicles, especially in the face of continually evolving adversarial challenges.",Artificial Intelligence Review,Springer Science+Business Media,review,10.1007/s10462-024-11014-8,https://openalex.org/W4404768371,https://doi.org/10.1007/s10462-024-11014-8,,"['Ahmed Dawod Mohammed Ibrahum', 'Manzoor Hussain', 'Jang‐Eui Hong']",Ahmed Dawod Mohammed Ibrahum,52.0,https://openalex.org/W4404768371,autonomous system | autonomous systems | autonomous vehicle | autonomous vehicles | robot | robotic | robotics,Autonomous Vehicles,paper,deep learning adversarial attacks and defenses in autonomous vehicles a systematic literature review from a safety perspective,10.1007/s10462-024-11014-8,https://doi.org/10.1007/s10462-024-11014-8,https://doi.org/10.1007/s10462-024-11014-8,155.584,citations=52; year=2024; risk_terms=6; physical_terms=4,https://doi.org/10.1007/s10462-024-11014-8,True,200,https://link.springer.com/article/10.1007/s10462-024-11014-8,text/html; charset=utf-8,,"자율주행 딥러닝 모델의 적대적 공격·방어를 안전 관점에서 정리해, 표지·객체 조작이 주행 판단을 흔들 수 있음을 보여준다 (Ibrahum et al., 2024)",3
+1.08,70,PHYSRISK-REF-0009,동적 장애물 반응 실패 (Dynamic obstacle response failure),4,navigation;vehicle,268,,2025,"Efficient multi-UAV path planning in dynamic and complex environments
+   using hybrid polar lights optimization","Unmanned Aerial Vehicle (UAV) swarm path planning poses significant
+   challenges, particularly in dynamic environments with complex obstacles.
+   Traditional path-planning methods often encounter difficulties related
+   to high dimensionality and obstacle density. This paper introduces a
+   novel MA based on artificial intelligence, termed Improved Polar Lights
+   Optimization (CCPLO). The CCPLO enhances path planning performance by
+   integrating the Criss-Cross (CC) strategy with the Covariance Matrix
+   Adaptation Evolution Strategy (CMA-ES). Key improvements include a
+   dynamic adjustment mechanism for search parameters, the implementation
+   of parallel processing techniques, and refined crossover and
+   normalization processes. The dynamic adjustment mechanism allows for
+   real-time tuning of parameters, enhancing global search capabilities and
+   minimizing the risk of local optima. Furthermore, parallel processing
+   significantly boosts computational efficiency, especially in
+   high-dimensional and complex scenarios. Experimental results demonstrate
+   that the CCPLO algorithm outperforms existing algorithms in the CEC 2017
+   benchmark function test set. Specifically, in multi-obstacle and dynamic
+   task environments, CCPLO effectively designs safer and more efficient
+   paths, highlighting its strong potential for UAV swarm path planning.",JOURNAL OF KING SAUD UNIVERSITY COMPUTER AND INFORMATION SCIENCES,,Article,10.1007/s44443-025-00139-7,,,,"Xu, Ziyin and Wang, Zhilin and Liu, Rui and Huang, Chenliang and Shi,
+   Yuxiang and Wang, Mingjing and Chen, Huiling",,11.0,WOS:001532071600003,,,paper,efficient multi uav path planning in dynamic and complex environments using hybrid polar lights optimization,10.1007/s44443-025-00139-7,https://doi.org/10.1007/s44443-025-00139-7,https://doi.org/10.1007/s44443-025-00139-7,154.789,citations=11; year=2025; risk_terms=2; physical_terms=1; prestige_venue=mandatory_candidate,https://doi.org/10.1007/s44443-025-00139-7,True,200,https://link.springer.com/article/10.1007/s44443-025-00139-7,text/html; charset=utf-8,,"동적·복잡 환경의 다중 UAV 경로계획을 다뤄, 움직이는 장애물 대응 실패가 비행 충돌 위험으로 이어질 수 있음을 보여준다 (Xu et al., 2025)",5

@@ -1,0 +1,1261 @@
+match_score,card_idx,card_badge,card_label,card_refs_before,overlap_tags,rank,source_file,year,title,abstract,venue,institution,document_type,doi,url,landing_page_url,pdf_url,authors,first_author,citations,record_id,matched_terms,matched_l3,record_type,title_key,doi_key,candidate_url,url_key,score,selection_reason,checked_url,access_ok,status_code,final_url,content_type,access_error
+1.554,59,PHYSBENCH-REF-0069,전신 도달 한계 위반 (Whole-body reach-limit violation),4,collision;humanoid;manipulation,10,,2022,A biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tactile sensing,"Human skin perceives physical stimuli applied to the body and mitigates the risk of physical interaction through its soft and resilient mechanical properties. Social robots would benefit from whole-body robotic skin (or tactile sensors) resembling human skin in realizing a safe, intuitive, and contact-rich human-robot interaction. However, existing soft tactile sensors show several drawbacks (complex structure, poor scalability, and fragility), which limit their application in whole-body robotic skin. Here, we introduce biomimetic robotic skin based on hydrogel-elastomer hybrids and tomographic imaging. The developed skin consists of a tough hydrogel and a silicone elastomer forming a skin-inspired multilayer structure, achieving sufficient softness and resilience for protection. The sensor structure can also be easily repaired with adhesives even after severe damage (incision). For multimodal tactile sensation, electrodes and microphones are deployed in the sensor structure to measure local resistance changes and vibration due to touch. The ionic hydrogel layer is deformed owing to an external force, and the resulting local conductivity changes are measured via electrodes. The microphones also detect the vibration generated from touch to determine the location and type of dynamic tactile stimuli. The measurement data are then converted into multimodal tactile information through tomographic imaging and deep neural networks. We further implement a sensorized cosmetic prosthesis, demonstrating that our design could be used to implement deformable or complex-shaped robotic skin.",Science Robotics,American Association for the Advancement of Science,article,10.1126/scirobotics.abm7187,https://openalex.org/W4282912956,https://doi.org/10.1126/scirobotics.abm7187,,"['Kyungseo Park', 'Hyunwoo Yuk', 'Min Jin Yang', 'Junhwi Cho', 'Hyosang Lee', 'Jung Kim']",Kyungseo Park,249.0,https://openalex.org/W4282912956,autonomous system | autonomous systems | robot | robotic | robotics,Human-Robot Interaction,paper,a biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tactile sensing,10.1126/scirobotics.abm7187,https://doi.org/10.1126/scirobotics.abm7187,https://doi.org/10.1126/scirobotics.abm7187,194.3,citations=249; year=2022; risk_terms=2; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1126/scirobotics.abm7187,True,200,https://www.science.org/doi/10.1126/scirobotics.abm7187,text/html;charset=UTF-8,
+1.465,58,PHYSBENCH-REF-0068,정밀 휴머노이드 접촉력 위험 (Dexterous humanoid contact-force risk),3,collision;humanoid;manipulation,10,,2022,A biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tactile sensing,"Human skin perceives physical stimuli applied to the body and mitigates the risk of physical interaction through its soft and resilient mechanical properties. Social robots would benefit from whole-body robotic skin (or tactile sensors) resembling human skin in realizing a safe, intuitive, and contact-rich human-robot interaction. However, existing soft tactile sensors show several drawbacks (complex structure, poor scalability, and fragility), which limit their application in whole-body robotic skin. Here, we introduce biomimetic robotic skin based on hydrogel-elastomer hybrids and tomographic imaging. The developed skin consists of a tough hydrogel and a silicone elastomer forming a skin-inspired multilayer structure, achieving sufficient softness and resilience for protection. The sensor structure can also be easily repaired with adhesives even after severe damage (incision). For multimodal tactile sensation, electrodes and microphones are deployed in the sensor structure to measure local resistance changes and vibration due to touch. The ionic hydrogel layer is deformed owing to an external force, and the resulting local conductivity changes are measured via electrodes. The microphones also detect the vibration generated from touch to determine the location and type of dynamic tactile stimuli. The measurement data are then converted into multimodal tactile information through tomographic imaging and deep neural networks. We further implement a sensorized cosmetic prosthesis, demonstrating that our design could be used to implement deformable or complex-shaped robotic skin.",Science Robotics,American Association for the Advancement of Science,article,10.1126/scirobotics.abm7187,https://openalex.org/W4282912956,https://doi.org/10.1126/scirobotics.abm7187,,"['Kyungseo Park', 'Hyunwoo Yuk', 'Min Jin Yang', 'Junhwi Cho', 'Hyosang Lee', 'Jung Kim']",Kyungseo Park,249.0,https://openalex.org/W4282912956,autonomous system | autonomous systems | robot | robotic | robotics,Human-Robot Interaction,paper,a biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tactile sensing,10.1126/scirobotics.abm7187,https://doi.org/10.1126/scirobotics.abm7187,https://doi.org/10.1126/scirobotics.abm7187,194.3,citations=249; year=2022; risk_terms=2; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1126/scirobotics.abm7187,True,200,https://www.science.org/doi/10.1126/scirobotics.abm7187,text/html;charset=UTF-8,
+1.415,88,PHYSRISK-REF-0027,센서 스푸핑 및 신호 주입 (Sensor spoofing and signal injection),1,manipulation;privacy;security,3,,2022,"All-printed soft human-machine interface for robotic physicochemical
+   sensing","Ultrasensitive multimodal physicochemical sensing for autonomous robotic
+   decision-making has numerous applications in agriculture, security,
+   environmental protection, and public health. Previously reported robotic
+   sensing technologies have primarily focused on monitoring physical
+   parameters such as pressure and temperature. Integrating chemical
+   sensors for autonomous dry-phase analyte detection on a robotic platform
+   is rather extremely challenging and substantially underdeveloped. Here,
+   we introduce an artificial intelligence-powered multimodal robotic
+   sensing system (M-Bot) with an all-printed mass-producible soft
+   electronic skin-based human-machine interface. A scalable inkjet
+   printing technology with custom-developed nanomaterial inks was used to
+   manufacture flexible physicochemical sensor arrays for electrophysiology
+   recording, tactile perception, and robotic sensing of a wide range of
+   hazardous materials including nitroaromatic explosives, pesticides,
+   nerve agents, and infectious pathogens such as SARS-CoV-2. The M-Bot
+   decodes the surface electromyography signals collected from the human
+   body through machine learning algorithms for remote robotic control and
+   can perform in situ threat compound detection in extreme or contaminated
+   environments with user-interactive tactile and threat alarm feedback.
+   The printed electronic skin-based robotic sensing technology can be
+   further generalized and applied to other remote sensing platforms. Such
+   diversity was validated on an intelligent multimodal robotic boat
+   platform that can efficiently track the source of trace amounts of
+   hazardous compounds through autonomous and intelligent decision-making
+   algorithms. This fully printed human-machine interactive multimodal
+   sensing technology could play a crucial role in designing future
+   intelligent robotic systems and can be easily reconfigured toward
+   numerous practical wearable and robotic applications.",SCIENCE ROBOTICS,,Article,10.1126/scirobotics.abn0495,,,,"Yu, You and Li, Jiahong and Solomon, Samuel A. and Min, Jihong and Tu,
+   Jiaobing and Guo, Wei and Xu, Changhao and Song, Yu and Gao, Wei",,328.0,WOS:000853410700002,,,paper,all printed soft human machine interface for robotic physicochemical sensing,10.1126/scirobotics.abn0495,https://doi.org/10.1126/scirobotics.abn0495,https://doi.org/10.1126/scirobotics.abn0495,198.145,citations=328; year=2022; risk_terms=2; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1126/scirobotics.abn0495,True,200,https://www.science.org/doi/10.1126/scirobotics.abn0495,text/html;charset=UTF-8,
+1.335,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,drone;privacy;vehicle,239,,2024,"Enhanced Small Drone Detection Using Optimized YOLOv8 With Attention
+   Mechanisms","The increasing misuse of drones poses significant safety and security
+   risks, including illegal transportation of prohibited goods,
+   interference with manned aircraft, and threats to public safety. This
+   has raised concerns about the increased use of unmanned aerial vehicles
+   (UAVs) due to their small size. Addressing these concerns has sparked
+   significant research into developing effective drone detection systems.
+   Deep learning, especially YOLO, is known as a lightweight model that
+   offers real-time detection capabilities. Attention mechanisms have
+   proven effective in many studies for detecting objects. This research
+   focused on optimizing the YOLOv8n-based model by incorporating the
+   Attention Module into the neck and improving the detection head by
+   adding a tiny detection head, making the model work efficiently in
+   detecting objects of tiny size. To obtain the most effective model,
+   multiple training sets have been experimented with involving different
+   types of attention modules, such as the Convolutional Block Attention
+   Module (CBAM), ResBlock CBAM, Global Attention Mechanism (GAM), and
+   Efficient Channel Attention (ECA). Therefore, based on the results,
+   YOLOv8n + ResCBAM + high-resolution detection head, called
+   P2-YOLOv8n-ResCBAM significantly improves the mean Average Accuracy
+   (mAP) from 90.3\% to 92.6\%. Although the increased model complexity
+   reduced frames per second (fps) from 263 to 166, the detection speed
+   remains suitable for real-time applications. The proposed model
+   effectively distinguishes drones from birds and recognizes them at long
+   distances, demonstrating its potential for enhancing aerial surveillance
+   and security measures.",IEEE ACCESS,,Article,10.1109/ACCESS.2024.3420730,,,,"Zamri, Fatin Najihah Muhamad and Gunawan, Teddy Surya and Yusoff, Siti
+   Hajar and Alzahrani, Ahmad A. and Bramantoro, Arif and Kartiwi, Mira",,43.0,WOS:001263397700001,,,paper,enhanced small drone detection using optimized yolov8 with attention mechanisms,10.1109/access.2024.3420730,https://doi.org/10.1109/access.2024.3420730,https://doi.org/10.1109/access.2024.3420730,155.979,citations=43; year=2024; risk_terms=5; physical_terms=2,https://doi.org/10.1109/access.2024.3420730,True,202,https://ieeexplore.ieee.org/document/10577135/,text/html; charset=UTF-8,
+1.31,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,drone;privacy;vehicle,350,,2025,UAV-based intelligent traffic surveillance using recurrent neural networks and Swin transformer for dynamic environments,"Introduction: Urban traffic congestion, environmental degradation, and road safety challenges necessitate intelligent aerial robotic systems capable of real-time adaptive decision-making. Unmanned Aerial Vehicles (UAVs), with their flexible deployment and high vantage point, offer a promising solution for large-scale traffic surveillance in complex urban environments. This study introduces a UAV-based neural framework that addresses challenges such as asymmetric vehicle motion, scale variations, and spatial inconsistencies in aerial imagery. Methods: The proposed system integrates a multi-stage pipeline encompassing contrast enhancement and region-based clustering to optimize segmentation while maintaining computational efficiency for resource-constrained UAV platforms. Vehicle detection is carried out using a Recurrent Neural Network (RNN), optimized via a hybrid loss function combining cross-entropy and mean squared error to improve localization and confidence estimation. Upon detection, the system branches into two neural submodules: (i) a classification stream utilizing SURF and BRISK descriptors integrated with a Swin Transformer backbone for precise vehicle categorization, and (ii) a multi-object tracking stream employing DeepSORT, which fuses motion and appearance features within an affinity matrix for robust trajectory association. Results: Comprehensive evaluation on three benchmark UAV datasets-AU-AIR, UAVDT, and VAID shows consistent and high performance. The model achieved detection precisions of 0.913, 0.930, and 0.920; tracking precisions of 0.901, 0.881, and 0.890; and classification accuracies of 92.14, 92.75, and 91.25%, respectively. Discussion: These findings highlight the adaptability, robustness, and real-time viability of the proposed architecture in aerial traffic surveillance applications. By effectively integrating detection, classification, and tracking within a unified neural framework, the system contributes significant advancements to intelligent UAV-based traffic monitoring and supports future developments in smart city mobility and decision-making systems.",Frontiers in Neurorobotics,Frontiers Media,article,10.3389/fnbot.2025.1681341,https://openalex.org/W4415097807,https://doi.org/10.3389/fnbot.2025.1681341,,"['Mohammed S. Alshehri', 'Ting Wu', 'Nouf Abdullah Almujally', 'Yahya Alqahtani', 'Muhammad Hanzla', 'Ahmad Jalal', 'Hui Liu']",Mohammed S. Alshehri,17.0,https://openalex.org/W4415097807,autonomous system | autonomous systems | path planning | robot | robotic | robotics | uav | unmanned,UAV Path Planning,paper,uav based intelligent traffic surveillance using recurrent neural networks and swin transformer for dynamic environments,10.3389/fnbot.2025.1681341,https://doi.org/10.3389/fnbot.2025.1681341,https://doi.org/10.3389/fnbot.2025.1681341,148.465,citations=17; year=2025; risk_terms=4; physical_terms=4,https://doi.org/10.3389/fnbot.2025.1681341,True,200,https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2025.1681341/full,text/html;charset=utf-8,
+1.285,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,drone;privacy;vehicle,259,,2020,"Reinforcement learning based two-level control framework of UAV swarm
+   for cooperative persistent surveillance in an unknown urban area","Persistent surveillance in a complex unknown urban area by an unmanned
+   aerial vehicle (UAV) swarm is a low-cost, promising future application
+   for anti-terrorism, disaster monitoring, and battlefield situational
+   awareness. Based on over-simplified simulated surroundings and a UAV
+   dynamic model, a few remarkable approaches have been proposed; however,
+   they typically rely on non-sensor-based inputs and prior knowledge on
+   the environment or targets. To overcome these limitations, based on
+   simulated city blocks, a two-level quasi-distributed control framework
+   is proposed for realizing the continuous control of a UAV swarm in two
+   defined surveillance phases. With the support of a well-trained and
+   corrected artificial neural network (ANN) in low-level UAV manoeuvre
+   control for target homing and collision avoidance, several preliminary
+   high-level target allocation strategies are designed for a cooperative
+   overall objective based on the synchronization of local surveillance
+   data. Then, via a series of numerical simulations, an optimal high-level
+   strategy combination is identified. Finally, the surveillance
+   performance of this strategy combination is evaluated under various
+   swarm sizes and UAV launching patterns. The simulation results
+   demonstrate that the proposed control framework is applicable for UAV
+   swarm control in the persistent surveillance of unknown urban areas. (C)
+   2019 Elsevier Masson SAS. All rights reserved.",AEROSPACE SCIENCE AND TECHNOLOGY,,Article,10.1016/j.ast.2019.105671,,,,"Liu, Yuxuan and Liu, Hu and Tian, Yongliang and Sun, Cong",,104.0,WOS:000521508000013,,,paper,reinforcement learning based two level control framework of uav swarm for cooperative persistent surveillance in an unknown urban area,10.1016/j.ast.2019.105671,https://doi.org/10.1016/j.ast.2019.105671,https://doi.org/10.1016/j.ast.2019.105671,155.155,citations=104; year=2020; risk_terms=1; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.ast.2019.105671,True,200,https://linkinghub.elsevier.com/retrieve/pii/S1270963819309939,text/html;charset=UTF-8,
+1.28,119,PHYSRISK-REF-0001,가림에 의한 충돌 (Occlusion-induced collision),4,collision;navigation;vehicle,56,,2023,Collision avoidance for autonomous ship using deep reinforcement learning and prior-knowledge-based approximate representation,"Reinforcement learning (RL) has shown superior performance in solving sequential decision problems. In recent years, RL is gradually being used to solve unmanned driving collision avoidance decision-making problems in complex scenarios. However, ships encounter many scenarios, and the differences in scenarios will seriously hinder the application of RL in collision avoidance at sea. Moreover, the iterative speed of trial-and-error learning for RL in multi-ship encounter scenarios is slow. To solve this problem, this study develops a novel intelligent collision avoidance algorithm based on approximate representation reinforcement learning (AR-RL) to realize the collision avoidance of maritime autonomous surface ships (MASS) in a continuous state space environment involving interactive learning capability like a crew in navigation situation. The new algorithm uses an approximate representation model to deal with the optimization of collision avoidance strategies in a dynamic target encounter situation. The model is combined with prior knowledge and International Regulations for Preventing Collisions at Sea (COLREGs) for optimal performance. This is followed by a design of an online solution to a value function approximation model based on gradient descent. This approach can solve the problem of large-scale collision avoidance policy learning in static-dynamic obstacles mixed environment. Finally, algorithm tests were constructed though two scenarios (i.e., the coastal static obstacle environment and the static-dynamic obstacles mixed environment) using Tianjin Port as an example and compared with multiple groups of algorithms. The results show that the algorithm can improve the large-scale learning efficiency of continuous state space of dynamic obstacle environment by approximate representation. At the same time, the MASS can efficiently and safely avoid obstacles enroute to reaching its target destination. It therefore makes significant contributions to ensuring safety at sea in a mixed traffic involving both manned and MASS in near future.",Frontiers in Marine Science,Frontiers Media,article,10.3389/fmars.2022.1084763,https://openalex.org/W4317388085,https://doi.org/10.3389/fmars.2022.1084763,,"['Chengbo Wang', 'Xinyu Zhang', 'Zaili Yang', 'Musa Bashir', 'Kwangil Lee']",Chengbo Wang,59.0,https://openalex.org/W4317388085,navigation | unmanned,Ship Motion and Trajectory Prediction,paper,collision avoidance for autonomous ship using deep reinforcement learning and prior knowledge based approximate representation,10.3389/fmars.2022.1084763,https://doi.org/10.3389/fmars.2022.1084763,https://doi.org/10.3389/fmars.2022.1084763,176.321,citations=59; year=2023; risk_terms=3; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.3389/fmars.2022.1084763,True,200,https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.1084763/full,text/html;charset=utf-8,
+1.28,119,PHYSRISK-REF-0001,가림에 의한 충돌 (Occlusion-induced collision),4,collision;navigation;vehicle,244,,2018,DroNet: Learning to Fly by Driving,"Civilian drones are soon expected to be used in a wide variety of tasks,
+   such as aerial surveillance, delivery, or monitoring of existing
+   architectures. Nevertheless, their deployment in urban environments has
+   so far been limited. Indeed, in unstructured and highly dynamic
+   scenarios, drones face numerous challenges to navigate autonomously in a
+   feasible and safe way. In contrast to traditional
+   ``map-localize-plan{''} methods, this letter explores a data-driven
+   approach to cope with the above challenges. To accomplish this, we
+   propose DroNet: a convolutional neural network that can safely drive a
+   drone through the streets of a city. Designed as a fast eight-layers
+   residual network, DroNet produces two outputs for each single input
+   image: Asteering angle to keep the drone navigating while avoiding
+   obstacles, and a collision probability to let the UAV recognize
+   dangerous situations and promptly react to them. The challenge is
+   however to collect enough data in an unstructured outdoor environment
+   such as a city. Clearly, having an expert pilot providing training
+   trajectories is not an option given the large amount of data required
+   and, above all, the risk that it involves for other vehicles or
+   pedestrians moving in the streets. Therefore, we propose to train a UAV
+   from data collected by cars and bicycles, which, already integrated into
+   the urban environment, would not endanger other vehicles and
+   pedestrians. Although trained on city streets from the viewpoint of
+   urban vehicles, the navigation policy learned by DroNet is highly
+   generalizable. Indeed, it allows a UAV to successfully fly at relative
+   high altitudes and even in indoor environments, such as parking lots and
+   corridors. To share our findings with the robotics community, we
+   publicly release all our datasets, code, and trained networks.",IEEE ROBOTICS AND AUTOMATION LETTERS,,Article,10.1109/LRA.2018.2795643,,,,"Loquercio, Antonio and Maqueda, Ana I. and del-Blanco, Carlos R. and
+   Scaramuzza, Davide",,370.0,WOS:000424646100032,,,paper,dronet learning to fly by driving,10.1109/lra.2018.2795643,https://doi.org/10.1109/lra.2018.2795643,https://doi.org/10.1109/lra.2018.2795643,155.827,citations=370; year=2018; risk_terms=3; physical_terms=5,https://doi.org/10.1109/lra.2018.2795643,True,202,https://ieeexplore.ieee.org/document/8264734/,text/html; charset=UTF-8,
+1.255,119,PHYSRISK-REF-0001,가림에 의한 충돌 (Occlusion-induced collision),4,collision;navigation;vehicle,369,,2021,"Review of wheeled mobile robot collision avoidance under unknown
+   environment","Recently, the working scenes of the robot have been emerging as
+   diversity and complexity with gradually mature of robotic control
+   technology. The challenge of robot adaptability emerges, especially in
+   complicated and unknown environments. Among the numerous researches on
+   improving the adaptability of robots, aiming at avoiding collision
+   between robot and external environment, obstacle avoidance has drawn
+   much attention. Compared to the global circumvention requiring the
+   environmental information that is known, the local obstacle avoidance is
+   a promising method due to the environment is possibly dynamic and
+   unknown. This study is aimed at making a review of research progress
+   about local obstacle avoidance methods for wheeled mobile robots (WMRs)
+   under complex unknown environment in the last 20 years. Sensor-based
+   obstacle perception and identification is first introduced. Then,
+   obstacle avoidance methods related to WMRs' motion control are reviewed,
+   mainly including artificial potential field (APF)-based,
+   population-involved meta heuristic-based, artificial neural network
+   (ANN)-based, fuzzy logic (FL)-based and quadratic optimization-based,
+   etc. Next, the relevant research on Unmanned Ground Vehicles (UGVs) is
+   surveyed. Finally, conclusion and prospection are given. Appropriate
+   obstacle avoidance methods should be chosen based on the specific
+   requirements or criterion. For the moment, effective fusion of multiple
+   obstacle avoidance methods is becoming a promising method.",SCIENCE PROGRESS,,Review,10.1177/00368504211037771,,,,"Wang, Yong and Li, Xiaoxiao and Zhang, Juan and Li, Shuai and Xu, Zhihao
+   and Zhou, Xuefeng",,28.0,WOS:000697994000001,,,paper,review of wheeled mobile robot collision avoidance under unknown environment,10.1177/00368504211037771,https://doi.org/10.1177/00368504211037771,https://doi.org/10.1177/00368504211037771,147.142,citations=28; year=2021; risk_terms=1; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1177/00368504211037771,True,200,https://journals.sagepub.com/doi/10.1177/00368504211037771,text/html;charset=UTF-8,
+1.255,119,PHYSRISK-REF-0001,가림에 의한 충돌 (Occlusion-induced collision),4,collision;navigation;vehicle,397,,2020,"Towards a PDE-based large-scale decentralized solution for path planning
+   of UAVs in shared airspace","Recently, there has been a tremendous increase of interest in utilizing
+   Unmanned Aerial Vehicles (UAVs) for a number of civilian applications.
+   With this increased interest, it is imperative that these UAVs are able
+   to operate in shared airspace for enhanced efficiency. Multi-UAV systems
+   are inherently safety-critical systems, which means that safety
+   guarantees must be made to ensure no undesirable configurations, such as
+   collisions, occur. This paper proposes a decentralized method based on a
+   Partial Differential Equation (PDE) to generate collision-free 3D
+   trajectories for multiple UAVs operating in a shared airspace. This
+   method exploits the dynamical properties of multi-phase fluids flowing
+   through a porous medium by modeling the porosity values as a function of
+   the risk of collision. To highlight the feasibility for onboard
+   implementation, we propose propose a machine learning technique for
+   obtaining computationally efficient solutions of the PDE describing flow
+   movements in porous medium. This method has been compared via a
+   simulation study to two other path planning strategies, centralized and
+   sequential planning, and the advantages of this method are presented.
+   Furthermore, results from an experiment using three UAVs have been
+   presented to demonstrate the applicability of the proposed method to
+   real world implementation. (c) 2020 Elsevier Masson SAS. All rights
+   reserved.",AEROSPACE SCIENCE AND TECHNOLOGY,,Article,10.1016/j.ast.2020.105965,,,,"Radmanesh, Reza and Kumar, Manish and French, Donald and Casbeer, David",,35.0,WOS:000573517400005,,,paper,towards a pde based large scale decentralized solution for path planning of uavs in shared airspace,10.1016/j.ast.2020.105965,https://doi.org/10.1016/j.ast.2020.105965,https://doi.org/10.1016/j.ast.2020.105965,145.169,citations=35; year=2020; risk_terms=4; physical_terms=1; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.ast.2020.105965,True,200,https://linkinghub.elsevier.com/retrieve/pii/S1270963820306477,text/html;charset=UTF-8,
+1.249,54,PHYSBENCH-REF-0055,제어 장벽 함수 실패 (Control barrier function safety-filter failure),2,collision;uncertainty,253,,2025,"Meta-Learning-Based Safety-Critical Control in Multi-Obstacles
+   Environments","Autonomous robots operating in diverse scenarios are expected to safely
+   and efficiently adapt to new, unknown, and cluttered environments. In
+   this paper, we introduce a real-time goal-seeking and exploration
+   framework incorporating novel meta-signed distance functions (MetaSDFs)
+   and meta-buffer robust control barrier functions (Meta-BRCBFs). To adapt
+   to environmental changes in real time, we employ Bayesian meta-learning
+   to construct MetaSDFs. Deep neural network weights are initially trained
+   offline, followed by efficient online adaptation at the last Bayesian
+   layer, allowing for online updates at linear time complexity. Each
+   MetaSDF is individually trained for its corresponding obstacle class,
+   enhancing online distance estimation accuracy. Subsequently, buffer
+   zones are constructed around the MetaSDFs to establish corresponding
+   Meta-BRCBFs. These Meta-BRCBFs are activated only when the robot enters
+   these zones, substantially reducing the number of CBFs required. Outside
+   these specified buffer zones, the robot remains in goal-seeking mode,
+   focusing on task completion. After entering a buffer zone, it
+   transitions to exploration mode, prioritizing safety and exploring safe
+   pathways, effectively balancing task execution with environmental
+   adaptability. We demonstrate that, under this framework, the system
+   achieves both safety and asymptotic stabilization. Extensive simulations
+   and experiments are conducted to demonstrate our framework's
+   effectiveness in both simulated scenarios and real-world environments.
+   These tests confirm our framework's real-time capabilities and safety
+   assurances in dynamic settings where state-of-the-art methods fail. The
+   video is available at: https://www.youtube.com/watch?v=C6eshldAMxA Note
+   to Practitioners-This paper is motivated by enhancing safety for
+   autonomous robots operating in diverse and changing environments.
+   Existing methods, which utilize traditional or incremental neural
+   networks, fail to perceive environmental changes and obtain the nearest
+   distances to obstacles for safety in real time. Additionally, with the
+   increased number of obstacles, the real-time performance of optimization
+   solvers for such approaches is further reduced, which quickly causes
+   error motions. To overcome these challenges, this paper introduces a
+   novel approach enabling online updates of the trained neural network so
+   that it adapts to unknown environments rapidly. Buffer zones are
+   established around obstacles, allowing us to focus solely on those that
+   the robot enters into these zones. This eliminates the need to consider
+   all obstacles simultaneously, significantly reducing the time required
+   for the optimization solver. The safety and asymptotic stability have
+   been rigorously proven through mathematical validations. Extensive
+   simulations and physical experiments demonstrate the framework's
+   real-time and safety performance in complex and variable scenarios.
+   Future research will extend this approach to robots with
+   higher-dimensional control systems, such as robotic manipulators.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3565524,,,,"Zhang, Yu and Wen, Long and Huang, Yuhong and Sun, Siming and Bing,
+   Zhenshan and He, Wei and Knoll, Alois",,2.0,WOS:001494111500015,,,paper,meta learning based safety critical control in multi obstacles environments,10.1109/tase.2025.3565524,https://doi.org/10.1109/tase.2025.3565524,https://doi.org/10.1109/tase.2025.3565524,155.381,citations=2; year=2025; risk_terms=3; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3565524,True,202,https://ieeexplore.ieee.org/document/10980124/,text/html; charset=UTF-8,
+1.23,119,PHYSRISK-REF-0001,가림에 의한 충돌 (Occlusion-induced collision),4,collision;navigation;vehicle,53,,2025,"Behaviorally-Aware Multi-Agent RL With Dynamic Optimization for
+   Autonomous Driving","This study presents a novel Multi-Agent Reinforcement Learning (MURL)
+   architecture for autonomous vehicle (AV) navigation in complex urban
+   traffic environments. By integrating a Social Value Orientation (SVO)
+   model into a model-free SARSA reinforcement learning framework, our
+   approach effectively balances individual agents' social preferences with
+   safety and performance objectives. A logistic regression-based risk
+   assessment module evaluates collision probabilities in real time by
+   analyzing spatiotemporal dynamics such as distances and velocities.
+   Additionally, a dynamic optimizer adapts the learning rate and
+   exploration strategies of the SARSA algorithm to provide efficient
+   convergence to optimal policies. Extensive simulation experiments
+   demonstrate that the proposed method significantly enhances safety and
+   efficiency, achieving a 55.6\% reduction in collision risk and
+   increasing average rewards per episode by 2.1 compared to traditional
+   SARSA without SVO. Furthermore, the optimized policy reduces average
+   episode length, indicating the framework's effectiveness in providing
+   robust decision-making and adaptability across various traffic
+   scenarios. Note to Practitioners-The proposed framework in this paper is
+   driven by the demand for comprehensive navigation systems in the rapidly
+   evolving field of connected and autonomous vehicles (CAVs), especially
+   within complex and unpredictable urban environments and mixed traffic
+   scenarios. As AVs are getting more and more attention, the capacity to
+   navigate effectively among many road users, including other AVs,
+   pedestrians, and human-driven vehicles, is essential. Our framework
+   builds upon the SARSA algorithm to produce an optimal policy for the AV
+   and integrates a dynamic optimization method that represents the concept
+   of risk as the inverse logistic of potential collisions. Distinctive to
+   our proposed model is a finely-tuned Social Value Orientation (SVO) that
+   captures the nuanced social dynamics between multiple autonomous agents,
+   spanning a continuum from self-interested to entirely cooperative
+   behaviors. This allows AVs to make decisions socially and cooperatively.
+   This framework significantly influences the AV navigation sector by
+   contributing to the development of secure, human-centric, and reliable
+   transportation systems. Its multi-agent focus and the incorporation of
+   dynamic optimization emphasize its potential to facilitate a network of
+   AVs that interact with diverse road users, thus improving scalability.
+   The robustness and adaptability of this machine learning-powered
+   solution are crucial for navigating the varied scenarios that
+   characterize urban driving, ensuring that AVs can adapt to changing
+   conditions and make decisions that benefit all road users.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3527327,,,,"Taghavifar, Hamid and Hu, Chuan and Wei, Chongfeng and Mohammadzadeh,
+   Ardashir and Zhang, Chunwei",,13.0,WOS:001463995900036,,,paper,behaviorally aware multi agent rl with dynamic optimization for autonomous driving,10.1109/tase.2025.3527327,https://doi.org/10.1109/tase.2025.3527327,https://doi.org/10.1109/tase.2025.3527327,176.947,citations=13; year=2025; risk_terms=5; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3527327,True,202,https://ieeexplore.ieee.org/document/10833800/,text/html; charset=UTF-8,
+1.23,119,PHYSRISK-REF-0001,가림에 의한 충돌 (Occlusion-induced collision),4,collision;navigation;vehicle,220,,2024,"Autonomous navigation of marine surface vessel in extreme encounter
+   situation","With the development of artificial intelligence (AI) technology, the
+   autonomous navigation and behavior decision-making capabilities of MASS
+   (marine autonomous surface ship) are constantly being innovated, thereby
+   ensuring their safe navigation. However, the recent algorithms exhibit
+   limited efficacy in navigating in unknown and complex environments,
+   while also lacking the capability to effectively handle the encounters
+   resulting from the uncertain behavior of other ships. Consequently, this
+   study proposes an intelligent navigation methodology utilizing the PRM
+   (Probabilistic Roadmap) and PPO (Proximal Policy Optimization) algorithm
+   to facilitate autonomous navigation and collision avoidance
+   decision-making for MASS. Moreover, the MASS disciplined behaviors
+   prescribed by COLREGs are taken into the consideration of the reward
+   function design. Particularly, in extreme encounter situation, it
+   becomes necessary for MASS to depart from COLREGs, thus requiring a
+   corresponding definition of the reward function. Finally, the autonomous
+   navigation and decision-making capability of the MASS is evaluated using
+   real-time ship traffic in a voyage scenario, while various extreme
+   encounter situations are also simulated to demonstrate the generality
+   and practicality of the proposed PRM-PPO method.",JOURNAL OF MARINE SCIENCE AND TECHNOLOGY,,Article,10.1007/s00773-023-00979-w,,,,"Guan, Wei and Han, Husheng and Cui, Zhewen",,13.0,WOS:001137659400001,,,paper,autonomous navigation of marine surface vessel in extreme encounter situation,10.1007/s00773-023-00979-w,https://doi.org/10.1007/s00773-023-00979-w,https://doi.org/10.1007/s00773-023-00979-w,156.947,citations=13; year=2024; risk_terms=2; physical_terms=1; prestige_venue=mandatory_candidate,https://doi.org/10.1007/s00773-023-00979-w,True,200,https://link.springer.com/article/10.1007/s00773-023-00979-w,text/html; charset=utf-8,
+1.23,119,PHYSRISK-REF-0001,가림에 의한 충돌 (Occlusion-induced collision),4,collision;navigation;vehicle,264,,2025,"3D RVO-enhanced multi-agent deep reinforcement learning for collision
+   avoidance in urban structured airspace","During the initial phase of urban air mobility development, establishing
+   predefined air routes and constructing structured airspace for unmanned
+   aerial vehicles (UAVs) is fundamental to ensuring safe and efficient
+   operations. This underscores the critical need for research on multi-UAV
+   collision avoidance methodologies in structured airspace. The primary
+   challenge of collision avoidance in structured airspace lies in
+   reconciling airspace structural constraints with the safety-efficiency
+   tradeoff while guaranteeing collision-free operations. This study
+   presents a reinforcement learning-based framework for resolving
+   multi-UAV conflicts in structured airspace. Firstly, a conflict
+   characterization model is established using the 3D Reciprocal Velocity
+   Obstacles (RVO) principle, where the 3D RVO regions of neighbouring UAVs
+   are computed to generate single-agent observation vectors, enabling
+   quantitative conflict situation awareness. Subsequently, a neural
+   network architecture processing variable-dimensional inputs is devised
+   to directly map dynamic observations to UAV control commands.
+   Furthermore, a multi-objective reward function incorporating 3D RVO
+   regions, path deviation, time-to-collision prediction, and velocity
+   preservation is formulated, with collision avoidance policy optimization
+   achieved through an actor-critic algorithm. Experimental results
+   demonstrate that the proposed method effectively avoids collision while
+   optimizing resolution costs. In crossing conflict scenario involving up
+   to four UAVs, the framework attains a 100 \% resolution success rate,
+   with path deviations constrained within 5.8 meters and additional flight
+   distances below 10 \%. Notably, the flight trajectory smoothness shows
+   significant improvement. In an eight-UAV structured airspace scenario,
+   all vehicles successfully reach sequential waypoints in collision-free
+   trajectories.",AEROSPACE SCIENCE AND TECHNOLOGY,,Article,10.1016/j.ast.2025.110378,,,,"Zhong, Gang and Liu, Yupu and Du, Sen and Wang, Fei and Zhou, Jinlun and
+   Zhang, Honghai",,5.0,WOS:001506699000001,,,paper,3d rvo enhanced multi agent deep reinforcement learning for collision avoidance in urban structured airspace,10.1016/j.ast.2025.110378,https://doi.org/10.1016/j.ast.2025.110378,https://doi.org/10.1016/j.ast.2025.110378,155.085,citations=5; year=2025; risk_terms=3; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.ast.2025.110378,True,200,https://linkinghub.elsevier.com/retrieve/pii/S1270963825004493,text/html;charset=UTF-8,
+1.225,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,drone;privacy;vehicle,240,,2022,"A Survey on the Convergence of Edge Computing and AI for UAVs:
+   Opportunities and Challenges","The latest 5G mobile networks have enabled many exciting Internet of
+   Things (IoT) applications that employ unmanned aerial vehicles
+   (UAVs/drones). The success of most UAV-based IoT applications is heavily
+   dependent on artificial intelligence (AI) technologies, for instance,
+   computer vision and path planning. These AI methods must process data
+   and provide decisions while ensuring low latency and low energy
+   consumption. However, the existing cloud-based AI paradigm finds it
+   difficult to meet these strict UAV requirements. Edge AI, which runs AI
+   on-device or on edge servers close to users, can be suitable for
+   improving UAV-based IoT services. This article provides a comprehensive
+   analysis of the impact of edge AI on key UAV technical aspects (i.e.,
+   autonomous navigation, formation control, power management, security and
+   privacy, computer vision, and communication) and applications (i.e.,
+   delivery systems, civil infrastructure inspection, precision
+   agriculture, search and rescue (SAR) operations, acting as aerial
+   wireless base stations (BSs), and drone light shows). As guidance for
+   researchers and practitioners, this article also explores UAV-based edge
+   AI implementation challenges, lessons learned, and future research
+   directions.",IEEE INTERNET OF THINGS JOURNAL,,Review,10.1109/JIOT.2022.3176400,,,,"McEnroe, Patrick and Wang, Shen and Liyanage, Madhusanka",,324.0,WOS:000846738200007,,,paper,a survey on the convergence of edge computing and ai for uavs opportunities and challenges,10.1109/jiot.2022.3176400,https://doi.org/10.1109/jiot.2022.3176400,https://doi.org/10.1109/jiot.2022.3176400,155.974,citations=324; year=2022; risk_terms=2; physical_terms=4,https://doi.org/10.1109/jiot.2022.3176400,True,202,https://ieeexplore.ieee.org/document/9778241/,text/html; charset=UTF-8,
+1.191,65,PHYSBENCH-REF-0088,이동-조작 통합 실패 (Locomotion-integrated manipulation failure),1,collision;manipulation,390,,2026,Human-robot collaborative visual inspection with Large Language Models☆,"Human-Robot Collaboration (HRC) is gaining traction in advanced
+   manufacturing as industries shift from isolated robotic systems to more
+   collaborative environments. This transition is supported by advancements
+   in automation and more recently, Generative AI. Large Language Models
+   (LLMs) offer new possibilities for intuitive human-robot interaction
+   through natural language. However, the use of natural language as a
+   means remains very limited due to the ambiguous natural language,
+   environmental noise, pronunciation variability, and multiple phrasing
+   styles. Furthermore, cloud-based deployment of LLMs raises concerns
+   about ergonomics and data privacy, especially for industries and
+   countries governed by strict regulatory requirements. To address these
+   challenges, we present a fully offline, closed-loop robotic assistant
+   for visual inspection tasks in HRC settings. The system supports
+   speech-based interaction, where user instructions are transcribed via a
+   Speechto-Text (STT) model and processed by a locally deployed,
+   code-generating LLM. Guided by a structured prompt, the LLM produces
+   custom responses for robot perception and manipulation. Inspection paths
+   are generated relative to spatial axes or in specific directions and
+   executed with real-time feedback through a Text-to-Speech (TTS)
+   interface, allowing for a much closer interaction with the robot
+   assistant. The system applies a hybrid control method, where the
+   higher-level instructions are generated by LLM along with a perception
+   pipeline, and the lower-level robot control is managed by ROS for safety
+   and reliability. The system is evaluated across a range of experiments,
+   including local LLM comparisons, prompt engineering effectiveness, and
+   inspection performance in both simulated and real-world industrial use
+   cases. Results demonstrate the system's capability to handle complex
+   inspection tasks on objects with varied sizes and geometries, confirming
+   its practicality and robustness in realistic deployment settings. Code
+   and videos are open-source available at:
+   https://github.com/CuriousLad1000/RoboSpection.",ROBOTICS AND COMPUTER-INTEGRATED MANUFACTURING,,Article,10.1016/j.rcim.2025.103154,,,,"Tasneem, Osama and Pieters, Roel",,4.0,WOS:001591774000002,,,paper,human robot collaborative visual inspection with large language models,10.1016/j.rcim.2025.103154,https://doi.org/10.1016/j.rcim.2025.103154,https://doi.org/10.1016/j.rcim.2025.103154,145.532,citations=4; year=2026; risk_terms=5; physical_terms=7,https://doi.org/10.1016/j.rcim.2025.103154,True,200,https://linkinghub.elsevier.com/retrieve/pii/S073658452500208X,text/html;charset=UTF-8,
+1.174,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,264,,2025,"3D RVO-enhanced multi-agent deep reinforcement learning for collision
+   avoidance in urban structured airspace","During the initial phase of urban air mobility development, establishing
+   predefined air routes and constructing structured airspace for unmanned
+   aerial vehicles (UAVs) is fundamental to ensuring safe and efficient
+   operations. This underscores the critical need for research on multi-UAV
+   collision avoidance methodologies in structured airspace. The primary
+   challenge of collision avoidance in structured airspace lies in
+   reconciling airspace structural constraints with the safety-efficiency
+   tradeoff while guaranteeing collision-free operations. This study
+   presents a reinforcement learning-based framework for resolving
+   multi-UAV conflicts in structured airspace. Firstly, a conflict
+   characterization model is established using the 3D Reciprocal Velocity
+   Obstacles (RVO) principle, where the 3D RVO regions of neighbouring UAVs
+   are computed to generate single-agent observation vectors, enabling
+   quantitative conflict situation awareness. Subsequently, a neural
+   network architecture processing variable-dimensional inputs is devised
+   to directly map dynamic observations to UAV control commands.
+   Furthermore, a multi-objective reward function incorporating 3D RVO
+   regions, path deviation, time-to-collision prediction, and velocity
+   preservation is formulated, with collision avoidance policy optimization
+   achieved through an actor-critic algorithm. Experimental results
+   demonstrate that the proposed method effectively avoids collision while
+   optimizing resolution costs. In crossing conflict scenario involving up
+   to four UAVs, the framework attains a 100 \% resolution success rate,
+   with path deviations constrained within 5.8 meters and additional flight
+   distances below 10 \%. Notably, the flight trajectory smoothness shows
+   significant improvement. In an eight-UAV structured airspace scenario,
+   all vehicles successfully reach sequential waypoints in collision-free
+   trajectories.",AEROSPACE SCIENCE AND TECHNOLOGY,,Article,10.1016/j.ast.2025.110378,,,,"Zhong, Gang and Liu, Yupu and Du, Sen and Wang, Fei and Zhou, Jinlun and
+   Zhang, Honghai",,5.0,WOS:001506699000001,,,paper,3d rvo enhanced multi agent deep reinforcement learning for collision avoidance in urban structured airspace,10.1016/j.ast.2025.110378,https://doi.org/10.1016/j.ast.2025.110378,https://doi.org/10.1016/j.ast.2025.110378,155.085,citations=5; year=2025; risk_terms=3; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.ast.2025.110378,True,200,https://linkinghub.elsevier.com/retrieve/pii/S1270963825004493,text/html;charset=UTF-8,
+1.171,54,PHYSBENCH-REF-0055,제어 장벽 함수 실패 (Control barrier function safety-filter failure),2,collision;uncertainty,22,,2024,"Adaptive Safety-Critical Control With Uncertainty Estimation for
+   HumanRobot Collaboration","In advanced manufacturing, strict safety guarantees are required to
+   allow humans and robots to work together in a shared workspace. One of
+   the challenges in this application field is the variety and
+   unpredictability of human behavior, leading to potential dangers for
+   human coworkers. This paper presents a novel control framework by
+   adopting safety-critical control and uncertainty estimation for
+   human-robot collaboration. Additionally, to select the shortest path
+   during collaboration, a novel quadratic penalty method is presented. The
+   innovation of the proposed approach is that the proposed controller will
+   prevent the robot from violating any safety constraints even in cases
+   where humans move accidentally in a collaboration task. This is
+   implemented by the combination of a time-varying integral barrier
+   Lyapunov function (TVIBLF) and an adaptive exponential control barrier
+   function (AECBF) to achieve a flexible mode switch between path tracking
+   and collision avoidance with guaranteed closed-loop system stability.
+   The performance of our approach is demonstrated in simulation studies on
+   a 7-DOF robot manipulator. Additionally, a comparison between the tasks
+   involving static and dynamic targets is provided.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2023.3320873,,,,"Zhang, Dianhao and Van, Mien and Mcllvanna, Stephen and Sun, Yuzhu and
+   McLoone, Sean",,11.0,WOS:001340323100090,,,paper,adaptive safety critical control with uncertainty estimation for humanrobot collaboration,10.1109/tase.2023.3320873,https://doi.org/10.1109/tase.2023.3320873,https://doi.org/10.1109/tase.2023.3320873,184.789,citations=11; year=2024; risk_terms=5; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2023.3320873,True,202,https://ieeexplore.ieee.org/document/10281398/,text/html; charset=UTF-8,
+1.165,65,PHYSBENCH-REF-0088,이동-조작 통합 실패 (Locomotion-integrated manipulation failure),1,collision;manipulation,327,,2025,"Variable impedance control on contact-rich manipulation of a
+   collaborative industrial mobile manipulator: An imitation learning
+   approach","Variable impedance control (VIC) endows robots with the ability to
+   adjust their compliance, enhancing safety and adaptability in
+   contact-rich tasks. However, determining suitable variable impedance
+   parameters for specific tasks remains challenging. To address this
+   challenge, this paper proposes an imitation learning-based VIC policy
+   that employs observations integrated with RGBD and force/torque (F/T)
+   data enabling a collaborative mobile manipulator to execute contact-rich
+   tasks by learning from human demonstrations. The VIC policy is learned
+   through training the robot in a customized simulation environment,
+   utilizing an inverse reinforcement learning (IRL) algorithm.
+   High-dimensional demonstration data is encoded by integrating a 16-layer
+   convolutional neural network (CNN) into the IRL environment. To minimize
+   the sim-to-real gap, contact dynamic parameters in the training
+   environment are calibrated. Then, the learning-based VIC policy is
+   comprehensively trained in the customized environment and its
+   transferability is validated through an industrial production case
+   involving a high precision peg-in-hole task using a collaborative mobile
+   manipulator. The training and testing results indicate that the proposed
+   imitation learning-based VIC policy ensures robust performance for
+   contact-rich tasks.",ROBOTICS AND COMPUTER-INTEGRATED MANUFACTURING,,Article,10.1016/j.rcim.2024.102896,,,,"Zhou, Zhengxue and Yang, Xingyu and Zhang, Xuping",,13.0,WOS:001352849100001,,,paper,variable impedance control on contact rich manipulation of a collaborative industrial mobile manipulator an imitation learning approach,10.1016/j.rcim.2024.102896,https://doi.org/10.1016/j.rcim.2024.102896,https://doi.org/10.1016/j.rcim.2024.102896,149.947,citations=13; year=2025; risk_terms=3; physical_terms=6,https://doi.org/10.1016/j.rcim.2024.102896,True,200,https://linkinghub.elsevier.com/retrieve/pii/S0736584524001832,text/html;charset=UTF-8,
+1.165,65,PHYSBENCH-REF-0088,이동-조작 통합 실패 (Locomotion-integrated manipulation failure),1,collision;manipulation,371,,2023,"A mixed perception-based human-robot collaborative maintenance approach
+   driven by augmented reality and online deep reinforcement learning","Owing to the fact that the number and complexity of machines is
+   increasing in Industry 4.0, the maintenance process is more
+   time-consuming and labor-intensive, which contains plenty of refined
+   maintenance operations. Fortunately, human-robot collaboration (HRC) can
+   integrate human intelligence into the collaborative robot (cobot), which
+   can realize not merely the nimble and sapiential maintenance operations
+   of personnel but also the reliable and repeated maintenance manipulation
+   of cobots. However, the existing HRC maintenance lacks the precise
+   understand of the maintenance intention, the efficient HRC
+   decision-making for executing robotized maintenance tasks (e.g.,
+   repetitive manual tasks) and the convenient interaction interface for
+   executing cognitive tasks (e.g., maintenance preparation and guidance
+   job). Hence, a mixed perception-based human-robot collab-orative
+   maintenance approach consisting of three-hierarchy structures is
+   proposed in this paper, which can help reduce the severity of the
+   mentioned problems. In the first stage, a mixed perception module is
+   proposed to help the cobot recognize human safety and maintenance
+   request according to human actions and gestures separately. During the
+   second stage, an improved online deep reinforcement learning
+   (DRL)-enabled decision-making module with the asynchronous structure and
+   the function of anti-disturbance is proposed in this paper, which can
+   realize the execution of robotized maintenance tasks. In the third
+   stage, an augmented reality-assisted (AR) user-friendly interaction
+   interface is designed to help the personnel interact with the cobot and
+   execute the auxiliary maintenance task without the limitation of spatial
+   and human factors. In addition, the auxiliary of maintenance operation
+   can also be supported by the AR-assisted visible guidance. Finally,
+   comparative nu-merical experiments are implemented in a typical
+   machining workshop, and the experimental results show a competitive
+   performance of the proposed HRC maintenance approach compared with other
+   state-of-the-art methods.",ROBOTICS AND COMPUTER-INTEGRATED MANUFACTURING,,Article,10.1016/j.rcim.2023.102568,,,,"Liu, Changchun and Zhang, Zequn and Tang, Dunbing and Nie, Qingwei and
+   Zhang, Linqi and Song, Jiaye",,34.0,WOS:000967973200001,,,paper,a mixed perception based human robot collaborative maintenance approach driven by augmented reality and online deep reinforcement learning,10.1016/j.rcim.2023.102568,https://doi.org/10.1016/j.rcim.2023.102568,https://doi.org/10.1016/j.rcim.2023.102568,146.775,citations=34; year=2023; risk_terms=3; physical_terms=5,https://doi.org/10.1016/j.rcim.2023.102568,True,200,https://linkinghub.elsevier.com/retrieve/pii/S0736584523000443,text/html;charset=UTF-8,
+1.139,65,PHYSBENCH-REF-0088,이동-조작 통합 실패 (Locomotion-integrated manipulation failure),1,collision;manipulation,15,,2020,"Skin-inspired quadruple tactile sensors integrated on a robot hand
+   enable object recognition","Robot hands with tactile perception can improve the safety of object
+   manipulation and also improve the accuracy of object identification.
+   Here, we report the integration of quadruple tactile sensors onto a
+   robot hand to enable precise object recognition through grasping. Our
+   quadruple tactile sensor consists of a skin-inspired multilayer
+   microstructure. It works as thermoreceptor with the ability to perceive
+   thermal conductivity of a material, measure contact pressure, as well as
+   sense object temperature and environment temperature simultaneously and
+   independently. By combining tactile sensing information and machine
+   learning, our smart hand has the capability to precisely recognize
+   different shapes, sizes, and materials in a diverse set of objects. We
+   further apply our smart hand to the task of garbage sorting and
+   demonstrate a classification accuracy of 94\% in recognizing seven types
+   of garbage.",SCIENCE ROBOTICS,,Article,10.1126/scirobotics.abc8134,,,,"Li, Guozhen and Liu, Shiqiang and Wang, Liangqi and Zhu, Rong",,303.0,WOS:000628865900002,,,paper,skin inspired quadruple tactile sensors integrated on a robot hand enable object recognition,10.1126/scirobotics.abc8134,https://doi.org/10.1126/scirobotics.abc8134,https://doi.org/10.1126/scirobotics.abc8134,190.038,citations=303; year=2020; risk_terms=2; physical_terms=6; prestige_venue=mandatory_candidate,https://doi.org/10.1126/scirobotics.abc8134,True,200,https://www.science.org/doi/10.1126/scirobotics.abc8134,text/html;charset=UTF-8,
+1.139,65,PHYSBENCH-REF-0088,이동-조작 통합 실패 (Locomotion-integrated manipulation failure),1,collision;manipulation,377,,2021,"The implications of emerging technology on military human performance
+   research priorities","Objectives: To demonstrate the need for the military human performance
+   research community to anticipate and evolve with the emergence of new
+   and disruptive battlefield technologies that are changing the
+   fundamental role of the human combatant. Methods: An international team
+   of military performance researchers drew on relevant literature and
+   their individual national perspectives and experiences to provide an
+   integrated forecast of research priorities and needs based on current
+   trends. Results: Rapid advances and convergence in fields such as
+   robotics, information technology and artificial intelligence will
+   continue to have a revolutionary impact on the battlefield of the
+   future. The disruption associated with these technologies will most
+   acutely be experienced by the human combatant at the tactical level,
+   with increasing cognitive demands associated with the employment and use
+   of new capabilities. New research priorities may include augmented
+   performance of humans-machine teams, enhanced cognitive and
+   immunological resilience based on exercise neurobiology findings, and
+   psychophysiological stress tolerance developed in realistic but safe
+   synthetic training environments. Solving these challenges will require
+   interdisciplinary research teams that have the capacity to work across
+   the physical, digital and biological boundaries whilst collaborating
+   seamlessly with end-users, human combatants. New research methodologies
+   taking full advantage of sensing technologies will be needed to provide
+   rigorous, evidence-based data in real and near-real world environments.
+   Longer term research goals involving biological manipulation will be
+   shaped by moral, legal and ethical considerations and evolving concepts
+   of what it means to be human. Conclusion: This paper outlines key
+   recommendations to assist military human performance researchers to
+   adapt their practice in order to match the increasing pace of military
+   modernisation. By anticipating technological change and forecasting
+   possible emerging technologies the military human performance research
+   community can manoeuvre to prioritise research activities today in line
+   with future needs and requirements. (c) 2020 Sports Medicine Australia.
+   Published by Elsevier Ltd. All rights reserved.",JOURNAL OF SCIENCE AND MEDICINE IN SPORT,,Article,10.1016/j.jsams.2020.10.007,,,,"Billing, Daniel C. and Fordy, Graham R. and Friedl, Karl E. and
+   Hasselstrom, Henriette",,38.0,WOS:000704254800002,,,paper,the implications of emerging technology on military human performance research priorities,10.1016/j.jsams.2020.10.007,https://doi.org/10.1016/j.jsams.2020.10.007,https://doi.org/10.1016/j.jsams.2020.10.007,146.29,citations=38; year=2021; risk_terms=2; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.jsams.2020.10.007,True,200,https://linkinghub.elsevier.com/retrieve/pii/S1440244020307866,text/html;charset=UTF-8,
+1.135,121,PHYSRISK-REF-0004,적대적 물체·표지 조작 (Adversarial object or sign manipulation),2,security;vehicle,248,,2024,Deep learning adversarial attacks and defenses in autonomous vehicles: a systematic literature review from a safety perspective,"The integration of Deep Learning (DL) algorithms in Autonomous Vehicles (AVs) has revolutionized their precision in navigating various driving scenarios, ranging from anti-fatigue safe driving to intelligent route planning. Despite their proven effectiveness, concerns regarding the safety and reliability of DL algorithms in AVs have emerged, particularly in light of the escalating threat of adversarial attacks, as emphasized by recent research. These digital or physical attacks present formidable challenges to AV safety, relying extensively on collecting and interpreting environmental data through integrated sensors and DL. This paper addresses this pressing issue through a systematic survey that meticulously explores robust adversarial attacks and defenses, specifically focusing on DL in AVs from a safety perspective. Going beyond a review of existing research papers on adversarial attacks and defenses, the paper introduces a safety scenarios taxonomy matrix Inspired by SOTIF designed to augment the safety of DL in AVs. This matrix categorizes safety scenarios into four distinct areas and classifies attacks into those areas in three scenarios, along with two defense scenarios. Furthermore, the paper investigates the testing and evaluation measurements critical for assessing attacks in the context of DL for AVs. It further explores the dynamic landscape of datasets and simulation platforms. This contribution significantly enriches the ongoing discourse surrounding the assurance of safety and reliability in autonomous vehicles, especially in the face of continually evolving adversarial challenges.",Artificial Intelligence Review,Springer Science+Business Media,review,10.1007/s10462-024-11014-8,https://openalex.org/W4404768371,https://doi.org/10.1007/s10462-024-11014-8,,"['Ahmed Dawod Mohammed Ibrahum', 'Manzoor Hussain', 'Jang‐Eui Hong']",Ahmed Dawod Mohammed Ibrahum,52.0,https://openalex.org/W4404768371,autonomous system | autonomous systems | autonomous vehicle | autonomous vehicles | robot | robotic | robotics,Autonomous Vehicles,paper,deep learning adversarial attacks and defenses in autonomous vehicles a systematic literature review from a safety perspective,10.1007/s10462-024-11014-8,https://doi.org/10.1007/s10462-024-11014-8,https://doi.org/10.1007/s10462-024-11014-8,155.584,citations=52; year=2024; risk_terms=6; physical_terms=4,https://doi.org/10.1007/s10462-024-11014-8,True,200,https://link.springer.com/article/10.1007/s10462-024-11014-8,text/html; charset=utf-8,
+1.115,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,357,,2024,"Digital Twin and Deep Reinforcement Learning-Driven Robotic Automation
+   System for Confined Workspaces: A Nozzle Dam Replacement Case Study in
+   Nuclear Power Plants","Robotic automation has emerged as a leading solution for replacing human
+   workers in dirty, dangerous, and demanding industries to ensure the
+   safety of human workers. However, practical implementation of this
+   technology remains limited, requiring substantial effort and costs. This
+   study addresses the challenges specific to nuclear power plants,
+   characterized by hazardous environments and physically demanding tasks
+   such as nozzle dam replacement in confined workspaces. We propose a
+   digital twin and deep-reinforcement-learning-driven robotic automation
+   system with an autonomous mobile manipulator. The study follows a
+   four-step process. First, we establish a simplified testbed for a nozzle
+   dam replacement task and implement a high-fidelity digital twin model of
+   the real-world testbed. Second, we employ a hybrid visual perception
+   system that combines deep object pose estimation and an iterative
+   closest point algorithm to enhance the accuracy of the six-dimensional
+   pose estimation. Third, we use a deep-reinforcement-learning method,
+   particularly the proximal policy optimization algorithm with inverse
+   reachability map, and a centroidal waypoint strategy, to improve the
+   controllability of an autonomous mobile manipulator. Finally, we conduct
+   pre-performed simulations of the nozzle dam replacement in the digital
+   twin and evaluate the system on a robot in the real-world testbed. The
+   nozzle dam replacement with precise object pose estimation, navigation,
+   target object grasping, and collision-free motion generation was
+   successful. The robotic automation system achieved a 92.0\% success rate
+   in the digital twin. Our proposed method can improve the efficiency and
+   reliability of robotic automation systems for extreme workspaces and
+   other perilous environments.","INTERNATIONAL JOURNAL OF PRECISION ENGINEERING AND MANUFACTURING-GREEN
+   TECHNOLOGY",,Article,10.1007/s40684-023-00593-6,,,,"Park, Su-Young and Lee, Cheonghwa and Jeong, Suhwan and Lee, Junghyuk
+   and Kim, Dohyeon and Jang, Youhyun and Seol, Woojin and Kim, Hyungjung
+   and Ahn, Sung-Hoon",,20.0,WOS:001187080700001,,,paper,digital twin and deep reinforcement learning driven robotic automation system for confined workspaces a nozzle dam replacement case study in nuclear power plants,10.1007/s40684-023-00593-6,https://doi.org/10.1007/s40684-023-00593-6,https://doi.org/10.1007/s40684-023-00593-6,147.623,citations=20; year=2024; risk_terms=5; physical_terms=7,https://doi.org/10.1007/s40684-023-00593-6,True,200,https://link.springer.com/article/10.1007/s40684-023-00593-6,text/html; charset=utf-8,
+1.11,58,PHYSBENCH-REF-0068,정밀 휴머노이드 접촉력 위험 (Dexterous humanoid contact-force risk),3,collision;manipulation,327,,2025,"Variable impedance control on contact-rich manipulation of a
+   collaborative industrial mobile manipulator: An imitation learning
+   approach","Variable impedance control (VIC) endows robots with the ability to
+   adjust their compliance, enhancing safety and adaptability in
+   contact-rich tasks. However, determining suitable variable impedance
+   parameters for specific tasks remains challenging. To address this
+   challenge, this paper proposes an imitation learning-based VIC policy
+   that employs observations integrated with RGBD and force/torque (F/T)
+   data enabling a collaborative mobile manipulator to execute contact-rich
+   tasks by learning from human demonstrations. The VIC policy is learned
+   through training the robot in a customized simulation environment,
+   utilizing an inverse reinforcement learning (IRL) algorithm.
+   High-dimensional demonstration data is encoded by integrating a 16-layer
+   convolutional neural network (CNN) into the IRL environment. To minimize
+   the sim-to-real gap, contact dynamic parameters in the training
+   environment are calibrated. Then, the learning-based VIC policy is
+   comprehensively trained in the customized environment and its
+   transferability is validated through an industrial production case
+   involving a high precision peg-in-hole task using a collaborative mobile
+   manipulator. The training and testing results indicate that the proposed
+   imitation learning-based VIC policy ensures robust performance for
+   contact-rich tasks.",ROBOTICS AND COMPUTER-INTEGRATED MANUFACTURING,,Article,10.1016/j.rcim.2024.102896,,,,"Zhou, Zhengxue and Yang, Xingyu and Zhang, Xuping",,13.0,WOS:001352849100001,,,paper,variable impedance control on contact rich manipulation of a collaborative industrial mobile manipulator an imitation learning approach,10.1016/j.rcim.2024.102896,https://doi.org/10.1016/j.rcim.2024.102896,https://doi.org/10.1016/j.rcim.2024.102896,149.947,citations=13; year=2025; risk_terms=3; physical_terms=6,https://doi.org/10.1016/j.rcim.2024.102896,True,200,https://linkinghub.elsevier.com/retrieve/pii/S0736584524001832,text/html;charset=UTF-8,
+1.11,121,PHYSRISK-REF-0004,적대적 물체·표지 조작 (Adversarial object or sign manipulation),2,manipulation;security,392,,2025,"Robotic subsurface defect inspection system and an unsupervised deep
+   neural network-based abnormal traces reconstruction method for ground
+   penetrating radar data autonomous collection","Ground-penetrating radar (GPR) has been widely utilized for inner
+   structural defect inspection of infrastructure. However, automatic GPR
+   control for inspecting the infrastructure and collecting high-quality
+   GPR data remain challenging. To address such limitations, we developed a
+   GPR-based robotic inspection system inner defect inspection and an
+   unsupervised deep learning-based abnormal trace reconstruction network
+   tailored for data postprocessing. A GPR status feedback module and an
+   adaptive GPR scanning control method were developed, and these were
+   assembled on the robotic inspection system to manipulate the GPR to scan
+   over complex infrastructure surfaces and avoid obstructions.
+   Furthermore, a cycle-consistent adversarial network with a distance
+   attention mechanism was devised to process the abnormal traces induced
+   by the automatic GPR manipulation such that the high-quality GPR data
+   were gained. Both indoor and outdoor experimental results demonstrate
+   the adaptability of the GPR-based robotic inspection system.
+   Additionally, the superiority of the reconstruction network was
+   validated through comparative experiments.",MEASUREMENT SCIENCE AND TECHNOLOGY,,Article,10.1088/1361-6501/ade69e,,,,"Wang, Zhengfang and Li, Zhenpeng and Gao, Sheng and Wang, Wenying and
+   Li, Wenhao and Guo, Xiaoqin and Jiang, Haonan and Wang, Jing and Gao,
+   Yang and Gao, Shuhua and Sui, Qingmei and Niu, Huaxian and Gu, Li",,2.0,WOS:001520283300001,,,paper,robotic subsurface defect inspection system and an unsupervised deep neural network based abnormal traces reconstruction method for ground penetrating radar data autonomous collection,10.1088/1361-6501/ade69e,https://doi.org/10.1088/1361-6501/ade69e,https://doi.org/10.1088/1361-6501/ade69e,145.381,citations=2; year=2025; risk_terms=1; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1088/1361-6501/ade69e,True,200,https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=cfcf28ae-24e4-46d2-8f5f-6314221d09ce&ssb=32627200913&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F1361-6501%2Fade69e&ssi=73c81995-cnvj-41a0-b87a-2ba49fcf51be&ssk=botmanager_support@radware.com&ssm=34778975603855099106405635174167&ssn=bcea1912761ada2f973d0411faef5acf752acb7c7cf3-1b45-401f-a85fa7&sso=07ee1460-26efd790e48603b6ad884c3dad5e2a0d7d64b687e80bd3e6&ssp=22642254951782607943178264413078789&ssq=68052050811652562896308116682870054259517&ssr=NTguMjkuMTUxLjcy&sst=Mozilla/5.0%20reference-access-check&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwNmNhOGVmNzgtYzNkOS00NjZhLWIzZDEtZWY4NmMyZTAzMGVkMS0xNzgyNjA4MTE2ODg1MC1iNmQ3NjdhMWY1NmJhNmZkMTAiLCJfX3V6bWYiOiI3ZjkwMDBjYjdjN2NmMy0xYjQ1LTQwMWYtYTQ2MC0yNmVmZDc5MGU0ODYxLTE3ODI2MDgxMTY4ODUwLTAwNGY2OWU3YjIxMjkxNDFlYzYxMCIsInJkIjoiaW9wLm9yZyJ9,text/html; charset=UTF-8,
+1.105,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,privacy;vehicle,64,,2025,"Artificial Lateral Line Sensor for Robotic Fish Speed Measurement Based
+   on Surface Flow Field Detection and Turbulence Noise Suppression","Compared with traditional underwater vehicles, robotic fish have been
+   receiving increasing attention in recent years due to their excellent
+   maneuverability. However, the characteristics of fishlike undulatory
+   motions and complex underwater working environment have posed
+   significant challenges to robotic fish speed measurement, limiting their
+   autonomy. To overcome these challenges, an artificial lateral line
+   sensor (ALLS) was developed, drawing inspiration from the tactile system
+   of fish. It captured the real-time speed of robotic fish through
+   assessing the deformation of the stressed component under laminar flow
+   impact. To mitigate turbulence disturbances near the ALLS, three flow
+   control components, fairing, flow conditioner, and flow collector, were
+   proposed to attenuate turbulence noise under the viscous effect.
+   Furthermore, a physics-informed calibration method was presented to
+   establish the nonlinear model of ALLS. Specifically, a physical model
+   embedding algorithm based on data resampling was used to mitigate the
+   risk of overfitting by the multilayer perceptron, considering the
+   influence of turbulence disturbance and fishlike undulatory noise.
+   Compared with the classical calibration method based on physical model
+   fitting, the calibration method proposed in this paper reduced the error
+   by 36.0\%. Our ALLS's final mean absolute error was 0.016 m/s with a
+   linearity (R-2 ) of 0.956. The experimental results indicated that the
+   significant changes in the motion state of robotic fish reduced the
+   accuracy of ALLS. The fusion with other sensors is expected to enhance
+   the robustness of ALLS in the future. Note to Practitioners-The
+   motivation of this paper is to design an artificial lateral line sensor
+   based on surface flow field detection and turbulence noise suppression,
+   providing a small-sized and high-precision solution to the speed
+   measurement problem of bionic robotic fish. Most existing ALLS research
+   focused on developing new types of sensors based on different
+   measurement principles, without suppressing the noise caused by fishlike
+   motions, and most experiments were conducted in environments with
+   excessive controls rather than free-swimming robotic fish. To this end,
+   we developed an ALLS based on deformation measurement and proposed three
+   flow control components to make the measured flow more stable.
+   Furthermore, a physics-informed overfitting suppression method was used
+   for the calibration task of the ALLS. A series of simulations and
+   experiments demonstrated that the proposed turbulence noise suppression
+   and calibration method were practical and effective. Hopefully, our
+   methods can provide theoretical and technical guidance to marine
+   engineers for underwater vehicle speed measurement and flow sensing. The
+   recommended flow control component is applicable for conditioning
+   surface fluids in pneumatic control systems. Furthermore, the proposed
+   biomimetic tactile sensor is poised to inspire tactile-based
+   human-machine interaction methods.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2024.3413776,,,,"Zhang, Zhuoliang and Zhou, Chao and Cheng, Long and Fan, Junfeng and
+   Tan, Min",,7.0,WOS:001252494400001,,,paper,artificial lateral line sensor for robotic fish speed measurement based on surface flow field detection and turbulence noise suppression,10.1109/tase.2024.3413776,https://doi.org/10.1109/tase.2024.3413776,https://doi.org/10.1109/tase.2024.3413776,174.112,citations=7; year=2025; risk_terms=2; physical_terms=6; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2024.3413776,True,202,https://ieeexplore.ieee.org/document/10562235/,text/html; charset=UTF-8,
+1.105,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,drone;vehicle,156,,2021,"A drone-based networked system and methods for combating coronavirus
+   disease (COVID-19) pandemic","Coronavirus disease (COVID-19) is an infectious disease caused by a
+   newly discovered coronavirus. It is similar to influenza viruses and
+   raises concerns through alarming levels of spread and severity resulting
+   in an ongoing pandemic worldwide. Within eight months (by August 2020),
+   it infected 24.0 million persons worldwide and over 824 thousand have
+   died. Drones or Unmanned Aerial Vehicles (UAVs) are very helpful in
+   handling the COVID-19 pandemic. This work investigates the drone-based
+   systems, COVID-19 pandemic situations, and proposes an architecture for
+   handling pandemic situations in different scenarios using real-time and
+   simulation-based scenarios. The proposed architecture uses wearable
+   sensors to record the observations in Body Area Networks (BANs) in a
+   push-pull data fetching mechanism. The proposed architecture is found to
+   be useful in remote and highly congested pandemic areas where either the
+   wireless or Internet connectivity is a major issue or chances of
+   COVID-19 spreading are high. It collects and stores the substantial
+   amount of data in a stipulated period and helps to take appropriate
+   action as and when required. In real-time drone-based healthcare system
+   implementation for COVID-19 operations, it is observed that a large area
+   can be covered for sanitization, thermal image collection, and patient
+   identification within a short period (2 KMs within 10 min approx.)
+   through aerial route. In the simulation, the same statistics are
+   observed with an addition of collision-resistant strategies working
+   successfully for indoor and outdoor healthcare operations. Further, open
+   challenges are identified and promising research directions are
+   highlighted. (C) 2020 Elsevier B.V. All rights reserved.",FUTURE GENERATION COMPUTER SYSTEMS-THE INTERNATIONAL JOURNAL OF ESCIENCE,,Article,10.1016/j.future.2020.08.046,,,,"Kumar, Adarsh and Sharma, Kriti and Singh, Harvinder and Naugriya, Sagar
+   Gupta and Gill, Sukhpal Singh and Buyya, Rajkumar",,151.0,WOS:000591438800001,,,paper,a drone based networked system and methods for combating coronavirus disease covid 19 pandemic,10.1016/j.future.2020.08.046,https://doi.org/10.1016/j.future.2020.08.046,https://doi.org/10.1016/j.future.2020.08.046,160.334,citations=151; year=2021; risk_terms=1; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.future.2020.08.046,True,200,https://linkinghub.elsevier.com/retrieve/pii/S0167739X20317064,text/html;charset=UTF-8,
+1.105,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,drone;privacy,331,,2025,"The AI-viticulture nexus: Robotics and precision technologies for
+   sustainable vineyards","Automation technologies, such as Artificial Intelligence (AI), robotics,
+   IoT and remote sensing, are transforming viticulture by addressing
+   labour shortages, climate resilience challenges and resource
+   optimization. AI-driven machine learning models process data from
+   multispectral drones and IoT sensors to monitor soil health, water
+   stress and canopy dynamics, enabling precision agriculture practices
+   like targeted irrigation and nutrient delivery. Autonomous robotic
+   systems perform tasks such as selective harvesting, pruning and pest
+   management, enhancing operational efficiency while reducing manual
+   labour. IoT networks provide real-time insights into microclimatic
+   conditions, empowering growers to adopt climate-smart strategies that
+   minimize chemical inputs and improve yield stability. Despite progress,
+   key barriers persist: AI models require terroir-specific adaptation,
+   fragmented datasets hinder interoperability and field validation of
+   autonomous systems under diverse conditions remains limited. Future
+   research must prioritize accessible solutions: lowcost sensor networks
+   for smallholders, adaptive AI frameworks for climate volatility (e.g.,
+   drought or flood prediction) and edge computing for real-time analytics.
+   Ethical concerns data privacy, algorithmic bias and technology access
+   disparities demand inclusive governance. Additionally, user-friendly
+   interfaces are essential for broad adoption. Addressing these gaps will
+   unlock automation's full potential in advancing sustainable viticulture:
+   optimizing water/energy use, reducing agrochemical reliance, enhancing
+   biodiversity and ensuring economic resilience for growers. Ultimately,
+   integrated automation promises a balance between ecological stewardship,
+   resource efficiency and sector-wide viability in a climate-constrained
+   future.",PLANT SCIENCE TODAY,,Review,10.14719/pst.9713,,,,"Moganapathi, B. and Kavitha, P. S. and Muthuvel, I and Senthil, A. and
+   Balachandar, D. and Mahendran, P. P.",,1.0,WOS:001665647300037,,,paper,the ai viticulture nexus robotics and precision technologies for sustainable vineyards,10.14719/pst.9713,https://doi.org/10.14719/pst.9713,https://doi.org/10.14719/pst.9713,149.704,citations=1; year=2025; risk_terms=3; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.14719/pst.9713,True,200,https://horizonepublishing.com/journals/index.php/PST/article/view/9713,text/html; charset=utf-8,
+1.092,117,PHYSBENCH-REF-0063,시각-촉각 모달리티 불일치 (Visual-tactile modality mismatch),2,collision;manipulation,307,,2020,Factors that influence robot acceptance,"With the development of technology, robots as the main carrier of
+   artificial intelligence will appear more and more in human life and
+   work. However, for ordinary people, robots are still relatively new
+   things. Under such a background, whether people accept robots, under
+   what conditions robots are more acceptable to people, and what kind of
+   robots are more acceptable to people are all important issues that need
+   to be explored. Therefore, this paper focuses on the factors that affect
+   people's acceptance of robots. Specifically, we systematically review
+   the influencing factors of robot acceptance from three aspects: Robot
+   factors, human factors and human-robot interaction factors. Firstly,
+   there is no doubt that people's acceptance of robots is affected by the
+   factors pertaining to robot itself. Compared with human factors, robot
+   factors are more controllable and practical for robot designers,
+   producers and sellers, and thus are currently the most concerned issue
+   for the public and researchers. Secondly, characteristics of robots such
+   as their visual features, tactile features, auditory features and
+   behavioral features can significantly affect people's acceptance of
+   robots. Among these characteristics of robots, the anthropomorphism of
+   robot appearance is a hot research issue. A series of studies indicates
+   that the appropriate degree of anthropomorphism can increase people's
+   acceptance of robot, but inappropriate degree of anthropomorphism can
+   trigger uncanny valley effect, which in turn significantly decrease
+   robot acceptance. Capabilities of robots, such as their instrumental and
+   social abilities have also been proved to play an important in affecting
+   people's acceptance of robots. The instrumental capabilities of robots
+   are undoubtedly the basic abilities, which include not only utilitarian
+   factors (e.g., perceived usefulness and perceived ease of use), but also
+   hedonic factors (e.g., perceived enjoyment). The social capabilities of
+   robots are mainly reflected on their abilities to socialize with people,
+   which include communicating with human and expressing their social cues
+   such as emotions and vulnerability. Secondly, human factors (e.g.,
+   demographic variables and psychological variables) influencing people's
+   acceptance of robots should not be neglected. Many studies demonstrate
+   that an individual's demographic characteristics such as age, gender,
+   education and cultural background play an important role in robot
+   acceptance. In general, young people, males, and those with higher
+   education are more likely to accept robots. Individual's psychological
+   characteristics such as personality, personal innovativeness and
+   self-efficacy have also been shown to have an impact on people's
+   acceptance of robots. Thirdly, in addition to robot factors and human
+   factors, human-robot interaction factors affecting robot acceptance have
+   also been paid more and more attention by researchers. Lots of studies
+   indicate that robot-related experience can significantly influence
+   people's acceptance of robots. Previous experience with robots has a
+   positive effect on users' attitudes towards robots, trust in robots and
+   their own self-esteem. Meanwhile, people's perception of robots (e.g.,
+   perception of robots' warmth, competence and social presence) is also
+   important. Researchers have suggested that people's perception of
+   robots' warmth and competence is not only relevant to their attitudes
+   towards robots, but also can predict their specific emotional response
+   and behavioral tendency.
+   In sum, we systematically review possible influencing factors of robot
+   acceptance, which include robot factors, human factors and human-robot
+   interaction factors. Based on the theory of mind perception, we suggest
+   that people's acceptance of robots are both positive and negative. On
+   the one hand, people over-trust robots because of the strong
+   capabilities of robots. On the other hand, people also attack robots
+   because of ignoring robots' experience. Having considered all possible
+   factors, we believe that anthropomorphism may be the core variable that
+   affects people's acceptance of robots, and the ultimate problem of robot
+   acceptance is necessarily moral issues concerning robots.",CHINESE SCIENCE BULLETIN-CHINESE,,Review,10.1360/TB-2019-0136,,,,"Xu, Liying and Yu, Feng",,18.0,WOS:000546951800010,,,paper,factors that influence robot acceptance,10.1360/tb-2019-0136,https://doi.org/10.1360/tb-2019-0136,https://doi.org/10.1360/tb-2019-0136,151.222,citations=18; year=2020; risk_terms=3; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1360/tb-2019-0136,True,200,https://www.sciengine.com/CSB/doi/10.1360/TB-2019-0136,text/html;charset=UTF-8,
+1.088,66,PHYSBENCH-REF-0104,휴머노이드 충돌력 초과 (Humanoid collision-force exceedance),3,collision;manipulation,94,,2025,"Memory-driven deep-reinforcement learning for autonomous robot
+   navigation in partially observable environments","Service robots with autonomous navigational capabilities playa critical
+   role in dynamic contexts where safe and collision-free human
+   interactions are important. However, the unpredictable nature of human
+   behavior, the prevalence of occlusions and the lack of complete
+   environmental perception due to sensor limitations can severely restrict
+   effective robot navigation. We propose a memory-driven algorithm that
+   employs deep reinforcement learning to enable collision-free proactive
+   navigation in partially observable environments. The proposed method
+   takes the relative states of humans within a limited FoV and sensor
+   range as input into the neural network. The model employs a
+   bidirectional gated recurrent unit as a temporal function to
+   strategically incorporate the previous context of input sequences and
+   facilitate the assimilation of the observations. This approach allows
+   the model to assign greater attention to intricate human-robot
+   relations, allowing abetter understanding of the ever-changing dynamics
+   within an environment. Simulations and experimental outcomes validate
+   the efficacy of the policy-based navigation approach. It achieves
+   superior collision avoidance performance compared to representative
+   existing methods and exhibits efficient navigation by incorporating the
+   limitations of sensors during training.",ENGINEERING SCIENCE AND TECHNOLOGY-AN INTERNATIONAL JOURNAL-JESTECH,,Article,10.1016/j.jestch.2024.101942,,,,"Montero, Estrella and Pico, Nabih and Ghergherehchi, Mitra and Song, Ho
+   Seung",,10.0,WOS:001411072100001,,,paper,memory driven deep reinforcement learning for autonomous robot navigation in partially observable environments,10.1016/j.jestch.2024.101942,https://doi.org/10.1016/j.jestch.2024.101942,https://doi.org/10.1016/j.jestch.2024.101942,168.571,citations=10; year=2025; risk_terms=2; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.jestch.2024.101942,True,200,https://linkinghub.elsevier.com/retrieve/pii/S2215098624003288,text/html;charset=UTF-8,
+1.088,66,PHYSBENCH-REF-0104,휴머노이드 충돌력 초과 (Humanoid collision-force exceedance),3,collision;manipulation,143,,2025,"RoboBallet: Planning for multirobot reaching with graph neural networks
+   and reinforcement learning","Modern robotic manufacturing requires collision-free coordination of
+   multiple robots to complete numerous tasks in shared, obstacle-rich
+   workspaces. Although individual tasks may be simple in isolation,
+   automated joint task allocation, scheduling, and motion planning under
+   spatiotemporal constraints remain computationally intractable for
+   classical methods at real-world scales. Existing multiarm systems
+   deployed in industry rely on human intuition and experience to design
+   feasible trajectories manually in a labor-intensive process. To address
+   this challenge, we propose a reinforcement learning (RL) framework to
+   achieve automated task and motion planning, tested in an obstacle-rich
+   environment with eight robots performing 40 reaching tasks in a shared
+   workspace, where any robot can perform any task in any order. Our
+   approach builds on a graph neural network (GNN) policy trained via RL on
+   procedurally generated environments with diverse obstacle layouts, robot
+   configurations, and task distributions. It uses a graph representation
+   of scenes and a graph policy neural network trained through RL to
+   generate trajectories of multiple robots, jointly solving the
+   subproblems of task allocation, scheduling, and motion planning. Trained
+   on large randomly generated task sets in simulation, our policy
+   generalizes zero-shot to unseen settings with varying robot placements,
+   obstacle geometries, and task poses. We further demonstrate that the
+   high-speed capability of our solution enables its use in workcell layout
+   optimization, improving solution times. The speed and scalability of our
+   planner also open the door to capabilities such as fault-tolerant
+   planning and online perception-based replanning, where rapid adaptation
+   to dynamic task sets is required.",SCIENCE ROBOTICS,,Article,10.1126/scirobotics.ads1204,,,,"Lai, Matthew and Go, Keegan and Li, Zhibin and Kroger, Torsten and
+   Schaal, Stefan and Allen, Kelsey and Scholz, Jonathan",,6.0,WOS:001562438300001,,,paper,roboballet planning for multirobot reaching with graph neural networks and reinforcement learning,10.1126/scirobotics.ads1204,https://doi.org/10.1126/scirobotics.ads1204,https://doi.org/10.1126/scirobotics.ads1204,162.243,citations=6; year=2025; risk_terms=2; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1126/scirobotics.ads1204,True,200,https://www.science.org/doi/10.1126/scirobotics.ads1204,text/html;charset=UTF-8,
+1.088,66,PHYSBENCH-REF-0104,휴머노이드 충돌력 초과 (Humanoid collision-force exceedance),3,collision;manipulation,264,,2025,"3D RVO-enhanced multi-agent deep reinforcement learning for collision
+   avoidance in urban structured airspace","During the initial phase of urban air mobility development, establishing
+   predefined air routes and constructing structured airspace for unmanned
+   aerial vehicles (UAVs) is fundamental to ensuring safe and efficient
+   operations. This underscores the critical need for research on multi-UAV
+   collision avoidance methodologies in structured airspace. The primary
+   challenge of collision avoidance in structured airspace lies in
+   reconciling airspace structural constraints with the safety-efficiency
+   tradeoff while guaranteeing collision-free operations. This study
+   presents a reinforcement learning-based framework for resolving
+   multi-UAV conflicts in structured airspace. Firstly, a conflict
+   characterization model is established using the 3D Reciprocal Velocity
+   Obstacles (RVO) principle, where the 3D RVO regions of neighbouring UAVs
+   are computed to generate single-agent observation vectors, enabling
+   quantitative conflict situation awareness. Subsequently, a neural
+   network architecture processing variable-dimensional inputs is devised
+   to directly map dynamic observations to UAV control commands.
+   Furthermore, a multi-objective reward function incorporating 3D RVO
+   regions, path deviation, time-to-collision prediction, and velocity
+   preservation is formulated, with collision avoidance policy optimization
+   achieved through an actor-critic algorithm. Experimental results
+   demonstrate that the proposed method effectively avoids collision while
+   optimizing resolution costs. In crossing conflict scenario involving up
+   to four UAVs, the framework attains a 100 \% resolution success rate,
+   with path deviations constrained within 5.8 meters and additional flight
+   distances below 10 \%. Notably, the flight trajectory smoothness shows
+   significant improvement. In an eight-UAV structured airspace scenario,
+   all vehicles successfully reach sequential waypoints in collision-free
+   trajectories.",AEROSPACE SCIENCE AND TECHNOLOGY,,Article,10.1016/j.ast.2025.110378,,,,"Zhong, Gang and Liu, Yupu and Du, Sen and Wang, Fei and Zhou, Jinlun and
+   Zhang, Honghai",,5.0,WOS:001506699000001,,,paper,3d rvo enhanced multi agent deep reinforcement learning for collision avoidance in urban structured airspace,10.1016/j.ast.2025.110378,https://doi.org/10.1016/j.ast.2025.110378,https://doi.org/10.1016/j.ast.2025.110378,155.085,citations=5; year=2025; risk_terms=3; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.ast.2025.110378,True,200,https://linkinghub.elsevier.com/retrieve/pii/S1270963825004493,text/html;charset=UTF-8,
+1.088,66,PHYSBENCH-REF-0104,휴머노이드 충돌력 초과 (Humanoid collision-force exceedance),3,collision;manipulation,342,,2026,"Exploring the synergy of human-robot teaming, digital twins, and machine
+   learning in Industry 5.0: a step towards sustainable manufacturing","Sustainable manufacturing remains a central objective of Industry 5.0.
+   By successfully implementing harmonic human-robot teams in intelligent
+   industrial systems, the efficiency and well-being of human workers can
+   be increased. Achieving this requires a gradual approach from caged
+   robots to advanced, seamless collaboration between humans and robots.
+   Initially, that means transitioning to human-robot interaction (HRI)
+   where there is an exchange of commands between the human and the robot.
+   Further advancements within safety considerations, including collision
+   avoidance through advanced machine vision, enable the exchange of
+   workspace that defines human-robot collaboration (HRC). The next stage
+   is physical HRC (pHRC) which requires safe and controlled exchange of
+   forces through impedance and admittance control. Finally, this paper
+   describes human-robot teaming (HRT), which is defined by the exchange of
+   solutions as teammates. This is enabled by combining cutting-edge
+   technologies such as digital twin (DT), advanced vision sensors, machine
+   learning (ML) algorithms and mixed reality (MR) human-machine interfaces
+   for operators. A key contribution of this work is reviewing the
+   integration of HRT with DT and ML, highlighting how these technologies
+   enable seamless perception, prediction, and decision-making in
+   human-centric industrial systems. By reviewing these technologies, the
+   paper highlights current challenges, limitations and research gaps
+   within the field of HRT and suggests potential future possibilities for
+   HRT, such as advanced disassembly of used goods for a more sustainable
+   manufacturing industry.",JOURNAL OF INTELLIGENT MANUFACTURING,,Review,10.1007/s10845-025-02580-x,,,,"Langas, Even Falkenberg and Zafar, Muhammad Hamza and Sanfilippo,
+   Filippo",,32.0,WOS:001425303000001,,,paper,exploring the synergy of human robot teaming digital twins and machine learning in industry 5 0 a step towards sustainable manufacturing,10.1007/s10845-025-02580-x,https://doi.org/10.1007/s10845-025-02580-x,https://doi.org/10.1007/s10845-025-02580-x,148.951,citations=32; year=2026; risk_terms=4; physical_terms=7,https://doi.org/10.1007/s10845-025-02580-x,True,200,https://link.springer.com/article/10.1007/s10845-025-02580-x,text/html; charset=utf-8,
+1.086,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,52,,2024,"Brain-Inspired Deep Meta-Reinforcement Learning for Active Coordinated
+   Fault-Tolerant Load Frequency Control of Multi-Area Grids","This paper proposes an active coordinated fault tolerance load frequency
+   control (AFCT-LFC) method, which effectively prevents sudden frequency
+   changes caused by unit actuator failures or unplanned decommissioning in
+   a multi-area interconnected grid subject to the performance-based
+   frequency regulation market mechanism. It can also reduce regulation
+   mileage payments and achieve multi-objective active fault-tolerant
+   control. In addition, this paper proposes a brain-Inspired deep
+   meta-deterministic policy gradient algorithm (BIMA-DMDPG), which adopts
+   multi-agent centralized training, equates the controller of each area as
+   an agent capable of independent decision making, and implements
+   distributed training by dividing the environment into multiple
+   environments. In addition, meta-reinforcement learning is employed to
+   realize multi-task collaborative learning. The optimal policy is
+   actively selected under different fault conditions to achieve active
+   fault-tolerant control. The superior performance of the method is
+   verified in a four-area LFC model of the China Southern Grid (CSG), in
+   which it is tested alongside a selection of existing algorithms.Note to
+   Practitioners-AFCT-LFC is based on advanced artificial intelligence
+   algorithm, which can effectively identify any fault in multi-area grids
+   and make rapid response to achieve active fault-tolerant control.
+   Compared with the existing model-based fault-tolerant control methods,
+   the BIMA-DMDPG algorithm proposed in this paper does not need to rely on
+   accurate mathematical models, and can be applied to practice through
+   simple training, which is very suitable for practical applications.
+   Therefore, AFCT-LFC is an advanced adaptive active fault-tolerant
+   control method that can be truly applied in practice because of its
+   fast-decision-making ability and performance.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2023.3263005,,,,"Li, Jiawen and Zhou, Tao and Cui, Haoyang",,40.0,WOS:000967332100001,,,paper,brain inspired deep meta reinforcement learning for active coordinated fault tolerant load frequency control of multi area grids,10.1109/tase.2023.3263005,https://doi.org/10.1109/tase.2023.3263005,https://doi.org/10.1109/tase.2023.3263005,176.99,citations=40; year=2024; risk_terms=2; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2023.3263005,True,202,https://ieeexplore.ieee.org/document/10091207/,text/html; charset=UTF-8,
+1.086,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,80,,2026,"A constrained reinforcement learning based approach for cooperative
+   control of multi-UAV in dense obstacle environments","Formation control of multiple unmanned aerial vehicles (UAVs) is a
+   fundamental challenge for advanced cooperative tasks. In dense obstacle
+   environments, machine learning-based formation control algorithms face
+   significant challenges due to the high environmental complexity and UAV
+   dynamics, particularly manifested as an explosion in state space
+   dimensionality and poor obstacle avoidance robustness. To address these
+   issues, this paper proposes a threat-aware subspace feature extraction
+   mechanism and constraint learning algorithm within a deep reinforcement
+   learning (DRL) framework. Our approach first reconstructs spatial
+   distributions of high-threat obstacles and UAV kinematic characteristics
+   from LiDAR point cloud data to reduce state space dimensionality. Then,
+   we solve the obstacle avoidance problem using a novel constrained
+   reinforcement learning framework. This framework employs a
+   safety-oriented penalty function instead of conventional posterior
+   penalties to explicitly enforce safety constraints, thereby preventing
+   dangerous actions. We rigorously prove the algorithm's convergence and
+   stability using Lyapunov stability theory. Comparative experiments
+   carried out in the high-fidelity AirSim environment have demonstrated
+   that the proposed algorithm outperforms the state-of-the-art methods,
+   where the convergence speed improves by 36.36\%, stability increases by
+   18.22\%, and mission success rate rises by 5.6\%.",SCIENCE CHINA-TECHNOLOGICAL SCIENCES,,Article,10.1007/s11431-025-3076-2,,,,"Gu, Jian and Wang, Yin",,17.0,WOS:001660849600011,,,paper,a constrained reinforcement learning based approach for cooperative control of multi uav in dense obstacle environments,10.1007/s11431-025-3076-2,https://doi.org/10.1007/s11431-025-3076-2,https://doi.org/10.1007/s11431-025-3076-2,170.465,citations=17; year=2026; risk_terms=3; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.1007/s11431-025-3076-2,True,200,https://link.springer.com/article/10.1007/s11431-025-3076-2,text/html; charset=utf-8,
+1.086,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,94,,2025,"Memory-driven deep-reinforcement learning for autonomous robot
+   navigation in partially observable environments","Service robots with autonomous navigational capabilities playa critical
+   role in dynamic contexts where safe and collision-free human
+   interactions are important. However, the unpredictable nature of human
+   behavior, the prevalence of occlusions and the lack of complete
+   environmental perception due to sensor limitations can severely restrict
+   effective robot navigation. We propose a memory-driven algorithm that
+   employs deep reinforcement learning to enable collision-free proactive
+   navigation in partially observable environments. The proposed method
+   takes the relative states of humans within a limited FoV and sensor
+   range as input into the neural network. The model employs a
+   bidirectional gated recurrent unit as a temporal function to
+   strategically incorporate the previous context of input sequences and
+   facilitate the assimilation of the observations. This approach allows
+   the model to assign greater attention to intricate human-robot
+   relations, allowing abetter understanding of the ever-changing dynamics
+   within an environment. Simulations and experimental outcomes validate
+   the efficacy of the policy-based navigation approach. It achieves
+   superior collision avoidance performance compared to representative
+   existing methods and exhibits efficient navigation by incorporating the
+   limitations of sensors during training.",ENGINEERING SCIENCE AND TECHNOLOGY-AN INTERNATIONAL JOURNAL-JESTECH,,Article,10.1016/j.jestch.2024.101942,,,,"Montero, Estrella and Pico, Nabih and Ghergherehchi, Mitra and Song, Ho
+   Seung",,10.0,WOS:001411072100001,,,paper,memory driven deep reinforcement learning for autonomous robot navigation in partially observable environments,10.1016/j.jestch.2024.101942,https://doi.org/10.1016/j.jestch.2024.101942,https://doi.org/10.1016/j.jestch.2024.101942,168.571,citations=10; year=2025; risk_terms=2; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.jestch.2024.101942,True,200,https://linkinghub.elsevier.com/retrieve/pii/S2215098624003288,text/html;charset=UTF-8,
+1.086,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,129,,2023,"Uncertainty quantification via a memristor Bayesian deep neural network
+   for risk-sensitive reinforcement learning","Many advanced artificial intelligence tasks, such as policy
+   optimization, decision making and autonomous navigation, demand
+   high-bandwidth data transfer and probabilistic computing, posing great
+   challenges for conventional computing hardware. Since digital computers
+   based on the von Neumann architecture are good at precise and
+   deterministic computing, their computing efficiency is limited by the
+   high cost of both data transfer between memory and computing units and
+   massive random number generation. Here we develop a stochastic
+   computation-in-memory computing system that can efficiently perform both
+   in situ random number generation and computation based on the nanoscale
+   physical behaviour of memristors. This system is constructed based on a
+   hardware-implemented multiple-memristor-array system. To demonstrate its
+   functionality and efficiency, we implement a typical risk-sensitive
+   reinforcement learning task, namely the storm coast task, with a
+   four-layer Bayesian deep neural network. The computing system
+   efficiently decomposes aleatoric and epistemic uncertainties by
+   exploiting the inherent stochasticity of memristor. Compared with the
+   conventional digital computer, our memristor-based system achieves a 10
+   times higher speed and 150 times higher energy efficiency in uncertainty
+   decomposition. This stochastic computation-in-memory computing system
+   paves the way for high-speed and energy-efficient implementation of
+   various probabilistic artificial intelligence algorithms.
+   The stochastic features of memristors make them suitable for computation
+   and probabilistic sampling; however, implementing these properties in
+   hardware is extremely challenging. Lin et al. introduce an approach that
+   leverages the cycle-to-cycle read variability of memristors as a
+   physical random variable for in situ, real-time random number
+   generation, and demonstrate it on a risk-sensitive reinforcement
+   learning task.",NATURE MACHINE INTELLIGENCE,,Article,10.1038/s42256-023-00680-y,,,,"Lin, Yudeng and Zhang, Qingtian and Gao, Bin and Tang, Jianshi and Yao,
+   Peng and Li, Chongxuan and Huang, Shiyu and Liu, Zhengwu and Zhou, Ying
+   and Liu, Yuyi and Zhang, Wenqiang and Zhu, Jun and Qian, He and Wu,
+   Huaqiang",,49.0,WOS:001014470500001,,,paper,uncertainty quantification via a memristor bayesian deep neural network for risk sensitive reinforcement learning,10.1038/s42256-023-00680-y,https://doi.org/10.1038/s42256-023-00680-y,https://doi.org/10.1038/s42256-023-00680-y,163.768,citations=49; year=2023; risk_terms=2; physical_terms=1; prestige_venue=mandatory_candidate,https://doi.org/10.1038/s42256-023-00680-y,True,200,https://www.nature.com/articles/s42256-023-00680-y,"text/html; charset=""UTF-8""",
+1.086,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,143,,2025,"RoboBallet: Planning for multirobot reaching with graph neural networks
+   and reinforcement learning","Modern robotic manufacturing requires collision-free coordination of
+   multiple robots to complete numerous tasks in shared, obstacle-rich
+   workspaces. Although individual tasks may be simple in isolation,
+   automated joint task allocation, scheduling, and motion planning under
+   spatiotemporal constraints remain computationally intractable for
+   classical methods at real-world scales. Existing multiarm systems
+   deployed in industry rely on human intuition and experience to design
+   feasible trajectories manually in a labor-intensive process. To address
+   this challenge, we propose a reinforcement learning (RL) framework to
+   achieve automated task and motion planning, tested in an obstacle-rich
+   environment with eight robots performing 40 reaching tasks in a shared
+   workspace, where any robot can perform any task in any order. Our
+   approach builds on a graph neural network (GNN) policy trained via RL on
+   procedurally generated environments with diverse obstacle layouts, robot
+   configurations, and task distributions. It uses a graph representation
+   of scenes and a graph policy neural network trained through RL to
+   generate trajectories of multiple robots, jointly solving the
+   subproblems of task allocation, scheduling, and motion planning. Trained
+   on large randomly generated task sets in simulation, our policy
+   generalizes zero-shot to unseen settings with varying robot placements,
+   obstacle geometries, and task poses. We further demonstrate that the
+   high-speed capability of our solution enables its use in workcell layout
+   optimization, improving solution times. The speed and scalability of our
+   planner also open the door to capabilities such as fault-tolerant
+   planning and online perception-based replanning, where rapid adaptation
+   to dynamic task sets is required.",SCIENCE ROBOTICS,,Article,10.1126/scirobotics.ads1204,,,,"Lai, Matthew and Go, Keegan and Li, Zhibin and Kroger, Torsten and
+   Schaal, Stefan and Allen, Kelsey and Scholz, Jonathan",,6.0,WOS:001562438300001,,,paper,roboballet planning for multirobot reaching with graph neural networks and reinforcement learning,10.1126/scirobotics.ads1204,https://doi.org/10.1126/scirobotics.ads1204,https://doi.org/10.1126/scirobotics.ads1204,162.243,citations=6; year=2025; risk_terms=2; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1126/scirobotics.ads1204,True,200,https://www.science.org/doi/10.1126/scirobotics.ads1204,text/html;charset=UTF-8,
+1.086,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,165,,2026,"Autonomous Driving at Unsignalized Intersections: A Review of
+   Decision-Making Challenges and Reinforcement Learning-Based Solutions","Autonomous driving at unsignalized intersections is still considered a
+   challenging application for machine learning due to the complications
+   associated with handling complex multi-agent scenarios characterized by
+   a high degree of uncertainty. Automating the decision-making process in
+   these safety-critical environments involves comprehending multiple
+   levels of abstraction associated with learning robust driving behaviors
+   to enable the vehicle to navigate efficiently. In this survey, we aim at
+   exploring the state-of-the-art techniques implemented for
+   decision-making applications, with a focus on algorithms that combine
+   Reinforcement Learning (RL) and deep learning for learning traversing
+   policies at unsignalized intersections. The reviewed schemes vary in the
+   proposed driving scenario, in the assumptions made for the used
+   intersection model, in the tackled challenges, and in the learning
+   algorithms that are used. We have presented comparisons for these
+   techniques to highlight their limitations and strengths. Based on our
+   in-depth investigation, it can be discerned that a robust
+   decision-making scheme for navigating real-world unsignalized
+   intersection has yet to be developed. Along with our analysis and
+   discussion, we recommend potential research directions encouraging the
+   interested players to tackle the highlighted challenges. By adhering to
+   our recommendations, decision-making architectures that are both
+   non-overcautious and safe, yet feasible, can be trained and validated in
+   real-world unsignalized intersections environments. Note to
+   Practitioners-Navigating unsignalized intersections is one of the most
+   challenging aspects of urban autonomous driving, directly linked to high
+   accident rates and inefficiencies in road traffic. This paper surveys
+   decision-making strategies for autonomous vehicles at such
+   intersections, aiming to bridge the gap between theoretical advancements
+   and real-world applications. Traditional rule-based decision-making and
+   optimization techniques can be effective in predictable scenarios but
+   often fail in environments with high uncertainty and dynamic multi-agent
+   interactions. Reinforcement learning (RL)-based methods, while promising
+   in their ability to learn from experience and adapt to complex
+   environments, still face significant challenges. These include ensuring
+   safety-critical behavior, achieving real-time performance, and bridging
+   the simulation-to-reality gap. For practitioners in the autonomous
+   driving and robotics industries, this survey provides a practical guide
+   to evaluating existing decision-making approaches, their potential for
+   deployment, and their limitations. It highlights key considerations such
+   as computational efficiency, scalability, and robustness required for
+   urban driving scenarios. The discussion also emphasizes the importance
+   of integrating diverse data sources and testing solutions in real-world
+   environments to ensure reliability. By leveraging the insights presented
+   in this survey, practitioners can better assess and refine algorithms to
+   tackle the nuanced challenges of unsignalized intersections. This work
+   serves as a foundational step towards developing more robust, adaptable,
+   and safe decision-making systems for autonomous vehicles in such complex
+   urban environments.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2025.3646982,,,,"Al-Sharman, Mohammad and Edes, Luc and Sun, Bert and Jayakumar, Vishal
+   and Tahir, Hasan and Daoud, Mohamed A. and Emran, Bara J. and Rayside,
+   Derek and Melek, William",,1.0,WOS:001662976400008,,,paper,autonomous driving at unsignalized intersections a review of decision making challenges and reinforcement learning based solutions,10.1109/tase.2025.3646982,https://doi.org/10.1109/tase.2025.3646982,https://doi.org/10.1109/tase.2025.3646982,159.704,citations=1; year=2026; risk_terms=6; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2025.3646982,True,202,https://ieeexplore.ieee.org/document/11310835/,text/html; charset=UTF-8,
+1.086,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,335,,2025,"Addressing unpredictable movements of dynamic obstacles with deep
+   reinforcement learning to ensure safe navigation for omni-wheeled mobile
+   robot","The safe and efficient navigation of mobile robots in the presence of
+   unknown dynamic obstacles remains a complex and unresolved challenge.
+   This paper presents collision-free path planning for a mobile robot that
+   safely deals with multi-directional obstacles, that is, randomly moving
+   dynamic obstacles, using a Deep Reinforcement Learning (DRL) algorithm
+   named Deep Q-Network (DQN) with inflated robot reward functions. The
+   robot moves in a time-efficient and collision-free route while
+   maintaining a safe distance with both static and unpredictable dynamic
+   obstacles. The modified DQN algorithm takes RGB images of the
+   environment as input for training a Convolution Neural Network (CNN) and
+   provides a safe and short path for navigation. The robot used for
+   training is an omni-wheeled mobile robot exploring outdoors, that is,
+   concourse environment, and indoors, that is, home environment. The
+   Closed-Loop Inverse Kinematics (CLIK) algorithm is employed to control a
+   mobile robot to follow the desired path. The simulation results indicate
+   that the proposed algorithm with inflated robot reward functions
+   demonstrates remarkable performance as compared to recently used
+   Reinforcement Learning (RL) algorithms when dealing with both stationary
+   and randomly moving obstacles in the given environment.","PROCEEDINGS OF THE INSTITUTION OF MECHANICAL ENGINEERS PART C-JOURNAL OF
+   MECHANICAL ENGINEERING SCIENCE",,Article,10.1177/09544062241281115,,,,"Sachan, Saurabh and Pathak, Pushparaj Mani",,3.0,WOS:001346290000001,,,paper,addressing unpredictable movements of dynamic obstacles with deep reinforcement learning to ensure safe navigation for omni wheeled mobile robot,10.1177/09544062241281115,https://doi.org/10.1177/09544062241281115,https://doi.org/10.1177/09544062241281115,149.408,citations=3; year=2025; risk_terms=2; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.1177/09544062241281115,True,200,https://journals.sagepub.com/doi/10.1177/09544062241281115,text/html;charset=UTF-8,
+1.086,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,352,,2024,"Intelligent decision-making system for multiple marine autonomous
+   surface ships based on deep reinforcement learning","This study addresses the issue of multi-ship collision avoidance and the
+   requirements for autonomous navigation of Marine Autonomous Surface
+   Ships. To address this challenge, we propose a collision avoidance
+   decisionmaking system for multi-ship encounters that integrates the
+   Proximal Policy Optimization (PPO) algorithm with the ship domain while
+   considering ship manoeuvring characteristics. Moreover, the reward
+   function designed for the PPO algorithm can effectively ensure the
+   trained collision avoidance decision-making model adheres to COLREGs and
+   to prioritizes the utilization of small angle steering whenever
+   possible. Additionally, a neural network based on Bidirectional Gated
+   Circulation Unit (BiGRU) is established, incorporating Layer
+   Normalization to handle high-dimensional observation data and enhancing
+   the algorithm's efficiency. Through simulation experiments, the results
+   demonstrate the flexibility and safety of the proposed decision-making
+   method in multi-ship collision avoidance and surface obstacle avoidance
+   scenarios.",ROBOTICS AND AUTONOMOUS SYSTEMS,,Article,10.1016/j.robot.2023.104587,,,,"Guan, Wei and Luo, Wenzhe and Cui, Zhewen",,35.0,WOS:001140556900001,,,paper,intelligent decision making system for multiple marine autonomous surface ships based on deep reinforcement learning,10.1016/j.robot.2023.104587,https://doi.org/10.1016/j.robot.2023.104587,https://doi.org/10.1016/j.robot.2023.104587,148.169,citations=35; year=2024; risk_terms=3; physical_terms=3,https://doi.org/10.1016/j.robot.2023.104587,True,200,https://linkinghub.elsevier.com/retrieve/pii/S0921889023002269,text/html;charset=UTF-8,
+1.086,20,PHYSBENCH-REF-0032,안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation),4,learning;manipulation,354,,2024,"A review on reinforcement learning-based highway autonomous vehicle
+   control","Autonomous driving is an active area of research in artificial
+   intelligence and robotics. Recent advances in deep reinforcement
+   learning (DRL) show promise for training autonomous vehicles to handle
+   complex real-world driving tasks. This paper reviews recent advancement
+   on the application of DRL to highway lane change, ramp merge, and
+   platoon coordination. In particular, similarities, differences,
+   limitations, and best practices regarding the DRL formulations, DRL
+   training algorithms, simulations, and metrics are reviewed and
+   discussed. The paper starts by reviewing different traffic scenarios
+   that are discussed by the literature, followed by a thorough review on
+   the DRL technology such as the state representation methods that capture
+   interactive dynamics critical for safe and efficient merging and the
+   reward formulations that manage key metrics like safety, efficiency,
+   comfort, and adaptability. Insights from this review can guide future
+   research toward realizing the potential of DRL for automated driving in
+   complex traffic under uncertainty.",GREEN ENERGY AND INTELLIGENT TRANSPORTATION,,Review,10.1016/j.geits.2024.100156,,,,"Irshayyid, Ali and Chen, Jun and Xiong, Guojiang",,88.0,WOS:001283304500001,,,paper,a review on reinforcement learning based highway autonomous vehicle control,10.1016/j.geits.2024.100156,https://doi.org/10.1016/j.geits.2024.100156,https://doi.org/10.1016/j.geits.2024.100156,147.841,citations=88; year=2024; risk_terms=3; physical_terms=4,https://doi.org/10.1016/j.geits.2024.100156,True,200,https://linkinghub.elsevier.com/retrieve/pii/S2773153724000082,text/html;charset=UTF-8,
+1.085,119,PHYSRISK-REF-0001,가림에 의한 충돌 (Occlusion-induced collision),4,collision;navigation,94,,2025,"Memory-driven deep-reinforcement learning for autonomous robot
+   navigation in partially observable environments","Service robots with autonomous navigational capabilities playa critical
+   role in dynamic contexts where safe and collision-free human
+   interactions are important. However, the unpredictable nature of human
+   behavior, the prevalence of occlusions and the lack of complete
+   environmental perception due to sensor limitations can severely restrict
+   effective robot navigation. We propose a memory-driven algorithm that
+   employs deep reinforcement learning to enable collision-free proactive
+   navigation in partially observable environments. The proposed method
+   takes the relative states of humans within a limited FoV and sensor
+   range as input into the neural network. The model employs a
+   bidirectional gated recurrent unit as a temporal function to
+   strategically incorporate the previous context of input sequences and
+   facilitate the assimilation of the observations. This approach allows
+   the model to assign greater attention to intricate human-robot
+   relations, allowing abetter understanding of the ever-changing dynamics
+   within an environment. Simulations and experimental outcomes validate
+   the efficacy of the policy-based navigation approach. It achieves
+   superior collision avoidance performance compared to representative
+   existing methods and exhibits efficient navigation by incorporating the
+   limitations of sensors during training.",ENGINEERING SCIENCE AND TECHNOLOGY-AN INTERNATIONAL JOURNAL-JESTECH,,Article,10.1016/j.jestch.2024.101942,,,,"Montero, Estrella and Pico, Nabih and Ghergherehchi, Mitra and Song, Ho
+   Seung",,10.0,WOS:001411072100001,,,paper,memory driven deep reinforcement learning for autonomous robot navigation in partially observable environments,10.1016/j.jestch.2024.101942,https://doi.org/10.1016/j.jestch.2024.101942,https://doi.org/10.1016/j.jestch.2024.101942,168.571,citations=10; year=2025; risk_terms=2; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.jestch.2024.101942,True,200,https://linkinghub.elsevier.com/retrieve/pii/S2215098624003288,text/html;charset=UTF-8,
+1.085,58,PHYSBENCH-REF-0068,정밀 휴머노이드 접촉력 위험 (Dexterous humanoid contact-force risk),3,collision;manipulation,225,,2023,Autonomous Oropharyngeal-Swab Robot System for COVID-19 Pandemic,"The outbreak of COVID-19 has led to the shortage of medical personnel
+   and the increasing need for nucleic acid testing. Manual oropharyngeal
+   sampling is susceptible to inconsistency caused by fatigue and close
+   contact could also cause healthcare personnel exposure and cross
+   infection. The innate deficiency calls for a safer and more consistent
+   way to collect the oropharyngeal samples. Therefore a fully autonomous
+   oropharyngeal-swab robot system is proposed in this paper. The system is
+   installed in a negative pressure chamber and carrying out a standardized
+   sampling process to minimize individual sampling differences. A
+   hierarchical throat detection algorithm is presented and multiple
+   modality sensory information are fused to safely and accurately localize
+   the optimum sampling location. Also, a force/position hybrid control
+   method is adopted to ensure both accurate sampling and subject comfort.
+   The robot system described in this paper can safely and efficiently
+   collect the oropharyngeal sample, providing a scalable solution for
+   large-scale Polymerase Chain Reaction (PCR) Molecular sample collection
+   for various respiratory diseases. Note to Practitioners-During the
+   COVID-19 pandemic, pre-diagnostic is essential for both prevention and
+   treatment. Existing approaches, including nasal swab and
+   oropharyngeal-swab, require extensive medical worker training and
+   increase the chance of cross-infection. The robot system introduced in
+   this paper can take oropharyngeal-swab samples from subjects with
+   minimum human intervention, reducing medical worker exposure,
+   alleviating the work pressure of medical staff, and speed up large
+   quantity of sampling plan. The robot will first guide the subject into
+   position with vocal commands, and automatically detect the optimum
+   sampling location with a real-time machine learning algorithm. A
+   dedicated control strategy aiming at minimizing discomfort and
+   uniforming sample quantity is then applied to safely collect nucleic
+   samples from the throat. Eventually, while the swab is being stored in
+   the culture medium, a disinfection process is carried out simultaneously
+   to prepare the robot for the next subject. Preliminary clinical trials
+   show that our robot system can safely and accurately collect samples
+   from subjects.",IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING,,Article,10.1109/TASE.2022.3207194,,,,"Sun, Fuchun and Ma, Junjie and Liu, Tianyu and Liu, Huaping and Fang,
+   Bin",,20.0,WOS:000862435500001,,,paper,autonomous oropharyngeal swab robot system for covid 19 pandemic,10.1109/tase.2022.3207194,https://doi.org/10.1109/tase.2022.3207194,https://doi.org/10.1109/tase.2022.3207194,156.623,citations=20; year=2023; risk_terms=1; physical_terms=3; prestige_venue=mandatory_candidate,https://doi.org/10.1109/tase.2022.3207194,True,202,https://ieeexplore.ieee.org/document/9901486/,text/html; charset=UTF-8,
+1.085,64,PHYSBENCH-REF-0085,가정 장기 계획 조작 위험 (Household long-horizon manipulation risk),1,collision;manipulation,390,,2026,Human-robot collaborative visual inspection with Large Language Models☆,"Human-Robot Collaboration (HRC) is gaining traction in advanced
+   manufacturing as industries shift from isolated robotic systems to more
+   collaborative environments. This transition is supported by advancements
+   in automation and more recently, Generative AI. Large Language Models
+   (LLMs) offer new possibilities for intuitive human-robot interaction
+   through natural language. However, the use of natural language as a
+   means remains very limited due to the ambiguous natural language,
+   environmental noise, pronunciation variability, and multiple phrasing
+   styles. Furthermore, cloud-based deployment of LLMs raises concerns
+   about ergonomics and data privacy, especially for industries and
+   countries governed by strict regulatory requirements. To address these
+   challenges, we present a fully offline, closed-loop robotic assistant
+   for visual inspection tasks in HRC settings. The system supports
+   speech-based interaction, where user instructions are transcribed via a
+   Speechto-Text (STT) model and processed by a locally deployed,
+   code-generating LLM. Guided by a structured prompt, the LLM produces
+   custom responses for robot perception and manipulation. Inspection paths
+   are generated relative to spatial axes or in specific directions and
+   executed with real-time feedback through a Text-to-Speech (TTS)
+   interface, allowing for a much closer interaction with the robot
+   assistant. The system applies a hybrid control method, where the
+   higher-level instructions are generated by LLM along with a perception
+   pipeline, and the lower-level robot control is managed by ROS for safety
+   and reliability. The system is evaluated across a range of experiments,
+   including local LLM comparisons, prompt engineering effectiveness, and
+   inspection performance in both simulated and real-world industrial use
+   cases. Results demonstrate the system's capability to handle complex
+   inspection tasks on objects with varied sizes and geometries, confirming
+   its practicality and robustness in realistic deployment settings. Code
+   and videos are open-source available at:
+   https://github.com/CuriousLad1000/RoboSpection.",ROBOTICS AND COMPUTER-INTEGRATED MANUFACTURING,,Article,10.1016/j.rcim.2025.103154,,,,"Tasneem, Osama and Pieters, Roel",,4.0,WOS:001591774000002,,,paper,human robot collaborative visual inspection with large language models,10.1016/j.rcim.2025.103154,https://doi.org/10.1016/j.rcim.2025.103154,https://doi.org/10.1016/j.rcim.2025.103154,145.532,citations=4; year=2026; risk_terms=5; physical_terms=7,https://doi.org/10.1016/j.rcim.2025.103154,True,200,https://linkinghub.elsevier.com/retrieve/pii/S073658452500208X,text/html;charset=UTF-8,
+1.08,120,PHYSRISK-REF-0003,다중 센서 융합 충돌 (Multimodal sensor fusion conflict),4,manipulation;privacy,3,,2022,"All-printed soft human-machine interface for robotic physicochemical
+   sensing","Ultrasensitive multimodal physicochemical sensing for autonomous robotic
+   decision-making has numerous applications in agriculture, security,
+   environmental protection, and public health. Previously reported robotic
+   sensing technologies have primarily focused on monitoring physical
+   parameters such as pressure and temperature. Integrating chemical
+   sensors for autonomous dry-phase analyte detection on a robotic platform
+   is rather extremely challenging and substantially underdeveloped. Here,
+   we introduce an artificial intelligence-powered multimodal robotic
+   sensing system (M-Bot) with an all-printed mass-producible soft
+   electronic skin-based human-machine interface. A scalable inkjet
+   printing technology with custom-developed nanomaterial inks was used to
+   manufacture flexible physicochemical sensor arrays for electrophysiology
+   recording, tactile perception, and robotic sensing of a wide range of
+   hazardous materials including nitroaromatic explosives, pesticides,
+   nerve agents, and infectious pathogens such as SARS-CoV-2. The M-Bot
+   decodes the surface electromyography signals collected from the human
+   body through machine learning algorithms for remote robotic control and
+   can perform in situ threat compound detection in extreme or contaminated
+   environments with user-interactive tactile and threat alarm feedback.
+   The printed electronic skin-based robotic sensing technology can be
+   further generalized and applied to other remote sensing platforms. Such
+   diversity was validated on an intelligent multimodal robotic boat
+   platform that can efficiently track the source of trace amounts of
+   hazardous compounds through autonomous and intelligent decision-making
+   algorithms. This fully printed human-machine interactive multimodal
+   sensing technology could play a crucial role in designing future
+   intelligent robotic systems and can be easily reconfigured toward
+   numerous practical wearable and robotic applications.",SCIENCE ROBOTICS,,Article,10.1126/scirobotics.abn0495,,,,"Yu, You and Li, Jiahong and Solomon, Samuel A. and Min, Jihong and Tu,
+   Jiaobing and Guo, Wei and Xu, Changhao and Song, Yu and Gao, Wei",,328.0,WOS:000853410700002,,,paper,all printed soft human machine interface for robotic physicochemical sensing,10.1126/scirobotics.abn0495,https://doi.org/10.1126/scirobotics.abn0495,https://doi.org/10.1126/scirobotics.abn0495,198.145,citations=328; year=2022; risk_terms=2; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1126/scirobotics.abn0495,True,200,https://www.science.org/doi/10.1126/scirobotics.abn0495,text/html;charset=UTF-8,
+1.08,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,drone;vehicle,137,,2023,Semi-universal geo-crack detection by machine learning,"Introduction: Cracks are a key feature that determines the structural
+   integrity of rocks, and their angular distribution can be used to
+   determine the local or regional stress patterns. The temporal growth of
+   cracks can be monitored in order to predict impending failures of
+   materials or structures such as a weakened dam. Thus, cracks and their
+   spatial-temporal distributions should be automatically monitored for
+   assessing their structural integrity, the associated stress patterns and
+   their potential for failure.Method: We show that the U-Net convolutional
+   neural network, semantic segmentation and transfer learning can be used
+   to accurately detect cracks in drone photos of sedimentary massifs. In
+   this case, the crack distributions are used to assess the safest areas
+   for tunnel excavation. Compared to the coarse performance of ridge
+   detection, the U-Net accuracy in identifying cracks in images can be as
+   high as 98\% when evaluated against human identification, which is
+   sufficient for assessing the general crack properties of the rock faces
+   for the engineering project.Result: Based on approximately 100 h of
+   manual cracks labeling in 127 drone photos and 20 h of network training,
+   the U-Net was able to successfully detect cracks in 23,845
+   high-resolution photographs in less than 22 h using two Nvidia V100
+   GPUs. Meanwhile, the network was able to detect more than 80\% of the
+   observable cracks of a volcanic outcrop in Idaho without additional
+   training. With a modest amount of extra labeling on photos of the
+   volcanic outcrop and transfer training, we found that the accuracy
+   significantly improved. The surprising outcome of this research is that
+   the U-Net crack detector laboriously trained on photos of sedimentary
+   rocks can also be effectively applied to photos of volcanic rock faces.
+   This can be important for real-time assessment of geological hazards and
+   lithology information for dam inspection and planetary exploration by
+   autonomous vehicles. For another application, we accurately detected
+   fractures and faults with a scale of tens of kilometers from Martian
+   photographs.Conclusions: In summary, our methodology of using CNN with
+   transfer training suggests that it can be used as a semi-universal
+   detector of cracks in across a range of diverse geological settings.",FRONTIERS IN EARTH SCIENCE,,Article,10.3389/feart.2023.1073211,,,,"Shi, Yongxiang and Ballesio, Marco and Johansen, Kasper and Trentman,
+   Daniel and Huang, Yunsong and McCabe, Matthew F. and Bruhn, Ronald and
+   Schuster, Gerard",,15.0,WOS:000959576800001,,,paper,semi universal geo crack detection by machine learning,10.3389/feart.2023.1073211,https://doi.org/10.3389/feart.2023.1073211,https://doi.org/10.3389/feart.2023.1073211,162.816,citations=15; year=2023; risk_terms=4; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.3389/feart.2023.1073211,True,200,https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1073211/full,text/html;charset=utf-8,
+1.08,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,privacy;vehicle,138,,2020,Deep Learning for Safe Autonomous Driving: Current Challenges and Future Directions,"Advances in information and signal processing technologies have a significant impact on autonomous driving (AD), improving driving safety while minimizing the efforts of human drivers with the help of advanced artificial intelligence (AI) techniques. Recently, deep learning (DL) approaches have solved several real-world problems of complex nature. However, their strengths in terms of control processes for AD have not been deeply investigated and highlighted yet. This survey highlights the power of DL architectures in terms of reliability and efficient real-time performance and overviews state-of-the-art strategies for safe AD, with their major achievements and limitations. Furthermore, it covers major embodiments of DL along the AD pipeline including measurement, analysis, and execution, with a focus on road, lane, vehicle, pedestrian, drowsiness detection, collision avoidance, and traffic sign detection through sensing and vision-based DL methods. In addition, we discuss on the performance of several reviewed methods by using different evaluation metrics, with critics on their pros and cons. Finally, this survey highlights the current issues of safe DL-based AD with a prospect of recommendations for future research, rounding up a reference material for newcomers and researchers willing to join this vibrant area of Intelligent Transportation Systems.",IEEE Transactions on Intelligent Transportation Systems,Institute of Electrical and Electronics Engineers,article,10.1109/tits.2020.3032227,https://openalex.org/W3112288498,https://doi.org/10.1109/tits.2020.3032227,,"['Khan Muhammad', 'Amin Ullah', 'Jaime Lloret', 'Javier Del Ser', 'Victor Hugo C. de Albuquerque']",Khan Muhammad,609.0,https://openalex.org/W3112288498,autonomous driving | autonomous system | autonomous systems | autonomous vehicle | autonomous vehicles | robot | robotic | robotics,Autonomous Vehicles,paper,deep learning for safe autonomous driving current challenges and future directions,10.1109/tits.2020.3032227,https://doi.org/10.1109/tits.2020.3032227,https://doi.org/10.1109/tits.2020.3032227,162.788,citations=609; year=2020; risk_terms=4; physical_terms=4,https://doi.org/10.1109/tits.2020.3032227,True,202,https://ieeexplore.ieee.org/document/9284628/,text/html; charset=UTF-8,
+1.08,70,PHYSRISK-REF-0009,동적 장애물 반응 실패 (Dynamic obstacle response failure),4,navigation;vehicle,268,,2025,"Efficient multi-UAV path planning in dynamic and complex environments
+   using hybrid polar lights optimization","Unmanned Aerial Vehicle (UAV) swarm path planning poses significant
+   challenges, particularly in dynamic environments with complex obstacles.
+   Traditional path-planning methods often encounter difficulties related
+   to high dimensionality and obstacle density. This paper introduces a
+   novel MA based on artificial intelligence, termed Improved Polar Lights
+   Optimization (CCPLO). The CCPLO enhances path planning performance by
+   integrating the Criss-Cross (CC) strategy with the Covariance Matrix
+   Adaptation Evolution Strategy (CMA-ES). Key improvements include a
+   dynamic adjustment mechanism for search parameters, the implementation
+   of parallel processing techniques, and refined crossover and
+   normalization processes. The dynamic adjustment mechanism allows for
+   real-time tuning of parameters, enhancing global search capabilities and
+   minimizing the risk of local optima. Furthermore, parallel processing
+   significantly boosts computational efficiency, especially in
+   high-dimensional and complex scenarios. Experimental results demonstrate
+   that the CCPLO algorithm outperforms existing algorithms in the CEC 2017
+   benchmark function test set. Specifically, in multi-obstacle and dynamic
+   task environments, CCPLO effectively designs safer and more efficient
+   paths, highlighting its strong potential for UAV swarm path planning.",JOURNAL OF KING SAUD UNIVERSITY COMPUTER AND INFORMATION SCIENCES,,Article,10.1007/s44443-025-00139-7,,,,"Xu, Ziyin and Wang, Zhilin and Liu, Rui and Huang, Chenliang and Shi,
+   Yuxiang and Wang, Mingjing and Chen, Huiling",,11.0,WOS:001532071600003,,,paper,efficient multi uav path planning in dynamic and complex environments using hybrid polar lights optimization,10.1007/s44443-025-00139-7,https://doi.org/10.1007/s44443-025-00139-7,https://doi.org/10.1007/s44443-025-00139-7,154.789,citations=11; year=2025; risk_terms=2; physical_terms=1; prestige_venue=mandatory_candidate,https://doi.org/10.1007/s44443-025-00139-7,True,200,https://link.springer.com/article/10.1007/s44443-025-00139-7,text/html; charset=utf-8,

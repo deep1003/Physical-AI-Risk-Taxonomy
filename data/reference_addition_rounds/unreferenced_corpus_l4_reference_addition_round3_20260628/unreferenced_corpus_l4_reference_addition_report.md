@@ -1,0 +1,53 @@
+# Unreferenced Corpus L4 Reference Addition Report
+
+- Selected access-checked Top 400: 400
+- Applied additions: 14
+- Cards touched: 14
+- Max references after: 5
+- Cards over 5 references: 0
+- Backup: `/Users/deep1003/data3/AI_Topic_Space.github.io/pages/pai_risk_taxonomy_bilingual_v1.0.bak_before_unreferenced_corpus_refs_20260628_095535.html`
+
+## Applied Additions
+
+- **PHYSBENCH-REF-0032** 안전 강화학습 제약 위반 (Safe reinforcement learning constraint violation) -> 3D RVO-enhanced multi-agent deep reinforcement learning for collision avoidance in urban struct… (2025)
+  - 근거: 드론·저고도 비행 안전에서 안전 강화학습 제약 위반이 실제 안전 문제로 이어질 수 있음을 다룬다; 3D RVO-enhanced multi-agent d… (Zhong et al., 2025)
+  - URL: https://doi.org/10.1016/j.ast.2025.110378
+- **PHYSBENCH-REF-0055** 제어 장벽 함수 실패 (Control barrier function safety-filter failure) -> Meta-Learning-Based Safety-Critical Control in Multi-Obstacles Environments (2025)
+  - 근거: 피지컬 AI 시스템에서 제어 장벽 함수 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Meta-Learning-Based Safety-Cr… (Zhang et al., 2025)
+  - URL: https://doi.org/10.1109/tase.2025.3565524
+- **PHYSBENCH-REF-0063** 시각-촉각 모달리티 불일치 (Visual-tactile modality mismatch) -> Factors that influence robot acceptance (2020)
+  - 근거: 피지컬 AI 시스템에서 시각-촉각 모달리티 불일치이 실제 안전 문제로 이어질 수 있음을 다룬다; Factors that influence robot… (Xu et al., 2020)
+  - URL: https://doi.org/10.1360/tb-2019-0136
+- **PHYSBENCH-REF-0068** 정밀 휴머노이드 접촉력 위험 (Dexterous humanoid contact-force risk) -> A biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tact… (2022)
+  - 근거: 촉각·힘 센서 기반 로봇 제어에서 정밀 휴머노이드 접촉력 위험이 실제 안전 문제로 이어질 수 있음을 다룬다; A biomimetic elastomeric robo… (Park et al., 2022)
+  - URL: https://doi.org/10.1126/scirobotics.abm7187
+- **PHYSBENCH-REF-0069** 전신 도달 한계 위반 (Whole-body reach-limit violation) -> A biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tact… (2022)
+  - 근거: 촉각·힘 센서 기반 로봇 제어에서 전신 도달 한계 위반이 실제 안전 문제로 이어질 수 있음을 다룬다; A biomimetic elastomeric robo… (Park et al., 2022)
+  - URL: https://doi.org/10.1126/scirobotics.abm7187
+- **PHYSBENCH-REF-0085** 가정 장기 계획 조작 위험 (Household long-horizon manipulation risk) -> Human-robot collaborative visual inspection with Large Language Models☆ (2026)
+  - 근거: 사람-로봇 상호작용 안전에서 가정 장기 계획 조작 위험이 실제 안전 문제로 이어질 수 있음을 다룬다; Human-robot collaborative vis… (Tasneem et al., 2026)
+  - URL: https://doi.org/10.1016/j.rcim.2025.103154
+- **PHYSBENCH-REF-0088** 이동-조작 통합 실패 (Locomotion-integrated manipulation failure) -> Human-robot collaborative visual inspection with Large Language Models☆ (2026)
+  - 근거: 사람-로봇 상호작용 안전에서 이동-조작 통합 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Human-robot collaborative vis… (Tasneem et al., 2026)
+  - URL: https://doi.org/10.1016/j.rcim.2025.103154
+- **PHYSBENCH-REF-0104** 휴머노이드 충돌력 초과 (Humanoid collision-force exceedance) -> Memory-driven deep-reinforcement learning for autonomous robot navigation in partially observab… (2025)
+  - 근거: 불확실한 환경의 경로 계획에서 휴머노이드 충돌력 초과이 실제 안전 문제로 이어질 수 있음을 다룬다; Memory-driven deep-reinforcem… (Montero et al., 2025)
+  - URL: https://doi.org/10.1016/j.jestch.2024.101942
+- **PHYSRISK-REF-0001** 가림에 의한 충돌 (Occlusion-induced collision) -> Collision avoidance for autonomous ship using deep reinforcement learning and prior-knowledge-b… (2023)
+  - 근거: 안전 강화학습에서 가림에 의한 충돌이 실제 안전 문제로 이어질 수 있음을 다룬다; Collision avoidance for auton… (Wang et al., 2023)
+  - URL: https://doi.org/10.3389/fmars.2022.1084763
+- **PHYSRISK-REF-0003** 다중 센서 융합 충돌 (Multimodal sensor fusion conflict) -> All-printed soft human-machine interface for robotic physicochemical sensing (2022)
+  - 근거: 피지컬 AI 시스템에서 다중 센서 융합 충돌이 실제 안전 문제로 이어질 수 있음을 다룬다; All-printed soft human-machin… (Yu et al., 2022)
+  - URL: https://doi.org/10.1126/scirobotics.abn0495
+- **PHYSRISK-REF-0004** 적대적 물체·표지 조작 (Adversarial object or sign manipulation) -> Deep learning adversarial attacks and defenses in autonomous vehicles: a systematic literature… (2024)
+  - 근거: 공격·스푸핑 탐지에서 적대적 물체·표지 조작이 실제 안전 문제로 이어질 수 있음을 다룬다; Deep learning adversarial att… (Ibrahum et al., 2024)
+  - URL: https://doi.org/10.1007/s10462-024-11014-8
+- **PHYSRISK-REF-0009** 동적 장애물 반응 실패 (Dynamic obstacle response failure) -> Efficient multi-UAV path planning in dynamic and complex environments using hybrid polar lights… (2025)
+  - 근거: 불확실한 환경의 경로 계획에서 동적 장애물 반응 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Efficient multi-UAV path plan… (Xu et al., 2025)
+  - URL: https://doi.org/10.1007/s44443-025-00139-7
+- **PHYSRISK-REF-0020** 실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure) -> Enhanced Small Drone Detection Using Optimized YOLOv8 With Attention Mechanisms (2024)
+  - 근거: 드론·저고도 비행 안전에서 실시간 지연 및 동기화 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Enhanced Small Drone Detectio… (Zamri et al., 2024)
+  - URL: https://doi.org/10.1109/access.2024.3420730
+- **PHYSRISK-REF-0027** 센서 스푸핑 및 신호 주입 (Sensor spoofing and signal injection) -> All-printed soft human-machine interface for robotic physicochemical sensing (2022)
+  - 근거: 피지컬 AI 시스템에서 센서 스푸핑 및 신호 주입이 실제 안전 문제로 이어질 수 있음을 다룬다; All-printed soft human-machin… (Yu et al., 2022)
+  - URL: https://doi.org/10.1126/scirobotics.abn0495

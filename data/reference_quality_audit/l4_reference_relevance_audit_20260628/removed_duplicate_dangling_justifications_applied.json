@@ -1,0 +1,56 @@
+{
+  "removed": [
+    {
+      "card_badge": "PHYSRISK-REF-0055",
+      "removed_duplicate_justification": "제도와 표준의 빈틈이 안전 책임과 인증 공백을 만든다 (Robots, standards and the law: Rivalries b…, 2019)"
+    },
+    {
+      "card_badge": "PHYSKR-REF-009",
+      "removed_duplicate_justification": "의료 AI의 신뢰성·편향·설명가능성 평가를 다뤄, 노인·환자 돌봄 방치 및 존엄성 침해은 돌봄 환경의 안전 판단 품질과 연결된다 (A systematic review of trustworthy and explainable… (2023))"
+    }
+  ],
+  "remaining_mismatched_cards": [
+    {
+      "card_badge": "PHYSRISK-REF-0045",
+      "card_label": "물리적 침입 및 절도 (Autonomous physical intrusion and theft)",
+      "justifications": 2,
+      "links": 1
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0046",
+      "card_label": "표적 추적 및 물리적 괴롭힘 (Targeted following and physical harassment)",
+      "justifications": 1,
+      "links": 0
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0044",
+      "card_label": "현장 무기 부착 휴머노이드 (Field weapon attachment to humanoid)",
+      "justifications": 1,
+      "links": 0
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0054",
+      "card_label": "동료 로봇의 감시 노드 전용화 (Co-worker robot as surveillance node)",
+      "justifications": 1,
+      "links": 0
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0047",
+      "card_label": "의인화 유발 과의존 (Anthropomorphism-induced overreliance)",
+      "justifications": 1,
+      "links": 0
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0049",
+      "card_label": "준사회적 애착과 조종 위험 (Parasocial attachment and manipulability)",
+      "justifications": 1,
+      "links": 0
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0050",
+      "card_label": "아동 상호작용 안전 위험 (Child-interaction developmental and safety risk)",
+      "justifications": 2,
+      "links": 1
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "inserted_missing_link": true,
+  "max_refs_after": 5,
+  "over_5_cards": 0,
+  "links_after": 309,
+  "justifications_after": 316,
+  "mismatched_cards": [
+    {
+      "card_badge": "PHYSRISK-REF-0045",
+      "label": "물리적 침입 및 절도 (Autonomous physical intrusion and theft)",
+      "justifications": 2,
+      "links": 1
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0046",
+      "label": "표적 추적 및 물리적 괴롭힘 (Targeted following and physical harassment)",
+      "justifications": 1,
+      "links": 0
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0044",
+      "label": "현장 무기 부착 휴머노이드 (Field weapon attachment to humanoid)",
+      "justifications": 1,
+      "links": 0
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0054",
+      "label": "동료 로봇의 감시 노드 전용화 (Co-worker robot as surveillance node)",
+      "justifications": 1,
+      "links": 0
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0047",
+      "label": "의인화 유발 과의존 (Anthropomorphism-induced overreliance)",
+      "justifications": 1,
+      "links": 0
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0049",
+      "label": "준사회적 애착과 조종 위험 (Parasocial attachment and manipulability)",
+      "justifications": 1,
+      "links": 0
+    },
+    {
+      "card_badge": "PHYSRISK-REF-0050",
+      "label": "아동 상호작용 안전 위험 (Child-interaction developmental and safety risk)",
+      "justifications": 2,
+      "links": 1
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+match_score,card_idx,card_badge,card_label,card_refs_before,overlap_tags,rank,source_file,year,title,abstract,venue,institution,document_type,doi,url,landing_page_url,pdf_url,authors,first_author,citations,record_id,matched_terms,matched_l3,record_type,title_key,doi_key,candidate_url,url_key,score,selection_reason,checked_url,access_ok,status_code,final_url,content_type,access_error,justification,refs_after
+1.554,59,PHYSBENCH-REF-0069,전신 도달 한계 위반 (Whole-body reach-limit violation),4,collision;humanoid;manipulation,10,,2022,A biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tactile sensing,"Human skin perceives physical stimuli applied to the body and mitigates the risk of physical interaction through its soft and resilient mechanical properties. Social robots would benefit from whole-body robotic skin (or tactile sensors) resembling human skin in realizing a safe, intuitive, and contact-rich human-robot interaction. However, existing soft tactile sensors show several drawbacks (complex structure, poor scalability, and fragility), which limit their application in whole-body robotic skin. Here, we introduce biomimetic robotic skin based on hydrogel-elastomer hybrids and tomographic imaging. The developed skin consists of a tough hydrogel and a silicone elastomer forming a skin-inspired multilayer structure, achieving sufficient softness and resilience for protection. The sensor structure can also be easily repaired with adhesives even after severe damage (incision). For multimodal tactile sensation, electrodes and microphones are deployed in the sensor structure to measure local resistance changes and vibration due to touch. The ionic hydrogel layer is deformed owing to an external force, and the resulting local conductivity changes are measured via electrodes. The microphones also detect the vibration generated from touch to determine the location and type of dynamic tactile stimuli. The measurement data are then converted into multimodal tactile information through tomographic imaging and deep neural networks. We further implement a sensorized cosmetic prosthesis, demonstrating that our design could be used to implement deformable or complex-shaped robotic skin.",Science Robotics,American Association for the Advancement of Science,article,10.1126/scirobotics.abm7187,https://openalex.org/W4282912956,https://doi.org/10.1126/scirobotics.abm7187,,"['Kyungseo Park', 'Hyunwoo Yuk', 'Min Jin Yang', 'Junhwi Cho', 'Hyosang Lee', 'Jung Kim']",Kyungseo Park,249.0,https://openalex.org/W4282912956,autonomous system | autonomous systems | robot | robotic | robotics,Human-Robot Interaction,paper,a biomimetic elastomeric robot skin using electrical impedance and acoustic tomography for tactile sensing,10.1126/scirobotics.abm7187,https://doi.org/10.1126/scirobotics.abm7187,https://doi.org/10.1126/scirobotics.abm7187,194.3,citations=249; year=2022; risk_terms=2; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1126/scirobotics.abm7187,True,200,https://www.science.org/doi/10.1126/scirobotics.abm7187,text/html;charset=UTF-8,,"촉각·힘 센서 기반 로봇 제어에서 전신 도달 한계 위반이 실제 안전 문제로 이어질 수 있음을 다룬다; A biomimetic elastomeric robo… (Park et al., 2022)",5
+1.415,88,PHYSRISK-REF-0027,센서 스푸핑 및 신호 주입 (Sensor spoofing and signal injection),1,manipulation;privacy;security,3,,2022,"All-printed soft human-machine interface for robotic physicochemical
+   sensing","Ultrasensitive multimodal physicochemical sensing for autonomous robotic
+   decision-making has numerous applications in agriculture, security,
+   environmental protection, and public health. Previously reported robotic
+   sensing technologies have primarily focused on monitoring physical
+   parameters such as pressure and temperature. Integrating chemical
+   sensors for autonomous dry-phase analyte detection on a robotic platform
+   is rather extremely challenging and substantially underdeveloped. Here,
+   we introduce an artificial intelligence-powered multimodal robotic
+   sensing system (M-Bot) with an all-printed mass-producible soft
+   electronic skin-based human-machine interface. A scalable inkjet
+   printing technology with custom-developed nanomaterial inks was used to
+   manufacture flexible physicochemical sensor arrays for electrophysiology
+   recording, tactile perception, and robotic sensing of a wide range of
+   hazardous materials including nitroaromatic explosives, pesticides,
+   nerve agents, and infectious pathogens such as SARS-CoV-2. The M-Bot
+   decodes the surface electromyography signals collected from the human
+   body through machine learning algorithms for remote robotic control and
+   can perform in situ threat compound detection in extreme or contaminated
+   environments with user-interactive tactile and threat alarm feedback.
+   The printed electronic skin-based robotic sensing technology can be
+   further generalized and applied to other remote sensing platforms. Such
+   diversity was validated on an intelligent multimodal robotic boat
+   platform that can efficiently track the source of trace amounts of
+   hazardous compounds through autonomous and intelligent decision-making
+   algorithms. This fully printed human-machine interactive multimodal
+   sensing technology could play a crucial role in designing future
+   intelligent robotic systems and can be easily reconfigured toward
+   numerous practical wearable and robotic applications.",SCIENCE ROBOTICS,,Article,10.1126/scirobotics.abn0495,,,,"Yu, You and Li, Jiahong and Solomon, Samuel A. and Min, Jihong and Tu,
+   Jiaobing and Guo, Wei and Xu, Changhao and Song, Yu and Gao, Wei",,328.0,WOS:000853410700002,,,paper,all printed soft human machine interface for robotic physicochemical sensing,10.1126/scirobotics.abn0495,https://doi.org/10.1126/scirobotics.abn0495,https://doi.org/10.1126/scirobotics.abn0495,198.145,citations=328; year=2022; risk_terms=2; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1126/scirobotics.abn0495,True,200,https://www.science.org/doi/10.1126/scirobotics.abn0495,text/html;charset=UTF-8,,"피지컬 AI 시스템에서 센서 스푸핑 및 신호 주입이 실제 안전 문제로 이어질 수 있음을 다룬다; All-printed soft human-machin… (Yu et al., 2022)",2
+1.335,80,PHYSRISK-REF-0020,실시간 지연 및 동기화 실패 (Real-time latency and synchronization failure),3,drone;privacy;vehicle,239,,2024,"Enhanced Small Drone Detection Using Optimized YOLOv8 With Attention
+   Mechanisms","The increasing misuse of drones poses significant safety and security
+   risks, including illegal transportation of prohibited goods,
+   interference with manned aircraft, and threats to public safety. This
+   has raised concerns about the increased use of unmanned aerial vehicles
+   (UAVs) due to their small size. Addressing these concerns has sparked
+   significant research into developing effective drone detection systems.
+   Deep learning, especially YOLO, is known as a lightweight model that
+   offers real-time detection capabilities. Attention mechanisms have
+   proven effective in many studies for detecting objects. This research
+   focused on optimizing the YOLOv8n-based model by incorporating the
+   Attention Module into the neck and improving the detection head by
+   adding a tiny detection head, making the model work efficiently in
+   detecting objects of tiny size. To obtain the most effective model,
+   multiple training sets have been experimented with involving different
+   types of attention modules, such as the Convolutional Block Attention
+   Module (CBAM), ResBlock CBAM, Global Attention Mechanism (GAM), and
+   Efficient Channel Attention (ECA). Therefore, based on the results,
+   YOLOv8n + ResCBAM + high-resolution detection head, called
+   P2-YOLOv8n-ResCBAM significantly improves the mean Average Accuracy
+   (mAP) from 90.3\% to 92.6\%. Although the increased model complexity
+   reduced frames per second (fps) from 263 to 166, the detection speed
+   remains suitable for real-time applications. The proposed model
+   effectively distinguishes drones from birds and recognizes them at long
+   distances, demonstrating its potential for enhancing aerial surveillance
+   and security measures.",IEEE ACCESS,,Article,10.1109/ACCESS.2024.3420730,,,,"Zamri, Fatin Najihah Muhamad and Gunawan, Teddy Surya and Yusoff, Siti
+   Hajar and Alzahrani, Ahmad A. and Bramantoro, Arif and Kartiwi, Mira",,43.0,WOS:001263397700001,,,paper,enhanced small drone detection using optimized yolov8 with attention mechanisms,10.1109/access.2024.3420730,https://doi.org/10.1109/access.2024.3420730,https://doi.org/10.1109/access.2024.3420730,155.979,citations=43; year=2024; risk_terms=5; physical_terms=2,https://doi.org/10.1109/access.2024.3420730,True,202,https://ieeexplore.ieee.org/document/10577135/,text/html; charset=UTF-8,,"드론·저고도 비행 안전에서 실시간 지연 및 동기화 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Enhanced Small Drone Detectio… (Zamri et al., 2024)",4
+1.28,119,PHYSRISK-REF-0001,가림에 의한 충돌 (Occlusion-induced collision),4,collision;navigation;vehicle,56,,2023,Collision avoidance for autonomous ship using deep reinforcement learning and prior-knowledge-based approximate representation,"Reinforcement learning (RL) has shown superior performance in solving sequential decision problems. In recent years, RL is gradually being used to solve unmanned driving collision avoidance decision-making problems in complex scenarios. However, ships encounter many scenarios, and the differences in scenarios will seriously hinder the application of RL in collision avoidance at sea. Moreover, the iterative speed of trial-and-error learning for RL in multi-ship encounter scenarios is slow. To solve this problem, this study develops a novel intelligent collision avoidance algorithm based on approximate representation reinforcement learning (AR-RL) to realize the collision avoidance of maritime autonomous surface ships (MASS) in a continuous state space environment involving interactive learning capability like a crew in navigation situation. The new algorithm uses an approximate representation model to deal with the optimization of collision avoidance strategies in a dynamic target encounter situation. The model is combined with prior knowledge and International Regulations for Preventing Collisions at Sea (COLREGs) for optimal performance. This is followed by a design of an online solution to a value function approximation model based on gradient descent. This approach can solve the problem of large-scale collision avoidance policy learning in static-dynamic obstacles mixed environment. Finally, algorithm tests were constructed though two scenarios (i.e., the coastal static obstacle environment and the static-dynamic obstacles mixed environment) using Tianjin Port as an example and compared with multiple groups of algorithms. The results show that the algorithm can improve the large-scale learning efficiency of continuous state space of dynamic obstacle environment by approximate representation. At the same time, the MASS can efficiently and safely avoid obstacles enroute to reaching its target destination. It therefore makes significant contributions to ensuring safety at sea in a mixed traffic involving both manned and MASS in near future.",Frontiers in Marine Science,Frontiers Media,article,10.3389/fmars.2022.1084763,https://openalex.org/W4317388085,https://doi.org/10.3389/fmars.2022.1084763,,"['Chengbo Wang', 'Xinyu Zhang', 'Zaili Yang', 'Musa Bashir', 'Kwangil Lee']",Chengbo Wang,59.0,https://openalex.org/W4317388085,navigation | unmanned,Ship Motion and Trajectory Prediction,paper,collision avoidance for autonomous ship using deep reinforcement learning and prior knowledge based approximate representation,10.3389/fmars.2022.1084763,https://doi.org/10.3389/fmars.2022.1084763,https://doi.org/10.3389/fmars.2022.1084763,176.321,citations=59; year=2023; risk_terms=3; physical_terms=2; prestige_venue=mandatory_candidate,https://doi.org/10.3389/fmars.2022.1084763,True,200,https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.1084763/full,text/html;charset=utf-8,,"안전 강화학습에서 가림에 의한 충돌이 실제 안전 문제로 이어질 수 있음을 다룬다; Collision avoidance for auton… (Wang et al., 2023)",5
+1.191,65,PHYSBENCH-REF-0088,이동-조작 통합 실패 (Locomotion-integrated manipulation failure),1,collision;manipulation,390,,2026,Human-robot collaborative visual inspection with Large Language Models☆,"Human-Robot Collaboration (HRC) is gaining traction in advanced
+   manufacturing as industries shift from isolated robotic systems to more
+   collaborative environments. This transition is supported by advancements
+   in automation and more recently, Generative AI. Large Language Models
+   (LLMs) offer new possibilities for intuitive human-robot interaction
+   through natural language. However, the use of natural language as a
+   means remains very limited due to the ambiguous natural language,
+   environmental noise, pronunciation variability, and multiple phrasing
+   styles. Furthermore, cloud-based deployment of LLMs raises concerns
+   about ergonomics and data privacy, especially for industries and
+   countries governed by strict regulatory requirements. To address these
+   challenges, we present a fully offline, closed-loop robotic assistant
+   for visual inspection tasks in HRC settings. The system supports
+   speech-based interaction, where user instructions are transcribed via a
+   Speechto-Text (STT) model and processed by a locally deployed,
+   code-generating LLM. Guided by a structured prompt, the LLM produces
+   custom responses for robot perception and manipulation. Inspection paths
+   are generated relative to spatial axes or in specific directions and
+   executed with real-time feedback through a Text-to-Speech (TTS)
+   interface, allowing for a much closer interaction with the robot
+   assistant. The system applies a hybrid control method, where the
+   higher-level instructions are generated by LLM along with a perception
+   pipeline, and the lower-level robot control is managed by ROS for safety
+   and reliability. The system is evaluated across a range of experiments,
+   including local LLM comparisons, prompt engineering effectiveness, and
+   inspection performance in both simulated and real-world industrial use
+   cases. Results demonstrate the system's capability to handle complex
+   inspection tasks on objects with varied sizes and geometries, confirming
+   its practicality and robustness in realistic deployment settings. Code
+   and videos are open-source available at:
+   https://github.com/CuriousLad1000/RoboSpection.",ROBOTICS AND COMPUTER-INTEGRATED MANUFACTURING,,Article,10.1016/j.rcim.2025.103154,,,,"Tasneem, Osama and Pieters, Roel",,4.0,WOS:001591774000002,,,paper,human robot collaborative visual inspection with large language models,10.1016/j.rcim.2025.103154,https://doi.org/10.1016/j.rcim.2025.103154,https://doi.org/10.1016/j.rcim.2025.103154,145.532,citations=4; year=2026; risk_terms=5; physical_terms=7,https://doi.org/10.1016/j.rcim.2025.103154,True,200,https://linkinghub.elsevier.com/retrieve/pii/S073658452500208X,text/html;charset=UTF-8,,"사람-로봇 상호작용 안전에서 이동-조작 통합 실패이 실제 안전 문제로 이어질 수 있음을 다룬다; Human-robot collaborative vis… (Tasneem et al., 2026)",2
+1.092,117,PHYSBENCH-REF-0063,시각-촉각 모달리티 불일치 (Visual-tactile modality mismatch),2,collision;manipulation,307,,2020,Factors that influence robot acceptance,"With the development of technology, robots as the main carrier of
+   artificial intelligence will appear more and more in human life and
+   work. However, for ordinary people, robots are still relatively new
+   things. Under such a background, whether people accept robots, under
+   what conditions robots are more acceptable to people, and what kind of
+   robots are more acceptable to people are all important issues that need
+   to be explored. Therefore, this paper focuses on the factors that affect
+   people's acceptance of robots. Specifically, we systematically review
+   the influencing factors of robot acceptance from three aspects: Robot
+   factors, human factors and human-robot interaction factors. Firstly,
+   there is no doubt that people's acceptance of robots is affected by the
+   factors pertaining to robot itself. Compared with human factors, robot
+   factors are more controllable and practical for robot designers,
+   producers and sellers, and thus are currently the most concerned issue
+   for the public and researchers. Secondly, characteristics of robots such
+   as their visual features, tactile features, auditory features and
+   behavioral features can significantly affect people's acceptance of
+   robots. Among these characteristics of robots, the anthropomorphism of
+   robot appearance is a hot research issue. A series of studies indicates
+   that the appropriate degree of anthropomorphism can increase people's
+   acceptance of robot, but inappropriate degree of anthropomorphism can
+   trigger uncanny valley effect, which in turn significantly decrease
+   robot acceptance. Capabilities of robots, such as their instrumental and
+   social abilities have also been proved to play an important in affecting
+   people's acceptance of robots. The instrumental capabilities of robots
+   are undoubtedly the basic abilities, which include not only utilitarian
+   factors (e.g., perceived usefulness and perceived ease of use), but also
+   hedonic factors (e.g., perceived enjoyment). The social capabilities of
+   robots are mainly reflected on their abilities to socialize with people,
+   which include communicating with human and expressing their social cues
+   such as emotions and vulnerability. Secondly, human factors (e.g.,
+   demographic variables and psychological variables) influencing people's
+   acceptance of robots should not be neglected. Many studies demonstrate
+   that an individual's demographic characteristics such as age, gender,
+   education and cultural background play an important role in robot
+   acceptance. In general, young people, males, and those with higher
+   education are more likely to accept robots. Individual's psychological
+   characteristics such as personality, personal innovativeness and
+   self-efficacy have also been shown to have an impact on people's
+   acceptance of robots. Thirdly, in addition to robot factors and human
+   factors, human-robot interaction factors affecting robot acceptance have
+   also been paid more and more attention by researchers. Lots of studies
+   indicate that robot-related experience can significantly influence
+   people's acceptance of robots. Previous experience with robots has a
+   positive effect on users' attitudes towards robots, trust in robots and
+   their own self-esteem. Meanwhile, people's perception of robots (e.g.,
+   perception of robots' warmth, competence and social presence) is also
+   important. Researchers have suggested that people's perception of
+   robots' warmth and competence is not only relevant to their attitudes
+   towards robots, but also can predict their specific emotional response
+   and behavioral tendency.
+   In sum, we systematically review possible influencing factors of robot
+   acceptance, which include robot factors, human factors and human-robot
+   interaction factors. Based on the theory of mind perception, we suggest
+   that people's acceptance of robots are both positive and negative. On
+   the one hand, people over-trust robots because of the strong
+   capabilities of robots. On the other hand, people also attack robots
+   because of ignoring robots' experience. Having considered all possible
+   factors, we believe that anthropomorphism may be the core variable that
+   affects people's acceptance of robots, and the ultimate problem of robot
+   acceptance is necessarily moral issues concerning robots.",CHINESE SCIENCE BULLETIN-CHINESE,,Review,10.1360/TB-2019-0136,,,,"Xu, Liying and Yu, Feng",,18.0,WOS:000546951800010,,,paper,factors that influence robot acceptance,10.1360/tb-2019-0136,https://doi.org/10.1360/tb-2019-0136,https://doi.org/10.1360/tb-2019-0136,151.222,citations=18; year=2020; risk_terms=3; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1360/tb-2019-0136,True,200,https://www.sciengine.com/CSB/doi/10.1360/TB-2019-0136,text/html;charset=UTF-8,,"피지컬 AI 시스템에서 시각-촉각 모달리티 불일치이 실제 안전 문제로 이어질 수 있음을 다룬다; Factors that influence robot… (Xu et al., 2020)",3
+1.088,66,PHYSBENCH-REF-0104,휴머노이드 충돌력 초과 (Humanoid collision-force exceedance),3,collision;manipulation,94,,2025,"Memory-driven deep-reinforcement learning for autonomous robot
+   navigation in partially observable environments","Service robots with autonomous navigational capabilities playa critical
+   role in dynamic contexts where safe and collision-free human
+   interactions are important. However, the unpredictable nature of human
+   behavior, the prevalence of occlusions and the lack of complete
+   environmental perception due to sensor limitations can severely restrict
+   effective robot navigation. We propose a memory-driven algorithm that
+   employs deep reinforcement learning to enable collision-free proactive
+   navigation in partially observable environments. The proposed method
+   takes the relative states of humans within a limited FoV and sensor
+   range as input into the neural network. The model employs a
+   bidirectional gated recurrent unit as a temporal function to
+   strategically incorporate the previous context of input sequences and
+   facilitate the assimilation of the observations. This approach allows
+   the model to assign greater attention to intricate human-robot
+   relations, allowing abetter understanding of the ever-changing dynamics
+   within an environment. Simulations and experimental outcomes validate
+   the efficacy of the policy-based navigation approach. It achieves
+   superior collision avoidance performance compared to representative
+   existing methods and exhibits efficient navigation by incorporating the
+   limitations of sensors during training.",ENGINEERING SCIENCE AND TECHNOLOGY-AN INTERNATIONAL JOURNAL-JESTECH,,Article,10.1016/j.jestch.2024.101942,,,,"Montero, Estrella and Pico, Nabih and Ghergherehchi, Mitra and Song, Ho
+   Seung",,10.0,WOS:001411072100001,,,paper,memory driven deep reinforcement learning for autonomous robot navigation in partially observable environments,10.1016/j.jestch.2024.101942,https://doi.org/10.1016/j.jestch.2024.101942,https://doi.org/10.1016/j.jestch.2024.101942,168.571,citations=10; year=2025; risk_terms=2; physical_terms=4; prestige_venue=mandatory_candidate,https://doi.org/10.1016/j.jestch.2024.101942,True,200,https://linkinghub.elsevier.com/retrieve/pii/S2215098624003288,text/html;charset=UTF-8,,"불확실한 환경의 경로 계획에서 휴머노이드 충돌력 초과이 실제 안전 문제로 이어질 수 있음을 다룬다; Memory-driven deep-reinforcem… (Montero et al., 2025)",4
+1.085,64,PHYSBENCH-REF-0085,가정 장기 계획 조작 위험 (Household long-horizon manipulation risk),1,collision;manipulation,390,,2026,Human-robot collaborative visual inspection with Large Language Models☆,"Human-Robot Collaboration (HRC) is gaining traction in advanced
+   manufacturing as industries shift from isolated robotic systems to more
+   collaborative environments. This transition is supported by advancements
+   in automation and more recently, Generative AI. Large Language Models
+   (LLMs) offer new possibilities for intuitive human-robot interaction
+   through natural language. However, the use of natural language as a
+   means remains very limited due to the ambiguous natural language,
+   environmental noise, pronunciation variability, and multiple phrasing
+   styles. Furthermore, cloud-based deployment of LLMs raises concerns
+   about ergonomics and data privacy, especially for industries and
+   countries governed by strict regulatory requirements. To address these
+   challenges, we present a fully offline, closed-loop robotic assistant
+   for visual inspection tasks in HRC settings. The system supports
+   speech-based interaction, where user instructions are transcribed via a
+   Speechto-Text (STT) model and processed by a locally deployed,
+   code-generating LLM. Guided by a structured prompt, the LLM produces
+   custom responses for robot perception and manipulation. Inspection paths
+   are generated relative to spatial axes or in specific directions and
+   executed with real-time feedback through a Text-to-Speech (TTS)
+   interface, allowing for a much closer interaction with the robot
+   assistant. The system applies a hybrid control method, where the
+   higher-level instructions are generated by LLM along with a perception
+   pipeline, and the lower-level robot control is managed by ROS for safety
+   and reliability. The system is evaluated across a range of experiments,
+   including local LLM comparisons, prompt engineering effectiveness, and
+   inspection performance in both simulated and real-world industrial use
+   cases. Results demonstrate the system's capability to handle complex
+   inspection tasks on objects with varied sizes and geometries, confirming
+   its practicality and robustness in realistic deployment settings. Code
+   and videos are open-source available at:
+   https://github.com/CuriousLad1000/RoboSpection.",ROBOTICS AND COMPUTER-INTEGRATED MANUFACTURING,,Article,10.1016/j.rcim.2025.103154,,,,"Tasneem, Osama and Pieters, Roel",,4.0,WOS:001591774000002,,,paper,human robot collaborative visual inspection with large language models,10.1016/j.rcim.2025.103154,https://doi.org/10.1016/j.rcim.2025.103154,https://doi.org/10.1016/j.rcim.2025.103154,145.532,citations=4; year=2026; risk_terms=5; physical_terms=7,https://doi.org/10.1016/j.rcim.2025.103154,True,200,https://linkinghub.elsevier.com/retrieve/pii/S073658452500208X,text/html;charset=UTF-8,,"사람-로봇 상호작용 안전에서 가정 장기 계획 조작 위험이 실제 안전 문제로 이어질 수 있음을 다룬다; Human-robot collaborative vis… (Tasneem et al., 2026)",2
+1.08,120,PHYSRISK-REF-0003,다중 센서 융합 충돌 (Multimodal sensor fusion conflict),4,manipulation;privacy,3,,2022,"All-printed soft human-machine interface for robotic physicochemical
+   sensing","Ultrasensitive multimodal physicochemical sensing for autonomous robotic
+   decision-making has numerous applications in agriculture, security,
+   environmental protection, and public health. Previously reported robotic
+   sensing technologies have primarily focused on monitoring physical
+   parameters such as pressure and temperature. Integrating chemical
+   sensors for autonomous dry-phase analyte detection on a robotic platform
+   is rather extremely challenging and substantially underdeveloped. Here,
+   we introduce an artificial intelligence-powered multimodal robotic
+   sensing system (M-Bot) with an all-printed mass-producible soft
+   electronic skin-based human-machine interface. A scalable inkjet
+   printing technology with custom-developed nanomaterial inks was used to
+   manufacture flexible physicochemical sensor arrays for electrophysiology
+   recording, tactile perception, and robotic sensing of a wide range of
+   hazardous materials including nitroaromatic explosives, pesticides,
+   nerve agents, and infectious pathogens such as SARS-CoV-2. The M-Bot
+   decodes the surface electromyography signals collected from the human
+   body through machine learning algorithms for remote robotic control and
+   can perform in situ threat compound detection in extreme or contaminated
+   environments with user-interactive tactile and threat alarm feedback.
+   The printed electronic skin-based robotic sensing technology can be
+   further generalized and applied to other remote sensing platforms. Such
+   diversity was validated on an intelligent multimodal robotic boat
+   platform that can efficiently track the source of trace amounts of
+   hazardous compounds through autonomous and intelligent decision-making
+   algorithms. This fully printed human-machine interactive multimodal
+   sensing technology could play a crucial role in designing future
+   intelligent robotic systems and can be easily reconfigured toward
+   numerous practical wearable and robotic applications.",SCIENCE ROBOTICS,,Article,10.1126/scirobotics.abn0495,,,,"Yu, You and Li, Jiahong and Solomon, Samuel A. and Min, Jihong and Tu,
+   Jiaobing and Guo, Wei and Xu, Changhao and Song, Yu and Gao, Wei",,328.0,WOS:000853410700002,,,paper,all printed soft human machine interface for robotic physicochemical sensing,10.1126/scirobotics.abn0495,https://doi.org/10.1126/scirobotics.abn0495,https://doi.org/10.1126/scirobotics.abn0495,198.145,citations=328; year=2022; risk_terms=2; physical_terms=5; prestige_venue=mandatory_candidate,https://doi.org/10.1126/scirobotics.abn0495,True,200,https://www.science.org/doi/10.1126/scirobotics.abn0495,text/html;charset=UTF-8,,"피지컬 AI 시스템에서 다중 센서 융합 충돌이 실제 안전 문제로 이어질 수 있음을 다룬다; All-printed soft human-machin… (Yu et al., 2022)",5

@@ -1,0 +1,22 @@
+{
+  "html_path": "/Users/deep1003/data3/AI_Topic_Space.github.io/pages/pai_risk_taxonomy_bilingual_v1.0.html",
+  "standalone_html": "/Users/deep1003/data3/pai_risk_taxonomy/html/pai_risk_taxonomy_bilingual_v1.0.html",
+  "backup_path": "/Users/deep1003/data3/AI_Topic_Space.github.io/pages/pai_risk_taxonomy_bilingual_v1.0.bak_before_unreferenced_corpus_refs_20260627_235805.html",
+  "candidate_pool_after_excluding_existing_refs": 32758,
+  "scored_candidates": 18381,
+  "access_checked_buffer": 420,
+  "accessible_candidates_in_buffer": 241,
+  "selected_top200_count": 200,
+  "candidate_matches": 356,
+  "applied_additions": 23,
+  "cards_touched": 23,
+  "max_refs_after": 5,
+  "over_5_cards": 0,
+  "applied_additions_after_quality_review": 23,
+  "removed_after_quality_review": 24,
+  "cards_touched_after_quality_review": 23,
+  "selected_top200_access_ok": true,
+  "selected_top200_year_2024plus": 140,
+  "selected_top200_year_2023plus": 168,
+  "corpus_links_after_quality_review": 23
+}

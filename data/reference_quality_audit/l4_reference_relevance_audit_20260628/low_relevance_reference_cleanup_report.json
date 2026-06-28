@@ -1,0 +1,13 @@
+{
+  "backup": "/Users/deep1003/data3/AI_Topic_Space.github.io/pages/pai_risk_taxonomy_bilingual_v1.0.bak_before_low_relevance_ref_cleanup_20260628_000419.html",
+  "removed_count": 10,
+  "fixed_justification_count": 4,
+  "links_after": 306,
+  "justifications_after": 315,
+  "max_refs_after": 5,
+  "over_5_cards": 0,
+  "removed_csv": "/Users/deep1003/data3/AI_Topic_Space.github.io/data/l4_reference_relevance_audit_20260628/removed_low_relevance_references_applied.csv",
+  "fixes_csv": "/Users/deep1003/data3/AI_Topic_Space.github.io/data/l4_reference_relevance_audit_20260628/fixed_reference_justification_mismatches_applied.csv",
+  "html_path": "/Users/deep1003/data3/AI_Topic_Space.github.io/pages/pai_risk_taxonomy_bilingual_v1.0.html",
+  "standalone_html": "/Users/deep1003/data3/pai_risk_taxonomy/html/pai_risk_taxonomy_bilingual_v1.0.html"
+}
