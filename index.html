@@ -113,12 +113,22 @@
   .criteria-section[open] summary::before{transform:rotate(90deg);}
   .criteria-body{padding:0 20px 20px;border-top:1px solid #f0f0f0;}
   .criteria-body p{font-size:12px;color:#667085;line-height:1.6;margin:12px 0;}
+  .criteria-body h3{font-size:14px;color:#202939;margin:18px 0 8px;}
   .criteria-figure{margin:14px 0 16px;background:#f8fafc;border:1px solid #e6eaf2;border-radius:8px;padding:12px;}
   .criteria-figure img{display:block;width:100%;max-width:980px;margin:0 auto;height:auto;}
   .criteria-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:12px;}
   .criteria-card{border:1px solid #edf0f5;border-radius:8px;padding:12px;background:#fbfcff;}
   .criteria-card strong{display:block;font-size:12px;margin-bottom:5px;color:#202939;}
   .criteria-card span{display:block;font-size:12px;color:#667085;line-height:1.5;}
+  .criteria-list{margin:8px 0 10px 18px;color:#475467;font-size:12px;line-height:1.6;}
+  .criteria-list li{margin:4px 0;}
+  .criteria-table{width:100%;border-collapse:collapse;margin:10px 0 16px;font-size:12px;background:#fff;}
+  .criteria-table th,.criteria-table td{border:1px solid #e6eaf2;padding:9px 10px;text-align:left;vertical-align:top;line-height:1.55;}
+  .criteria-table th{background:#f8fafc;color:#344054;font-weight:700;}
+  .criteria-table td{color:#475467;}
+  .criteria-note{border-left:3px solid #1a1a2e;background:#f8fafc;border-radius:6px;padding:10px 12px;margin:12px 0;color:#475467;font-size:12px;line-height:1.6;}
+  .criteria-note strong{color:#202939;}
+  .criteria-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;background:#f2f4f7;border-radius:4px;padding:1px 4px;color:#344054;}
 </style>
 </head>
 <body>
@@ -2738,18 +2748,45 @@
 <details class="criteria-section" id="three-h-one-r-criteria">
 <summary>3H1R 기준</summary>
 <div class="criteria-body">
-<p>AI2X-3H1R 관점에서 Physical AI 기준을 발췌·요약했다. 3H1R은 L4 리스크 카드의 실패 차원을 Primary와 Secondary로 구분하기 위한 판정 기준이다.</p>
+<p>AI2X-3H1R 관점에서 Physical AI 기준을 발췌·정리했다. 3H1R은 L4 리스크 카드의 실패 차원을 Harmless, Helpful, Honest, Role Consistency로 판정하고, 각 차원을 Primary와 Secondary로 구분하기 위한 방법론이다.</p>
+<h3>0. 3H1R의 개념적 정의</h3>
+<div class="criteria-grid">
+<div class="criteria-card"><strong>H1. Harmless (무해성)</strong><span>행동·출력이 개인, 집단, 사회에 피해를 주지 않아야 한다. 직접적 해악뿐 아니라 잘못된 정보 조장 같은 간접적 해악도 포함하며, Helpful과 근본적 긴장관계를 가진다.</span></div>
+<div class="criteria-card"><strong>H2. Helpful (유용성)</strong><span>사용자의 실제 의도와 맥락에 부합하는 도움을 제공해야 한다. 단순 지시 이행이 아니라 실제 이익을 최대화하는 것이 기준이며, 과도한 거부도 Helpful 실패로 본다.</span></div>
+<div class="criteria-card"><strong>H3. Honest (정직성)</strong><span>사실 정확성, 불확실성 인식, 기만 금지, 조종 금지의 네 층위로 본다. 사용자가 원하는 답이 아니라 참인 답을 제공하는 것이 핵심이다.</span></div>
+<div class="criteria-card"><strong>RC. Role Consistency (역할 일관성)</strong><span>정의된 역할, 가치, 행동 원칙을 맥락이 바뀌어도 유지해야 한다. 페르소나 드리프트, 컨텍스트 위반, 탈옥에 의한 역할 이탈이 핵심 실패 유형이다.</span></div>
+</div>
+<h3>구조적 관계</h3>
 <figure class="criteria-figure">
 <img alt="Helpful과 Harmless의 긴장을 Honest가 중재하고 Role Consistency가 3H를 안정화하는 3H1R 구조적 관계" src="assets/3h1r-structural-relationship.svg"/>
 </figure>
-<div class="criteria-grid">
-<div class="criteria-card"><strong>H1 Harmless</strong><span>신체 상해, 재산 피해, 환경 피해처럼 피지컬 피해가 발생하거나 발생할 수 있는가를 본다.</span></div>
-<div class="criteria-card"><strong>H2 Helpful</strong><span>물리 작업 완수와 안전 요구사항 사이의 균형 실패를 본다.</span></div>
-<div class="criteria-card"><strong>H3 Honest</strong><span>센서 인지 오류, 상황 판단 오류, 불확실성 과소평가나 미전파를 본다.</span></div>
-<div class="criteria-card"><strong>RC Role Consistency</strong><span>역할, 안전 제약, 행동 원칙이 적대적 입력이나 엣지 케이스에서도 유지되는지 본다.</span></div>
-<div class="criteria-card"><strong>Primary</strong><span>카드 정의에서 직접 드러나는 핵심 실패 차원이다.</span></div>
-<div class="criteria-card"><strong>Secondary</strong><span>리스크가 발생할 때 파생적으로 함께 관여하는 실패 차원이다.</span></div>
-</div>
+<ul class="criteria-list">
+<li><strong>Helpful vs Harmless tradeoff</strong>는 가장 측정하기 어려운 영역이므로, 리스크 평가에서 두 축을 동시에 측정해야 한다.</li>
+<li><strong>Honest</strong>는 작업 수행과 피해 방지 사이의 판단을 중재한다. 피지컬 AI에서는 센서 인지, 상황 판단, 불확실성 전달이 이 중재의 핵심이다.</li>
+<li><strong>Role Consistency</strong>는 multiplier 리스크다. RC가 무너지면 Harmless, Helpful, Honest 리스크가 동시에 증폭된다.</li>
+<li>피지컬 AI 맥락에서 RC 실패는 단순 언어 오류가 아니라 물리적 피해로 직결될 수 있으므로 높은 가중치로 본다.</li>
+</ul>
+<h3>1. Physical AI 적용 기준</h3>
+<p>원래 3H는 LLM 언어 출력 기준이므로, 피지컬 AI에서는 물리 세계의 행동, 센서 인지, 안전 제약, 작업 수행 실패를 기준으로 재정의한다.</p>
+<table class="criteria-table">
+<thead><tr><th>차원</th><th>LLM 원래 정의</th><th>Physical AI 재정의</th><th>판단 기준</th></tr></thead>
+<tbody>
+<tr><td><strong>H1. Harmless</strong></td><td>유해 콘텐츠 생성 금지</td><td>신체 상해, 재산 피해, 환경 피해 등 물리적 해악 발생</td><td>이 리스크의 직접적 결과로 물리적 피해가 발생하거나 발생할 수 있는가?</td></tr>
+<tr><td><strong>H2. Helpful</strong></td><td>사용자 의도에 맞는 정보 제공</td><td>물리 작업 완수 능력과 안전 요구사항 충족 사이의 균형 실패</td><td>AI가 물리 작업 수행 능력을 과도하게 희생하거나, 반대로 안전을 무시하고 작업 완수에 치중하는 tradeoff 실패를 포함하는가?</td></tr>
+<tr><td><strong>H3. Honest</strong></td><td>사실 정확성 및 불확실성 인식</td><td>센서 인지 오류, 상황 판단 오류, 불확실성 미전파</td><td>시스템이 세계를 잘못 인식하거나, 자신의 불확실성을 과소평가하거나, 사용자 또는 시스템에 잘못된 정보를 전달하는가?</td></tr>
+<tr><td><strong>RC. Role Consistency</strong></td><td>역할·가치 원칙 유지</td><td>안전 제약 이탈, 탈옥 명령 수용, 맥락 변화에 따른 행동 원칙 붕괴</td><td>AI가 정의된 역할, 안전 제약, 행동 원칙을 적대적 입력이나 엣지 케이스에서도 유지하지 못하는가?</td></tr>
+</tbody>
+</table>
+<div class="criteria-note"><strong>판정 원칙:</strong> 결과만 보고 축을 붙이지 않는다. 실패 메커니즘을 분해해야 한다. 예를 들어 “로봇이 장비 랙을 밀쳐 넘어뜨림”은 단순히 Harmless 실패로 끝내지 않고, 인지 오류(Honest), 안전 제동 미작동(Harmless), 제약 이탈(Role Consistency) 여부를 함께 본다.</div>
+<h3>Primary / Secondary 표기 원칙</h3>
+<p>L4 리스크 카드는 복수의 3H1R 차원을 가질 수 있다. 단, 카드 정의에서 직접 명시된 주원인은 Primary로, 발생 시 파생적으로 관여하는 차원은 Secondary로 표기한다.</p>
+<table class="criteria-table">
+<thead><tr><th>표시 유형</th><th>기준</th><th>표기 예</th></tr></thead>
+<tbody>
+<tr><td><strong>Primary</strong></td><td>카드 정의에서 직접 명시된 실패 차원</td><td><span class="criteria-code">H1 Harmless[P]</span> 또는 <span class="criteria-code">H_harmless[P]</span></td></tr>
+<tr><td><strong>Secondary</strong></td><td>해당 리스크가 발생할 때 파생적으로 관여하는 차원</td><td><span class="criteria-code">H3 Honest[S]</span> 또는 <span class="criteria-code">H_honest[S]</span></td></tr>
+</tbody>
+</table>
 </div>
 </details>
 </div>
