@@ -25,15 +25,15 @@ Live page:
 - Evidence/justification entries: 321
 - Linked references: 314
 - Maximum references per L4 card: 5
-- L2 card counts: `P1=117`, `I1=39`, `S1=26`
+- L2 card counts: `P2=117`, `I2=39`, `S2=26`
 
 ## Taxonomy IDs
 
-L2 categories use short stable IDs: `P1` for Physical Safety, `I1` for Interaction Safety, and `S1` for Societal Safety.
+The root L1 category is Physical AI. Its three L2 children use short stable IDs: `P2` for Physical Safety, `I2` for Interaction Safety, and `S2` for Societal Safety.
 
-L3 categories inherit the parent L2 ID and add a sequence number, for example `P1.1` for Purposeful / Malicious Harm under Physical Safety. L4 risks keep their original card IDs, such as `PHYSBENCH-REF-0017`.
+L3 categories inherit the parent L2 ID and add a sequence number, for example `P2.1` for Purposeful / Malicious Harm under Physical Safety. L4 risks keep their original card IDs, such as `PHYSBENCH-REF-0017`.
 
-Human decision on 2026-06-28 moved `S1.10` Lack of Robustness in Unseen Environments to `P1.9`. The category was moved only; absorption into `P1.2` or redistribution remains a future human decision.
+Human decision on 2026-06-28 moved `S2.10` Lack of Robustness in Unseen Environments to `P2.9`. The category was moved only; absorption into `P2.2` or redistribution remains a future human decision.
 
 ## Scope
 
