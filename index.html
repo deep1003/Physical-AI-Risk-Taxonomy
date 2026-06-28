@@ -130,6 +130,23 @@
   .criteria-note{border-left:3px solid #1a1a2e;background:#f8fafc;border-radius:6px;padding:10px 12px;margin:12px 0;color:#475467;font-size:12px;line-height:1.6;}
   .criteria-note strong{color:#202939;}
   .criteria-code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;background:#f2f4f7;border-radius:4px;padding:1px 4px;color:#344054;}
+  .cite{font-size:9px;vertical-align:super;margin-left:1px;}
+  .cite a{color:#185FA5;text-decoration:none;font-weight:700;}
+  .cite a:hover{text-decoration:underline;}
+  .example-box{border:1px solid #e6eaf2;border-left:4px solid #1a1a2e;background:#fbfcff;border-radius:8px;padding:12px 14px;margin:14px 0;}
+  .example-box .ex-title{font-weight:700;color:#202939;font-size:13px;margin-bottom:8px;}
+  .example-chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:8px 0;font-size:11.5px;}
+  .example-chain .step{background:#fff;border:1px solid #d6dce5;border-radius:6px;padding:4px 8px;color:#344054;white-space:nowrap;}
+  .example-chain .arr{color:#98a2b3;font-weight:700;}
+  .example-box .ex-note{font-size:11.5px;color:#475467;line-height:1.65;margin-top:8px;}
+  .refs-section{background:#fff;border-radius:8px;margin:4px 0 28px;padding:18px 22px;box-shadow:0 1px 4px rgba(0,0,0,.08);scroll-margin-top:74px;}
+  .refs-section h2{font-size:15px;font-weight:700;color:#1a1a2e;margin-bottom:6px;}
+  .refs-section .refs-sub{font-size:11.5px;color:#667085;margin-bottom:12px;line-height:1.6;}
+  .refs-list{list-style:none;font-size:12px;color:#344054;line-height:1.65;}
+  .refs-list li{padding:6px 0;border-bottom:1px solid #f2f2f2;}
+  .refs-list li:last-child{border-bottom:none;}
+  .refs-list a{color:#185FA5;text-decoration:none;}
+  .refs-list a:hover{text-decoration:underline;}
 </style>
 </head>
 <body>
@@ -2747,10 +2764,10 @@
 <details class="criteria-section" id="three-h-one-r-criteria">
 <summary>3H1R 기준</summary>
 <div class="criteria-body">
-<p>3H1R은 각 L4 리스크 카드가 어떤 <strong>정렬 가치(alignment value)</strong>의 실패인지를 판정하는 분석 축이다. 본 절은 <strong>① 개념적 정의 → ② Physical AI 적용 기준(판별 규칙) → ③ 구조적 관계 → ④ 표기 원칙</strong>의 순서로 기술하여, 동일한 카드에 대해 누가 태깅하더라도 같은 결과가 나오도록(재현 가능하도록) 판정 규칙을 명시한다.</p>
+<p>3H1R은 각 리스크 카드가 어떤 <strong>정렬 가치(alignment value)</strong>의 실패인지를 판정하는 분석 축이다. 본 절은 <strong>① 개념적 정의 → ② Physical AI 적용 기준(판별 규칙) → ③ 구조적 관계 → ④ 표기 원칙</strong>의 순서로 기술하여, 동일한 카드에 대해 누가 태깅하더라도 같은 결과가 나오도록(재현 가능하도록) 판정 규칙을 명시한다.</p>
 
 <h3>① 3H1R의 개념적 정의</h3>
-<p>3H(Helpful·Harmless·Honest)는 대규모 언어모델 정렬의 <strong>HHH 기준</strong>(Askell et al., 2021)에서, 1R(Role Consistency)은 <strong>헌법적 AI 및 역할·행동 제약</strong> 연구(Bai et al., 2022; Robot Constitutions, 2025)에서 가져와 Physical AI로 확장한 것이다. 아래는 각 차원의 가치 정의이며, 물리 맥락으로의 번역은 ②에서 다룬다.</p>
+<p>3H(Helpful·Harmless·Honest)는 대규모 언어모델 정렬의 <strong>HHH 기준</strong>(Askell et al., 2021<sup class="cite"><a href="#ref1">1</a></sup>)에서, 1R(Role Consistency)은 <strong>헌법적 AI 및 역할·행동 제약</strong> 연구(Bai et al., 2022<sup class="cite"><a href="#ref2">2</a></sup>; Sermanet et al., 2025<sup class="cite"><a href="#ref3">3</a></sup>)에서 가져와 Physical AI로 확장한 것이다. Physical AI 안전성 평가의 최근 경험적 기반으로는 ASIMOV Benchmark v1<sup class="cite"><a href="#ref3">3</a></sup>·v2<sup class="cite"><a href="#ref4">4</a></sup>를 참조한다. 아래는 각 차원의 가치 정의이며, 물리 맥락으로의 번역은 ②에서 다룬다.</p>
 <div class="criteria-grid">
 <div class="criteria-card"><strong>H1. Harmless (무해성)</strong><span>행동·출력이 개인·집단·사회에 위해를 주지 않아야 한다. 직접적 해악과 간접적 해악(위험 조장 등)을 모두 포함하며, Helpful과 근본적 긴장관계에 있다.</span></div>
 <div class="criteria-card"><strong>H2. Helpful (유용성)</strong><span>사용자의 실제 의도와 맥락에 부합하는 도움을 제공해야 한다. 단순 지시 이행이 아니라 실질 이익의 극대화가 기준이며, 과도한 거부도 Helpful 실패로 본다.</span></div>
@@ -2770,20 +2787,38 @@
 </tbody>
 </table>
 <div class="criteria-note"><strong>Harmless와 RC의 구분:</strong> RC는 규범·권한 경계의 이탈 <em>그 자체</em>(예: 운용 프로토콜 위반)를, Harmless는 그로 인해 발생하는 <em>물리적 위해</em>를 가리킨다. 둘이 함께 인과로 묶이면 Primary/Secondary로 구분한다.</div>
-<p><strong>Primary / Secondary 판별 규칙.</strong> 등급은 결과(피해의 크기)가 아니라 <em>실패 메커니즘의 인과 근접성(causal proximity)</em>으로 정한다. 카드 정의가 기술하는 실패의 직접 원인이면 <strong>Primary</strong>, 그 실패가 전개되며 파생적으로 관여하면 <strong>Secondary</strong>다. 원칙적으로 Primary는 1개, 명시적 tradeoff나 인과 분기가 있을 때 최대 2개이며, 3개는 문서화된 예외만 허용한다(<span class="criteria-code">data/three_h_one_r_primary_exceptions_20260628</span>).</p>
+<p><strong>Primary / Secondary 판별 규칙.</strong> 등급은 결과(피해의 크기)가 아니라 <em>실패 메커니즘의 인과 근접성(causal proximity)</em>으로 정한다. 카드 정의가 기술하는 실패의 직접 원인이면 <strong>Primary</strong>, 그 실패가 전개되며 파생적으로 관여하면 <strong>Secondary</strong>다. 원칙적으로 Primary는 1개, 명시적 tradeoff나 인과 분기가 있을 때 최대 2개이며, 3개는 문서화된 예외만 허용한다.</p>
 <div class="criteria-note"><strong>판정 예시:</strong> “로봇이 장비 랙을 밀쳐 넘어뜨림”은 결과만 보고 Harmless로 끝내지 않고 메커니즘을 분해한다 — 인지 오류(Honest), 안전 제동 미작동(Harmless), 제약 이탈(Role Consistency) 중 직접 원인을 Primary로, 나머지를 Secondary로 부여한다.</div>
 
 <h3>③ 구조적 관계</h3>
-<p>3H1R 정렬은 <strong>2축 매핑</strong>이다 — <strong>(축1) L2/L3 리스크 유형</strong>(무엇이 실패했는가) × <strong>(축2) 위반된 3H1R 가치</strong>(어떤 정렬 가치가 깨졌는가). 한 L4 카드는 하나의 리스크 유형에 속하되, 가치 축에서는 복수 차원을 가질 수 있다(비배타·다중 태그). 네 차원은 상호 배타적이지 않고 부분적으로 직교하며, 다음 관계로 연결된다.</p>
+<p>3H1R 정렬은 <strong>2축 매핑</strong>이다 — <strong>(축1) 리스크 유형</strong>(무엇이 실패했는가) × <strong>(축2) 위반된 정렬 가치</strong>(어떤 정렬 가치가 깨졌는가). 한 리스크 카드는 하나의 리스크 유형에 속하되, 가치 축에서는 복수 차원을 가질 수 있다(비배타·다중 태그). 네 차원은 상호 배타적이지 않고 부분적으로 직교하며, 아래의 정제된 정의와 위계로 연결된다.</p>
+<div class="criteria-grid">
+<div class="criteria-card"><strong>H1. Harmless (무해성)</strong><span>위해의 <em>사전 예방(ex-ante prevention)</em>과 <em>사후 완화(ex-post mitigation)</em>를 포괄하는 안전 보장 절차. 위해의 의도성(고의·과실)과 양상(물리적·비물리적)을 가리지 않는다<sup class="cite"><a href="#ref1">1</a>,<a href="#ref3">3</a></sup>.</span></div>
+<div class="criteria-card"><strong>H2. Helpful (유용성)</strong><span>사용자 의도·맥락에 부합하는 과업의 안전한 수행. Harmless와 본질적 <em>tradeoff</em> 관계이며, 과소행동(과잉 거부)과 과대행동(안전 무시) 모두를 실패로 본다<sup class="cite"><a href="#ref1">1</a></sup>.</span></div>
+<div class="criteria-card"><strong>H3. Honest (정직성)</strong><span><em>보정된 신뢰(calibrated confidence)</em> — 아는 것과 모르는 것의 경계를 사실대로 표상한다. 불확실성이 커질수록 경계가 모호해지므로 추정 불확실성(epistemic uncertainty)까지 명시적으로 전달해야 한다<sup class="cite"><a href="#ref4">4</a>,<a href="#ref5">5</a></sup>.</span></div>
+<div class="criteria-card"><strong>RC. Role Consistency (역할 일관성)</strong><span>맥락·상황이 변해도 본연의 역할과 윤리·규범 원칙을 <em>불변(invariant)</em>으로 유지. 자신의 역할·한계를 일관되게 표상한다는 점에서 <em>정직성의 맥락적 확장</em>으로 볼 수 있다<sup class="cite"><a href="#ref2">2</a>,<a href="#ref3">3</a></sup>.</span></div>
+</div>
 <figure class="criteria-figure">
 <img alt="무해성(좌)과 유용성(우)의 긴장을 정직성이 중재하고 역할 일관성이 세 축을 안정화하는 3H1R 구조적 관계" src="assets/3h1r-structural-relationship.svg"/>
 </figure>
 <ul class="criteria-list">
 <li><strong>Harmless ↔ Helpful 긴장(tradeoff)</strong>은 가장 측정하기 어려운 영역이므로, 평가 시 두 축을 동시에 본다.</li>
-<li><strong>Honest</strong>는 안전(Harmless)과 과업(Helpful)의 판단을 중재한다. 물리 맥락에서는 정확한 상황 인식과 불확실성 전달이 그 중재의 토대다.</li>
-<li><strong>Role Consistency</strong>는 multiplier 차원이다. RC가 무너지면 Harmless·Helpful·Honest 리스크가 동시에 증폭된다.</li>
-<li>물리 맥락에서 RC 실패는 언어 오류에 그치지 않고 물리적 피해로 직결될 수 있어 높은 가중치로 본다.</li>
+<li><strong>Honest의 중재</strong>: 정확한 상황 인식과 보정된 불확실성 전달이 안전(Harmless)과 과업(Helpful)의 균형 판단을 매개한다<sup class="cite"><a href="#ref4">4</a></sup>.</li>
+<li><strong>Role Consistency의 증폭(multiplier)</strong>: RC가 무너지면 세 축의 리스크가 동시에 증폭되며, RC는 자기 역할·한계의 일관된 표상이라는 점에서 정직성과 위계적으로 연결된다<sup class="cite"><a href="#ref2">2</a></sup>.</li>
+<li>물리 맥락에서 Honest·RC 실패는 언어 오류에 그치지 않고 물리적 위해로 직결될 수 있어 높은 가중치로 본다<sup class="cite"><a href="#ref3">3</a>,<a href="#ref4">4</a></sup>.</li>
 </ul>
+<div class="example-box">
+<div class="ex-title">예시 — 불확실성 하 인지 저하의 인과 캐스케이드</div>
+<div class="example-chain">
+<span class="step">이미지 센서 인지 저하</span><span class="arr">→</span>
+<span class="step">불확실성 미보정(과신)</span><span class="arr">→</span>
+<span class="step">추론·상황 판단 오류</span><span class="arr">→</span>
+<span class="step">안전 제동·회피 실패</span><span class="arr">→</span>
+<span class="step">인간 대상 물리적 가해</span>
+</div>
+<p class="ex-note">저조도·폐색·분포 이동으로 시각 인지가 저하되면, <em>보정되지 않은 과신(miscalibrated confidence)</em>이 오인식을 '확실한 사실'처럼 하류로 전달한다(Honest 실패의 발단)<sup class="cite"><a href="#ref4">4</a>,<a href="#ref5">5</a></sup>. 이 오류는 인지→추론→계획 계층을 가로질러 전파되어(runtime drift), 안전 필터를 통과한 행동조차 실제 환경에서 비안전 결과를 낳는다<sup class="cite"><a href="#ref6">6</a></sup>. 종착점에서 분리거리·속도 한계 위반으로 인간에 대한 물리적 위해가 발생한다<sup class="cite"><a href="#ref3">3</a>,<a href="#ref4">4</a></sup>.</p>
+<p class="ex-note"><strong>3H1R 분해:</strong> 발단은 Honest(인식·불확실성)이지만 위해의 직접 원인은 Harmless이며, 안전 정지라는 역할의 붕괴가 동반되면 RC가 가중된다. 따라서 표기는 <span class="criteria-code">H1 Harmless[P] · H3 Honest[S] · RC Role[S]</span> — 즉 결과(피해)가 아니라 인과 근접성으로 Primary를 정한다.</p>
+</div>
 
 <h3>④ 표기 원칙</h3>
 <p>표기는 <span class="criteria-code">축[등급]</span> 형식을 따른다. 축은 항상 <strong>H1 Harmless → H2 Helpful → H3 Honest → RC Role</strong>의 고정 순서로 나열한다(나열 순서는 우선순위가 아니라 고정 순서이며, 우선순위는 오직 P/S로만 표현한다). 등급 Primary[P]·Secondary[S]는 축 라벨 우측 위첨자로 둔다.</p>
@@ -2796,6 +2831,18 @@
 </table>
 </div>
 </details>
+<section class="refs-section" id="references">
+<h2>References</h2>
+<p class="refs-sub">3H1R 개념·방법론 정렬에 인용된 핵심 선행연구. 각 리스크 카드의 개별 출처·벤치마크 링크는 해당 카드에 직접 표기되어 있다.</p>
+<ol class="refs-list">
+<li id="ref1">[1] Askell, A., et al. (2021). <em>A General Language Assistant as a Laboratory for Alignment</em> (HHH 기준). arXiv:2112.00861. <a href="https://arxiv.org/abs/2112.00861" target="_blank" rel="noopener">arxiv.org/abs/2112.00861</a></li>
+<li id="ref2">[2] Bai, Y., et al. (2022). <em>Constitutional AI: Harmlessness from AI Feedback</em>. arXiv:2212.08073. <a href="https://arxiv.org/abs/2212.08073" target="_blank" rel="noopener">arxiv.org/abs/2212.08073</a></li>
+<li id="ref3">[3] Sermanet, P., Majumdar, A., Irpan, A., Kalashnikov, D., &amp; Sindhwani, V. (2025). <em>Generating Robot Constitutions &amp; Benchmarks for Semantic Safety</em> (ASIMOV Benchmark v1). CoRL 2025. arXiv:2503.08663. <a href="https://arxiv.org/abs/2503.08663" target="_blank" rel="noopener">arxiv.org/abs/2503.08663</a> · <a href="https://asimov-benchmark.github.io/v1/" target="_blank" rel="noopener">asimov-benchmark.github.io/v1</a></li>
+<li id="ref4">[4] Jindal, A., Kalashnikov, D., Chang, O., Garikapati, D., Majumdar, A., Sermanet, P., &amp; Sindhwani, V. (2025). <em>Can AI Perceive Physical Danger and Intervene?</em> (ASIMOV-2.0). arXiv:2509.21651. <a href="https://arxiv.org/abs/2509.21651" target="_blank" rel="noopener">arxiv.org/abs/2509.21651</a> · <a href="https://asimov-benchmark.github.io/v2/" target="_blank" rel="noopener">asimov-benchmark.github.io/v2</a></li>
+<li id="ref5">[5] Mei, Z., Dixit, A., Booker, M., Ren, A. Z., Shorinwa, O., &amp; Majumdar, A. (2024). <em>Perceive With Confidence: Statistical Safety Assurances for Navigation with Learning-Based Perception</em>. arXiv:2403.08185. <a href="https://arxiv.org/abs/2403.08185" target="_blank" rel="noopener">arxiv.org/abs/2403.08185</a></li>
+<li id="ref6">[6] Kim, D., Park, D., Lee, S., Oh, Y., Shin, J., &amp; Yoon, S. (2026). <em>Safe Embodied AI for Long-horizon Tasks: A Cross-layer Analysis of Robotic Manipulation</em>. arXiv:2606.05660. <a href="https://arxiv.org/abs/2606.05660" target="_blank" rel="noopener">arxiv.org/abs/2606.05660</a></li>
+</ol>
+</section>
 </div>
 <script>
 function toggle(el){
