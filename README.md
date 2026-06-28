@@ -29,7 +29,7 @@ Live page:
 
 ## Taxonomy IDs
 
-The root L1 category is Physical AI Risks. Its three L2 children use short stable IDs: `P2` for Physical Safety, `I2` for Interaction Safety, and `S2` for Societal Safety.
+The current public slice is organized as `L0 Ownership Levels` > `L1 Physical AI Risks` > `L2 Categories` > `L3 Sub-categories` > `L4 Risk Cards`. The three L2 children use short stable IDs: `P2` for Physical Safety, `I2` for Interaction Safety, and `S2` for Societal Safety.
 
 L3 categories use the same domain prefix and the L3 level number, followed by a local sequence number. For example, `P3.1` means the first L3 category under Physical Safety. L4 risks keep their original card IDs, such as `PHYSBENCH-REF-0017`.
 
