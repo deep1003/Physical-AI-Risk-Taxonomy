@@ -2774,22 +2774,21 @@
 <div class="criteria-note"><strong>판정 예시:</strong> “로봇이 장비 랙을 밀쳐 넘어뜨림”은 결과만 보고 Harmless로 끝내지 않고 메커니즘을 분해한다 — 인지 오류(Honest), 안전 제동 미작동(Harmless), 제약 이탈(Role Consistency) 중 직접 원인을 Primary로, 나머지를 Secondary로 부여한다.</div>
 
 <h3>3. 구조적 관계</h3>
-<p>3H1R 정렬은 <strong>2축 매핑</strong>이다 — <strong>(축1) 리스크 유형</strong>(무엇이 실패했는가) × <strong>(축2) 위반된 정렬 가치</strong>(어떤 정렬 가치가 깨졌는가). 한 리스크 카드는 하나의 리스크 유형에 속하되, 가치 축에서는 복수 차원을 가질 수 있다(비배타·다중 태그). 네 차원은 상호 배타적이지 않고 부분적으로 직교하며, 아래의 정제된 정의와 위계로 연결된다.</p>
-<div class="criteria-grid">
-<div class="criteria-card"><strong>H1. Harmless (무해성)</strong><span>위해의 <em>사전 예방(ex-ante prevention)</em>과 <em>사후 완화(ex-post mitigation)</em>를 포괄하는 안전 보장 절차. 위해의 의도성(고의·과실)과 양상(물리적·비물리적)을 가리지 않는다<sup class="cite"><a href="#ref1">1</a>,<a href="#ref3">3</a></sup>.</span></div>
-<div class="criteria-card"><strong>H2. Helpful (유용성)</strong><span>사용자 의도·맥락에 부합하는 과업의 안전한 수행. Harmless와 본질적 <em>tradeoff</em> 관계이며, 과소행동(과잉 거부)과 과대행동(안전 무시) 모두를 실패로 본다<sup class="cite"><a href="#ref1">1</a></sup>.</span></div>
-<div class="criteria-card"><strong>H3. Honest (정직성)</strong><span><em>보정된 신뢰(calibrated confidence)</em> — 아는 것과 모르는 것의 경계를 사실대로 표상한다. 불확실성이 커질수록 경계가 모호해지므로 추정 불확실성(epistemic uncertainty)까지 명시적으로 전달해야 한다<sup class="cite"><a href="#ref4">4</a>,<a href="#ref5">5</a></sup>.</span></div>
-<div class="criteria-card"><strong>RC. Role Consistency (역할 일관성)</strong><span>맥락·상황이 변해도 본연의 역할과 윤리·규범 원칙을 <em>불변(invariant)</em>으로 유지. 자신의 역할·한계를 일관되게 표상한다는 점에서 <em>정직성의 맥락적 확장</em>으로 볼 수 있다<sup class="cite"><a href="#ref2">2</a>,<a href="#ref3">3</a></sup>.</span></div>
-</div>
+<p>3H1R의 구조적 관계는 네 요소를 다시 정의하는 부분이 아니라, 판단 기준 사이의 상호작용을 설명한다. 3H1R 정렬은 <strong>2축 매핑</strong>이다 — <strong>(축1) 리스크 유형</strong>(무엇이 실패했는가) × <strong>(축2) 위반된 정렬 가치</strong>(어떤 정렬 가치가 깨졌는가). 한 리스크 카드는 하나의 리스크 유형에 속하되, 가치 축에서는 복수 차원을 가질 수 있다(비배타·다중 태그).</p>
 <figure class="criteria-figure">
 <img alt="무해성(좌)과 유용성(우)의 긴장을 정직성이 불확실성 기반으로 보정하고 역할 일관성이 제약을 유지하는 3H1R 구조적 관계" src="../assets/3h1r-structural-relationship.svg"/>
 </figure>
-<ul class="criteria-list">
-<li><strong>Harmless ↔ Helpful 긴장(tradeoff)</strong>은 가장 측정하기 어려운 영역이므로, 평가 시 두 축을 동시에 본다.</li>
-<li><strong>H3 Honest의 불확실성 보정(calibration)</strong>: 정확한 상황 인식과 보정된 불확실성 전달이 안전(Harmless)과 과업(Helpful)의 tradeoff 판단을 보정한다<sup class="cite"><a href="#ref4">4</a></sup>.</li>
-<li><strong>RC Role Consistency의 맥락 불변 제약(context-invariant constraint)</strong>: RC는 역할·권한·안전 원칙이 맥락 변화 후에도 유지되는지 보는 제약 조건이며, 실패하면 세 축의 리스크가 동시에 커지는 multiplier로 작동한다<sup class="cite"><a href="#ref2">2</a></sup>.</li>
-<li>실선은 H1-H2 tradeoff와 H3의 tradeoff calibration을, 점선은 RC가 맥락 변화 속에서도 H1/H2 원칙을 보존하는 context-invariant constraint를 나타낸다. 물리 맥락에서 H3·RC 실패는 언어 오류에 그치지 않고 물리적 위해로 직결될 수 있어 높은 가중치로 본다<sup class="cite"><a href="#ref3">3</a>,<a href="#ref4">4</a></sup>.</li>
-</ul>
+<table class="criteria-table">
+<thead><tr><th>관계</th><th>학술적 명칭</th><th>판정 의미</th></tr></thead>
+<tbody>
+<tr><td><strong>H1 Harmless ↔ H2 Helpful</strong></td><td>Tradeoff / 안전-유용성 긴장</td><td>안전을 과도하게 강화하면 과잉 거부가 늘고, 유용성을 밀면 안전 제약 위반이 커질 수 있다.</td></tr>
+<tr><td><strong>H3 Honest → H1 Harmless</strong></td><td>Uncertainty calibration / 불확실성 보정</td><td>세계 상태·센서 신뢰도·자기 능력의 불확실성이 클수록 안전 판단은 더 보수적으로 보정되어야 한다<sup class="cite"><a href="#ref4">4</a>,<a href="#ref5">5</a></sup>.</td></tr>
+<tr><td><strong>H3 Honest → H2 Helpful</strong></td><td>Capability calibration / 능력 보정</td><td>시스템이 할 수 있는 것과 모르는 것을 정확히 표상해야 과업 실행 강도와 거부 수준을 조절할 수 있다.</td></tr>
+<tr><td><strong>RC Role → H1/H2/H3</strong></td><td>Context-invariant constraint / 맥락 불변 제약</td><td>역할·권한·안전 원칙은 프롬프트, 환경, 사용자, 작업 맥락이 바뀌어도 완화되거나 생략되지 않는 상위 제약이다<sup class="cite"><a href="#ref2">2</a>,<a href="#ref3">3</a></sup>.</td></tr>
+<tr><td><strong>RC × H1/H2/H3</strong></td><td>Multiplier / 제약 실패 증폭</td><td>RC가 무너지면 H1, H2, H3 판단의 허용 범위가 동시에 흔들리므로, 다른 축의 실패를 증폭하는 경계 조건으로 본다.</td></tr>
+</tbody>
+</table>
+<div class="criteria-note"><strong>그림 해석:</strong> 실선은 직접적 tradeoff 또는 calibration 관계를, 점선은 RC가 맥락 변화 속에서도 H1/H2 원칙을 보존하는 context-invariant constraint를 나타낸다. 피지컬 AI에서는 H3·RC 실패가 언어 오류에 그치지 않고 물리적 위해로 이어질 수 있으므로 높은 가중치로 본다.</div>
 <div class="example-box">
 <div class="ex-title">예시 — 불확실성 하 인지 저하의 인과 캐스케이드</div>
 <div class="example-chain">
@@ -2799,8 +2798,8 @@
 <span class="step">안전 제동·회피 실패</span><span class="arr">→</span>
 <span class="step">인간 대상 물리적 가해</span>
 </div>
-<p class="ex-note">저조도·폐색·분포 이동으로 시각 인지가 저하되면, <em>보정되지 않은 과신(miscalibrated confidence)</em>이 오인식을 '확실한 사실'처럼 하류로 전달한다(Honest 실패의 발단)<sup class="cite"><a href="#ref4">4</a>,<a href="#ref5">5</a></sup>. 이 오류는 인지→추론→계획 계층을 가로질러 전파되어(runtime drift), 안전 필터를 통과한 행동조차 실제 환경에서 비안전 결과를 낳는다<sup class="cite"><a href="#ref6">6</a></sup>. 종착점에서 분리거리·속도 한계 위반으로 인간에 대한 물리적 위해가 발생한다<sup class="cite"><a href="#ref3">3</a>,<a href="#ref4">4</a></sup>.</p>
-<p class="ex-note"><strong>3H1R 분해:</strong> 발단은 Honest(인식·불확실성)이지만 위해의 직접 원인은 Harmless이며, 안전 정지라는 역할의 붕괴가 동반되면 RC가 가중된다. 따라서 표기는 <span class="criteria-code">H1 Harmless[P] · H3 Honest[S] · RC Role[S]</span> — 즉 결과(피해)가 아니라 인과 근접성으로 Primary를 정한다.</p>
+<p class="ex-note">저조도·폐색·분포 이동으로 시각 인지가 저하되면, <em>보정되지 않은 과신(miscalibrated confidence)</em>이 오인식을 '확실한 사실'처럼 하류로 전달한다(H3 실패의 발단)<sup class="cite"><a href="#ref4">4</a>,<a href="#ref5">5</a></sup>. H3가 이 불확실성을 보정하지 못하면 H1/H2 판단 강도가 함께 흔들리고, RC가 허용 가능한 행동 범위를 제한하지 못할 때 안전 필터를 통과한 행동도 실제 환경에서 비안전 결과를 낳는다<sup class="cite"><a href="#ref6">6</a></sup>.</p>
+<p class="ex-note"><strong>3H1R 분해:</strong> H3는 불확실성 보정 실패, H1은 물리적 위해의 직접 원인, RC는 안전 정지·권한 경계의 제약 보존 실패로 판정한다. 따라서 표기는 <span class="criteria-code">H1 Harmless[P] · H3 Honest[S] · RC Role[S]</span> — 즉 결과(피해)가 아니라 인과 근접성으로 Primary를 정한다.</p>
 </div>
 
 <h3>4. 표기 원칙</h3>
