@@ -31,9 +31,9 @@ Live page:
 
 The root L1 category is Physical AI. Its three L2 children use short stable IDs: `P2` for Physical Safety, `I2` for Interaction Safety, and `S2` for Societal Safety.
 
-L3 categories inherit the parent L2 ID and add a sequence number, for example `P2.1` for Purposeful / Malicious Harm under Physical Safety. L4 risks keep their original card IDs, such as `PHYSBENCH-REF-0017`.
+L3 categories use the same domain prefix and the L3 level number, followed by a local sequence number. For example, `P3.1` means the first L3 category under Physical Safety. L4 risks keep their original card IDs, such as `PHYSBENCH-REF-0017`.
 
-Human decision on 2026-06-28 moved `S2.10` Lack of Robustness in Unseen Environments to `P2.9`. The category was moved only; absorption into `P2.2` or redistribution remains a future human decision.
+Human decision on 2026-06-28 moved `S3.10` Lack of Robustness in Unseen Environments to `P3.9`. The category was moved only; absorption into `P3.2` or redistribution remains a future human decision.
 
 ## Scope
 

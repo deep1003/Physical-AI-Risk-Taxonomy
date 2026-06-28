@@ -6,7 +6,7 @@
   "linked_references": 314,
   "max_references_per_card": 5,
   "cards_over_5_references": 0,
-  "id_scheme": "L1: Physical AI; L2: P2/I2/S2; L3: parent L2 ID + sequence, e.g., P2.1. S2.10 migrated to P2.9 on 2026-06-28.",
+  "id_scheme": "L1: Physical AI; L2: P2/I2/S2; L3: domain prefix + level 3 + sequence, e.g., P3.1. S3.10 migrated to P3.9 on 2026-06-28.",
   "hierarchy": [
     {
       "l2_id": "P2",
@@ -14,47 +14,47 @@
       "cards": 117,
       "l3": [
         {
-          "l3_id": "P2.1",
+          "l3_id": "P3.1",
           "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
           "cards": 17
         },
         {
-          "l3_id": "P2.2",
+          "l3_id": "P3.2",
           "l3_name": "우발적 피해(Accidental Harm)",
           "cards": 22
         },
         {
-          "l3_id": "P2.3",
+          "l3_id": "P3.3",
           "l3_name": "로봇 제어(Robot Control)",
           "cards": 45
         },
         {
-          "l3_id": "P2.4",
+          "l3_id": "P3.4",
           "l3_name": "물리적 공격(Physical Attacks)",
           "cards": 1
         },
         {
-          "l3_id": "P2.5",
+          "l3_id": "P3.5",
           "l3_name": "사이버보안 위협(Cybersecurity Threats)",
           "cards": 4
         },
         {
-          "l3_id": "P2.6",
+          "l3_id": "P3.6",
           "l3_name": "하드웨어·기계적 결함(Hardware & Mechanical Failures)",
           "cards": 3
         },
         {
-          "l3_id": "P2.7",
+          "l3_id": "P3.7",
           "l3_name": "소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws)",
           "cards": 8
         },
         {
-          "l3_id": "P2.8",
+          "l3_id": "P3.8",
           "l3_name": "센서·입력 검증 실패(Sensor & Input Validation Failures)",
           "cards": 4
         },
         {
-          "l3_id": "P2.9",
+          "l3_id": "P3.9",
           "l3_name": "미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)",
           "cards": 13
         }
@@ -66,32 +66,32 @@
       "cards": 39,
       "l3": [
         {
-          "l3_id": "I2.1",
+          "l3_id": "I3.1",
           "l3_name": "프라이버시 침해(Privacy Violations)",
           "cards": 5
         },
         {
-          "l3_id": "I2.2",
+          "l3_id": "I3.2",
           "l3_name": "허위 정보(Misinformation)",
           "cards": 5
         },
         {
-          "l3_id": "I2.3",
+          "l3_id": "I3.3",
           "l3_name": "동적 환경 요인(Dynamic Environmental Factors)",
           "cards": 11
         },
         {
-          "l3_id": "I2.4",
+          "l3_id": "I3.4",
           "l3_name": "인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures)",
           "cards": 13
         },
         {
-          "l3_id": "I2.5",
+          "l3_id": "I3.5",
           "l3_name": "지시 오해석(Instruction Misinterpretation)",
           "cards": 1
         },
         {
-          "l3_id": "I2.6",
+          "l3_id": "I3.6",
           "l3_name": "멀티 에이전트 협력(Multi-Agent Collaboration)",
           "cards": 4
         }
@@ -103,47 +103,47 @@
       "cards": 26,
       "l3": [
         {
-          "l3_id": "S2.1",
+          "l3_id": "S3.1",
           "l3_name": "노동 대체(Labor Displacement)",
           "cards": 1
         },
         {
-          "l3_id": "S2.2",
+          "l3_id": "S3.2",
           "l3_name": "사회경제적 불평등(Socioeconomic Inequality)",
           "cards": 1
         },
         {
-          "l3_id": "S2.3",
+          "l3_id": "S3.3",
           "l3_name": "권력 집중(Power Concentration)",
           "cards": 1
         },
         {
-          "l3_id": "S2.4",
+          "l3_id": "S3.4",
           "l3_name": "편향·차별(Bias & Discrimination)",
           "cards": 3
         },
         {
-          "l3_id": "S2.5",
+          "l3_id": "S3.5",
           "l3_name": "책임·배상 부재(Lack of Accountability & Liability)",
           "cards": 12
         },
         {
-          "l3_id": "S2.6",
+          "l3_id": "S3.6",
           "l3_name": "투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability & Trust)",
           "cards": 1
         },
         {
-          "l3_id": "S2.7",
+          "l3_id": "S3.7",
           "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
           "cards": 4
         },
         {
-          "l3_id": "S2.8",
+          "l3_id": "S3.8",
           "l3_name": "변혁적 영향(Transformative Effects)",
           "cards": 1
         },
         {
-          "l3_id": "S2.9",
+          "l3_id": "S3.9",
           "l3_name": "상호작용 에이전트의 윤리·안전 함의(Ethical & Safety Implications of Interactive Agents)",
           "cards": 2
         }
@@ -156,10 +156,10 @@
       "type": "l3_move",
       "from_l2_id": "S2",
       "from_l2_name": "Societal Safety",
-      "from_l3_id": "S2.10",
+      "from_l3_id": "S3.10",
       "to_l2_id": "P2",
       "to_l2_name": "Physical Safety",
-      "to_l3_id": "P2.9",
+      "to_l3_id": "P3.9",
       "l3_name": "미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)",
       "card_count": 13,
       "decision": "human decision: move only; do not merge or redistribute until a future human decision."

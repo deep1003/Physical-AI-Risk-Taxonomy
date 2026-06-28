@@ -14,9 +14,9 @@ The published taxonomy is a bilingual L4 risk-card view for Physical AI. Each ca
 
 Physical AI is treated as AI deployed in systems that sense, reason, and act in the physical world, including robots, humanoids, drones, autonomous vehicles, CPS, and embodied agents.
 
-L1 is the root Physical AI category. L2 uses `P2`, `I2`, and `S2` to show that Physical Safety, Interaction Safety, and Societal Safety are second-level categories under Physical AI. L3 appends the local sequence number, such as `P2.1`, `I2.4`, or `P2.9`. L4 risks remain identified by their card IDs.
+L1 is the root Physical AI category. L2 uses `P2`, `I2`, and `S2` to show that Physical Safety, Interaction Safety, and Societal Safety are second-level categories under Physical AI. L3 uses the same domain prefix with level number `3`, such as `P3.1`, `I3.4`, or `P3.9`. L4 risks remain identified by their card IDs.
 
-Human decision on 2026-06-28 moved `S2.10` Lack of Robustness in Unseen Environments from Societal Safety to Physical Safety as `P2.9`. The move does not absorb the category into `P2.2`; absorption or redistribution is deferred to a future human decision.
+Human decision on 2026-06-28 moved `S3.10` Lack of Robustness in Unseen Environments from Societal Safety to Physical Safety as `P3.9`. The move does not absorb the category into `P3.2`; absorption or redistribution is deferred to a future human decision.
 
 ## 2. 3H1R Alignment Rule
 
