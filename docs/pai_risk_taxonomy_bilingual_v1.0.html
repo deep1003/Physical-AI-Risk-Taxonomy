@@ -100,6 +100,8 @@
 
   .card-justification{font-size:11px;color:#333;line-height:1.5;margin:0 0 7px;padding:6px 8px;background:#fff;border-left:3px solid #d8dde6;border-radius:4px;}
   .card-justification .just-label{font-weight:700;color:#555;margin-right:4px;}
+  .card-justification .just-item:not(:last-child)::after{content:";";}
+  .card-justification .just-item:last-child::after{content:".";}
 </style>
 </head>
 <body>
