@@ -8,7 +8,8 @@
   :root {--ps:#C0392B;--is:#1A5F7A;--ss:#5B3A8F;--et:#666;}
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px;color:#222;background:#F8F8F8;}
-  .page-header{background:#1a1a2e;color:#fff;padding:28px 32px 20px;}
+  .page-header{background:#1a1a2e;color:#fff;padding:28px 32px 20px;cursor:pointer;}
+  .page-header:focus-visible{outline:3px solid #84c5ff;outline-offset:-6px;}
   .page-header h1{font-size:20px;font-weight:600;margin-bottom:6px;}
   .page-header p{font-size:12px;color:#aab;margin-top:4px;}
   .nav-pills{display:flex;gap:8px;padding:14px 32px;background:#fff;border-bottom:1px solid #e8e8e8;position:sticky;top:0;z-index:100;}
@@ -133,7 +134,7 @@
 </head>
 <body>
 <!-- Human-defined Physical AI L0-L3 taxonomy labels: L3 names are rendered as Korean(English), updated 2026-06-26. -->
-<div class="page-header">
+<div aria-label="Physical AI Risk Taxonomy home" class="page-header" onclick="openTaxonomyHome()" onkeydown="handleHeaderKey(event)" role="link" tabindex="0">
 <h1>Responsible AI Risk Taxonomy v2.0</h1>
 <p>L1 Physical AI Risks · L2 Categories · L3 Sub-categories · L4 Risk Cards</p>
 </div>
@@ -2799,6 +2800,15 @@ function toggle(el){
 }
 function expandAll(){document.querySelectorAll('.l3-body').forEach(b=>{b.classList.remove('collapsed');b.previousElementSibling.querySelector('.chevron').style.transform='rotate(90deg)';});}
 function collapseAll(){document.querySelectorAll('.l3-body').forEach(b=>{b.classList.add('collapsed');b.previousElementSibling.querySelector('.chevron').style.transform='';});}
+function openTaxonomyHome(){
+  window.location.href='https://deep1003.github.io/Physical-AI-Risk-Taxonomy/';
+}
+function handleHeaderKey(e){
+  if(e.key==='Enter'||e.key===' '){
+    e.preventDefault();
+    openTaxonomyHome();
+  }
+}
 function showSection(id){
   document.querySelectorAll('.l2-section').forEach(s=>s.style.display='none');
   document.getElementById('sec-'+id).style.display='';
