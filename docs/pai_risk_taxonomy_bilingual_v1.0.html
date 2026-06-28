@@ -98,6 +98,11 @@
     .hhh-legend{display:flex;flex-wrap:wrap;gap:6px;padding:9px 32px 8px;background:#fffef8;border-bottom:1px solid #ece8d6;font-size:11px;align-items:center;}
     .hhh-legend-title{font-size:11px;font-weight:700;color:#555;margin-right:6px;}
 
+  .tax-id{display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;line-height:1;padding:3px 6px;border-radius:6px;background:#f0f2f5;color:#333;margin-right:6px;letter-spacing:0;}
+  .l2-id{background:#1b1b2f;color:#fff;}
+  .l3-id,.summary-id,.nav-id{background:#eef2f7;color:#344054;border:1px solid #d6dce5;}
+  .l3-left .tax-id{flex:0 0 auto;margin-left:4px;}
+
   .card-justification{font-size:11px;color:#333;line-height:1.5;margin:0 0 7px;padding:6px 8px;background:#fff;border-left:3px solid #d8dde6;border-radius:4px;}
   .card-justification .just-label{font-weight:700;color:#555;margin-right:4px;}
   .card-justification .just-item:not(:last-child)::after{content:";";}
@@ -112,9 +117,9 @@
 </div>
 <div class="nav-pills">
 <button class="pill active" onclick="showAll()">전체 보기</button>
-<button class="pill" onclick="showSection('Physical-Safety')" style="color:var(--ps)">🤖 Physical Safety</button>
-<button class="pill" onclick="showSection('Interaction-Safety')" style="color:var(--is)">🤝 Interaction Safety</button>
-<button class="pill" onclick="showSection('Societal-Safety')" style="color:var(--ss)">🏛 Societal Safety</button>
+<button class="pill" onclick="showSection('Physical-Safety')" style="color:var(--ps)">🤖 <span class="tax-id nav-id">P1</span> Physical Safety</button>
+<button class="pill" onclick="showSection('Interaction-Safety')" style="color:var(--is)">🤝 <span class="tax-id nav-id">I1</span> Interaction Safety</button>
+<button class="pill" onclick="showSection('Societal-Safety')" style="color:var(--ss)">🏛 <span class="tax-id nav-id">S1</span> Societal Safety</button>
 <button class="pill" onclick="expandAll()">전체 펼치기</button>
 <button class="pill" onclick="collapseAll()">전체 접기</button>
 </div>
@@ -133,9 +138,9 @@
 </div>
 <div class="main">
 <div class="kpi-row">
-<div class="kpi"><div class="val" style="color:var(--ps)">115</div><div class="lbl">Physical Safety 카드</div></div>
-<div class="kpi"><div class="val" style="color:var(--is)">37</div><div class="lbl">Interaction Safety 카드</div></div>
-<div class="kpi"><div class="val" style="color:var(--ss)">30</div><div class="lbl">Societal Safety 카드</div></div>
+<div class="kpi"><div class="val" style="color:var(--ps)">104</div><div class="lbl">Physical Safety 카드</div></div>
+<div class="kpi"><div class="val" style="color:var(--is)">39</div><div class="lbl">Interaction Safety 카드</div></div>
+<div class="kpi"><div class="val" style="color:var(--ss)">39</div><div class="lbl">Societal Safety 카드</div></div>
 </div>
 <div class="summary-box">
 <h2>분류 현황</h2>
@@ -143,23 +148,25 @@
 <input class="filter-input" oninput="filterCards(this.value)" placeholder="카드 ID 또는 키워드로 검색…" type="text"/>
 </div>
 <table class="summary-table">
-<tbody id="summary-tbody"><tr><td><span class="dot" style="background:#C0392B"></span>Physical Safety<small style="color:#888"> 로봇 자체의 리스크</small></td><td style="font-weight:600">114</td><td><div class="bar-wrap"><div class="bar" style="width:63%;background:#C0392B"></div></div></td><td style="color:#888">62.6%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">의도적·악의적 피해(Purposeful / Malicious Harm)</td><td style="color:#555">17</td><td><div class="bar-wrap"><div class="bar" style="width:15%;background:#ccc"></div></div></td><td style="color:#aaa">14.9%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">우발적 피해(Accidental Harm)</td><td style="color:#555">33</td><td><div class="bar-wrap"><div class="bar" style="width:29%;background:#ccc"></div></div></td><td style="color:#aaa">28.9%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">로봇 제어(Robot Control)</td><td style="color:#555">45</td><td><div class="bar-wrap"><div class="bar" style="width:39%;background:#ccc"></div></div></td><td style="color:#aaa">39.5%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">물리적 공격(Physical Attacks)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:1%;background:#ccc"></div></div></td><td style="color:#aaa">0.9%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">사이버보안 위협(Cybersecurity Threats)</td><td style="color:#555">5</td><td><div class="bar-wrap"><div class="bar" style="width:4%;background:#ccc"></div></div></td><td style="color:#aaa">4.4%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">하드웨어·기계적 결함(Hardware &amp; Mechanical Failures)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:1%;background:#ccc"></div></div></td><td style="color:#aaa">0.9%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">소프트웨어 취약점·설계 결함(Software Vulnerabilities &amp; Design Flaws)</td><td style="color:#555">8</td><td><div class="bar-wrap"><div class="bar" style="width:7%;background:#ccc"></div></div></td><td style="color:#aaa">7.0%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">센서·입력 검증 실패(Sensor &amp; Input Validation Failures)</td><td style="color:#555">4</td><td><div class="bar-wrap"><div class="bar" style="width:4%;background:#ccc"></div></div></td><td style="color:#aaa">3.5%</td></tr><tr><td><span class="dot" style="background:#1A5F7A"></span>Interaction Safety<small style="color:#888"> 상호작용 안전성</small></td><td style="font-weight:600">37</td><td><div class="bar-wrap"><div class="bar" style="width:20%;background:#1A5F7A"></div></div></td><td style="color:#888">20.3%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">프라이버시 침해(Privacy Violations)</td><td style="color:#555">5</td><td><div class="bar-wrap"><div class="bar" style="width:14%;background:#ccc"></div></div></td><td style="color:#aaa">13.5%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">허위 정보(Misinformation)</td><td style="color:#555">4</td><td><div class="bar-wrap"><div class="bar" style="width:11%;background:#ccc"></div></div></td><td style="color:#aaa">10.8%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">동적 환경 요인(Dynamic Environmental Factors)</td><td style="color:#555">10</td><td><div class="bar-wrap"><div class="bar" style="width:27%;background:#ccc"></div></div></td><td style="color:#aaa">27.0%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">인간 상호작용·안전 프로토콜 실패(Human Interaction &amp; Safety Protocol Failures)</td><td style="color:#555">13</td><td><div class="bar-wrap"><div class="bar" style="width:35%;background:#ccc"></div></div></td><td style="color:#aaa">35.1%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">지시 오해석(Instruction Misinterpretation)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:3%;background:#ccc"></div></div></td><td style="color:#aaa">2.7%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">멀티 에이전트 협력(Multi-Agent Collaboration)</td><td style="color:#555">4</td><td><div class="bar-wrap"><div class="bar" style="width:11%;background:#ccc"></div></div></td><td style="color:#aaa">10.8%</td></tr><tr><td><span class="dot" style="background:#5B3A8F"></span>Societal Safety<small style="color:#888"> 사회적 안전성</small></td><td style="font-weight:600">31</td><td><div class="bar-wrap"><div class="bar" style="width:17%;background:#5B3A8F"></div></div></td><td style="color:#888">17.0%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">노동 대체(Labor Displacement)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:3%;background:#ccc"></div></div></td><td style="color:#aaa">3.2%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">사회경제적 불평등(Socioeconomic Inequality)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:3%;background:#ccc"></div></div></td><td style="color:#aaa">3.2%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">권력 집중(Power Concentration)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:3%;background:#ccc"></div></div></td><td style="color:#aaa">3.2%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">편향·차별(Bias &amp; Discrimination)</td><td style="color:#555">4</td><td><div class="bar-wrap"><div class="bar" style="width:13%;background:#ccc"></div></div></td><td style="color:#aaa">12.9%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">책임·배상 부재(Lack of Accountability &amp; Liability)</td><td style="color:#555">12</td><td><div class="bar-wrap"><div class="bar" style="width:39%;background:#ccc"></div></div></td><td style="color:#aaa">38.7%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability &amp; Trust)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:3%;background:#ccc"></div></div></td><td style="color:#aaa">3.2%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)</td><td style="color:#555">4</td><td><div class="bar-wrap"><div class="bar" style="width:13%;background:#ccc"></div></div></td><td style="color:#aaa">12.9%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">변혁적 영향(Transformative Effects)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:3%;background:#ccc"></div></div></td><td style="color:#aaa">3.2%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">상호작용 에이전트의 윤리·안전 함의(Ethical &amp; Safety Implications of Interactive Agents)</td><td style="color:#555">2</td><td><div class="bar-wrap"><div class="bar" style="width:6%;background:#ccc"></div></div></td><td style="color:#aaa">6.5%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555">미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)</td><td style="color:#555">4</td><td><div class="bar-wrap"><div class="bar" style="width:13%;background:#ccc"></div></div></td><td style="color:#aaa">12.9%</td></tr></tbody>
+<tbody id="summary-tbody"><tr><td><span class="dot" style="background:#C0392B"></span><span class="tax-id summary-id">P1</span> Physical Safety<small style="color:#888"> 로봇 자체의 리스크</small></td><td style="font-weight:600">104</td><td><div class="bar-wrap"><div class="bar" style="width:57.1%;background:#C0392B"></div></div></td><td style="color:#888">57.1%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">P1.1</span> 의도적·악의적 피해(Purposeful / Malicious Harm)</td><td style="color:#555">17</td><td><div class="bar-wrap"><div class="bar" style="width:16.3%;background:#ccc"></div></div></td><td style="color:#aaa">16.3%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">P1.2</span> 우발적 피해(Accidental Harm)</td><td style="color:#555">22</td><td><div class="bar-wrap"><div class="bar" style="width:21.2%;background:#ccc"></div></div></td><td style="color:#aaa">21.2%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">P1.3</span> 로봇 제어(Robot Control)</td><td style="color:#555">45</td><td><div class="bar-wrap"><div class="bar" style="width:43.3%;background:#ccc"></div></div></td><td style="color:#aaa">43.3%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">P1.4</span> 물리적 공격(Physical Attacks)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:1.0%;background:#ccc"></div></div></td><td style="color:#aaa">1.0%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">P1.5</span> 사이버보안 위협(Cybersecurity Threats)</td><td style="color:#555">4</td><td><div class="bar-wrap"><div class="bar" style="width:3.8%;background:#ccc"></div></div></td><td style="color:#aaa">3.8%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">P1.6</span> 하드웨어·기계적 결함(Hardware &amp; Mechanical Failures)</td><td style="color:#555">3</td><td><div class="bar-wrap"><div class="bar" style="width:2.9%;background:#ccc"></div></div></td><td style="color:#aaa">2.9%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">P1.7</span> 소프트웨어 취약점·설계 결함(Software Vulnerabilities &amp; Design Flaws)</td><td style="color:#555">8</td><td><div class="bar-wrap"><div class="bar" style="width:7.7%;background:#ccc"></div></div></td><td style="color:#aaa">7.7%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">P1.8</span> 센서·입력 검증 실패(Sensor &amp; Input Validation Failures)</td><td style="color:#555">4</td><td><div class="bar-wrap"><div class="bar" style="width:3.8%;background:#ccc"></div></div></td><td style="color:#aaa">3.8%</td></tr><tr><td><span class="dot" style="background:#1A5F7A"></span><span class="tax-id summary-id">I1</span> Interaction Safety<small style="color:#888"> 상호작용 안전성</small></td><td style="font-weight:600">39</td><td><div class="bar-wrap"><div class="bar" style="width:21.4%;background:#1A5F7A"></div></div></td><td style="color:#888">21.4%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">I1.1</span> 프라이버시 침해(Privacy Violations)</td><td style="color:#555">5</td><td><div class="bar-wrap"><div class="bar" style="width:12.8%;background:#ccc"></div></div></td><td style="color:#aaa">12.8%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">I1.2</span> 허위 정보(Misinformation)</td><td style="color:#555">5</td><td><div class="bar-wrap"><div class="bar" style="width:12.8%;background:#ccc"></div></div></td><td style="color:#aaa">12.8%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">I1.3</span> 동적 환경 요인(Dynamic Environmental Factors)</td><td style="color:#555">11</td><td><div class="bar-wrap"><div class="bar" style="width:28.2%;background:#ccc"></div></div></td><td style="color:#aaa">28.2%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">I1.4</span> 인간 상호작용·안전 프로토콜 실패(Human Interaction &amp; Safety Protocol Failures)</td><td style="color:#555">13</td><td><div class="bar-wrap"><div class="bar" style="width:33.3%;background:#ccc"></div></div></td><td style="color:#aaa">33.3%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">I1.5</span> 지시 오해석(Instruction Misinterpretation)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:2.6%;background:#ccc"></div></div></td><td style="color:#aaa">2.6%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">I1.6</span> 멀티 에이전트 협력(Multi-Agent Collaboration)</td><td style="color:#555">4</td><td><div class="bar-wrap"><div class="bar" style="width:10.3%;background:#ccc"></div></div></td><td style="color:#aaa">10.3%</td></tr><tr><td><span class="dot" style="background:#5B3A8F"></span><span class="tax-id summary-id">S1</span> Societal Safety<small style="color:#888"> 사회적 안전성</small></td><td style="font-weight:600">39</td><td><div class="bar-wrap"><div class="bar" style="width:21.4%;background:#5B3A8F"></div></div></td><td style="color:#888">21.4%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">S1.1</span> 노동 대체(Labor Displacement)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:2.6%;background:#ccc"></div></div></td><td style="color:#aaa">2.6%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">S1.2</span> 사회경제적 불평등(Socioeconomic Inequality)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:2.6%;background:#ccc"></div></div></td><td style="color:#aaa">2.6%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">S1.3</span> 권력 집중(Power Concentration)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:2.6%;background:#ccc"></div></div></td><td style="color:#aaa">2.6%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">S1.4</span> 편향·차별(Bias &amp; Discrimination)</td><td style="color:#555">3</td><td><div class="bar-wrap"><div class="bar" style="width:7.7%;background:#ccc"></div></div></td><td style="color:#aaa">7.7%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">S1.5</span> 책임·배상 부재(Lack of Accountability &amp; Liability)</td><td style="color:#555">12</td><td><div class="bar-wrap"><div class="bar" style="width:30.8%;background:#ccc"></div></div></td><td style="color:#aaa">30.8%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">S1.6</span> 투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability &amp; Trust)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:2.6%;background:#ccc"></div></div></td><td style="color:#aaa">2.6%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">S1.7</span> 인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)</td><td style="color:#555">4</td><td><div class="bar-wrap"><div class="bar" style="width:10.3%;background:#ccc"></div></div></td><td style="color:#aaa">10.3%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">S1.8</span> 변혁적 영향(Transformative Effects)</td><td style="color:#555">1</td><td><div class="bar-wrap"><div class="bar" style="width:2.6%;background:#ccc"></div></div></td><td style="color:#aaa">2.6%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">S1.9</span> 상호작용 에이전트의 윤리·안전 함의(Ethical &amp; Safety Implications of Interactive Agents)</td><td style="color:#555">2</td><td><div class="bar-wrap"><div class="bar" style="width:5.1%;background:#ccc"></div></div></td><td style="color:#aaa">5.1%</td></tr><tr class="sub-row"><td style="padding-left:24px;color:#555"><span class="tax-id summary-id">S1.10</span> 미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)</td><td style="color:#555">13</td><td><div class="bar-wrap"><div class="bar" style="width:33.3%;background:#ccc"></div></div></td><td style="color:#aaa">33.3%</td></tr></tbody>
 </table>
 </div>
-<section class="l2-section" id="sec-Physical-Safety">
+<section class="l2-section" id="sec-Physical-Safety" data-tax-id="P1">
 <div class="l2-header" style="border-left:4px solid #C0392B;background:#FDF0EF">
 <div class="l2-title">
 <span class="l2-icon">🤖</span>
+<span class="tax-id l2-id">P1</span>
 <span>Physical Safety</span>
 <span class="l2-ko">로봇 자체의 리스크</span>
-<span class="l2-badge" style="background:#C0392B">114개</span>
+<span class="l2-badge" style="background:#C0392B">104개</span>
 </div>
 <p class="l2-desc">로봇 하드웨어·소프트웨어 자체의 내재적 한계에서 비롯되는 리스크</p>
 </div>
-<div class="l3-list"><div class="l3-group">
+<div class="l3-list"><div class="l3-group" data-tax-id="P1.1">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">P1.1</span>
 <span class="l3-name">의도적·악의적 피해(Purposeful / Malicious Harm)</span>
 <span class="l3-count">17</span>
 </div>
@@ -376,10 +383,11 @@
 <span class="meta-item"><a class="src-link new-ref" href="https://doi.org/10.1007/s00146-019-00879-x" style="border-left:3px solid #27AE60;padding-left:4px;" target="_blank">+ The future of war: could lethal autonomous… (2020)</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="P1.2">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">P1.2</span>
 <span class="l3-name">우발적 피해(Accidental Harm)</span>
 <span class="l3-count">22</span>
 </div>
@@ -663,10 +671,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#b71c1c;border:1.5px solid #e91e63;font-weight:400">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#0d47a1;color:#fff;border:1.5px solid #0d47a1;font-weight:700">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="P1.3">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">P1.3</span>
 <span class="l3-name">로봇 제어(Robot Control)</span>
 <span class="l3-count">45</span>
 </div>
@@ -1242,10 +1251,11 @@
 <span class="meta-item top200-ref"><a class="src-link top200-ref-link" href="https://doi.org/10.1016/j.robot.2023.104448" style="border-left:3px solid #1A5F7A;padding-left:4px;" target="_blank">+ Multi-contact planning and control for humanoid robots: D… (2023)</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#2e7d32;border:1.5px solid #4caf50;font-weight:400">H1 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#0d47a1;color:#fff;border:1.5px solid #0d47a1;font-weight:700">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#6a1b9a;border:1.5px solid #9c27b0;font-weight:400">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="P1.4">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">P1.4</span>
 <span class="l3-name">물리적 공격(Physical Attacks)</span>
 <span class="l3-count">1</span>
 </div>
@@ -1265,10 +1275,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#2e7d32;border:1.5px solid #4caf50;font-weight:400">H1 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="P1.5">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">P1.5</span>
 <span class="l3-name">사이버보안 위협(Cybersecurity Threats)</span>
 <span class="l3-count">4</span>
 </div>
@@ -1326,10 +1337,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#2e7d32;border:1.5px solid #4caf50;font-weight:400">H1 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#0d47a1;color:#fff;border:1.5px solid #0d47a1;font-weight:700">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="P1.6">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">P1.6</span>
 <span class="l3-name">하드웨어·기계적 결함(Hardware &amp; Mechanical Failures)</span>
 <span class="l3-count">3</span>
 </div>
@@ -1371,10 +1383,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="P1.7">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">P1.7</span>
 <span class="l3-name">소프트웨어 취약점·설계 결함(Software Vulnerabilities &amp; Design Flaws)</span>
 <span class="l3-count">8</span>
 </div>
@@ -1481,10 +1494,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#1b5e20;color:#fff;border:1.5px solid #1b5e20;font-weight:700">H1 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#0d47a1;color:#fff;border:1.5px solid #0d47a1;font-weight:700">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#fff;color:#b71c1c;border:1.5px solid #e91e63;font-weight:400">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="P1.8">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">P1.8</span>
 <span class="l3-name">센서·입력 검증 실패(Sensor &amp; Input Validation Failures)</span>
 <span class="l3-count">4</span>
 </div>
@@ -1542,20 +1556,22 @@
 </div>
 </div></div>
 </section>
-<section class="l2-section" id="sec-Interaction-Safety">
+<section class="l2-section" id="sec-Interaction-Safety" data-tax-id="I1">
 <div class="l2-header" style="border-left:4px solid #1A5F7A;background:#EEF7FA">
 <div class="l2-title">
 <span class="l2-icon">🤝</span>
+<span class="tax-id l2-id">I1</span>
 <span>Interaction Safety</span>
 <span class="l2-ko">상호작용 안전성</span>
-<span class="l2-badge" style="background:#1A5F7A">37개</span>
+<span class="l2-badge" style="background:#1A5F7A">39개</span>
 </div>
 <p class="l2-desc">로봇-인간 및 로봇-로봇 상호작용 과정에서 발생하는 리스크</p>
 </div>
-<div class="l3-list"><div class="l3-group">
+<div class="l3-list"><div class="l3-group" data-tax-id="I1.1">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">I1.1</span>
 <span class="l3-name">프라이버시 침해(Privacy Violations)</span>
 <span class="l3-count">5</span>
 </div>
@@ -1624,10 +1640,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#2e7d32;border:1.5px solid #4caf50;font-weight:400">H1 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="I1.2">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">I1.2</span>
 <span class="l3-name">허위 정보(Misinformation)</span>
 <span class="l3-count">5</span>
 </div>
@@ -1693,10 +1710,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#b71c1c;border:1.5px solid #e91e63;font-weight:400">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#0d47a1;color:#fff;border:1.5px solid #0d47a1;font-weight:700">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="I1.3">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">I1.3</span>
 <span class="l3-name">동적 환경 요인(Dynamic Environmental Factors)</span>
 <span class="l3-count">11</span>
 </div>
@@ -1846,10 +1864,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#2e7d32;border:1.5px solid #4caf50;font-weight:400">H1 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#0d47a1;color:#fff;border:1.5px solid #0d47a1;font-weight:700">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#6a1b9a;border:1.5px solid #9c27b0;font-weight:400">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="I1.4">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">I1.4</span>
 <span class="l3-name">인간 상호작용·안전 프로토콜 실패(Human Interaction &amp; Safety Protocol Failures)</span>
 <span class="l3-count">13</span>
 </div>
@@ -2024,10 +2043,11 @@
 <span class="meta-item top200-ref"><a class="src-link top200-ref-link" href="https://doi.org/10.1016/j.rcim.2023.102608" style="border-left:3px solid #1A5F7A;padding-left:4px;" target="_blank">+ A deep learning-enhanced Digital Twin framework for impro… (2024)</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#2e7d32;border:1.5px solid #4caf50;font-weight:400">H1 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#1565c0;border:1.5px solid #42a5f5;font-weight:400">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#6a1b9a;border:1.5px solid #9c27b0;font-weight:400">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="I1.5">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">I1.5</span>
 <span class="l3-name">지시 오해석(Instruction Misinterpretation)</span>
 <span class="l3-count">1</span>
 </div>
@@ -2047,10 +2067,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#1565c0;border:1.5px solid #42a5f5;font-weight:400">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="I1.6">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">I1.6</span>
 <span class="l3-name">멀티 에이전트 협력(Multi-Agent Collaboration)</span>
 <span class="l3-count">4</span>
 </div>
@@ -2111,20 +2132,22 @@
 </div>
 </div></div>
 </section>
-<section class="l2-section" id="sec-Societal-Safety">
+<section class="l2-section" id="sec-Societal-Safety" data-tax-id="S1">
 <div class="l2-header" style="border-left:4px solid #5B3A8F;background:#F4F0FA">
 <div class="l2-title">
 <span class="l2-icon">🌐</span>
+<span class="tax-id l2-id">S1</span>
 <span>Societal Safety</span>
 <span class="l2-ko">사회적 안전성</span>
-<span class="l2-badge" style="background:#5B3A8F">31개</span>
+<span class="l2-badge" style="background:#5B3A8F">39개</span>
 </div>
 <p class="l2-desc">사회·경제·제도·지정학적 환경에서 발생하는 외부적 리스크</p>
 </div>
-<div class="l3-list"><div class="l3-group">
+<div class="l3-list"><div class="l3-group" data-tax-id="S1.1">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">S1.1</span>
 <span class="l3-name">노동 대체(Labor Displacement)</span>
 <span class="l3-count">1</span>
 </div>
@@ -2144,10 +2167,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="S1.2">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">S1.2</span>
 <span class="l3-name">사회경제적 불평등(Socioeconomic Inequality)</span>
 <span class="l3-count">1</span>
 </div>
@@ -2167,10 +2191,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#1565c0;border:1.5px solid #42a5f5;font-weight:400">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#6a1b9a;border:1.5px solid #9c27b0;font-weight:400">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="S1.3">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">S1.3</span>
 <span class="l3-name">권력 집중(Power Concentration)</span>
 <span class="l3-count">1</span>
 </div>
@@ -2190,10 +2215,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#1565c0;border:1.5px solid #42a5f5;font-weight:400">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#6a1b9a;border:1.5px solid #9c27b0;font-weight:400">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="S1.4">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">S1.4</span>
 <span class="l3-name">편향·차별(Bias &amp; Discrimination)</span>
 <span class="l3-count">3</span>
 </div>
@@ -2238,10 +2264,11 @@
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#1565c0;border:1.5px solid #42a5f5;font-weight:400">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#6a1b9a;border:1.5px solid #9c27b0;font-weight:400">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span></div></div>
 </div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="S1.5">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">S1.5</span>
 <span class="l3-name">책임·배상 부재(Lack of Accountability &amp; Liability)</span>
 <span class="l3-count">12</span>
 </div>
@@ -2397,10 +2424,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#b71c1c;border:1.5px solid #e91e63;font-weight:400">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#0d47a1;color:#fff;border:1.5px solid #0d47a1;font-weight:700">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="S1.6">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">S1.6</span>
 <span class="l3-name">투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability &amp; Trust)</span>
 <span class="l3-count">1</span>
 </div>
@@ -2420,10 +2448,11 @@
 </div>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#fff;color:#1565c0;border:1.5px solid #42a5f5;font-weight:400">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#fff;color:#b71c1c;border:1.5px solid #e91e63;font-weight:400">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="S1.7">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">S1.7</span>
 <span class="l3-name">인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)</span>
 <span class="l3-count">4</span>
 </div>
@@ -2481,10 +2510,11 @@
 <span class="meta-item top200-ref"><a class="src-link top200-ref-link" href="https://doi.org/10.2196/13216" style="border-left:3px solid #1A5F7A;padding-left:4px;" target="_blank">+ Your Robot Therapist Will See You Now: Ethical Implicatio… (2019)</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#2e7d32;border:1.5px solid #4caf50;font-weight:400">H1 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#1565c0;border:1.5px solid #42a5f5;font-weight:400">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#6a1b9a;border:1.5px solid #9c27b0;font-weight:400">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="S1.8">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">S1.8</span>
 <span class="l3-name">변혁적 영향(Transformative Effects)</span>
 <span class="l3-count">1</span>
 </div>
@@ -2505,10 +2535,11 @@
 <span class="meta-item"><a class="src-link new-ref" href="https://doi.org/10.1016/j.clsr.2018.12.009" style="border-left:3px solid #27AE60;padding-left:4px;" target="_blank">+ Robots, standards and the law: Rivalries b… (2019)</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#fff;color:#b71c1c;border:1.5px solid #e91e63;font-weight:400">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="S1.9">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">S1.9</span>
 <span class="l3-name">상호작용 에이전트의 윤리·안전 함의(Ethical &amp; Safety Implications of Interactive Agents)</span>
 <span class="l3-count">2</span>
 </div>
@@ -2544,10 +2575,11 @@
 <span class="meta-item top200-ref"><a class="src-link top200-ref-link" href="https://doi.org/10.1016/j.inffus.2023.03.008" style="border-left:3px solid #1A5F7A;padding-left:4px;" target="_blank">+ A systematic review of trustworthy and explainable artifi… (2023)</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#1b5e20;color:#fff;border:1.5px solid #1b5e20;font-weight:700">H1 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H2 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#6a1b9a;border:1.5px solid #9c27b0;font-weight:400">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span></div></div></div>
 </div>
-</div><div class="l3-group">
+</div><div class="l3-group" data-tax-id="S1.10">
 <div class="l3-header" onclick="toggle(this)">
 <div class="l3-left">
 <span class="chevron">▶</span>
+<span class="tax-id l3-id">S1.10</span>
 <span class="l3-name">미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)</span>
 <span class="l3-count">13</span>
 </div>

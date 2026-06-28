@@ -14,6 +14,8 @@ The published taxonomy is a bilingual L4 risk-card view for Physical AI. Each ca
 
 Physical AI is treated as AI deployed in systems that sense, reason, and act in the physical world, including robots, humanoids, drones, autonomous vehicles, CPS, and embodied agents.
 
+L2 and L3 categories also have short hierarchy IDs. L2 uses `P1`, `I1`, and `S1`; L3 appends the local sequence number, such as `P1.1`, `I1.4`, or `S1.10`. L4 risks remain identified by their card IDs.
+
 ## 2. Reference Curation
 
 Reference additions were performed in multiple rounds:

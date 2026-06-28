@@ -5,5 +5,149 @@
   "references": 321,
   "linked_references": 314,
   "max_references_per_card": 5,
-  "cards_over_5_references": 0
+  "cards_over_5_references": 0,
+  "id_scheme": "L2: P1/I1/S1; L3: parent ID + sequence, e.g., P1.1",
+  "hierarchy": [
+    {
+      "l2_id": "P1",
+      "l2_name": "Physical Safety",
+      "cards": 104,
+      "l3": [
+        {
+          "l3_id": "P1.1",
+          "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
+          "cards": 17
+        },
+        {
+          "l3_id": "P1.2",
+          "l3_name": "우발적 피해(Accidental Harm)",
+          "cards": 22
+        },
+        {
+          "l3_id": "P1.3",
+          "l3_name": "로봇 제어(Robot Control)",
+          "cards": 45
+        },
+        {
+          "l3_id": "P1.4",
+          "l3_name": "물리적 공격(Physical Attacks)",
+          "cards": 1
+        },
+        {
+          "l3_id": "P1.5",
+          "l3_name": "사이버보안 위협(Cybersecurity Threats)",
+          "cards": 4
+        },
+        {
+          "l3_id": "P1.6",
+          "l3_name": "하드웨어·기계적 결함(Hardware & Mechanical Failures)",
+          "cards": 3
+        },
+        {
+          "l3_id": "P1.7",
+          "l3_name": "소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws)",
+          "cards": 8
+        },
+        {
+          "l3_id": "P1.8",
+          "l3_name": "센서·입력 검증 실패(Sensor & Input Validation Failures)",
+          "cards": 4
+        }
+      ]
+    },
+    {
+      "l2_id": "I1",
+      "l2_name": "Interaction Safety",
+      "cards": 39,
+      "l3": [
+        {
+          "l3_id": "I1.1",
+          "l3_name": "프라이버시 침해(Privacy Violations)",
+          "cards": 5
+        },
+        {
+          "l3_id": "I1.2",
+          "l3_name": "허위 정보(Misinformation)",
+          "cards": 5
+        },
+        {
+          "l3_id": "I1.3",
+          "l3_name": "동적 환경 요인(Dynamic Environmental Factors)",
+          "cards": 11
+        },
+        {
+          "l3_id": "I1.4",
+          "l3_name": "인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures)",
+          "cards": 13
+        },
+        {
+          "l3_id": "I1.5",
+          "l3_name": "지시 오해석(Instruction Misinterpretation)",
+          "cards": 1
+        },
+        {
+          "l3_id": "I1.6",
+          "l3_name": "멀티 에이전트 협력(Multi-Agent Collaboration)",
+          "cards": 4
+        }
+      ]
+    },
+    {
+      "l2_id": "S1",
+      "l2_name": "Societal Safety",
+      "cards": 39,
+      "l3": [
+        {
+          "l3_id": "S1.1",
+          "l3_name": "노동 대체(Labor Displacement)",
+          "cards": 1
+        },
+        {
+          "l3_id": "S1.2",
+          "l3_name": "사회경제적 불평등(Socioeconomic Inequality)",
+          "cards": 1
+        },
+        {
+          "l3_id": "S1.3",
+          "l3_name": "권력 집중(Power Concentration)",
+          "cards": 1
+        },
+        {
+          "l3_id": "S1.4",
+          "l3_name": "편향·차별(Bias & Discrimination)",
+          "cards": 3
+        },
+        {
+          "l3_id": "S1.5",
+          "l3_name": "책임·배상 부재(Lack of Accountability & Liability)",
+          "cards": 12
+        },
+        {
+          "l3_id": "S1.6",
+          "l3_name": "투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability & Trust)",
+          "cards": 1
+        },
+        {
+          "l3_id": "S1.7",
+          "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
+          "cards": 4
+        },
+        {
+          "l3_id": "S1.8",
+          "l3_name": "변혁적 영향(Transformative Effects)",
+          "cards": 1
+        },
+        {
+          "l3_id": "S1.9",
+          "l3_name": "상호작용 에이전트의 윤리·안전 함의(Ethical & Safety Implications of Interactive Agents)",
+          "cards": 2
+        },
+        {
+          "l3_id": "S1.10",
+          "l3_name": "미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)",
+          "cards": 13
+        }
+      ]
+    }
+  ]
 }

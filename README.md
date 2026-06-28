@@ -24,6 +24,12 @@ Live page:
 - Linked references: 314
 - Maximum references per L4 card: 5
 
+## Taxonomy IDs
+
+L2 categories use short stable IDs: `P1` for Physical Safety, `I1` for Interaction Safety, and `S1` for Societal Safety.
+
+L3 categories inherit the parent L2 ID and add a sequence number, for example `P1.1` for Purposeful / Malicious Harm under Physical Safety. L4 risks keep their original card IDs, such as `PHYSBENCH-REF-0017`.
+
 ## Scope
 
 The taxonomy focuses on Physical AI risks where model behavior can propagate into physical action, sensor-mediated decisions, human-robot interaction, embodied surveillance, safety control, certification, and lifecycle governance.
