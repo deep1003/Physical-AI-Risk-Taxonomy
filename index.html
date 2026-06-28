@@ -2764,10 +2764,10 @@
 <details class="criteria-section" id="three-h-one-r-criteria">
 <summary>3H1R 기준</summary>
 <div class="criteria-body">
-<p>3H1R은 피지컬 AI가 어떤 <strong>정렬 가치(alignment value)</strong>를 실패하고 있는가를 판정하는 분석 프레임워크이다. 본 절은 <strong>① 개념적 정의 → ② Physical AI 적용 기준(판별 규칙) → ③ 구조적 관계 → ④ 표기 원칙</strong>의 순서로 기술하여, 동일한 카드에 대해 누가 태깅하더라도 같은 결과가 나오도록(재현 가능하도록) 판정 규칙을 명시한다.</p>
+<p>3H1R은 피지컬 AI가 어떤 <strong>정렬 가치(alignment value)</strong>를 실패하고 있는가를 판정하는 분석 프레임워크이다. 본 절은 <strong>1. 개념적 정의 → 2. Physical AI 적용 기준(판별 규칙) → 3. 구조적 관계 → 4. 표기 원칙</strong>의 순서로 기술하여, 동일한 카드에 대해 누가 태깅하더라도 같은 결과가 나오도록(재현 가능하도록) 판정 규칙을 명시한다.</p>
 
-<h3>① 3H1R의 개념적 정의</h3>
-<p>3H(Helpful·Harmless·Honest)는 대규모 언어모델 정렬의 <strong>HHH 기준</strong>(Askell et al., 2021<sup class="cite"><a href="#ref1">1</a></sup>)에서, 1R(Role Consistency)은 <strong>헌법적 AI 및 역할·행동 제약</strong> 연구(Bai et al., 2022<sup class="cite"><a href="#ref2">2</a></sup>; Sermanet et al., 2025<sup class="cite"><a href="#ref3">3</a></sup>)에서 가져와 Physical AI로 확장한 것이다. Physical AI 안전성 평가의 최근 경험적 기반으로는 ASIMOV Benchmark v1<sup class="cite"><a href="#ref3">3</a></sup>·v2<sup class="cite"><a href="#ref4">4</a></sup>를 참조한다. 아래는 각 차원의 가치 정의이며, 물리 맥락으로의 번역은 ②에서 다룬다.</p>
+<h3>1. 3H1R의 개념적 정의</h3>
+<p>3H(Helpful·Harmless·Honest)는 대규모 언어모델 정렬의 <strong>HHH 기준</strong>(Askell et al., 2021<sup class="cite"><a href="#ref1">1</a></sup>)에서, 1R(Role Consistency)은 <strong>헌법적 AI 및 역할·행동 제약</strong> 연구(Bai et al., 2022<sup class="cite"><a href="#ref2">2</a></sup>; Sermanet et al., 2025<sup class="cite"><a href="#ref3">3</a></sup>)에서 가져와 Physical AI로 확장한 것이다. Physical AI 안전성 평가의 최근 경험적 기반으로는 ASIMOV Benchmark v1<sup class="cite"><a href="#ref3">3</a></sup>·v2<sup class="cite"><a href="#ref4">4</a></sup>를 참조한다. 아래는 각 차원의 가치 정의이며, 물리 맥락으로의 번역은 2절에서 다룬다.</p>
 <div class="criteria-grid">
 <div class="criteria-card"><strong>H1. Harmless (무해성)</strong><span>행동·출력이 개인·집단·사회에 위해를 주지 않아야 한다. 직접적 해악과 간접적 해악(위험 조장 등)을 모두 포함하며, Helpful과 근본적 긴장관계에 있다.</span></div>
 <div class="criteria-card"><strong>H2. Helpful (유용성)</strong><span>사용자의 실제 의도와 맥락에 부합하는 도움을 제공해야 한다. 단순 지시 이행이 아니라 실질 이익의 극대화가 기준이며, 과도한 거부도 Helpful 실패로 본다.</span></div>
@@ -2775,7 +2775,7 @@
 <div class="criteria-card"><strong>RC. Role Consistency (역할 일관성)</strong><span>정의된 역할·권한·행동 원칙을 맥락이 바뀌어도 유지해야 한다. 페르소나 드리프트, 컨텍스트 위반, 탈옥에 의한 역할 이탈이 핵심 실패 유형이다.</span></div>
 </div>
 
-<h3>② Physical AI 적용 기준</h3>
+<h3>2. Physical AI 적용 기준</h3>
 <p>3H1R은 본래 언어 출력 기준이므로, Physical AI에서는 각 차원을 물리 세계의 <strong>행동·제약·상태</strong>로 번역한 <strong>조작적 정의(operational definition)</strong>로 적용한다. 카드 정의가 아래 '판별 질문'에 해당하면 그 차원을 부여한다.</p>
 <table class="criteria-table">
 <thead><tr><th>차원</th><th>원래(LLM) 정의</th><th>Physical AI 조작적 정의 (행동·제약·상태)</th><th>판별 질문</th></tr></thead>
@@ -2790,7 +2790,7 @@
 <p><strong>Primary / Secondary 판별 규칙.</strong> 등급은 결과(피해의 크기)가 아니라 <em>실패 메커니즘의 인과 근접성(causal proximity)</em>으로 정한다. 카드 정의가 기술하는 실패의 직접 원인이면 <strong>Primary</strong>, 그 실패가 전개되며 파생적으로 관여하면 <strong>Secondary</strong>다. 원칙적으로 Primary는 1개, 명시적 tradeoff나 인과 분기가 있을 때 최대 2개이며, 3개는 문서화된 예외만 허용한다.</p>
 <div class="criteria-note"><strong>판정 예시:</strong> “로봇이 장비 랙을 밀쳐 넘어뜨림”은 결과만 보고 Harmless로 끝내지 않고 메커니즘을 분해한다 — 인지 오류(Honest), 안전 제동 미작동(Harmless), 제약 이탈(Role Consistency) 중 직접 원인을 Primary로, 나머지를 Secondary로 부여한다.</div>
 
-<h3>③ 구조적 관계</h3>
+<h3>3. 구조적 관계</h3>
 <p>3H1R 정렬은 <strong>2축 매핑</strong>이다 — <strong>(축1) 리스크 유형</strong>(무엇이 실패했는가) × <strong>(축2) 위반된 정렬 가치</strong>(어떤 정렬 가치가 깨졌는가). 한 리스크 카드는 하나의 리스크 유형에 속하되, 가치 축에서는 복수 차원을 가질 수 있다(비배타·다중 태그). 네 차원은 상호 배타적이지 않고 부분적으로 직교하며, 아래의 정제된 정의와 위계로 연결된다.</p>
 <div class="criteria-grid">
 <div class="criteria-card"><strong>H1. Harmless (무해성)</strong><span>위해의 <em>사전 예방(ex-ante prevention)</em>과 <em>사후 완화(ex-post mitigation)</em>를 포괄하는 안전 보장 절차. 위해의 의도성(고의·과실)과 양상(물리적·비물리적)을 가리지 않는다<sup class="cite"><a href="#ref1">1</a>,<a href="#ref3">3</a></sup>.</span></div>
@@ -2820,7 +2820,7 @@
 <p class="ex-note"><strong>3H1R 분해:</strong> 발단은 Honest(인식·불확실성)이지만 위해의 직접 원인은 Harmless이며, 안전 정지라는 역할의 붕괴가 동반되면 RC가 가중된다. 따라서 표기는 <span class="criteria-code">H1 Harmless[P] · H3 Honest[S] · RC Role[S]</span> — 즉 결과(피해)가 아니라 인과 근접성으로 Primary를 정한다.</p>
 </div>
 
-<h3>④ 표기 원칙</h3>
+<h3>4. 표기 원칙</h3>
 <p>표기는 <span class="criteria-code">축[등급]</span> 형식을 따른다. 축은 항상 <strong>H1 Harmless → H2 Helpful → H3 Honest → RC Role</strong>의 고정 순서로 나열한다(나열 순서는 우선순위가 아니라 고정 순서이며, 우선순위는 오직 P/S로만 표현한다). 등급 Primary[P]·Secondary[S]는 축 라벨 우측 위첨자로 둔다.</p>
 <table class="criteria-table">
 <thead><tr><th>표시 유형</th><th>기준</th><th>표기 예</th></tr></thead>
