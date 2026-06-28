@@ -20,10 +20,13 @@
   .summary-table{width:100%;border-collapse:collapse;}
   .summary-table td{padding:5px 10px;border-bottom:1px solid #f0f0f0;}
   .summary-table tr.sub-row td{font-size:12px;}
+  .summary-table tr[data-nav-target]{cursor:pointer;}
+  .summary-table tr[data-nav-target]:hover{background:#f7f9fc;}
   .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:middle;}
   .bar-wrap{width:120px;height:6px;background:#f0f0f0;border-radius:3px;display:inline-block;}
   .bar{height:6px;border-radius:3px;transition:width .3s;}
   .l2-section{margin-bottom:28px;}
+  .l2-section,.l3-group{scroll-margin-top:74px;}
   .l2-header{padding:14px 18px;border-radius:8px 8px 0 0;}
   .l2-title{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;margin-bottom:6px;}
   .l2-icon{font-size:18px;}
@@ -110,6 +113,8 @@
   .card-justification .just-label{font-weight:700;color:#555;margin-right:4px;}
   .card-justification .just-item:not(:last-child)::after{content:";";}
   .card-justification .just-item:last-child::after{content:".";}
+  @keyframes targetFlash{0%{box-shadow:0 0 0 0 rgba(227,179,65,.65);}100%{box-shadow:0 0 0 8px rgba(227,179,65,0);}}
+  .l2-section.jump-highlight .l2-header,.l3-group.jump-highlight>.l3-header{animation:targetFlash 1.2s ease-out;background:#fffaf0;}
 </style>
 </head>
 <body>
@@ -2752,6 +2757,58 @@ function showAll(){
   document.querySelector('.summary-box').style.display='';
   document.querySelector('.kpi-row').style.display='grid';
 }
+function expandGroup(group){
+  const body=group.querySelector('.l3-body');
+  const ch=group.querySelector('.chevron');
+  if(body) body.classList.remove('collapsed');
+  if(ch) ch.style.transform='rotate(90deg)';
+}
+function taxHash(taxId){
+  return '#'+taxId.replace('.','-');
+}
+function isL2TaxId(taxId){
+  return /^[PIS]2$/.test(taxId);
+}
+function targetForTaxId(taxId){
+  if(isL2TaxId(taxId)) return document.querySelector('.l2-section[data-tax-id="'+taxId+'"]');
+  return document.querySelector('.l3-group[data-tax-id="'+taxId+'"]');
+}
+function scrollToTaxTarget(target){
+  const offset=74;
+  const top=target.getBoundingClientRect().top+window.pageYOffset-offset;
+  window.scrollTo({top,behavior:'smooth'});
+}
+function jumpToTaxId(taxId){
+  const target=targetForTaxId(taxId);
+  if(!target) return;
+  showAll();
+  if(target.classList.contains('l3-group')) expandGroup(target);
+  scrollToTaxTarget(target);
+  target.classList.remove('jump-highlight');
+  void target.offsetWidth;
+  target.classList.add('jump-highlight');
+  window.setTimeout(()=>target.classList.remove('jump-highlight'),1300);
+  if(history.replaceState) history.replaceState(null,'',taxHash(taxId));
+}
+function initSummaryNavigation(){
+  document.querySelectorAll('#summary-tbody tr').forEach(row=>{
+    const idEl=row.querySelector('.summary-id');
+    if(!idEl) return;
+    const taxId=idEl.textContent.trim();
+    if(!targetForTaxId(taxId)) return;
+    row.dataset.navTarget=taxId;
+    row.setAttribute('role','button');
+    row.setAttribute('tabindex','0');
+    row.setAttribute('title',taxId+' 섹션으로 이동');
+    row.addEventListener('click',()=>jumpToTaxId(taxId));
+    row.addEventListener('keydown',e=>{
+      if(e.key==='Enter'||e.key===' '){
+        e.preventDefault();
+        jumpToTaxId(taxId);
+      }
+    });
+  });
+}
 function filterCards(q){
   const kw=q.toLowerCase().trim();
   document.querySelectorAll('.card').forEach(c=>{
@@ -2759,6 +2816,7 @@ function filterCards(q){
   });
   if(kw) expandAll();
 }
+document.addEventListener('DOMContentLoaded',initSummaryNavigation);
 </script>
 </body>
 </html>
