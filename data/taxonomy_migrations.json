@@ -1,0 +1,33 @@
+[
+  {
+    "date": "2026-06-28",
+    "decision_owner": "human",
+    "change": "Move S1.10 Lack of Robustness in Unseen Environments from Societal Safety to Physical Safety as P1.9; do not absorb into P1.2.",
+    "previous": {
+      "l2_id": "S1",
+      "l2_name": "Societal Safety",
+      "l3_id": "S1.10"
+    },
+    "current": {
+      "l2_id": "P1",
+      "l2_name": "Physical Safety",
+      "l3_id": "P1.9"
+    },
+    "affected_card_ids": [
+      "PHYSBENCH-REF-0078",
+      "PHYSBENCH-REF-0046",
+      "PHYSBENCH-REF-0060",
+      "PHYSRISK-REF-0018",
+      "PHYSBENCH-REF-0059",
+      "PHYSBENCH-REF-0062",
+      "PHYSBENCH-REF-0084",
+      "PHYSBENCH-REF-0086",
+      "PHYSBENCH-REF-0098",
+      "PHYSBENCH-REF-0101",
+      "PHYSRISK-REF-0015",
+      "PHYSRISK-REF-0016",
+      "PHYSBENCH-REF-0082"
+    ],
+    "future_decision_required": "Absorption into P1.2 or further redistribution remains pending future human decision."
+  }
+]

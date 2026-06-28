@@ -6,12 +6,12 @@
   "linked_references": 314,
   "max_references_per_card": 5,
   "cards_over_5_references": 0,
-  "id_scheme": "L2: P1/I1/S1; L3: parent ID + sequence, e.g., P1.1",
+  "id_scheme": "L2: P1/I1/S1; L3: parent ID + sequence, e.g., P1.1. S1.10 migrated to P1.9 on 2026-06-28.",
   "hierarchy": [
     {
       "l2_id": "P1",
       "l2_name": "Physical Safety",
-      "cards": 104,
+      "cards": 117,
       "l3": [
         {
           "l3_id": "P1.1",
@@ -52,6 +52,11 @@
           "l3_id": "P1.8",
           "l3_name": "센서·입력 검증 실패(Sensor & Input Validation Failures)",
           "cards": 4
+        },
+        {
+          "l3_id": "P1.9",
+          "l3_name": "미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)",
+          "cards": 13
         }
       ]
     },
@@ -95,7 +100,7 @@
     {
       "l2_id": "S1",
       "l2_name": "Societal Safety",
-      "cards": 39,
+      "cards": 26,
       "l3": [
         {
           "l3_id": "S1.1",
@@ -141,13 +146,24 @@
           "l3_id": "S1.9",
           "l3_name": "상호작용 에이전트의 윤리·안전 함의(Ethical & Safety Implications of Interactive Agents)",
           "cards": 2
-        },
-        {
-          "l3_id": "S1.10",
-          "l3_name": "미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)",
-          "cards": 13
         }
       ]
     }
-  ]
+  ],
+  "migrations": [
+    {
+      "date": "2026-06-28",
+      "type": "l3_move",
+      "from_l2_id": "S1",
+      "from_l2_name": "Societal Safety",
+      "from_l3_id": "S1.10",
+      "to_l2_id": "P1",
+      "to_l2_name": "Physical Safety",
+      "to_l3_id": "P1.9",
+      "l3_name": "미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)",
+      "card_count": 13,
+      "decision": "human decision: move only; do not merge or redistribute until a future human decision."
+    }
+  ],
+  "three_h_one_r_primary_rule": "Primary is normally 1 axis, at most 2 axes. Three Primary axes require an explicit exception reason."
 }

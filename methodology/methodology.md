@@ -14,9 +14,17 @@ The published taxonomy is a bilingual L4 risk-card view for Physical AI. Each ca
 
 Physical AI is treated as AI deployed in systems that sense, reason, and act in the physical world, including robots, humanoids, drones, autonomous vehicles, CPS, and embodied agents.
 
-L2 and L3 categories also have short hierarchy IDs. L2 uses `P1`, `I1`, and `S1`; L3 appends the local sequence number, such as `P1.1`, `I1.4`, or `S1.10`. L4 risks remain identified by their card IDs.
+L2 and L3 categories also have short hierarchy IDs. L2 uses `P1`, `I1`, and `S1`; L3 appends the local sequence number, such as `P1.1`, `I1.4`, or `P1.9`. L4 risks remain identified by their card IDs.
 
-## 2. Reference Curation
+Human decision on 2026-06-28 moved `S1.10` Lack of Robustness in Unseen Environments from Societal Safety to Physical Safety as `P1.9`. The move does not absorb the category into `P1.2`; absorption or redistribution is deferred to a future human decision.
+
+## 2. 3H1R Alignment Rule
+
+3H1R Primary marks identify the main failure mechanism, not every downstream consequence. A card should normally have one Primary axis and may have at most two Primary axes when there is a clear tradeoff or explicit causal branch.
+
+Three Primary axes are allowed only as documented exceptions. Each exception must state why three axes are simultaneously causal rather than merely downstream. The current exception list is published in `data/three_h_one_r_primary_exceptions_20260628.csv` and `.json`.
+
+## 3. Reference Curation
 
 Reference additions were performed in multiple rounds:
 
@@ -30,13 +38,13 @@ Reference additions were performed in multiple rounds:
 
 NeurIPS, ICML, ACL, Nature, Science, and strong robotics/automation venues were prioritized, but final attachment required direct relevance to an L4 definition.
 
-## 3. Justification Style
+## 4. Justification Style
 
 Evidence justifications are written in short Korean sentences. They explain why a reference matters for the specific L4 card. The same paper may appear on multiple cards only when the justification differs by L4 definition.
 
 Reference lists keep only the reference title and link. Korean explanatory text is kept in the evidence line, not duplicated in the reference list.
 
-## 4. Quality Controls
+## 5. Quality Controls
 
 The curation workflow includes:
 
@@ -49,12 +57,14 @@ The curation workflow includes:
 
 Known residual issue: a small number of cards contain evidence text without a matching link because they originated as curated internal evidence notes. These are tracked in the audit reports.
 
-## 5. Reproducibility Files
+## 6. Reproducibility Files
 
 The key curation artifacts are:
 
 - `data/reference_addition_rounds/`
 - `data/reference_quality_audit/`
+- `data/taxonomy_migrations.json`
+- `data/three_h_one_r_primary_exceptions_20260628.csv`
 - `scripts/add_unreferenced_corpus_refs_to_l4*.py`
 - `scripts/audit_low_relevance_l4_references.py`
 
