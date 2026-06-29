@@ -3850,5 +3850,53 @@
     "justification": "시뮬레이터끼리 통과해도 실제 피지컬 세계의 마찰과 지연은 놓칠 수 있다 (Humanoid-Gym, 2024)",
     "reference_title": "Humanoid-Gym: Reinforcement Learning for Humanoid …",
     "reference_url": "https://arxiv.org/pdf/2404.05695"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0045",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "제약 모니터링 실패 (Constraint monitoring failure)",
+    "reference_index": 5,
+    "justification": "AEGIS가 VLA 행동을 실시간 감시해 위험할 때만 수정하므로, 이런 런타임 감시가 빠지면 충돌 제약을 집행하지 못한다 (Hu et al., 2025)",
+    "reference_title": "VLSA: Vision-Language-Action Models with Plug-and-…",
+    "reference_url": "https://arxiv.org/pdf/2512.11891"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0046",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.9",
+    "l3_name": "미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)",
+    "card_label": "분포 외 환경 배포 실패 (Out-of-distribution physical deployment failure)",
+    "reference_index": 3,
+    "justification": "안전 회피가 로봇을 훈련 데이터에 드문 위치로 밀어내면 VLA 정책이 분포 밖 상태에서 불안정해질 수 있다 (Hu et al., 2025)",
+    "reference_title": "VLSA: Vision-Language-Action Models with Plug-and-…",
+    "reference_url": "https://arxiv.org/pdf/2512.11891"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0047",
+    "l2_id": "I2",
+    "l2_name": "Interaction Safety",
+    "l3_id": "I3.4",
+    "l3_name": "인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures)",
+    "card_label": "위험 예측 실패 (Hazard prediction failure)",
+    "reference_index": 4,
+    "justification": "위험 물체를 잘못 식별하거나 위치를 틀리게 잡으면 충돌 전 안전 평가가 빗나가 잔여 충돌이 남는다 (Hu et al., 2025)",
+    "reference_title": "VLSA: Vision-Language-Action Models with Plug-and-…",
+    "reference_url": "https://arxiv.org/pdf/2512.11891"
+  },
+  {
+    "card_id": "PHYSRISK-REF-0003",
+    "l2_id": "I2",
+    "l2_name": "Interaction Safety",
+    "l3_id": "I3.3",
+    "l3_name": "동적 환경 요인(Dynamic Environmental Factors)",
+    "card_label": "다중 센서 융합 충돌 (Multimodal sensor fusion conflict)",
+    "reference_index": 5,
+    "justification": "단일 시야의 가림과 깊이 한계를 보완하려고 다중 RGB-D 점군을 융합하므로, 센서 융합이 틀리면 장애물 형상이 잘못 추정된다 (Hu et al., 2025)",
+    "reference_title": "VLSA: Vision-Language-Action Models with Plug-and-…",
+    "reference_url": "https://arxiv.org/pdf/2512.11891"
   }
 ]

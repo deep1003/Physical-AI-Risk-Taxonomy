@@ -283,9 +283,9 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "label": "제약 모니터링 실패 (Constraint monitoring failure)",
     "definition": "런타임 모니터가 속도·힘·작업 공간·충돌·물체 사용·작업 완료를 지배하는 제약을 감지하거나 집행하지 못하는 실패. (Runtime monitors fail to detect or enforce constraints governing speed, force, workspace, collision, object use, or task protocol.)",
-    "justification_count": 4,
-    "reference_link_count": 4,
-    "meta_text": "심각도 4.00 확률 0.45 A Comprehensive Survey on Physical Risk Control in…"
+    "justification_count": 5,
+    "reference_link_count": 5,
+    "meta_text": "심각도 4.00 확률 0.45 A Comprehensive Survey on Physical Risk Control in… VLSA: Vision-Language-Action Models with Plug-and-…"
   },
   {
     "card_id": "PHYSBENCH-REF-0048",
@@ -1447,9 +1447,9 @@
     "l3_name": "동적 환경 요인(Dynamic Environmental Factors)",
     "label": "다중 센서 융합 충돌 (Multimodal sensor fusion conflict)",
     "definition": "카메라·라이다·레이더·촉각·자기 수용 신호의 충돌이 불안정한 장면 추정 및 비안전 하위 행동을 초래하는 위험. (Conflicting camera, LiDAR, radar, tactile, or proprioceptive signals may lead to unstable scene estimates and unsafe downstream control decisions.)",
-    "justification_count": 4,
-    "reference_link_count": 4,
-    "meta_text": "심각도 4.00 확률 0.55 Physical AI"
+    "justification_count": 5,
+    "reference_link_count": 5,
+    "meta_text": "심각도 4.00 확률 0.55 Physical AI VLSA: Vision-Language-Action Models with Plug-and-…"
   },
   {
     "card_id": "PHYSRISK-REF-0004",
@@ -1531,9 +1531,9 @@
     "l3_name": "인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures)",
     "label": "위험 예측 실패 (Hazard prediction failure)",
     "definition": "피지컬 AI 시스템이 비안전 행동·충돌·손상·상해 발생 전 발전하는 위험을 예측하지 못하는 실패. (A physical AI system fails to anticipate a developing hazard before unsafe action, collision, damage, or injury occurs.)",
-    "justification_count": 3,
-    "reference_link_count": 3,
-    "meta_text": "심각도 4.00 확률 0.45 A Comprehensive Survey on Physical Risk Control in…"
+    "justification_count": 4,
+    "reference_link_count": 4,
+    "meta_text": "심각도 4.00 확률 0.45 A Comprehensive Survey on Physical Risk Control in… VLSA: Vision-Language-Action Models with Plug-and-…"
   },
   {
     "card_id": "PHYSBENCH-REF-0065",
@@ -2047,9 +2047,9 @@
     "l3_name": "미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)",
     "label": "분포 외 환경 배포 실패 (Out-of-distribution physical deployment failure)",
     "definition": "배포된 로봇이 훈련 분포 밖의 피지컬 상태·환경·사람·물체·작업을 만나 비안전 행동을 생성하는 실패. (A deployed robot encounters physical states, environments, people, objects, or tasks outside its training distribution and behaves unsafely.)",
-    "justification_count": 2,
-    "reference_link_count": 2,
-    "meta_text": "심각도 4.10 확률 0.55 A Comprehensive Survey on Physical Risk Control in…"
+    "justification_count": 3,
+    "reference_link_count": 3,
+    "meta_text": "심각도 4.10 확률 0.55 A Comprehensive Survey on Physical Risk Control in… VLSA: Vision-Language-Action Models with Plug-and-…"
   },
   {
     "card_id": "PHYSBENCH-REF-0060",
