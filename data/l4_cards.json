@@ -319,9 +319,9 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "label": "피지컬 AI 안전 인식 실패 (Embodied safety awareness failure)",
     "definition": "embodied 에이전트가 언어 목표를 실행 가능한 피지컬 행동으로 변환할 때 강건한 안전 인식을 결여하는 실패. (An embodied agent lacks robust safety awareness when converting language goals into executable physical actions.)",
-    "justification_count": 4,
-    "reference_link_count": 4,
-    "meta_text": "심각도 3.80 확률 0.55 SafeAgentBench: A Benchmark for Safe Task Planning… BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents… AGENTSAFE: Benchmarking the Safety of Embodied Agents… IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…"
+    "justification_count": 3,
+    "reference_link_count": 3,
+    "meta_text": "심각도 3.80 확률 0.55 BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents… AGENTSAFE: Benchmarking the Safety of Embodied Agents… IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0054",
@@ -1687,9 +1687,9 @@
     "l3_name": "멀티 에이전트 협력(Multi-Agent Collaboration)",
     "label": "다중 에이전트 협조 실행 위험 (Multi-agent embodied execution hazard)",
     "definition": "여러 embodied 에이전트가 협조 실패·비안전 역할 배정·충돌 계획을 통해 피지컬 위험을 생성하는 위험. (Multiple embodied agents create physical risk through coordination failure, unsafe role allocation, or conflicting plans in shared environments.)",
-    "justification_count": 1,
-    "reference_link_count": 1,
-    "meta_text": "심각도 3.90 확률 0.48 SafeAgentBench: A Benchmark for Safe Task Planning…"
+    "justification_count": 0,
+    "reference_link_count": 0,
+    "meta_text": "심각도 3.90 확률 0.48"
   },
   {
     "card_id": "PHYSCONN-REF-003",

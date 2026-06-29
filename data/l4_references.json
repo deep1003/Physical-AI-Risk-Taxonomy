@@ -127,7 +127,7 @@
     "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
     "card_label": "명시적 위험 명령 거부 실패 (Explicit hazard non-rejection)",
     "reference_index": 1,
-    "justification": "로봇이 뻔히 위험한 지시를 거절하지 못하면 실제 사고로 이어질 수 있다 (SafeAgentBench, 2024)",
+    "justification": "상세 hazardous task는 위험 의도가 명시된 실내 로봇 명령을 에이전트가 거부하지 못하는지를 직접 측정한다 (Yin et al., 2025)",
     "reference_title": "SafeAgentBench: A Benchmark for Safe Task Planning…",
     "reference_url": "https://arxiv.org/pdf/2412.13178"
   },
@@ -463,7 +463,7 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "card_label": "위험 작업 계획 실패 (Hazardous task planning failure)",
     "reference_index": 1,
-    "justification": "계획 단계에서 위험 작업을 걸러내지 못하면 실행 단계에서 사고가 난다 (SafeAgentBench, 2024)",
+    "justification": "SafeAgentBench는 실행 가능한 embodied task에서 위험 지시가 계획 단계에서 걸러지지 않고 실제 hazardous action으로 이어지는지를 평가한다 (Yin et al., 2025)",
     "reference_title": "SafeAgentBench: A Benchmark for Safe Task Planning…",
     "reference_url": "https://arxiv.org/pdf/2412.13178"
   },
@@ -499,7 +499,7 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "card_label": "암묵적 위험 명령 거부 실패 (Implicit hazard non-rejection)",
     "reference_index": 1,
-    "justification": "위험이 숨겨진 평범한 지시를 로봇이 그대로 따르면 사고가 날 수 있다 (SafeAgentBench, 2024)",
+    "justification": "장기 작업에는 겉으로 정상인 과업 속 안전 요구사항이 들어가 있어, stove off 같은 암묵 위험 완화 조건을 놓치는지 평가한다 (Yin et al., 2025)",
     "reference_title": "SafeAgentBench: A Benchmark for Safe Task Planning…",
     "reference_url": "https://arxiv.org/pdf/2412.13178"
   },
@@ -514,18 +514,6 @@
     "justification": "암묵적 위험 명령(위장 쿼리)에 대한 LLM 반응 평가 기준 (LLM Physical Safety Benchmark, HF)",
     "reference_title": "LLM Physical Safety Benchmark (TrustSafeAI)",
     "reference_url": "https://huggingface.co/datasets/TrustSafeAI/llm_physical_safety_benchmark"
-  },
-  {
-    "card_id": "PHYSBENCH-REF-0052",
-    "l2_id": "P2",
-    "l2_name": "Physical Safety",
-    "l3_id": "P3.2",
-    "l3_name": "우발적 피해(Accidental Harm)",
-    "card_label": "피지컬 AI 안전 인식 실패 (Embodied safety awareness failure)",
-    "reference_index": 1,
-    "justification": "로봇이 말로 된 목표를 행동으로 바꿀 때 위험 상황을 알아차리지 못할 수 있다 (SafeAgentBench, 2024)",
-    "reference_title": "SafeAgentBench: A Benchmark for Safe Task Planning…",
-    "reference_url": "https://arxiv.org/pdf/2412.13178"
   },
   {
     "card_id": "PHYSBENCH-REF-0054",
@@ -3096,18 +3084,6 @@
     "reference_url": "https://doi.org/10.1177/0278364920950795"
   },
   {
-    "card_id": "PHYSBENCH-REF-0051",
-    "l2_id": "I2",
-    "l2_name": "Interaction Safety",
-    "l3_id": "I3.6",
-    "l3_name": "멀티 에이전트 협력(Multi-Agent Collaboration)",
-    "card_label": "다중 에이전트 협조 실행 위험 (Multi-agent embodied execution hazard)",
-    "reference_index": 1,
-    "justification": "여러 로봇이 역할을 잘못 나누면 서로의 동선을 막고 위험 작업을 동시에 실행할 수 있다 (SafeAgentBench, 2024)",
-    "reference_title": "SafeAgentBench: A Benchmark for Safe Task Planning…",
-    "reference_url": "https://arxiv.org/pdf/2412.13178"
-  },
-  {
     "card_id": "PHYSCONN-REF-003",
     "l2_id": "I2",
     "l2_name": "Interaction Safety",
@@ -3942,7 +3918,7 @@
     "l3_id": "P3.2",
     "l3_name": "우발적 피해(Accidental Harm)",
     "card_label": "피지컬 AI 안전 인식 실패 (Embodied safety awareness failure)",
-    "reference_index": 2,
+    "reference_index": 1,
     "justification": "Embodied VLM과 VLA가 성공적으로 과업을 수행하면서도 안전 위반을 자주 일으켜, 실행 중 안전 인식이 충분하지 않음을 보여준다 (Li et al., 2026)",
     "reference_title": "BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…",
     "reference_url": "https://arxiv.org/pdf/2603.25747"
@@ -4146,7 +4122,7 @@
     "l3_id": "P3.2",
     "l3_name": "우발적 피해(Accidental Harm)",
     "card_label": "피지컬 AI 안전 인식 실패 (Embodied safety awareness failure)",
-    "reference_index": 3,
+    "reference_index": 2,
     "justification": "SAFE-DIAGNOSE가 perception·planning·execution을 나눠 보니, embodied VLM은 위험 인식을 안전 실행으로 일관되게 연결하지 못한다 (Ying et al., 2025)",
     "reference_title": "AGENTSAFE: Benchmarking the Safety of Embodied Agents…",
     "reference_url": "https://arxiv.org/pdf/2506.14697"
@@ -4158,7 +4134,7 @@
     "l3_id": "P3.2",
     "l3_name": "우발적 피해(Accidental Harm)",
     "card_label": "피지컬 AI 안전 인식 실패 (Embodied safety awareness failure)",
-    "reference_index": 4,
+    "reference_index": 3,
     "justification": "IS-Bench에서 최신 VLM 에이전트는 가사 작업을 완료하면서도 동적으로 드러나는 화재·감전·오염 위험을 자주 인식하지 못해 안전 성공률이 낮았다 (Lu et al., 2025)",
     "reference_title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…",
     "reference_url": "https://arxiv.org/pdf/2506.16402"
