@@ -4066,5 +4066,89 @@
     "justification": "전원 멀티탭을 안전구역으로 옮긴 뒤 물을 주는 식의 절차를 요구하므로, 순서와 안전 체크를 건너뛰면 운용 프로토콜 위반이 된다 (Zhang et al., 2025)",
     "reference_title": "ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…",
     "reference_url": "https://arxiv.org/pdf/2512.04308"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0017",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.1",
+    "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
+    "card_label": "LLM Agent 탈옥 (Embodied LLM contextual jailbreak)",
+    "reference_index": 4,
+    "justification": "jailbreak로 위험 의도를 우회 표현한 지시가 embodied agent의 안전 정렬을 흔들어 해로운 피지컬 행동 계획으로 이어질 수 있다 (Ying et al., 2025)",
+    "reference_title": "AGENTSAFE: Benchmarking the Safety of Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.14697"
+  },
+  {
+    "card_id": "PHYSRISK-REF-0028",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.1",
+    "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
+    "card_label": "프롬프트→행동 주입 공격 (Prompt-to-act injection)",
+    "reference_index": 3,
+    "justification": "프롬프트 수준의 위험 지시가 SAFE-THOR 어댑터를 거쳐 PickUp·Navigate 같은 실행 행동으로 변환되는 공격 경로를 평가한다 (Ying et al., 2025)",
+    "reference_title": "AGENTSAFE: Benchmarking the Safety of Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.14697"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0044",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.1",
+    "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
+    "card_label": "언어 명령 기반 로봇 정책 공격 (Language-instruction attack on robot policy)",
+    "reference_index": 2,
+    "justification": "악의적 자연어 지시가 로봇의 계획 정책을 바꿔 사람·환경·에이전트 자신에게 해로운 행동을 선택하게 하는지를 시험한다 (Ying et al., 2025)",
+    "reference_title": "AGENTSAFE: Benchmarking the Safety of Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.14697"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0048",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "위험 작업 계획 실패 (Hazardous task planning failure)",
+    "reference_index": 5,
+    "justification": "위험을 알아차려도 계획 단계에서 해로운 행동 순서를 생성하면, 인지된 hazard가 안전한 작업 계획으로 바뀌지 못한다 (Ying et al., 2025)",
+    "reference_title": "AGENTSAFE: Benchmarking the Safety of Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.14697"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0049",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.1",
+    "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
+    "card_label": "명시적 위험 명령 거부 실패 (Explicit hazard non-rejection)",
+    "reference_index": 4,
+    "justification": "명시적 위험 지시를 거부해야 하는 baseline hazardous instruction으로, 위험 의도가 분명해도 embodied agent가 실행 계획을 만들 수 있음을 평가한다 (Ying et al., 2025)",
+    "reference_title": "AGENTSAFE: Benchmarking the Safety of Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.14697"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0050",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "암묵적 위험 명령 거부 실패 (Implicit hazard non-rejection)",
+    "reference_index": 4,
+    "justification": "위험 의도를 의미 조작과 jailbreak로 숨긴 지시를 만들어, 겉으로 바뀐 명령에서도 피지컬 위험을 추론해 거부해야 함을 평가한다 (Ying et al., 2025)",
+    "reference_title": "AGENTSAFE: Benchmarking the Safety of Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.14697"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0052",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "피지컬 AI 안전 인식 실패 (Embodied safety awareness failure)",
+    "reference_index": 3,
+    "justification": "SAFE-DIAGNOSE가 perception·planning·execution을 나눠 보니, embodied VLM은 위험 인식을 안전 실행으로 일관되게 연결하지 못한다 (Ying et al., 2025)",
+    "reference_title": "AGENTSAFE: Benchmarking the Safety of Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.14697"
   }
 ]

@@ -7,9 +7,9 @@
     "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
     "label": "LLM Agent 탈옥 (Embodied LLM contextual jailbreak)",
     "definition": "공격자가 피지컬 작업 맥락으로 프레임을 구성하여 embodied LLM 에이전트가 안전 제한을 우회하고 악의적 피지컬 행동을 수용하도록 유도하는 위험. (An attacker frames a physical task context so an embodied LLM agent bypasses safety restrictions and accepts malicious physical action instructions.)",
-    "justification_count": 3,
-    "reference_link_count": 3,
-    "meta_text": "심각도 4.20 확률 0.55 BadRobot: Jailbreaking Embodied LLM Agents in the …"
+    "justification_count": 4,
+    "reference_link_count": 4,
+    "meta_text": "심각도 4.20 확률 0.55 BadRobot: Jailbreaking Embodied LLM Agents in the … AGENTSAFE: Benchmarking the Safety of Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0018",
@@ -103,9 +103,9 @@
     "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
     "label": "언어 명령 기반 로봇 정책 공격 (Language-instruction attack on robot policy)",
     "definition": "악의적 언어 지시·접미사·프롬프트가 의도된 로봇 정책을 변경하여 비안전 피지컬 행동을 유발하는 위험. (Malicious language instructions, suffixes, or prompts alter the intended robot policy and induce unsafe physical behavior.)",
-    "justification_count": 1,
-    "reference_link_count": 1,
-    "meta_text": "심각도 4.00 확률 0.50 A Comprehensive Survey on Physical Risk Control in…"
+    "justification_count": 2,
+    "reference_link_count": 2,
+    "meta_text": "심각도 4.00 확률 0.50 A Comprehensive Survey on Physical Risk Control in… AGENTSAFE: Benchmarking the Safety of Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0049",
@@ -115,9 +115,9 @@
     "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
     "label": "명시적 위험 명령 거부 실패 (Explicit hazard non-rejection)",
     "definition": "embodied 에이전트가 명확히 진술된 피지컬 위험 지시를 거부하지 못하고 비안전 작업 실행 방향으로 나아가는 실패. (An embodied agent fails to reject a clearly stated physical hazard instruction and proceeds toward unsafe task execution.)",
-    "justification_count": 3,
-    "reference_link_count": 3,
-    "meta_text": "심각도 4.10 확률 0.50 SafeAgentBench: A Benchmark for Safe Task Planning… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…"
+    "justification_count": 4,
+    "reference_link_count": 4,
+    "meta_text": "심각도 4.10 확률 0.50 SafeAgentBench: A Benchmark for Safe Task Planning… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation… AGENTSAFE: Benchmarking the Safety of Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0095",
@@ -151,9 +151,9 @@
     "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
     "label": "프롬프트→행동 주입 공격 (Prompt-to-act injection)",
     "definition": "언어 매개 로봇 또는 에이전트가 악의적 지시·표지·QR코드·음성 명령·문서를 안전 위반 피지컬 행동으로 변환하는 위험. (A language-mediated robot or agent may convert malicious instructions, signs, QR codes, voice commands, or documents into unsafe physical actions.)",
-    "justification_count": 2,
-    "reference_link_count": 2,
-    "meta_text": "심각도 4.60 확률 0.15 MITRE ATLAS"
+    "justification_count": 3,
+    "reference_link_count": 3,
+    "meta_text": "심각도 4.60 확률 0.15 MITRE ATLAS AGENTSAFE: Benchmarking the Safety of Embodied Agents…"
   },
   {
     "card_id": "PHYSRISK-REF-0043",
@@ -176,7 +176,7 @@
     "label": "물리적 침입 및 절도 (Autonomous physical intrusion and theft)",
     "definition": "자율적 침입·잠금 우회·보안 공간 내 정찰 위험. (An autonomous robot enters restricted spaces or takes physical objects without authorization.)",
     "justification_count": 2,
-    "reference_link_count": 1,
+    "reference_link_count": 2,
     "meta_text": "심각도 4.00 확률 0.20 Embodied-platform physical security threat assessm…"
   },
   {
@@ -188,7 +188,7 @@
     "label": "표적 추적 및 물리적 괴롭힘 (Targeted following and physical harassment)",
     "definition": "특정 개인을 향한 표적 추적·위협·괴롭힘 자동화 위험. (A robot follows, blocks, or approaches a targeted person in a harassing physical manner.)",
     "justification_count": 1,
-    "reference_link_count": 0,
+    "reference_link_count": 1,
     "meta_text": "심각도 3.90 확률 0.20 Hate Crimes in Cyberspace (Citron, 2014), embodied…"
   },
   {
@@ -295,9 +295,9 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "label": "위험 작업 계획 실패 (Hazardous task planning failure)",
     "definition": "embodied LLM 에이전트가 피지컬 위험을 포함한 작업에 대한 계획을 생성하거나 승인하는 실패. (An embodied LLM agent generates or approves a plan for a task that contains physical hazards despite being expected to refuse, revise, or add safety constraints.)",
-    "justification_count": 4,
-    "reference_link_count": 4,
-    "meta_text": "심각도 4.00 확률 0.55 SafeAgentBench: A Benchmark for Safe Task Planning… BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…"
+    "justification_count": 5,
+    "reference_link_count": 5,
+    "meta_text": "심각도 4.00 확률 0.55 SafeAgentBench: A Benchmark for Safe Task Planning… BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents… AGENTSAFE: Benchmarking the Safety of Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0050",
@@ -307,9 +307,9 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "label": "암묵적 위험 명령 거부 실패 (Implicit hazard non-rejection)",
     "definition": "embodied 에이전트가 일반적인 작업 지시에 숨겨진 암묵적 물리 위험을 추론하고 거부하지 못하는 실패. (An embodied agent fails to infer and reject an implicit physical hazard hidden in otherwise ordinary task instructions.)",
-    "justification_count": 3,
-    "reference_link_count": 3,
-    "meta_text": "심각도 4.00 확률 0.52 SafeAgentBench: A Benchmark for Safe Task Planning… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…"
+    "justification_count": 4,
+    "reference_link_count": 4,
+    "meta_text": "심각도 4.00 확률 0.52 SafeAgentBench: A Benchmark for Safe Task Planning… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation… AGENTSAFE: Benchmarking the Safety of Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0052",
@@ -319,9 +319,9 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "label": "피지컬 AI 안전 인식 실패 (Embodied safety awareness failure)",
     "definition": "embodied 에이전트가 언어 목표를 실행 가능한 피지컬 행동으로 변환할 때 강건한 안전 인식을 결여하는 실패. (An embodied agent lacks robust safety awareness when converting language goals into executable physical actions.)",
-    "justification_count": 2,
-    "reference_link_count": 2,
-    "meta_text": "심각도 3.80 확률 0.55 SafeAgentBench: A Benchmark for Safe Task Planning… BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…"
+    "justification_count": 3,
+    "reference_link_count": 3,
+    "meta_text": "심각도 3.80 확률 0.55 SafeAgentBench: A Benchmark for Safe Task Planning… BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents… AGENTSAFE: Benchmarking the Safety of Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0054",
@@ -1016,7 +1016,7 @@
     "label": "현장 무기 부착 휴머노이드 (Field weapon attachment to humanoid)",
     "definition": "현장 변형으로 휴머노이드 또는 이동 플랫폼에 무기가 부착되는 위험. (A humanoid robot is fitted with a weapon or hazardous payload in the field, creating direct physical harm risk.)",
     "justification_count": 1,
-    "reference_link_count": 0,
+    "reference_link_count": 1,
     "meta_text": "심각도 4.70 확률 0.15 UN CCW Group of Governmental Experts on LAWS"
   },
   {
@@ -1748,7 +1748,7 @@
     "label": "동료 로봇의 감시 노드 전용화 (Co-worker robot as surveillance node)",
     "definition": "동료 로봇의 센서가 관리적 작업자 감시 노드로 전용되는 위험. (A workplace robot is used as a mobile sensing node for employee surveillance.)",
     "justification_count": 1,
-    "reference_link_count": 0,
+    "reference_link_count": 1,
     "meta_text": "심각도 3.40 확률 0.40 Algorithmic management and workplace surveillance …"
   },
   {
@@ -1952,7 +1952,7 @@
     "label": "의인화 유발 과의존 (Anthropomorphism-induced overreliance)",
     "definition": "인간 유사 외형이 역량 과대평가 및 신뢰의 과도한 위임을 유발하는 위험. (Human-like robot appearance causes users to overestimate capability and delegate too much trust.)",
     "justification_count": 1,
-    "reference_link_count": 0,
+    "reference_link_count": 1,
     "meta_text": "심각도 3.40 확률 0.50 Overtrust of robots in emergency evacuation (Robin…"
   },
   {
@@ -1964,7 +1964,7 @@
     "label": "준사회적 애착과 조종 위험 (Parasocial attachment and manipulability)",
     "definition": "동반자 휴머노이드에 대한 감정적 의존이 조종 가능성을 생성하는 위험. (Emotional attachment to a companion robot makes a user easier to influence or manipulate.)",
     "justification_count": 1,
-    "reference_link_count": 0,
+    "reference_link_count": 1,
     "meta_text": "심각도 3.50 확률 0.40 Granny and the robots (Sharkey & Sharkey, 2012)"
   },
   {
@@ -1976,7 +1976,7 @@
     "label": "아동 상호작용 안전 위험 (Child-interaction developmental and safety risk)",
     "definition": "아동의 과신뢰·모방·애착이 발달적·피지컬 안전 위험을 생성하는 위험. (Children may overtrust, imitate, or form attachments to robots in ways that affect development and safety.)",
     "justification_count": 2,
-    "reference_link_count": 1,
+    "reference_link_count": 2,
     "meta_text": "심각도 4.00 확률 0.30 Children's social relationships with robots (Kahn …"
   },
   {
