@@ -9,5 +9,6 @@
   "removed_csv": "/Users/deep1003/data3/AI_Topic_Space.github.io/data/l4_reference_relevance_audit_20260628/removed_low_relevance_references_applied.csv",
   "fixes_csv": "/Users/deep1003/data3/AI_Topic_Space.github.io/data/l4_reference_relevance_audit_20260628/fixed_reference_justification_mismatches_applied.csv",
   "html_path": "/Users/deep1003/data3/AI_Topic_Space.github.io/pages/pai_risk_taxonomy_bilingual_v1.0.html",
-  "standalone_html": "/Users/deep1003/data3/pai_risk_taxonomy/html/pai_risk_taxonomy_bilingual_v1.0.html"
+  "standalone_html": "/Users/deep1003/data3/pai_risk_taxonomy/html/pai_risk_taxonomy_bilingual_v1.0.html",
+  "safeagentbench_sync_20260629": "Synced to current master: retained only PHYSBENCH-REF-0048/0049/0050; removed PHYSBENCH-REF-0051/0052 SafeAgentBench mappings."
 }
