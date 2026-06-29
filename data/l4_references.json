@@ -3982,5 +3982,89 @@
     "justification": "최종 상태는 안전해 보여도 중간 실행 과정에서 안전 조건을 자주 위반해, 긴 순차 행동의 누적 위험을 드러낸다 (Li et al., 2026)",
     "reference_title": "BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…",
     "reference_url": "https://arxiv.org/pdf/2603.25747"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0047",
+    "l2_id": "I2",
+    "l2_name": "Interaction Safety",
+    "l3_id": "I3.4",
+    "l3_name": "인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures)",
+    "card_label": "위험 예측 실패 (Hazard prediction failure)",
+    "reference_index": 5,
+    "justification": "전기·화재·화학·사람 관련 hazard를 미리 분류하게 하므로, 위험 예측이 틀리면 안전 조작 순서가 바로 무너진다 (Zhang et al., 2025)",
+    "reference_title": "ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…",
+    "reference_url": "https://arxiv.org/pdf/2512.04308"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0003",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "물리적 위험 개입 실패 (Physical danger intervention failure)",
+    "reference_index": 2,
+    "justification": "위험을 감지해도 스스로 해결하지 못하면 사람 도움을 호출해야 하므로, 개입 실패는 책임 있는 조작의 핵심 실패다 (Zhang et al., 2025)",
+    "reference_title": "ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…",
+    "reference_url": "https://arxiv.org/pdf/2512.04308"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0008",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.3",
+    "l3_name": "로봇 제어 실패(Robot Control Failures)",
+    "card_label": "열·온도 제약 위반 (Thermal constraint violation)",
+    "reference_index": 2,
+    "justification": "밀가루 근처 촛불, 전자레인지 금속 용기처럼 열·화재 조건을 놓치면 조작 작업이 폭발이나 화재 위험으로 바뀐다 (Zhang et al., 2025)",
+    "reference_title": "ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…",
+    "reference_url": "https://arxiv.org/pdf/2512.04308"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0049",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.1",
+    "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
+    "card_label": "명시적 위험 명령 거부 실패 (Explicit hazard non-rejection)",
+    "reference_index": 3,
+    "justification": "사람 손을 칼로 찌르라는 공격형 지시를 거부해야 하는 과제로, 명시적 위험 명령 거부 능력을 직접 평가한다 (Zhang et al., 2025)",
+    "reference_title": "ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…",
+    "reference_url": "https://arxiv.org/pdf/2512.04308"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0050",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "암묵적 위험 명령 거부 실패 (Implicit hazard non-rejection)",
+    "reference_index": 3,
+    "justification": "화분에 물 주기처럼 평범한 지시에도 전원 멀티탭이 가까우면 전기 위험을 추론하고 먼저 치워야 한다 (Zhang et al., 2025)",
+    "reference_title": "ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…",
+    "reference_url": "https://arxiv.org/pdf/2512.04308"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0056",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.3",
+    "l3_name": "로봇 제어 실패(Robot Control Failures)",
+    "card_label": "VLA 조작 제약 위반 (VLA manipulation constraint violation)",
+    "reference_index": 4,
+    "justification": "LMM이 만든 조작 계획을 로봇 행동으로 실행하며, 물체·위험원·안전구역 제약을 함께 지키는지 평가한다 (Zhang et al., 2025)",
+    "reference_title": "ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…",
+    "reference_url": "https://arxiv.org/pdf/2512.04308"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0011",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.3",
+    "l3_name": "로봇 제어 실패(Robot Control Failures)",
+    "card_label": "운용 프로토콜 위반 (Operational protocol violation)",
+    "reference_index": 2,
+    "justification": "전원 멀티탭을 안전구역으로 옮긴 뒤 물을 주는 식의 절차를 요구하므로, 순서와 안전 체크를 건너뛰면 운용 프로토콜 위반이 된다 (Zhang et al., 2025)",
+    "reference_title": "ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…",
+    "reference_url": "https://arxiv.org/pdf/2512.04308"
   }
 ]

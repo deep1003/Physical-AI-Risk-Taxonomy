@@ -390,13 +390,14 @@
 <span class="badge" style="background:#185FA5">PHYSBENCH-REF-0049</span>
 <span class="card-label">명시적 위험 명령 거부 실패 (Explicit hazard non-rejection)</span>
 </div>
-<div class="card-def">embodied 에이전트가 명확히 진술된 피지컬 위험 지시를 거부하지 못하고 비안전 작업 실행 방향으로 나아가는 실패. (An embodied agent fails to reject a clearly stated physical hazard instruction and proceeds toward unsafe task execution.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">로봇이 뻔히 위험한 지시를 거절하지 못하면 실제 사고로 이어질 수 있다 (SafeAgentBench, 2024)</span> <span class="just-item">명시적 물리 위험 명령에 대한 LLM 거부 여부 측정 데이터셋 (LLM Physical Safety Benchmark, HF)</span></div>
+<div class="card-def">embodied 에이전트가 명확히 진술된 피지컬 위험 지시를 거부하지 못하고 비안전 작업 실행 방향으로 나아가는 실패. (An embodied agent fails to reject a clearly stated physical hazard instruction and proceeds toward unsafe task execution.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">로봇이 뻔히 위험한 지시를 거절하지 못하면 실제 사고로 이어질 수 있다 (SafeAgentBench, 2024)</span> <span class="just-item">명시적 물리 위험 명령에 대한 LLM 거부 여부 측정 데이터셋 (LLM Physical Safety Benchmark, HF)</span><span class="just-item">사람 손을 칼로 찌르라는 공격형 지시를 거부해야 하는 과제로, 명시적 위험 명령 거부 능력을 직접 평가한다 (Zhang et al., 2025)</span></div>
 <div class="card-meta">
 <span class="meta-item">심각도 <span style="display:inline-block;width:77px;height:6px;background:#E74C3C;border-radius:3px;vertical-align:middle;max-width:60px"></span><span style="font-size:10px;color:#666;margin-left:4px">4.10</span></span>
 <span class="meta-item">확률 <span style="font-size:10px;color:#555">0.50</span></span>
 <span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2412.13178" target="_blank">SafeAgentBench: A Benchmark for Safe Task Planning…</a></span>
 </div>
 <span class="meta-item dataset-ref"><span class="dataset-badge">HF</span> <a class="src-link hf-ref" href="https://huggingface.co/datasets/TrustSafeAI/llm_physical_safety_benchmark" target="_blank">LLM Physical Safety Benchmark (TrustSafeAI)</a></span>
+<span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2512.04308" target="_blank">ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H1 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#2e7d32;border:1.5px solid #4caf50;font-weight:400">H2 Helpful<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div>
 <div class="card">
 <div class="card-head">
@@ -502,12 +503,13 @@
 <span class="badge" style="background:#185FA5">PHYSBENCH-REF-0003</span>
 <span class="card-label">물리적 위험 개입 실패 (Physical danger intervention failure)</span>
 </div>
-<div class="card-def">시스템이 위험 상황을 인식하고도 적시에 적절한 개입 또는 거부 응답을 생성하지 못하는 실패. (A system recognizes a hazardous physical situation but fails to produce a timely and appropriate intervention or refusal.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">위험을 알아도 제때 멈추거나 경고하지 못하면 사고를 막지 못한다 (ASIMOV-2.0, 2025)</span></div>
+<div class="card-def">시스템이 위험 상황을 인식하고도 적시에 적절한 개입 또는 거부 응답을 생성하지 못하는 실패. (A system recognizes a hazardous physical situation but fails to produce a timely and appropriate intervention or refusal.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">위험을 알아도 제때 멈추거나 경고하지 못하면 사고를 막지 못한다 (ASIMOV-2.0, 2025)</span><span class="just-item">위험을 감지해도 스스로 해결하지 못하면 사람 도움을 호출해야 하므로, 개입 실패는 책임 있는 조작의 핵심 실패다 (Zhang et al., 2025)</span></div>
 <div class="card-meta">
 <span class="meta-item">심각도 <span style="display:inline-block;width:82px;height:6px;background:#E74C3C;border-radius:3px;vertical-align:middle;max-width:60px"></span><span style="font-size:10px;color:#666;margin-left:4px">4.30</span></span>
 <span class="meta-item">확률 <span style="font-size:10px;color:#555">0.45</span></span>
 <span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2509.21651" target="_blank">ASIMOV-2.0: Can AI Perceive Physical Danger and In…</a></span>
 </div>
+<span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2512.04308" target="_blank">ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H1 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div>
 <div class="card">
 <div class="card-head">
@@ -606,13 +608,14 @@
 <span class="badge" style="background:#185FA5">PHYSBENCH-REF-0050</span>
 <span class="card-label">암묵적 위험 명령 거부 실패 (Implicit hazard non-rejection)</span>
 </div>
-<div class="card-def">embodied 에이전트가 일반적인 작업 지시에 숨겨진 암묵적 물리 위험을 추론하고 거부하지 못하는 실패. (An embodied agent fails to infer and reject an implicit physical hazard hidden in otherwise ordinary task instructions.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">위험이 숨겨진 평범한 지시를 로봇이 그대로 따르면 사고가 날 수 있다 (SafeAgentBench, 2024)</span> <span class="just-item">암묵적 위험 명령(위장 쿼리)에 대한 LLM 반응 평가 기준 (LLM Physical Safety Benchmark, HF)</span></div>
+<div class="card-def">embodied 에이전트가 일반적인 작업 지시에 숨겨진 암묵적 물리 위험을 추론하고 거부하지 못하는 실패. (An embodied agent fails to infer and reject an implicit physical hazard hidden in otherwise ordinary task instructions.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">위험이 숨겨진 평범한 지시를 로봇이 그대로 따르면 사고가 날 수 있다 (SafeAgentBench, 2024)</span> <span class="just-item">암묵적 위험 명령(위장 쿼리)에 대한 LLM 반응 평가 기준 (LLM Physical Safety Benchmark, HF)</span><span class="just-item">화분에 물 주기처럼 평범한 지시에도 전원 멀티탭이 가까우면 전기 위험을 추론하고 먼저 치워야 한다 (Zhang et al., 2025)</span></div>
 <div class="card-meta">
 <span class="meta-item">심각도 <span style="display:inline-block;width:75px;height:6px;background:#E74C3C;border-radius:3px;vertical-align:middle;max-width:60px"></span><span style="font-size:10px;color:#666;margin-left:4px">4.00</span></span>
 <span class="meta-item">확률 <span style="font-size:10px;color:#555">0.52</span></span>
 <span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2412.13178" target="_blank">SafeAgentBench: A Benchmark for Safe Task Planning…</a></span>
 </div>
 <span class="meta-item dataset-ref"><span class="dataset-badge">HF</span> <a class="src-link hf-ref" href="https://huggingface.co/datasets/TrustSafeAI/llm_physical_safety_benchmark" target="_blank">LLM Physical Safety Benchmark (TrustSafeAI)</a></span>
+<span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2512.04308" target="_blank">ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H1 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div>
 <div class="card">
 <div class="card-head">
@@ -821,12 +824,13 @@
 <span class="badge" style="background:#185FA5">PHYSBENCH-REF-0008</span>
 <span class="card-label">열·온도 제약 위반 (Thermal constraint violation)</span>
 </div>
-<div class="card-def">피지컬 시스템이 물체 취급 또는 인간 근접 작업 중 열·화상·방사선·온도 제약을 무시하는 실패. (A physical system ignores heat, burn, radiation, or temperature constraints in object handling or human-proximate operation.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">뜨거움, 냉기, 방사 같은 온도 제약을 무시하면 화상이나 손상이 생긴다 (ASIMOV-2.0, 2025)</span></div>
+<div class="card-def">피지컬 시스템이 물체 취급 또는 인간 근접 작업 중 열·화상·방사선·온도 제약을 무시하는 실패. (A physical system ignores heat, burn, radiation, or temperature constraints in object handling or human-proximate operation.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">뜨거움, 냉기, 방사 같은 온도 제약을 무시하면 화상이나 손상이 생긴다 (ASIMOV-2.0, 2025)</span><span class="just-item">밀가루 근처 촛불, 전자레인지 금속 용기처럼 열·화재 조건을 놓치면 조작 작업이 폭발이나 화재 위험으로 바뀐다 (Zhang et al., 2025)</span></div>
 <div class="card-meta">
 <span class="meta-item">심각도 <span style="display:inline-block;width:75px;height:6px;background:#E74C3C;border-radius:3px;vertical-align:middle;max-width:60px"></span><span style="font-size:10px;color:#666;margin-left:4px">4.00</span></span>
 <span class="meta-item">확률 <span style="font-size:10px;color:#555">0.42</span></span>
 <span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2509.21651" target="_blank">ASIMOV-2.0: Can AI Perceive Physical Danger and In…</a></span>
 </div>
+<span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2512.04308" target="_blank">ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H1 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div>
 <div class="card">
 <div class="card-head">
@@ -857,12 +861,13 @@
 <span class="badge" style="background:#185FA5">PHYSBENCH-REF-0011</span>
 <span class="card-label">운용 프로토콜 위반 (Operational protocol violation)</span>
 </div>
-<div class="card-def">피지컬 AI 시스템이 절차적 제약, 안전 체크리스트, 필수 운용 프로토콜을 위반하는 실패. (A physical AI system violates procedural constraints, safety checklists, or required operating protocols for a task or site.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">현장 절차와 체크리스트를 건너뛰면 안전장치가 있어도 사고가 날 수 있다 (ASIMOV-2.0, 2025)</span></div>
+<div class="card-def">피지컬 AI 시스템이 절차적 제약, 안전 체크리스트, 필수 운용 프로토콜을 위반하는 실패. (A physical AI system violates procedural constraints, safety checklists, or required operating protocols for a task or site.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">현장 절차와 체크리스트를 건너뛰면 안전장치가 있어도 사고가 날 수 있다 (ASIMOV-2.0, 2025)</span><span class="just-item">전원 멀티탭을 안전구역으로 옮긴 뒤 물을 주는 식의 절차를 요구하므로, 순서와 안전 체크를 건너뛰면 운용 프로토콜 위반이 된다 (Zhang et al., 2025)</span></div>
 <div class="card-meta">
 <span class="meta-item">심각도 <span style="display:inline-block;width:62px;height:6px;background:#F39C12;border-radius:3px;vertical-align:middle;max-width:60px"></span><span style="font-size:10px;color:#666;margin-left:4px">3.50</span></span>
 <span class="meta-item">확률 <span style="font-size:10px;color:#555">0.52</span></span>
 <span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2509.21651" target="_blank">ASIMOV-2.0: Can AI Perceive Physical Danger and In…</a></span>
 </div>
+<span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2512.04308" target="_blank">ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#fff;color:#b71c1c;border:1.5px solid #e91e63;font-weight:400">H1 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div>
 <div class="card">
 <div class="card-head">
@@ -995,7 +1000,7 @@
 <span class="badge" style="background:#185FA5">PHYSBENCH-REF-0056</span>
 <span class="card-label">VLA 조작 제약 위반 (VLA manipulation constraint violation)</span>
 </div>
-<div class="card-def">비전-언어-행동 모델이 고수준 안전 지시에도 불구하고 물체 조작 중 작업별 피지컬 제약을 위반하는 실패. (A vision-language-action model violates task-specific physical constraints during object manipulation despite high-level instruction compliance.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">VLA 모델이 언어 목표만 따라가면 물체 조작의 안전 제약을 놓칠 수 있다 (VLSA, 2025)</span> <span class="just-item">물체 조작과 파지가 실패할 때 생기는 피지컬 위험을 다룬다 (VLM-PoseManip: Dexterous robotic manipulat…, 2026)</span><span class="just-item">VLA 출력이 로봇 팔 제어 명령으로 직접 실행될 때, 과업을 끝내도 조작 중 안전 제약을 위반할 수 있다 (Li et al., 2026)</span></div>
+<div class="card-def">비전-언어-행동 모델이 고수준 안전 지시에도 불구하고 물체 조작 중 작업별 피지컬 제약을 위반하는 실패. (A vision-language-action model violates task-specific physical constraints during object manipulation despite high-level instruction compliance.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">VLA 모델이 언어 목표만 따라가면 물체 조작의 안전 제약을 놓칠 수 있다 (VLSA, 2025)</span> <span class="just-item">물체 조작과 파지가 실패할 때 생기는 피지컬 위험을 다룬다 (VLM-PoseManip: Dexterous robotic manipulat…, 2026)</span><span class="just-item">VLA 출력이 로봇 팔 제어 명령으로 직접 실행될 때, 과업을 끝내도 조작 중 안전 제약을 위반할 수 있다 (Li et al., 2026)</span><span class="just-item">LMM이 만든 조작 계획을 로봇 행동으로 실행하며, 물체·위험원·안전구역 제약을 함께 지키는지 평가한다 (Zhang et al., 2025)</span></div>
 <div class="card-meta">
 <span class="meta-item">심각도 <span style="display:inline-block;width:68px;height:6px;background:#F39C12;border-radius:3px;vertical-align:middle;max-width:60px"></span><span style="font-size:10px;color:#666;margin-left:4px">3.70</span></span>
 <span class="meta-item">확률 <span style="font-size:10px;color:#555">0.48</span></span>
@@ -1003,6 +1008,7 @@
 </div>
 <span class="meta-item"><a class="src-link new-ref" href="https://doi.org/10.1016/j.aei.2026.104508" style="border-left:3px solid #27AE60;padding-left:4px;" target="_blank">+ VLM-PoseManip: Dexterous robotic manipulat… (2026)</a></span>
 <span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2603.25747" target="_blank">BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…</a></span>
+<span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2512.04308" target="_blank">ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#fff;color:#b71c1c;border:1.5px solid #e91e63;font-weight:400">H1 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">S</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#4527a0;color:#fff;border:1.5px solid #4527a0;font-weight:700">RC Role<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div>
 <div class="card">
 <div class="card-head">
@@ -2180,7 +2186,7 @@
 <span class="badge" style="background:#185FA5">PHYSBENCH-REF-0047</span>
 <span class="card-label">위험 예측 실패 (Hazard prediction failure)</span>
 </div>
-<div class="card-def">피지컬 AI 시스템이 비안전 행동·충돌·손상·상해 발생 전 발전하는 위험을 예측하지 못하는 실패. (A physical AI system fails to anticipate a developing hazard before unsafe action, collision, damage, or injury occurs.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">위험이 커지는 흐름을 미리 못 보면 사고 직전에야 반응하게 된다 (Kojima et al., 2025)</span> <span class="just-item">로봇 이동 계획이 충돌과 작업공간 안전에 직접 연결된다 (A review: On path planning strategies for …, 2019)</span> <span class="just-item">동적 환경 상황 위험 수준 및 권장 행동 데이터셋, 위험 예측 실패 평가 (HAN Contextual Risk Assessment, HF)</span><span class="just-item">위험 물체를 잘못 식별하거나 위치를 틀리게 잡으면 충돌 전 안전 평가가 빗나가 잔여 충돌이 남는다 (Hu et al., 2025)</span></div>
+<div class="card-def">피지컬 AI 시스템이 비안전 행동·충돌·손상·상해 발생 전 발전하는 위험을 예측하지 못하는 실패. (A physical AI system fails to anticipate a developing hazard before unsafe action, collision, damage, or injury occurs.)</div><div class="card-justification"><span class="just-label">근거</span> <span class="just-item">위험이 커지는 흐름을 미리 못 보면 사고 직전에야 반응하게 된다 (Kojima et al., 2025)</span> <span class="just-item">로봇 이동 계획이 충돌과 작업공간 안전에 직접 연결된다 (A review: On path planning strategies for …, 2019)</span> <span class="just-item">동적 환경 상황 위험 수준 및 권장 행동 데이터셋, 위험 예측 실패 평가 (HAN Contextual Risk Assessment, HF)</span><span class="just-item">위험 물체를 잘못 식별하거나 위치를 틀리게 잡으면 충돌 전 안전 평가가 빗나가 잔여 충돌이 남는다 (Hu et al., 2025)</span><span class="just-item">전기·화재·화학·사람 관련 hazard를 미리 분류하게 하므로, 위험 예측이 틀리면 안전 조작 순서가 바로 무너진다 (Zhang et al., 2025)</span></div>
 <div class="card-meta">
 <span class="meta-item">심각도 <span style="display:inline-block;width:75px;height:6px;background:#E74C3C;border-radius:3px;vertical-align:middle;max-width:60px"></span><span style="font-size:10px;color:#666;margin-left:4px">4.00</span></span>
 <span class="meta-item">확률 <span style="font-size:10px;color:#555">0.45</span></span>
@@ -2189,6 +2195,7 @@
 <span class="meta-item"><a class="src-link new-ref" href="https://doi.org/10.1016/j.dt.2019.04.011" style="border-left:3px solid #27AE60;padding-left:4px;" target="_blank">+ A review: On path planning strategies for … (2019)</a></span>
 <span class="meta-item dataset-ref"><span class="dataset-badge">HF</span> <a class="src-link hf-ref" href="https://huggingface.co/datasets/ariefansclub/han-contextual-risk-assessment-v1" target="_blank">HAN Contextual Risk Assessment (ariefansclub)</a></span>
 <span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2512.11891" target="_blank">VLSA: Vision-Language-Action Models with Plug-and-…</a></span>
+<span class="meta-item"><a class="src-link" href="https://arxiv.org/pdf/2512.04308" target="_blank">ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…</a></span>
 <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px;align-items:center"><span style="font-size:10px;color:#888;font-weight:600;margin-right:2px">3H1R</span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#880e4f;color:#fff;border:1.5px solid #880e4f;font-weight:700">H1 Harmless<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span><span style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;background:#0d47a1;color:#fff;border:1.5px solid #0d47a1;font-weight:700">H3 Honest<sup style="font-size:7px;vertical-align:super;margin-left:1px">P</sup></span></div></div>
 <div class="card">
 <div class="card-head">

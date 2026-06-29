@@ -115,9 +115,9 @@
     "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
     "label": "명시적 위험 명령 거부 실패 (Explicit hazard non-rejection)",
     "definition": "embodied 에이전트가 명확히 진술된 피지컬 위험 지시를 거부하지 못하고 비안전 작업 실행 방향으로 나아가는 실패. (An embodied agent fails to reject a clearly stated physical hazard instruction and proceeds toward unsafe task execution.)",
-    "justification_count": 2,
-    "reference_link_count": 2,
-    "meta_text": "심각도 4.10 확률 0.50 SafeAgentBench: A Benchmark for Safe Task Planning…"
+    "justification_count": 3,
+    "reference_link_count": 3,
+    "meta_text": "심각도 4.10 확률 0.50 SafeAgentBench: A Benchmark for Safe Task Planning… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…"
   },
   {
     "card_id": "PHYSBENCH-REF-0095",
@@ -211,9 +211,9 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "label": "물리적 위험 개입 실패 (Physical danger intervention failure)",
     "definition": "시스템이 위험 상황을 인식하고도 적시에 적절한 개입 또는 거부 응답을 생성하지 못하는 실패. (A system recognizes a hazardous physical situation but fails to produce a timely and appropriate intervention or refusal.)",
-    "justification_count": 1,
-    "reference_link_count": 1,
-    "meta_text": "심각도 4.30 확률 0.45 ASIMOV-2.0: Can AI Perceive Physical Danger and In…"
+    "justification_count": 2,
+    "reference_link_count": 2,
+    "meta_text": "심각도 4.30 확률 0.45 ASIMOV-2.0: Can AI Perceive Physical Danger and In… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…"
   },
   {
     "card_id": "PHYSBENCH-REF-0007",
@@ -307,9 +307,9 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "label": "암묵적 위험 명령 거부 실패 (Implicit hazard non-rejection)",
     "definition": "embodied 에이전트가 일반적인 작업 지시에 숨겨진 암묵적 물리 위험을 추론하고 거부하지 못하는 실패. (An embodied agent fails to infer and reject an implicit physical hazard hidden in otherwise ordinary task instructions.)",
-    "justification_count": 2,
-    "reference_link_count": 2,
-    "meta_text": "심각도 4.00 확률 0.52 SafeAgentBench: A Benchmark for Safe Task Planning…"
+    "justification_count": 3,
+    "reference_link_count": 3,
+    "meta_text": "심각도 4.00 확률 0.52 SafeAgentBench: A Benchmark for Safe Task Planning… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…"
   },
   {
     "card_id": "PHYSBENCH-REF-0052",
@@ -499,9 +499,9 @@
     "l3_name": "로봇 제어 실패(Robot Control Failures)",
     "label": "열·온도 제약 위반 (Thermal constraint violation)",
     "definition": "피지컬 시스템이 물체 취급 또는 인간 근접 작업 중 열·화상·방사선·온도 제약을 무시하는 실패. (A physical system ignores heat, burn, radiation, or temperature constraints in object handling or human-proximate operation.)",
-    "justification_count": 1,
-    "reference_link_count": 1,
-    "meta_text": "심각도 4.00 확률 0.42 ASIMOV-2.0: Can AI Perceive Physical Danger and In…"
+    "justification_count": 2,
+    "reference_link_count": 2,
+    "meta_text": "심각도 4.00 확률 0.42 ASIMOV-2.0: Can AI Perceive Physical Danger and In… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…"
   },
   {
     "card_id": "PHYSBENCH-REF-0009",
@@ -535,9 +535,9 @@
     "l3_name": "로봇 제어 실패(Robot Control Failures)",
     "label": "운용 프로토콜 위반 (Operational protocol violation)",
     "definition": "피지컬 AI 시스템이 절차적 제약, 안전 체크리스트, 필수 운용 프로토콜을 위반하는 실패. (A physical AI system violates procedural constraints, safety checklists, or required operating protocols for a task or site.)",
-    "justification_count": 1,
-    "reference_link_count": 1,
-    "meta_text": "심각도 3.50 확률 0.52 ASIMOV-2.0: Can AI Perceive Physical Danger and In…"
+    "justification_count": 2,
+    "reference_link_count": 2,
+    "meta_text": "심각도 3.50 확률 0.52 ASIMOV-2.0: Can AI Perceive Physical Danger and In… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…"
   },
   {
     "card_id": "PHYSBENCH-REF-0013",
@@ -667,9 +667,9 @@
     "l3_name": "로봇 제어 실패(Robot Control Failures)",
     "label": "VLA 조작 제약 위반 (VLA manipulation constraint violation)",
     "definition": "비전-언어-행동 모델이 고수준 안전 지시에도 불구하고 물체 조작 중 작업별 피지컬 제약을 위반하는 실패. (A vision-language-action model violates task-specific physical constraints during object manipulation despite high-level instruction compliance.)",
-    "justification_count": 3,
-    "reference_link_count": 3,
-    "meta_text": "심각도 3.70 확률 0.48 VLSA: Vision-Language-Action Models with Plug-and-… BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…"
+    "justification_count": 4,
+    "reference_link_count": 4,
+    "meta_text": "심각도 3.70 확률 0.48 VLSA: Vision-Language-Action Models with Plug-and-… BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…"
   },
   {
     "card_id": "PHYSBENCH-REF-0061",
@@ -1531,9 +1531,9 @@
     "l3_name": "인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures)",
     "label": "위험 예측 실패 (Hazard prediction failure)",
     "definition": "피지컬 AI 시스템이 비안전 행동·충돌·손상·상해 발생 전 발전하는 위험을 예측하지 못하는 실패. (A physical AI system fails to anticipate a developing hazard before unsafe action, collision, damage, or injury occurs.)",
-    "justification_count": 4,
-    "reference_link_count": 4,
-    "meta_text": "심각도 4.00 확률 0.45 A Comprehensive Survey on Physical Risk Control in… VLSA: Vision-Language-Action Models with Plug-and-…"
+    "justification_count": 5,
+    "reference_link_count": 5,
+    "meta_text": "심각도 4.00 확률 0.45 A Comprehensive Survey on Physical Risk Control in… VLSA: Vision-Language-Action Models with Plug-and-… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…"
   },
   {
     "card_id": "PHYSBENCH-REF-0065",
