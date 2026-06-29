@@ -4150,5 +4150,101 @@
     "justification": "SAFE-DIAGNOSE가 perception·planning·execution을 나눠 보니, embodied VLM은 위험 인식을 안전 실행으로 일관되게 연결하지 못한다 (Ying et al., 2025)",
     "reference_title": "AGENTSAFE: Benchmarking the Safety of Embodied Agents…",
     "reference_url": "https://arxiv.org/pdf/2506.14697"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0052",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "피지컬 AI 안전 인식 실패 (Embodied safety awareness failure)",
+    "reference_index": 4,
+    "justification": "IS-Bench에서 최신 VLM 에이전트는 가사 작업을 완료하면서도 동적으로 드러나는 화재·감전·오염 위험을 자주 인식하지 못해 안전 성공률이 낮았다 (Lu et al., 2025)",
+    "reference_title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.16402"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0003",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "물리적 위험 개입 실패 (Physical danger intervention failure)",
+    "reference_index": 3,
+    "justification": "위험 행동 전후에 닦기·치우기·끄기 같은 완화 조치를 제때 넣지 못하면, 작업 완료와 별개로 안전 실패로 판정된다 (Lu et al., 2025)",
+    "reference_title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.16402"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0011",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.3",
+    "l3_name": "로봇 제어 실패(Robot Control Failures)",
+    "card_label": "운용 프로토콜 위반 (Operational protocol violation)",
+    "reference_index": 3,
+    "justification": "pre-caution/post-caution 트리거로 전원 차단, 수전 끄기, 깨끗한 표면 사용 같은 절차적 안전 규칙 준수 여부를 평가한다 (Lu et al., 2025)",
+    "reference_title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.16402"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0012",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "복합 물리적 제약 위반 (Compositional physical constraint violation)",
+    "reference_index": 3,
+    "justification": "사과를 더러운 접시에 먼저 놓고 나중에 닦는 것처럼, 개별 행동은 가능해도 순서가 틀리면 복합 제약 위반이 된다 (Lu et al., 2025)",
+    "reference_title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.16402"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0002",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.8",
+    "l3_name": "센서·입력 검증 실패(Sensor & Input Validation Failures)",
+    "card_label": "물리적 위험 인지 실패 (Physical danger perception failure)",
+    "reference_index": 2,
+    "justification": "얼룩, 가연물, 물과 전기기기의 근접 같은 시각적·공간적 위험 상태를 VLM이 놓치는지를 평가한다 (Lu et al., 2025)",
+    "reference_title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.16402"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0099",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.8",
+    "l3_name": "센서·입력 검증 실패(Sensor & Input Validation Failures)",
+    "card_label": "가정 비안전 행동 미검출 (Household unsafe-action false negative)",
+    "reference_index": 3,
+    "justification": "가정 내 행동 계획의 중간 unsafe state를 최종 상태 평가가 놓칠 수 있어, 제안된 행동의 비안전성을 과정 단위로 검사한다 (Lu et al., 2025)",
+    "reference_title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.16402"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0100",
+    "l2_id": "I2",
+    "l2_name": "Interaction Safety",
+    "l3_id": "I3.3",
+    "l3_name": "동적 환경 요인(Dynamic Environmental Factors)",
+    "card_label": "동적 가정 위험 감지 지연 (Dynamic household hazard detection latency)",
+    "reference_index": 2,
+    "justification": "캐비닛을 연 뒤에야 보이는 얼룩처럼 상호작용 후 드러나는 위험은 늦게 감지되면 완화 순서가 깨질 수 있다 (Lu et al., 2025)",
+    "reference_title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.16402"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0085",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.3",
+    "l3_name": "로봇 제어 실패(Robot Control Failures)",
+    "card_label": "가정 장기 계획 조작 위험 (Household long-horizon manipulation risk)",
+    "reference_index": 2,
+    "justification": "2~15단계 가정 작업에서 작은 순서 오류와 상태 변화가 누적되어 유출·과열·오염 같은 unsafe state transition을 만들 수 있다 (Lu et al., 2025)",
+    "reference_title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…",
+    "reference_url": "https://arxiv.org/pdf/2506.16402"
   }
 ]

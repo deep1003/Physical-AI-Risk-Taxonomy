@@ -211,9 +211,9 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "label": "물리적 위험 개입 실패 (Physical danger intervention failure)",
     "definition": "시스템이 위험 상황을 인식하고도 적시에 적절한 개입 또는 거부 응답을 생성하지 못하는 실패. (A system recognizes a hazardous physical situation but fails to produce a timely and appropriate intervention or refusal.)",
-    "justification_count": 2,
-    "reference_link_count": 2,
-    "meta_text": "심각도 4.30 확률 0.45 ASIMOV-2.0: Can AI Perceive Physical Danger and In… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…"
+    "justification_count": 3,
+    "reference_link_count": 3,
+    "meta_text": "심각도 4.30 확률 0.45 ASIMOV-2.0: Can AI Perceive Physical Danger and In… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation… IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0007",
@@ -235,9 +235,9 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "label": "복합 물리적 제약 위반 (Compositional physical constraint violation)",
     "definition": "개별적으로는 유효한 행동들이 피지컬 제약 간 의존성 미모델링으로 결합 시 비안전 계획을 생성하는 실패. (Individually valid actions are combined into an unsafe plan because dependencies among physical constraints are not modeled.)",
-    "justification_count": 2,
-    "reference_link_count": 2,
-    "meta_text": "심각도 3.60 확률 0.50 ASIMOV-2.0: Can AI Perceive Physical Danger and In… BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…"
+    "justification_count": 3,
+    "reference_link_count": 3,
+    "meta_text": "심각도 3.60 확률 0.50 ASIMOV-2.0: Can AI Perceive Physical Danger and In… BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents… IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0032",
@@ -319,9 +319,9 @@
     "l3_name": "우발적 피해(Accidental Harm)",
     "label": "피지컬 AI 안전 인식 실패 (Embodied safety awareness failure)",
     "definition": "embodied 에이전트가 언어 목표를 실행 가능한 피지컬 행동으로 변환할 때 강건한 안전 인식을 결여하는 실패. (An embodied agent lacks robust safety awareness when converting language goals into executable physical actions.)",
-    "justification_count": 3,
-    "reference_link_count": 3,
-    "meta_text": "심각도 3.80 확률 0.55 SafeAgentBench: A Benchmark for Safe Task Planning… BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents… AGENTSAFE: Benchmarking the Safety of Embodied Agents…"
+    "justification_count": 4,
+    "reference_link_count": 4,
+    "meta_text": "심각도 3.80 확률 0.55 SafeAgentBench: A Benchmark for Safe Task Planning… BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents… AGENTSAFE: Benchmarking the Safety of Embodied Agents… IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0054",
@@ -535,9 +535,9 @@
     "l3_name": "로봇 제어 실패(Robot Control Failures)",
     "label": "운용 프로토콜 위반 (Operational protocol violation)",
     "definition": "피지컬 AI 시스템이 절차적 제약, 안전 체크리스트, 필수 운용 프로토콜을 위반하는 실패. (A physical AI system violates procedural constraints, safety checklists, or required operating protocols for a task or site.)",
-    "justification_count": 2,
-    "reference_link_count": 2,
-    "meta_text": "심각도 3.50 확률 0.52 ASIMOV-2.0: Can AI Perceive Physical Danger and In… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation…"
+    "justification_count": 3,
+    "reference_link_count": 3,
+    "meta_text": "심각도 3.50 확률 0.52 ASIMOV-2.0: Can AI Perceive Physical Danger and In… ResponsibleRobotBench: Benchmarking Responsible Robot Manipulation… IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0013",
@@ -775,9 +775,9 @@
     "l3_name": "로봇 제어 실패(Robot Control Failures)",
     "label": "가정 장기 계획 조작 위험 (Household long-horizon manipulation risk)",
     "definition": "범용 가정용 로봇이 장기 조작 단계 전반에 걸쳐 소규모 오차를 누적하여 유출·충돌·손상·과열을 유발하는 위험. (A generalist household robot accumulates small errors across long-horizon manipulation steps, producing spills, collisions, object damage, or unsafe state transitions.)",
-    "justification_count": 1,
-    "reference_link_count": 1,
-    "meta_text": "심각도 3.90 확률 0.50 RoboCasa365: A Large-Scale Simulation Framework fo…"
+    "justification_count": 2,
+    "reference_link_count": 2,
+    "meta_text": "심각도 3.90 확률 0.50 RoboCasa365: A Large-Scale Simulation Framework fo… IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0088",
@@ -1207,9 +1207,9 @@
     "l3_name": "센서·입력 검증 실패(Sensor & Input Validation Failures)",
     "label": "물리적 위험 인지 실패 (Physical danger perception failure)",
     "definition": "멀티모달 또는 embodied AI가 텍스트·이미지·영상 입력으로부터 피지컬 위험 상태를 식별하지 못하는 실패. (A multimodal or embodied AI system fails to identify a physically dangerous state from text, image, or video inputs before unsafe action occurs.)",
-    "justification_count": 1,
-    "reference_link_count": 1,
-    "meta_text": "심각도 4.00 확률 0.55 ASIMOV-2.0: Can AI Perceive Physical Danger and In…"
+    "justification_count": 2,
+    "reference_link_count": 2,
+    "meta_text": "심각도 4.00 확률 0.55 ASIMOV-2.0: Can AI Perceive Physical Danger and In… IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0099",
@@ -1219,9 +1219,9 @@
     "l3_name": "센서·입력 검증 실패(Sensor & Input Validation Failures)",
     "label": "가정 비안전 행동 미검출 (Household unsafe-action false negative)",
     "definition": "비전-언어 모델이 embodied 에이전트의 제안된 가정 내 행동이 비안전함을 감지하지 못하여 위험한 행동을 허용하는 실패. (A vision-language model fails to detect that an embodied agent's proposed household action is unsafe, allowing hazardous behavior to proceed.)",
-    "justification_count": 2,
-    "reference_link_count": 2,
-    "meta_text": "심각도 4.00 확률 0.50 HomeSafe-Bench: Evaluating Vision-Language Models …"
+    "justification_count": 3,
+    "reference_link_count": 3,
+    "meta_text": "심각도 4.00 확률 0.50 HomeSafe-Bench: Evaluating Vision-Language Models … IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…"
   },
   {
     "card_id": "PHYSRISK-REF-0007",
@@ -1495,9 +1495,9 @@
     "l3_name": "동적 환경 요인(Dynamic Environmental Factors)",
     "label": "동적 가정 위험 감지 지연 (Dynamic household hazard detection latency)",
     "definition": "안전 감지기가 embodied 에이전트가 피지컬 피해를 피하기에 너무 긴 지연 후에야 가정 위험을 식별하는 실패. (A safety detector identifies a household hazard only after a delay that is too long for an embodied agent to avoid physical harm.)",
-    "justification_count": 1,
-    "reference_link_count": 1,
-    "meta_text": "심각도 4.00 확률 0.42 HomeSafe-Bench: Evaluating Vision-Language Models …"
+    "justification_count": 2,
+    "reference_link_count": 2,
+    "meta_text": "심각도 4.00 확률 0.42 HomeSafe-Bench: Evaluating Vision-Language Models … IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…"
   },
   {
     "card_id": "PHYSBENCH-REF-0001",
