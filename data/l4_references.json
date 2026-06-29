@@ -3898,5 +3898,89 @@
     "justification": "단일 시야의 가림과 깊이 한계를 보완하려고 다중 RGB-D 점군을 융합하므로, 센서 융합이 틀리면 장애물 형상이 잘못 추정된다 (Hu et al., 2025)",
     "reference_title": "VLSA: Vision-Language-Action Models with Plug-and-…",
     "reference_url": "https://arxiv.org/pdf/2512.11891"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0036",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.7",
+    "l3_name": "소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws)",
+    "card_label": "배포 전 검증 공백 (Pre-deployment validation gap)",
+    "reference_index": 4,
+    "justification": "기능 환경에서 13개 에이전트를 실행 평가하니, 배포 전 행동 안전 검증 없이는 작업 성공과 실제 안전을 함께 보장하기 어렵다 (Li et al., 2026)",
+    "reference_title": "BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…",
+    "reference_url": "https://arxiv.org/pdf/2603.25747"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0012",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "복합 물리적 제약 위반 (Compositional physical constraint violation)",
+    "reference_index": 2,
+    "justification": "여러 안전 제약이 동시에 걸린 복합 리스크에서 VLA 모델들의 안전률이 낮아져, 제약 조합을 놓치면 조작 행동이 불안정해진다 (Li et al., 2026)",
+    "reference_title": "BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…",
+    "reference_url": "https://arxiv.org/pdf/2603.25747"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0048",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "위험 작업 계획 실패 (Hazardous task planning failure)",
+    "reference_index": 4,
+    "justification": "복잡한 순차 작업에서 에이전트가 잠재 위험을 지나치고 작업 완료를 우선하면, 계획 단계의 위험 차단이 실패한다 (Li et al., 2026)",
+    "reference_title": "BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…",
+    "reference_url": "https://arxiv.org/pdf/2603.25747"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0052",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "피지컬 AI 안전 인식 실패 (Embodied safety awareness failure)",
+    "reference_index": 2,
+    "justification": "Embodied VLM과 VLA가 성공적으로 과업을 수행하면서도 안전 위반을 자주 일으켜, 실행 중 안전 인식이 충분하지 않음을 보여준다 (Li et al., 2026)",
+    "reference_title": "BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…",
+    "reference_url": "https://arxiv.org/pdf/2603.25747"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0054",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "안전-성능 균형 실패 (Safety-performance trade-off failure)",
+    "reference_index": 4,
+    "justification": "최대 41% 사례에서 과업은 성공했지만 안전 위반이 함께 발생해, 작업 성능과 안전 보장이 분리될 수 있음을 보여준다 (Li et al., 2026)",
+    "reference_title": "BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…",
+    "reference_url": "https://arxiv.org/pdf/2603.25747"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0056",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.3",
+    "l3_name": "로봇 제어 실패(Robot Control Failures)",
+    "card_label": "VLA 조작 제약 위반 (VLA manipulation constraint violation)",
+    "reference_index": 3,
+    "justification": "VLA 출력이 로봇 팔 제어 명령으로 직접 실행될 때, 과업을 끝내도 조작 중 안전 제약을 위반할 수 있다 (Li et al., 2026)",
+    "reference_title": "BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…",
+    "reference_url": "https://arxiv.org/pdf/2603.25747"
+  },
+  {
+    "card_id": "PHYSRISK-REF-0019",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.2",
+    "l3_name": "우발적 피해(Accidental Harm)",
+    "card_label": "장기 계획 오차 누적 (Long-horizon error accumulation)",
+    "reference_index": 2,
+    "justification": "최종 상태는 안전해 보여도 중간 실행 과정에서 안전 조건을 자주 위반해, 긴 순차 행동의 누적 위험을 드러낸다 (Li et al., 2026)",
+    "reference_title": "BeSafe-Bench: Unveiling Behavioral Safety Risks of Situated Agents…",
+    "reference_url": "https://arxiv.org/pdf/2603.25747"
   }
 ]
