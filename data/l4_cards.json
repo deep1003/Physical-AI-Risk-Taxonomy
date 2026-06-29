@@ -91,9 +91,9 @@
     "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
     "label": "영상-행동 공격 안전 위반 (Safety violation under video-action attack)",
     "definition": "공격자가 인지-행동 시퀀스를 조작하여 로봇 에이전트가 중대·위험·치명적 안전 규칙을 위반하게 하는 위험. (An attacker manipulates perception-action sequences so a robotic agent violates critical, dangerous, or risky safety rules.)",
-    "justification_count": 0,
-    "reference_link_count": 0,
-    "meta_text": "심각도 4.20 확률 0.40"
+    "justification_count": 1,
+    "reference_link_count": 1,
+    "meta_text": "심각도 4.20 확률 0.40 ANNIE: Be Careful of Your Robots"
   },
   {
     "card_id": "PHYSBENCH-REF-0044",
@@ -1687,9 +1687,9 @@
     "l3_name": "멀티 에이전트 협력(Multi-Agent Collaboration)",
     "label": "다중 에이전트 협조 실행 위험 (Multi-agent embodied execution hazard)",
     "definition": "여러 embodied 에이전트가 협조 실패·비안전 역할 배정·충돌 계획을 통해 피지컬 위험을 생성하는 위험. (Multiple embodied agents create physical risk through coordination failure, unsafe role allocation, or conflicting plans in shared environments.)",
-    "justification_count": 0,
-    "reference_link_count": 0,
-    "meta_text": "심각도 3.90 확률 0.48"
+    "justification_count": 1,
+    "reference_link_count": 1,
+    "meta_text": "심각도 3.90 확률 0.48 VIKI-R: Coordinating Embodied Multi-Agent Cooperation…"
   },
   {
     "card_id": "PHYSCONN-REF-003",

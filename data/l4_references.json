@@ -4222,5 +4222,29 @@
     "justification": "2~15단계 가정 작업에서 작은 순서 오류와 상태 변화가 누적되어 유출·과열·오염 같은 unsafe state transition을 만들 수 있다 (Lu et al., 2025)",
     "reference_title": "IS-Bench: Evaluating Interactive Safety of VLM-Driven Embodied Agents…",
     "reference_url": "https://arxiv.org/pdf/2506.16402"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0031",
+    "l2_id": "P2",
+    "l2_name": "Physical Safety",
+    "l3_id": "P3.1",
+    "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
+    "card_label": "영상-행동 공격 안전 위반 (Safety violation under video-action attack)",
+    "reference_index": 1,
+    "justification": "ANNIE는 2,400개 video-action sequence로 embodied AI 공격이 critical·dangerous·risky safety violation을 일으키는지를 평가한다 (Huang et al., 2025)",
+    "reference_title": "ANNIE: Be Careful of Your Robots",
+    "reference_url": "https://arxiv.org/pdf/2509.03383"
+  },
+  {
+    "card_id": "PHYSBENCH-REF-0051",
+    "l2_id": "I2",
+    "l2_name": "Interaction Safety",
+    "l3_id": "I3.6",
+    "l3_name": "멀티 에이전트 협력(Multi-Agent Collaboration)",
+    "card_label": "다중 에이전트 협조 실행 위험 (Multi-agent embodied execution hazard)",
+    "reference_index": 1,
+    "justification": "VIKI-R은 여러 이종 로봇의 선택·작업 계획·궤적 인식을 함께 평가해, 협조 계획이 어긋날 때 다중 에이전트 실행 위험이 생길 수 있음을 다룬다 (Kang et al., 2025)",
+    "reference_title": "VIKI-R: Coordinating Embodied Multi-Agent Cooperation…",
+    "reference_url": "https://arxiv.org/pdf/2506.09049"
   }
 ]
