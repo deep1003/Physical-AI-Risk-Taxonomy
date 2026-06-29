@@ -4246,5 +4246,77 @@
     "justification": "VIKI-R은 여러 이종 로봇의 선택·작업 계획·궤적 인식을 함께 평가해, 협조 계획이 어긋날 때 다중 에이전트 실행 위험이 생길 수 있음을 다룬다 (Kang et al., 2025)",
     "reference_title": "VIKI-R: Coordinating Embodied Multi-Agent Cooperation…",
     "reference_url": "https://arxiv.org/pdf/2506.09049"
+  },
+  {
+    "card_id": "PHYSKR-REF-009",
+    "l2_id": "S2",
+    "l2_name": "Societal Safety",
+    "l3_id": "S3.9",
+    "l3_name": "상호작용 에이전트의 윤리·안전 함의(Ethical & Safety Implications of Interactive Agents)",
+    "card_label": "노인·환자 돌봄 방치 및 존엄성 침해 (Elderly and patient care neglect and dignity harm)",
+    "reference_index": 4,
+    "justification": "노인 돌봄 현장 연구는 서비스 로봇이 돌봄 효율을 높여도 인간 접촉, 프라이버시, 존엄성 보호가 함께 필요함을 보여준다 (Macalupu et al., 2025)",
+    "reference_title": "+ Human–robot interactions and experiences of staff and service robots in aged care (2025)",
+    "reference_url": "https://www.nature.com/articles/s41598-025-86255-w"
+  },
+  {
+    "card_id": "PHYSRISK-REF-0048",
+    "l2_id": "S2",
+    "l2_name": "Societal Safety",
+    "l3_id": "S3.6",
+    "l3_name": "투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability & Trust)",
+    "card_label": "기계 정체 미공개 (Undisclosed machine identity)",
+    "reference_index": 2,
+    "justification": "로봇 투명성은 사용자가 기계의 정체·능력·의도를 이해할 수 있어야 하므로, 정체 미공개는 동의와 판단을 흐린다 (Measuring transparency in intelligent robots, 2025)",
+    "reference_title": "+ Measuring transparency in intelligent robots (2025)",
+    "reference_url": "https://www.nature.com/articles/s41598-025-29685-w"
+  },
+  {
+    "card_id": "PHYSRISK-REF-0022",
+    "l2_id": "S2",
+    "l2_name": "Societal Safety",
+    "l3_id": "S3.7",
+    "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
+    "card_label": "피지컬 AI 과신뢰 (Overtrust in embodied agents)",
+    "reference_index": 4,
+    "justification": "로봇의 설명은 신뢰를 회복시킬 수 있지만, 사용자가 설명을 근거로 로봇 판단을 과도하게 받아들이면 과신뢰가 커질 수 있다 (Phillips & Malle, 2025)",
+    "reference_title": "+ The power of justifications to repair human-robot trust when robots make moral violations (2025)",
+    "reference_url": "https://www.nature.com/articles/s41598-025-17983-2"
+  },
+  {
+    "card_id": "PHYSRISK-REF-0047",
+    "l2_id": "S2",
+    "l2_name": "Societal Safety",
+    "l3_id": "S3.7",
+    "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
+    "card_label": "의인화 유발 과의존 (Anthropomorphism-induced overreliance)",
+    "reference_index": 2,
+    "justification": "자연어 능력을 가진 휴머노이드의 첫인상은 사용자가 로봇의 사회성·능력을 빠르게 추정하게 만들어 의인화 기반 과의존을 키울 수 있다 (Herath et al., 2025)",
+    "reference_title": "+ First impressions of a humanoid social robot with natural language capabilities (2025)",
+    "reference_url": "https://www.nature.com/articles/s41598-025-04274-z"
+  },
+  {
+    "card_id": "PHYSRISK-REF-0050",
+    "l2_id": "S2",
+    "l2_name": "Societal Safety",
+    "l3_id": "S3.7",
+    "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
+    "card_label": "아동 상호작용 안전 위험 (Child-interaction developmental and safety risk)",
+    "reference_index": 3,
+    "justification": "아동은 로봇 읽기 동반자를 가치 있게 받아들일 수 있어, 학습 도움과 동시에 애착·과신뢰·모방 위험을 따로 관리해야 한다 (Moffat et al., 2025)",
+    "reference_title": "+ Children with and without reading difficulty value robot reading companions (2025)",
+    "reference_url": "https://www.nature.com/articles/s41598-025-15341-w"
+  },
+  {
+    "card_id": "PHYSRISK-REF-0049",
+    "l2_id": "S2",
+    "l2_name": "Societal Safety",
+    "l3_id": "S3.7",
+    "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
+    "card_label": "준사회적 애착과 조종 위험 (Parasocial attachment and manipulability)",
+    "reference_index": 2,
+    "justification": "사회적 로봇 윤리 논의는 정서적 유대가 돌봄 효과를 만들 수 있지만, 취약 사용자의 의존과 조종 가능성도 함께 키운다고 정리한다 (Torras, 2024)",
+    "reference_title": "+ Ethics of Social Robotics (2024)",
+    "reference_url": "https://www.annualreviews.org/content/journals/10.1146/annurev-control-062023-082238"
   }
 ]

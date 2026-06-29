@@ -1939,8 +1939,8 @@
     "l3_name": "투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability & Trust)",
     "label": "기계 정체 미공개 (Undisclosed machine identity)",
     "definition": "음성 또는 외형이 사용자로 하여금 기계와 상호작용 중임을 인지하지 못하게 하는 위험. (A system fails to disclose that a person is interacting with a machine rather than a human.)",
-    "justification_count": 1,
-    "reference_link_count": 1,
+    "justification_count": 2,
+    "reference_link_count": 2,
     "meta_text": "심각도 3.20 확률 0.45 EU AI Act, Article 50"
   },
   {
@@ -1951,8 +1951,8 @@
     "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
     "label": "의인화 유발 과의존 (Anthropomorphism-induced overreliance)",
     "definition": "인간 유사 외형이 역량 과대평가 및 신뢰의 과도한 위임을 유발하는 위험. (Human-like robot appearance causes users to overestimate capability and delegate too much trust.)",
-    "justification_count": 1,
-    "reference_link_count": 1,
+    "justification_count": 2,
+    "reference_link_count": 2,
     "meta_text": "심각도 3.40 확률 0.50 Overtrust of robots in emergency evacuation (Robin…"
   },
   {
@@ -1963,8 +1963,8 @@
     "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
     "label": "준사회적 애착과 조종 위험 (Parasocial attachment and manipulability)",
     "definition": "동반자 휴머노이드에 대한 감정적 의존이 조종 가능성을 생성하는 위험. (Emotional attachment to a companion robot makes a user easier to influence or manipulate.)",
-    "justification_count": 1,
-    "reference_link_count": 1,
+    "justification_count": 2,
+    "reference_link_count": 2,
     "meta_text": "심각도 3.50 확률 0.40 Granny and the robots (Sharkey & Sharkey, 2012)"
   },
   {
@@ -1975,8 +1975,8 @@
     "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
     "label": "아동 상호작용 안전 위험 (Child-interaction developmental and safety risk)",
     "definition": "아동의 과신뢰·모방·애착이 발달적·피지컬 안전 위험을 생성하는 위험. (Children may overtrust, imitate, or form attachments to robots in ways that affect development and safety.)",
-    "justification_count": 2,
-    "reference_link_count": 2,
+    "justification_count": 3,
+    "reference_link_count": 3,
     "meta_text": "심각도 4.00 확률 0.30 Children's social relationships with robots (Kahn …"
   },
   {
@@ -1987,8 +1987,8 @@
     "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
     "label": "피지컬 AI 과신뢰 (Overtrust in embodied agents)",
     "definition": "피지컬 존재·의인화 설계·유창한 상호작용이 사용자로 하여금 시스템의 역량·신뢰성·안전성을 과대평가하게 하는 위험. (Physical presence, anthropomorphic design, or fluent interaction may cause users to overestimate the system's competence, authority, or care capabilities.)",
-    "justification_count": 3,
-    "reference_link_count": 3,
+    "justification_count": 4,
+    "reference_link_count": 4,
     "meta_text": "심각도 3.80 확률 0.55 MIT AI Risk Repository"
   },
   {
@@ -2023,8 +2023,8 @@
     "l3_name": "상호작용 에이전트의 윤리·안전 함의(Ethical & Safety Implications of Interactive Agents)",
     "label": "노인·환자 돌봄 방치 및 존엄성 침해 (Elderly and patient care neglect and dignity harm)",
     "definition": "돌봄 맥락에서 고령자 및 환자에 대한 낙상 유발·방치·존엄성 침해 위험. (A care robot may cause falls, neglect, or dignity violations for elderly people and patients.)",
-    "justification_count": 3,
-    "reference_link_count": 3,
+    "justification_count": 4,
+    "reference_link_count": 4,
     "meta_text": "심각도 4.20 확률 0.35 ISO 13482 personal care robot safety"
   },
   {
