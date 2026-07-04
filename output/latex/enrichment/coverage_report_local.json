@@ -1,0 +1,212 @@
+{
+  "stage": "local",
+  "generated_at": "2026-07-04T14:18:23+0900",
+  "families": {
+    "papers": {
+      "n": 50375,
+      "institution_filled": 17100,
+      "country_filled": 17079,
+      "institution_pct": 33.9,
+      "country_pct": 33.9
+    },
+    "patents": {
+      "n": 31658,
+      "institution_filled": 0,
+      "country_filled": 0,
+      "institution_pct": 0.0,
+      "country_pct": 0.0
+    },
+    "policy": {
+      "n": 938,
+      "institution_filled": 926,
+      "country_filled": 0,
+      "institution_pct": 98.7,
+      "country_pct": 0.0
+    }
+  },
+  "top_countries": [
+    [
+      "US",
+      4266
+    ],
+    [
+      "CN",
+      1976
+    ],
+    [
+      "IN",
+      1431
+    ],
+    [
+      "GB",
+      987
+    ],
+    [
+      "DE",
+      669
+    ],
+    [
+      "CA",
+      550
+    ],
+    [
+      "IT",
+      509
+    ],
+    [
+      "KR",
+      373
+    ],
+    [
+      "JP",
+      371
+    ],
+    [
+      "AU",
+      371
+    ],
+    [
+      "ES",
+      322
+    ],
+    [
+      "FR",
+      271
+    ],
+    [
+      "NL",
+      232
+    ],
+    [
+      "ID",
+      213
+    ],
+    [
+      "PK",
+      184
+    ],
+    [
+      "SA",
+      179
+    ],
+    [
+      "SG",
+      175
+    ],
+    [
+      "MY",
+      161
+    ],
+    [
+      "BR",
+      160
+    ],
+    [
+      "GR",
+      159
+    ]
+  ],
+  "top_institutions": [
+    [
+      "University of California",
+      121
+    ],
+    [
+      "Carnegie Mellon University",
+      102
+    ],
+    [
+      "Tsinghua University",
+      71
+    ],
+    [
+      "Stanford University",
+      66
+    ],
+    [
+      "Georgia Institute of Technology",
+      66
+    ],
+    [
+      "Technical University of Munich",
+      66
+    ],
+    [
+      "University of Toronto",
+      64
+    ],
+    [
+      "Nanyang Technological University",
+      59
+    ],
+    [
+      "University of Southern California",
+      56
+    ],
+    [
+      "University of Oxford",
+      53
+    ],
+    [
+      "National University of Singapore",
+      53
+    ],
+    [
+      "University of Cambridge",
+      53
+    ],
+    [
+      "Shanghai Jiao Tong University",
+      52
+    ],
+    [
+      "University of Washington",
+      51
+    ],
+    [
+      "Massachusetts Institute of Technology",
+      50
+    ],
+    [
+      "University of Illinois Urbana-Champaign",
+      50
+    ],
+    [
+      "University of Maryland",
+      48
+    ],
+    [
+      "Film Independent",
+      48
+    ],
+    [
+      "Centre National de la Recherche Scientifique",
+      47
+    ],
+    [
+      "Northeastern University",
+      46
+    ],
+    [
+      "Cornell University",
+      45
+    ],
+    [
+      "Purdue University West Lafayette",
+      45
+    ],
+    [
+      "Tongji University",
+      44
+    ],
+    [
+      "Chinese University of Hong Kong",
+      43
+    ],
+    [
+      "Beihang University",
+      43
+    ]
+  ],
+  "korea_share_pct": 2.2
+}

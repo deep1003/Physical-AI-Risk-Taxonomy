@@ -1,0 +1,17 @@
+{
+  "families_used": [
+    "papers",
+    "policy"
+  ],
+  "patents_included": true,
+  "records_with_country": 36643,
+  "records_with_institution": 38008,
+  "distinct_countries": 164,
+  "distinct_institutions": 9062,
+  "korea_records": 2208,
+  "korea_share_pct": 6.0,
+  "top_country": [
+    "CN",
+    7161
+  ]
+}

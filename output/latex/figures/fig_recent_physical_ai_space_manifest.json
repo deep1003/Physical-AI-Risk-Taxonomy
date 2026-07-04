@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-07-04T23:00:50+0900",
+  "model": "BAAI/bge-m3",
+  "seed": 20260704,
+  "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "per_group_cap": 160,
+  "umap": {
+    "n_neighbors": 25,
+    "min_dist": 0.08,
+    "metric": "cosine"
+  },
+  "per_group_sample": {
+    "papers/ai": 160,
+    "papers/ai_infra": 160,
+    "papers/physical_ai": 160,
+    "papers/physical_ai_risks": 160,
+    "policy_reports/ai": 160,
+    "policy_reports/ai_infra": 146,
+    "policy_reports/physical_ai": 160,
+    "policy_reports/physical_ai_risks": 160,
+    "patents/ai": 160,
+    "patents/ai_infra": 160,
+    "patents/physical_ai": 160,
+    "patents/physical_ai_risks": 160
+  },
+  "totals": {
+    "all": 1906,
+    "background_ai_aiinfra": 946,
+    "physical_ai": 480,
+    "physical_ai_risks": 480
+  },
+  "figure_pdf": "/Users/deep1003/data3/Physical-AI-Risk-Taxonomy/output/latex/figures/fig_recent_physical_ai_space.pdf",
+  "note": "Full-corpus embedding is compute-limited; a stratified 2025-2026 sample is used for visualization."
+}

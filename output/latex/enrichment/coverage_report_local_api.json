@@ -1,0 +1,212 @@
+{
+  "stage": "local+api",
+  "generated_at": "2026-07-04T14:33:12+0900",
+  "families": {
+    "papers": {
+      "n": 50375,
+      "institution_filled": 35993,
+      "country_filled": 35920,
+      "institution_pct": 71.5,
+      "country_pct": 71.3
+    },
+    "patents": {
+      "n": 31658,
+      "institution_filled": 0,
+      "country_filled": 0,
+      "institution_pct": 0.0,
+      "country_pct": 0.0
+    },
+    "policy": {
+      "n": 938,
+      "institution_filled": 926,
+      "country_filled": 0,
+      "institution_pct": 98.7,
+      "country_pct": 0.0
+    }
+  },
+  "top_countries": [
+    [
+      "CN",
+      7063
+    ],
+    [
+      "US",
+      6821
+    ],
+    [
+      "IN",
+      2329
+    ],
+    [
+      "KR",
+      2178
+    ],
+    [
+      "GB",
+      1682
+    ],
+    [
+      "DE",
+      1393
+    ],
+    [
+      "IT",
+      1110
+    ],
+    [
+      "CA",
+      997
+    ],
+    [
+      "JP",
+      820
+    ],
+    [
+      "AU",
+      728
+    ],
+    [
+      "ES",
+      642
+    ],
+    [
+      "FR",
+      522
+    ],
+    [
+      "SA",
+      406
+    ],
+    [
+      "NL",
+      380
+    ],
+    [
+      "PK",
+      369
+    ],
+    [
+      "SG",
+      344
+    ],
+    [
+      "TW",
+      335
+    ],
+    [
+      "BR",
+      330
+    ],
+    [
+      "IR",
+      326
+    ],
+    [
+      "TR",
+      303
+    ]
+  ],
+  "top_institutions": [
+    [
+      "Tsinghua University",
+      176
+    ],
+    [
+      "Korea Advanced Institute of Science and Technology",
+      165
+    ],
+    [
+      "Harbin Institute of Technology",
+      160
+    ],
+    [
+      "Shanghai Jiao Tong University",
+      159
+    ],
+    [
+      "Technical University of Munich",
+      142
+    ],
+    [
+      "Beijing Institute of Technology",
+      140
+    ],
+    [
+      "Carnegie Mellon University",
+      139
+    ],
+    [
+      "Beihang University",
+      132
+    ],
+    [
+      "Nanyang Technological University",
+      131
+    ],
+    [
+      "Seoul National University",
+      131
+    ],
+    [
+      "Northeastern University",
+      123
+    ],
+    [
+      "University of California",
+      121
+    ],
+    [
+      "Chinese Academy of Sciences",
+      120
+    ],
+    [
+      "Tongji University",
+      117
+    ],
+    [
+      "Northwestern Polytechnical University",
+      117
+    ],
+    [
+      "Georgia Institute of Technology",
+      116
+    ],
+    [
+      "Zhejiang University",
+      108
+    ],
+    [
+      "Nanjing University of Aeronautics and Astronautics",
+      107
+    ],
+    [
+      "University of Toronto",
+      102
+    ],
+    [
+      "Centre National de la Recherche Scientifique",
+      102
+    ],
+    [
+      "Korea University",
+      99
+    ],
+    [
+      "National University of Singapore",
+      97
+    ],
+    [
+      "Southeast University",
+      94
+    ],
+    [
+      "Hanyang University",
+      93
+    ],
+    [
+      "University of Oxford",
+      91
+    ]
+  ],
+  "korea_share_pct": 6.1
+}
