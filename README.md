@@ -22,18 +22,20 @@ Live page:
 ## Current Snapshot
 
 - L4 cards: 182
-- Evidence/justification entries: 321
-- Linked references: 314
+- Evidence/justification entries: 360
+- Linked references: 353
 - Maximum references per L4 card: 5
-- L2 card counts: `P2=117`, `I2=39`, `S2=26`
+- L2 card counts: `P2 System Safety=91`, `I2 Interaction Safety=62`, `S2 Societal Safety=29`
 
 ## Taxonomy IDs
 
-The current public slice is organized as `L0 Ownership Levels` > `L1 Physical AI Risks` > `L2 Categories` > `L3 Sub-categories` > `L4 Risk Cards`. The three L2 children use short stable IDs: `P2` for Physical Safety, `I2` for Interaction Safety, and `S2` for Societal Safety.
+The current public slice is organized as `L1 Physical AI Risks` > `L2 Categories` > `L3 Sub-categories` > `L4 Risk Cards`. The three L2 children use short stable IDs: `P2` for System Safety, `I2` for Interaction Safety, and `S2` for Societal Safety.
 
-L3 categories use the same domain prefix and the L3 level number, followed by a local sequence number. For example, `P3.1` means the first L3 category under Physical Safety. L4 risks keep their original card IDs, such as `PHYSBENCH-REF-0017`.
+L3 categories use the same domain prefix and the L3 level number, followed by a local sequence number. For example, `P3.1` means the first L3 category under System Safety. L4 risks keep their original card IDs, such as `PHYSBENCH-REF-0017`.
 
 Human decision on 2026-06-28 moved `S3.10` Lack of Robustness in Unseen Environments to `P3.9`. The category was moved only; absorption into `P3.2` or redistribution remains a future human decision.
+
+Human decision on 2026-07-04 realigned the L2/L3 hierarchy to the master structure: `P2 System Safety` has 5 L3 categories, `I2 Interaction Safety` has 10 L3 categories, and `S2 Societal Safety` has 9 L3 categories. The affected L3 groups were moved as groups, and their L4 cards followed their L3 parent.
 
 ## Scope
 

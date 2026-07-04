@@ -1,178 +1,260 @@
 {
   "title": "Responsible AI Risk Taxonomy v2.0",
-  "version": "v2.0",
+  "canonical_html": "/Users/deep1003/data3/Physical-AI-Risk-Taxonomy/index.html",
   "cards": 182,
-  "references": 321,
-  "linked_references": 314,
+  "l2_categories": 3,
+  "l3_subcategories": 24,
+  "evidence_rows": 360,
+  "linked_references": 353,
+  "unlinked_evidence_rows": 7,
   "max_references_per_card": 5,
-  "cards_over_5_references": 0,
-  "id_scheme": "L0: Ownership Levels; L1: Physical AI Risks; L2: P2/I2/S2; L3: domain prefix + level 3 + sequence, e.g., P3.1. S3.10 migrated to P3.9 on 2026-06-28.",
+  "cards_over_5_references": [],
+  "cards_with_reference_mismatch": [
+    {
+      "card_id": "PHYSRISK-REF-0045",
+      "justification_count": 2,
+      "reference_link_count": 1
+    },
+    {
+      "card_id": "PHYSRISK-REF-0046",
+      "justification_count": 1,
+      "reference_link_count": 0
+    },
+    {
+      "card_id": "PHYSRISK-REF-0044",
+      "justification_count": 1,
+      "reference_link_count": 0
+    },
+    {
+      "card_id": "PHYSKR-REF-009",
+      "justification_count": 3,
+      "reference_link_count": 4
+    },
+    {
+      "card_id": "PHYSRISK-REF-0054",
+      "justification_count": 1,
+      "reference_link_count": 0
+    },
+    {
+      "card_id": "PHYSRISK-REF-0047",
+      "justification_count": 2,
+      "reference_link_count": 1
+    },
+    {
+      "card_id": "PHYSRISK-REF-0049",
+      "justification_count": 2,
+      "reference_link_count": 1
+    },
+    {
+      "card_id": "PHYSRISK-REF-0050",
+      "justification_count": 3,
+      "reference_link_count": 2
+    }
+  ],
   "hierarchy": [
     {
       "l2_id": "P2",
-      "l2_name": "Physical Safety",
-      "cards": 117,
+      "l2_name": "System Safety",
+      "l2_korean_label": "시스템 안전성",
+      "l2_description": "로봇 시스템의 하드웨어·소프트웨어·제어·강건성 한계에서 비롯되는 리스크",
+      "l3_count": 5,
+      "l4_count": 91,
       "l3": [
         {
           "l3_id": "P3.1",
-          "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
-          "cards": 17
+          "l3_name": "우발적 피해(Accidental Harm)",
+          "declared_l4_count": 22,
+          "exported_l4_count": 22,
+          "l3_description": "목표 지정 오류·의미 이해 실패·정렬 실패·sim-to-real gap·하드웨어 오작동으로 의도치 않은 피해가 발생하는 위험. (Unintended failures or sim-to-real gaps cause physical harm.)"
         },
         {
           "l3_id": "P3.2",
-          "l3_name": "우발적 피해(Accidental Harm)",
-          "cards": 22
+          "l3_name": "로봇 제어(Robot Control)",
+          "declared_l4_count": 45,
+          "exported_l4_count": 45,
+          "l3_description": "제어·액추에이터·모션·경로 계획 오류로 로봇이 의도치 않은 동작을 수행하고 충돌·피해를 유발하는 위험. (Control and planning failures cause unsafe robot motion.)"
         },
         {
           "l3_id": "P3.3",
-          "l3_name": "로봇 제어 실패(Robot Control Failures)",
-          "cards": 45
+          "l3_name": "하드웨어·기계적 결함(Hardware & Mechanical Failures)",
+          "declared_l4_count": 3,
+          "exported_l4_count": 3,
+          "l3_description": "부품 마모·기계 고장·열·전력 한계가 동작 정밀도와 안전성을 떨어뜨려 사고로 이어지는 위험. (Mechanical degradation undermines safe operation.)"
         },
         {
           "l3_id": "P3.4",
-          "l3_name": "물리적 공격(Physical Attacks)",
-          "cards": 1
+          "l3_name": "소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws)",
+          "declared_l4_count": 8,
+          "exported_l4_count": 8,
+          "l3_description": "엣지 케이스 미처리·테스트 부족·알고리즘 결함이 특정 상황에서 잘못된 판단과 물리 피해로 이어지는 위험. (Software design flaws cause unsafe decisions.)"
         },
         {
           "l3_id": "P3.5",
-          "l3_name": "사이버보안 위협(Cybersecurity Threats)",
-          "cards": 4
-        },
-        {
-          "l3_id": "P3.6",
-          "l3_name": "하드웨어·기계적 결함(Hardware & Mechanical Failures)",
-          "cards": 3
-        },
-        {
-          "l3_id": "P3.7",
-          "l3_name": "소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws)",
-          "cards": 8
-        },
-        {
-          "l3_id": "P3.8",
-          "l3_name": "센서·입력 검증 실패(Sensor & Input Validation Failures)",
-          "cards": 4
-        },
-        {
-          "l3_id": "P3.9",
           "l3_name": "미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)",
-          "cards": 13
+          "declared_l4_count": 13,
+          "exported_l4_count": 13,
+          "l3_description": "학습되지 않은 환경에 대한 일반화 실패가 내비게이션·조작 오류와 위험 상황을 유발하는 위험. (Unseen environments break embodied generalization.)"
         }
       ]
     },
     {
       "l2_id": "I2",
       "l2_name": "Interaction Safety",
-      "cards": 39,
+      "l2_korean_label": "상호작용 안전성",
+      "l2_description": "인간-로봇·로봇-로봇·환경·입력·공격 상호작용 과정에서 발생하는 리스크",
+      "l3_count": 10,
+      "l4_count": 62,
       "l3": [
         {
           "l3_id": "I3.1",
-          "l3_name": "프라이버시 침해(Privacy Violations)",
-          "cards": 5
+          "l3_name": "의도적·악의적 피해(Purposeful / Malicious Harm)",
+          "declared_l4_count": 17,
+          "exported_l4_count": 17,
+          "l3_description": "악의적 행위자가 탈옥·조작·기만으로 안전 가드레일을 우회해 비가역적 피지컬 피해를 유발하는 위험. (Adversarial interaction bypasses safety guardrails.)"
         },
         {
           "l3_id": "I3.2",
-          "l3_name": "허위 정보(Misinformation)",
-          "cards": 5
+          "l3_name": "물리적 공격(Physical Attacks)",
+          "declared_l4_count": 1,
+          "exported_l4_count": 1,
+          "l3_description": "하드웨어 변조·구성요소 조작·무기 부착 등 직접 물리 공격으로 로봇 안전 기능이 무력화되는 위험. (Physical tampering disables robot safety.)"
         },
         {
           "l3_id": "I3.3",
-          "l3_name": "동적 환경 요인(Dynamic Environmental Factors)",
-          "cards": 11
+          "l3_name": "사이버보안 위협(Cybersecurity Threats)",
+          "declared_l4_count": 4,
+          "exported_l4_count": 4,
+          "l3_description": "IoT·클라우드·네트워크·센서 신호 공격으로 로봇이 탈취되거나 위험 행동을 하게 되는 위험. (Cyberattacks hijack connected embodied systems.)"
         },
         {
           "l3_id": "I3.4",
-          "l3_name": "인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures)",
-          "cards": 13
+          "l3_name": "센서·입력 검증 실패(Sensor & Input Validation Failures)",
+          "declared_l4_count": 4,
+          "exported_l4_count": 4,
+          "l3_description": "센서 오작동·스푸핑·입력 검증 실패로 환경을 잘못 평가해 안전하지 않은 행동이 유발되는 위험. (Bad sensing or input validation causes unsafe action.)"
         },
         {
           "l3_id": "I3.5",
-          "l3_name": "지시 오해석(Instruction Misinterpretation)",
-          "cards": 1
+          "l3_name": "허위 정보(Misinformation)",
+          "declared_l4_count": 5,
+          "exported_l4_count": 5,
+          "l3_description": "환각·세계모델 오류가 물체·상황 오인식과 그럴듯하지만 위험한 행동 계획으로 전이되는 위험. (Hallucinations become unsafe action plans.)"
         },
         {
           "l3_id": "I3.6",
+          "l3_name": "동적 환경 요인(Dynamic Environmental Factors)",
+          "declared_l4_count": 11,
+          "exported_l4_count": 11,
+          "l3_description": "환경 변화·가림·날씨·교란이 센서 데이터와 상황 인식을 흔들어 잘못된 물리 행동으로 이어지는 위험. (Changing environments mislead perception and action.)"
+        },
+        {
+          "l3_id": "I3.7",
+          "l3_name": "인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures)",
+          "declared_l4_count": 13,
+          "exported_l4_count": 13,
+          "l3_description": "협동 로봇·드론 등 인간과 함께 작동하는 시스템의 안전거리·개입 타이밍·프로토콜 실패가 인명 피해를 유발하는 위험. (Human-robot safety protocols fail in shared spaces.)"
+        },
+        {
+          "l3_id": "I3.8",
+          "l3_name": "지시 오해석(Instruction Misinterpretation)",
+          "declared_l4_count": 1,
+          "exported_l4_count": 1,
+          "l3_description": "자연어 지시나 안전 원칙을 잘못 해석해 의도와 다른 위험한 피지컬 행동으로 이어지는 위험. (Misread instructions produce unsafe actions.)"
+        },
+        {
+          "l3_id": "I3.9",
           "l3_name": "멀티 에이전트 협력(Multi-Agent Collaboration)",
-          "cards": 4
+          "declared_l4_count": 4,
+          "exported_l4_count": 4,
+          "l3_description": "다수 로봇의 통신 오류·프로토콜 불일치·상호작용 과정의 집단 행동이 충돌과 위험을 만드는 위험. (Coordination failures create collective hazards.)"
+        },
+        {
+          "l3_id": "I3.10",
+          "l3_name": "상호작용 에이전트의 윤리·안전 함의(Ethical & Safety Implications of Interactive Agents)",
+          "declared_l4_count": 2,
+          "exported_l4_count": 2,
+          "l3_description": "상호작용 에이전트가 오도 정보·부적절한 개입·돌봄 실패로 사용자의 자율성·존엄·안전을 해치는 위험. (Interactive agents can harm autonomy, dignity, and safety.)"
         }
       ]
     },
     {
       "l2_id": "S2",
       "l2_name": "Societal Safety",
-      "cards": 26,
+      "l2_korean_label": "사회/경제/환경 안전성",
+      "l2_description": "사회·경제·제도·환경적 맥락에서 발생하는 외부적 리스크",
+      "l3_count": 9,
+      "l4_count": 29,
       "l3": [
         {
           "l3_id": "S3.1",
-          "l3_name": "노동 대체(Labor Displacement)",
-          "cards": 1
+          "l3_name": "프라이버시 침해(Privacy Violations)",
+          "declared_l4_count": 5,
+          "exported_l4_count": 5,
+          "l3_description": "이동성과 센서가 결합되어 행동·선호·생체·사적 공간 정보가 동의 없이 수집·감시되는 위험. (Embodied sensors enable privacy invasion.)"
         },
         {
           "l3_id": "S3.2",
-          "l3_name": "사회경제적 불평등(Socioeconomic Inequality)",
-          "cards": 1
+          "l3_name": "노동 대체(Labor Displacement)",
+          "declared_l4_count": 1,
+          "exported_l4_count": 1,
+          "l3_description": "피지컬 AI가 인간의 물리 노동을 대체·전치해 일자리와 노동시장 구조를 흔드는 위험. (Embodied automation displaces labor.)"
         },
         {
           "l3_id": "S3.3",
-          "l3_name": "권력 집중(Power Concentration)",
-          "cards": 1
+          "l3_name": "사회경제적 불평등(Socioeconomic Inequality)",
+          "declared_l4_count": 1,
+          "exported_l4_count": 1,
+          "l3_description": "피지컬 AI 접근성과 서비스 품질 차이가 생산성·부·기회 격차를 키우는 위험. (Unequal access widens economic gaps.)"
         },
         {
           "l3_id": "S3.4",
-          "l3_name": "편향·차별(Bias & Discrimination)",
-          "cards": 3
+          "l3_name": "권력 집중(Power Concentration)",
+          "declared_l4_count": 1,
+          "exported_l4_count": 1,
+          "l3_description": "피지컬 AI 소유·감시·운용 권한이 기업이나 국가에 집중되어 권력 불균형을 키우는 위험. (Control over embodied AI concentrates power.)"
         },
         {
           "l3_id": "S3.5",
-          "l3_name": "책임·배상 부재(Lack of Accountability & Liability)",
-          "cards": 12
+          "l3_name": "편향·차별(Bias & Discrimination)",
+          "declared_l4_count": 3,
+          "exported_l4_count": 3,
+          "l3_description": "데이터·모델 편향이 일상적 물리 상호작용에서 서비스 배제나 차별적 행동으로 실행되는 위험. (Bias is enacted in physical interactions.)"
         },
         {
           "l3_id": "S3.6",
-          "l3_name": "투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability & Trust)",
-          "cards": 1
+          "l3_name": "책임·배상 부재(Lack of Accountability & Liability)",
+          "declared_l4_count": 12,
+          "exported_l4_count": 12,
+          "l3_description": "자율 피지컬 사고에서 제조사·운영자·모델 제공자 책임과 배상 경로가 불명확해지는 위험. (Liability becomes unclear after physical harm.)"
         },
         {
           "l3_id": "S3.7",
-          "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
-          "cards": 4
+          "l3_name": "투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability & Trust)",
+          "declared_l4_count": 1,
+          "exported_l4_count": 1,
+          "l3_description": "자율 시스템의 행동 이유·기계 정체·의사결정 과정이 불투명해 사용자와 사회의 신뢰가 무너지는 위험. (Opaque behavior erodes trust.)"
         },
         {
           "l3_id": "S3.8",
-          "l3_name": "변혁적 영향(Transformative Effects)",
-          "cards": 1
+          "l3_name": "인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships)",
+          "declared_l4_count": 4,
+          "exported_l4_count": 4,
+          "l3_description": "피지컬 존재감과 인간 유사 외형이 과의존·애착·조종 가능성과 심리적 피해를 키우는 위험. (Human-like embodiment amplifies dependency.)"
         },
         {
           "l3_id": "S3.9",
-          "l3_name": "상호작용 에이전트의 윤리·안전 함의(Ethical & Safety Implications of Interactive Agents)",
-          "cards": 2
+          "l3_name": "변혁적 영향(Transformative Effects)",
+          "declared_l4_count": 1,
+          "exported_l4_count": 1,
+          "l3_description": "기술 발전 속도가 사회·제도의 적응 속도를 앞질러 사회 질서와 통치 구조를 바꾸는 위험. (Rapid deployment reshapes society.)"
         }
       ]
     }
   ],
-  "migrations": [
-    {
-      "date": "2026-06-28",
-      "type": "l3_move",
-      "from_l2_id": "S2",
-      "from_l2_name": "Societal Safety",
-      "from_l3_id": "S3.10",
-      "to_l2_id": "P2",
-      "to_l2_name": "Physical Safety",
-      "to_l3_id": "P3.9",
-      "l3_name": "미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments)",
-      "card_count": 13,
-      "decision": "human decision: move only; do not merge or redistribute until a future human decision."
-    }
-  ],
-  "three_h_one_r_primary_rule": "Primary is normally 1 axis, at most 2 axes. Three Primary axes require an explicit exception reason.",
-  "l0": {
-    "level": "L0",
-    "name": "Ownership Levels"
-  },
-  "l1": {
-    "level": "L1",
-    "name": "Physical AI Risks"
-  },
-  "subtitle": "L0 Ownership Levels · L1 Physical AI Risks · L2 Categories · L3 Sub-categories · L4 Risk Cards"
+  "id_scheme": {
+    "L1": "Physical AI Risks",
+    "L2": "P2 System Safety / I2 Interaction Safety / S2 Societal Safety",
+    "L3": "P3.x / I3.x / S3.x",
+    "L4": "PHYS*-REF-####"
+  }
 }
