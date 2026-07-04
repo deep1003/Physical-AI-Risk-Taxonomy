@@ -1,0 +1,20 @@
+{
+  "n_cards": 182,
+  "n_l3": 24,
+  "em_iterations_to_converge": 7,
+  "embedding_reproduction_pct": 74.2,
+  "observed_cohesion": 0.8112,
+  "permutation_null_cohesion_mean": 0.7881,
+  "permutation_p_value": 0.0001999600079984003,
+  "topk_containment_pct": {
+    "1": 89.6,
+    "2": 98.9,
+    "3": 99.5,
+    "5": 100.0
+  },
+  "assignment_stability_sigma_cross": {
+    "97": 0.05,
+    "95": 0.05,
+    "90": 0.075
+  }
+}

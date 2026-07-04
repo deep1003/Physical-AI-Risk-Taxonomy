@@ -1,0 +1,147 @@
+{
+  "n_docs": 4000,
+  "baseline": {
+    "nn": 30,
+    "mcs": 15,
+    "ms": 5
+  },
+  "baseline_clusters": 41,
+  "baseline_noise": 0.308,
+  "grid": [
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=8, ms=1",
+      "nclusters": 109,
+      "noise": 0.283,
+      "ari": 0.426
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=8, ms=5",
+      "nclusters": 58,
+      "noise": 0.3,
+      "ari": 0.864
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=8, ms=10",
+      "nclusters": 46,
+      "noise": 0.393,
+      "ari": 0.647
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=10, ms=1",
+      "nclusters": 85,
+      "noise": 0.275,
+      "ari": 0.473
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=10, ms=5",
+      "nclusters": 54,
+      "noise": 0.316,
+      "ari": 0.855
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=10, ms=10",
+      "nclusters": 44,
+      "noise": 0.387,
+      "ari": 0.653
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=15, ms=1",
+      "nclusters": 48,
+      "noise": 0.216,
+      "ari": 0.538
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=15, ms=5",
+      "nclusters": 41,
+      "noise": 0.308,
+      "ari": 1.0
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=15, ms=10",
+      "nclusters": 38,
+      "noise": 0.366,
+      "ari": 0.696
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=20, ms=1",
+      "nclusters": 42,
+      "noise": 0.218,
+      "ari": 0.55
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=20, ms=5",
+      "nclusters": 36,
+      "noise": 0.317,
+      "ari": 0.95
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=20, ms=10",
+      "nclusters": 33,
+      "noise": 0.356,
+      "ari": 0.711
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=30, ms=1",
+      "nclusters": 31,
+      "noise": 0.236,
+      "ari": 0.554
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=30, ms=5",
+      "nclusters": 27,
+      "noise": 0.273,
+      "ari": 0.687
+    },
+    {
+      "knob": "HDBSCAN",
+      "param": "mcs=30, ms=10",
+      "nclusters": 25,
+      "noise": 0.37,
+      "ari": 0.631
+    },
+    {
+      "knob": "UMAP",
+      "param": "n_neighbors=15",
+      "nclusters": 44,
+      "noise": 0.268,
+      "ari": 0.438
+    },
+    {
+      "knob": "UMAP",
+      "param": "n_neighbors=30",
+      "nclusters": 41,
+      "noise": 0.308,
+      "ari": 1.0
+    },
+    {
+      "knob": "UMAP",
+      "param": "n_neighbors=50",
+      "nclusters": 34,
+      "noise": 0.349,
+      "ari": 0.55
+    },
+    {
+      "knob": "UMAP",
+      "param": "n_neighbors=80",
+      "nclusters": 34,
+      "noise": 0.367,
+      "ari": 0.524
+    }
+  ],
+  "ari_min": 0.426,
+  "ari_median": 0.647
+}

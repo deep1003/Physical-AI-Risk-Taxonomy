@@ -1,0 +1,1111 @@
+\documentclass[11pt]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+\else
+  \usepackage{fontspec}
+  \usepackage{xeCJK}
+  \setmainfont{Times New Roman}
+  \setsansfont{Helvetica}
+  \setmonofont{Noto Sans Mono CJK KR}
+  \setCJKmainfont{Apple SD Gothic Neo}
+  \setCJKsansfont{Apple SD Gothic Neo}
+  \setCJKmonofont{Noto Sans Mono CJK KR}
+\fi
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit}
+\graphicspath{{output/latex/figures/}{figures/}}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Physical AI Risk Taxonomy Technical Report}
+\rhead{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{0.55em}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.16}
+
+\definecolor{sqlkeyword}{RGB}{0,76,151}
+\definecolor{sqlcomment}{RGB}{0,122,74}
+\definecolor{sqlstring}{RGB}{154,54,42}
+\definecolor{sqlbackground}{RGB}{248,250,252}
+\definecolor{sqlrule}{RGB}{198,207,217}
+\definecolor{flowblue}{RGB}{31,93,165}
+\definecolor{flowgreen}{RGB}{31,132,87}
+\definecolor{floworange}{RGB}{191,111,38}
+\definecolor{flowpurple}{RGB}{104,72,166}
+\definecolor{flowgray}{RGB}{87,96,111}
+\definecolor{flowg1}{gray}{0.45}
+\definecolor{flowg2}{gray}{0.30}
+\definecolor{flowg3}{gray}{0.60}
+\definecolor{flowg4}{gray}{0.38}
+\definecolor{flowg5}{gray}{0.72}
+\definecolor{reportblue}{RGB}{23,52,88}
+
+\lstdefinestyle{patstatsql}{
+  language=SQL,
+  basicstyle=\ttfamily\scriptsize,
+  keywordstyle=\color{sqlkeyword}\bfseries,
+  commentstyle=\color{sqlcomment}\itshape,
+  stringstyle=\color{sqlstring},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=6pt,
+  breaklines=true,
+  breakatwhitespace=false,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  frame=single,
+  rulecolor=\color{sqlrule},
+  backgroundcolor=\color{sqlbackground},
+  captionpos=b
+}
+
+\lstdefinestyle{wosquery}{
+  basicstyle=\ttfamily\scriptsize,
+  keywordstyle=\color{sqlkeyword}\bfseries,
+  stringstyle=\color{sqlstring},
+  morekeywords={TS,CU,PY,DT,AND,OR},
+  alsoletter={=},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=6pt,
+  breaklines=true,
+  breakatwhitespace=false,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  frame=single,
+  rulecolor=\color{sqlrule},
+  backgroundcolor=\color{sqlbackground},
+  captionpos=b
+}
+
+\newcommand{\DPAI}{\mathcal{D}_{\mathrm{PAI}}}
+\newcommand{\Enc}{\mathrm{Enc}_{\theta}}
+\newcommand{\simcos}{\mathrm{sim}_{\cos}}
+
+% Figure/table note rendered as a full-width justified block (not centered)
+\newcommand{\fignote}[1]{\par\vspace{0.25em}\noindent\begin{minipage}{\linewidth}\footnotesize\textit{Note:} #1\end{minipage}}
+
+\newtcolorbox{algobox}[1]{
+  enhanced,
+  breakable,
+  colback=black!2,
+  colframe=black!68,
+  boxrule=0.65pt,
+  arc=1.5pt,
+  left=7pt,
+  right=7pt,
+  top=6pt,
+  bottom=6pt,
+  fonttitle=\bfseries,
+  title={#1}
+}
+
+\begin{document}
+
+\begin{titlepage}
+\thispagestyle{empty}
+\vspace*{0.6in}
+{\sffamily\bfseries\Large Technical Report\par}
+\vspace{0.25in}
+{\color{reportblue}\rule{\linewidth}{1.2pt}\par}
+\vspace{0.28in}
+{\sffamily\bfseries\Huge A Hybrid Corpus-to-Taxonomy Pipeline for Physical AI Risk Cards\par}
+\vspace{0.16in}
+{\sffamily\Large Data Collection, Processing, Deduplication, and\ Hierarchical Assignment\par}
+\vspace{0.28in}
+{\color{reportblue}\rule{\linewidth}{0.7pt}\par}
+\vspace{0.5in}
+
+\begin{tabularx}{\linewidth}{>{\bfseries}p{0.27\linewidth}X}
+Report type & Technical Report \\
+Report title & A Hybrid Corpus-to-Taxonomy Pipeline for Physical AI Risk Cards \\
+Report version & v1.0 \\
+Taxonomy release & Responsible AI Risk Taxonomy v2.0, Physical AI Risk Taxonomy slice \\
+Author & Youngsam Chun \\
+Affiliation & Responsible AI Dept., Frontier AI Lab \\
+Contact & \href{mailto:ys.chun@kt.com}{ys.chun@kt.com} \\
+Local data snapshot & Verified on 2026-07-04 \\
+Primary artifacts & HTML taxonomy, CSV/JSON card exports, reference map, methodology PDF \\
+Reproducibility status & Local source queries, file-level denominators, algorithms, and release checks documented \\
+\end{tabularx}
+
+\vfill
+{\sffamily Responsible AI Dept., Frontier AI Lab\par}
+{\sffamily July 2026\par}
+\end{titlepage}
+
+\section*{Executive Summary}
+\addcontentsline{toc}{section}{Executive Summary}
+This manuscript documents the data collection, processing, analysis, and risk-card generation procedure used to construct the Physical AI slice of the Responsible AI Risk Taxonomy v2.0. The workflow follows a hybrid taxonomy design: high-level structure is anchored in authoritative safety, risk-management, and embodied-AI references, while L4 risk cards are generated bottom-up from a multi-source corpus of scientific publications, policy reports, and patents. The updated local integrated document space contains 3,906,767 AI records, 741,428 AI infrastructure records, 383,149 Physical AI records, and 82,971 Physical AI risk records after within-group deduplication across scientific publications, policy reports, and patents. The released local taxonomy snapshot contains 182 L4 risk cards, 24 L3 sub-categories, 3 L2 categories, and 360 card-level evidence/reference rows. Two core procedures are formalized: (i) risk candidate generation and semantic deduplication, and (ii) EM-based L3 family assignment.
+
+\textbf{Keywords:} Physical AI; AI risk taxonomy; robotics safety; embodied AI; cyber-physical systems; semantic deduplication; BGE-M3; HDBSCAN; reproducible technical report.
+
+\textbf{Reproducibility statement.} This report is written as a technical reconstruction protocol. It specifies the source families, retrieval artifacts, local file denominators, filtering thresholds, embedding inputs, clustering and deduplication procedures, hierarchy assignment procedure, validation checks, and release artifacts required to reproduce the Physical AI Risk Taxonomy construction workflow.
+
+\tableofcontents
+\newpage
+
+\section{Scope and Design Rationale}
+
+Physical AI is defined here as AI deployed in systems that sense, reason, and act in the physical world, including robots, humanoids, drones, autonomous vehicles, cyber-physical systems, and embodied agents. This scope follows recent Physical AI and embodied-safety work that treats world models, robot constitutions, and embodied benchmarks as distinct from text-only AI risk settings~\cite{nvidia-cosmos,sermanet-asimov,asimov2}. The taxonomy is organized as:
+\[
+\begin{aligned}
+L0~\text{Ownership Levels} &\rightarrow L1~\text{Physical AI Risks} \\
+&\rightarrow L2~\text{Categories} \rightarrow L3~\text{Sub-categories} \rightarrow L4~\text{Risk Cards}.
+\end{aligned}
+\]
+The L2 layer distinguishes the locus of risk responsibility: internal system safety, interaction safety at the human/environment interface, and broader societal safety. The L4 layer is the operational unit: each card has a stable identifier, bilingual label and definition, severity and probability proxies, short evidence justifications, references, and 3H1R alignment tags.
+
+The methodological problem is that Physical AI risk taxonomies cannot be built purely top-down or purely bottom-up. A top-down taxonomy is stable and institutionally legible, but may miss emerging embodied, agentic, and cyber-physical failure modes~\cite{chan2023,slattery2024}. A bottom-up corpus pipeline captures emerging risks, but can produce noisy, overlapping, or non-actionable categories. The adopted design therefore combines: (1) theory-anchored upper levels, (2) corpus-driven L4 candidate discovery, (3) semantic deduplication, and (4) expert review for boundary cases. This hybrid stance is consistent with prior language-model risk taxonomies and AI risk repository work, which combine expert structure with systematic evidence aggregation~\cite{weidinger2021,slattery2024}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{taxonomy_live_interface_1400.png}
+\caption{Released taxonomy interface}
+\label{fig:taxonomy-interface}
+\fignote{The interface is used as the visual inspection layer for the Physical AI Risk Taxonomy. It presents the L0--L4 hierarchy, L2 source categories, L3 sub-category distribution, L4 risk-card counts, and representative 3H1R badges. The screenshot is included as a visual artifact of the release state; the report does not rely on the web page as a bibliographic source.}
+\end{figure}
+
+\section{Prior Methodological Basis}
+
+Before describing the corpus and its statistics, we situate the source- and institution-level measures used later in the report against four established lines of prior work. First, bibliometric and science-mapping studies routinely use publication metadata to examine the structure of research fields, including authors, affiliations, countries, venues, and collaboration networks. Zupic and \v{C}ater describe bibliometric methods as a systematic way to map research specialties through citation, co-citation, bibliographic coupling, co-author, and co-word analyses~\cite{zupic2015}. VOSviewer and bibliometrix operationalize this tradition as reproducible workflows for science mapping and bibliometric network analysis~\cite{vaneck2010,aria2017}. In this report, the affiliation-based statistics are narrower than a full science map: they are used to document which research organizations are represented in the Physical AI corpus, not to rank institutional performance.
+
+Second, the use of organization-level indicators is constrained by responsible-metrics principles. The Leiden Manifesto argues that quantitative indicators should support, rather than replace, expert judgment and should be interpreted in context~\cite{hicks2015}. This principle is directly relevant here because institution/company counts can be misread as quality rankings. The report therefore treats organization counts as a provenance and credibility diagnostic: they help readers see whether the corpus includes recognizable universities, research institutes, agencies, standards bodies, and firms, while leaving quality assessment to the risk-card evidence review and human curation steps.
+
+Third, patent-statistics research has long used applicants and assignees to study technological activity, ownership, and industrial participation. The OECD Patent Statistics Manual provides guidance on how patent data can and cannot be used for science and technology indicators, and emphasizes careful counting to reduce statistical noise and bias~\cite{oecd2009patent}. OECD's intellectual-property statistics further identify PATSTAT as a core source for patent-related indicators~\cite{oecd-ipstats}. In this report, applicant-level patent counts are used only to characterize which firms and research institutes appear in the Physical AI patent subset. They are not interpreted as market share, invention quality, or legal strength.
+
+Fourth, policy reports and standards documents belong partly to the gray-literature evidence base. Prior guidance for gray-literature review emphasizes source authority, accuracy, coverage, objectivity, date, and significance, as summarized by AACODS-style appraisal criteria~\cite{aacods}. PRISMA-ScR also requires transparent reporting of information sources and search coverage in scoping reviews~\cite{tricco2018}. For this reason, policy/report statistics in this report preserve issuing institutions and distinguish high-authority bodies such as NIST, OECD, ISO, standards organizations, ministries, and intergovernmental organizations from volume-based publication sources.
+
+\subsection*{Prior work on constructing AI, Physical-AI, and agentic-AI risk taxonomies}
+
+Beyond bibliometric grounding, this report builds directly on a mature line of work that turns the scholarly and policy literature into structured risk \emph{categories}. The closest methodological precedent is the MIT AI Risk Repository~\cite{slattery2024}, which applies best-fit framework synthesis to 43 existing risk frameworks, codes roughly 1{,}600 risk mentions into about 700 risks, and releases a two-level domain taxonomy (seven domains and twenty-four subdomains) alongside a causal taxonomy. This literature-to-taxonomy design---evidence-derived candidate risks reconciled against an expert upper structure---is the same principle this report follows for L4 discovery and L3 assignment. Comparable literature-synthesis taxonomies include the DeepMind taxonomy of language-model risks (six areas, twenty-one risks)~\cite{weidinger2021}, the Center for AI Safety overview of catastrophic risks (four source-based categories)~\cite{hendrycks2023}, and the Stanford foundation-model risk survey~\cite{bommasani2021}.
+
+A second group derives categories analytically or through expert policy consensus rather than corpus coding: the classic accident taxonomy of Amodei et al.~\cite{amodei2016}, the pathways matrix of Yampolskiy~\cite{yampolskiy2016}, the existential-safety delegation framework of Critch and Krueger~\cite{critch2020}, the OECD framework for classifying AI systems~\cite{oecd2022class} and its incident-terminology work~\cite{oecd2024incidents}, the NIST AI Risk Management Framework~\cite{nist-airmf}, the MITRE ATLAS adversarial-threat knowledge base~\cite{mitre-atlas}, and the extreme-risk evaluation and advanced-assistant analyses from DeepMind~\cite{shevlane2023,gabriel2024}. A third group---frontier-lab governance frameworks such as the OpenAI Preparedness Framework~\cite{openai2025prep}, the Anthropic Responsible Scaling Policy~\cite{anthropic2024rsp}, the DeepMind Frontier Safety Framework~\cite{deepmind2025fsf}, and constitutional harm principles~\cite{bai2022}---organizes risk by capability thresholds and informs the 3H1R marking used here. For the physical and agentic setting specifically, this report draws on autonomous-system safety standards~\cite{iso21448,ul4600} and on the agentic-AI risk and governance literature~\cite{chan2023,shavit2023,chan2024,benton2024}. Table~\ref{tab:prior-taxonomies} summarizes these works together with the actual top-level categories each released, which situates the present 3-level (L1--L3) $\times$ 182-card (L4) taxonomy within established practice.
+
+\input{enrichment/tab_prior_taxonomies.tex}
+
+\section{Design Requirements and Release Controls}
+
+This Technical Report operationalizes a hybrid Physical AI risk-taxonomy design: the upper levels (L0--L3) are stabilized through top-down governance logic, while L4 risk cards are generated from a bottom-up evidence corpus and then mapped back to the hierarchy. Table~\ref{tab:design-requirements} records how each design requirement is implemented and where it is substantiated in this report.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Design requirements and their substantiation}
+\label{tab:design-requirements}
+\begin{tabularx}{\linewidth}{p{0.30\linewidth}X}
+\toprule
+Design requirement & Where it is substantiated \\
+\midrule
+Taxonomy design: near-MECE, standard-aligned terms, hybrid top-down/bottom-up construction. & Scope, prior-basis, and workflow sections define the L0--L4 hierarchy, 3H1R rules, and an auditable workflow separating collection, clustering, reference grounding, review, and release. \\
+Hierarchy: fix L0--L3 before L4 mapping (L1 Physical AI, three L2 categories, 24 L3). & Scope and released-hierarchy sections document L0--L4 structure, L2/L3 coverage, and the rule that every L3 keeps \(\geq 1\) L4 after review. \\
+Source collection: build the AI corpus from Web of Science, policy reports, and PATSTAT; select Physical AI via BGE-M3 anchors plus explicit terms; keep risk records by safety/failure terms. & Data-sources section reports the integrated corpus (Table~\ref{tab:integrated-document-space-counts}); Appendices A--C give the PATSTAT SQL, Physical AI/risk filters, and the Web of Science query. \\
+L4 discovery: HDBSCAN clustering, c-TF-IDF keyphrases, reference-grounded candidates, iterative merge at cosine \(\geq 0.94\). & Risk-candidate section and Algorithm~1 formalize embedding, clustering, labeling, the reference filter, and the merge rule, yielding the 182-card L4 set. \\
+Card schema: layer-based stable IDs; bilingual fields, hierarchy, references, severity/probability; new cards need independent references, semantic distance, and a valid L2. & Generation and card-schema sections specify ID prefixes, required fields, the five-reference cap, duplicate exclusion, and release validation. \\
+L3 mapping: with seeds, assign each L4 to the nearest L3 and check alternatives; without seeds, induce L3 families from clusters of three or more L4 risks. & L3-assignment section and Algorithm~2 formalize seeded assignment, EM-style centroid update, and the bottom-up induction fallback. \\
+3H1R application: read Helpful, Harmless, Honest, and Role Consistency as behavior, safety-constraint, world-state, uncertainty, and role-boundary failures. & 3H1R section operationalizes 3H1R, defines Primary/Secondary causal-proximity rules, and separates L4 coding from L3 icons. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Two threshold choices are treated as explicit release controls. First, the 0.52 Physical AI similarity threshold is not used as an abstract hyperparameter alone: it is paired with lexical overrides and audit inspection of below-threshold domains that were dominated by out-of-scope records such as nursing, agriculture, tourism, and general medical documents. Second, the 0.94 merge threshold is treated as an empirical separation point in the candidate-similarity distribution. It is intentionally conservative: a lower threshold would collapse distinct Physical AI failure modes, while a higher threshold would leave near-duplicate risk cards unresolved.
+
+\section{Workflow Overview}
+
+Figure~\ref{fig:workflow} summarizes the end-to-end workflow from raw source collection to the released taxonomy artifacts. The pipeline is intentionally hybrid: corpus-derived evidence is used to generate and deduplicate L4 risk candidates, while authoritative references and human review stabilize the hierarchy, definitions, and evidence justifications.
+
+For reproducibility, each stage is documented as an auditable transformation rather than as a narrative judgment. The raw retrieval layer is preserved through the exact PATSTAT SQL and Web of Science topic query reproduced in Appendices~A and~B. The intermediate layer records source-family counts, local file names, row counts, column counts, and file sizes. The modeling layer specifies the embedding input text, clustering method, c-TF-IDF label extraction, reference-grounding rule, merge threshold, and L3 assignment rule. The release layer is exported from the final HTML into CSV/JSON files so that card counts, references, hierarchy assignments, and 3H1R tags can be checked independently from the rendered web page.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[
+  font=\sffamily\small,
+  node distance=8mm and 10mm,
+  box/.style={rectangle, rounded corners=2pt, draw=#1, very thick, fill=#1!7,
+    align=center, minimum width=42mm, minimum height=11mm, inner sep=4pt},
+  proc/.style={box=flowg1},
+  data/.style={box=flowg2},
+  model/.style={box=flowg3},
+  review/.style={box=flowg4},
+  outputbox/.style={box=flowg5},
+  arrow/.style={-{Stealth[length=2.2mm,width=1.8mm]}, very thick, draw=black!68}
+]
+
+\node[data] (sources) at (0,0) {Raw source corpus\\WoS \(\cdot\) OpenAlex\\policy reports \(\cdot\) PATSTAT};
+\node[proc] (normalize) at (5.1,0) {Metadata normalization\\deduplication keys\\title--abstract fields};
+\node[model] (anchors) at (10.2,0) {Physical AI filtering\\BGE-M3 anchors\\explicit lexical markers};
+
+\node[proc] (riskfilter) at (10.2,-1.9) {Risk subset filtering\\safety \(\cdot\) security \(\cdot\) ethics\\failure terms};
+\node[model] (embed) at (5.1,-1.9) {Document embeddings\\\(\Enc(\mathrm{title}\Vert\mathrm{abstract})\)};
+\node[model] (cluster) at (0,-1.9) {Semantic clustering\\HDBSCAN\\c-TF-IDF keyphrases};
+
+\node[review] (reffilter) at (0,-3.8) {Reference grounding\\standards \(\cdot\) frameworks\\benchmarks \(\cdot\) papers};
+\node[proc] (merge) at (5.1,-3.8) {Candidate deduplication\\pairwise similarity\\iterative merge \(\tau=0.94\)};
+\node[outputbox] (l4) at (10.2,-3.8) {182 L4 risk cards\\stable IDs\\definitions \(\cdot\) evidence};
+
+\node[model] (l3) at (10.2,-5.7) {L3 family assignment\\EM-style nearest centroid\\24 sub-categories};
+\node[review] (human) at (5.1,-5.7) {Expert review\\boundary corrections\\reference cap \(\leq 5\) per card};
+\node[outputbox] (release) at (0,-5.7) {Released artifacts\\HTML taxonomy\\CSV/JSON maps\\methodology PDF};
+
+\draw[arrow] (sources) -- (normalize);
+\draw[arrow] (normalize) -- (anchors);
+\draw[arrow] (anchors) -- (riskfilter);
+\draw[arrow] (riskfilter) -- (embed);
+\draw[arrow] (embed) -- (cluster);
+\draw[arrow] (cluster) -- (reffilter);
+\draw[arrow] (reffilter) -- (merge);
+\draw[arrow] (merge) -- (l4);
+\draw[arrow] (l4) -- (l3);
+\draw[arrow] (l3) -- (human);
+\draw[arrow] (human) -- (release);
+
+\node[draw=black!20, rounded corners=2pt, fit=(sources)(normalize)(anchors)(riskfilter)(embed)(cluster),
+  inner sep=5pt, label={[font=\sffamily\footnotesize\bfseries, text=black!70]above:Collection and corpus filtering}] {};
+\node[draw=black!20, rounded corners=2pt, fit=(reffilter)(merge)(l4),
+  inner sep=5pt] {};
+\node[draw=black!20, rounded corners=2pt, fit=(l3)(human)(release),
+  inner sep=5pt, label={[font=\sffamily\footnotesize\bfseries, text=black!70]below:Hierarchy assignment, review, and release}] {};
+
+\end{tikzpicture}%
+}
+\caption{End-to-end taxonomy construction and release workflow}
+\label{fig:workflow}
+\fignote{Arrows denote the main data-processing path. The expert-review stage is applied iteratively: L4 risk cards and L3 assignments are repeatedly revised through expert review before release.}
+\end{figure}
+
+\section{3H1R Alignment Framework and Taxonomy Design Principles}
+
+The taxonomy uses 3H1R as an alignment-diagnosis framework for identifying which alignment value fails in a Physical AI risk. The framework has two roles. First, it defines a value axis for coding each risk in terms of Harmless, Helpful, Honest, and Role Consistency failures. Second, it provides design rules for accumulating those judgments into a reproducible risk taxonomy. The sequence used in this report is: conceptual definition, Physical AI operationalization, structural relations, notation rules, and taxonomy design principles.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{three_h_one_r_live_top.png}
+\caption{3H1R framework panel in the released taxonomy interface.}
+\label{fig:three-h-one-r-live-panel}
+\fignote{The screenshot records the live interface state used for visual inspection of the 3H1R framework, including the conceptual definitions and Physical AI operationalization sequence. It is included as a release-state image, not as a separate bibliographic source.}
+\end{figure}
+
+\subsection{Conceptual Definitions}
+
+The 3H dimensions are adapted from the helpful--honest--harmless framing of language-model alignment~\cite{askell2021}. Role Consistency is added from constitutional-AI and embodied-agent constraint work, where role, authority, and behavioral principles must remain stable under changing contexts~\cite{bai2022,sermanet-asimov,asimov2}. In this report, the four dimensions are defined as follows:
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{3H1R dimensions and definitions}
+\label{tab:three-h-one-r-definitions}
+\begin{tabularx}{\linewidth}{p{0.23\linewidth}X}
+\toprule
+Dimension & Conceptual definition \\
+\midrule
+H1 Harmless & System behavior or output should not cause harm to individuals, groups, or society. This includes direct harm and indirect harm such as enabling dangerous action. Harmless is in structural tension with Helpful. \\
+H2 Helpful & The system should provide assistance aligned with the user's real intent and context. The criterion is not mere instruction following, but the delivery of practical benefit; excessive refusal is treated as a helpfulness failure. \\
+H3 Honest & The system should represent facts, uncertainty, non-deception, and non-manipulation accurately. In Physical AI, the central issue is whether the system truthfully represents its perception, uncertainty, capability, and state. \\
+RC Role Consistency & The system should preserve its defined role, authority boundary, and behavioral principles across context changes. Persona drift, context violation, jailbreak acceptance, and role-boundary failure are core failure modes. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Operationalization for Physical AI}
+
+Because 3H1R originated as a language-output alignment frame, this report translates each dimension into physical-world behavior, constraints, and system state. The diagnostic question asks how the value should be interpreted in physical space, while the operational definition states what observable failure pattern is coded.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{3H1R operationalization for Physical AI}
+\label{tab:three-h-one-r-operationalization}
+\begin{tabularx}{\linewidth}{p{0.16\linewidth}p{0.20\linewidth}X X}
+\toprule
+Dimension & Original LLM definition & Diagnostic question for Physical AI & Operational definition in Physical AI \\
+\midrule
+H1 Harmless & Avoid harmful content generation & Can this risk directly cause physical harm? & Physical injury, property damage, environmental harm, or violation of explicit safety constraints such as speed, force, or separation distance. \\
+H2 Helpful & Provide information aligned with user intent & Does this risk reflect a tradeoff failure between task capability and safety requirements? & Failure to balance task completion and safety requirements, including over-sacrificing capability or over-prioritizing completion while ignoring safety. \\
+H3 Honest & Truthfulness and uncertainty awareness & Does the system misperceive the world, understate uncertainty, or misrepresent its own capability or state? & Misrecognition of world state, under-reporting or under-estimation of uncertainty, or over-representation of system capability and state. \\
+RC Role Consistency & Preserve role and value principles & Does the system fail to preserve role, authority, and safety principles under adversarial inputs or edge cases? & Departure from role or authority boundaries, jailbreak acceptance, or collapse of operational protocol and constitutional constraints. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Harmless and Role Consistency are separated analytically. RC refers to the violation of normative or authority boundaries itself, such as deviation from an operating protocol. Harmless refers to the physical harm that may follow from that violation. When both appear in the same causal chain, the Primary/Secondary distinction is used to express causal proximity.
+
+Primary and Secondary tags are assigned by causal proximity rather than by outcome severity. If a risk definition describes a dimension as the direct mechanism of failure, the dimension is Primary. If it becomes involved as the failure unfolds, the dimension is Secondary. The default rule is one Primary tag. Two Primary tags are allowed for explicit tradeoffs or causal branching. Three Primary tags are permitted only as documented exceptions.
+
+\subsection{Structural Relations}
+
+3H1R is not a list of independent labels. It is a two-axis mapping: the taxonomy axis identifies what type of risk failed, while the alignment-value axis identifies which value was violated. A risk occupies one location in the taxonomy axis but may carry multiple non-exclusive alignment-value tags.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.96\linewidth]{3h1r_structural_relationship.pdf}
+\caption{Pairwise structural relations among H1 Harmless, H2 Helpful, H3 Honest, and Role Consistency.}
+\label{fig:3h1r-structure}
+\fignote{Solid paths represent the H1--H2 tradeoff and H3 calibration relations. Dashed paths represent Role Consistency as a context-invariant constraint across role, authority, and safety principles. The multiplier effect of RC failure is treated as a boundary condition rather than as a separate taxonomy class.}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Structural relations among 3H1R dimensions}
+\label{tab:three-h-one-r-relations}
+\begin{tabularx}{\linewidth}{p{0.25\linewidth}p{0.27\linewidth}X}
+\toprule
+Relation & Scholarly term & Coding implication \\
+\midrule
+H1 Harmless \(\leftrightarrow\) H2 Helpful & Tradeoff / safety--utility tension & Strengthening safety can increase over-refusal, while pushing usefulness can increase safety-constraint violation. \\
+H3 Honest \(\rightarrow\) H1 Harmless & Uncertainty calibration & Greater uncertainty about world state, sensor reliability, or self-capability should make safety judgment more conservative. \\
+H3 Honest \(\rightarrow\) H2 Helpful & Capability calibration & The system must represent what it can and cannot do in order to tune task intensity and refusal level. \\
+RC Role \(\rightarrow\) H1/H2/H3 & Context-invariant constraint & Role, authority, and safety principles must not be relaxed or omitted when prompts, users, environments, or task contexts change. \\
+RC \(\times\) H1/H2/H3 & Multiplier / constraint-failure amplification & If RC collapses, the admissible range of H1, H2, and H3 judgments shifts simultaneously, amplifying other alignment failures. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+For example, if a robot knocks over an equipment rack, the risk is not coded solely as Harmless by observing the outcome. The mechanism is decomposed: perceptual error is an Honest failure, failure of braking or avoidance is a Harmless failure, and departure from an operating constraint is a Role Consistency failure. The Primary tag is assigned to the mechanism most causally proximate to the risk definition; the remaining dimensions are Secondary when they participate downstream.
+
+\subsection{Notation Rules Across Taxonomy Levels}
+
+3H1R notation has different purposes at different levels of the taxonomy. L4 risk cards require precise mechanism-level judgment and therefore show both Primary and Secondary tags. L3 sub-categories summarize which Primary alignment failure is most representative among their lower-level risks. L2 categories do not display 3H1R representative icons; their alignment profile is read from the L3 rows below them.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Notation rules across taxonomy levels}
+\label{tab:notation-rules}
+\begin{tabularx}{\linewidth}{p{0.24\linewidth}X X}
+\toprule
+Layer & Purpose & Notation rule \\
+\midrule
+L4 Risk Cards & Code the direct cause and derivative alignment dimensions of a specific risk. & Display axis and grade, e.g., H1 Harmless[P] and H3 Honest[S]. \\
+L3 Sub-categories & Summarize which Primary alignment failures are most representative of the L4 risks in that sub-category. & Display one or two representative Primary icons only. Do not show Secondary, counts, or ratios. \\
+L2 Categories & Show domain-level category and number of lower L3 sub-categories. & Do not show 3H1R representative icons at L2. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+For L4 notation, dimensions are always displayed in the fixed order H1 Harmless, H2 Helpful, H3 Honest, and RC Role. This order is not a priority ranking; priority is expressed only by the Primary/Secondary grade. For L3 representative icons, if the most frequent Primary axis accounts for at least 60\% of the L4 risks, a single representative icon is used. If the leading axis is below 60\% and the second axis is at least 25\%, two icons are shown. If three or more axes each account for at least 20\%, the L3 is marked as Mixed.
+
+\subsection{Taxonomy Design Principles}
+
+The 3H1R rules define the value axis; the taxonomy hierarchy defines the risk-type axis. The design combines both axes. Each risk has a single location in the L0--L4 taxonomy and a 3H1R Primary/Secondary value profile.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Taxonomy design principles}
+\label{tab:design-principles}
+\begin{tabularx}{\linewidth}{p{0.26\linewidth}X}
+\toprule
+Principle & Implementation \\
+\midrule
+Hierarchy & The taxonomy is organized as L0 Ownership Levels, L1 Physical AI Risks, L2 Categories, L3 Sub-categories, and L4 Risk Cards. \\
+Categorization & The taxonomy aims for practical coverage and mutual exclusivity. Boundary cases are not absorbed silently; reassignment decisions and history are documented. \\
+Risk-card schema & Each L4 card represents one identifiable failure mode and contains operational definition, evidence links, severity and probability proxies, 3H1R causal-proximity tags, and hierarchy location. \\
+Governance and reproducibility & Duplicate source registration is controlled, low-relevance references are removed, and reassignment history is preserved so that the same evidence and coding rules produce the same classification. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Data Sources and Corpus Construction}
+
+The construction corpus integrates three source families: scholarly publications, policy/report documents, and patent records. Scholarly records were collected from Web of Science and related local scholarly metadata snapshots, patent records from EPO PATSTAT, and policy/report records from domestic and international policy collections~\cite{clarivate-wos,openalex,epo-patstat}. The reproducible retrieval evidence is retained in three forms, reproduced verbatim in Appendices~A--C: the Web of Science topic-search expression, the PATSTAT AI patent-retrieval SQL, and the SQL-equivalent Physical AI / Physical AI risk filtering rules. Table~\ref{tab:integrated-document-space-counts} reports the integrated corpus sizes; these are the corpus-level counts used to motivate the L4 generation pipeline.
+
+\begin{table}[htbp]
+\centering
+\caption{Integrated corpus counts by source family and category}
+\label{tab:integrated-document-space-counts}
+\input{tables/integrated_document_space_counts_20260704.tex}
+\par\smallskip\begin{minipage}{0.92\linewidth}
+\footnotesize\textit{Note:} Counts are reported after within-group deduplication; category overlap is intentionally retained across AI, AI infrastructure, Physical AI, and Physical AI risks. The integrated datasets are organized as three source-family collections --- papers, policy reports, and patents --- each split into AI, AI infrastructure, Physical AI, and Physical AI risks. Counts exclude records without usable title text during standardization.
+\end{minipage}
+\end{table}
+
+Table~\ref{tab:integrated-document-space-counts} reports the integrated corpus sizes by category and source family: paper counts are parsed from the local Web of Science AI export, patents from the PATSTAT datasets, and policy records from the curated policy corpora, with within-group (per document type and category) deduplication and intentional cross-category overlap. Every group preserves a domestic/global key --- applicant country for patents, Korea affiliation for papers, and a domestic/foreign flag for policy --- so each figure can be reported as domestic, overseas, and total. Figure~\ref{fig:source-risk-bars} shows the source composition of the Physical AI risk group (82,971 records), which is dominated by scholarly publications (Web of Science, 50,375; 60.7\%), followed by patents (31,658; 38.2\%) and policy/report sources (938; 1.1\%).
+
+\begin{figure}[htbp]
+\centering
+\resizebox{0.88\linewidth}{!}{%
+\begin{tikzpicture}[
+  sourcebar/.style={draw=none, rounded corners=1.5pt},
+  sourcelabel/.style={font=\sffamily\small, anchor=east},
+  valuetext/.style={font=\sffamily\small, anchor=west, text=black!78}
+]
+\def\xscale{0.18}
+\draw[black!15] (0,0.6) -- (10.8,0.6);
+\draw[black!15] (0,-0.7) -- (10.8,-0.7);
+\draw[black!15] (0,-2.0) -- (10.8,-2.0);
+\node[sourcelabel] at (-0.3,0) {PATSTAT patents};
+\node[sourcelabel] at (-0.3,-1.3) {Web of Science papers};
+\node[sourcelabel] at (-0.3,-2.6) {Policy reports};
+\fill[sourcebar, flowblue!82] (0,-0.33) rectangle ({38.2*\xscale},0.33);
+\fill[sourcebar, flowgreen!82] (0,-1.63) rectangle ({60.7*\xscale},-0.97);
+\fill[sourcebar, floworange!85] (0,-2.93) rectangle ({1.1*\xscale},-2.27);
+\node[valuetext] at ({38.2*\xscale+0.15},0) {31,658 records \(\cdot\) 38.2\%};
+\node[valuetext] at ({60.7*\xscale+0.15},-1.3) {50,375 records \(\cdot\) 60.7\%};
+\node[valuetext] at ({1.1*\xscale+0.15},-2.6) {938 records \(\cdot\) 1.1\%};
+\draw[black!35, -{Latex[length=2.5mm]}] (0,-3.35) -- (10.8,-3.35);
+\foreach \x/\lab in {0/0,2.7/15,5.4/30,8.1/45,10.8/60} {
+  \draw[black!35] (\x,-3.25) -- (\x,-3.45);
+  \node[font=\sffamily\footnotesize, text=black!65] at (\x,-3.72) {\lab\%};
+}
+\node[font=\sffamily\footnotesize, text=black!65, anchor=west] at (0,-4.15) {Share of Physical AI risk records, \(N=82{,}971\)};
+\end{tikzpicture}%
+}
+\caption{Source composition of the Physical AI risk group}
+\label{fig:source-risk-bars}
+\fignote{The bar lengths show each source family's percentage share of the 82,971 integrated Physical AI risk records.}
+\end{figure}
+
+To characterize provenance beyond raw counts, country and institution were back-filled for the Physical AI risk \emph{papers and policy reports} by re-joining each record to its original source (Web of Science / OpenAlex affiliations by DOI and source identifier, with OpenAlex and Crossref resolving the remaining gaps). This recovered an institution for 38,008 records (papers 73.6\%, policy 98.7\%) and a country for 36,643 records. Patents were separately enriched with applicant/assignee and country from PATSTAT (\texttt{tls207\_pers\_appln}\,$\bowtie$\,\texttt{tls206\_person} on \texttt{appln\_id}; applicant 99.6\%, country 38\%), but are deliberately excluded from the country and institution rankings below: patent-applicant counts index commercial IP-filing activity and would read as a technology-competitiveness ranking rather than research and governance attention to Physical AI risks. Tables~\ref{tab:country-top}--\ref{tab:institution-top} therefore reflect scholarly papers and policy reports; counts are document--organization and document--country links over records with a resolved affiliation, not a complete census.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Country distribution of Physical AI risk records}
+\label{tab:country-top}
+\input{enrichment/tab_country_top.tex}
+\par\smallskip\begin{minipage}{0.92\linewidth}
+\footnotesize\textit{Note:} Counts are over Physical AI risk papers and policy reports with a resolved country. Patents were enriched from PATSTAT (country present for 38\% of patents) but are excluded here, because patent-applicant counts reflect commercial IP filing rather than research or governance attention and could be misread as technology competitiveness.
+\end{minipage}
+\end{table}
+
+Physical AI risk activity is globally distributed and led by China, the United States, and India; Korea-affiliated records account for 6.0\% (2,208 of 36,643 records with a resolved country).
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Top institutions in Physical AI risk records}
+\label{tab:institution-top}
+\input{enrichment/tab_institution_top.tex}
+\par\smallskip\begin{minipage}{0.92\linewidth}
+\footnotesize\textit{Note:} Most frequent institutions/organizations over Physical AI risk papers and policy reports with a resolved affiliation. Patent applicants/assignees are excluded (enriched from PATSTAT as a backup) to avoid conflating commercial IP filing with research and governance attention.
+\end{minipage}
+\end{table}
+
+The filtering logic has two stages. First, candidate Physical AI records are identified by cosine similarity to Physical AI definition anchors derived from NVIDIA, NIST, ISO, MITRE ATLAS, and ASIMOV-style embodied safety references\footnote{ASIMOV Benchmark v2: \url{https://asimov-benchmark.github.io/v2/}.} using the BGE-M3 encoder\footnote{BGE-M3 model card: \url{https://huggingface.co/BAAI/bge-m3}. The underlying M3-Embedding paper is cited in the References~\cite{chen2024bgem3}.}. These anchors cover AI risk management, industrial robot safety, functional safety, controllability, adversarial AI, world-model-based Physical AI development, and embodied semantic safety~\cite{nist-airmf,iso23894,iso10218,iso5469,iso8200,mitre-atlas,nvidia-cosmos,sermanet-asimov,asimov2}. Records with similarity above 0.52, or with explicit Physical AI terms such as \textit{physical AI}, \textit{humanoid}, \textit{embodied AI}, or \textit{CPS}, are retained as Physical AI candidates. Second, the candidate set is filtered to records whose title or abstract contains risk, safety, failure, security, ethics, or related terms. This produces the Physical AI risk group \(|\DPAI|=82,971\). To reproduce this step, a researcher concatenates each record's title and abstract, computes the BGE-M3 embedding, compares it with the documented Physical AI anchor descriptions, applies the 0.52 threshold and lexical-marker override, and then applies the risk-term filter to the retained candidate set.
+
+Formally, let \(\mathcal{D}_{AI}=\{d_i\}_{i=1}^{N}\) be the retrieved AI corpus and let \(x_i=\mathrm{title}(d_i)\Vert\mathrm{abstract}(d_i)\Vert\mathrm{keywords}(d_i)\) be the normalized document text. Let \(\mathcal{P}=\{p_q\}_{q=1}^{Q}\) denote Physical AI anchor descriptions derived from the authoritative sources above, and let \(\mathcal{K}_{PAI}\) and \(\mathcal{K}_{risk}\) denote the explicit Physical AI lexical markers and risk/safety lexical markers, respectively. The document and anchor embeddings are
+\[
+  e_i=\frac{\Enc(x_i)}{\|\Enc(x_i)\|_2}, \qquad
+  u_q=\frac{\Enc(p_q)}{\|\Enc(p_q)\|_2}.
+\]
+The Physical AI relevance score is the maximum anchor similarity:
+\[
+  s_i^{PAI}=\max_{q\in\{1,\ldots,Q\}} e_i^{\top}u_q.
+\]
+A document is retained as a Physical AI candidate if
+\[
+  d_i\in\mathcal{D}_{PAI}^{cand}
+  \Longleftrightarrow
+  \left(s_i^{PAI}\geq\tau_{PAI}=0.52\right)
+  \lor
+  \left[\exists k\in\mathcal{K}_{PAI}: k\subset x_i\right].
+\]
+The final Physical AI risk corpus is then
+\[
+  \DPAI=
+  \left\{d_i\in\mathcal{D}_{PAI}^{cand}:
+  \exists r\in\mathcal{K}_{risk}\ \text{such that}\ r\subset x_i
+  \right\}.
+\]
+This two-stage rule separates semantic inclusion in the Physical AI domain from risk-specific filtering. The lexical override prevents highly specific terms such as \textit{humanoid}, \textit{embodied AI}, or \textit{CPS} from being lost when a short abstract produces a lower anchor similarity score.
+
+\section{Local Data Structure and Released Snapshot}
+
+The local working directory also contains a smaller, reproducible snapshot used for current HTML export, reference-map generation, and quality checks. It is not identical to the full construction corpus in Table~\ref{tab:integrated-document-space-counts}; instead, it is a curated working snapshot and release artifact. The scholarly component in the local snapshot is OpenAlex-derived, while the patent component is PATSTAT-derived~\cite{openalex,epo-patstat}. Table~3 reports the verified working datasets and their sizes. The table is intended to make the release state reproducible: a rerun should recover the same dataset-level denominators before comparing row-level contents, card exports, or reference maps.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Verified local working snapshot}
+\label{tab:working-snapshot}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.34\linewidth}rrrX}
+\toprule
+Dataset & Rows & Columns & Size & Role \\
+\midrule
+Scholarly master & 17,482 & 44 & 55.5 MB & Scholarly master input \\
+Policy master & 11,724 & 27 & 17.2 MB & Policy/report master input \\
+Patent master & 140,070 & 53 & 263.9 MB & PATSTAT-derived patent input \\
+Physical AI science subset & 7,132 & 54 & 23.7 MB & Selected science subset \\
+Physical AI policy subset & 1,042 & 37 & 2.6 MB & Selected policy subset \\
+Physical AI patent subset & 15,017 & 63 & 37.3 MB & Selected patent subset \\
+Physical AI combined snapshot & 23,191 & 121 & 64.9 MB & Combined working snapshot \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+At the repository level, the current Physical AI Risk Taxonomy release contains 182 L4 cards and 360 evidence/reference rows exported from the final HTML. The local repository size is approximately 26 MB, while the broader risk coevolution workspace and Web of Science export occupy approximately 4.5 GB and 12 GB, respectively.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Released taxonomy snapshot}
+\label{tab:taxonomy-snapshot}
+\begin{tabular}{lrr}
+\toprule
+Layer or artifact & Count & Notes \\
+\midrule
+L2 categories & 3 & P2, I2, S2 \\
+L3 sub-categories & 24 & 5 system, 10 interaction, 9 societal \\
+L4 risk cards & 182 & Final card set after semantic merging and review \\
+Evidence/reference rows & 360 & Extracted from final HTML \\
+Linked references & 353 & Rows with active reference links \\
+Unlinked evidence rows & 7 & Internal evidence notes retained in the snapshot \\
+Maximum references per card & 5 & Enforced curation cap \\
+\bottomrule
+\end{tabular}
+\par\smallskip\begin{minipage}{0.92\linewidth}
+\footnotesize\textit{Note:} Counts are exported from the final HTML release.
+\end{minipage}
+\end{table}
+
+\section{Corpus and Taxonomy Statistics}
+
+\textbf{Record-level snapshot.} The year-level statistics in this section are computed on a released local reproducible snapshot of 23,191 Physical AI records (7,132 scholarly, 1,042 policy, and 15,017 patent), which is the auditable slice available for direct recomputation. The full corpus totals are reported separately in Table~\ref{tab:integrated-document-space-counts} as the integrated-source view.
+
+\textbf{Temporal trend.} Figure~\ref{fig:corpus-trend} shows Physical AI record volume by source family and year in the reproducible snapshot. Volume is negligible before the mid-2010s and rises sharply afterward. Patent records grow fastest and dominate the total, peaking around 2019 (1,712 records) and then plateauing near 1,300--1,500 per year; scholarly records rise steadily to a 2021 peak (713) before easing; policy/report records remain small in absolute terms but accelerate after 2020 (from 103 in 2020 to 216 in 2025), consistent with governance attention lagging technical activity. The 2026 partial year is truncated by the collection cutoff.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\linewidth]{fig_risk_trend.pdf}
+\caption{Physical AI record volume by source family and year}
+\label{fig:corpus-trend}
+\fignote{Counts are from the released local reproducible snapshot (\(N=23{,}191\)). Bars are stacked by source family; the 2026 bar is a truncated partial year.}
+\end{figure}
+
+\textbf{Level distribution.} Figure~\ref{fig:level-dist} summarizes how the 182 released L4 risk cards distribute across the taxonomy levels. System Safety (P2) holds 91 cards (50.0\%), Interaction Safety (I2) 62 (34.1\%), and Societal Safety (S2) 29 (15.9\%). At L3, the largest families are Robot Control (45), Accidental Harm (22), and Purposeful/Malicious Harm (17), followed by Lack of Robustness in Unseen Environments and Human Interaction \& Safety Protocol Failures (13 each). Societal families such as Lack of Accountability \& Liability (12) are intentionally retained even when sparser, because the taxonomy supports governance review and future expansion rather than frequency-only clustering.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{fig_taxonomy_levels.pdf}
+\caption{Distribution of the 182 released L4 risk cards}
+\label{fig:level-dist}
+\fignote{Left: L2 category counts. Right: top L3 sub-categories by L4 card count, colored by L2 domain (blue = System, green = Interaction, purple = Societal).}
+\end{figure}
+
+\section{Document-Space Embedding and Projection}
+
+The integrated AI document space in Figure~\ref{fig:ai-doc-space} visualizes how AI, AI infrastructure, Physical AI, and Physical AI risk evidence relate at the document level. Each document \(d\) is represented by the concatenation of its title and abstract, \(x_d=\mathrm{title}(d)\Vert\mathrm{abstract}(d)\), encoded with the BGE-M3 sentence embedder~\cite{chen2024bgem3} and \(L_2\)-normalized,
+\[
+  z_d=\frac{\Enc(x_d)}{\|\Enc(x_d)\|_2},\qquad \|z_d\|_2=1,
+\]
+so that inner products \(z_d^{\top}z_{d'}\) equal cosine similarities. Because embedding the full multi-million-record corpus in a single vector space is limited by available compute, the figure uses a reproducible stratified sample of recent 2022--2026 records drawn across the twelve source-family \(\times\) category groups under a fixed seed, which surfaces the current Physical AI risk frontier while keeping the layout legible.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\linewidth]{fig_recent_physical_ai_space.pdf}
+\caption{Physical AI document space, 2022--2026}
+\label{fig:ai-doc-space}
+\fignote{Embedding the entire corpus in one vector space is compute-limited, so the figure shows a reproducible stratified sample of the 2022--2026 window, embedded with BGE-M3 (title\,+\,abstract) and projected with UMAP (fixed seed 20260704). About 160 records are drawn per source-family \(\times\) category group, giving 1{,}906 of 1{,}658{,}388 records. Sample/total by source family: papers 640/1{,}212{,}824, policy reports 626/44{,}440, patents 640/401{,}124. AI and AI~Infra form the neutral gray background; the emphasized categories are Physical AI (480/72{,}502) and Physical AI Risks (480/34{,}773).}
+\end{figure}
+
+The sampled embeddings are projected to two dimensions with UMAP~\cite{umap2018}. UMAP first builds a weighted \(k\)-nearest-neighbor graph: for point \(i\) with neighbor \(j\), the directed membership is
+\[
+  p_{j\mid i}=\exp\!\left(-\frac{\max(0,\,d(z_i,z_j)-\rho_i)}{\sigma_i}\right),
+\]
+where \(d\) is the cosine distance, \(\rho_i\) is the distance to \(i\)'s nearest neighbor, and \(\sigma_i\) is set so that \(\sum_j p_{j\mid i}=\log_2 k\). Directed memberships are symmetrized as \(p_{ij}=p_{j\mid i}+p_{i\mid j}-p_{j\mid i}\,p_{i\mid j}\). A low-dimensional layout \(\{y_i\}\subset\mathbb{R}^2\), with membership \(q_{ij}=(1+a\|y_i-y_j\|_2^{2b})^{-1}\), is optimized by minimizing the fuzzy-set cross-entropy
+\[
+  \mathcal{C}=\sum_{i\neq j}\left[p_{ij}\log\frac{p_{ij}}{q_{ij}}+(1-p_{ij})\log\frac{1-p_{ij}}{1-q_{ij}}\right],
+\]
+which preserves local neighborhood structure while allowing globally distinct groups to separate. Points are colored by dataset group and marked by document type; the sample index, embeddings, and 2D coordinates are stored with the integrated dataset so that the figure is fully reproducible.
+
+\section{Risk Candidate Generation and Deduplication}
+
+The L4 generation stage transforms heterogeneous documents into semantically coherent risk candidates. Documents are embedded using BGE-M3 from title and abstract fields~\cite{chen2024bgem3}. HDBSCAN is applied to the embedding space to identify clusters of semantically coherent risk evidence~\cite{campello2013,hdbscan2017}. Let \(E=\{e_i\}_{i=1}^{|\DPAI|}\) be the unit-normalized document embeddings for the retained Physical AI risk corpus. The base semantic distance is cosine distance:
+\[
+  \delta(i,j)=1-e_i^{\top}e_j.
+\]
+For HDBSCAN, let \(c_k(i)\) denote the core distance from point \(i\) to its \(k\)-th nearest neighbor. The mutual reachability distance used to build the density hierarchy is
+\[
+  d_{\mathrm{mreach},k}(i,j)=
+  \max\{c_k(i),c_k(j),\delta(i,j)\}.
+\]
+HDBSCAN constructs a minimum spanning tree over \(d_{\mathrm{mreach},k}\), condenses the resulting hierarchy by minimum cluster size, and selects clusters with high persistence. The output is a partial assignment
+\[
+  h:\mathcal{D}_{PAI}\rightarrow\{1,\ldots,M\}\cup\{-1\},
+\]
+where \(h(d_i)=m\) means that document \(d_i\) belongs to risk-evidence cluster \(C_m\), and \(h(d_i)=-1\) denotes density noise. Noise points are not discarded automatically; they can later be recovered by direct reference matching or expert review.
+
+For each cluster \(C_m\), class-based TF-IDF is used to extract representative keyphrases, following the c-TF-IDF topic-representation logic used in BERTopic~\cite{grootendorst2022}:
+\[
+  \mathrm{cTFIDF}(t,C_m)=
+  \frac{f_{t,C_m}}{|C_m|}
+  \cdot
+  \log
+  \frac{|\DPAI|}{\sum_{m'} f_{t,C_{m'}}}.
+\]
+The top-\(k\) keyphrases become raw risk labels. Candidate labels are retained only when they can be grounded in an authoritative reference corpus or a direct citation link. The authoritative corpus includes AI risk-management standards, robotics safety standards, adversarial-AI knowledge bases, and embodied-AI benchmarks~\cite{nist-airmf,iso23894,iso10218,iso5469,iso8200,mitre-atlas,sermanet-asimov,asimov2}. This reference filter reduces noisy cluster labels and ensures that each candidate is auditable. If \(a_b\in\mathcal{A}\) is an authoritative reference text and \(\ell_m\) is the raw cluster label, the semantic grounding score is
+\[
+  g_m=\max_{a_b\in\mathcal{A}}
+  \simcos\!\left(\Enc(\ell_m),\Enc(a_b)\right).
+\]
+The retained candidate set is
+\[
+  C_0=\{c_m:g_m\geq\tau_{\mathrm{ref}}\ \lor\ \mathrm{directCitation}(c_m)=1\}.
+\]
+
+The reference-filtered candidates are then embedded again using label and definition text. For each \(c_j\in C_0\), define \(v_j=\Enc(\mathrm{label}(c_j)\Vert\mathrm{definition}(c_j))\) and normalize \(v_j\) to unit length. Pairwise cosine similarity is
+\[
+  S_{jk}=v_j^{\top}v_k,\qquad j\neq k.
+\]
+Deduplication is a constrained agglomerative merge over candidate nodes. At iteration \(t\), choose
+\[
+  (j^{\ast},k^{\ast})=\arg\max_{j\neq k}S_{jk}.
+\]
+If \(S_{j^{\ast}k^{\ast}}\geq\tau_{\mathrm{merge}}=0.94\), the two candidates are replaced by a canonical node
+\[
+  c_{j^{\ast}}\leftarrow
+  \mathrm{merge}(c_{j^{\ast}},c_{k^{\ast}})
+  =
+  \bigl(\mathrm{richerDefinition},\
+  \mathrm{evidence}_{j^{\ast}}\cup\mathrm{evidence}_{k^{\ast}},\
+  \mathrm{refs}_{j^{\ast}}\cup\mathrm{refs}_{k^{\ast}}\bigr),
+\]
+and \(c_{k^{\ast}}\) is removed. The affected similarity row and column are recomputed from the updated label-definition text. The algorithm stops when \(\max_{j\neq k}S_{jk}<0.94\). The threshold is treated as an empirical distribution cut point: lower values collapse distinct risk types, while higher values leave near-duplicate cards.
+
+\begin{algobox}{Algorithm 1. Risk Candidate Generation and Deduplication Pipeline}
+\begin{enumerate}[leftmargin=1.6em,itemsep=0.35em]
+  \item \textbf{Input:} Tri-domain Physical AI risk corpus \(\DPAI\), with \(|\DPAI|=82,971\) records (50,375 scholarly records, 938 policy/report records, and 31,658 patents); BGE-M3 encoder \(\Enc\)~\cite{chen2024bgem3}; and an authoritative reference corpus \(\mathcal{A}\) containing standards, risk frameworks, benchmarks, and high-quality papers~\cite{nist-airmf,iso23894,iso10218,mitre-atlas,sermanet-asimov}.
+  \item \textbf{Normalize records:} Retain source identifier, title, abstract, year, DOI or URL, source family, and retrieval provenance. Remove exact duplicate records using DOI where available, otherwise title--URL keys.
+  \item \textbf{Embed documents:} For each \(d_i \in \DPAI\), compute \(e_{d_i} \leftarrow \Enc(\mathrm{title}(d_i) \Vert \mathrm{abstract}(d_i))\). Empty abstracts are represented by title-only text and flagged in the metadata.
+  \item \textbf{Cluster:} Apply HDBSCAN to \(\{e_{d_i}\}\) and obtain semantically coherent clusters \(\{C_1,\ldots,C_M\}\)~\cite{campello2013,hdbscan2017}. Treat noise points as unassigned evidence unless later recovered by direct reference matching.
+  \item \textbf{Extract keyphrases:} For each \(C_m\), compute c-TF-IDF and extract the top-\(k\) terms as the raw risk label \(\ell_m\)~\cite{grootendorst2022}.
+  \item \textbf{Reference filter:} Retain \(\ell_m\) if an authoritative source \(a \in \mathcal{A}\) satisfies \(\simcos(e_{\ell_m},e_a)\geq\tau_{\mathrm{ref}}\), or if a direct citation link exists. The retained raw candidate set is \(C_0\), with \(|C_0|=812\). Store the matched reference, similarity score or citation link, and a short evidence sentence.
+  \item \textbf{Embed candidates:} For each candidate \(c_j \in C_0\), compute \(e_{c_j}\leftarrow\Enc(\mathrm{label}(c_j)\Vert\mathrm{definition}(c_j))\).
+  \item \textbf{Pairwise similarity:} Compute \(S_{jk}=\simcos(e_{c_j},e_{c_k})\) for all \(j\neq k\).
+  \item \textbf{Iterative merging:} While there exists a pair \((j,k)\) such that \(S_{jk}\geq\tau_{\mathrm{merge}}=0.94\), select the highest-similarity pair, merge it into a canonical node by unioning evidence and retaining the richer definition, remove the redundant node, and update the affected row and column of \(S\).
+  \item \textbf{Human audit:} Review high-similarity non-merged pairs, low-reference candidates, and candidates whose evidence does not support the proposed risk definition. Remove unsupported candidates or rewrite definitions before release.
+  \item \textbf{Output and checks:} Export 182 unique L4 risk cards. Verify stable IDs, no duplicate DOI/title/URL references within a card, at most five references per card, and a non-empty bilingual definition and evidence justification for each released card.
+\end{enumerate}
+\end{algobox}
+
+\subsection*{Embedding and clustering hyperparameters}
+
+The candidate-generation pipeline is governed by a small, fixed set of hyperparameters, all recorded with a single random seed (20260704) for reproducibility. The BGE-M3 encoder~\cite{chen2024bgem3} is run in dense mode, producing a 1024-dimensional vector per document; inputs are the concatenated title and abstract truncated to 1{,}200 characters, encoded with a maximum sequence length of 256 tokens, batch size 32, and \(L_2\) normalization so that inner products equal cosine similarities. For density-based clustering the embeddings are first reduced with UMAP~\cite{umap2018} configured as \(n\_\mathrm{neighbors}=30\), \(\mathrm{min\_dist}=0.0\), ten output components, and cosine metric, a standard configuration for downstream clustering. HDBSCAN~\cite{campello2013,hdbscan2017} is then applied with \(\mathrm{min\_cluster\_size}=15\), \(\mathrm{min\_samples}=5\), Euclidean metric on the reduced space (equivalent to cosine on the normalized inputs), and excess-of-mass (\texttt{eom}) cluster selection. Downstream thresholds are the reference-grounding cut \(\tau_{\mathrm{ref}}\) and the deduplication merge threshold \(\tau_{\mathrm{merge}}=0.94\).
+
+\subsection*{Clustering robustness}
+
+Because density-based clustering can be sensitive to its settings, the configuration was stress-tested on a reproducible sample of 4{,}000 Physical AI risk documents (drawn across papers, policy reports, and patents under the fixed seed). The two HDBSCAN knobs were swept over \(\mathrm{min\_cluster\_size}\in\{8,10,15,20,30\}\) and \(\mathrm{min\_samples}\in\{1,5,10\}\), and the UMAP neighborhood over \(n\_\mathrm{neighbors}\in\{15,30,50,80\}\); each configuration is compared to the baseline partition by the Adjusted Rand Index (ARI). Table~\ref{tab:hdbscan-robustness} reports the results. The macro-structure is stable for the neighborhood of settings around the baseline: holding \(\mathrm{min\_samples}=5\), varying \(\mathrm{min\_cluster\_size}\) from 8 to 20 keeps ARI in the 0.86--0.95 range, and the cluster count moves smoothly (58 to 36) without fragmenting or collapsing. Sensitivity is concentrated, as expected, in \(\mathrm{min\_samples}=1\) (which admits many small, low-density clusters, ARI \(\approx0.43\)--0.55) and in large UMAP neighborhoods that over-smooth local density. Crucially, this clustering stage only proposes L4 \emph{candidates}, which are subsequently filtered against the authoritative reference corpus, deduplicated at \(\tau_{\mathrm{merge}}\), and confirmed by human audit; the released 182-card taxonomy therefore does not depend on any single clustering resolution.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{HDBSCAN and UMAP hyperparameter robustness (4{,}000-document risk sample)}
+\label{tab:hdbscan-robustness}
+\input{enrichment/tab_hdbscan_robustness.tex}
+\vspace{0.25em}
+\fignote{Each row perturbs one knob relative to the baseline (UMAP \(n\_\mathrm{neighbors}=30\); HDBSCAN \(\mathrm{min\_cluster\_size}=15\), \(\mathrm{min\_samples}=5\)), which by definition has ARI\,=\,1.00. Clusters excludes the noise class; Noise is the fraction of documents left unassigned; ARI is the Adjusted Rand Index against the baseline partition on the identical 4{,}000-document sample. Higher ARI means more agreement with the baseline cluster structure.}
+\end{table}
+
+\section{Card Schema and Identifier Assignment}
+
+Each retained L4 risk is converted into a card with a stable identifier and a structured schema. The identifier prefix records the primary evidence layer: \texttt{PHYSRISK} for standards/frameworks, \texttt{PHYSBENCH} for benchmarks, \texttt{PHYSKR} for Korean policy evidence, and \texttt{PHYSCONN} for connectivity or telecom-infrastructure risks. The standards/framework layer is anchored in AI risk-management, robot safety, functional safety, controllability, and adversarial-AI references~\cite{nist-airmf,iso23894,iso10218,iso5469,iso8200,mitre-atlas}. The benchmark layer includes embodied semantic-safety and physical-safety benchmark work~\cite{sermanet-asimov,asimov2}. The current release contains 55 \texttt{PHYSRISK}, 113 \texttt{PHYSBENCH}, 5 \texttt{PHYSKR}, and 9 \texttt{PHYSCONN} cards.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{taxonomy_l4_card_live_example.png}
+\caption{Example L4 risk-card rendering in the released taxonomy interface.}
+\label{fig:l4-card-live-example}
+\vspace{0.3em}
+\fignote{The screenshot shows how a released L4 card combines a stable identifier, bilingual risk label and definition, evidence justification, references, severity and probability proxies, and 3H1R Primary/Secondary tags. The image documents the rendered card schema in the release interface.}
+\end{figure}
+
+The required card fields are: L4 identifier, Korean and English label, Korean and English risk definition, L2/L3 hierarchy, severity proxy, probability proxy, evidence justification, reference title/link, and 3H1R alignment tags. The 3H1R tags extend helpful-honest-harmless alignment concepts and constitutional/role-consistency ideas to Physical AI settings~\cite{askell2021,bai2022,sermanet-asimov}. Reference curation follows a maximum of five references per card, with duplicate DOI/title/URL exclusion and card-specific evidence justifications.
+
+New-card admission follows a stricter governance rule for final taxonomy expansion. A newly proposed L4 card is admitted only when three conditions are jointly satisfied: (i) it has at least three independent references or evidence sources after duplicate DOI/title/URL removal; (ii) its semantic similarity to existing cards remains below the merge threshold \(\tau_{\mathrm{merge}}=0.94\); and (iii) it can be assigned to a valid L2 category without violating the L2 responsibility-boundary definition. This rule separates initial candidate discovery, where one authoritative reference is sufficient to retain a raw candidate for review, from final taxonomy expansion, where stronger independent support is required.
+
+\section{Hierarchical Assignment to L3 Families}
+
+The L3 hierarchy can be assigned in two modes. In the current release, 24 L3 seed descriptions are defined before L4 placement. For each new L4 card, the label and definition are embedded and compared against L3 anchors; the card is assigned to the nearest L3 family, with expert review for close or semantically ambiguous cases. If no L3 seed hierarchy exists, L4 cards can be clustered first and candidate L3 families can be induced when three or more coherent L4 cards form a stable family. This reflects the same hybrid principle used in prior AI-risk taxonomy synthesis, where expert taxonomic structure and evidence-derived candidate groups are reconciled rather than treated as substitutes~\cite{slattery2024,weidinger2021}.
+
+Algorithm~2 formalizes the iterative assignment process as an EM-style procedure~\cite{dempster1977,dhillon2001}.\footnote{The assignment is the classical Expectation--Maximization algorithm~\cite{dempster1977} specialized to unit-norm (cosine) document representations, i.e.\ spherical \(k\)-means / concept decomposition~\cite{dhillon2001}: the E-step assigns each L4 card to its nearest L3 centroid, and the M-step recomputes and renormalizes each centroid to the unit sphere.} Let \(R=\{r_i\}_{i=1}^{182}\) denote the released L4 risks and let \(K=24\) be the number of L3 seed families. Each L4 risk is represented by a unit vector
+\[
+  y_i=\frac{\Enc(\mathrm{label}(r_i)\Vert\mathrm{definition}(r_i)\Vert\mathrm{evidenceKeywords}(r_i))}{\|\Enc(\mathrm{label}(r_i)\Vert\mathrm{definition}(r_i)\Vert\mathrm{evidenceKeywords}(r_i))\|_2}.
+\]
+Each L3 family is represented by a unit centroid \(\mu_k\). The latent assignment variable \(z_i\in\{1,\ldots,K\}\) indicates the L3 family of \(r_i\). The assignment objective is spherical \(k\)-means style maximization of within-family cosine similarity:
+\[
+  \max_{\{z_i\},\{\mu_k\}}
+  \sum_{i=1}^{182} y_i^{\top}\mu_{z_i}
+  \quad
+  \mathrm{s.t.}\quad
+  \|\mu_k\|_2=1\ \ \forall k.
+\]
+The E-step assigns each risk to the nearest L3 centroid in cosine space:
+\[
+  z_i^{(t+1)}=
+  \arg\max_{k\in\{1,\ldots,K\}}
+  y_i^{\top}\mu_k^{(t)}.
+\]
+The M-step updates each centroid as the normalized mean of assigned L4 vectors:
+\[
+  \mu_k^{(t+1)}
+  =
+  \frac{\sum_{i:z_i^{(t+1)}=k} y_i}
+  {\left\|\sum_{i:z_i^{(t+1)}=k} y_i\right\|_2},
+\]
+with the seed centroid retained when a family receives no assigned L4 risk. Expert review is retained as a final correction layer because some Physical AI risks are semantically close but operationally distinct. This human correction step is not an additional clustering objective; it is a governance constraint that prevents semantically plausible but operationally invalid assignments.
+
+\begin{algobox}{Algorithm 2. EM-Based L3 Family Assignment}
+\begin{enumerate}[leftmargin=1.6em,itemsep=0.35em]
+  \item \textbf{Input:} L4 embeddings \(\{e_{r_i}\}_{i=1}^{182}\) and L3 seed descriptions \(\{d_k\}_{k=1}^{K}\), with \(K=24\) in the current release.
+  \item \textbf{Prepare L4 text:} For each risk \(r_i\), concatenate the bilingual label, compressed English definition, Korean definition, and evidence keywords. Normalize whitespace and keep the stable L4 identifier as the row key.
+  \item \textbf{Initialize:} Set \(\mu_k^{(0)}\leftarrow\Enc(d_k)\) for \(k=1,\ldots,K\), normalize centroids to the unit sphere, and set \(t\leftarrow0\).
+  \item \textbf{E-step:} Assign \(z_i^{(t+1)}\leftarrow\arg\max_k \simcos(e_{r_i},\mu_k^{(t)})\) for all L4 cards \(i\).
+  \item \textbf{M-step:} Update each centroid \(\mu_k^{(t+1)}\) as the normalized mean of the embeddings assigned to family \(k\). If a family becomes empty, retain its seed centroid and flag the family for expert review.
+  \item \textbf{Convergence check:} If \(z^{(t+1)}=z^{(t)}\), stop; otherwise set \(t\leftarrow t+1\) and repeat the E-step.
+  \item \textbf{Expert review:} Human reviewers inspect assignments deviating from domain expectations, especially cards with close first- and second-choice L3 similarities, sparse L3 families, or L3 definitions that no longer match their assigned L4 risks.
+  \item \textbf{Coverage constraint:} Ensure every L3 family retains at least one L4 risk. When a family is empty, reassign the nearest semantically valid L4 risk only after checking that the L3 definition and L4 risk definition are substantively compatible.
+  \item \textbf{Output and checks:} Export final L3 assignments \(\{z_i\}_{i=1}^{182}\), update L2/L3 counts, and verify that the released HTML, CSV, JSON, and reference-map artifacts report the same hierarchy.
+\end{enumerate}
+\end{algobox}
+
+\section{Released Hierarchy}
+
+The released hierarchy has three L2 categories and 24 L3 sub-categories. Table~\ref{tab:l2dist} summarizes the L2 distribution.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{L2 distribution of L4 risk cards}
+\label{tab:l2dist}
+\begin{tabular}{lrr}
+\toprule
+L2 category & L4 cards & Share \\
+\midrule
+P2 System Safety & 91 & 50.0\% \\
+I2 Interaction Safety & 62 & 34.1\% \\
+S2 Societal Safety & 29 & 15.9\% \\
+\midrule
+Total & 182 & 100.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The largest L3 family is \textit{Robot Control} with 45 cards, followed by \textit{Accidental Harm} with 22 cards and \textit{Purposeful/Malicious Harm} with 17 cards. Societal categories are intentionally retained even when sparse because the taxonomy is designed to support governance review and future expansion, not only frequency-based clustering.
+
+\section{Validation and Quality Controls}
+
+Quality controls operate at three levels. At the corpus level, the pipeline filters candidate records through Physical AI anchors, explicit lexical markers, and risk/safety/security terms. At the candidate level, semantic duplicates are merged with a conservative threshold, and candidate cards require authoritative references. At the released-card level, the export script verifies card counts, L3/L2 distributions, reference rows, linked references, maximum reference count per card, and evidence/reference mismatches. These controls are intended to preserve the traceability emphasized by AI risk-management frameworks and structured AI risk repositories~\cite{nist-airmf,iso23894,slattery2024}.
+
+The final HTML export currently reports 182 L4 cards, 360 evidence/reference rows, and no card exceeding the five-reference cap. Eight cards contain a mismatch between the number of evidence clauses and the number of linked reference rows (a distinct metric from the seven unlinked evidence rows in Table~\ref{tab:taxonomy-snapshot}). These mismatches are retained as traceable release-state metadata rather than silently corrected, because they reflect the current HTML state.
+
+\subsection*{Convergence and stability of the L3 assignment}
+
+The EM-style assignment of Algorithm~2 was validated by a convergence and stability simulation on the released 182 L4 cards, embedded from their label and definition text with BGE-M3 under a fixed seed. Three checks are reported in Figure~\ref{fig:l4-convergence}. First, the spherical \(k\)-means / EM iteration converges in seven steps: the within-family cosine objective increases monotonically and the number of reassigned cards falls to zero. Second, the released partition is strongly embedding-consistent. Measuring how often each card's released L3 family is among its nearest family centroids (top-\(k\) containment), the released L3 is the single nearest family for 89.6\% of cards, within the top two for 98.9\%, within the top three for 99.5\%, and within the top five for all cards---so the assignment reaches the 90\%, 95\%, and 97\% levels once a one-to-two-rank tolerance is allowed, consistent with the expert-review step reconciling the small fraction of adjacent-family cases. A label-permutation test confirms the partition is non-random: the observed mean within-family cohesion (0.811) exceeds that of random partitions of identical family sizes (0.788) with \(p<0.001\) over 5{,}000 permutations. Third, the assignment is robust to embedding perturbation: adding isotropic Gaussian noise to the card embeddings and reassigning, agreement with the unperturbed assignment stays at or above 97\% up to \(\sigma\approx0.05\) and above 90\% up to \(\sigma\approx0.075\), well beyond the scale of representational jitter expected from paraphrase-level text changes.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_l4_convergence.pdf}
+\caption{Convergence and stability of the 182-card L3 assignment}
+\label{fig:l4-convergence}
+\vspace{0.25em}
+\fignote{(A) The EM iteration converges in seven steps: the within-family mean cosine (objective) rises monotonically while the number of reassigned cards (bars) drops to zero. (B) Top-\(k\) containment: fraction of cards whose released L3 family is among the \(k\) nearest family centroids (top-1 89.6\%, top-2 98.9\%, top-3 99.5\%, top-5 100\%); dashed lines mark the 90/95/97\% levels. (C) Stability under Gaussian embedding perturbation of scale \(\sigma\) (mean and 95\% band over 200 perturbations per \(\sigma\)); agreement with the unperturbed assignment stays \(\geq\)97\% to \(\sigma\approx0.05\). All panels use BGE-M3 embeddings of the released 182 cards under fixed seed 20260704.}
+\end{figure}
+
+\section{Reproducibility Artifacts}
+
+The public taxonomy is maintained as a single HTML page with a versioned copy, and is exported by a release script into machine-readable card, reference, and summary files together with the curation and audit scripts and the documented 3H1R Primary-axis exception list. A reproducible rerun follows this order. First, verify the source-retrieval artifacts reproduced in the appendices: the PATSTAT SQL and the Web of Science query. Second, reconstruct or verify the local working snapshot in Table~\ref{tab:working-snapshot} and confirm its row, column, and size denominators. Third, apply Algorithm~1 to generate and deduplicate L4 candidates, preserving all source identifiers and reference links. Fourth, apply Algorithm~2 to assign the resulting L4 risks to the 24 L3 families and record any human corrections as audit metadata. Fifth, export the final HTML into the machine-readable card, reference, and summary files. Finally, compare the exported counts against Table~\ref{tab:taxonomy-snapshot} and verify that no L4 card violates the five-reference cap or loses its bilingual definition, evidence justification, or hierarchy assignment.
+
+\section{Conclusion}
+
+The Physical AI Risk Taxonomy construction process uses a hybrid method: authoritative upper-level structure, corpus-driven L4 candidate discovery, semantic deduplication, EM-style hierarchy assignment, and human review. The resulting release provides a 182-card L4 risk taxonomy that is both empirically grounded in a large multi-source corpus and operationally usable as a governance, evaluation, and benchmarking reference for Physical AI systems.
+
+\newpage
+\appendix
+\section{PATSTAT AI Patent Retrieval SQL}
+
+Listing~\ref{lst:patstat-ai-sql} reproduces the PATSTAT SQL used to retrieve the AI patent corpus before applying the Physical AI and risk filters. The listing below is imported verbatim from the preserved source query so that the SQL text remains unchanged.
+
+\lstinputlisting[
+  style=patstatsql,
+  caption={PATSTAT AI patent retrieval SQL used for the AI patent corpus},
+  label={lst:patstat-ai-sql}
+]{patstat_ai_query_template_ai_expanded_v2_fast_stage1.sql}
+
+\section{Physical AI and Physical AI Risk Filtering Rules}
+
+Listing~\ref{lst:pai-risk-filter} documents the SQL-equivalent filtering rules used to move from the AI corpus to the Physical AI candidate set and then to the Physical AI risk subset. The production extraction script implements the same term logic; this listing records it in a database-readable form for reproducibility.
+
+\lstinputlisting[
+  style=patstatsql,
+  caption={SQL-equivalent Physical AI and Physical AI Risk filtering rules},
+  label={lst:pai-risk-filter}
+]{physical_ai_risk_sql_equivalent_filters.sql}
+
+\section{Web of Science Search Query}
+
+Listing~\ref{lst:wos-query} reproduces the Web of Science topic-search query preserved in the raw source collection. The listing below is imported verbatim so that the query text remains unchanged.
+
+\lstinputlisting[
+  style=wosquery,
+  caption={Web of Science topic-search query preserved from the local source collection},
+  label={lst:wos-query}
+]{wos_query_20260530.txt}
+
+\section{Data Availability: Full Construction Corpora}
+
+This appendix documents the full-corpus datasets that underlie the integrated counts in Table~\ref{tab:integrated-document-space-counts}. Master and final datasets are treated as read-only. For every source family a \emph{domestic/global comparison key} (Korea vs.\ worldwide total) is recorded, so that all downstream statistics can be reported as domestic, overseas, and total.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Full construction corpus: patents (PATSTAT)}
+\label{tab:corpus-patents}
+\begin{tabularx}{\linewidth}{Xr l}
+\toprule
+Dataset & Records & Note \\
+\midrule
+AI patents (integrated) & 2,032,236 & Table~\ref{tab:integrated-document-space-counts} PATSTAT AI corpus \\
+Non-AI patents (full) & 3,850,424 & \\
+AI Infrastructure patents (integrated) & 522,085 & Table~\ref{tab:integrated-document-space-counts} PATSTAT AI infrastructure corpus \\
+\midrule
+\textbf{Total patent universe (AI + Non-AI)} & \textbf{5,887,803} & Analysis base rate / denominator \\
+\bottomrule
+\end{tabularx}
+\par\smallskip\begin{minipage}{0.92\linewidth}
+\footnotesize\textit{Note:} PATSTAT Stage-2 joined records. Domestic/global key: applicant country.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Full construction corpus: scholarly papers (Web of Science)}
+\label{tab:corpus-papers}
+\begin{tabularx}{\linewidth}{Xrr l}
+\toprule
+Category & Raw entries & After dedup & Note \\
+\midrule
+AI papers & -- & 1,749,159 & Table~\ref{tab:integrated-document-space-counts} integrated scholarly AI corpus \\
+Physical AI Risks papers & -- & 50,375 & Table~\ref{tab:integrated-document-space-counts} integrated scholarly risk corpus \\
+AI Governance & 12,101 & 12,101 & societal/governance evidence \\
+Manual SavedRecs & 28,000 & 27,000 & manually curated records \\
+\bottomrule
+\end{tabularx}
+\par\smallskip\begin{minipage}{0.92\linewidth}
+\footnotesize\textit{Note:} Domestic/global key: Korea affiliation / country.
+\end{minipage}
+\end{table}
+
+Within-category deduplication is applied; cross-category duplication (e.g., a paper appearing in both AI Global and AI Risk) is intentionally retained as a crosswalk signal. Raw \texttt{.bib} inputs comprise 2,716 top-level files and 2,701,711 BibTeX entries (with duplicates).
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Full construction corpus: policy and governance reports}
+\label{tab:corpus-policy}
+\begin{tabularx}{\linewidth}{Xr l}
+\toprule
+Dataset & Records & Note \\
+\midrule
+Curated policy/report master & 4,947 & largest curated master \\
+Taxonomy/embedding training view & 3,119 & \\
+Core policy reports & 1,052 & \\
+Reference-chain integrated master & 3,341 & \\
+Report-to-report reference edges & 243 & citation graph \\
+\midrule
+Broader materials master (share) & 124,881 & domestic + overseas policy/materials \\
+AI master dataframe (base) & 105,283 & \\
+Non-AI / metadata-only policy & 192,682 & \\
+\bottomrule
+\end{tabularx}
+\par\smallskip\begin{minipage}{0.92\linewidth}
+\footnotesize\textit{Note:} Domestic/global key: domestic/foreign flag.
+\end{minipage}
+\end{table}
+
+The current integrated record-level datasets are organized by source family and category, with headline denominators of 383,149 Physical AI records and 82,971 Physical AI risk records, split across papers, policy reports, and patents as shown in Table~\ref{tab:integrated-document-space-counts}.
+
+\textbf{Identifier and comparison keys.} Records are keyed by application identifier (patents), WoS~ID / DOI / title--year (papers), and a stable record identifier with title/year/institution (policy). Deduplication is applied within each document type; cross-type duplication is retained to support paper--policy--patent crosswalks. Every statistic derived from these corpora should be reported with a domestic (Korea) versus overseas (worldwide total) breakdown using the domestic/global key listed for each source family.
+
+\begin{thebibliography}{99}
+
+\bibitem{clarivate-wos}
+Clarivate. \textit{Web of Science Platform}. Accessed 2026-07-03. \url{https://clarivate.com/academia-government/scientific-and-academic-research/research-discovery-and-referencing/web-of-science/}.
+
+\bibitem{openalex}
+OpenAlex. \textit{OpenAlex Developers: Overview}. Accessed 2026-07-03. \url{https://developers.openalex.org/}.
+
+\bibitem{crossref-rest}
+Crossref. \textit{REST API: Retrieve Metadata}. Accessed 2026-07-03. \url{https://www.crossref.org/documentation/retrieve-metadata/rest-api/}.
+
+\bibitem{ror}
+Research Organization Registry. \textit{Research Organization Registry (ROR)}. Accessed 2026-07-03. \url{https://ror.org/}.
+
+\bibitem{epo-patstat}
+European Patent Office. \textit{PATSTAT: EPO Worldwide Patent Statistical Database}. Accessed 2026-07-03. \url{https://www.epo.org/en/service-support/faq/searching-patents/about-patent-information/where-can-i-find-patent-statistics}.
+
+\bibitem{kipris}
+Korea Institute of Patent Information. \textit{KIPRIS Intellectual Property Information Search Service}. Accessed 2026-07-03. \url{https://www.kipris.or.kr/khome/main.do}.
+
+\bibitem{zupic2015}
+Zupic, I., and \v{C}ater, T. \textit{Bibliometric Methods in Management and Organization}. Organizational Research Methods, 18(3), 429--472, 2015. \href{https://doi.org/10.1177/1094428114562629}{doi:10.1177/1094428114562629}.
+
+\bibitem{vaneck2010}
+van Eck, N. J., and Waltman, L. \textit{Software survey: VOSviewer, a computer program for bibliometric mapping}. Scientometrics, 84, 523--538, 2010. \href{https://doi.org/10.1007/s11192-009-0146-3}{doi:10.1007/s11192-009-0146-3}.
+
+\bibitem{aria2017}
+Aria, M., and Cuccurullo, C. \textit{bibliometrix: An R-tool for comprehensive science mapping analysis}. Journal of Informetrics, 11(4), 959--975, 2017. \href{https://doi.org/10.1016/j.joi.2017.08.007}{doi:10.1016/j.joi.2017.08.007}.
+
+\bibitem{hicks2015}
+Hicks, D., Wouters, P., Waltman, L., de Rijcke, S., and Rafols, I. \textit{Bibliometrics: The Leiden Manifesto for research metrics}. Nature, 520, 429--431, 2015. \href{https://doi.org/10.1038/520429a}{doi:10.1038/520429a}.
+
+\bibitem{oecd2009patent}
+OECD. \textit{OECD Patent Statistics Manual}. OECD Publishing, 2009. Accessed 2026-07-03. \url{https://www.oecd.org/en/publications/2009/02/oecd-patent-statistics-manual_g1gh9fa4.html}.
+
+\bibitem{oecd-ipstats}
+OECD. \textit{Intellectual Property Statistics}. Accessed 2026-07-03. \url{https://www.oecd.org/en/data/datasets/intellectual-property-statistics.html}.
+
+\bibitem{aacods}
+Tyndall, J. \textit{AACODS Checklist for Appraising Grey Literature}. Flinders University, 2010. Accessed 2026-07-03. \url{https://fac.flinders.edu.au/dspace/api/core/bitstreams/e94a96eb-0334-4300-8880-c836d4d9a676/content}.
+
+\bibitem{tricco2018}
+Tricco, A. C., Lillie, E., Zarin, W., O'Brien, K. K., Colquhoun, H., Levac, D., Moher, D., Peters, M. D. J., Horsley, T., Weeks, L., Hempel, S., et al. \textit{PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation}. Annals of Internal Medicine, 169(7), 467--473, 2018. \href{https://doi.org/10.7326/M18-0850}{doi:10.7326/M18-0850}.
+
+\bibitem{nvidia-cosmos}
+NVIDIA. \textit{NVIDIA Cosmos: Physical AI with World Foundation Models}. Accessed 2026-07-03. \url{https://www.nvidia.com/en-us/ai/cosmos/}.
+
+\bibitem{nist-airmf}
+National Institute of Standards and Technology. \textit{Artificial Intelligence Risk Management Framework (AI RMF 1.0)}. 2023. Accessed 2026-07-03. \url{https://www.nist.gov/itl/ai-risk-management-framework}.
+
+\bibitem{iso23894}
+ISO/IEC. \textit{ISO/IEC 23894:2023, Artificial intelligence -- Guidance on risk management}. 2023. Accessed 2026-07-03. \url{https://www.iso.org/standard/77304.html}.
+
+\bibitem{iso10218}
+ISO. \textit{ISO 10218-1:2025, Robotics -- Safety requirements -- Part 1: Industrial robots}. 2025. Accessed 2026-07-03. \url{https://www.iso.org/standard/73933.html}.
+
+\bibitem{iso5469}
+ISO/IEC. \textit{ISO/IEC TR 5469:2024, Artificial intelligence -- Functional safety and AI systems}. 2024. Accessed 2026-07-03. \url{https://www.iso.org/standard/81283.html}.
+
+\bibitem{iso8200}
+ISO/IEC. \textit{ISO/IEC TS 8200:2024, Information technology -- Artificial intelligence -- Controllability of automated artificial intelligence systems}. 2024. Accessed 2026-07-03. \url{https://www.iso.org/standard/83012.html}.
+
+\bibitem{mitre-atlas}
+MITRE. \textit{ATLAS: Adversarial Threat Landscape for Artificial-Intelligence Systems}. Accessed 2026-07-03. \url{https://atlas.mitre.org/}.
+
+\bibitem{sermanet-asimov}
+Sermanet, P., Majumdar, A., Irpan, A., Kalashnikov, D., and Sindhwani, V. \textit{Generating Robot Constitutions \& Benchmarks for Semantic Safety}. arXiv:2503.08663, 2025. \url{https://arxiv.org/abs/2503.08663}.
+
+\bibitem{asimov2}
+ASIMOV Benchmark. \textit{ASIMOV Benchmark v2}. Accessed 2026-07-03. \url{https://asimov-benchmark.github.io/v2/}.
+
+\bibitem{chen2024bgem3}
+Chen, J., Xiao, S., Zhang, P., Luo, K., Lian, D., and Liu, Z. \textit{M3-Embedding: Multi-Linguality, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation}. Findings of the Association for Computational Linguistics: ACL 2024. \url{https://aclanthology.org/2024.findings-acl.137/}. Model card: \url{https://huggingface.co/BAAI/bge-m3}.
+
+\bibitem{campello2013}
+Campello, R. J. G. B., Moulavi, D., and Sander, J. \textit{Density-Based Clustering Based on Hierarchical Density Estimates}. Pacific-Asia Conference on Knowledge Discovery and Data Mining, 2013. \href{https://doi.org/10.1007/978-3-642-37456-2_14}{doi:10.1007/978-3-642-37456-2\_14}.
+
+\bibitem{hdbscan2017}
+McInnes, L., Healy, J., and Astels, S. \textit{hdbscan: Hierarchical density based clustering}. Journal of Open Source Software, 2(11), 205, 2017. \url{https://www.theoj.org/joss-papers/joss.00205/10.21105.joss.00205.pdf}.
+
+\bibitem{umap2018}
+McInnes, L., Healy, J., and Melville, J. \textit{UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction}. arXiv:1802.03426, 2018. \url{https://arxiv.org/abs/1802.03426}.
+
+\bibitem{grootendorst2022}
+Grootendorst, M. \textit{BERTopic: Neural topic modeling with a class-based TF-IDF procedure}. arXiv:2203.05794, 2022. \url{https://arxiv.org/abs/2203.05794}.
+
+\bibitem{dempster1977}
+Dempster, A. P., Laird, N. M., and Rubin, D. B. \textit{Maximum Likelihood from Incomplete Data via the EM Algorithm}. Journal of the Royal Statistical Society: Series B (Methodological), 39(1), 1--22, 1977. \href{https://doi.org/10.1111/j.2517-6161.1977.tb01600.x}{doi:10.1111/j.2517-6161.1977.tb01600.x}.
+
+\bibitem{dhillon2001}
+Dhillon, I. S., and Modha, D. S. \textit{Concept Decompositions for Large Sparse Text Data Using Clustering}. Machine Learning, 42(1--2), 143--175, 2001. \href{https://doi.org/10.1023/A:1007612920971}{doi:10.1023/A:1007612920971}.
+
+\bibitem{weidinger2021}
+Weidinger, L., Mellor, J., Rauh, M., et al. \textit{Ethical and social risks of harm from Language Models}. arXiv:2112.04359, 2021. \url{https://arxiv.org/abs/2112.04359}.
+
+\bibitem{slattery2024}
+Slattery, P., Saeri, A. K., Grundy, E. A. C., et al. \textit{The AI Risk Repository: A Comprehensive Meta-Review, Database, and Taxonomy of Risks From Artificial Intelligence}. arXiv:2408.12622, 2024. \url{https://arxiv.org/abs/2408.12622}.
+
+\bibitem{chan2023}
+Chan, A., Salganik, R., Markelius, A., et al. \textit{Harms from Increasingly Agentic Algorithmic Systems}. Proceedings of the 2023 ACM Conference on Fairness, Accountability, and Transparency (FAccT '23). arXiv:2302.10329, 2023. \href{https://doi.org/10.1145/3593013.3594033}{doi:10.1145/3593013.3594033}. \url{https://arxiv.org/abs/2302.10329}.
+
+\bibitem{askell2021}
+Askell, A., Bai, Y., Chen, A., et al. \textit{A General Language Assistant as a Laboratory for Alignment}. arXiv:2112.00861, 2021. \url{https://arxiv.org/abs/2112.00861}.
+
+\bibitem{bai2022}
+Bai, Y., Kadavath, S., Kundu, S., et al. \textit{Constitutional AI: Harmlessness from AI Feedback}. arXiv:2212.08073, 2022. \url{https://arxiv.org/abs/2212.08073}.
+
+\bibitem{hendrycks2023}
+Hendrycks, D., Mazeika, M., and Woodside, T. \textit{An Overview of Catastrophic AI Risks}. arXiv:2306.12001, 2023. \url{https://arxiv.org/abs/2306.12001}.
+
+\bibitem{bommasani2021}
+Bommasani, R., Hudson, D. A., Adeli, E., et al. \textit{On the Opportunities and Risks of Foundation Models}. Stanford CRFM. arXiv:2108.07258, 2021. \url{https://arxiv.org/abs/2108.07258}.
+
+\bibitem{amodei2016}
+Amodei, D., Olah, C., Steinhardt, J., Christiano, P., Schulman, J., and Man\'e, D. \textit{Concrete Problems in AI Safety}. arXiv:1606.06565, 2016. \url{https://arxiv.org/abs/1606.06565}.
+
+\bibitem{yampolskiy2016}
+Yampolskiy, R. V. \textit{Taxonomy of Pathways to Dangerous Artificial Intelligence}. AAAI Workshop, 2016. arXiv:1511.03246. \url{https://arxiv.org/abs/1511.03246}.
+
+\bibitem{critch2020}
+Critch, A., and Krueger, D. \textit{AI Research Considerations for Human Existential Safety (ARCHES)}. arXiv:2006.04948, 2020. \url{https://arxiv.org/abs/2006.04948}.
+
+\bibitem{oecd2022class}
+OECD. \textit{OECD Framework for the Classification of AI Systems}. OECD Digital Economy Papers No.\ 323, 2022. \href{https://doi.org/10.1787/cb6d9eca-en}{doi:10.1787/cb6d9eca-en}.
+
+\bibitem{oecd2024incidents}
+OECD. \textit{Defining AI incidents and related terms}. OECD Artificial Intelligence Papers No.\ 16, 2024. \href{https://doi.org/10.1787/d1a8d965-en}{doi:10.1787/d1a8d965-en}.
+
+\bibitem{shevlane2023}
+Shevlane, T., Farquhar, S., Garfinkel, B., et al. \textit{Model evaluation for extreme risks}. arXiv:2305.15324, 2023. \url{https://arxiv.org/abs/2305.15324}.
+
+\bibitem{gabriel2024}
+Gabriel, I., Manzini, A., Keeling, G., et al. \textit{The Ethics of Advanced AI Assistants}. Google DeepMind. arXiv:2404.16244, 2024. \url{https://arxiv.org/abs/2404.16244}.
+
+\bibitem{openai2025prep}
+OpenAI. \textit{Preparedness Framework (Version 2)}. OpenAI, 2025. \url{https://openai.com/index/updating-our-preparedness-framework/}.
+
+\bibitem{anthropic2024rsp}
+Anthropic. \textit{Anthropic's Responsible Scaling Policy}. Anthropic, 2023--2025. \url{https://www.anthropic.com/responsible-scaling-policy}.
+
+\bibitem{deepmind2025fsf}
+Google DeepMind. \textit{Frontier Safety Framework (Version 2.0)}. Google DeepMind, 2025. \url{https://deepmind.google/discover/blog/updating-the-frontier-safety-framework/}.
+
+\bibitem{shavit2023}
+Shavit, Y., Agarwal, S., Brundage, M., et al. \textit{Practices for Governing Agentic AI Systems}. OpenAI, 2023. \url{https://openai.com/research/practices-for-governing-agentic-ai-systems}.
+
+\bibitem{chan2024}
+Chan, A., Ezell, C., Kaufmann, M., et al. \textit{Visibility into AI Agents}. Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT '24). arXiv:2401.13138, 2024. \href{https://doi.org/10.1145/3630106.3658948}{doi:10.1145/3630106.3658948}.
+
+\bibitem{benton2024}
+Benton, J., Wagner, M., Christiansen, E., et al. \textit{Sabotage Evaluations for Frontier Models}. Anthropic. arXiv:2410.21514, 2024. \url{https://arxiv.org/abs/2410.21514}.
+
+\bibitem{iso21448}
+International Organization for Standardization. \textit{ISO 21448:2022 --- Road vehicles: Safety of the intended functionality (SOTIF)}. ISO, 2022. \url{https://www.iso.org/standard/77490.html}.
+
+\bibitem{ul4600}
+Underwriters Laboratories. \textit{ANSI/UL 4600: Standard for Evaluation of Autonomous Products}. UL Standards, 2023. \url{https://www.shopulstandards.com/ProductDetail.aspx?productId=UL4600}.
+
+\end{thebibliography}
+
+\end{document}
