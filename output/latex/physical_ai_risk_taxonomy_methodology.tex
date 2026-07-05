@@ -201,6 +201,24 @@ The methodological problem is that Physical AI risk taxonomies cannot be built p
 \fignote{The interface is used as the visual inspection layer for the Physical AI Risk Taxonomy. It presents the L0--L4 hierarchy, L2 source categories, L3 sub-category distribution, L4 risk-card counts, and representative 3H1R badges. The screenshot is included as a visual artifact of the release state; the report does not rely on the web page as a bibliographic source.}
 \end{figure}
 
+\section{Background: From Asimov's Laws to Alignment-Grounded Risk Cards}
+
+The problem of constraining a physical machine's behavior did not begin with reinforcement learning; its first serious formulation is literary. Asimov's Three Laws of Robotics---and the later Zeroth Law protecting humanity as a whole---posed behavioral constraints embedded in the machine itself: do not injure a human or through inaction allow harm; obey human orders except where they conflict with the first law; protect your own existence except where that conflicts with the first two~\cite{asimov1950}. What endures is the \emph{shape} of the proposal: a small set of ranked, general-purpose priorities meant to hold across every situation. The limitations are equally durable. The laws are natural-language and therefore ambiguous exactly where it matters---``harm,'' ``human,'' and ``inaction'' have no operational definition a controller could evaluate; their lexical ranking resolves conflicts only when the terms are already crisp; and they presume a benevolent designer and a robot that perceives and reasons correctly, with no representation of the machine's own capability limits or of the probability that its perception is wrong. They specify \emph{values} with no theory of \emph{grounding}.
+
+Modern alignment research supplies that grounding in stages, each closing one gap and exposing another. Reward specification treats desired behavior as an objective to optimize, and its central lesson is negative: agents satisfy the letter of a reward while violating its intent, so even a well-meant objective becomes a source of harm~\cite{amodei2016}. Principle-based alignment answers this at a higher level of abstraction: rather than hand-crafting a scalar reward, one states a few natural-language principles and trains the system to critique and revise against them. The helpful--harmless--honest desiderata and constitutional training operationalize this for language models with real success~\cite{askell2021,bai2022}. But a constitution written for a chat model governs \emph{what is said}; it is under-specified for \emph{what is done}, with no native account of embodiment, irreversible physical action, or the role and authority a machine holds---whether it may lawfully override a human, and when.
+
+A parallel governance line moved control from the action to the model. Capability-threshold frameworks gate deployment on whether a system crosses a dangerous-capability tier~\cite{openai2025prep,anthropic2024rsp,deepmind2025fsf}. This is the right instrument for frontier risk but coarse for Physical AI, where the failures that injure people are per-action and per-context rather than properties of a tier: a well-below-threshold policy can still crush a hand through a mundane control error. Functional-safety engineering supplies per-failure rigor---the safety of the intended functionality addresses hazards from performance limitations and foreseeable misuse absent any fault, and goal-based safety cases structure the argument for autonomous products~\cite{iso21448,ul4600}---but both were shaped around engineered, specifiable systems and map awkwardly onto learned policies whose failures are emergent and semantic rather than enumerable at design time~\cite{achiam2017}. The taxonomy literature is itself split: top-down expert taxonomies give stable structure but lag the field and reflect their authors' priors~\cite{weidinger2021,hendrycks2023}, while bottom-up corpus mining captures breadth and currency but yields flat, overlapping inventories without a defensible hierarchy~\cite{slattery2024}. Neither suffices alone.
+
+The remaining gap is specific: Physical AI needs its alignment values translated into units that are \emph{operational} (evaluable against an action), \emph{evidence-grounded} (traceable to literature, incidents, or benchmarks), and \emph{per-failure-mode} (one identifiable way the system goes wrong). Three commitments follow, and organize the rest of this report. First, the value axis is \textbf{3H1R}: the helpful--harmless--honest triad extended with an explicit \emph{Role-Consistency} axis. Harmless, Helpful, and Honest transfer from language alignment, but embodiment introduces a failure class those three do not name---acting outside granted authority, overriding a human who should not be overridden, or ceding control that should have been retained. Role-Consistency is added rather than folded into Harmlessness because authority violations occur even when no physical harm results; it is Asimov's obedience law made operational and evaluated per action~\cite{sermanet-asimov}. Second, the atomic unit is the \textbf{risk card}: one identifiable failure mode with an operational definition, supporting evidence, severity and probability estimates, and 3H1R tags---auditable in a way a natural-language law or a scalar reward is not. Third, the construction method is \textbf{hybrid}: an expert-defined upper structure reconciled against corpus-derived candidate cards, the only way to be at once stable enough to reason about and current enough to track a fast-moving field.
+
+\subsection*{Contributions}
+
+\textit{Theoretical.} We recast the helpful--harmless--honest desiderata as an operational lens for embodied action and add an explicit Role-Consistency axis (3H1R) that captures authority- and control-boundary failures invisible to a harm-only reading and absent in text-only settings. We give a constrained-optimization account of the Harmless--Helpful trade-off (Section~\ref{sec:hh}): modeling an embodied policy as a constrained Markov decision process~\cite{altman1999,achiam2017}, efficiency pressure predictably drives behavior toward the high-capability, high-harm quadrant, making the taxonomy's most dangerous cell a consequence of how these systems are optimized rather than an anomaly.
+
+\textit{Methodological.} A hybrid corpus-to-taxonomy pipeline reconciles a human-defined upper structure (L0--L2 and 24 human-defined L3 families) with bottom-up candidates discovered by BGE-M3 embedding and HDBSCAN clustering over papers, policy reports, and patents; each of the 182 L4 cards is reference-grounded and auditable at the level of the individual failure mode; and an EM-style hierarchy assignment places cards under L3 with reported reproducibility and robustness checks, so the hierarchy is measured rather than asserted.
+
+\textit{Practical.} We release an auditable 182-card catalogue with bilingual (Korean/English) coverage and 3H1R tags, usable as a governance checklist, an evaluation and red-teaming reference, and a benchmarking scaffold for Physical AI, connected to emerging embodied-safety benchmarks~\cite{sermanet-asimov,asimov2}.
+
 \section{Prior Methodological Basis}
 
 Before describing the corpus and its statistics, we situate the source- and institution-level measures used later in the report against four established lines of prior work. First, bibliometric and science-mapping studies routinely use publication metadata to examine the structure of research fields, including authors, affiliations, countries, venues, and collaboration networks. Zupic and \v{C}ater describe bibliometric methods as a systematic way to map research specialties through citation, co-citation, bibliographic coupling, co-author, and co-word analyses~\cite{zupic2015}. VOSviewer and bibliometrix operationalize this tradition as reproducible workflows for science mapping and bibliometric network analysis~\cite{vaneck2010,aria2017}. In this report, the affiliation-based statistics are narrower than a full science map: they are used to document which research organizations are represented in the Physical AI corpus, not to rank institutional performance.
@@ -244,6 +262,78 @@ L3 mapping: with seeds, assign each L4 to the nearest L3 and check alternatives;
 \end{table}
 
 Two threshold choices are treated as explicit release controls. First, the 0.52 Physical AI similarity threshold is not used as an abstract hyperparameter alone: it is paired with lexical overrides and audit inspection of below-threshold domains that were dominated by out-of-scope records such as nursing, agriculture, tourism, and general medical documents. Second, the 0.94 merge threshold is treated as an empirical separation point in the candidate-similarity distribution. It is intentionally conservative: a lower threshold would collapse distinct Physical AI failure modes, while a higher threshold would leave near-duplicate risk cards unresolved.
+
+\section{Workflow Overview}
+
+Figure~\ref{fig:workflow} summarizes the end-to-end workflow from raw source collection to the released taxonomy artifacts. The pipeline is intentionally hybrid: corpus-derived evidence is used to generate and deduplicate L4 risk candidates, while authoritative references and human review stabilize the hierarchy, definitions, and evidence justifications.
+
+For reproducibility, each stage is documented as an auditable transformation rather than as a narrative judgment. The raw retrieval layer is preserved through the exact PATSTAT SQL and Web of Science topic query reproduced in Appendices~A and~B. The intermediate layer records source-family counts, local file names, row counts, column counts, and file sizes. The modeling layer specifies the embedding input text, clustering method, c-TF-IDF label extraction, reference-grounding rule, merge threshold, and L3 assignment rule. The release layer is exported from the final HTML into CSV/JSON files so that card counts, references, hierarchy assignments, and 3H1R tags can be checked independently from the rendered web page.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[
+  font=\sffamily\small,
+  node distance=8mm and 10mm,
+  box/.style={rectangle, rounded corners=2pt, draw=#1, very thick, fill=#1!7,
+    align=center, minimum width=42mm, minimum height=11mm, inner sep=4pt},
+  proc/.style={box=flowg1},
+  data/.style={box=flowg2},
+  model/.style={box=flowg3},
+  review/.style={box=flowg4},
+  outputbox/.style={box=flowg5},
+  arrow/.style={-{Stealth[length=2.2mm,width=1.8mm]}, very thick, draw=black!68}
+]
+
+\node[data] (sources) at (0,0) {Raw source corpus\\WoS \(\cdot\) OpenAlex\\policy reports \(\cdot\) PATSTAT};
+\node[proc] (normalize) at (5.1,0) {Metadata normalization\\deduplication keys\\title--abstract fields};
+\node[model] (anchors) at (10.2,0) {Physical AI filtering\\BGE-M3 anchors\\explicit lexical markers};
+
+\node[proc] (riskfilter) at (10.2,-1.9) {Risk subset filtering\\safety \(\cdot\) security \(\cdot\) ethics\\failure terms};
+\node[model] (embed) at (5.1,-1.9) {Document embeddings\\\(\Enc(\mathrm{title}\Vert\mathrm{abstract})\)};
+\node[model] (cluster) at (0,-1.9) {Semantic clustering\\HDBSCAN\\c-TF-IDF keyphrases};
+
+\node[review] (reffilter) at (0,-4.4) {Reference grounding\\standards \(\cdot\) frameworks\\benchmarks \(\cdot\) papers};
+\node[proc] (merge) at (5.1,-4.4) {Candidate deduplication\\pairwise similarity\\iterative merge \(\tau=0.94\)};
+\node[outputbox] (l4) at (10.2,-4.4) {182 L4 risk cards\\stable IDs\\definitions \(\cdot\) evidence};
+
+\node[model] (l3) at (10.2,-7.0) {L3 family assignment\\EM-style nearest centroid\\24 sub-categories};
+\node[review] (human) at (5.1,-7.0) {Expert review\\boundary corrections\\reference cap \(\leq 5\) per card};
+\node[outputbox] (release) at (0,-7.0) {Released artifacts\\HTML taxonomy\\CSV/JSON maps\\methodology PDF};
+
+\draw[arrow] (sources) -- (normalize);
+\draw[arrow] (normalize) -- (anchors);
+\draw[arrow] (anchors) -- (riskfilter);
+\draw[arrow] (riskfilter) -- (embed);
+\draw[arrow] (embed) -- (cluster);
+\draw[arrow] (cluster) -- (reffilter);
+\draw[arrow] (reffilter) -- (merge);
+\draw[arrow] (merge) -- (l4);
+\draw[arrow] (l4) -- (l3);
+\draw[arrow] (l3) -- (human);
+\draw[arrow] (human) -- (release);
+
+\begin{scope}[on background layer]
+  \node[draw=black!40, semithick, rounded corners=3pt, fill=black!4, inner sep=4pt,
+    fit=(sources)(normalize)(anchors)(riskfilter)(embed)(cluster)] (bandA) {};
+  \node[draw=black!40, semithick, rounded corners=3pt, fill=black!4, inner sep=4pt,
+    fit=(reffilter)(merge)(l4)] (bandB) {};
+  \node[draw=black!40, semithick, rounded corners=3pt, fill=black!4, inner sep=4pt,
+    fit=(l3)(human)(release)] (bandC) {};
+\end{scope}
+\node[anchor=south, font=\sffamily\small\bfseries, text=black!80] at (bandA.north)
+  {Step 1\quad Collection and corpus filtering};
+\node[anchor=south, font=\sffamily\small\bfseries, text=black!80] at (bandB.north)
+  {Step 2\quad Risk-candidate generation and deduplication};
+\node[anchor=south, font=\sffamily\small\bfseries, text=black!80] at (bandC.north)
+  {Step 3\quad Hierarchy assignment, review, and release};
+
+\end{tikzpicture}%
+}
+\caption{End-to-end taxonomy construction and release workflow}
+\label{fig:workflow}
+\fignote{Arrows denote the main data-processing path. The expert-review stage is applied iteratively: L4 risk cards and L3 assignments are repeatedly revised through expert review before release.}
+\end{figure}
 
 \section{Data Sources and Corpus Construction}
 
@@ -353,16 +443,6 @@ This two-stage rule separates semantic inclusion in the Physical AI domain from 
 
 \textbf{Record-level snapshot.} The year-level statistics in this section are computed on a released local reproducible snapshot of 23,191 Physical AI records (7,132 scholarly, 1,042 policy, and 15,017 patent), which is the auditable slice available for direct recomputation. The full corpus totals are reported separately in Table~\ref{tab:integrated-document-space-counts} as the integrated-source view.
 
-\textbf{Temporal trend.} Figure~\ref{fig:corpus-trend} shows Physical AI record volume by source family and year in the reproducible snapshot. Volume is negligible before the mid-2010s and rises sharply afterward. Patent records grow fastest and dominate the total, peaking around 2019 (1,712 records) and then plateauing near 1,300--1,500 per year; scholarly records rise steadily to a 2021 peak (713) before easing; policy/report records remain small in absolute terms but accelerate after 2020 (from 103 in 2020 to 216 in 2025), consistent with governance attention lagging technical activity. The 2026 partial year is truncated by the collection cutoff.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.92\linewidth]{fig_risk_trend.pdf}
-\caption{Physical AI record volume by source family and year}
-\label{fig:corpus-trend}
-\fignote{Counts are from the released local reproducible snapshot (\(N=23{,}191\)). Bars are stacked by source family; the 2026 bar is a truncated partial year.}
-\end{figure}
-
 \textbf{Level distribution.} Figure~\ref{fig:level-dist} summarizes how the 182 released L4 risk cards distribute across the taxonomy levels. System Safety (P2) holds 91 cards (50.0\%), Interaction Safety (I2) 62 (34.1\%), and Societal Safety (S2) 29 (15.9\%). At L3, the largest families are Robot Control (45), Accidental Harm (22), and Purposeful/Malicious Harm (17), followed by Lack of Robustness in Unseen Environments and Human Interaction \& Safety Protocol Failures (13 each). Societal families such as Lack of Accountability \& Liability (12) are intentionally retained even when sparser, because the taxonomy supports governance review and future expansion rather than frequency-only clustering.
 
 \begin{figure}[htbp]
@@ -370,79 +450,7 @@ This two-stage rule separates semantic inclusion in the Physical AI domain from 
 \includegraphics[width=\linewidth]{fig_taxonomy_levels.pdf}
 \caption{Distribution of the 182 released L4 risk cards}
 \label{fig:level-dist}
-\fignote{Left: L2 category counts. Right: top L3 sub-categories by L4 card count, colored by L2 domain (blue = System, green = Interaction, purple = Societal).}
-\end{figure}
-
-\section{Workflow Overview}
-
-Figure~\ref{fig:workflow} summarizes the end-to-end workflow from raw source collection to the released taxonomy artifacts. The pipeline is intentionally hybrid: corpus-derived evidence is used to generate and deduplicate L4 risk candidates, while authoritative references and human review stabilize the hierarchy, definitions, and evidence justifications.
-
-For reproducibility, each stage is documented as an auditable transformation rather than as a narrative judgment. The raw retrieval layer is preserved through the exact PATSTAT SQL and Web of Science topic query reproduced in Appendices~A and~B. The intermediate layer records source-family counts, local file names, row counts, column counts, and file sizes. The modeling layer specifies the embedding input text, clustering method, c-TF-IDF label extraction, reference-grounding rule, merge threshold, and L3 assignment rule. The release layer is exported from the final HTML into CSV/JSON files so that card counts, references, hierarchy assignments, and 3H1R tags can be checked independently from the rendered web page.
-
-\begin{figure}[htbp]
-\centering
-\resizebox{\linewidth}{!}{%
-\begin{tikzpicture}[
-  font=\sffamily\small,
-  node distance=8mm and 10mm,
-  box/.style={rectangle, rounded corners=2pt, draw=#1, very thick, fill=#1!7,
-    align=center, minimum width=42mm, minimum height=11mm, inner sep=4pt},
-  proc/.style={box=flowg1},
-  data/.style={box=flowg2},
-  model/.style={box=flowg3},
-  review/.style={box=flowg4},
-  outputbox/.style={box=flowg5},
-  arrow/.style={-{Stealth[length=2.2mm,width=1.8mm]}, very thick, draw=black!68}
-]
-
-\node[data] (sources) at (0,0) {Raw source corpus\\WoS \(\cdot\) OpenAlex\\policy reports \(\cdot\) PATSTAT};
-\node[proc] (normalize) at (5.1,0) {Metadata normalization\\deduplication keys\\title--abstract fields};
-\node[model] (anchors) at (10.2,0) {Physical AI filtering\\BGE-M3 anchors\\explicit lexical markers};
-
-\node[proc] (riskfilter) at (10.2,-1.9) {Risk subset filtering\\safety \(\cdot\) security \(\cdot\) ethics\\failure terms};
-\node[model] (embed) at (5.1,-1.9) {Document embeddings\\\(\Enc(\mathrm{title}\Vert\mathrm{abstract})\)};
-\node[model] (cluster) at (0,-1.9) {Semantic clustering\\HDBSCAN\\c-TF-IDF keyphrases};
-
-\node[review] (reffilter) at (0,-4.4) {Reference grounding\\standards \(\cdot\) frameworks\\benchmarks \(\cdot\) papers};
-\node[proc] (merge) at (5.1,-4.4) {Candidate deduplication\\pairwise similarity\\iterative merge \(\tau=0.94\)};
-\node[outputbox] (l4) at (10.2,-4.4) {182 L4 risk cards\\stable IDs\\definitions \(\cdot\) evidence};
-
-\node[model] (l3) at (10.2,-7.0) {L3 family assignment\\EM-style nearest centroid\\24 sub-categories};
-\node[review] (human) at (5.1,-7.0) {Expert review\\boundary corrections\\reference cap \(\leq 5\) per card};
-\node[outputbox] (release) at (0,-7.0) {Released artifacts\\HTML taxonomy\\CSV/JSON maps\\methodology PDF};
-
-\draw[arrow] (sources) -- (normalize);
-\draw[arrow] (normalize) -- (anchors);
-\draw[arrow] (anchors) -- (riskfilter);
-\draw[arrow] (riskfilter) -- (embed);
-\draw[arrow] (embed) -- (cluster);
-\draw[arrow] (cluster) -- (reffilter);
-\draw[arrow] (reffilter) -- (merge);
-\draw[arrow] (merge) -- (l4);
-\draw[arrow] (l4) -- (l3);
-\draw[arrow] (l3) -- (human);
-\draw[arrow] (human) -- (release);
-
-\begin{scope}[on background layer]
-  \node[draw=black!40, semithick, rounded corners=3pt, fill=black!4, inner sep=4pt,
-    fit=(sources)(normalize)(anchors)(riskfilter)(embed)(cluster)] (bandA) {};
-  \node[draw=black!40, semithick, rounded corners=3pt, fill=black!4, inner sep=4pt,
-    fit=(reffilter)(merge)(l4)] (bandB) {};
-  \node[draw=black!40, semithick, rounded corners=3pt, fill=black!4, inner sep=4pt,
-    fit=(l3)(human)(release)] (bandC) {};
-\end{scope}
-\node[anchor=south, font=\sffamily\small\bfseries, text=black!80] at (bandA.north)
-  {Step 1\quad Collection and corpus filtering};
-\node[anchor=south, font=\sffamily\small\bfseries, text=black!80] at (bandB.north)
-  {Step 2\quad Risk-candidate generation and deduplication};
-\node[anchor=south, font=\sffamily\small\bfseries, text=black!80] at (bandC.north)
-  {Step 3\quad Hierarchy assignment, review, and release};
-
-\end{tikzpicture}%
-}
-\caption{End-to-end taxonomy construction and release workflow}
-\label{fig:workflow}
-\fignote{Arrows denote the main data-processing path. The expert-review stage is applied iteratively: L4 risk cards and L3 assignments are repeatedly revised through expert review before release.}
+\fignote{Main panel: top L3 sub-categories by L4 card count, colored by L2 domain (blue = System, green = Interaction, purple = Societal). Inset: L2 category distribution (P2 System, I2 Interaction, S2 Societal).}
 \end{figure}
 
 \section{Document-Space Embedding and Projection}
@@ -802,6 +810,7 @@ Governance and reproducibility & Duplicate source registration is controlled, lo
 \end{table}
 
 \section{Harmless--Helpful Trade-off for Physical AI Actions}
+\label{sec:hh}
 
 For a physically embodied agent, the 3H1R \emph{Harmless} and \emph{Helpful} dimensions are coupled: acting faster and with less deliberation raises task efficiency but erodes the caution margin that keeps an action harmless~\cite{bai2022}. We cast this as a two-axis operating space for humanoid and other Physical AI actions (Figure~\ref{fig:hh-tradeoff}), using established formalisms from quantitative risk analysis, embodied-agent evaluation, and safe control for each axis.
 
@@ -848,6 +857,21 @@ This is where the taxonomy re-enters. The two Unsafe rows of Figure~\ref{fig:hh-
 \section{Reproducibility Artifacts}
 
 The public taxonomy is maintained as a single HTML page with a versioned copy, and is exported by a release script into machine-readable card, reference, and summary files together with the curation and audit scripts and the documented 3H1R Primary-axis exception list. A reproducible rerun follows this order. First, verify the source-retrieval artifacts reproduced in the appendices: the PATSTAT SQL and the Web of Science query. Second, reconstruct or verify the local working snapshot in Table~\ref{tab:working-snapshot} and confirm its row, column, and size denominators. Third, apply Algorithm~1 to generate and deduplicate L4 candidates, preserving all source identifiers and reference links. Fourth, apply Algorithm~2 to assign the resulting L4 risks to the 24 L3 families and record any human corrections as audit metadata. Fifth, export the final HTML into the machine-readable card, reference, and summary files. Finally, compare the exported counts against Table~\ref{tab:taxonomy-snapshot} and verify that no L4 card violates the five-reference cap or loses its bilingual definition, evidence justification, or hierarchy assignment.
+
+\section{Limitations and Open Problems}
+
+This release is a draft, and several of its commitments are motivated rather than yet demonstrated. We state the main limitations plainly.
+
+\begin{enumerate}[leftmargin=1.5em,itemsep=0.3em]
+  \item \textbf{The added Role-Consistency axis is not yet empirically validated.} R is theoretically motivated as the embodied analogue of obedience and authority, but we have not shown that annotators apply it reliably or that it captures variance not already covered by Harmlessness. Whether R is a distinct axis or a correlated sub-case of H1 is an open question requiring a labeling study with inter-annotator agreement measured on R specifically.
+  \item \textbf{3H1R coverage is asserted, not measured.} We claim the four axes span the alignment-relevant failure surface for embodied action, but offer no completeness argument; some cards---emergent multi-agent or environmental-structural risks in particular---sit awkwardly on a per-action value scheme~\cite{hendrycks2023}.
+  \item \textbf{Severity and probability are proxies, not measurements.} The per-card estimates are expert-assigned ordinal judgments in the quantitative-risk tradition~\cite{kaplan1981} without incident-frequency data behind them. They should be read as a triage ranking, not calibrated risk, and are the weakest input to any downstream prioritization.
+  \item \textbf{Corpus and source bias.} The evidence base skews English-language and toward Web of Science papers and PATSTAT patents, with a Korea/English framing. Failure modes documented mainly in non-English incident reports, gray literature, or operational logs are under-represented, and the patent channel over-weights commercially patentable failures.
+  \item \textbf{The expert L3 partition is only partially reproducible from embeddings.} Top-1 embedding assignment recovers about three-quarters of the human L3 structure (Section~\ref{sec:hh} notwithstanding, see the Sensitivity Analysis); the remaining quarter depends on expert judgment the pipeline does not reconstruct, which bounds how ``bottom-up'' the hierarchy can honestly be called.
+  \item \textbf{The 182 cards are a snapshot, not an exhaustive enumeration.} The catalogue reflects the corpus and expert pool at one point in time. Physical AI capability moves faster than the taxonomy can be re-mined, and we have not yet committed to an update cadence or versioning discipline.
+  \item \textbf{The Harmless--Helpful account is a conceptual model, not a fitted controller.} We argue \emph{why} efficiency pressure produces the high-harm quadrant, but do not fit a constrained-MDP controller to embodied data or estimate the multipliers empirically; the claim is a directional, theory-level prediction~\cite{altman1999,achiam2017}.
+  \item \textbf{Limited annotation validation.} Card definitions and 3H1R tags rest on a small annotator pool with limited inter-rater reliability reporting; the multi-rater study needed to separate genuine signal from individual judgment---especially for the new R axis and borderline severity calls---remains to be done.
+\end{enumerate}
 
 \section{Conclusion}
 
@@ -1173,6 +1197,9 @@ Altman, E. \textit{Constrained Markov Decision Processes}. Chapman \& Hall/CRC, 
 
 \bibitem{anderson2018}
 Anderson, P., Chang, A., Chaplot, D. S., Dosovitskiy, A., Gupta, S., Koltun, V., Kosecka, J., Malik, J., Mottaghi, R., Savva, M., and Zamir, A. R. \textit{On Evaluation of Embodied Navigation Agents}. arXiv:1807.06757, 2018. \url{https://arxiv.org/abs/1807.06757}.
+
+\bibitem{asimov1950}
+Asimov, I. \textit{I, Robot}. Gnome Press, 1950 (the Three Laws first appear in ``Runaround,'' \textit{Astounding Science Fiction}, 1942).
 
 \bibitem{kaplan1981}
 Kaplan, S., and Garrick, B. J. \textit{On the Quantitative Definition of Risk}. Risk Analysis, 1(1), 11--27, 1981. \href{https://doi.org/10.1111/j.1539-6924.1981.tb01350.x}{doi:10.1111/j.1539-6924.1981.tb01350.x}.

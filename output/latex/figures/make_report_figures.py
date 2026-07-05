@@ -74,19 +74,24 @@ try:
     cr=list(csv.DictReader(open(f"{BASE}/Physical-AI-Risk-Taxonomy/data/l4_cards.csv")))
     l2=Counter(r['l2_id'] for r in cr)
     l3=Counter(f"{r['l3_id']} {eng(r['l3_name'])}" for r in cr)
-    top=l3.most_common(12)[::-1]
-    fig,(a1,a2)=plt.subplots(1,2,figsize=(8.6,3.6),gridspec_kw={'width_ratios':[1,1.55]})
-    a1.bar(['P2\nSystem','I2\nInteraction','S2\nSocietal'],[l2['P2'],l2['I2'],l2['S2']],color=[C_SYS,C_INT,C_SOC],edgecolor='white',linewidth=.5)
-    for i,v in enumerate([l2['P2'],l2['I2'],l2['S2']]): a1.text(i,v+1.5,str(v),ha='center',fontweight='bold',fontsize=8)
-    a1.set_ylim(0,130); a1.set_ylabel('L4 cards'); strip(a1)
-    a1.text(-0.18,1.02,'a',transform=a1.transAxes,fontsize=10,fontweight='bold')
+    top=l3.most_common(12)[::-1]   # ascending: smallest at bottom, largest at top
     lab=[k for k,_ in top]; c=[v for _,v in top]
     lc=lambda k:C_SYS if k[0]=='P' else C_INT if k[0]=='I' else C_SOC
-    a2.barh(range(len(lab)),c,color=[lc(k) for k in lab],edgecolor='white',linewidth=.4)
-    a2.set_yticks(range(len(lab))); a2.set_yticklabels(lab)
-    for i,v in enumerate(c): a2.text(v+0.4,i,str(v),va='center',fontsize=7)
-    a2.set_xlabel('L4 cards'); strip(a2)
-    a2.text(-0.02,1.02,'b',transform=a2.transAxes,fontsize=10,fontweight='bold')
+    fig,ax=plt.subplots(figsize=(7.2,4.3))
+    ax.barh(range(len(lab)),c,color=[lc(k) for k in lab],edgecolor='white',linewidth=.4)
+    ax.set_yticks(range(len(lab))); ax.set_yticklabels(lab,fontsize=7.5)
+    for i,v in enumerate(c): ax.text(v+0.4,i,str(v),va='center',fontsize=7)
+    ax.set_xlabel('L4 cards per L3 sub-category'); ax.set_xlim(0,max(c)*1.12); strip(ax)
+    # inset: L2 category distribution, placed over the low-density lower-right whitespace
+    axin=ax.inset_axes([0.52,0.06,0.44,0.42])
+    axin.set_facecolor('white'); axin.set_zorder(5)
+    l2v=[l2['P2'],l2['I2'],l2['S2']]
+    axin.bar([0,1,2],l2v,color=[C_SYS,C_INT,C_SOC],edgecolor='white',linewidth=.5,width=.72)
+    for i,v in enumerate(l2v): axin.text(i,v+1.5,str(v),ha='center',fontweight='bold',fontsize=7)
+    axin.set_xticks([0,1,2]); axin.set_xticklabels(['P2','I2','S2'])
+    axin.set_ylim(0,120); axin.set_title('L2 categories',fontsize=7,pad=2)
+    axin.tick_params(labelsize=6.5,length=2); strip(axin)
+    for sp in axin.spines.values(): sp.set_linewidth(0.5)
     save(fig,"fig_taxonomy_levels")
 except Exception as e: print("skip fig_taxonomy_levels:",e)
 
