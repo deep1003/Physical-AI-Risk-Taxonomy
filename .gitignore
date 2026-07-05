@@ -23,3 +23,5 @@ data/reference_quality_audit/
 # Internal notes / previews
 docs/claude_master_memory_prompt_*.md
 output/physical_ai_risks_venue_distribution_preview.html
+
+output/latex/*.backup_*.tex
