@@ -31,10 +31,13 @@ VISION = re.compile(r"\b(image|images|imaging|vision|visual|object detection|"
     r"convolutional|semantic segmentation|image classification|medical imag|"
     r"visual question)\b", re.I)
 LANGUAGE = re.compile(r"\b(language|linguistic|nlp|natural language|text|textual|"
-    r"llm|large language model|translation|sentiment|bert|gpt|dialogue|dialog|"
-    r"question answering|summariz|summaris|speech|named entity|word embedding|"
-    r"machine translation|chatbot|semantic parsing|text classification|"
-    r"language model)\b", re.I)
+    r"llm|large language model|language model|foundation model|foundation models|"
+    r"generative pre-?train|pre-?trained language|prompt|instruction tun|in-context|"
+    r"retrieval[- ]augmented|chain-of-thought|conversational|dialogue|dialog|chatbot|"
+    r"question answering|summariz|summaris|translation|machine translation|sentiment|"
+    r"named entity|word embedding|word2vec|tokeniz|bert|roberta|gpt|t5|"
+    r"speech|semantic parsing|text classification|text generation|text mining|"
+    r"information extraction|generative ai|generative model)\b", re.I)
 
 
 def classify(title):
@@ -87,8 +90,8 @@ def main():
     STYLE = [  # order = draw order (bottom first)
         ("ai_other",          "#dadde1", 3,   0.30, "AI other"),
         ("ai_infra",          "#9aa0a6", 3.5, 0.40, "AI infrastructure"),
-        ("ai_vision",         "#a9c9e8", 3.5, 0.55, "AI (vision)"),
-        ("ai_language",       "#b7d9ad", 3.5, 0.55, "AI (language)"),
+        ("ai_vision",         "#6ea6df", 6,   0.62, "AI (vision)"),
+        ("ai_language",       "#7cc06a", 6,   0.62, "AI (language)"),
         ("physical_ai",       "#e07a5f", 11,  0.82, "Physical AI"),
         ("physical_ai_risks", "#5c0a16", 21,  0.98, "Physical AI risks"),
     ]

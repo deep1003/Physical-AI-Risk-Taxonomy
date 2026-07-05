@@ -1,6 +1,6 @@
 record_id,subgroup,x,y
 pap_ai_4bd69b3635c183646fea,ai_vision,-1.01697,0.49460
-pap_ai_1230c310049ca0b08f61,ai_other,2.15586,2.33546
+pap_ai_1230c310049ca0b08f61,ai_language,2.15586,2.33546
 pap_ai_1452054c9afedcd22f56,ai_other,-1.90686,1.31059
 pap_ai_09af9a278b0551b95d13,ai_other,-0.88616,0.48392
 pap_ai_cee1da264358f369fc16,ai_other,-1.67178,1.83993
@@ -60,7 +60,7 @@ pap_ai_9ad2290d4a870fddc470,ai_language,2.23745,2.17940
 pap_ai_3274f125ba2f128493d1,ai_language,2.44649,1.49311
 pap_ai_9252b33c1548efd9c699,ai_other,-1.57259,4.52421
 pap_ai_27dcaad24eecd53273a4,ai_other,-0.51103,0.57629
-pap_ai_fe8a0b23ae7821805d3f,ai_other,2.45241,1.68196
+pap_ai_fe8a0b23ae7821805d3f,ai_language,2.45241,1.68196
 pap_ai_6241fe94eda7948f93f5,ai_language,1.94737,2.86030
 pap_ai_7d7797a73b749d141ee9,ai_other,-2.46734,4.55330
 pap_ai_fb0cd804200c669562e9,ai_other,-2.54652,1.54624
@@ -72,7 +72,7 @@ pap_ai_6abfcc5d3b51e55b56cd,ai_other,-1.08770,0.41846
 pap_ai_63df18e1dfcda02cc10b,ai_other,-1.51489,1.38861
 pap_ai_113737b9f01524ded627,ai_other,-1.92611,1.05366
 pap_ai_ed70bdc867bfe447d4e1,ai_other,-1.89273,1.16949
-pap_ai_c3b3e26ac6b510e1adc3,ai_other,2.43068,1.43653
+pap_ai_c3b3e26ac6b510e1adc3,ai_language,2.43068,1.43653
 pap_ai_0250baba46a9ce2771d3,ai_other,1.20593,0.14725
 pap_ai_1a83f42d18a301b04ad0,ai_other,1.94447,0.67392
 pap_ai_5fc9fd319004666c037c,ai_other,-1.96957,1.46716
@@ -206,7 +206,7 @@ pap_ai_15acdb4967e3c8be87f5,ai_other,0.38430,2.10682
 pap_ai_3947e3b136fa5fece7c2,ai_vision,-0.40171,0.51177
 pap_ai_563c44ad1de427297d44,ai_other,0.83203,0.41536
 pap_ai_d42c968b286b8368c335,ai_other,1.59931,0.48184
-pap_ai_def078bdd460a4a7405d,ai_other,2.25157,1.72243
+pap_ai_def078bdd460a4a7405d,ai_language,2.25157,1.72243
 pap_ai_8fe3c46dc4d7fc912fbd,ai_other,-1.43607,2.64299
 pap_ai_1c35445571cb60bbed43,ai_other,-1.45117,0.84577
 pap_ai_8da397378f58163f8442,ai_other,-2.05397,1.25945
@@ -311,7 +311,7 @@ pap_ai_af9fe5e47751d8d2f944,ai_other,-1.09627,0.29342
 pap_ai_626b5a83e5b4c6c8219c,ai_language,0.63338,-0.22951
 pap_ai_8beedef8005a696a0038,ai_other,-2.61999,5.15144
 pap_ai_57ec0c49e430719082b2,ai_other,0.84318,1.33555
-pap_ai_98a6c7f08537f771b078,ai_other,2.57110,1.65625
+pap_ai_98a6c7f08537f771b078,ai_language,2.57110,1.65625
 pap_ai_2053807a7a93d89698cb,ai_other,-2.11520,1.13522
 pap_ai_9a50d719ede54d3ec395,ai_other,1.78486,1.32277
 pap_ai_a3e8013593930aa339f7,ai_other,-0.44198,2.64452
@@ -360,14 +360,14 @@ pap_ai_0313ec4632436e69a594,ai_other,-1.42747,2.12933
 pap_ai_b6245fa85e8896f7378f,ai_other,2.55547,1.55323
 pap_ai_97503c14ae08de4465b5,ai_other,0.84042,-0.44575
 pap_ai_dea656632afa7784f9b1,ai_other,-2.10018,1.04883
-pap_ai_1a5421ad342155bba94c,ai_other,2.53556,1.52491
+pap_ai_1a5421ad342155bba94c,ai_language,2.53556,1.52491
 pap_ai_35b39fce682a87741a23,ai_vision,-0.35186,3.54312
 pap_ai_193842ef6ab287e7a499,ai_other,-1.52429,1.59612
 pap_ai_c051a0ba84c16dc55aef,ai_other,-1.43246,1.31542
 pap_ai_f5854a6bd65f58c5b814,ai_other,0.73953,-0.24647
 pap_ai_ccb1446b5bd833c46ed0,ai_other,1.29904,0.21853
 pap_ai_7eb860b990f015fe2e90,ai_other,2.73299,1.70173
-pap_ai_7db11dd34c14d76fc529,ai_other,2.40015,1.36415
+pap_ai_7db11dd34c14d76fc529,ai_language,2.40015,1.36415
 pap_ai_45a5548edf5d5b12ff61,ai_other,-0.73855,2.33968
 pap_ai_de3c4e8799d35b80632f,ai_vision,-1.08122,1.70076
 pap_ai_a469898191ba3a577724,ai_other,2.09308,0.56697
@@ -425,7 +425,7 @@ pap_ai_dc8de19ceaa6ca158f4f,ai_other,-2.27697,4.09769
 pap_ai_def1e840096794906f38,ai_other,0.70457,0.35537
 pap_ai_329fc56669a79cdd2167,ai_other,-0.34204,2.86328
 pap_ai_511c902dc96c9d91d045,ai_other,-2.01644,1.63968
-pap_ai_d6be61c3e70717f5b933,ai_other,2.63094,1.67339
+pap_ai_d6be61c3e70717f5b933,ai_language,2.63094,1.67339
 pap_ai_0385fc027e3481eacc94,ai_other,0.47769,0.25837
 pap_ai_fcf98d0d4a0f41301fe4,ai_other,-1.71154,1.51755
 pap_ai_f2158fb7b443c05dd891,ai_other,1.41400,0.40695
@@ -492,7 +492,7 @@ pap_ai_3a5f6229443c42cdec39,ai_other,0.92438,2.65988
 pap_ai_881e382872a330612d4c,ai_other,-0.92981,2.49860
 pap_ai_1de6fa097f8f28f59db9,ai_other,0.69234,-0.01123
 pap_ai_1e5d0ed0bc1f2d108a54,ai_other,1.02146,-0.03625
-pap_ai_3b4f2166389400ba41bd,ai_other,0.58541,2.27125
+pap_ai_3b4f2166389400ba41bd,ai_language,0.58541,2.27125
 pap_ai_a243f0f58a21590dc4f4,ai_other,1.84881,-0.29859
 pap_ai_0130775dc2abf1d8ca41,ai_other,1.29689,0.00868
 pap_ai_17754de1b0f6a16379df,ai_other,-2.31046,1.13438
@@ -539,7 +539,7 @@ pap_ai_2ef4b13be6489ac28ba6,ai_other,1.15733,-0.16031
 pap_ai_15894f77811c86b6da03,ai_other,1.53744,0.75555
 pap_ai_80bc34d3e653795c0687,ai_other,1.46849,0.25190
 pap_ai_385e26fb953339cf5948,ai_other,2.01999,1.38879
-pap_ai_1ba53a1a9ca9c65d95b8,ai_other,2.49804,1.61758
+pap_ai_1ba53a1a9ca9c65d95b8,ai_language,2.49804,1.61758
 pap_ai_c6ac98077f1e3f3c366e,ai_other,-1.42321,0.66475
 pap_ai_ef0eca4d93eb5c30bf05,ai_other,1.78456,0.93773
 pap_ai_748e7dd6c79922836e8e,ai_other,1.71858,3.12080
@@ -630,7 +630,7 @@ pap_ai_4bf941053764c3b687b9,ai_other,-1.07937,1.55571
 pap_ai_2544e9ece74c06925281,ai_other,-0.85644,2.62823
 pap_ai_51c6f2c5ccc8511fb0b7,ai_other,-2.07602,0.95754
 pap_ai_175c0aed9285f764b799,ai_other,-1.12285,0.43006
-pap_ai_3546d4a7bfba7c170441,ai_other,2.48364,1.52303
+pap_ai_3546d4a7bfba7c170441,ai_language,2.48364,1.52303
 pap_ai_5570a13fa1af68c1005d,ai_other,2.04177,1.14614
 pap_ai_0f835fbbb5030ad0b8ac,ai_vision,1.27080,0.13726
 pap_ai_3cdf3c66726b5b52ed50,ai_other,-1.31088,1.10922
@@ -836,7 +836,7 @@ pap_ai_3e41bc68ee2196d7bfb9,ai_other,0.56900,2.42304
 pap_ai_fb3ec23952b38a96a7e2,ai_other,0.73261,4.98933
 pap_ai_800ec3c6faddd8b0c4e3,ai_other,1.96917,1.25233
 pap_ai_cfe72e81cdab636babb7,ai_other,0.80667,2.08631
-pap_ai_0683ed0dfd5dc47cf3a4,ai_other,2.40637,1.57513
+pap_ai_0683ed0dfd5dc47cf3a4,ai_language,2.40637,1.57513
 pap_ai_3e96a4976aa0a6945494,ai_other,2.40854,1.11698
 pap_ai_363b9ff6ff1a71e81a0c,ai_other,-2.11297,0.94876
 pap_ai_f40790ac76fc0c68c1a5,ai_language,2.03806,2.22384
@@ -897,7 +897,7 @@ pap_ai_98e1cc9ba5548657be0b,ai_other,-2.06544,2.33164
 pap_ai_d0c7afb97f90055b09de,ai_other,-0.96828,2.47067
 pap_ai_299d9a4308634c8e448e,ai_infra,-2.26409,1.64416
 pap_ai_0fe6069ab279c1532f52,ai_other,1.75236,0.67815
-pap_ai_1a4ff7c42ae28388ec8e,ai_other,2.46466,1.42264
+pap_ai_1a4ff7c42ae28388ec8e,ai_language,2.46466,1.42264
 pap_ai_ebd4117b3cde1f17a304,ai_other,-0.18500,0.99578
 pap_ai_91e2b28b5edb154af7d6,ai_other,-1.26720,0.56556
 pap_ai_df3c2c27099e1cde6ccf,ai_other,-1.55514,1.45222
@@ -941,7 +941,7 @@ pap_ai_60c41b7f44c935382456,ai_other,-1.13886,0.86814
 pap_ai_45b52bb02a3353123246,ai_other,-1.01061,1.53140
 pap_ai_1ccaf1b4b4100294c099,ai_other,-1.33343,0.75284
 pap_ai_ed9bb0fb56cadbfdf824,ai_other,1.20553,-0.16522
-pap_ai_901436e81a43e5bbb290,ai_other,2.37921,1.37723
+pap_ai_901436e81a43e5bbb290,ai_language,2.37921,1.37723
 pap_ai_0b354a8ce1fbbe5023fc,ai_other,-2.00635,1.21184
 pap_ai_db3052bd14add4128945,ai_other,1.48132,0.44332
 pap_ai_b2bc1f0d22166e0fb10f,ai_other,1.18258,0.02658
@@ -982,7 +982,7 @@ pap_ai_5d50caf3d1aedc852776,ai_vision,0.86116,5.44784
 pap_ai_b2b20321ad0eeeb6a6e5,ai_other,-1.00482,1.46671
 pap_ai_95e3f9451e7ab007fb57,ai_other,0.63984,-0.43275
 pap_ai_6558067342a63aec41c8,ai_other,1.90550,1.31341
-pap_ai_a13508ff4494215709de,ai_other,2.13031,1.89989
+pap_ai_a13508ff4494215709de,ai_language,2.13031,1.89989
 pap_ai_fd57269beb2082866444,ai_other,-0.36337,3.28217
 pap_ai_354ddd11d00181a31cd2,ai_language,2.20419,2.19539
 pap_ai_9c13e3ac9ab616fdb6b9,ai_language,1.99980,2.88421
@@ -1030,7 +1030,7 @@ pap_ai_f950ac480c4607a3b1aa,ai_other,-0.81662,1.43528
 pap_ai_fd52b520b1462f0b22de,ai_other,1.26173,-0.02482
 pap_ai_c3e2f4febb61f7ebfc4c,ai_other,0.97069,-0.31644
 pap_ai_aa14326537968dde1e9d,ai_other,-1.94717,2.68883
-pap_ai_a389f76fd55d1ebb7e25,ai_other,2.50591,1.49329
+pap_ai_a389f76fd55d1ebb7e25,ai_language,2.50591,1.49329
 pap_ai_3ff8788a1c4f33071d79,ai_other,0.80487,-0.00322
 pap_ai_8aaf5ea67e82703dfe71,ai_other,0.89707,-0.14984
 pap_ai_608718d40b8c693d834a,ai_other,0.30893,0.05264
@@ -1249,7 +1249,7 @@ pap_ai_156602d46eb85a614503,ai_vision,-0.44232,2.80085
 pap_ai_4c465b4f54502ada5e8a,ai_vision,-0.92267,3.37289
 pap_ai_dcb3f22ae9cb9c9e141e,ai_other,1.00602,2.25901
 pap_ai_02f412259c65b220b187,ai_language,-1.71719,1.04389
-pap_ai_59fda92d3c886bca8ad8,ai_other,2.44167,1.55930
+pap_ai_59fda92d3c886bca8ad8,ai_language,2.44167,1.55930
 pap_ai_79a3cab04667b4d15d7d,ai_other,-0.19973,1.54137
 pap_ai_68e2266b0fef23a40428,ai_other,-1.54686,0.89536
 pap_ai_ef4c09d8db452f0f2e5e,ai_other,1.43418,1.35809
@@ -1309,7 +1309,7 @@ pap_ai_65509786e349d2d6b859,ai_other,-1.78916,0.89163
 pap_ai_e1d5610463d65954de3b,ai_other,-0.48628,2.60464
 pap_ai_ffeb59b5f4967b933895,ai_vision,0.89348,1.33966
 pap_ai_591e69746e0a146e4437,ai_other,-0.31475,0.60128
-pap_ai_374f2a20650dbdfbc1c3,ai_other,2.09547,2.28221
+pap_ai_374f2a20650dbdfbc1c3,ai_language,2.09547,2.28221
 pap_ai_e1a46be99f96a652df98,ai_vision,-0.79707,2.95986
 pap_ai_85723589dd189faf5e19,ai_other,0.30534,0.10845
 pap_ai_b9b54ad6dcec5b6ce57a,ai_other,1.42610,0.23819
@@ -1342,7 +1342,7 @@ pap_ai_425dd49398b78dec73a1,ai_vision,0.43927,3.14013
 pap_ai_0df1bc174645ac4dd88f,ai_other,-0.95294,0.62732
 pap_ai_c6caeb4a6dfa67f49538,ai_other,-1.53553,0.91195
 pap_ai_d8157cb5a7c59de68a2c,ai_vision,0.95003,0.05440
-pap_ai_e59bb23153ca1dca0ffc,ai_other,2.30116,1.10212
+pap_ai_e59bb23153ca1dca0ffc,ai_language,2.30116,1.10212
 pap_ai_16521d21183d3a9c1a07,ai_language,2.06428,2.22473
 pap_ai_425745910b2b0152f7cc,ai_language,2.18278,2.21121
 pap_ai_eea9c6148c2e0b59a9d6,ai_other,1.31656,0.02456
@@ -1465,11 +1465,11 @@ pap_ai_dc6a5a256fa8931f7ffe,ai_other,1.93284,0.60459
 pap_ai_6cb007b83bed911912ba,ai_other,1.39833,0.32797
 pap_ai_fb27a7087a6eb7f717e5,ai_other,2.46866,1.53421
 pap_ai_35d89304c8177aa5940b,ai_other,2.18133,1.40318
-pap_ai_31909f14ec81aefb716b,ai_other,2.40207,1.49232
+pap_ai_31909f14ec81aefb716b,ai_language,2.40207,1.49232
 pap_ai_ebc78957e8413e33c04e,ai_other,1.73360,1.41063
 pap_ai_9d80fa4107098c3a9fe0,ai_other,2.26277,1.46576
 pap_ai_a98d542b9b0ff7135a81,ai_other,2.21505,1.33512
-pap_ai_abb95d1f782228d871e9,ai_other,2.47742,1.43646
+pap_ai_abb95d1f782228d871e9,ai_language,2.47742,1.43646
 pap_ai_1c0613ba47a454cbb214,ai_other,2.49812,1.51436
 pap_ai_d085546dd051e586332f,ai_other,-1.31015,1.23795
 pap_ai_a919a7eba0e8dc874165,ai_other,2.31158,1.47805
@@ -1487,7 +1487,7 @@ pap_ai_74d3c0f1a8ccc773bc75,ai_other,2.25366,1.24086
 pap_ai_3ce692585e2b54df0ffd,ai_other,-1.80349,1.62315
 pap_ai_eef99770de433118ad62,ai_other,-0.31298,0.59324
 pap_ai_6340f36840cbec641203,ai_other,1.93721,1.01225
-pap_ai_bb54189ccbc04d00a817,ai_other,2.34709,1.43609
+pap_ai_bb54189ccbc04d00a817,ai_language,2.34709,1.43609
 pap_ai_14e5e785de3fa18b4cce,ai_other,1.07848,-0.04575
 pap_ai_27ba36d3abfcacb4c150,ai_other,1.92032,0.65228
 pap_ai_855d45e2dac53f2632c5,ai_other,2.11131,1.25829
@@ -1518,11 +1518,11 @@ pap_ai_dc73f8821d4ed10c59e7,ai_other,1.42646,1.38938
 pap_ai_1785088e19580502a115,ai_other,1.10950,1.86284
 pap_ai_fe79eb395a9a14f47624,ai_language,0.92492,2.33565
 pap_ai_9bb6b0ebd33167216765,ai_other,1.44152,2.36176
-pap_ai_bf04644f065c8d4139f7,ai_other,2.53923,1.45743
+pap_ai_bf04644f065c8d4139f7,ai_language,2.53923,1.45743
 pap_ai_cca92579255e5648945d,ai_other,-1.32624,0.85593
 pap_ai_8c672e1975cb26803fa3,ai_other,2.26609,1.07714
 pap_ai_1d0d24f4389e5715c9c0,ai_other,1.48000,5.50792
-pap_ai_ffbc8f8ffe741fc515ea,ai_other,2.52072,1.49478
+pap_ai_ffbc8f8ffe741fc515ea,ai_language,2.52072,1.49478
 pap_ai_b8a1a4be0efbc38194ac,ai_other,2.11809,1.27058
 pap_ai_7137bc458829f735684f,ai_other,2.22452,1.11285
 pap_ai_2c35cb15256fa5e85158,ai_other,2.06799,1.31171
@@ -1534,7 +1534,7 @@ pap_ai_f148bb28c5b29de2fe2c,ai_other,1.22704,-0.01495
 pap_ai_e02514e962478d11c5ec,ai_other,2.17338,1.16468
 pap_ai_1336a6bcd7c806f754c1,ai_other,2.24044,1.15091
 pap_ai_48871464ca6e84655365,ai_other,1.89590,1.00648
-pap_ai_65ac0d82d517a6beea7e,ai_other,2.51327,1.45849
+pap_ai_65ac0d82d517a6beea7e,ai_language,2.51327,1.45849
 pap_ai_4405d7c3e3fad2a41415,ai_other,-0.86847,0.34468
 pap_ai_5befc06d51fed87b811e,ai_other,1.63340,1.68938
 pap_ai_91db0820d772ac9eab0d,ai_other,0.18664,2.57068
@@ -1543,7 +1543,7 @@ pap_ai_7457433b47cc57274f4f,ai_other,2.29044,1.14789
 pap_ai_0908adb1d2fa34da2ede,ai_other,2.26686,1.15899
 pap_ai_15294fa49874d4412bda,ai_other,2.38189,1.38340
 pap_ai_d201c3f99b53a81d5d52,ai_other,2.25979,1.11989
-pap_ai_c609870ecebd1116ae6a,ai_other,2.39269,1.41541
+pap_ai_c609870ecebd1116ae6a,ai_language,2.39269,1.41541
 pap_ai_5ec8d29949753b3c2e86,ai_language,1.98790,2.29597
 pap_ai_c63ce1fb6d3ef3048542,ai_other,1.85231,1.87354
 pap_ai_ca3ac248eaab703c1c46,ai_other,1.77298,0.93772
@@ -1819,7 +1819,7 @@ pap_ai_8af62cb7eb0a94442a7c,ai_other,0.69945,2.37989
 pap_ai_cc3fef88fca7fec0f0df,ai_other,0.96042,2.77030
 pap_ai_bb534b7c76080959f4cb,ai_other,0.84952,2.19058
 pap_ai_ce1b76623885c28066b0,ai_vision,-0.67958,1.05378
-pap_ai_81cd68ccf4f7aa9a9540,ai_other,1.64934,2.74695
+pap_ai_81cd68ccf4f7aa9a9540,ai_language,1.64934,2.74695
 pap_ai_2367a06c14c2b236eb72,ai_other,2.70672,4.39924
 pap_ai_3c6da7a9d6b0373c2c06,ai_other,1.20864,-0.78441
 pap_ai_c7c5ee0141693e76f422,ai_other,-0.29916,2.17270
@@ -1914,7 +1914,7 @@ pap_ai_936b1dde8c832f797104,ai_other,1.23974,-0.62049
 pap_ai_4b16096d4e736508395b,ai_other,0.90886,2.29978
 pap_ai_d9ab835116ba103c0ca9,ai_other,0.57513,2.55602
 pap_ai_22c686d1fa23fc5be6f5,ai_other,-0.30483,3.20142
-pap_ai_764dbd4231f7a400be1a,ai_other,1.09652,2.75949
+pap_ai_764dbd4231f7a400be1a,ai_language,1.09652,2.75949
 pap_ai_e5317c531edebbbe588f,ai_other,1.16428,2.46612
 pap_ai_ac9a097b132b2ff6b74c,ai_other,-1.05020,1.97148
 pap_ai_64cdf343e23bfd38b1fc,ai_other,-0.62336,4.57356
@@ -2321,7 +2321,7 @@ pap_ai_f9886e7b6a10cb9223fd,ai_other,1.04561,-0.01404
 pap_ai_d789c1a6003afe26d36a,ai_other,-1.29267,0.58571
 pap_ai_cb6659403221a4660485,ai_other,2.11485,1.55840
 pap_ai_af5ba30f3d79cffbf048,ai_other,0.69303,-0.48738
-pap_ai_3f78479f812453cb88a4,ai_other,1.78970,3.35454
+pap_ai_3f78479f812453cb88a4,ai_language,1.78970,3.35454
 pap_ai_4315f44a028f941ee21b,ai_other,0.39995,2.29790
 pap_ai_272792004026a3a212af,ai_language,0.24507,1.99176
 pap_ai_60aaa8462e11c5247c07,ai_other,1.19426,0.02990
@@ -3138,7 +3138,7 @@ pap_ai_341d3baf410935eda2b1,ai_other,1.94177,0.53011
 pap_ai_0cc67823609b8288cfd0,ai_other,0.72770,-0.42532
 pap_ai_fa8644f8cc71bd1a53a0,ai_other,-1.04277,0.75493
 pap_ai_a93e28969665493e4847,ai_other,-1.55555,4.26903
-pap_ai_cb0446fb7a1667efe445,ai_other,2.55239,1.58883
+pap_ai_cb0446fb7a1667efe445,ai_language,2.55239,1.58883
 pap_ai_4c9f3e119848f7763869,ai_other,-0.94091,0.95154
 pap_ai_47df63abb76a3349db74,ai_other,0.92798,2.50622
 pap_ai_0ac81e9448bfae0b6132,ai_other,-0.84926,0.44427
@@ -3388,7 +3388,7 @@ pap_ai_9494bc9c888280f96fdc,ai_other,1.35018,1.75113
 pap_ai_4e36bbe94eb44ae924ce,ai_other,0.76056,-0.49648
 pap_ai_bdc2763b7c23b2979504,ai_other,1.61887,1.66228
 pap_ai_07f18b42798686b86b6a,ai_other,1.87673,2.33310
-pap_ai_06b7207519a822e93abb,ai_other,2.31215,2.13445
+pap_ai_06b7207519a822e93abb,ai_language,2.31215,2.13445
 pap_ai_92ce4c9e91caba1abd3d,ai_other,-2.55800,4.51232
 pap_ai_fbc86697becae86e00e6,ai_other,-0.65959,3.20814
 pap_ai_99dc3cf0045fc75cb678,ai_other,0.51849,2.10020
@@ -3423,7 +3423,7 @@ pap_ai_590166d682c3fe1e75a4,ai_other,1.01099,2.13100
 pap_ai_85e928a0ce92f8379993,ai_other,2.25766,1.40752
 pap_ai_200e2191dfc745d640c8,ai_language,2.29387,1.34860
 pap_ai_fa184c3ff25e2d9b06df,ai_other,-0.62423,0.36788
-pap_ai_a82ede9738d556dc71ab,ai_other,1.31093,2.50934
+pap_ai_a82ede9738d556dc71ab,ai_language,1.31093,2.50934
 pap_ai_02749f7f44d0ab93c8e9,ai_language,-0.00060,0.78575
 pap_ai_9dd314ce4d25f4c501af,ai_vision,0.62090,2.39435
 pap_ai_c8a624dfc2b42c7548c6,ai_other,1.23903,0.14818
@@ -3459,7 +3459,7 @@ pap_ai_330c1979fbed5275744e,ai_other,0.98311,1.89855
 pap_ai_a49a13c756dc9c2d4a54,ai_other,1.20644,-0.06832
 pap_ai_3101fb2d41db638e6c6d,ai_other,1.32354,-0.25451
 pap_ai_d7d26081dc900b2baf2c,ai_other,0.91190,2.47250
-pap_ai_322432371006b7c7d88a,ai_other,2.35450,1.66644
+pap_ai_322432371006b7c7d88a,ai_language,2.35450,1.66644
 pap_ai_cdc79cbe1bf65562f98f,ai_other,2.33555,2.07724
 pap_ai_93bdf893c89d859bfd1e,ai_other,1.05260,2.40799
 pap_ai_7c6a33098ed4f2b91301,ai_other,-0.86375,2.58990
@@ -3520,7 +3520,7 @@ pap_ai_384bde8336fbe0577811,ai_other,1.33347,0.07085
 pap_ai_b6d7e8738d58cd1d78e0,ai_other,1.81508,1.93404
 pap_ai_ced1cac4df33ae112f1c,ai_vision,0.05773,4.35251
 pap_ai_e4074dd2aada7ef015be,ai_other,0.38478,0.91058
-pap_ai_fffe3aac434beab38128,ai_other,2.56144,1.49639
+pap_ai_fffe3aac434beab38128,ai_language,2.56144,1.49639
 pap_ai_0642bee43b941371e883,ai_other,1.11143,0.20424
 pap_ai_d6222de79932103597ab,ai_other,0.65903,0.15612
 pap_ai_f5a712a147c8c9fec17c,ai_other,-1.96853,4.47940
@@ -3722,7 +3722,7 @@ pap_ai_d0c36211302d1d277ca3,ai_other,0.87580,1.70743
 pap_ai_418bf7ac55337847b0fa,ai_other,2.23783,1.39813
 pap_ai_3f7173b957b1de7a722b,ai_other,1.83982,1.42950
 pap_ai_2d62c04c44850eaf3a7d,ai_other,-1.18431,1.68600
-pap_ai_9f6c2f4cb1f146d2f06a,ai_other,-1.41526,2.62572
+pap_ai_9f6c2f4cb1f146d2f06a,ai_language,-1.41526,2.62572
 pap_ai_3bc9a979965a97fe205f,ai_other,-0.11442,1.00992
 pap_ai_59b241ee2e342d840f51,ai_other,1.83382,1.30490
 pap_ai_a29a7c97b25959b4107f,ai_other,-0.89444,2.46114
@@ -3770,7 +3770,7 @@ pap_ai_9ab4d6506d1a97c05c82,ai_other,1.24368,0.22381
 pap_ai_9769fd3385689f68297f,ai_other,1.23543,-0.07509
 pap_ai_7a5170cf77dd40ecb3d2,ai_other,0.65212,2.00144
 pap_ai_097c0b32fa10e03145bf,ai_vision,0.85902,1.91835
-pap_ai_4f95e5441af1ed071872,ai_other,2.42342,1.26948
+pap_ai_4f95e5441af1ed071872,ai_language,2.42342,1.26948
 pap_ai_de7166d5bb75a5900448,ai_other,1.23194,-0.21312
 pap_ai_ed2e11decbebfeca24c2,ai_other,1.51569,0.68935
 pap_ai_b78632a57e047e0bd6c6,ai_vision,-1.93485,1.96745
@@ -3887,7 +3887,7 @@ pap_ai_2fd80e0ec156c1ab4848,ai_other,1.68257,0.81494
 pap_ai_4a0d15a03e2cfe9eaf1c,ai_vision,-0.18277,2.58261
 pap_ai_da46e4f1dd97bfa7fa49,ai_other,-2.01213,1.40002
 pap_ai_56a62cb7b3e7ee96f28c,ai_other,0.88009,2.05174
-pap_ai_16235caa430dd7ff2072,ai_other,2.53144,1.45672
+pap_ai_16235caa430dd7ff2072,ai_language,2.53144,1.45672
 pap_ai_349687a5ebc2021bd9cd,ai_other,0.13540,2.14510
 pap_ai_afaae771e8e5d5b06793,ai_other,1.16976,0.12118
 pap_ai_a75ae79ace6ccf2f910d,ai_other,-1.19144,0.38378
@@ -3927,7 +3927,7 @@ pap_ai_9be1e7bc984390975d6e,ai_other,-1.21510,0.52827
 pap_ai_294e0dfef40ddf87d419,ai_other,1.37731,1.62337
 pap_ai_b8d0a331fba795ef0ccd,ai_vision,0.55574,-0.38229
 pap_ai_68f2ce63deef9b297449,ai_other,2.39513,1.22709
-pap_ai_ebdcb86ecec8688b794d,ai_other,2.44040,1.43799
+pap_ai_ebdcb86ecec8688b794d,ai_language,2.44040,1.43799
 pap_ai_bd8ee10de1b68d54c4b2,ai_other,1.82047,1.18867
 pap_ai_e3364251cf694b588b04,ai_vision,1.91240,1.51182
 pap_ai_ee816595b7851ec4f027,ai_other,1.94895,0.91397
@@ -3951,7 +3951,7 @@ pap_ai_90e09cd06674febffbbb,ai_other,-2.27550,3.49280
 pap_ai_784403454a662522b20c,ai_other,2.03255,1.22658
 pap_ai_ca7a47d4c812d7e8843e,ai_other,-1.21613,1.89867
 pap_ai_e807447adefd74b8cac2,ai_other,0.82262,2.10751
-pap_ai_4dde40e1077f3476945f,ai_other,0.53776,2.23263
+pap_ai_4dde40e1077f3476945f,ai_language,0.53776,2.23263
 pap_ai_ee7d2814ed84b33603e7,ai_other,0.69137,2.03213
 pap_ai_a5966b054f90838667a9,ai_other,0.83643,0.21598
 pap_ai_afa451c5c1609f9a24df,ai_other,-1.84451,3.76535
@@ -3965,7 +3965,7 @@ pap_ai_846b8ea745b076305057,ai_language,1.71649,2.51268
 pap_ai_c8f0411fa60fa5cc14f3,ai_vision,-2.58741,7.13858
 pap_ai_3fd1bc231062ef1257ec,ai_vision,-0.25059,3.26022
 pap_ai_2911deef1650e7768ab4,ai_other,0.04893,2.85764
-pap_ai_d8e9a8da73b74feb4391,ai_other,2.01323,2.28092
+pap_ai_d8e9a8da73b74feb4391,ai_language,2.01323,2.28092
 pap_ai_56ffbce6b5f40fbfe28f,ai_other,-1.03484,1.62725
 pap_ai_bfc9f0a48395387ab1a1,ai_other,-1.92495,1.69880
 pap_ai_5e0e596833d3c3cf1596,ai_other,-0.55376,3.85497
@@ -4149,11 +4149,11 @@ pap_ai_2cf3c11957c3d29efced,ai_other,-1.75963,2.00127
 pap_ai_895c0ab73ddd446a8d8a,ai_vision,-0.41075,2.91391
 pap_ai_79e4b2ac18f1f912608c,ai_other,0.70196,-0.18098
 pap_ai_41b78c7035d96d6c5b21,ai_other,1.42655,1.31593
-pap_ai_24d5f2ce2cd1707b81d5,ai_other,2.48889,1.45789
+pap_ai_24d5f2ce2cd1707b81d5,ai_language,2.48889,1.45789
 pap_ai_d50b4aa0d68801e31d38,ai_other,-0.47347,0.42446
 pap_ai_2fbfbf650aab6a6ef9ab,ai_language,2.00561,2.72341
 pap_ai_25f39342a2468c461898,ai_other,0.31712,0.69159
-pap_ai_dd67ffc0a85b27490371,ai_other,0.18187,3.01640
+pap_ai_dd67ffc0a85b27490371,ai_language,0.18187,3.01640
 pap_ai_bc22bffca68b6fda5366,ai_other,-3.13333,4.33850
 pap_ai_ce6d9117362cd8cb6891,ai_language,-0.58682,1.76828
 pap_ai_a3c7e04da13e5944207d,ai_other,1.15627,0.18270
@@ -4221,7 +4221,7 @@ pap_ai_46f2c45306136e856acf,ai_other,0.58156,-0.33123
 pap_ai_a1be8f1dcb206b5c08d9,ai_other,-1.83629,1.60071
 pap_ai_f77de81d7336a2d64072,ai_other,1.13441,-0.02552
 pap_ai_186879b2785c6e5f6f32,ai_other,1.29822,-0.13636
-pap_ai_8cf6e31b476886af2af3,ai_other,2.04418,0.43749
+pap_ai_8cf6e31b476886af2af3,ai_language,2.04418,0.43749
 pap_ai_9955786e85737ccd4d58,ai_other,1.77023,0.51322
 pap_ai_6e5857a70d832deed3db,ai_other,0.00391,1.32748
 pap_ai_cf9b966387eec076a603,ai_language,2.11982,2.27372
@@ -4307,7 +4307,7 @@ pap_ai_ee09822e50473b07e58a,ai_vision,0.89280,2.48113
 pap_ai_39cbc2e0669ea22b4b34,ai_other,0.96260,-0.61500
 pap_ai_86afcba3bafa9c7dab8a,ai_other,2.06086,1.66921
 pap_ai_7ba07d43bfc685bd7d9b,ai_other,-2.44491,3.35172
-pap_ai_0b267c599799826a8115,ai_other,2.17698,1.33899
+pap_ai_0b267c599799826a8115,ai_language,2.17698,1.33899
 pap_ai_40659dee218131ed7e4a,ai_vision,-0.77743,1.72420
 pap_ai_30ecdabeeb93279613eb,ai_other,1.21915,-0.79600
 pap_ai_09631b229be6f9c78632,ai_other,2.49515,1.50787
@@ -4368,7 +4368,7 @@ pap_ai_624bc023437da99db6f6,ai_other,-1.28203,0.69757
 pap_ai_b69c4ca9fb34d6c17bc2,ai_other,1.57433,1.42322
 pap_ai_7314667fd266e2e23a40,ai_other,1.31879,-0.06249
 pap_ai_ea908a1e7eacfa731d84,ai_other,-1.34797,1.77418
-pap_ai_dae0a5acb8aea5d780fd,ai_other,0.48547,2.22249
+pap_ai_dae0a5acb8aea5d780fd,ai_language,0.48547,2.22249
 pap_ai_a48d79487ca342908ad5,ai_other,0.86452,2.32407
 pap_ai_1108e7b655e89ba59b7e,ai_other,0.84095,5.84528
 pap_ai_b0dba3e254ef3bb28103,ai_other,1.27911,0.02804
@@ -4465,7 +4465,7 @@ pap_ai_137e266fe7ca51ca3083,ai_language,1.90648,1.18661
 pap_ai_c8490f6311f8d7f92e65,ai_other,1.07871,0.09219
 pap_ai_780be0132fae890d48a1,ai_other,-0.18763,1.70743
 pap_ai_f0678164ff63e3ba4fc9,ai_other,1.15707,0.13462
-pap_ai_ddfdab8ceffb8ae552db,ai_other,2.04197,0.95264
+pap_ai_ddfdab8ceffb8ae552db,ai_language,2.04197,0.95264
 pap_ai_d44338d94c3a690123be,ai_other,-2.05044,3.18109
 pap_ai_19463da47ef659979b8b,ai_other,1.05395,0.05642
 pap_ai_c36775cf24de19c1bca6,ai_other,1.20848,0.30593
@@ -4480,7 +4480,7 @@ pap_ai_1820158857c8697462fa,ai_other,1.07554,1.87162
 pap_ai_b9cf1db8d341bf0977ed,ai_language,-0.38440,2.40490
 pap_ai_c853d7bc9842af1ba0a4,ai_other,0.88583,2.61158
 pap_ai_2799887ed55d2a0d7fce,ai_other,2.08085,1.33440
-pap_ai_c76ed38985e0a5ac0d04,ai_other,2.47745,1.42971
+pap_ai_c76ed38985e0a5ac0d04,ai_language,2.47745,1.42971
 pap_ai_1a53484ecbaae28f0e80,ai_other,1.86882,2.32010
 pap_ai_5d0311c7e1be34dc4d3d,ai_vision,1.89942,2.19928
 pap_ai_0e6dcaebc6a7c9d485ea,ai_other,1.62829,2.64011
@@ -4499,7 +4499,7 @@ pap_ai_62267e0ff6e60fb33ada,ai_other,1.34645,0.26089
 pap_ai_48cebdaf900c5290f66e,ai_other,-0.79057,0.23650
 pap_ai_b2598f92d6c801de44d5,ai_other,-1.89593,4.36560
 pap_ai_a0a414a78af1a1584cce,ai_other,-3.33812,6.58803
-pap_ai_30559be02885222dec8e,ai_other,1.28339,1.60976
+pap_ai_30559be02885222dec8e,ai_language,1.28339,1.60976
 pap_ai_9cc3cb4121d3e6e38bb4,ai_other,-0.55793,0.35024
 pap_ai_501715ea486483cfa187,ai_vision,0.95505,-0.26230
 pap_ai_97f2ea4b79c28770bf42,ai_vision,1.33289,1.56249
@@ -4649,7 +4649,7 @@ pap_ai_c1774812c009159f9b1f,ai_other,-0.80175,1.08195
 pap_ai_fecfd8b106584bf01781,ai_other,-2.33624,1.32715
 pap_ai_7c6d728e4af1c73f2e78,ai_other,1.05106,-0.68201
 pap_ai_a0bbee57df6ffc3b434e,ai_other,1.56247,0.45763
-pap_ai_65663b6d5cd0779f7897,ai_other,2.53507,1.49808
+pap_ai_65663b6d5cd0779f7897,ai_language,2.53507,1.49808
 pap_ai_04c2fc690a0fb8219855,ai_language,1.69908,2.35135
 pap_ai_3e531b1dea9ce1c31be3,ai_other,0.57147,2.41362
 pap_ai_1d131a1e5bb77e523f0e,ai_other,1.15002,2.48101
@@ -4812,7 +4812,7 @@ pap_ai_a83ebf6097434407c1ef,ai_other,1.59151,0.59624
 pap_ai_ee0415acba232740c717,ai_other,-2.49307,3.90314
 pap_ai_2c90cc91b1442b994791,ai_other,1.21854,-0.48824
 pap_ai_e9b906cc383d2c377b00,ai_other,0.19801,2.28001
-pap_ai_502063b68a291455678c,ai_other,0.92957,1.74645
+pap_ai_502063b68a291455678c,ai_language,0.92957,1.74645
 pap_ai_0fd7b6ab6b14131e48f9,ai_other,1.13890,0.11099
 pap_ai_7579dbe861f965caf0f3,ai_other,1.55504,0.55653
 pap_ai_18662dc2beba9e568daa,ai_other,2.13783,1.16153
@@ -4856,7 +4856,7 @@ pap_ai_465a2ff6619b5f5b516b,ai_other,2.33682,1.36320
 pap_ai_a33cd003489d47af40c6,ai_other,-2.39321,3.91129
 pap_ai_f13443c492a938e44aed,ai_other,-2.33887,3.48892
 pap_ai_ee42ae6b8f6862f768e6,ai_vision,-1.03735,1.11881
-pap_ai_d211fd55926ee6ae8442,ai_other,2.12311,2.46804
+pap_ai_d211fd55926ee6ae8442,ai_language,2.12311,2.46804
 pap_ai_5fda9ef4491a685b92fb,ai_other,1.67706,2.30302
 pap_ai_4c30782b6d067e9b86ba,ai_other,2.13851,2.25206
 pap_ai_a9a4712042297b4a48dd,ai_language,2.21181,2.14003
@@ -4900,14 +4900,14 @@ pap_ai_ca406fbb49fa573649e3,ai_other,-1.34987,0.65755
 pap_ai_a60adcf5f06a589a8292,ai_other,1.05993,2.11298
 pap_ai_17ad98af50d029f1f3fc,ai_other,-0.00271,2.17536
 pap_ai_90d7111bbb8eeccd9863,ai_other,0.89477,2.25367
-pap_ai_7900e32d25d3914ec7e0,ai_other,2.44079,1.50074
+pap_ai_7900e32d25d3914ec7e0,ai_language,2.44079,1.50074
 pap_ai_b70a9b370a63dec8f562,ai_other,-0.49896,0.14337
 pap_ai_eead75f1449e98c7cb08,ai_other,0.50299,2.31260
 pap_ai_af0af94dd8b242468a40,ai_language,2.06602,2.36854
 pap_ai_457b69a900395238ea95,ai_other,-2.50460,4.63359
 pap_ai_7b944ff317721923857a,ai_other,1.21615,0.23525
 pap_ai_62f116ddaea9cbb70b0a,ai_other,-2.71919,5.19090
-pap_ai_f9b6c6be6c30243e87c5,ai_other,0.09994,2.68396
+pap_ai_f9b6c6be6c30243e87c5,ai_language,0.09994,2.68396
 pap_ai_c751abe642a7d9405ef9,ai_vision,-0.30266,2.24706
 pap_ai_648f3ced77b27428f949,ai_other,-1.22128,2.64430
 pap_ai_79f84da86036adccc613,ai_vision,1.71145,2.39825
@@ -4928,12 +4928,12 @@ pap_ai_6318dd964ac15265164c,ai_vision,-1.75893,4.56539
 pap_ai_343d94f4cf3618306234,ai_other,-2.46054,3.80893
 pap_ai_18192b04a6bbce608b2a,ai_other,-1.09372,3.01278
 pap_ai_f4e27def84a6051ba8d0,ai_other,1.37985,1.77169
-pap_ai_030c4e9319edef190516,ai_other,2.16028,2.36724
+pap_ai_030c4e9319edef190516,ai_language,2.16028,2.36724
 pap_ai_0d47c666f1af1dab458b,ai_vision,0.18267,2.82914
 pap_ai_8dc2d53769b4ceeeb973,ai_other,1.82233,1.50200
 pap_ai_8ef702f53b7db4bcdc85,ai_other,-0.68434,1.04444
 pap_ai_81cd3c9ef48f8d22fcb3,ai_other,1.99091,1.76283
-pap_ai_fefa70b780886e08f737,ai_other,2.36519,1.45154
+pap_ai_fefa70b780886e08f737,ai_language,2.36519,1.45154
 pap_ai_5a2514fd903f70cb2eb7,ai_other,0.51224,2.00575
 pap_ai_69e0d7ca8d5f68f2b4e9,ai_other,1.69261,2.03598
 pap_ai_03a4154f22554fbce573,ai_vision,0.50536,-0.38918
@@ -4950,7 +4950,7 @@ pap_ai_2cc0acf2a3951f0fb1a2,ai_other,-2.30563,3.39950
 pap_ai_321165b9719ad7b882ce,ai_other,-2.88171,5.46392
 pap_ai_eb102143138dc92df2a2,ai_other,-1.19616,2.63414
 pap_ai_69ca43260d6801513022,ai_language,1.93152,2.30727
-pap_ai_c852e311f5754599eb52,ai_other,0.65466,2.16260
+pap_ai_c852e311f5754599eb52,ai_language,0.65466,2.16260
 pap_ai_0e6fc2d4bcf2a29b8ea2,ai_vision,0.39037,2.64826
 pap_ai_89934bb46b20f3b64b50,ai_other,1.00519,1.67839
 pap_ai_99a0971ec55f005ad7db,ai_other,-1.43000,2.68434
@@ -5012,7 +5012,7 @@ pap_ai_239984d1cfad1cc5c5ed,ai_other,0.13748,4.45361
 pap_ai_4e6cf1319c1d0e5887be,ai_other,-0.20364,6.57772
 pap_ai_d504795c08e9c8160391,ai_other,1.08876,-0.25604
 pap_ai_b3360d73347c32a834d7,ai_other,-1.59056,2.23772
-pap_ai_4117720e4c7d0dfca6e1,ai_other,1.64859,1.56371
+pap_ai_4117720e4c7d0dfca6e1,ai_language,1.64859,1.56371
 pap_ai_c620bbbb1459cb464638,ai_vision,-0.99272,2.32647
 pap_ai_8396168cb1d823dcb03d,ai_vision,1.70230,0.99568
 pap_ai_4b1bccbb9a0f32e92a4d,ai_other,-2.30767,3.44390
@@ -5058,7 +5058,7 @@ pap_ai_ecdd55499604a537511e,ai_other,1.02050,2.55325
 pap_ai_a98811cfe77dfecf8e44,ai_other,1.44263,0.36811
 pap_ai_d5a4f0899af7fdd29dbf,ai_other,-2.08733,3.32361
 pap_ai_86a4d842785e23655713,ai_other,1.55801,0.64840
-pap_ai_9391f73c91431891ab29,ai_other,2.51096,1.52514
+pap_ai_9391f73c91431891ab29,ai_language,2.51096,1.52514
 pap_ai_56a4b84188573e150c1e,ai_other,-1.30911,1.29799
 pap_ai_a18681ecde649ad96d34,ai_other,-1.40762,1.90743
 pap_ai_1e0c78f975675ce06a2c,ai_other,0.95554,1.14989
@@ -5091,7 +5091,7 @@ pap_ai_2060873b0d302be67078,ai_other,-0.89039,0.56171
 pap_ai_fcf99eccfec7760f2584,ai_other,1.17861,0.32606
 pap_ai_5731d6d1ab102fff28fc,ai_other,-0.85021,2.30772
 pap_ai_b6b51e073dc7f8d7f4f3,ai_other,1.17755,-0.12124
-pap_ai_8c1279486a44c1994d29,ai_other,2.49503,1.51700
+pap_ai_8c1279486a44c1994d29,ai_language,2.49503,1.51700
 pap_ai_0edc07ddbfd316a27d41,ai_other,-2.08808,1.09034
 pap_ai_5503062ad698a988b747,ai_other,2.56372,1.47326
 pap_ai_a576dc0576f3e2417fef,ai_other,1.59000,0.66023
@@ -5108,7 +5108,7 @@ pap_ai_a9a3504e69747bed9281,ai_other,-1.27639,2.13133
 pap_ai_8f4b3e7bed1a7f281167,ai_other,1.19694,0.59538
 pap_ai_81817757b8f71271dfd6,ai_other,1.87820,1.44693
 pap_ai_e35355a68261f1db4e90,ai_language,2.44270,2.05482
-pap_ai_a18380efc8f40f078878,ai_other,2.35395,1.32898
+pap_ai_a18380efc8f40f078878,ai_language,2.35395,1.32898
 pap_ai_2c0cc9ab2a097ebf24a3,ai_other,1.69886,0.88421
 pap_ai_fba627a5ac04e906890c,ai_vision,0.96072,0.67281
 pap_ai_49f38ad59fb62105ff7e,ai_other,-1.33124,0.78324
@@ -5287,7 +5287,7 @@ pap_ai_679d18543c49aac082cc,ai_other,-2.82610,3.10220
 pap_ai_9a950ca79ae40195c143,ai_other,-1.75162,2.15929
 pap_ai_2c3004e42624ca0885ae,ai_vision,-0.72960,3.23171
 pap_ai_a7c2df927e8216aa6983,ai_other,0.81487,1.98959
-pap_ai_9615e67b39bf3738e13d,ai_other,0.43498,2.80813
+pap_ai_9615e67b39bf3738e13d,ai_language,0.43498,2.80813
 pap_ai_7e62cc884777f1c641d4,ai_other,-2.55909,7.11490
 pap_ai_ed8b2e2fabdbeacea61c,ai_vision,-2.43127,3.57828
 pap_ai_97c06b9f1cc6256610e5,ai_other,2.32365,1.16518
@@ -5664,7 +5664,7 @@ pap_ai_8e181103065c4085256f,ai_other,-1.45509,0.70522
 pap_ai_53e028b5d4d884f292b6,ai_other,-2.50674,4.57033
 pap_ai_79d01b6f4e86412456de,ai_other,-0.97142,2.76961
 pap_ai_c060387b66ffb4046af8,ai_other,0.72082,-0.46773
-pap_ai_c96723f8611fc04dc7bc,ai_other,2.56310,1.41725
+pap_ai_c96723f8611fc04dc7bc,ai_language,2.56310,1.41725
 pap_ai_eb96846eba0c813cae9b,ai_vision,0.28636,1.68940
 pap_ai_2f38354abcf488614881,ai_other,2.11753,0.43665
 pap_ai_6d6fb42b0ce1ad00fb2d,ai_vision,-0.42711,2.84276
@@ -5816,7 +5816,7 @@ pap_ai_022e9f7160c9fe85986b,ai_other,1.00038,0.63127
 pap_ai_1e12b7bc517ba3aaba6f,ai_vision,-0.19192,3.36040
 pap_ai_f498aa8143af642628db,ai_other,-0.09144,2.68277
 pap_ai_3f203dc9229d30be4d5e,ai_vision,-0.49488,3.74464
-pap_ai_d355092d6f2ad612f7ca,ai_other,1.43998,4.31265
+pap_ai_d355092d6f2ad612f7ca,ai_language,1.43998,4.31265
 pap_ai_824911c22e2e9efaf769,ai_other,-2.48711,1.96984
 pap_ai_2bc761bf0a9cf32a5ff1,ai_other,-0.18117,3.58191
 pap_ai_11eeaa7c976207af0026,ai_other,-0.39318,1.58012
@@ -6700,9 +6700,9 @@ pap_ai_808e776616900951ee44,ai_other,-1.44054,0.71882
 pap_ai_6268b92d75f9046ee878,ai_other,0.27136,1.84218
 pap_ai_140ed2f5a71ab3bdd002,ai_other,1.66390,0.14347
 pap_ai_1606b9bb6379dde52cc1,ai_other,-1.08486,2.39896
-pap_ai_143967dfa4ec18542824,ai_other,2.31902,1.61889
+pap_ai_143967dfa4ec18542824,ai_language,2.31902,1.61889
 pap_ai_fef1207eade713f85635,ai_other,-0.58755,2.22636
-pap_ai_fdb4ee2f4b57f1e7e611,ai_other,2.27996,1.51209
+pap_ai_fdb4ee2f4b57f1e7e611,ai_language,2.27996,1.51209
 pap_ai_3b42c1e90580fe253149,ai_other,-0.28705,1.60278
 pap_ai_a400b4db684058b26999,ai_other,0.00496,1.07818
 pap_ai_e7744b3c3de5e97751c6,ai_vision,0.59195,0.51954
@@ -6832,7 +6832,7 @@ pap_ai_399257d4cb3e73c3e84f,ai_other,-0.15914,0.80001
 pap_ai_dbeb916ea9d53f2ad337,ai_other,-1.19198,0.57972
 pap_ai_2dfda49f4de1541edb69,ai_other,1.19624,1.33007
 pap_ai_f1f091a40bd07b45dedf,ai_vision,0.14814,1.22683
-pap_ai_0427241fb686de303a62,ai_other,1.83344,1.84188
+pap_ai_0427241fb686de303a62,ai_language,1.83344,1.84188
 pap_ai_cc06945623a7751bd183,ai_other,-1.86357,1.83735
 pap_ai_e264ae85835be7bd9fbf,ai_other,2.00641,1.39250
 pap_ai_b4cc46b9ddda376ce8a9,ai_vision,2.56884,4.14830
@@ -6898,7 +6898,7 @@ pap_ai_b123ec13fabffb395c03,ai_other,1.04589,-0.08094
 pap_ai_70498631632f60017716,ai_other,1.88754,0.35599
 pap_ai_4298be0d1717527baf88,ai_other,-2.14009,1.14945
 pap_ai_f6ee778f00562785cf7b,ai_other,2.07432,0.73765
-pap_ai_faa40e165bdd21605f28,ai_other,2.42719,1.10412
+pap_ai_faa40e165bdd21605f28,ai_language,2.42719,1.10412
 pap_ai_8c8e341730a87410f09a,ai_other,2.69835,5.08559
 pap_ai_78bdc3649e6467739f12,ai_vision,0.66881,0.10568
 pap_ai_b39d7aa24768e184cb81,ai_other,-2.16043,0.88724
@@ -6927,7 +6927,7 @@ pap_ai_24ac3b18f7c8e84d473a,ai_language,2.15862,2.34195
 pap_ai_5b7b8b97c10c9ec572c8,ai_vision,-0.82213,0.22884
 pap_ai_5515a6f1ded343879ae4,ai_other,-1.13050,2.48745
 pap_ai_67f52c7a6c67cb49d7a9,ai_other,0.64480,-0.14732
-pap_ai_cb1d5f98d2a26a2b88b2,ai_other,2.16799,2.28048
+pap_ai_cb1d5f98d2a26a2b88b2,ai_language,2.16799,2.28048
 pap_ai_bb2ec98bf8867ddef183,ai_vision,-0.24977,2.65641
 pap_ai_744248885c96665223d0,ai_other,-0.49553,2.42203
 pap_ai_fe85aa2d4bdbf7010a14,ai_other,1.18204,-0.25291
@@ -7046,7 +7046,7 @@ pap_ai_bb2d8c0ea41e4bd626cd,ai_vision,-0.15706,2.51500
 pap_ai_a69ee841abf6e74ac568,ai_vision,-1.41593,4.82070
 pap_ai_27db736f18cb985d7d12,ai_other,-0.63843,2.75118
 pap_ai_718d8e839f293cd16d21,ai_other,-0.22258,1.82891
-pap_ai_256721348d6298f889cb,ai_other,2.45739,1.43423
+pap_ai_256721348d6298f889cb,ai_language,2.45739,1.43423
 pap_ai_68862d7e9445f2e04fb0,ai_vision,-1.23829,0.69084
 pap_ai_06cfcea528a45fc18291,ai_vision,1.32008,0.25854
 pap_ai_d650bd3b4ce4543968e4,ai_other,0.80558,-0.27197
@@ -7172,7 +7172,7 @@ pap_ai_162821b8180446271689,ai_other,-0.11008,1.69733
 pap_ai_5f877b5fb0775d79660a,ai_other,0.98160,1.75519
 pap_ai_7039c7acdd376a92f6dd,ai_other,1.03601,0.45555
 pap_ai_08ae0870a77def24a8a8,ai_other,2.37032,1.37747
-pap_ai_04431a3cbb419bbe21f9,ai_other,2.46672,1.59951
+pap_ai_04431a3cbb419bbe21f9,ai_language,2.46672,1.59951
 pap_ai_fac9f25dc0942f03eb66,ai_other,-0.64460,2.45377
 pap_ai_c41c6e63c7644ea85bc1,ai_other,-0.03804,2.04793
 pap_ai_2069a40dce8f04b1b615,ai_other,-0.13640,2.40045
@@ -7241,7 +7241,7 @@ pap_ai_ea9fecd81cd6f0f2f9ca,ai_other,2.25314,1.47649
 pap_ai_99f359d4ab4f142ad35e,ai_other,2.01419,0.69436
 pap_ai_2da898d68e2b2e39c614,ai_other,-0.81528,2.94197
 pap_ai_3c3217284b719dd21815,ai_other,0.78532,1.71809
-pap_ai_e501738a48e64fcd7db0,ai_other,1.64847,2.60034
+pap_ai_e501738a48e64fcd7db0,ai_language,1.64847,2.60034
 pap_ai_11eeaad4ee05e020e0c5,ai_other,-0.77595,0.86883
 pap_ai_cd2edad1f7d0f78e7ac8,ai_other,-0.19192,1.56472
 pap_ai_a2a324788d18321d4092,ai_other,-1.15452,1.85090
@@ -7482,7 +7482,7 @@ pap_ai_25b3f4f03d1ef396aaeb,ai_other,-2.23798,1.25165
 pap_ai_e75f4ec66cb5dd23ef0d,ai_other,1.58950,2.85275
 pap_ai_875b322db239073011d3,ai_language,2.58828,1.56637
 pap_ai_3ee65a17067d87e3f082,ai_other,-0.22942,1.60545
-pap_ai_e92faf825b35aff25573,ai_other,2.51633,1.47806
+pap_ai_e92faf825b35aff25573,ai_language,2.51633,1.47806
 pap_ai_19d344461e016e06a3a0,ai_language,2.69951,1.66433
 pap_ai_1b35d0557fd35fc44128,ai_other,-1.65779,1.71854
 pap_ai_144a8fd5be96725e4766,ai_other,-0.56241,3.03634
@@ -7565,7 +7565,7 @@ pap_ai_28fe87c1c63024e29d60,ai_other,0.20194,3.46756
 pap_ai_0f15d62cad11946e3a4f,ai_vision,0.26788,-0.10536
 pap_ai_4fbe88ef42c2164e3aaf,ai_other,-0.38161,1.41728
 pap_ai_5dc6fb4cfb7c1181e183,ai_other,1.04624,2.19709
-pap_ai_996c136dbc5066e8671d,ai_other,2.60473,1.61563
+pap_ai_996c136dbc5066e8671d,ai_language,2.60473,1.61563
 pap_ai_e7b608dae94833c0ca36,ai_other,-1.86558,1.90532
 pap_ai_d4f2341e57eab3e0bbc9,ai_vision,-0.24395,4.03096
 pap_ai_e0e522907f023cd84151,ai_vision,-0.25075,2.78130
@@ -7593,7 +7593,7 @@ pap_ai_4d69588363c8e5ebed9e,ai_other,1.17673,0.17814
 pap_ai_56677963f5430d93725d,ai_other,-0.57573,0.66448
 pap_ai_b5b3f235b3cddb45a82b,ai_other,1.76397,0.19026
 pap_ai_15119aec4cd18c1b4e7d,ai_other,1.50132,0.20044
-pap_ai_d11efe0a1be2777417c2,ai_other,1.93543,0.48576
+pap_ai_d11efe0a1be2777417c2,ai_language,1.93543,0.48576
 pap_ai_6fa3409a4ad35c45d974,ai_other,-1.42318,1.39781
 pap_ai_86ebf49528b699eb2826,ai_vision,-0.00565,2.77579
 pap_ai_3535c9eda647541c4615,ai_other,-1.78741,1.44210
@@ -7737,7 +7737,7 @@ pap_ai_4cc4d6e15a408f8293de,ai_vision,-0.20439,3.30451
 pap_ai_92a7e514acc8880ca655,ai_other,-0.94163,2.94122
 pap_ai_7d4f9d218b20f7f6d240,ai_other,-0.84167,1.46591
 pap_ai_051ffbcef5d6d0443d9b,ai_other,-1.93185,1.34861
-pap_ai_c0aff325b88bcd4b69e5,ai_other,2.54253,1.52233
+pap_ai_c0aff325b88bcd4b69e5,ai_language,2.54253,1.52233
 pap_ai_5b9dece26603cad7f437,ai_vision,-1.69559,1.43947
 pap_ai_549571c0febfc6dc5a0d,ai_other,-1.68271,0.72597
 pap_ai_7edb2fe5cc1f55c55af3,ai_other,0.67643,1.31623
@@ -7830,7 +7830,7 @@ pap_ai_b2f6a4f87dbe038d1478,ai_vision,0.27653,3.01410
 pap_ai_7303306a961b5e6d057b,ai_language,2.11998,3.50005
 pap_ai_560e77a4af66fa3edf41,ai_other,0.83471,0.40927
 pap_ai_37e9fcd84b222c961263,ai_other,1.01651,0.03437
-pap_ai_9f80a0b270eb752235df,ai_other,2.10117,2.23665
+pap_ai_9f80a0b270eb752235df,ai_language,2.10117,2.23665
 pap_ai_40679512bd01082ad7c6,ai_other,-2.26281,2.48724
 pap_ai_9f6ee3fc1f2bd662a09c,ai_other,-2.93356,7.13610
 pap_ai_63b75f38f8183b932ed3,ai_vision,1.21320,2.97527
@@ -7963,7 +7963,7 @@ pap_ai_850fb4d5206ac922fa60,ai_vision,-0.09349,2.03155
 pap_ai_8ac8e8ecd45e9df74316,ai_other,2.05641,1.23233
 pap_ai_b2892f1947a50b9a4eee,ai_vision,-0.10737,3.82575
 pap_ai_b2c8c01d36935b0a7015,ai_other,-1.88418,0.94515
-pap_ai_bce1adda94184d985bc4,ai_other,2.59688,1.63202
+pap_ai_bce1adda94184d985bc4,ai_language,2.59688,1.63202
 pap_ai_84b7b42d69f85d36c2e4,ai_vision,-1.44582,3.00307
 pap_ai_7d58089cf44b46e5b803,ai_other,2.40886,1.28372
 pap_ai_d0ea0dc9cb5d0696147a,ai_other,-1.31049,2.00272
@@ -7977,7 +7977,7 @@ pap_ai_a04ca06b21238703c60c,ai_vision,-0.02732,2.97285
 pap_ai_1ae819e06d3e36453d02,ai_vision,1.84923,3.14043
 pap_ai_ed559ac3b97cc8732221,ai_language,1.97744,2.37269
 pap_ai_2ea3767c897edea8970f,ai_other,2.31714,1.60050
-pap_ai_806f4c992082a13f6e83,ai_other,2.61412,1.60618
+pap_ai_806f4c992082a13f6e83,ai_language,2.61412,1.60618
 pap_ai_c4e4da19e42e48cec83d,ai_other,-0.69361,2.27656
 pap_ai_1f15393d4d3ebe8c40f0,ai_other,1.74666,0.59896
 pap_ai_7cf60b54d948133c6900,ai_other,0.44424,-0.26950
@@ -7997,7 +7997,7 @@ pap_ai_01e65f3ad12d364da290,ai_other,0.32176,0.32100
 pap_ai_2489b55e68e2e2a268d6,ai_vision,-0.71109,3.40935
 pap_ai_7422531d8cd44383aab1,ai_other,-0.44209,2.13635
 pap_ai_71b3744540ef2f529f2f,ai_other,-0.91421,2.83253
-pap_ai_a079983e2c33d45e9dbe,ai_other,2.48734,1.61545
+pap_ai_a079983e2c33d45e9dbe,ai_language,2.48734,1.61545
 pap_ai_faa3c8b41e38a0af6a44,ai_other,-0.66197,2.89199
 pap_ai_e85f05882c4b73bc973e,ai_other,1.73923,0.47715
 pap_ai_4384d2aecced802d2d49,ai_vision,0.19408,3.77931
@@ -8063,7 +8063,7 @@ pap_ai_b943361f581e68c28fc7,ai_other,-0.90997,2.30948
 pap_ai_f304331a91a7cfe61e1f,ai_other,-1.36499,0.68089
 pap_ai_3372e7a7caeaa62f8cb9,ai_vision,-0.35484,3.48102
 pap_ai_876caa605d548e311bd0,ai_other,0.22144,1.90908
-pap_ai_2548769729ad7be44bdf,ai_other,2.22302,1.29978
+pap_ai_2548769729ad7be44bdf,ai_language,2.22302,1.29978
 pap_ai_0a3c7698c96790ddf2dd,ai_other,-2.08658,1.44121
 pap_ai_7fe8479e27bb523dd144,ai_other,-0.83533,2.01406
 pap_ai_ee3b66e0cfc618e4d772,ai_vision,1.74937,2.04794
@@ -8197,7 +8197,7 @@ pap_ai_946e895a83038c3ecbbb,ai_other,0.34644,2.77278
 pap_ai_ac1a799f4d4a6bd74679,ai_other,-0.47227,0.83806
 pap_ai_01b067805ae188b6f336,ai_other,0.16381,0.78704
 pap_ai_47fe282da6e1e36b1f82,ai_other,0.94783,3.07714
-pap_ai_be40844d3217ceadbb4c,ai_other,2.56990,1.54902
+pap_ai_be40844d3217ceadbb4c,ai_language,2.56990,1.54902
 pap_ai_23ddf160160fc09843cf,ai_other,2.00659,1.68669
 pap_ai_27a5ad44e50236069875,ai_other,-0.98008,0.28788
 pap_ai_2af8b6b4a336bb10f5e2,ai_other,-1.64723,1.81157
@@ -8211,7 +8211,7 @@ pap_ai_89e310ed5d3646f491ac,ai_language,1.94349,2.79779
 pap_ai_11089ba883fe1a23c0b5,ai_other,0.87380,2.13598
 pap_ai_2aa979dcb9538e4bf08c,ai_other,-2.37115,2.44823
 pap_ai_8258a13ec90c0a89d2bf,ai_other,2.36095,1.76345
-pap_ai_2579524ac602bdf73475,ai_other,1.97937,2.36492
+pap_ai_2579524ac602bdf73475,ai_language,1.97937,2.36492
 pap_ai_0c816474b6c3b1e8348a,ai_other,1.83094,-0.18911
 pap_ai_97f72370112dd3da418a,ai_vision,-0.68540,0.52285
 pap_ai_028f446a265b3aeeea71,ai_other,0.65529,0.07802
@@ -8234,7 +8234,7 @@ pap_ai_6dc47ab91c34b0942eee,ai_other,-0.14687,2.51356
 pap_ai_bac8b3d1f7e2cd8df54b,ai_other,1.07056,3.69473
 pap_ai_b255bc85e0681372e13f,ai_other,1.24152,1.84677
 pap_ai_8b26261f8f63ec507315,ai_other,1.43397,0.26508
-pap_ai_557d8eaecff9babc97c4,ai_other,2.35500,1.83091
+pap_ai_557d8eaecff9babc97c4,ai_language,2.35500,1.83091
 pap_ai_2409dc614fd7cfcf6b1c,ai_other,1.94829,2.57127
 pap_ai_e93e20b28d9a35540c30,ai_other,-0.62639,0.85834
 pap_ai_e13ec6488d519e11b5a5,ai_language,2.23203,2.26162
@@ -8290,7 +8290,7 @@ pap_ai_2dd34af0dd4e5a17a2f2,ai_vision,1.36924,-0.24182
 pap_ai_386bfef40850b0bf311f,ai_other,1.81540,0.72036
 pap_ai_c497d8a836536f9e11c2,ai_other,0.09635,0.30174
 pap_ai_8a74cf14abbc8c001d61,ai_language,1.88145,2.93940
-pap_ai_e6c16c4814fe2953e5c4,ai_other,2.51381,1.46690
+pap_ai_e6c16c4814fe2953e5c4,ai_language,2.51381,1.46690
 pap_ai_182611246258422ead86,ai_other,-0.83674,1.17465
 pap_ai_495f71bca09496d67c6f,ai_other,1.12825,-0.03610
 pap_ai_bb04f4749b948dc55288,ai_vision,0.78535,0.42890
@@ -8329,7 +8329,7 @@ pap_ai_2ed6b52b62dbba349620,ai_other,0.08363,2.79353
 pap_ai_b4bd39677cd7eed24351,ai_other,-2.66547,2.98774
 pap_ai_03eccfdfb265a081fa17,ai_vision,0.40214,-0.33990
 pap_ai_5ea9c464a7ca513b9303,ai_other,0.80871,-0.18261
-pap_ai_770bfe8147214c8abb11,ai_other,1.92516,3.67733
+pap_ai_770bfe8147214c8abb11,ai_language,1.92516,3.67733
 pap_ai_d657c4eaa9988949ded4,ai_vision,-0.20935,1.67871
 pap_ai_48e2ac319bdaa023727d,ai_other,-1.41362,1.20992
 pap_ai_f5c4a9294532d3562d51,ai_other,0.86762,0.98661
@@ -8437,7 +8437,7 @@ pap_ai_3c6d988ddc274f1c46e1,ai_language,1.42313,3.65631
 pap_ai_c8c60a3557ba472bae57,ai_vision,0.55180,-0.35720
 pap_ai_946bbb45ea0342e6b419,ai_other,1.25490,0.71447
 pap_ai_7b656f85e63725b66c2a,ai_other,1.52045,0.10566
-pap_ai_9a23d8aabb8bf1d10857,ai_other,2.56372,1.53446
+pap_ai_9a23d8aabb8bf1d10857,ai_language,2.56372,1.53446
 pap_ai_94aaebc66687c2f0b312,ai_other,1.21561,-0.12617
 pap_ai_eaeaf972203fd9b8412e,ai_other,0.37714,0.14247
 pap_ai_b92f44242ba76a039aba,ai_other,-1.05473,1.48236
@@ -8551,11 +8551,11 @@ pap_ai_fe7b804f71c52b96a4e5,ai_other,-0.65584,0.44911
 pap_ai_8d950a9edd3241838dbb,ai_language,0.58727,3.31611
 pap_ai_ec9a545a81410cfaf49e,ai_other,1.63392,3.46349
 pap_ai_43c74aa3fc96d6cb7574,ai_vision,2.64340,4.07555
-pap_ai_07297487638b0875f6ff,ai_other,-0.36437,2.57402
+pap_ai_07297487638b0875f6ff,ai_language,-0.36437,2.57402
 pap_ai_f826ce04d4951b4b5c6b,ai_other,1.89031,0.91554
 pap_ai_256aac3e2174cee9da85,ai_other,2.38376,1.38755
 pap_ai_d1a9c6b59f99cc201941,ai_other,2.01422,3.59612
-pap_ai_0f3aa7ea2467e7a6707d,ai_other,2.37953,1.26102
+pap_ai_0f3aa7ea2467e7a6707d,ai_language,2.37953,1.26102
 pap_ai_14af3244ae68cf2299a5,ai_other,0.44697,2.85801
 pap_ai_72c04410441e15a3345e,ai_other,-1.52784,1.43888
 pap_ai_7fc5cd504b7a378daf5e,ai_other,-0.67686,1.47776
@@ -8588,7 +8588,7 @@ pap_ai_c52aafb00779bca09936,ai_language,2.52778,1.64540
 pap_ai_7c098c5b9263d119610e,ai_vision,0.95619,0.14732
 pap_ai_ea02a217d1c76b529d7c,ai_other,2.07966,2.09702
 pap_ai_f8a5f7427584655d9534,ai_other,1.07340,0.69809
-pap_ai_19c5b49f6a17dcdbeb46,ai_other,1.86381,3.86489
+pap_ai_19c5b49f6a17dcdbeb46,ai_language,1.86381,3.86489
 pap_ai_47d46353959accb02262,ai_other,0.92916,-0.19178
 pap_ai_2bee729f542b14a47344,ai_other,0.03057,1.71661
 pap_ai_56bf8de50e06a7976863,ai_other,-0.79644,2.49530
@@ -8602,7 +8602,7 @@ pap_ai_02cadc35a87a04b309fc,ai_vision,-0.85460,0.30595
 pap_ai_717f23d991802843325f,ai_other,-1.69961,1.07145
 pap_ai_ad9fcd2f32db7c4fb4e3,ai_other,-2.31007,1.22738
 pap_ai_42f986830e684479adf6,ai_language,1.62378,0.30166
-pap_ai_40269dfb121594d5fef8,ai_other,2.65482,1.61504
+pap_ai_40269dfb121594d5fef8,ai_language,2.65482,1.61504
 pap_ai_8ff5f74fe6f2ba7f9cb8,ai_other,1.23115,0.68296
 pap_ai_4db5f8ac1a2cef79fa31,ai_other,1.47696,0.19305
 pap_ai_59f9c454233b7c54fb5f,ai_other,-1.13131,3.02453
@@ -8610,7 +8610,7 @@ pap_ai_668bee6245ed8adaf357,ai_other,2.15797,1.30041
 pap_ai_712b02daa6b7a09c3163,ai_other,-0.73986,0.19482
 pap_ai_469c47c31ed190d71cb9,ai_other,-2.25809,1.44414
 pap_ai_c285f29eef108816fbb5,ai_other,0.87504,1.15652
-pap_ai_3730e2cde977bf4a5c54,ai_other,2.59629,1.56819
+pap_ai_3730e2cde977bf4a5c54,ai_language,2.59629,1.56819
 pap_ai_938987f08d3f3f8473ba,ai_other,-2.99188,5.60351
 pap_ai_5fa39053a30ca93dae7d,ai_language,2.43406,2.15166
 pap_ai_fbf3bcdbf0c3bbeee496,ai_other,-2.41395,1.78854
@@ -8637,7 +8637,7 @@ pap_ai_d10d28d8ab7cf48bc8ec,ai_other,1.27511,-0.26404
 pap_ai_4ee1f8d121df58238405,ai_other,-1.63217,1.86576
 pap_ai_d897c46eb2e9f16d2a6b,ai_other,0.92432,0.45600
 pap_ai_dc77b793ee1fe654b35d,ai_other,1.03234,0.81333
-pap_ai_73214b540e9b17e637b5,ai_other,2.36818,1.44218
+pap_ai_73214b540e9b17e637b5,ai_language,2.36818,1.44218
 pap_ai_2682e5fbbfa4329c1302,ai_other,-0.27511,1.45158
 pap_ai_aa5776c9af21a640b6bb,ai_other,0.85479,0.96118
 pap_ai_67ab952a29f304d675ea,ai_other,1.79454,1.30339
@@ -8749,7 +8749,7 @@ pap_ai_3d986acd954bab4af23e,ai_other,-2.07004,2.43859
 pap_ai_28778c45d3d74ae744c3,ai_other,-2.52707,2.03226
 pap_ai_ed9eb5760f56987043ab,ai_other,-1.64294,1.70889
 pap_ai_3b62850217fe147239bd,ai_other,1.31302,1.96738
-pap_ai_df50d98ac536fde914ee,ai_other,2.43114,1.50651
+pap_ai_df50d98ac536fde914ee,ai_language,2.43114,1.50651
 pap_ai_176dd61f1375c81ee981,ai_other,-1.97534,1.45354
 pap_ai_fa368c4d2f560c59edbf,ai_other,0.44253,2.57704
 pap_ai_3dd23c5ed6fdfb69ba9c,ai_other,1.79004,1.58362
@@ -8767,7 +8767,7 @@ pap_ai_7e166ae34a4041b8542f,ai_other,-1.07932,1.76655
 pap_ai_e6fbc9730403ac2798e0,ai_vision,0.67344,0.06566
 pap_ai_4bc4da8520438aa6ebd3,ai_vision,0.76113,0.51507
 pap_ai_a39bb6abe34234cbd4fc,ai_other,1.75258,1.48812
-pap_ai_8daa87332fb4ebb95169,ai_other,2.49220,1.50833
+pap_ai_8daa87332fb4ebb95169,ai_language,2.49220,1.50833
 pap_ai_fe68493fcf13929f35e3,ai_other,1.61435,1.57573
 pap_ai_77cdf17273e4666bca86,ai_other,-2.17730,3.23810
 pap_ai_885bd8fd256899ce613f,ai_vision,0.23921,2.79789
@@ -8780,7 +8780,7 @@ pap_ai_bf77c56680c8596be1dd,ai_other,1.85980,1.62884
 pap_ai_b26081fed361609de1bf,ai_other,2.35828,1.48304
 pap_ai_e21fbe212327b123394d,ai_other,-2.49030,2.02588
 pap_ai_e4c9432f5966d4f6a212,ai_other,1.75518,1.47748
-pap_ai_1b397040205e00a17eb2,ai_other,2.45501,1.52862
+pap_ai_1b397040205e00a17eb2,ai_language,2.45501,1.52862
 pap_ai_5a921e57fd26ae3f6dd1,ai_other,-1.72056,1.90175
 pap_ai_20b0b2a149c06b391738,ai_other,1.05734,0.00556
 pap_ai_e0c9049d83de075efb44,ai_other,2.23562,1.53061
@@ -8795,7 +8795,7 @@ pap_ai_ab4383ad2a57104171c5,ai_other,-2.04915,1.41561
 pap_ai_5ec902344e3302f2d87f,ai_vision,1.95991,2.64861
 pap_ai_e5ee8b58841ac2677e8e,ai_vision,0.22823,2.61953
 pap_ai_55646357bb98d1c90ed1,ai_other,2.12663,1.34019
-pap_ai_d1c2cb3a306972907c93,ai_other,2.31974,1.50531
+pap_ai_d1c2cb3a306972907c93,ai_language,2.31974,1.50531
 pap_ai_1980ced5b559aea65766,ai_language,1.94820,2.75640
 pap_ai_1f0e502a085c00de3811,ai_other,1.44573,1.04380
 pap_ai_b25a49f6cfb07f770e0d,ai_other,2.48326,1.53000
@@ -10343,7 +10343,7 @@ pap_ai_9d37cc2a96724fe22294,ai_other,-2.00338,1.89592
 pap_ai_22b45083821b7a2eb8ab,ai_other,-1.38708,0.96136
 pap_ai_54e0576a415b46bf873a,ai_other,-1.55314,0.86010
 pap_ai_509f9e7103a28129ebc0,ai_other,-2.22622,2.11753
-pap_ai_bfe95ab2d53c57e6e6e1,ai_other,2.33822,1.40539
+pap_ai_bfe95ab2d53c57e6e6e1,ai_language,2.33822,1.40539
 pap_ai_cb611de262062d4fa0fc,ai_other,0.36199,0.60564
 pap_ai_9621ba5cf7802a322ea8,ai_vision,-0.73874,0.03137
 pap_ai_cacd6d8a220a253895ed,ai_vision,-0.52833,3.41182
@@ -10442,7 +10442,7 @@ pap_ai_7a8e3ae95ddd56aed5b7,ai_other,-1.44166,2.19804
 pap_ai_9b39668bbe40f3993bd9,ai_other,-1.37994,0.58306
 pap_ai_717da3e6ed0ca1efab16,ai_other,-0.90938,3.24382
 pap_ai_c6a2296aea96092a0863,ai_other,-1.36760,1.49240
-pap_ai_5313ab5a501b331c03e7,ai_other,2.13095,2.53783
+pap_ai_5313ab5a501b331c03e7,ai_language,2.13095,2.53783
 pap_ai_a2252b2a4d52eb2c0933,ai_other,-0.66978,1.53637
 pap_ai_3ae77f568840cc03c931,ai_other,-2.87157,5.74887
 pap_ai_f48b029516307c56e380,ai_other,-0.49081,0.37534
@@ -10587,7 +10587,7 @@ pap_ai_5977cad911cdae6f511c,ai_other,1.19786,8.53267
 pap_ai_566f07a4064d2c6140d1,ai_other,1.08280,0.87252
 pap_ai_adaa160c33570025875c,ai_other,-1.72380,1.86737
 pap_ai_45d5dfbeb1e4e5dbc169,ai_other,-1.36082,0.38529
-pap_ai_edbd17c1e11ccbe8acb6,ai_other,2.45369,1.56869
+pap_ai_edbd17c1e11ccbe8acb6,ai_language,2.45369,1.56869
 pap_ai_6743b9f95152228fd5ef,ai_other,0.18398,0.32881
 pap_ai_557a9ea8786004126e20,ai_vision,-1.15799,0.87170
 pap_ai_95a2f75f44a0c98ebf6a,ai_other,-1.96959,1.10803
@@ -10610,7 +10610,7 @@ pap_ai_a9cf82a5bde3136d6c13,ai_other,-0.59801,2.34919
 pap_ai_c3c473d26e3f6fc0d388,ai_other,0.21573,2.51541
 pap_ai_7a93f0683580fa74c4e0,ai_infra,-2.81983,4.04688
 pap_ai_900a3827a74d3a2bebef,ai_other,2.01407,2.18647
-pap_ai_355c4bd01a475d277249,ai_other,1.32330,2.48643
+pap_ai_355c4bd01a475d277249,ai_language,1.32330,2.48643
 pap_ai_f91d890250e142c910b1,ai_other,1.05220,1.11513
 pap_ai_96b9da84829037e4201b,ai_other,-1.10167,2.00373
 pap_ai_13d05e6c2f4899c3428d,ai_other,1.15150,3.40275
@@ -10727,7 +10727,7 @@ pap_ai_ea56bbce7e083e326346,ai_other,0.15579,2.80075
 pap_ai_9904dff9f7e86133f6d3,ai_other,0.39031,2.90386
 pap_ai_4467296260d09fd671ac,ai_vision,-0.91612,3.25582
 pap_ai_a48ebf26b9f7a91f64a6,ai_other,-0.48887,2.30869
-pap_ai_562bd8ba1a1d1f23504a,ai_other,0.71892,2.16496
+pap_ai_562bd8ba1a1d1f23504a,ai_language,0.71892,2.16496
 pap_ai_ac057142d7dc276ad0b2,ai_other,-0.20650,2.15136
 pap_ai_80952b4ae2b5fbfbf9e4,ai_other,-0.50808,2.30034
 pap_ai_f98e91d121aad41a3320,ai_other,-1.75941,2.10720
@@ -10741,7 +10741,7 @@ pap_ai_4b8635860f3c6817af03,ai_other,-0.81064,2.00818
 pap_ai_de49dbb6cd79c0e7978a,ai_other,-0.89272,1.41621
 pap_ai_a350ff5a496b75683c4a,ai_language,2.01566,2.39341
 pap_ai_34e3059797e1e4c66569,ai_other,-1.09968,2.64142
-pap_ai_0de589c00c27d1fcb8fe,ai_other,2.12803,2.43778
+pap_ai_0de589c00c27d1fcb8fe,ai_language,2.12803,2.43778
 pap_ai_a33604e1a8f10b0b2aa4,ai_language,1.79255,2.36648
 pap_ai_7621299f2d7742ffc9b4,ai_other,-0.05421,1.66233
 pap_ai_99cacbd685e32f6268b1,ai_other,2.03388,2.38099
@@ -10844,7 +10844,7 @@ pap_ai_8555ae6835cb84cdb24f,ai_vision,-0.27414,2.90102
 pap_ai_b4efa2e1c5d86a502395,ai_other,-0.47165,2.62434
 pap_ai_a629c795e7bff93640c8,ai_other,-0.30401,2.03868
 pap_ai_91cf41e5fc285409281c,ai_other,1.75374,0.01344
-pap_ai_2af4acf2a0d4d4904b60,ai_other,2.45986,1.50035
+pap_ai_2af4acf2a0d4d4904b60,ai_language,2.45986,1.50035
 pap_ai_acd2297ce479c79d41f7,ai_other,-0.21397,1.92047
 pap_ai_88b27b3493ba4812428b,ai_other,-1.30132,1.19620
 pap_ai_84f2dccd54324896b7d8,ai_other,0.43410,2.52649
@@ -10862,7 +10862,7 @@ pap_ai_e12e986897b5472bf2fb,ai_other,1.68279,1.03440
 pap_ai_846a4da08cbb5297b5e8,ai_other,0.76475,2.01634
 pap_ai_4ae8cc897466d996fe07,ai_vision,-0.73632,0.43419
 pap_ai_3b1202dfc3d12a812211,ai_other,-0.68709,3.42650
-pap_ai_4538ec9a2d575d580191,ai_other,1.39260,3.11435
+pap_ai_4538ec9a2d575d580191,ai_language,1.39260,3.11435
 pap_ai_899fde2931f0d2bdf890,ai_other,2.02884,1.42231
 pap_ai_1c17583455a8f241d0ce,ai_other,1.72569,1.46508
 pap_ai_16286270b25bff5d4cbf,ai_other,1.17326,1.93242
@@ -10875,7 +10875,7 @@ pap_ai_144e4f12dc8d2dfbd2dc,ai_other,2.32547,1.46901
 pap_ai_0177609ac76dadb9fbd0,ai_other,0.13225,2.40317
 pap_ai_8cc99aa4e066a0f831a2,ai_other,1.14111,3.35695
 pap_ai_db34bd81d30f1e16a718,ai_other,0.04398,2.59260
-pap_ai_16ec7578f8934d11d2df,ai_other,1.39922,0.82197
+pap_ai_16ec7578f8934d11d2df,ai_language,1.39922,0.82197
 pap_ai_fca07d9aea70c3c8d1ee,ai_other,-2.62301,3.74437
 pap_ai_f7bfdb838b06ce8233f8,ai_language,2.07483,0.43166
 pap_ai_0df59568158e9fef502a,ai_language,0.91713,1.17035
@@ -10935,7 +10935,7 @@ pap_ai_61ed7e75cc29da9949c3,ai_other,0.33453,2.16026
 pap_ai_eb0ba6b6aa0d18f0514a,ai_other,0.23485,2.46860
 pap_ai_71c2985e6ededa85629a,ai_other,2.57705,1.57633
 pap_ai_0d751706a0fb5130aaa3,ai_other,-0.99699,3.83255
-pap_ai_d224c14897c01c815852,ai_other,-0.00175,2.61553
+pap_ai_d224c14897c01c815852,ai_language,-0.00175,2.61553
 pap_ai_8462618acdd6ee1ca231,ai_other,2.32371,1.44828
 pap_ai_f36ba1dde3b5f2102d3f,ai_other,-0.20065,2.18978
 pap_ai_9bd99df943a4d1f04ec6,ai_other,-0.01776,2.12022
@@ -10960,7 +10960,7 @@ pap_ai_aff75b9b994d7d1d1acd,ai_vision,0.33551,1.56015
 pap_ai_6f931fca0bdb46339235,ai_other,-0.10575,0.74486
 pap_ai_339afa8faf5163f45e46,ai_vision,-0.64199,2.22368
 pap_ai_aa01077014bba4fea9a7,ai_other,1.00556,-0.27410
-pap_ai_856b889ba4482c082605,ai_other,2.49859,1.45326
+pap_ai_856b889ba4482c082605,ai_language,2.49859,1.45326
 pap_ai_c3327e4b3cd177019bd5,ai_other,-1.14052,2.50378
 pap_ai_7be5158f9917c89b41d9,ai_other,-0.17405,2.78936
 pap_ai_4a85b8b93ab62e479cad,ai_vision,-0.54789,3.72829
@@ -11025,7 +11025,7 @@ pap_ai_b1791d8ee6decc82a198,ai_vision,1.32697,2.87621
 pap_ai_b7b6c63243638b9ecea3,ai_other,-2.59937,3.71962
 pap_ai_049ea10a32ab557bf940,ai_other,0.63377,2.04298
 pap_ai_c63c39651c23951f60a2,ai_other,-0.05456,2.57654
-pap_ai_562bd8ba1a1d1f23504a,ai_other,0.68876,2.18289
+pap_ai_562bd8ba1a1d1f23504a,ai_language,0.68876,2.18289
 pap_ai_50526fadb17440412df3,ai_other,0.08454,1.96473
 pap_ai_25cac19c9c65759f3839,ai_language,1.65901,2.75979
 pap_ai_09af410c9725806a48b3,ai_vision,-0.16162,3.55462
@@ -11068,7 +11068,7 @@ pap_ai_91cbb696b662bb0c1eea,ai_other,0.77183,2.45344
 pap_ai_080cee2a523359fa5b14,ai_language,2.00447,2.86765
 pap_ai_8ff63ddb40b56a5f19c6,ai_other,0.07156,2.13778
 pap_ai_5e53865cc0743b41a24c,ai_other,0.19214,1.94795
-pap_ai_15a8cb50b35ddec5b541,ai_other,2.16653,2.06270
+pap_ai_15a8cb50b35ddec5b541,ai_language,2.16653,2.06270
 pap_ai_7941cd298b019bf263b8,ai_other,-0.85354,1.82119
 pap_ai_e1e5c16d7c5ad3e41402,ai_other,0.52248,2.91691
 pap_ai_c361a8bbebcfe12ca874,ai_other,-0.39417,2.29791
@@ -11108,7 +11108,7 @@ pap_ai_570bc1999d0caa276ffd,ai_vision,-0.45537,3.22370
 pap_ai_bb220e99cec66970ee84,ai_other,-1.56303,2.00253
 pap_ai_749d2fba55c0456d4fe2,ai_other,-0.04999,2.07760
 pap_ai_25508f3abba01b123b38,ai_other,-0.72792,2.46929
-pap_ai_231a24ddad381cd1f580,ai_other,0.45431,2.81624
+pap_ai_231a24ddad381cd1f580,ai_language,0.45431,2.81624
 pap_ai_4ffbb062a8334d438624,ai_vision,-0.54226,3.61606
 pap_ai_6f0ff7c381593ba6933f,ai_vision,-0.54061,2.75702
 pap_ai_f887fa01166af322d06c,ai_other,-0.65748,0.43949
@@ -11193,7 +11193,7 @@ pap_ai_c172b53ee93d7020ec21,ai_other,1.81650,1.03722
 pap_ai_b4cedec1d31c330ec5c1,ai_other,1.96175,1.96908
 pap_ai_4377386e546369aeab20,ai_other,-1.25752,2.55420
 pap_ai_62bbfb5f389764e5a31c,ai_other,0.15322,0.61455
-pap_ai_7f56f1a8193db9c2b0d2,ai_other,2.56943,1.55890
+pap_ai_7f56f1a8193db9c2b0d2,ai_language,2.56943,1.55890
 pap_ai_6d4366df20b0d003e26e,ai_other,-0.69537,1.82436
 pap_ai_3d0480f822036c447de7,ai_other,-1.36139,0.95663
 pap_ai_d04d5811452ad5299efc,ai_other,-0.19236,2.64168
@@ -11425,7 +11425,7 @@ pap_ai_e9385db4a6e67ef3eef0,ai_language,1.98309,2.88743
 pap_ai_575663907ed7ceeeb600,ai_other,-1.68819,1.26343
 pap_ai_e436a77063814b3b908c,ai_other,-1.01958,3.01598
 pap_ai_222e87f5325eb0332649,ai_other,-0.71648,0.73157
-pap_ai_e086a5a3c7a8afc9636d,ai_vision,1.81897,4.06403
+pap_ai_e086a5a3c7a8afc9636d,ai_language,1.81897,4.06403
 pap_ai_2e537732a70263897d1d,ai_other,-1.67678,1.13639
 pap_ai_6e7d362cf841d0516a59,ai_other,1.54119,3.29112
 pap_ai_25713a9c91d4e349bd37,ai_other,-1.38188,1.99847
@@ -11553,7 +11553,7 @@ pap_ai_ae08c4047487d3ef5cf2,ai_other,-0.02824,2.06023
 pap_ai_60bc87fec7690f0b240a,ai_vision,1.57012,2.64661
 pap_ai_8cd1b933fde903c7e07b,ai_other,-0.96954,1.50765
 pap_ai_a7bb88b01d0ac536016f,ai_other,-2.79311,6.12112
-pap_ai_689f1ffd483581dd9400,ai_other,1.69129,4.14362
+pap_ai_689f1ffd483581dd9400,ai_language,1.69129,4.14362
 pap_ai_43f3d92d2f49e222b780,ai_other,1.29278,4.11154
 pap_ai_b34878008db75453fed1,ai_other,-1.01296,2.08724
 pap_ai_66194908c46210fa9aa0,ai_other,0.73609,7.78938
@@ -11768,7 +11768,7 @@ pap_ai_293b9eb80c9a86d51f2a,ai_other,-0.31916,1.94997
 pap_ai_6035a81949f160aa14ee,ai_other,-1.71914,2.31373
 pap_ai_2cd7458e6e0ed6103713,ai_other,-0.91875,1.45066
 pap_ai_ece20108de2863a69088,ai_vision,2.76199,4.86302
-pap_ai_b4d2b7592a2052d101b4,ai_other,1.80864,3.21000
+pap_ai_b4d2b7592a2052d101b4,ai_language,1.80864,3.21000
 pap_ai_0fcbf18c27e05b60d4f6,ai_language,1.88365,4.04830
 pap_ai_735f2a325ca960b63fd4,ai_other,0.71363,-0.42368
 pap_ai_6ff8311cbbc1047ca9f8,ai_language,1.67267,3.53790
@@ -12174,7 +12174,7 @@ pap_ai_693ef356c9126ef4030c,ai_other,-2.54570,2.62152
 pap_ai_2c99ada1681584787e6e,ai_other,0.42596,3.03784
 pap_ai_15f1097390d1f635b0b8,ai_other,-1.34462,3.12991
 pap_ai_f7666dacb1c7511ec875,ai_other,0.77460,-0.34548
-pap_ai_c7c43c6aeced4aff3893,ai_other,2.13051,2.49283
+pap_ai_c7c43c6aeced4aff3893,ai_language,2.13051,2.49283
 pap_ai_4678c4786e1269d5202e,ai_vision,-0.86674,2.87928
 pap_ai_0bbdeec4cb26be151a42,ai_other,-0.07688,1.88421
 pap_ai_ee066529b04ceb6d3a5d,ai_other,1.11246,1.88162
@@ -14147,7 +14147,7 @@ pap_ai_256aba19a03f2bac3f9f,ai_vision,0.26355,4.10642
 pap_ai_0cebfb010bdf4e85bb28,ai_other,-2.00693,4.78491
 pap_ai_c23d85428001c744e744,ai_other,1.61006,2.29769
 pap_ai_ddd1495aed193fabdf8e,ai_other,0.19826,2.62073
-pap_ai_9dfa012dc3579af71676,ai_other,1.44708,3.15211
+pap_ai_9dfa012dc3579af71676,ai_language,1.44708,3.15211
 pap_ai_de8208646204882cd4c5,ai_other,-2.70260,2.89561
 pap_ai_2b946c6150ff0ecaf057,ai_other,-0.60054,2.05073
 pap_ai_5ecbbaa7239661569a65,ai_other,2.26304,1.60229
@@ -14768,7 +14768,7 @@ pap_ai_0a62930e0acc2429ed09,ai_infra,-2.70346,3.15586
 pap_ai_fbe1f5f65cf5f91503e6,ai_other,1.27129,0.54751
 pap_ai_ebdc642075488f816ae7,ai_other,0.83226,0.31034
 pap_ai_64e13848e3e75db4a327,ai_other,0.32611,0.95598
-pap_ai_3baa1466dd627bb4cbd7,ai_other,-0.11132,2.01835
+pap_ai_3baa1466dd627bb4cbd7,ai_language,-0.11132,2.01835
 pap_ai_72a1c871e224753d479b,ai_vision,-0.55408,2.79954
 pap_ai_7a56d1232dc90e5a8b87,ai_other,0.83222,0.39209
 pap_ai_152eb42e693ef15ca697,ai_other,1.38051,1.21974
@@ -15988,7 +15988,7 @@ pap_ai_58792248f49fce194bbd,ai_other,1.78434,2.88837
 pap_ai_4de58fc30fddfbd0a111,ai_other,1.01661,1.57067
 pap_ai_5484f6c7b54d2ee8110b,ai_other,2.13035,1.00375
 pap_ai_6dced7a59e82083a4b61,ai_other,0.59007,2.30727
-pap_ai_6eb392c7a28930e15f71,ai_other,-0.35964,2.83044
+pap_ai_6eb392c7a28930e15f71,ai_language,-0.35964,2.83044
 pap_ai_17398e760ba8c97c32f8,ai_other,0.13453,2.19568
 pap_ai_1b367146fed136ae3b82,ai_other,-0.10430,1.89207
 pap_ai_f2443f68cbf4f1add3fa,ai_other,-0.20162,1.75932
@@ -16018,7 +16018,7 @@ pap_ai_fc6f9d5714ad2b4b4dcd,ai_vision,0.34945,-0.26361
 pap_ai_0387f7fc568e1ae6f284,ai_other,0.00137,2.74953
 pap_ai_4622cdf672d841c1bf32,ai_other,-2.49352,4.62934
 pap_ai_14f13b1f49f182decbdb,ai_other,1.93030,-0.27818
-pap_ai_1ec37feb23aec3b2b73f,ai_other,1.77105,0.88725
+pap_ai_1ec37feb23aec3b2b73f,ai_language,1.77105,0.88725
 pap_ai_b587cc3a50b063023a39,ai_vision,0.04628,2.19563
 pap_ai_bd505a846028ea29c93d,ai_vision,-2.81202,6.13595
 pap_ai_2d71e2ed2180b247f482,ai_other,-1.54408,2.98421
@@ -16587,7 +16587,7 @@ pap_ai_af3ec8da67771685fa84,ai_other,2.15573,0.35041
 pap_ai_53f7861a280eb2d6ebcc,ai_other,0.34878,3.34385
 pap_ai_067146e88e62c5af442b,ai_other,0.82660,1.47847
 pap_ai_96e152de6a90ea5317e4,ai_vision,-1.47190,2.84537
-pap_ai_3367eae54f8c6d7c5759,ai_other,1.36636,3.41571
+pap_ai_3367eae54f8c6d7c5759,ai_language,1.36636,3.41571
 pap_ai_3d39317e4a747a4660ca,ai_other,-1.93468,3.74205
 pap_ai_de63ad3bc6c33b2d9f1c,ai_other,-2.10432,3.18547
 pap_ai_15e6c1dcf8c947d2fe45,ai_vision,-1.12640,2.90548
@@ -17029,7 +17029,7 @@ pap_ai_a8ac7624ce4704c49980,ai_vision,-0.21730,3.05308
 pap_ai_bc11e7a187b5aa09fe88,ai_other,0.00025,2.41455
 pap_ai_b1313f42c246e7595019,ai_other,2.06183,0.35869
 pap_ai_68a071af158e4521ac45,ai_other,0.83425,1.78730
-pap_ai_a38337abdc654adef05a,ai_other,1.85644,3.24879
+pap_ai_a38337abdc654adef05a,ai_language,1.85644,3.24879
 pap_ai_08979b28a1ff2853cf01,ai_other,-1.21862,1.26025
 pap_ai_1aef4584501b5373b502,ai_other,-1.08577,0.44294
 pap_ai_73b9502a855a2550c41c,ai_other,1.88852,1.39552
@@ -17244,7 +17244,7 @@ pap_ai_492559781c0d189f945f,ai_other,-0.96480,1.80446
 pap_ai_06400d36697dc2ef355c,ai_other,-1.53710,4.28790
 pap_ai_244e13915b7018f7c677,ai_vision,-0.39792,2.83571
 pap_ai_6a622b06e90e3eb9a2f4,ai_other,-0.17093,1.69988
-pap_ai_bf43d457779e138b376b,ai_other,0.22329,2.65874
+pap_ai_bf43d457779e138b376b,ai_language,0.22329,2.65874
 pap_ai_5006f776407a791fe254,ai_vision,-0.15073,2.99840
 pap_ai_ef728925c4b6b159bfed,ai_other,2.23151,1.91825
 pap_ai_da4f183a8488fc917c13,ai_other,-2.05954,3.99610
@@ -18471,9 +18471,9 @@ pat_ai_417c9d2925c067f9486b,ai_other,-0.39106,6.32447
 pat_ai_a665263f68c12fe3f801,ai_other,0.91387,5.42148
 pat_ai_ba2a9d9ab7b6519190e0,ai_other,2.80803,5.00258
 pat_ai_6b16b9745d669ac1f62b,ai_other,1.06788,5.88971
-pat_ai_6f643e342b820c034a6d,ai_other,2.57735,5.04669
+pat_ai_6f643e342b820c034a6d,ai_language,2.57735,5.04669
 pat_ai_b08a760401b5a100b961,ai_other,1.15681,5.25853
-pat_ai_098576f718d6f395793f,ai_other,1.72623,4.14699
+pat_ai_098576f718d6f395793f,ai_language,1.72623,4.14699
 pat_ai_f6e9cb4d040f5e8afb30,ai_other,1.14621,5.17530
 pat_ai_4bdf52a63b7515c01711,ai_other,0.68349,5.83762
 pat_ai_02f12e11bbea89c94944,ai_other,1.54917,6.43281
@@ -18640,7 +18640,7 @@ pat_ai_83c5c81d4e0e0ffb3e63,ai_other,-0.84716,3.19747
 pat_ai_33efbc04d633c40d5910,ai_other,-0.66564,7.09081
 pat_ai_911485aef1476013f2e1,ai_other,1.83268,4.34592
 pat_ai_0386645ef7ac29fb32f4,ai_other,0.65426,5.04636
-pat_ai_270ea1228e97530d658b,ai_other,1.79519,4.15131
+pat_ai_270ea1228e97530d658b,ai_language,1.79519,4.15131
 pat_ai_0cbc6b6f990fe1ba0624,ai_other,2.29961,5.21060
 pat_ai_0710d3a54617f4ad1e7f,ai_other,1.30885,5.28607
 pat_ai_dbac885cf026cdc87e33,ai_other,2.47917,5.02779
@@ -18904,7 +18904,7 @@ pat_ai_d7e4c4c016f25144c44c,ai_vision,-0.21759,4.58474
 pat_ai_0ffb69f3cd137384257a,ai_other,1.14537,5.15586
 pat_ai_e24043e123e479009b69,ai_other,1.32520,4.98272
 pat_ai_0a47a37b57c452e5ffb5,ai_other,2.57630,4.67708
-pat_ai_5af9a65a61bbcd776df1,ai_other,1.95650,4.79885
+pat_ai_5af9a65a61bbcd776df1,ai_language,1.95650,4.79885
 pat_ai_d287b039168b73f7982b,ai_other,0.59678,7.09083
 pat_ai_b5e7f36f6a0d78d6c2e0,ai_other,1.81538,4.62561
 pat_ai_4d2e9bcb3bd23b4ed54d,ai_other,2.05356,5.55005
@@ -19447,7 +19447,7 @@ pat_ai_873a83588cdfa79c82ca,ai_other,0.60251,4.91214
 pat_ai_30c5149abb7d5999da8c,ai_vision,-0.38201,4.69298
 pat_ai_f35e4c48f0a641f56e7f,ai_other,-0.10964,7.07874
 pat_ai_6ef0bbd14f60000fcb1c,ai_vision,0.69481,4.46071
-pat_ai_3c2881ca6d69ecb32f0e,ai_other,1.77783,4.32320
+pat_ai_3c2881ca6d69ecb32f0e,ai_language,1.77783,4.32320
 pat_ai_405483ea9e9392a80c99,ai_other,1.66533,6.08080
 pat_ai_05590130354874f845fa,ai_other,1.64959,5.14808
 pat_ai_72c946afa966a55fb44a,ai_other,-0.74991,4.74238
@@ -19541,7 +19541,7 @@ pat_ai_1a88f3ae97662c276e3c,ai_other,0.25043,5.83014
 pat_ai_2b7aaa65cd3d2513d603,ai_vision,0.65798,5.21200
 pat_ai_06dce4ee925f84896ee0,ai_other,0.09407,4.77327
 pat_ai_fabecb3ba45077281c5f,ai_other,2.13165,5.15434
-pat_ai_bf28b6253738b92eb570,ai_other,2.13981,5.37836
+pat_ai_bf28b6253738b92eb570,ai_language,2.13981,5.37836
 pat_ai_6599e600b70fc63476bf,ai_other,-2.71562,1.45643
 pat_ai_066527b2dd8253cc66a7,ai_other,-0.48002,5.22897
 pat_ai_b9e14cba1606dcc8901d,ai_other,2.69923,5.25592
@@ -19743,7 +19743,7 @@ pat_ai_45921c1f4d0e4f93b416,ai_other,1.77034,5.79942
 pat_ai_be0b15777cb7becbbec8,ai_other,1.72077,4.35641
 pat_ai_9741f28cc97e7b6914bc,ai_other,0.69605,3.77522
 pat_ai_a523f62ecadc7cc91961,ai_other,1.69369,5.64863
-pat_ai_9467c2c9f83c5ff601fe,ai_other,-0.80242,6.02842
+pat_ai_9467c2c9f83c5ff601fe,ai_language,-0.80242,6.02842
 pat_ai_f5538338e5095c92a3bc,ai_vision,-1.42966,5.08317
 pat_ai_19565824d3d2b798589a,ai_other,1.46754,4.82444
 pat_ai_651dca554dfaa816bc62,ai_other,1.34329,4.62379
@@ -19810,7 +19810,7 @@ pat_ai_53f42988a0bf86eb3582,ai_vision,0.08127,5.70256
 pat_ai_72741b6d89a782539624,ai_other,-1.65924,5.34823
 pat_ai_ddfd24d795ff941607c3,ai_other,-1.37646,3.16909
 pat_ai_05da0de13fc0576b63ba,ai_other,-0.08688,6.01332
-pat_ai_bf72be66236d7202c7a2,ai_other,1.60761,5.07039
+pat_ai_bf72be66236d7202c7a2,ai_language,1.60761,5.07039
 pat_ai_3cd25033d302de7e18f0,ai_vision,-0.25321,4.84117
 pat_ai_884484df0bd3b64f3ce8,ai_language,2.09213,4.23303
 pat_ai_4e93219f25c3e99e869e,ai_other,0.59826,4.92562
@@ -20562,7 +20562,7 @@ pat_ai_027c6455157a62e859df,ai_other,-1.10501,3.50775
 pat_ai_af83c000e6b4dfee3f36,ai_other,-0.40472,7.19045
 pat_ai_c04c35fd3a2c0ea3afc5,ai_other,-1.80664,4.80687
 pat_ai_17c99644d5f60abc2a2a,ai_vision,-0.04550,6.17875
-pat_ai_26217ffc1ae66c7345f2,ai_other,1.74785,4.13636
+pat_ai_26217ffc1ae66c7345f2,ai_language,1.74785,4.13636
 pat_ai_cba2cf2c7454dab608c0,ai_other,0.07501,5.37282
 pat_ai_77b1eaf0c7b2370e9972,ai_other,0.53097,8.69789
 pat_ai_b7de5b2a3967316623eb,ai_other,-1.50767,5.42561
@@ -20663,7 +20663,7 @@ pat_ai_408fcd775c990e602a00,ai_other,1.22118,6.44579
 pat_ai_908d8acaeea45208c625,ai_other,-1.83881,3.09554
 pat_ai_8255993286497a355243,ai_other,0.52987,6.87894
 pat_ai_5c175d7ddc9a92d30b95,ai_vision,-0.43809,3.51957
-pat_ai_87fb884ec8ca7bf66345,ai_other,1.48202,5.11753
+pat_ai_87fb884ec8ca7bf66345,ai_language,1.48202,5.11753
 pat_ai_89e22f2e219e2648849c,ai_other,-3.19062,7.41737
 pat_ai_4a117cab370570fd8e28,ai_other,-2.12370,2.39094
 pat_ai_da2a71343042726428ad,ai_vision,-0.50831,3.77959
@@ -20674,7 +20674,7 @@ pat_ai_3267004ed9f04b103328,ai_vision,-2.16018,7.46075
 pat_ai_be03b798622e621b4c26,ai_other,-1.06006,7.05155
 pat_ai_bb238278028ac403e53a,ai_other,2.67986,5.29207
 pat_ai_cfe82ad478766061f2ce,ai_other,1.80928,4.51681
-pat_ai_4f43b04f882334b79562,ai_other,2.17346,4.05657
+pat_ai_4f43b04f882334b79562,ai_language,2.17346,4.05657
 pat_ai_21ea249d4ed3fbc0ce97,ai_other,-0.03788,5.94332
 pat_ai_57d38663c6e8d1dfc3bd,ai_other,0.95561,4.84202
 pat_ai_2d1b3e8e8e25ec8f49f4,ai_other,-1.37044,5.03622
@@ -21095,7 +21095,7 @@ pat_ai_60de41f541818262b8e9,ai_other,-1.37231,7.39395
 pat_ai_6187ee28d716b4761525,ai_other,-2.45532,7.37757
 pat_ai_c82ef9548b820e272372,ai_other,-1.29278,7.39577
 pat_ai_f8547288eebb90dd97bc,ai_other,-1.66598,2.96162
-pat_ai_e202ad69e8d12d4198f2,ai_other,-1.59762,7.48184
+pat_ai_e202ad69e8d12d4198f2,ai_language,-1.59762,7.48184
 pat_ai_50fe4b4728cd236f9e20,ai_vision,-1.55411,5.58933
 pat_ai_840309b6a28939a5cb4c,ai_other,-2.56231,7.46610
 pat_ai_e7faee6234ba22a8d0cf,ai_vision,-0.04718,5.90078
@@ -21454,7 +21454,7 @@ pat_ai_a8c3dc478f546a695ff9,ai_other,0.10110,3.73569
 pat_ai_cb3c9a3bf7487a5ae9a0,ai_other,1.05481,4.07173
 pat_ai_0c970cf66f3fceed8818,ai_other,0.45971,3.37820
 pat_ai_fca958d1e48298b460fc,ai_other,1.77583,4.97576
-pat_ai_3b66f10fb5bfc3132128,ai_other,1.79812,4.13573
+pat_ai_3b66f10fb5bfc3132128,ai_language,1.79812,4.13573
 pat_ai_4db17074640b724f1436,ai_other,-0.14144,5.14353
 pat_ai_ee74477c983e38dbbfdf,ai_other,2.63013,4.25359
 pat_ai_8fc6a422a864af505d3b,ai_other,0.57510,4.98846
@@ -21703,7 +21703,7 @@ pat_ai_cfceb20a1b804162c02b,ai_vision,-0.25098,4.58878
 pat_ai_531cd844e1239bc8705c,ai_other,1.56246,5.48233
 pat_ai_f5846e1a32c4e770c90a,ai_other,-0.33524,5.36280
 pat_ai_aa72acb1f0e8e5a82d94,ai_other,-1.01812,7.39293
-pat_ai_8889051182a290d3d41e,ai_other,-0.08374,4.41988
+pat_ai_8889051182a290d3d41e,ai_language,-0.08374,4.41988
 pat_ai_8b42f3f76cc8d1cc4d39,ai_other,-1.59624,5.41551
 pat_ai_7ef63a722a0e39e6cf23,ai_vision,-0.17404,4.35917
 pat_ai_139a97ea95335da9d594,ai_other,1.14675,6.02106
@@ -21913,7 +21913,7 @@ pat_ai_7a6c0836eb1a135a6d37,ai_language,1.92352,4.09411
 pat_ai_dc5f9b22ca8ecf33f1c4,ai_other,1.34678,4.40116
 pat_ai_25531cfce815e2600f8a,ai_other,-1.12055,5.18046
 pat_ai_14276af8575f8275a303,ai_vision,-0.04218,4.51634
-pat_ai_d190424b2c6de89d644d,ai_other,1.80398,4.18869
+pat_ai_d190424b2c6de89d644d,ai_language,1.80398,4.18869
 pat_ai_fecea00ab45677b63d90,ai_other,1.62399,6.17460
 pat_ai_5635c91168c2ff486988,ai_other,1.01438,4.26875
 pat_ai_91f409ca9b1fc80b0d31,ai_vision,0.02245,3.53825
@@ -22493,7 +22493,7 @@ pat_ai_78364aa79e84dd66349f,ai_other,-1.59404,5.21473
 pat_ai_7f9e746114f3110fdafd,ai_other,1.73524,4.60299
 pat_ai_5085e158eb94ef09919b,ai_other,2.37765,5.16913
 pat_ai_ef47bfe72926d134d157,ai_other,1.26389,4.20527
-pat_ai_1efccbbddb1af289e410,ai_other,2.05939,4.75303
+pat_ai_1efccbbddb1af289e410,ai_language,2.05939,4.75303
 pat_ai_f8f44c9dfb71d7edb144,ai_other,0.23872,3.72806
 pat_ai_7612e2f32bf164e35df6,ai_language,1.82095,4.13129
 pat_ai_80f07ff64477438ec280,ai_other,2.21194,5.32794
@@ -22665,7 +22665,7 @@ pat_ai_636eaf3c70663e057d87,ai_other,0.48890,4.61300
 pat_ai_562fcce89a3620c8f6f6,ai_other,0.24663,6.14227
 pat_ai_b6176063be9269ca0e62,ai_vision,-1.03627,5.33952
 pat_ai_53f37e1568c424e5dd82,ai_vision,-0.27679,4.96506
-pat_ai_2537b320ddbec77feed3,ai_other,1.84448,5.09876
+pat_ai_2537b320ddbec77feed3,ai_language,1.84448,5.09876
 pat_ai_875747380c3002222284,ai_vision,-3.21803,4.63532
 pat_ai_bc3c395a7a0c8a950582,ai_other,1.42746,4.37666
 pat_ai_542a177b52b4782ed734,ai_other,1.49570,4.10365
@@ -22690,7 +22690,7 @@ pat_ai_f8f37903daeb6a090477,ai_other,0.37505,3.53560
 pat_ai_f2551034ba57dd223169,ai_other,-1.72925,5.21523
 pat_ai_b45506b5725a5a99206b,ai_vision,-0.33252,4.18096
 pat_ai_b10d8586407c75491ea2,ai_vision,-0.28226,5.28464
-pat_ai_39a6c2ecf696864e289f,ai_other,2.19829,4.78339
+pat_ai_39a6c2ecf696864e289f,ai_language,2.19829,4.78339
 pat_ai_7726f0dd10419942b1f1,ai_other,1.39492,5.02271
 pat_ai_67bdd1803d2b8a3b37a8,ai_other,0.10584,5.21025
 pat_ai_54d4e761a98887fab5cf,ai_other,-1.85925,5.37558
@@ -22725,7 +22725,7 @@ pat_ai_47e9806556e5e9027a96,ai_other,-0.55499,4.40621
 pat_ai_c3592c8b1af6625ff363,ai_vision,-0.01516,4.59663
 pat_ai_35b1245edcc947f57841,ai_vision,0.00036,4.67328
 pat_ai_550805c8e68d7e922489,ai_other,-0.35672,7.82746
-pat_ai_690c80a5efcb81a78f8b,ai_other,1.73992,4.22212
+pat_ai_690c80a5efcb81a78f8b,ai_language,1.73992,4.22212
 pat_ai_3bb55482b995157f62e3,ai_vision,-0.66454,4.36466
 pat_ai_7f1d14c26ff8b35958ac,ai_other,0.80112,3.87143
 pat_ai_671df193cca75534a716,ai_other,1.84523,3.94889
@@ -23262,7 +23262,7 @@ pat_ai_a17f38e10bafc2b4d98f,ai_other,0.46280,3.57899
 pat_ai_920ed25863715183f693,ai_other,-0.69923,6.11464
 pat_ai_c16e4997fb4d851b5337,ai_other,-1.09892,4.17557
 pat_ai_65045c163dc9a2b5576e,ai_other,0.72940,4.67011
-pat_ai_b95dda6ac6286cc7bd3f,ai_other,-1.66566,6.91353
+pat_ai_b95dda6ac6286cc7bd3f,ai_language,-1.66566,6.91353
 pat_ai_cb925a485f470bd0db22,ai_vision,-0.09045,4.72120
 pat_ai_557a665d207f7ca740ea,ai_vision,-0.35820,3.86652
 pat_ai_29f7acac4ee90cae27d9,ai_vision,0.41394,-0.32204
@@ -24300,7 +24300,7 @@ pat_ai_11221b3b0d20982e63b1,ai_vision,-0.03102,4.91129
 pat_ai_ab7185a8a04daa348102,ai_other,-2.45189,6.18877
 pat_ai_c1c8a7fe87d81fdb6113,ai_other,-0.42156,7.35350
 pat_ai_7b6e260607137689ae64,ai_other,-1.29876,2.55824
-pat_ai_14fb58274becad963ec5,ai_other,1.87794,4.25226
+pat_ai_14fb58274becad963ec5,ai_language,1.87794,4.25226
 pat_ai_cee10f8e449135317ee2,ai_other,-0.43394,3.82317
 pat_ai_fcc3173840b9f2db01f5,ai_other,-1.39833,2.75530
 pat_ai_b1a6bbc2df97f938454e,ai_vision,-0.76907,4.01317
@@ -24545,7 +24545,7 @@ pat_ai_9d84b98a7714f5aeed85,ai_other,-1.25943,4.69892
 pat_ai_b3d157808a7159bc8645,ai_language,1.44782,4.41342
 pat_ai_415a73b651a5fe7d5459,ai_vision,-0.08048,4.48834
 pat_ai_b9b1ec4a193876cf9c66,ai_other,-1.12488,6.85422
-pat_ai_65577fd640addf426b2e,ai_other,1.38699,4.77589
+pat_ai_65577fd640addf426b2e,ai_language,1.38699,4.77589
 pat_ai_4c5aa91440058b0ef961,ai_other,1.35604,3.23266
 pat_ai_6b8ef104a613a5cdcd49,ai_other,1.68380,4.65920
 pat_ai_3551754847ae9fbb5ee4,ai_other,-0.53681,3.87274
@@ -24857,7 +24857,7 @@ pat_ai_c6838ad91001414f4935,ai_vision,0.26782,4.34853
 pat_ai_16793498855dc5fd5da9,ai_vision,-0.25056,4.19586
 pat_ai_df4e11ffa16162422ad4,ai_other,-0.92273,3.63418
 pat_ai_cf6488bb9bd8f6f0c135,ai_vision,-0.07023,3.87360
-pat_ai_1e6d51b8871a82c479b2,ai_other,-1.72814,4.78592
+pat_ai_1e6d51b8871a82c479b2,ai_language,-1.72814,4.78592
 pat_ai_833bda976a25251dd99b,ai_other,1.49963,4.46448
 pat_ai_61ed777223fab15a1dbd,ai_other,-0.52564,6.55149
 pat_ai_945fde857efe4fe58324,ai_other,2.69606,5.18105
@@ -25817,7 +25817,7 @@ pat_ai_da92d6f4e267b61974d6,ai_vision,-0.24689,4.44716
 pat_ai_b6ea37966ec56b001424,ai_other,-1.37050,3.56003
 pat_ai_fe61a51ff68a64f3f7e7,ai_vision,-0.05804,4.87810
 pat_ai_e76712c08ef01892161a,ai_other,1.71568,3.88996
-pat_ai_48c0c55f5fe4bd6b1717,ai_other,1.85962,4.34813
+pat_ai_48c0c55f5fe4bd6b1717,ai_language,1.85962,4.34813
 pat_ai_1780ef2b44afe5887515,ai_other,-3.24732,4.66736
 pat_ai_c7b92fb0fc1d7d219568,ai_other,-1.04972,4.89764
 pat_ai_fb87c7f99f3b370299a1,ai_other,-1.28854,1.65674
@@ -25878,7 +25878,7 @@ pat_ai_ccb482c8600d657e156f,ai_other,-2.22760,6.87398
 pat_ai_786467c536263de3e5d5,ai_other,-0.11805,6.10679
 pat_ai_ee827af6014c6dcb70a3,ai_other,0.44655,4.14944
 pat_ai_527377bc873f2fec9e76,ai_language,2.15088,4.48373
-pat_ai_1a9af8b09825d7f284e8,ai_other,1.75910,4.09034
+pat_ai_1a9af8b09825d7f284e8,ai_language,1.75910,4.09034
 pat_ai_599274b177ce3c89c82f,ai_other,-0.76428,3.97888
 pat_ai_b30f299b07a26a685e69,ai_vision,0.31721,4.02052
 pat_ai_70f92b6aac3f0d9b2ece,ai_other,0.65988,3.91574
@@ -26592,7 +26592,7 @@ pat_ai_0a53db78d5cd4aa8dd7c,ai_other,1.21764,4.63914
 pat_ai_49242d19fda46963a6bc,ai_other,-2.41510,7.06036
 pat_ai_0972f709e81cbfe0dd3e,ai_other,0.93793,5.70970
 pat_ai_8cd23d1917f903c2f59f,ai_other,-1.88163,5.23751
-pat_ai_20c2bdeafb153f26febf,ai_other,2.22478,5.06653
+pat_ai_20c2bdeafb153f26febf,ai_language,2.22478,5.06653
 pat_ai_e1223bbba4354427c218,ai_other,0.45928,4.96355
 pat_ai_71b61363888e0a1923a3,ai_other,0.59590,5.79979
 pat_ai_9315c22a11f8963e9026,ai_other,1.19350,5.76385
@@ -26675,7 +26675,7 @@ pat_ai_944c95b9a15325bcccb8,ai_other,-2.59159,5.10300
 pat_ai_1743ec93dbfbd72aa4c1,ai_other,1.02604,4.64844
 pat_ai_9ca39bc3f78e16bf0c4a,ai_vision,-0.19157,3.69852
 pat_ai_1db47d6dbdc5ab64bc37,ai_vision,-0.62879,3.53642
-pat_ai_5c67adf1bfcbc923c8b9,ai_other,1.60733,3.94810
+pat_ai_5c67adf1bfcbc923c8b9,ai_language,1.60733,3.94810
 pat_ai_158d840a9b70effaa8c4,ai_other,2.32127,5.20075
 pat_ai_cac4716e0020125edc57,ai_other,2.53527,4.88675
 pat_ai_9c7c8de7be459b529402,ai_vision,-2.33256,5.51322
@@ -26931,7 +26931,7 @@ pat_ai_4985f5a8f5a04368d311,ai_vision,-0.16197,3.48675
 pat_ai_8840159f6af679894aad,ai_vision,0.12059,4.33940
 pat_ai_98529faece2f4e19575e,ai_language,0.33284,3.48967
 pat_ai_7b6a2deafb00bd616dd0,ai_vision,0.52092,4.83767
-pat_ai_5e3ae115192defd2d280,ai_other,1.75535,4.07736
+pat_ai_5e3ae115192defd2d280,ai_language,1.75535,4.07736
 pat_ai_b1712f931442f70a8736,ai_other,0.28128,4.03805
 pat_ai_0ebf6ced421768937254,ai_vision,-0.19324,4.31645
 pat_ai_4e0495e9642d721bb0f0,ai_vision,0.34547,4.87514
@@ -27073,7 +27073,7 @@ pat_ai_5395bcd6daeed3c14497,ai_other,-1.53723,2.71167
 pat_ai_c8279e5ad98c0afb589d,ai_other,-1.72699,3.93010
 pat_ai_8359ac4848d6edc6ca9d,ai_vision,-1.42787,2.72040
 pat_ai_f43d418dcf3fb9fbe2d7,ai_other,-0.03049,3.99465
-pat_ai_5271e807383e2a023cca,ai_other,1.65222,4.49505
+pat_ai_5271e807383e2a023cca,ai_language,1.65222,4.49505
 pat_ai_6b1fa2540817469501a4,ai_vision,-0.38569,4.67426
 pat_ai_91a4015d2f60c081ad55,ai_vision,-1.86731,7.62104
 pat_ai_0d823f9792a4ec5a7558,ai_other,0.08270,4.24684
@@ -27240,7 +27240,7 @@ pat_ai_e25cce12c34674c48c09,ai_vision,0.66970,-0.06130
 pat_ai_82ebc6ea77f901d10851,ai_other,1.13351,4.23137
 pat_ai_1da56bcc7fafb991398d,ai_vision,-0.00829,5.21200
 pat_ai_5fb69697aedd86642a9a,ai_other,1.41776,6.16840
-pat_ai_79f739170012aa2fa9d4,ai_other,1.88734,4.85134
+pat_ai_79f739170012aa2fa9d4,ai_language,1.88734,4.85134
 pat_ai_7c6c5dee5a5953b7338a,ai_other,0.25589,5.24375
 pat_ai_81e434eade92e76bc16b,ai_other,0.19561,3.57693
 pat_ai_c10f481d4c4c7a6d6e81,ai_other,-1.92362,5.21254
@@ -27405,7 +27405,7 @@ pat_ai_37414580257275131a59,ai_other,-1.54644,3.31989
 pat_ai_3a79ff26fba49ece3c59,ai_other,-1.62695,3.22513
 pat_ai_1f818c94b460f34e9f7c,ai_vision,-1.06013,4.28848
 pat_ai_435701d283c0484a93eb,ai_other,-1.34108,1.78117
-pat_ai_0d22f31477aa6470782a,ai_other,-2.23294,7.91728
+pat_ai_0d22f31477aa6470782a,ai_language,-2.23294,7.91728
 pat_ai_daee02f5195c0ebca991,ai_other,-2.73640,5.87753
 pat_ai_291c17fb83788470fdfd,ai_other,0.61865,4.74393
 pat_ai_a9ec9d9036700130b7cb,ai_other,0.64071,8.27566
@@ -27529,7 +27529,7 @@ pat_ai_bd5e65b0751da6d273ee,ai_other,-1.85062,3.17493
 pat_ai_3dfe3e829f8c733fb862,ai_other,-1.03988,4.17571
 pat_ai_8204094d2b6499731dc0,ai_other,0.54758,4.26550
 pat_ai_94e1894b9955c76fa418,ai_language,1.81566,3.77381
-pat_ai_a8d8cf34eea8b5f1c8f0,ai_other,-1.67708,7.20703
+pat_ai_a8d8cf34eea8b5f1c8f0,ai_language,-1.67708,7.20703
 pat_ai_6bd9f6318c6e99c4dca4,ai_other,-0.16111,4.05726
 pat_ai_1e8980521932200f71b8,ai_other,-0.36900,4.33822
 pat_ai_6572d3449fcdd78eae23,ai_other,0.13093,4.35463
@@ -28571,7 +28571,7 @@ pat_ai_4e967d9b1896af40e4b9,ai_other,-2.15420,7.85013
 pat_ai_e863f52a950824c911bc,ai_other,0.70247,6.31792
 pat_ai_9eadd4f5e6f6a9e89712,ai_other,-1.58353,3.38638
 pat_ai_4ea047d71c206cae4b9f,ai_other,-1.43445,3.43394
-pat_ai_fe3f7eaf6b8edbae455a,ai_other,0.76421,5.63350
+pat_ai_fe3f7eaf6b8edbae455a,ai_language,0.76421,5.63350
 pat_ai_89f6b67c6589c9e237f2,ai_other,0.23716,3.87870
 pat_ai_2634911f2d5d9711c132,ai_vision,-0.69517,3.77892
 pat_ai_ab56baee83688fd79286,ai_other,1.34961,4.85015
@@ -28593,7 +28593,7 @@ pat_ai_35bfc2f15ff593023ce7,ai_other,-1.89789,3.26889
 pat_ai_5ca91e63d8d8b68c8231,ai_other,0.70193,3.54824
 pat_ai_4074a90243c1496552f1,ai_other,-2.04154,2.02828
 pat_ai_3217eb59e1ce9602fb64,ai_vision,-0.82765,4.62270
-pat_ai_93626dd2c3304d6f4461,ai_other,1.14344,4.78708
+pat_ai_93626dd2c3304d6f4461,ai_language,1.14344,4.78708
 pat_ai_5c565a2b8808e97c367c,ai_vision,-1.35712,5.31940
 pat_ai_df67682aca2f8efaaa70,ai_other,-2.40696,7.53776
 pat_ai_33a5c017a07876ae87d6,ai_other,-0.73642,3.97702
@@ -29209,7 +29209,7 @@ pat_ai_bb1e99441fb5426e1b36,ai_other,-0.31778,5.79392
 pat_ai_c405a62bb818b1daf7a1,ai_other,1.04113,0.68438
 pat_ai_f5bc4a95e8002563a904,ai_vision,-0.74992,4.68820
 pat_ai_5ec27c44a35d992d7d46,ai_vision,-1.30791,3.97272
-pat_ai_a0cf901a0c6a18bbf309,ai_other,0.60080,3.96652
+pat_ai_a0cf901a0c6a18bbf309,ai_language,0.60080,3.96652
 pat_ai_0d7407a435c2647fa386,ai_other,-1.11886,3.70359
 pat_ai_7698d6ef9930fd720fb8,ai_other,-0.74644,4.55079
 pat_ai_63f75b77987172b65857,ai_language,1.78233,3.90912
@@ -29378,7 +29378,7 @@ pat_ai_a74bdd597dcf79cefd56,ai_other,-2.80544,4.66351
 pat_ai_f00a269cc9f9285bc0a2,ai_other,-1.37927,2.17712
 pat_ai_3780c935b421bbd5d440,ai_vision,-0.69480,4.28763
 pat_ai_e13eabd1ec345a9fa033,ai_other,1.25781,4.12537
-pat_ai_409597b300bbe22cd910,ai_other,1.79993,3.95410
+pat_ai_409597b300bbe22cd910,ai_language,1.79993,3.95410
 pat_ai_4a944d0dd20257741a8a,ai_vision,2.00158,4.19836
 pat_ai_7a4b29089149f131728c,ai_other,-1.44276,2.25248
 pat_ai_1effaa92f8a2a80cdad3,ai_other,0.64379,5.40253
@@ -29557,7 +29557,7 @@ pat_ai_e0024256738d76a47d76,ai_other,-0.66823,6.47622
 pat_ai_8178e8fce0c5a81a7961,ai_other,0.96551,0.73176
 pat_ai_30500d303d41905f655e,ai_other,0.26374,3.75846
 pat_ai_6c019e7bf8d2803683c5,ai_vision,-1.56928,5.42696
-pat_ai_0c41ab4c538d1581ff54,ai_other,1.56574,4.59925
+pat_ai_0c41ab4c538d1581ff54,ai_language,1.56574,4.59925
 pat_ai_4e198a30a2a2aa8712f4,ai_other,-1.87355,3.65931
 pat_ai_5cab60c89aa18bea00b6,ai_other,-1.47436,4.85696
 pat_ai_47fde975218d790383dd,ai_vision,-1.28243,0.75487
@@ -29592,7 +29592,7 @@ pat_ai_6b457aeaad0b1817ea0b,ai_other,-2.35285,5.27062
 pat_ai_c5896361a22f41c02f08,ai_other,-1.38089,1.89244
 pat_ai_4de149e74f86296e4db4,ai_other,-1.56398,5.05895
 pat_ai_276fca63c923714810f1,ai_vision,-0.15329,4.73151
-pat_ai_2fb59d4109ea30fdac9f,ai_other,1.41207,4.16149
+pat_ai_2fb59d4109ea30fdac9f,ai_language,1.41207,4.16149
 pat_ai_059b083a3dc2e4190998,ai_other,-1.54154,3.42313
 pat_ai_021ac33096b7cefc1a25,ai_other,0.71827,4.15109
 pat_ai_4d4e62bd71b2d939a3d4,ai_other,-1.43853,7.55372
@@ -37787,7 +37787,7 @@ pol_ai_7c2fe14055afdc3a05ee,ai_other,2.24124,1.17772
 pol_ai_aad703f5b891cba6ba3f,ai_other,5.06475,-0.65241
 pol_ai_bfe978d3149553c816f1,ai_other,2.04103,1.24182
 pol_ai_15398879225987785d79,ai_other,5.06517,-0.65264
-pol_ai_8cdcbe77a48d241b559f,ai_other,2.59779,1.59792
+pol_ai_8cdcbe77a48d241b559f,ai_language,2.59779,1.59792
 pol_ai_c47fa3965ec815b748da,ai_other,2.31338,1.09220
 pol_ai_6998352e2069492a7210,ai_other,2.09596,1.33129
 pol_ai_af1ed1701d5f0d92baa7,ai_other,2.15493,0.97013
@@ -37809,7 +37809,7 @@ pol_ai_2141f46baa7042b28786,ai_other,2.48589,1.41062
 pol_ai_d9d24c228520ed102336,ai_other,2.47071,1.21188
 pol_ai_97eb0a0b95615d9469ce,ai_other,2.09169,1.40817
 pol_ai_ee5cacc9375ec73a2a79,ai_other,2.38565,1.19658
-pol_ai_634ef3ce8418899309bb,ai_other,2.51755,1.38763
+pol_ai_634ef3ce8418899309bb,ai_language,2.51755,1.38763
 pol_ai_c1ba15234c7524d6968f,ai_other,2.32288,1.07402
 pol_ai_b3f711aa6e1faaf5c28a,ai_other,2.06675,1.31029
 pol_ai_3d9620c86b508f3dc133,ai_other,3.65742,0.55105

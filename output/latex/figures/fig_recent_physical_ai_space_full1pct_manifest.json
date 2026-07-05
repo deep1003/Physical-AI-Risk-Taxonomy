@@ -2,9 +2,9 @@
   "fraction": 0.01,
   "seed": 20260704,
   "subgroup_counts": {
-    "ai_vision": 6231,
-    "ai_other": 31472,
-    "ai_language": 1246,
+    "ai_vision": 6230,
+    "ai_language": 1407,
+    "ai_other": 31312,
     "ai_infra": 7372,
     "physical_ai": 3807,
     "physical_ai_risks": 830
