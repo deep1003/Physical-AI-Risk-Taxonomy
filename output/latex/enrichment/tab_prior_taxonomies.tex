@@ -1,6 +1,6 @@
 {\footnotesize
 \setlength{\extrarowheight}{2pt}
-\begin{longtable}{@{}p{2.15cm}p{1.7cm}p{3.7cm}p{6.15cm}@{}}
+\begin{longtable}{@{}p{2.15cm}p{1.7cm}p{3.5cm}p{6.35cm}@{}}
 \caption{Prior risk-taxonomy work and its released top-level categories}
 \label{tab:prior-taxonomies}\\
 \toprule
@@ -18,36 +18,36 @@ Reference & Institution & Construction method & Released top-level categories (s
 \bottomrule
 \endlastfoot
 \multicolumn{4}{@{}l}{\textbf{A. Literature / bibliographic synthesis taxonomies}}\\[2pt]
-Slattery et al.\ 2024~\cite{slattery2024} & MIT & Best-fit meta-review of 43 risk frameworks; $\sim$1{,}600 risk mentions coded into $\sim$700 risks & Two taxonomies: \emph{causal} (entity, intentionality, timing) and \emph{domain}: discrimination \& toxicity; privacy \& security; misinformation; malicious actors \& misuse; human--computer interaction; socioeconomic \& environmental; AI system safety \& limitations (7 domains $\times$ 24 subdomains) \\
-Weidinger et al.\ 2021~\cite{weidinger2021} & DeepMind & Cross-disciplinary structured literature review of observed/anticipated LM harms & Discrimination, hate \& exclusion; information hazards; misinformation; malicious uses; human--computer interaction; environmental \& socioeconomic (6 areas $\times$ 21 risks) \\
-Hendrycks et al.\ 2023~\cite{hendrycks2023} & CAIS & Narrative synthesis by human/organizational source, with historical analogies & Malicious use; AI race; organizational risks; rogue AIs (4, each with sub-hazards) \\
-Bommasani et al.\ 2021~\cite{bommasani2021} & Stanford CRFM & Multi-author survey of foundation-model risks & Inequity \& fairness; misuse; environment; legality; ethics of scale; economics; security \& privacy (thematic) \\
+Slattery et al.\ 2024~\cite{slattery2024} & MIT & Meta-review of 43 frameworks ($\sim$700 coded risks) & Causal taxonomy $+$ domain taxonomy (7 domains $\times$ 24 subdomains) \\
+Weidinger et al.\ 2021~\cite{weidinger2021} & DeepMind & Structured review of LM harms & Discrimination; information hazards; misinformation; malicious uses; HCI; environmental/socioeconomic (6 areas, 21 risks) \\
+Hendrycks et al.\ 2023~\cite{hendrycks2023} & CAIS & Narrative synthesis by source & Malicious use; AI race; organizational; rogue AIs (4) \\
+Bommasani et al.\ 2021~\cite{bommasani2021} & Stanford CRFM & Foundation-model risk survey & 7 thematic areas (fairness, misuse, environment, legality, economics, security) \\
 \midrule
 \multicolumn{4}{@{}l}{\textbf{B. Analytic / policy classification frameworks}}\\[2pt]
-Amodei et al.\ 2016~\cite{amodei2016} & Google Brain / OpenAI & Analytic derivation of accident classes by failure source & Negative side effects; reward hacking; scalable oversight; safe exploration; robustness to distributional shift (5) \\
-Yampolskiy 2016~\cite{yampolskiy2016} & U.\ Louisville & Two-axis analytic matrix & Timing (pre-/post-deployment) $\times$ cause (on purpose / by mistake / environment / internal) \\
-Critch \& Krueger 2020~\cite{critch2020} & UC Berkeley CHAI & ``Prepotence'' typology; 29 research directions by delegation structure & Prepotent-AI risk types; single/multi-principal $\times$ single/multi-agent delegation (29 directions) \\
-OECD 2022~\cite{oecd2022class} & OECD & Expert policy classification of any AI system & People \& planet; economic context; data \& input; AI model; task \& output (5 dimensions $\times$ attributes) \\
-NIST 2023~\cite{nist-airmf} & NIST & Consensus framework via public workshops & Valid \& reliable; safe; secure \& resilient; accountable \& transparent; explainable; privacy-enhanced; fair (7 trustworthiness traits; GOVERN/MAP/MEASURE/MANAGE) \\
-MITRE ATLAS~\cite{mitre-atlas} & MITRE & ATT\&CK-style knowledge base from real AI attacks & Adversarial tactics matrix ($\sim$16 tactics $\times$ $\sim$84 techniques) \\
-OECD 2024~\cite{oecd2024incidents} & OECD & Expert-consensus terminology for incident reporting & Incident vs.\ hazard; harm types: physical, environmental, economic, reputational, public-interest, human-rights, psychological \\
-Shevlane et al.\ 2023~\cite{shevlane2023} & DeepMind & Extreme-risk evaluation framework & Dangerous-capability evaluations; alignment evaluations (2 axes) \\
-Gabriel et al.\ 2024~\cite{gabriel2024} & DeepMind & Monograph on advanced AI assistants & Value alignment; safety; malicious use; manipulation; anthropomorphism/trust; well-being; misinformation; economic \& environmental impact (thematic) \\
+Amodei et al.\ 2016~\cite{amodei2016} & Google Brain / OpenAI & Accident classes by failure source & Side effects; reward hacking; scalable oversight; safe exploration; distributional shift (5) \\
+Yampolskiy 2016~\cite{yampolskiy2016} & U.\ Louisville & Two-axis analytic matrix & Timing (pre/post-deployment) $\times$ cause \\
+Critch \& Krueger 2020~\cite{critch2020} & UC Berkeley CHAI & Delegation-structure typology & Prepotent-AI types; single/multi principal $\times$ agent (29 directions) \\
+OECD 2022~\cite{oecd2022class} & OECD & Policy classification of AI systems & People \& planet; economy; data; model; task/output (5 dimensions) \\
+NIST 2023~\cite{nist-airmf} & NIST & Consensus framework & 7 trustworthiness traits; GOVERN/MAP/MEASURE/MANAGE \\
+MITRE ATLAS~\cite{mitre-atlas} & MITRE & ATT\&CK-style attack knowledge base & Adversarial tactics matrix ($\sim$16 tactics, $\sim$84 techniques) \\
+OECD 2024~\cite{oecd2024incidents} & OECD & Incident-terminology consensus & Incident vs.\ hazard; harm types (physical$\ldots$psychological) \\
+Shevlane et al.\ 2023~\cite{shevlane2023} & DeepMind & Extreme-risk evaluation & Dangerous-capability $+$ alignment evaluations (2 axes) \\
+Gabriel et al.\ 2024~\cite{gabriel2024} & DeepMind & Advanced-assistant monograph & Value alignment; safety; misuse; manipulation; well-being (thematic) \\
 \midrule
 \multicolumn{4}{@{}l}{\textbf{C. Frontier-lab capability-threshold governance frameworks}}\\[2pt]
-OpenAI 2025~\cite{openai2025prep} & OpenAI & Tracked capability categories with gating thresholds (v2) & Biological \& chemical; cybersecurity; AI self-improvement (3 categories $\times$ High/Critical) \\
-Anthropic 2023--25~\cite{anthropic2024rsp} & Anthropic & Biosafety-level analogue (AI Safety Levels) & ASL-1--4+ tiers keyed to CBRN uplift and autonomous capability \\
-DeepMind 2025~\cite{deepmind2025fsf} & DeepMind & Critical Capability Levels triggering mitigations (v2) & CBRN; cybersecurity; machine-learning R\&D; deceptive alignment (4) \\
-Bai et al.\ 2022~\cite{bai2022} & Anthropic & Written constitution + RLAIF encoding harm principles & Helpful, harmless, honest via $\sim$16 principles (legality, toxicity, fairness, tone) \\
+OpenAI 2025~\cite{openai2025prep} & OpenAI & Capability thresholds (v2) & Biological/chemical; cybersecurity; AI self-improvement (3) \\
+Anthropic 2023--25~\cite{anthropic2024rsp} & Anthropic & AI Safety Levels (biosafety analogue) & ASL-1--4+ tiers (CBRN uplift, autonomy) \\
+DeepMind 2025~\cite{deepmind2025fsf} & DeepMind & Critical Capability Levels (v2) & CBRN; cybersecurity; ML R\&D; deceptive alignment (4) \\
+Bai et al.\ 2022~\cite{bai2022} & Anthropic & Written constitution $+$ RLAIF & Helpful, harmless, honest via $\sim$16 principles \\
 \midrule
 \multicolumn{4}{@{}l}{\textbf{D. Physical-AI / autonomous-system risk taxonomies}}\\[2pt]
-ISO 21448:2022~\cite{iso21448} & ISO & Hazards from functional insufficiency and foreseeable misuse (SOTIF) & Functional insufficiencies; triggering conditions; foreseeable misuse; scenario space known/unknown $\times$ safe/unsafe (4 areas) \\
-ANSI/UL 4600~\cite{ul4600} & UL & Goal-based safety case for autonomous products & Claim-based argument over $\sim$10 topics: risk analysis, design, testing, tool qualification, autonomy validation, data integrity, human--machine interaction, lifecycle, metrics \\
+ISO 21448:2022~\cite{iso21448} & ISO & SOTIF hazard analysis & Functional insufficiencies; triggering conditions; foreseeable misuse (4 areas) \\
+ANSI/UL 4600~\cite{ul4600} & UL & Goal-based safety case & Claim-based argument over $\sim$10 lifecycle topics \\
 \midrule
 \multicolumn{4}{@{}l}{\textbf{E. Agentic-AI risk / governance taxonomies}}\\[2pt]
-Chan et al.\ 2023~\cite{chan2023} & Mila / Cambridge & Agency-feature analysis of amplified harms & Underspecification; directness of impact; goal-directedness; long-term planning (4 features) \\
-Shavit et al.\ 2023~\cite{shavit2023} & OpenAI & Governance practices mapped to the agent lifecycle & Task-suitability; action-space limits; default behaviors; legibility; monitoring; attributability; interruptibility (7 practices) \\
-Chan et al.\ 2024~\cite{chan2024} & GovAI / Mila & Visibility measures for deployed agents & Agent identifiers; real-time monitoring; activity logging (3 measures) \\
-Benton et al.\ 2024~\cite{benton2024} & Anthropic & Oversight-undermining threat model with per-capability evals & Human-decision sabotage; code sabotage; sandbagging; undermining oversight (4) \\
+Chan et al.\ 2023~\cite{chan2023} & Mila / Cambridge & Agency-feature analysis & Underspecification; directness; goal-directedness; long-term planning (4) \\
+Shavit et al.\ 2023~\cite{shavit2023} & OpenAI & Lifecycle governance practices & 7 practices (task-suitability $\ldots$ interruptibility) \\
+Chan et al.\ 2024~\cite{chan2024} & GovAI / Mila & Agent-visibility measures & Agent identifiers; real-time monitoring; activity logging (3) \\
+Benton et al.\ 2024~\cite{benton2024} & Anthropic & Sabotage threat model $+$ evals & Human-decision; code; sandbagging; undermining oversight (4) \\
 \end{longtable}
 }
