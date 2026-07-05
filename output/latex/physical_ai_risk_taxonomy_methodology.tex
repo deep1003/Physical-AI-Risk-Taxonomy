@@ -29,7 +29,7 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
-\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,backgrounds}
 \graphicspath{{output/latex/figures/}{figures/}}
 
 \hypersetup{
@@ -270,13 +270,13 @@ For reproducibility, each stage is documented as an auditable transformation rat
 \node[model] (embed) at (5.1,-1.9) {Document embeddings\\\(\Enc(\mathrm{title}\Vert\mathrm{abstract})\)};
 \node[model] (cluster) at (0,-1.9) {Semantic clustering\\HDBSCAN\\c-TF-IDF keyphrases};
 
-\node[review] (reffilter) at (0,-3.8) {Reference grounding\\standards \(\cdot\) frameworks\\benchmarks \(\cdot\) papers};
-\node[proc] (merge) at (5.1,-3.8) {Candidate deduplication\\pairwise similarity\\iterative merge \(\tau=0.94\)};
-\node[outputbox] (l4) at (10.2,-3.8) {182 L4 risk cards\\stable IDs\\definitions \(\cdot\) evidence};
+\node[review] (reffilter) at (0,-4.4) {Reference grounding\\standards \(\cdot\) frameworks\\benchmarks \(\cdot\) papers};
+\node[proc] (merge) at (5.1,-4.4) {Candidate deduplication\\pairwise similarity\\iterative merge \(\tau=0.94\)};
+\node[outputbox] (l4) at (10.2,-4.4) {182 L4 risk cards\\stable IDs\\definitions \(\cdot\) evidence};
 
-\node[model] (l3) at (10.2,-5.7) {L3 family assignment\\EM-style nearest centroid\\24 sub-categories};
-\node[review] (human) at (5.1,-5.7) {Expert review\\boundary corrections\\reference cap \(\leq 5\) per card};
-\node[outputbox] (release) at (0,-5.7) {Released artifacts\\HTML taxonomy\\CSV/JSON maps\\methodology PDF};
+\node[model] (l3) at (10.2,-7.0) {L3 family assignment\\EM-style nearest centroid\\24 sub-categories};
+\node[review] (human) at (5.1,-7.0) {Expert review\\boundary corrections\\reference cap \(\leq 5\) per card};
+\node[outputbox] (release) at (0,-7.0) {Released artifacts\\HTML taxonomy\\CSV/JSON maps\\methodology PDF};
 
 \draw[arrow] (sources) -- (normalize);
 \draw[arrow] (normalize) -- (anchors);
@@ -290,12 +290,20 @@ For reproducibility, each stage is documented as an auditable transformation rat
 \draw[arrow] (l3) -- (human);
 \draw[arrow] (human) -- (release);
 
-\node[draw=black!20, rounded corners=2pt, fit=(sources)(normalize)(anchors)(riskfilter)(embed)(cluster),
-  inner sep=5pt, label={[font=\sffamily\footnotesize\bfseries, text=black!70]above:Collection and corpus filtering}] {};
-\node[draw=black!20, rounded corners=2pt, fit=(reffilter)(merge)(l4),
-  inner sep=5pt] {};
-\node[draw=black!20, rounded corners=2pt, fit=(l3)(human)(release),
-  inner sep=5pt, label={[font=\sffamily\footnotesize\bfseries, text=black!70]below:Hierarchy assignment, review, and release}] {};
+\begin{scope}[on background layer]
+  \node[draw=black!40, semithick, rounded corners=3pt, fill=black!4, inner sep=4pt,
+    fit=(sources)(normalize)(anchors)(riskfilter)(embed)(cluster)] (bandA) {};
+  \node[draw=black!40, semithick, rounded corners=3pt, fill=black!4, inner sep=4pt,
+    fit=(reffilter)(merge)(l4)] (bandB) {};
+  \node[draw=black!40, semithick, rounded corners=3pt, fill=black!4, inner sep=4pt,
+    fit=(l3)(human)(release)] (bandC) {};
+\end{scope}
+\node[anchor=south, font=\sffamily\small\bfseries, text=black!80] at (bandA.north)
+  {Step 1\quad Collection and corpus filtering};
+\node[anchor=south, font=\sffamily\small\bfseries, text=black!80] at (bandB.north)
+  {Step 2\quad Risk-candidate generation and deduplication};
+\node[anchor=south, font=\sffamily\small\bfseries, text=black!80] at (bandC.north)
+  {Step 3\quad Hierarchy assignment, review, and release};
 
 \end{tikzpicture}%
 }

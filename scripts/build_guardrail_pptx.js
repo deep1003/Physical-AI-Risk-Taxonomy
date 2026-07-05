@@ -12,35 +12,34 @@ s.addText("Harmless and Helpful Tradeoff - Physical AI Actions", {
   fontFace: EN, fontSize: 24, bold: true, color: "000000",
 });
 
-// grid geometry
-const gx = 2.35, gy = 1.35, cw = 4.9, ch = 2.3, gpx = 0.22, gpy = 0.22;
+// grid geometry (contiguous 2x2, no gaps)
+const gx = 2.35, gy = 1.35, cw = 4.9, ch = 2.3, gpx = 0, gpy = 0;
 const cell = (col, row) => ({ x: gx + col * (cw + gpx), y: gy + row * (ch + gpy), w: cw, h: ch });
 
-function quad(col, row, fill, line, hEN, hKR, note, noteColor, tag, tagColor) {
+function quad(col, row, fill, line, hEN, hKR, note) {
   const c = cell(col, row);
-  s.addShape(p.ShapeType.roundRect, { ...c, fill: { color: fill }, line: { color: line, width: 2 }, rectRadius: 0.08 });
+  s.addShape(p.ShapeType.rect, { ...c, fill: { color: fill }, line: { color: "9A9A9A", width: 1 } });
   const runs = [
-    { text: hEN, options: { fontFace: EN, fontSize: 17, bold: true, color: "000000", breakLine: true } },
-    { text: hKR, options: { fontFace: KR, fontSize: 12.5, color: "000000", breakLine: true } },
-    { text: " ", options: { fontSize: 5, breakLine: true } },
-    { text: note, options: { fontFace: EN, fontSize: 10.5, color: "000000", breakLine: true } },
+    { text: hEN, options: { fontFace: EN, fontSize: 17, bold: true, color: "111111", breakLine: true } },
+    { text: hKR, options: { fontFace: KR, fontSize: 12.5, bold: true, color: "111111", breakLine: true } },
+    { text: " ", options: { fontSize: 6, breakLine: true } },
+    { text: note, options: { fontFace: EN, fontSize: 11, color: "7A7A7A", breakLine: true } },
   ];
-  if (tag) runs.push({ text: tag, options: { fontFace: EN, fontSize: 9.5, italic: true, color: "000000" } });
-  s.addText(runs, { ...c, align: "center", valign: "middle", margin: 4, lineSpacingMultiple: 1.08 });
+  s.addText(runs, { ...c, align: "center", valign: "middle", margin: 4, lineSpacingMultiple: 1.1 });
 }
 
-quad(0, 0, "EFEFEF", "000000", "Safe · Inefficient", "안전하나 비효율적",
-  "Low operational value", "000000");
-quad(1, 0, "FFFFFF", "000000", "Safe · Efficient", "효율적이고 안전한",
-  "Desired region", "000000");
-quad(0, 1, "D0D0D0", "000000", "Unsafe · Inefficient", "위험하고 비효율적",
-  "Worst on both axes", "000000");
-quad(1, 1, "EFEFEF", "000000", "Unsafe · Efficient", "효율적이나 위험한",
-  "Highest physical-harm risk\n(danger from capability, not incompetence)", "000000");
+quad(0, 0, "EDEDED", "", "Safe · Inefficient", "안전하나 비효율적",
+  "Low operational value");
+quad(1, 0, "FFFFFF", "", "Efficient · Safe", "효율적이고 안전한",
+  "Desired region");
+quad(0, 1, "CFCFCF", "", "Unsafe · Inefficient", "위험하고 비효율적",
+  "Worst on both axes");
+quad(1, 1, "EDEDED", "", "Efficient · Unsafe", "효율적이나 위험한",
+  "Highest physical-harm risk");
 
 // left axis pole labels
-s.addText("Safe", { x: 1.15, y: gy, w: 1.05, h: ch, align: "right", valign: "middle", fontFace: EN, fontSize: 14, bold: true, color: "000000" });
-s.addText("Unsafe", { x: 1.05, y: gy + ch + gpy, w: 1.15, h: ch, align: "right", valign: "middle", fontFace: EN, fontSize: 14, bold: true, color: "000000" });
+s.addText("Safe", { x: 1.15, y: gy, w: 1.05, h: ch, align: "right", valign: "middle", fontFace: EN, fontSize: 13, color: "6F6F6F" });
+s.addText("Unsafe", { x: 1.05, y: gy + ch + gpy, w: 1.15, h: ch, align: "right", valign: "middle", fontFace: EN, fontSize: 13, color: "6F6F6F" });
 // left axis title (rotated)
 s.addText("Safety (Harmlessness)", { x: -1.35, y: 3.35, w: 4.3, h: 0.5, align: "center", valign: "middle", rotate: 270, fontFace: EN, fontSize: 15, bold: true, color: "000000" });
 
