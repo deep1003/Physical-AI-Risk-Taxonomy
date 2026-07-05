@@ -1,0 +1,571 @@
+TY  - ELEC
+AU  - Clarivate
+TI  - Web of Science Platform
+PY  - 2026
+UR  - https://clarivate.com/academia-government/scientific-and-academic-research/research-discovery-and-referencing/web-of-science/
+ER  - 
+TY  - ELEC
+AU  - OpenAlex
+TI  - OpenAlex Developers: Overview
+PY  - 2026
+UR  - https://developers.openalex.org/
+ER  - 
+TY  - ELEC
+AU  - Crossref
+TI  - REST API: Retrieve Metadata
+PY  - 2026
+UR  - https://www.crossref.org/documentation/retrieve-metadata/rest-api/
+ER  - 
+TY  - ELEC
+AU  - Research Organization Registry
+TI  - Research Organization Registry (ROR)
+PY  - 2026
+UR  - https://ror.org/
+ER  - 
+TY  - ELEC
+AU  - European Patent Office
+TI  - PATSTAT: EPO Worldwide Patent Statistical Database
+PY  - 2026
+UR  - https://www.epo.org/en/service-support/faq/searching-patents/about-patent-information/where-can-i-find-patent-statistics
+ER  - 
+TY  - ELEC
+AU  - Korea Institute of Patent Information
+TI  - KIPRIS Intellectual Property Information Search Service
+PY  - 2026
+UR  - https://www.kipris.or.kr/khome/main.do
+ER  - 
+TY  - JOUR
+AU  - Zupic, Ivan
+AU  - \vCater, Toma\vz
+TI  - Bibliometric Methods in Management and Organization
+JO  - Organizational Research Methods
+VL  - 18
+IS  - 3
+SP  - 429-472
+PY  - 2015
+DO  - 10.1177/1094428114562629
+ER  - 
+TY  - JOUR
+AU  - van Eck, Nees Jan
+AU  - Waltman, Ludo
+TI  - Software survey: VOSviewer, a computer program for bibliometric mapping
+JO  - Scientometrics
+VL  - 84
+SP  - 523-538
+PY  - 2010
+DO  - 10.1007/s11192-009-0146-3
+ER  - 
+TY  - JOUR
+AU  - Aria, Massimo
+AU  - Cuccurullo, Corrado
+TI  - bibliometrix: An R-tool for comprehensive science mapping analysis
+JO  - Journal of Informetrics
+VL  - 11
+IS  - 4
+SP  - 959-975
+PY  - 2017
+DO  - 10.1016/j.joi.2017.08.007
+ER  - 
+TY  - JOUR
+AU  - Hicks, Diana
+AU  - Wouters, Paul
+AU  - Waltman, Ludo
+AU  - de Rijcke, Sarah
+AU  - Rafols, Ismael
+TI  - Bibliometrics: The Leiden Manifesto for research metrics
+JO  - Nature
+VL  - 520
+SP  - 429-431
+PY  - 2015
+DO  - 10.1038/520429a
+ER  - 
+TY  - RPRT
+AU  - OECD
+TI  - OECD Patent Statistics Manual
+PB  - OECD Publishing
+PY  - 2009
+UR  - https://www.oecd.org/en/publications/2009/02/oecd-patent-statistics-manual_g1gh9fa4.html
+ER  - 
+TY  - ELEC
+AU  - OECD
+TI  - Intellectual Property Statistics
+PY  - 2026
+UR  - https://www.oecd.org/en/data/datasets/intellectual-property-statistics.html
+ER  - 
+TY  - RPRT
+AU  - Tyndall, Jess
+TI  - AACODS Checklist for Appraising Grey Literature
+PB  - Flinders University
+PY  - 2010
+UR  - https://fac.flinders.edu.au/dspace/api/core/bitstreams/e94a96eb-0334-4300-8880-c836d4d9a676/content
+ER  - 
+TY  - JOUR
+AU  - Tricco, Andrea C.
+AU  - Lillie, Erin
+AU  - Zarin, Wasifa
+AU  - O'Brien, Kelly K.
+AU  - Colquhoun, Heather
+AU  - Levac, Danielle
+AU  - Moher, David
+AU  - Peters, Micah D. J.
+AU  - Horsley, Tanya
+AU  - Weeks, Laura
+AU  - Hempel, Susanne
+AU  - others
+TI  - PRISMA Extension for Scoping Reviews (PRISMA-ScR): Checklist and Explanation
+JO  - Annals of Internal Medicine
+VL  - 169
+IS  - 7
+SP  - 467-473
+PY  - 2018
+DO  - 10.7326/M18-0850
+ER  - 
+TY  - ELEC
+AU  - NVIDIA
+TI  - NVIDIA Cosmos: Physical AI with World Foundation Models
+PY  - 2026
+UR  - https://www.nvidia.com/en-us/ai/cosmos/
+ER  - 
+TY  - RPRT
+AU  - National Institute of Standards
+AU  - Technology
+TI  - Artificial Intelligence Risk Management Framework (AI RMF 1.0)
+PB  - NIST
+PY  - 2023
+UR  - https://www.nist.gov/itl/ai-risk-management-framework
+ER  - 
+TY  - RPRT
+AU  - ISO/IEC
+TI  - ISO/IEC 23894:2023, Artificial intelligence -- Guidance on risk management
+PB  - ISO/IEC
+PY  - 2023
+UR  - https://www.iso.org/standard/77304.html
+ER  - 
+TY  - RPRT
+AU  - ISO
+TI  - ISO 10218-1:2025, Robotics -- Safety requirements -- Part 1: Industrial robots
+PB  - ISO
+PY  - 2025
+UR  - https://www.iso.org/standard/73933.html
+ER  - 
+TY  - RPRT
+AU  - ISO/IEC
+TI  - ISO/IEC TR 5469:2024, Artificial intelligence -- Functional safety and AI systems
+PB  - ISO/IEC
+PY  - 2024
+UR  - https://www.iso.org/standard/81283.html
+ER  - 
+TY  - RPRT
+AU  - ISO/IEC
+TI  - ISO/IEC TS 8200:2024, Information technology -- Artificial intelligence -- Controllability of automated artificial intelligence systems
+PB  - ISO/IEC
+PY  - 2024
+UR  - https://www.iso.org/standard/83012.html
+ER  - 
+TY  - ELEC
+AU  - MITRE
+TI  - ATLAS: Adversarial Threat Landscape for Artificial-Intelligence Systems
+PY  - 2026
+UR  - https://atlas.mitre.org/
+ER  - 
+TY  - JOUR
+AU  - Sermanet, Pierre
+AU  - Majumdar, Anirudha
+AU  - Irpan, Alex
+AU  - Kalashnikov, Dmitry
+AU  - Sindhwani, Vikas
+TI  - Generating Robot Constitutions and Benchmarks for Semantic Safety
+JO  - arXiv preprint arXiv:2503.08663
+PY  - 2025
+UR  - https://arxiv.org/abs/2503.08663
+ER  - 
+TY  - ELEC
+AU  - ASIMOV Benchmark
+TI  - ASIMOV Benchmark v2
+PY  - 2025
+UR  - https://asimov-benchmark.github.io/v2/
+ER  - 
+TY  - CPAPER
+AU  - Chen, Jianlv
+AU  - Xiao, Shitao
+AU  - Zhang, Peitian
+AU  - Luo, Kun
+AU  - Lian, Defu
+AU  - Liu, Zheng
+TI  - M3-Embedding: Multi-Linguality, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation
+T2  - Findings of the Association for Computational Linguistics: ACL 2024
+PY  - 2024
+UR  - https://aclanthology.org/2024.findings-acl.137/
+ER  - 
+TY  - CPAPER
+AU  - Campello, Ricardo J. G. B.
+AU  - Moulavi, Davoud
+AU  - Sander, Jorg
+TI  - Density-Based Clustering Based on Hierarchical Density Estimates
+T2  - Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD)
+PY  - 2013
+DO  - 10.1007/978-3-642-37456-2_14
+ER  - 
+TY  - JOUR
+AU  - McInnes, Leland
+AU  - Healy, John
+AU  - Astels, Steve
+TI  - hdbscan: Hierarchical density based clustering
+JO  - Journal of Open Source Software
+VL  - 2
+IS  - 11
+SP  - 205
+PY  - 2017
+DO  - 10.21105/joss.00205
+ER  - 
+TY  - JOUR
+AU  - McInnes, Leland
+AU  - Healy, John
+AU  - Melville, James
+TI  - UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction
+JO  - arXiv preprint arXiv:1802.03426
+PY  - 2018
+UR  - https://arxiv.org/abs/1802.03426
+ER  - 
+TY  - JOUR
+AU  - Grootendorst, Maarten
+TI  - BERTopic: Neural topic modeling with a class-based TF-IDF procedure
+JO  - arXiv preprint arXiv:2203.05794
+PY  - 2022
+UR  - https://arxiv.org/abs/2203.05794
+ER  - 
+TY  - JOUR
+AU  - Dempster, Arthur P.
+AU  - Laird, Nan M.
+AU  - Rubin, Donald B.
+TI  - Maximum Likelihood from Incomplete Data via the EM Algorithm
+JO  - Journal of the Royal Statistical Society: Series B (Methodological)
+VL  - 39
+IS  - 1
+SP  - 1-22
+PY  - 1977
+DO  - 10.1111/j.2517-6161.1977.tb01600.x
+ER  - 
+TY  - JOUR
+AU  - Dhillon, Inderjit S.
+AU  - Modha, Dharmendra S.
+TI  - Concept Decompositions for Large Sparse Text Data Using Clustering
+JO  - Machine Learning
+VL  - 42
+IS  - 1--2
+SP  - 143-175
+PY  - 2001
+DO  - 10.1023/A:1007612920971
+ER  - 
+TY  - JOUR
+AU  - Weidinger, Laura
+AU  - Mellor, John
+AU  - Rauh, Maribeth
+AU  - others
+TI  - Ethical and social risks of harm from Language Models
+JO  - arXiv preprint arXiv:2112.04359
+PY  - 2021
+UR  - https://arxiv.org/abs/2112.04359
+ER  - 
+TY  - JOUR
+AU  - Slattery, Peter
+AU  - Saeri, Alexander K.
+AU  - Grundy, Emily A. C.
+AU  - others
+TI  - The AI Risk Repository: A Comprehensive Meta-Review, Database, and Taxonomy of Risks From Artificial Intelligence
+JO  - arXiv preprint arXiv:2408.12622
+PY  - 2024
+UR  - https://arxiv.org/abs/2408.12622
+ER  - 
+TY  - CPAPER
+AU  - Chan, Alan
+AU  - Salganik, Rebecca
+AU  - Markelius, Alva
+AU  - others
+TI  - Harms from Increasingly Agentic Algorithmic Systems
+T2  - Proceedings of the 2023 ACM Conference on Fairness, Accountability, and Transparency (FAccT)
+PY  - 2023
+DO  - 10.1145/3593013.3594033
+UR  - https://arxiv.org/abs/2302.10329
+ER  - 
+TY  - JOUR
+AU  - Askell, Amanda
+AU  - Bai, Yuntao
+AU  - Chen, Anna
+AU  - others
+TI  - A General Language Assistant as a Laboratory for Alignment
+JO  - arXiv preprint arXiv:2112.00861
+PY  - 2021
+UR  - https://arxiv.org/abs/2112.00861
+ER  - 
+TY  - JOUR
+AU  - Bai, Yuntao
+AU  - Kadavath, Saurav
+AU  - Kundu, Sandipan
+AU  - others
+TI  - Constitutional AI: Harmlessness from AI Feedback
+JO  - arXiv preprint arXiv:2212.08073
+PY  - 2022
+UR  - https://arxiv.org/abs/2212.08073
+ER  - 
+TY  - JOUR
+AU  - Hendrycks, Dan
+AU  - Mazeika, Mantas
+AU  - Woodside, Thomas
+TI  - An Overview of Catastrophic AI Risks
+JO  - arXiv preprint arXiv:2306.12001
+PY  - 2023
+UR  - https://arxiv.org/abs/2306.12001
+ER  - 
+TY  - JOUR
+AU  - Bommasani, Rishi
+AU  - Hudson, Drew A.
+AU  - Adeli, Ehsan
+AU  - others
+TI  - On the Opportunities and Risks of Foundation Models
+JO  - arXiv preprint arXiv:2108.07258
+PY  - 2021
+UR  - https://arxiv.org/abs/2108.07258
+ER  - 
+TY  - JOUR
+AU  - Amodei, Dario
+AU  - Olah, Chris
+AU  - Steinhardt, Jacob
+AU  - Christiano, Paul
+AU  - Schulman, John
+AU  - Mane, Dan
+TI  - Concrete Problems in AI Safety
+JO  - arXiv preprint arXiv:1606.06565
+PY  - 2016
+UR  - https://arxiv.org/abs/1606.06565
+ER  - 
+TY  - CPAPER
+AU  - Yampolskiy, Roman V.
+TI  - Taxonomy of Pathways to Dangerous Artificial Intelligence
+T2  - AAAI Workshop
+PY  - 2016
+UR  - https://arxiv.org/abs/1511.03246
+ER  - 
+TY  - JOUR
+AU  - Critch, Andrew
+AU  - Krueger, David
+TI  - AI Research Considerations for Human Existential Safety (ARCHES)
+JO  - arXiv preprint arXiv:2006.04948
+PY  - 2020
+UR  - https://arxiv.org/abs/2006.04948
+ER  - 
+TY  - RPRT
+AU  - OECD
+TI  - OECD Framework for the Classification of AI Systems
+PB  - OECD Digital Economy Papers No. 323
+PY  - 2022
+DO  - 10.1787/cb6d9eca-en
+ER  - 
+TY  - RPRT
+AU  - OECD
+TI  - Defining AI incidents and related terms
+PB  - OECD Artificial Intelligence Papers No. 16
+PY  - 2024
+DO  - 10.1787/d1a8d965-en
+ER  - 
+TY  - JOUR
+AU  - Shevlane, Toby
+AU  - Farquhar, Sebastian
+AU  - Garfinkel, Ben
+AU  - others
+TI  - Model evaluation for extreme risks
+JO  - arXiv preprint arXiv:2305.15324
+PY  - 2023
+UR  - https://arxiv.org/abs/2305.15324
+ER  - 
+TY  - JOUR
+AU  - Gabriel, Iason
+AU  - Manzini, Arianna
+AU  - Keeling, Geoff
+AU  - others
+TI  - The Ethics of Advanced AI Assistants
+JO  - arXiv preprint arXiv:2404.16244
+PY  - 2024
+UR  - https://arxiv.org/abs/2404.16244
+ER  - 
+TY  - RPRT
+AU  - OpenAI
+TI  - Preparedness Framework (Version 2)
+PB  - OpenAI
+PY  - 2025
+UR  - https://openai.com/index/updating-our-preparedness-framework/
+ER  - 
+TY  - RPRT
+AU  - Anthropic
+TI  - Anthropic's Responsible Scaling Policy
+PB  - Anthropic
+PY  - 2025
+UR  - https://www.anthropic.com/responsible-scaling-policy
+ER  - 
+TY  - RPRT
+AU  - Google DeepMind
+TI  - Frontier Safety Framework (Version 2.0)
+PB  - Google DeepMind
+PY  - 2025
+UR  - https://deepmind.google/discover/blog/updating-the-frontier-safety-framework/
+ER  - 
+TY  - RPRT
+AU  - Shavit, Yonadav
+AU  - Agarwal, Sandhini
+AU  - Brundage, Miles
+AU  - others
+TI  - Practices for Governing Agentic AI Systems
+PB  - OpenAI
+PY  - 2023
+UR  - https://openai.com/research/practices-for-governing-agentic-ai-systems
+ER  - 
+TY  - CPAPER
+AU  - Chan, Alan
+AU  - Ezell, Carson
+AU  - Kaufmann, Max
+AU  - others
+TI  - Visibility into AI Agents
+T2  - Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency (FAccT)
+PY  - 2024
+DO  - 10.1145/3630106.3658948
+UR  - https://arxiv.org/abs/2401.13138
+ER  - 
+TY  - JOUR
+AU  - Benton, Joe
+AU  - Wagner, Misha
+AU  - Christiansen, Eric
+AU  - others
+TI  - Sabotage Evaluations for Frontier Models
+JO  - arXiv preprint arXiv:2410.21514
+PY  - 2024
+UR  - https://arxiv.org/abs/2410.21514
+ER  - 
+TY  - RPRT
+AU  - International Organization for Standardization
+TI  - ISO 21448:2022 -- Road vehicles: Safety of the intended functionality (SOTIF)
+PB  - ISO
+PY  - 2022
+UR  - https://www.iso.org/standard/77490.html
+ER  - 
+TY  - RPRT
+AU  - Underwriters Laboratories
+TI  - ANSI/UL 4600: Standard for Evaluation of Autonomous Products
+PB  - UL Standards
+PY  - 2023
+UR  - https://www.shopulstandards.com/ProductDetail.aspx?productId=UL4600
+ER  - 
+TY  - BOOK
+AU  - Altman, Eitan
+TI  - Constrained Markov Decision Processes
+PB  - Chapman & Hall/CRC
+PY  - 1999
+ER  - 
+TY  - JOUR
+AU  - Anderson, Peter
+AU  - Chang, Angel
+AU  - Chaplot, Devendra Singh
+AU  - Dosovitskiy, Alexey
+AU  - Gupta, Saurabh
+AU  - Koltun, Vladlen
+AU  - Kosecka, Jana
+AU  - Malik, Jitendra
+AU  - Mottaghi, Roozbeh
+AU  - Savva, Manolis
+AU  - Zamir, Amir R.
+TI  - On Evaluation of Embodied Navigation Agents
+JO  - arXiv preprint arXiv:1807.06757
+PY  - 2018
+UR  - https://arxiv.org/abs/1807.06757
+ER  - 
+TY  - BOOK
+AU  - Asimov, Isaac
+TI  - I, Robot
+PB  - Gnome Press
+PY  - 1950
+ER  - 
+TY  - JOUR
+AU  - Murphy, Robin
+AU  - Woods, David D.
+TI  - Beyond Asimov: The Three Laws of Responsible Robotics
+JO  - IEEE Intelligent Systems
+VL  - 24
+IS  - 4
+SP  - 14-20
+PY  - 2009
+DO  - 10.1109/MIS.2009.69
+ER  - 
+TY  - BOOK
+AU  - Russell, Stuart
+TI  - Human Compatible: Artificial Intelligence and the Problem of Control
+PB  - Viking
+PY  - 2019
+ER  - 
+TY  - CPAPER
+AU  - Christiano, Paul
+AU  - Leike, Jan
+AU  - Brown, Tom B.
+AU  - Martic, Miljan
+AU  - Legg, Shane
+AU  - Amodei, Dario
+TI  - Deep Reinforcement Learning from Human Preferences
+T2  - Advances in Neural Information Processing Systems (NeurIPS)
+PY  - 2017
+UR  - https://arxiv.org/abs/1706.03741
+ER  - 
+TY  - CPAPER
+AU  - Ouyang, Long
+AU  - Wu, Jeff
+AU  - Jiang, Xu
+AU  - Almeida, Diogo
+AU  - Wainwright, Carroll L.
+AU  - Mishkin, Pamela
+AU  - others
+TI  - Training Language Models to Follow Instructions with Human Feedback
+T2  - Advances in Neural Information Processing Systems (NeurIPS)
+PY  - 2022
+UR  - https://arxiv.org/abs/2203.02155
+ER  - 
+TY  - JOUR
+AU  - Casper, Stephen
+AU  - Davies, Xander
+AU  - Shi, Claudia
+AU  - others
+TI  - Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback
+JO  - Transactions on Machine Learning Research (arXiv:2307.15217)
+PY  - 2023
+UR  - https://arxiv.org/abs/2307.15217
+ER  - 
+TY  - JOUR
+AU  - Kaplan, Stanley
+AU  - Garrick, B. John
+TI  - On the Quantitative Definition of Risk
+JO  - Risk Analysis
+VL  - 1
+IS  - 1
+SP  - 11-27
+PY  - 1981
+DO  - 10.1111/j.1539-6924.1981.tb01350.x
+ER  - 
+TY  - JOUR
+AU  - Collins, Steve
+AU  - Ruina, Andy
+AU  - Tedrake, Russ
+AU  - Wisse, Martijn
+TI  - Efficient Bipedal Robots Based on Passive-Dynamic Walkers
+JO  - Science
+VL  - 307
+IS  - 5712
+SP  - 1082-1085
+PY  - 2005
+DO  - 10.1126/science.1107799
+ER  - 
+TY  - CPAPER
+AU  - Achiam, Joshua
+AU  - Held, David
+AU  - Tamar, Aviv
+AU  - Abbeel, Pieter
+TI  - Constrained Policy Optimization
+T2  - Proceedings of the 34th International Conference on Machine Learning (ICML)
+PY  - 2017
+UR  - https://arxiv.org/abs/1705.10528
+ER  - 
