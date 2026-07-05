@@ -107,9 +107,13 @@ stats = {"n_cards": N, "n_l3": K, "em_iterations_to_converge": iters,
 print(json.dumps(stats, indent=2), flush=True)
 
 # ---------- figure ----------
-plt.rcParams.update({"font.family": "DejaVu Sans"})
-fig, (axA, axB, axC) = plt.subplots(1, 3, figsize=(14.5, 4.2))
-TH = {90: "#c1121f", 95: "#bf6f26", 97: "#0f8c7f"}
+plt.rcParams.update({"font.family": "Arial", "font.size": 8, "axes.linewidth": 0.6,
+    "axes.edgecolor": "#333333", "axes.labelcolor": "#111111", "text.color": "#111111",
+    "xtick.color": "#333333", "ytick.color": "#333333",
+    "xtick.major.width": 0.6, "ytick.major.width": 0.6,
+    "xtick.major.size": 2.5, "ytick.major.size": 2.5})
+fig, (axA, axB, axC) = plt.subplots(1, 3, figsize=(13.0, 3.7))
+TH = {90: "#b5726a", 95: "#b58f4a", 97: "#5f8f86"}
 
 # (A) EM convergence
 it = np.arange(1, iters + 1)
@@ -118,7 +122,7 @@ ax2 = axA.twinx()
 ax2.bar(it, change_hist, color="#c9ced6", alpha=.7, width=.6)
 ax2.set_ylabel("cards reassigned", color="#7a7f88")
 axA.set_xlabel("EM iteration"); axA.set_ylabel("Objective (mean within-family cosine)")
-axA.set_title("(A) EM convergence", fontsize=11); axA.set_xlim(.5, iters + .5)
+axA.set_title("(A) EM convergence", fontsize=9.5); axA.set_xlim(.5, iters + .5)
 axA.spines["top"].set_visible(False); ax2.spines["top"].set_visible(False)
 
 # (B) top-k containment
@@ -130,7 +134,7 @@ for t, c in TH.items():
     axB.axhline(t, ls="--", lw=1, color=c, alpha=.85)
     axB.text(3.6, t, f"{t}%", va="center", ha="left", fontsize=8, color=c)
 axB.set_ylabel("Cards with released L3 among nearest families (%)")
-axB.set_title("(B) Top-$k$ containment of the released L3", fontsize=11)
+axB.set_title("(B) Top-$k$ containment of the released L3", fontsize=9.5)
 axB.set_ylim(80, 101)
 for s in ("top", "right"): axB.spines[s].set_visible(False)
 
@@ -142,7 +146,7 @@ for t, c in TH.items():
     axC.text(sigmas[-1], t, f" {t}%", va="center", ha="left", fontsize=8, color=c)
 axC.set_xlabel("Gaussian embedding perturbation $\\sigma$")
 axC.set_ylabel("Assignment agreement (%)")
-axC.set_title("(C) Assignment stability under perturbation", fontsize=11)
+axC.set_title("(C) Assignment stability under perturbation", fontsize=9.5)
 axC.set_ylim(0, 102); axC.set_xlim(0, sigmas[-1])
 for s in ("top", "right"): axC.spines[s].set_visible(False)
 axC.legend(fontsize=8, loc="lower left", frameon=False)
