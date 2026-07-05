@@ -347,41 +347,7 @@ The construction corpus integrates three source families: scholarly publications
 \end{minipage}
 \end{table}
 
-Table~\ref{tab:integrated-document-space-counts} reports the integrated corpus sizes by category and source family. Paper counts are parsed from the local Web of Science AI export, patents from the PATSTAT datasets, and policy records from the curated policy corpora, with within-group (per document type and category) deduplication and intentional cross-category overlap. Every group preserves a domestic/global key, namely applicant country for patents, Korea affiliation for papers, and a domestic/foreign flag for policy, so each figure can be reported as domestic, overseas, and total. Figure~\ref{fig:source-risk-bars} shows the source composition of the Physical AI risk group (82,971 records), which is dominated by scholarly publications (Web of Science, 50,375; 60.7\%), followed by patents (31,658; 38.2\%) and policy/report sources (938; 1.1\%).
-
-\begin{figure}[htbp]
-\centering
-\resizebox{0.88\linewidth}{!}{%
-\begin{tikzpicture}[
-  sourcebar/.style={draw=none, rounded corners=1.5pt},
-  sourcelabel/.style={font=\sffamily\small, anchor=east},
-  valuetext/.style={font=\sffamily\small, anchor=west, text=black!78}
-]
-\def\xscale{0.18}
-\draw[black!15] (0,0.6) -- (10.8,0.6);
-\draw[black!15] (0,-0.7) -- (10.8,-0.7);
-\draw[black!15] (0,-2.0) -- (10.8,-2.0);
-\node[sourcelabel] at (-0.3,0) {PATSTAT patents};
-\node[sourcelabel] at (-0.3,-1.3) {Web of Science papers};
-\node[sourcelabel] at (-0.3,-2.6) {Policy reports};
-\fill[sourcebar, flowblue!82] (0,-0.33) rectangle ({38.2*\xscale},0.33);
-\fill[sourcebar, flowgreen!82] (0,-1.63) rectangle ({60.7*\xscale},-0.97);
-\fill[sourcebar, floworange!85] (0,-2.93) rectangle ({1.1*\xscale},-2.27);
-\node[valuetext] at ({38.2*\xscale+0.15},0) {31,658 records \(\cdot\) 38.2\%};
-\node[valuetext] at ({60.7*\xscale+0.15},-1.3) {50,375 records \(\cdot\) 60.7\%};
-\node[valuetext] at ({1.1*\xscale+0.15},-2.6) {938 records \(\cdot\) 1.1\%};
-\draw[black!35, -{Latex[length=2.5mm]}] (0,-3.35) -- (10.8,-3.35);
-\foreach \x/\lab in {0/0,2.7/15,5.4/30,8.1/45,10.8/60} {
-  \draw[black!35] (\x,-3.25) -- (\x,-3.45);
-  \node[font=\sffamily\footnotesize, text=black!65] at (\x,-3.72) {\lab\%};
-}
-\node[font=\sffamily\footnotesize, text=black!65, anchor=west] at (0,-4.15) {Share of Physical AI risk records, \(N=82{,}971\)};
-\end{tikzpicture}%
-}
-\caption{Source composition of the Physical AI risk group}
-\label{fig:source-risk-bars}
-\fignote{The bar lengths show each source family's percentage share of the 82,971 integrated Physical AI risk records.}
-\end{figure}
+Table~\ref{tab:integrated-document-space-counts} reports the integrated corpus sizes by category and source family. Paper counts are parsed from the local Web of Science AI export, patents from the PATSTAT datasets, and policy records from the curated policy corpora, with within-group (per document type and category) deduplication and intentional cross-category overlap. Every group preserves a domestic/global key, namely applicant country for patents, Korea affiliation for papers, and a domestic/foreign flag for policy, so each figure can be reported as domestic, overseas, and total. Within the Physical AI risk group of 82,971 records, scholarly publications dominate (Web of Science, 50,375; 60.7\%), followed by patents (31,658; 38.2\%) and policy or report sources (938; 1.1\%).
 
 To characterize provenance beyond raw counts, country and institution were back-filled for the Physical AI risk \emph{papers and policy reports} by re-joining each record to its original source (Web of Science / OpenAlex affiliations by DOI and source identifier, with OpenAlex and Crossref resolving the remaining gaps). This recovered an institution for 38,008 records (papers 73.6\%, policy 98.7\%) and a country for 36,643 records. Patents were separately enriched with applicant/assignee and country from PATSTAT (\texttt{tls207\_pers\_appln}\,$\bowtie$\,\texttt{tls206\_person} on \texttt{appln\_id}; applicant 99.6\%, country 38\%), but are deliberately excluded from the country and institution rankings below: patent-applicant counts index commercial IP-filing activity and would read as a technology-competitiveness ranking rather than research and governance attention to Physical AI risks. Tables~\ref{tab:country-top}--\ref{tab:institution-top} therefore reflect scholarly papers and policy reports; counts are document--organization and document--country links over records with a resolved affiliation, not a complete census.
 
