@@ -110,6 +110,7 @@
 \newcommand{\DPAI}{\mathcal{D}_{\mathrm{PAI}}}
 \newcommand{\Enc}{\mathrm{Enc}_{\theta}}
 \newcommand{\simcos}{\mathrm{sim}_{\cos}}
+\newcommand{\Harm}{\operatorname{Harm}}
 
 % Figure/table note rendered as a full-width justified block (not centered)
 \newcommand{\fignote}[1]{\par\vspace{0.25em}\noindent\begin{minipage}{\linewidth}\footnotesize\textit{Note:} #1\end{minipage}}
@@ -435,6 +436,60 @@ Governance and reproducibility & Duplicate source registration is controlled, lo
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\section{Harmless--Helpful Trade-off for Physical AI Actions}
+
+The 3H1R \emph{Harmless} and \emph{Helpful} dimensions are not independent: for a physically embodied agent, being more helpful usually means acting faster and with less deliberation, which tends to reduce the caution margin that keeps an action harmless~\cite{bai2022}. This section makes that tension explicit as a two-axis operating space for humanoid and other Physical AI actions, and gives it a mathematical form. Figure~\ref{fig:hh-tradeoff} shows the resulting four quadrants; the remainder of the section defines the axes, the quadrant partition, and the constrained-optimization view that identifies the desired operating region.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\linewidth]{figures/fig_guardrail_matrix.pdf}
+\caption{Harmless--helpful trade-off for Physical AI actions}
+\label{fig:hh-tradeoff}
+\fignote{The vertical axis is harmlessness (safety); the horizontal axis is task efficiency, i.e.\ helpfulness operationalized as low time and energy \emph{given task completion}. Shading encodes desirability rather than color semantics: white is the desired \emph{Safe\,\(\cdot\)\,Efficient} region, the two light-gray cells are single-axis compromises, and the darker \emph{Unsafe\,\(\cdot\)\,Inefficient} cell is worst on both axes. The \emph{Unsafe\,\(\cdot\)\,Efficient} cell is the alignment-critical one: its danger comes from capability, not incompetence.}
+\end{figure}
+
+\subsection*{Axis 1: harmlessness}
+
+Let an action (or short-horizon policy) \(a\in\mathcal{A}\) execute a task \(\tau\), inducing a set of possible hazard events \(\{e_k\}\) with severities \(s(e_k)\ge 0\). The expected harm of \(a\) is
+\[
+  \Harm(a)=\mathbb{E}\!\left[\sum_{k} s(e_k)\,\mathbf{1}\{e_k\mid a\}\right],
+\]
+and the safety margin relative to an admissible-harm budget \(h_{\max}\) is \(g(a)=h_{\max}-\Harm(a)\). An action is \emph{Safe} when \(g(a)\ge 0\) and \emph{Unsafe} otherwise; \(g\) is the signed vertical coordinate in Figure~\ref{fig:hh-tradeoff}.
+
+\subsection*{Axis 2: task efficiency as helpfulness}
+
+For a physical agent, helpfulness is naturally measured by how economically the task is completed. Let \(T(a)\) be completion time and \(E(a)\) the mechanical/electrical energy expended, combined into a resource cost
+\[
+  C(a)=w_T\,T(a)+w_E\,E(a),\qquad w_T,w_E>0.
+\]
+Minimizing \(C\) alone is degenerate --- the cheapest behavior is inaction. Efficiency is therefore defined \emph{conditional on success} and normalized by a reference cost \(C_{\mathrm{ref}}\):
+\[
+  \eta(a)=\mathbf{1}\{\mathrm{success}(a)\}\cdot
+  \frac{C_{\mathrm{ref}}}{\max\{C(a),\,C_{\mathrm{ref}}\}}\ \in[0,1],
+\]
+so that \(\eta=0\) for any failed or non-terminating action and \(\eta\to 1\) as the agent approaches the reference cost. For humanoids the reference and the energy term admit standard instantiations: locomotion energy is measured by the dimensionless cost of transport \(\mathrm{CoT}=E/(m g d)\) (energy per unit weight-distance); navigation efficiency generalizes success-weighted path length (SPL), \(\mathrm{SPL}=\tfrac{1}{N}\sum_i S_i\,\ell_i^{\star}/\max(\ell_i,\ell_i^{\star})\), from path length to time or energy~\cite{anderson2018}; and \(C_{\mathrm{ref}}\) may be set to a skilled-human baseline \(C_{\mathrm{human}}\), giving a human-normalized reading of efficiency that is natural for anthropomorphic platforms. Efficiency is the horizontal coordinate in Figure~\ref{fig:hh-tradeoff}.
+
+\subsection*{Quadrant partition}
+
+Thresholding the two coordinates by the safety sign and an efficiency level \(\eta_0\) partitions \(\mathcal{A}\) into the four regions of Figure~\ref{fig:hh-tradeoff}:
+\[
+  Q_{\sigma,\varepsilon}=\bigl\{a:\ \operatorname{sign}g(a)=\sigma,\ \mathbf{1}\{\eta(a)\ge\eta_0\}=\varepsilon\bigr\},
+  \quad \sigma\in\{+,-\},\ \varepsilon\in\{1,0\}.
+\]
+\(Q_{+,1}\) (Safe\,\(\cdot\)\,Efficient) is the desired region; \(Q_{+,0}\) and \(Q_{-,1}\) are single-axis compromises; \(Q_{-,0}\) (Unsafe\,\(\cdot\)\,Inefficient) is dominated on both axes. The alignment-critical cell is \(Q_{-,1}\): a highly capable action that attains the task efficiently \emph{while} violating the harm budget.
+
+\subsection*{Trade-off as constrained optimization}
+
+A pure efficiency objective, \(\max_a \eta(a)\), is exactly what drives behavior toward \(Q_{-,1}\), because relaxing caution generally lowers \(C\). Alignment therefore requires treating harmlessness as a constraint rather than a competing reward. Over a policy \(\pi\) this is a constrained Markov decision process~\cite{altman1999}:
+\[
+  \pi^{\star}=\arg\max_{\pi}\ \mathbb{E}_{\pi}\!\Big[\textstyle\sum_t \eta_t\Big]
+  \quad\text{s.t.}\quad
+  \mathbb{E}_{\pi}\!\Big[\textstyle\sum_t \Harm_t\Big]\le d,
+\]
+with Lagrangian \(\mathcal{L}(\pi,\lambda)=\mathbb{E}_{\pi}[\sum_t\eta_t]-\lambda\bigl(\mathbb{E}_{\pi}[\sum_t\Harm_t]-d\bigr)\), \(\lambda\ge 0\). The \emph{unconstrained} efficiency optimum may lie in the unsafe region \(Q_{-,1}\); the harm constraint projects \(\pi^{\star}\) back onto the feasible (safe) set, so that the optimum under the constraint lands in \(Q_{+,1}\). Equivalently, sweeping the scalarization \(J_\lambda(a)=\eta(a)-\lambda\,\Harm(a)\) over \(\lambda\in[0,\infty)\) traces the safety--efficiency Pareto frontier, and the desired operating point is the knee of that frontier on the safe side.
+
+This is where the taxonomy re-enters. The two Unsafe rows of Figure~\ref{fig:hh-tradeoff} are populated by the released L4 risk cards, and each card's 3H1R tags identify which alignment value the corresponding failure violates. The matrix explains why an efficiency-shaped training or operational objective---the default for humanoid platforms---systematically pressures behavior toward the highest-harm quadrant unless an explicit harmlessness constraint is enforced; the L4 catalogue is the evidence base from which that constraint (the admissible-harm set) is instantiated.
 
 \section{Data Sources and Corpus Construction}
 
@@ -1105,6 +1160,12 @@ International Organization for Standardization. \textit{ISO 21448:2022 --- Road 
 
 \bibitem{ul4600}
 Underwriters Laboratories. \textit{ANSI/UL 4600: Standard for Evaluation of Autonomous Products}. UL Standards, 2023. \url{https://www.shopulstandards.com/ProductDetail.aspx?productId=UL4600}.
+
+\bibitem{altman1999}
+Altman, E. \textit{Constrained Markov Decision Processes}. Chapman \& Hall/CRC, 1999.
+
+\bibitem{anderson2018}
+Anderson, P., Chang, A., Chaplot, D. S., Dosovitskiy, A., Gupta, S., Koltun, V., Kosecka, J., Malik, J., Mottaghi, R., Savva, M., and Zamir, A. R. \textit{On Evaluation of Embodied Navigation Agents}. arXiv:1807.06757, 2018. \url{https://arxiv.org/abs/1807.06757}.
 
 \end{thebibliography}
 
