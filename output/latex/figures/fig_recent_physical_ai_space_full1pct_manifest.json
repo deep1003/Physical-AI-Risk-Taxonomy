@@ -1,0 +1,18 @@
+{
+  "seed": 20260704,
+  "fraction": 0.01,
+  "model": "BAAI/bge-m3",
+  "plotted_by_category": {
+    "ai": 38982,
+    "ai_infra": 7372,
+    "physical_ai": 3807,
+    "physical_ai_risks": 830
+  },
+  "category_population": {
+    "ai": 3906767,
+    "ai_infra": 741428,
+    "physical_ai": 383149,
+    "physical_ai_risks": 82971
+  },
+  "note": "1% stratified random sample per (category x doc_type) of the 5,099,045-row integrated index; all years; points proportional to Table 3 by construction."
+}

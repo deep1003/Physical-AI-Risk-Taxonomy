@@ -423,14 +423,14 @@ The integrated AI document space in Figure~\ref{fig:ai-doc-space} visualizes how
 \begin{equation}
   z_d=\frac{\Enc(x_d)}{\|\Enc(x_d)\|_2},\qquad \|z_d\|_2=1,
 \end{equation}
-so that inner products \(z_d^{\top}z_{d'}\) equal cosine similarities. Because embedding the full multi-million-record corpus in a single vector space is limited by available compute, the figure uses a reproducible stratified sample of recent 2022--2026 records drawn across the twelve source-family \(\times\) category groups under a fixed seed, which surfaces the current Physical AI risk frontier while keeping the layout legible.
+so that inner products \(z_d^{\top}z_{d'}\) equal cosine similarities. Because embedding every one of the 5.1 million records in a single vector space is limited by available compute, the figure embeds a 1\% stratified random sample drawn at the same rate from each source-family and category stratum of the full corpus under a fixed seed. Applying one common rate to every stratum keeps the plotted point counts proportional to the Table~\ref{tab:integrated-document-space-counts} populations, and the sample spans all years rather than a recent window.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\linewidth]{fig_recent_physical_ai_space.pdf}
-\caption{Physical AI document space, 2022--2026}
+\caption{Physical AI document space (1\% stratified sample of the full corpus, all years)}
 \label{fig:ai-doc-space}
-\fignote{Embedding the entire corpus in one vector space is compute-limited, so the figure shows a reproducible sample of the 2022--2026 window, embedded with BGE-M3 (title\,+\,abstract) and projected with UMAP (fixed seed 20260704). The two emphasized layers are drawn in proportion to their record counts in this window, Physical AI (72{,}502 records, 480 points) against Physical AI Risks (34{,}773 records, 230 points, a 2.09:1 ratio), so the risk layer reads as genuinely sparser than the Physical AI layer and the regions where risk documents concentrate or thin out become comparable by eye. AI and AI~Infrastructure (1{,}551{,}113 records) form a neutral gray backdrop shown at a fixed reduced density of 946 points for legibility rather than at full proportion.}
+\fignote{The figure embeds a 1\% stratified random sample of the full integrated corpus, about 50{,}991 of 5{,}099{,}045 records, drawn at the same rate from every source-family and category stratum so the plotted counts stay proportional to Table~\ref{tab:integrated-document-space-counts} across all years. Text is embedded with BGE-M3 (title\,+\,abstract) and projected with UMAP (fixed seed 20260704). Plotted points by group are AI (38{,}982), AI infrastructure (7{,}372), Physical AI (3{,}807), and Physical AI risks (830). AI and AI infrastructure use light background tints, while the two Physical AI layers are drawn on top so the regions where risk documents concentrate or thin out stay legible.}
 \end{figure}
 
 The sampled embeddings are projected to two dimensions with uniform manifold approximation and projection (UMAP)~\cite{umap2018}. UMAP first builds a weighted \(k\)-nearest-neighbor graph: for point \(i\) with neighbor \(j\), the directed membership is
@@ -644,34 +644,9 @@ The EM-style assignment of Algorithm~2 was validated by a convergence and stabil
 
 The taxonomy uses 3H1R as an alignment-diagnosis framework for identifying which alignment value fails in a Physical AI risk. The framework has two roles. First, it defines a value axis for coding each risk in terms of Harmless, Helpful, Honest, and Role Consistency failures. Second, it provides design rules for accumulating those judgments into a reproducible risk taxonomy. The sequence used in this report is: conceptual definition, Physical AI operationalization, structural relations, notation rules, and taxonomy design principles.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{three_h_one_r_live_top.png}
-\caption{3H1R framework panel in the released taxonomy interface.}
-\label{fig:three-h-one-r-live-panel}
-\fignote{The screenshot records the live interface state used for visual inspection of the 3H1R framework, including the conceptual definitions and Physical AI operationalization sequence. It is included as a release-state image, not as a separate bibliographic source.}
-\end{figure}
-
 \subsection{Conceptual Definitions}
 
-The 3H dimensions are adapted from the helpful--honest--harmless framing of language-model alignment~\cite{askell2021}. Role Consistency is added from constitutional-AI and embodied-agent constraint work, where role, authority, and behavioral principles must remain stable under changing contexts~\cite{bai2022,sermanet-asimov,asimov2}. In this report, the four dimensions are defined as follows:
-
-\begin{table}[htbp]
-\centering
-\footnotesize
-\caption{3H1R dimensions and definitions}
-\label{tab:three-h-one-r-definitions}
-\begin{tabularx}{\linewidth}{p{0.23\linewidth}X}
-\toprule
-Dimension & Conceptual definition \\
-\midrule
-H1 Harmless & System behavior or output should not cause harm to individuals, groups, or society. This includes direct harm and indirect harm such as enabling dangerous action. Harmless is in structural tension with Helpful. \\
-H2 Helpful & The system should provide assistance aligned with the user's real intent and context. The criterion is not mere instruction following, but the delivery of practical benefit; excessive refusal is treated as a helpfulness failure. \\
-H3 Honest & The system should represent facts, uncertainty, non-deception, and non-manipulation accurately. In Physical AI, the central issue is whether the system truthfully represents its perception, uncertainty, capability, and state. \\
-RC Role Consistency & The system should preserve its defined role, authority boundary, and behavioral principles across context changes. Persona drift, context violation, jailbreak acceptance, and role-boundary failure are core failure modes. \\
-\bottomrule
-\end{tabularx}
-\end{table}
+The 3H dimensions are adapted from the helpful--honest--harmless framing of language-model alignment~\cite{askell2021}. Role Consistency is added from constitutional-AI and embodied-agent constraint work, where role, authority, and behavioral principles must remain stable under changing contexts~\cite{bai2022,sermanet-asimov,asimov2}. In this report, the four dimensions carry the following conceptual definitions. Harmless (H1) means that system behavior or output should not cause harm to individuals, groups, or society, covering both direct harm and indirect harm such as enabling a dangerous action, and it stands in structural tension with Helpful. Helpful (H2) means assistance aligned with the user's real intent and context, judged by practical benefit rather than mere instruction following, so that excessive refusal also counts as a helpfulness failure. Honest (H3) means an accurate representation of facts, uncertainty, and intent without deception or manipulation, which in Physical AI centers on whether the system truthfully reports its perception, uncertainty, capability, and state. Role Consistency (RC) means preserving the system's defined role, authority boundary, and behavioral principles across changing contexts, with persona drift, context violation, jailbreak acceptance, and role-boundary failure as the core failure modes. Table~\ref{tab:three-h-one-r-operationalization} then translates each dimension into observable Physical AI failure patterns.
 
 \subsection{Operationalization for Physical AI}
 
@@ -820,7 +795,7 @@ This is where the taxonomy re-enters. The two Unsafe rows of Figure~\ref{fig:hh-
 
 \section{Reproducibility Artifacts}
 
-The public taxonomy is maintained as a single HTML page with a versioned copy, and is exported by a release script into machine-readable card, reference, and summary files together with the curation and audit scripts and the documented 3H1R Primary-axis exception list. A reproducible rerun follows this order. First, verify the source-retrieval artifacts reproduced in the appendices: the PATSTAT SQL and the Web of Science query. Second, reconstruct or verify the local working snapshot in Table~\ref{tab:working-snapshot} and confirm its row, column, and size denominators. Third, apply Algorithm~1 to generate and deduplicate L4 candidates, preserving all source identifiers and reference links. Fourth, apply Algorithm~2 to assign the resulting L4 risks to the 24 L3 families and record any human corrections as audit metadata. Fifth, export the final HTML into the machine-readable card, reference, and summary files. Finally, compare the exported counts against Table~\ref{tab:taxonomy-snapshot} and verify that no L4 card violates the five-reference cap or loses its bilingual definition, evidence justification, or hierarchy assignment.
+The public taxonomy is maintained as a single HTML page with a versioned copy, and is exported by a release script into machine-readable card, reference, and summary files together with the curation and audit scripts and the documented 3H1R Primary-axis exception list. A reproducible rerun follows this order. First, verify the source-retrieval artifacts reproduced in the appendices: the PATSTAT SQL and the Web of Science query. Second, reconstruct or verify the local working snapshot and confirm its source-family and category denominators against Table~\ref{tab:integrated-document-space-counts}. Third, apply Algorithm~1 to generate and deduplicate L4 candidates, preserving all source identifiers and reference links. Fourth, apply Algorithm~2 to assign the resulting L4 risks to the 24 L3 families and record any human corrections as audit metadata. Fifth, export the final HTML into the machine-readable card, reference, and summary files. Finally, compare the exported counts against Table~\ref{tab:taxonomy-snapshot} and verify that no L4 card violates the five-reference cap or loses its bilingual definition, evidence justification, or hierarchy assignment.
 
 \section{Limitations and Open Problems}
 
@@ -950,28 +925,6 @@ The current integrated record-level datasets are organized by source family and 
 \textbf{Identifier and comparison keys.} Records are keyed by application identifier (patents), WoS~ID / DOI / title--year (papers), and a stable record identifier with title/year/institution (policy). Deduplication is applied within each document type; cross-type duplication is retained to support paper--policy--patent crosswalks. Every statistic derived from these corpora should be reported with a domestic (Korea) versus overseas (worldwide total) breakdown using the domestic/global key listed for each source family.
 
 \section{Released Snapshot and File Inventory}
-
-The local working directory also contains a smaller, reproducible snapshot used for current HTML export, reference-map generation, and quality checks. This curated working snapshot is a subset of the full construction corpus in Table~\ref{tab:integrated-document-space-counts}. The scholarly component in the local snapshot is OpenAlex-derived, while the patent component is PATSTAT-derived~\cite{openalex,epo-patstat}. Table~3 reports the verified working datasets and their sizes. A rerun should recover these dataset-level denominators before row-level contents, card exports, or reference maps are compared.
-
-\begin{table}[htbp]
-\centering
-\footnotesize
-\caption{Verified local working snapshot}
-\label{tab:working-snapshot}
-\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.34\linewidth}rrrX}
-\toprule
-Dataset & Rows & Columns & Size & Role \\
-\midrule
-Scholarly master & 17,482 & 44 & 55.5 MB & Scholarly master input \\
-Policy master & 11,724 & 27 & 17.2 MB & Policy/report master input \\
-Patent master & 140,070 & 53 & 263.9 MB & PATSTAT-derived patent input \\
-Physical AI science subset & 7,132 & 54 & 23.7 MB & Selected science subset \\
-Physical AI policy subset & 1,042 & 37 & 2.6 MB & Selected policy subset \\
-Physical AI patent subset & 15,017 & 63 & 37.3 MB & Selected patent subset \\
-Physical AI combined snapshot & 23,191 & 121 & 64.9 MB & Combined working snapshot \\
-\bottomrule
-\end{tabularx}
-\end{table}
 
 At the repository level, the current Physical AI Risk Taxonomy release contains 182 L4 cards and 360 evidence/reference rows exported from the final HTML. The local repository size is approximately 26 MB, while the broader risk coevolution workspace and Web of Science export occupy approximately 4.5 GB and 12 GB, respectively.
 
