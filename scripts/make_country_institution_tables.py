@@ -66,11 +66,17 @@ def main():
     lines += [r"\bottomrule", r"\end{tabular}"]
     (OUT / "tab_country_top.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
-    # institution table (top 15)
-    lines = [r"\begin{tabular}{rlr}", r"\toprule",
-             r"Rank & Institution / organization & Records \\", r"\midrule"]
+    # dominant country per institution (modal country over its records)
+    inst_ctry = {}
+    for o in ic:
+        cnt = Counter(r["country"] for r in rows if r.get("institution") == o and r.get("country"))
+        inst_ctry[o] = CNAME.get(cnt.most_common(1)[0][0], cnt.most_common(1)[0][0]) if cnt else "--"
+
+    # institution table (top 15) with country
+    lines = [r"\begin{tabular}{rllr}", r"\toprule",
+             r"Rank & Institution / organization & Country & Records \\", r"\midrule"]
     for i, (o, v) in enumerate(ic.most_common(15), 1):
-        lines.append(f"{i} & {esc(o[:52])} & {v:,} " + r"\\")
+        lines.append(f"{i} & {esc(o[:46])} & {esc(inst_ctry[o])} & {v:,} " + r"\\")
     lines += [r"\bottomrule", r"\end{tabular}"]
     (OUT / "tab_institution_top.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
