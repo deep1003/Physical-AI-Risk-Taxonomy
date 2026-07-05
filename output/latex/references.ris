@@ -569,3 +569,26 @@ T2  - Proceedings of the 34th International Conference on Machine Learning (ICML
 PY  - 2017
 UR  - https://arxiv.org/abs/1705.10528
 ER  - 
+
+TY  - JOUR
+AU  - Rousseeuw, Peter J.
+TI  - Silhouettes: A graphical aid to the interpretation and validation of cluster analysis
+JO  - Journal of Computational and Applied Mathematics
+VL  - 20
+SP  - 53
+EP  - 65
+PY  - 1987
+DO  - 10.1016/0377-0427(87)90125-7
+ER  - 
+
+TY  - JOUR
+AU  - von Luxburg, Ulrike
+TI  - Clustering Stability: An Overview
+JO  - Foundations and Trends in Machine Learning
+VL  - 2
+IS  - 3
+SP  - 235
+EP  - 274
+PY  - 2010
+DO  - 10.1561/2200000008
+ER  - 

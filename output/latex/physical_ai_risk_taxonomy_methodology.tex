@@ -629,7 +629,7 @@ Because density-based clustering can be sensitive to its settings, the configura
 
 \subsection*{Convergence and stability of the L3 assignment}
 
-The EM-style assignment of Algorithm~2 was validated by a convergence and stability simulation on the released 182 L4 cards, embedded from their label and definition text with BGE-M3 under a fixed seed. Three checks are reported in Figure~\ref{fig:l4-convergence}. First, the spherical \(k\)-means / EM iteration converges in seven steps, with the within-family cosine objective increasing monotonically and the number of reassigned cards falling to zero. Second, the released partition is strongly embedding-consistent. Measuring how often each card's released L3 family is among its nearest family centroids (top-\(k\) containment), the released L3 is the single nearest family for 89.6\% of cards, within the top two for 98.9\%, within the top three for 99.5\%, and within the top five for all cards, so the assignment reaches the 90\%, 95\%, and 97\% levels once a one-to-two-rank tolerance is allowed, consistent with the expert-review step reconciling the small fraction of adjacent-family cases. A label-permutation test confirms the partition is non-random: the observed mean within-family cohesion (0.811) exceeds that of random partitions of identical family sizes (0.788) with \(p<0.001\) over 5{,}000 permutations. Third, the assignment is robust to embedding perturbation. Adding isotropic Gaussian noise to the card embeddings and reassigning, agreement with the unperturbed assignment stays at or above 97\% up to \(\sigma\approx0.05\) and above 90\% up to \(\sigma\approx0.075\), well beyond the scale of representational jitter expected from paraphrase-level text changes.
+The EM-style assignment of Algorithm~2 was validated by a convergence and stability simulation on the released 182 L4 cards, embedded from their label and definition text with BGE-M3 under a fixed seed. Three checks are reported in Figure~\ref{fig:l4-convergence}, and they ask, in turn, whether the procedure terminates, whether its output agrees with the geometry of the embedding space, and whether that output survives small perturbations of the input. First, the spherical \(k\)-means and expectation-maximization iteration reaches a fixed point in seven steps, with the within-family cosine objective increasing monotonically and the number of reassigned cards falling to zero, the termination behaviour that alternating-optimization assignment of this kind is expected to show~\cite{dhillon2001,dempster1977}. Second, the released partition is internally consistent with the embedding space, which we measure through top-\(k\) containment, the fraction of cards whose released L3 family lies among their \(k\) nearest family centroids. The released L3 is the single nearest family for 89.6\% of cards, within the top two for 98.9\%, within the top three for 99.5\%, and within the top five for all cards, so the assignment reaches the 90\%, 95\%, and 97\% levels once a one-to-two-rank tolerance is allowed, consistent with the expert-review step reconciling the small fraction of adjacent-family cases. A label-permutation test corroborates that the grouping is not an artefact of chance, since the observed mean within-family cohesion of 0.811, a silhouette-style summary of how tightly cards sit within their assigned family~\cite{rousseeuw1987}, exceeds the cohesion of random partitions of identical family sizes (0.788) with \(p<0.001\) over 5{,}000 permutations. Third, the assignment is robust to embedding perturbation, following the logic of stability-based cluster validation, under which a trustworthy partition should persist when the data are slightly perturbed~\cite{vonluxburg2010}. Adding isotropic Gaussian noise of standard deviation \(\sigma\) to the card embeddings and reassigning, agreement with the unperturbed assignment stays at or above 97\% up to \(\sigma\approx0.05\) and above 90\% up to \(\sigma\approx0.075\), a noise scale that already exceeds the representational jitter expected from paraphrase-level text changes.
 
 \begin{figure}[htbp]
 \centering
@@ -637,7 +637,7 @@ The EM-style assignment of Algorithm~2 was validated by a convergence and stabil
 \caption{Convergence and stability of the 182-card L3 assignment}
 \label{fig:l4-convergence}
 \vspace{0.25em}
-\fignote{(A) The EM iteration converges in seven steps: the within-family mean cosine (objective) rises monotonically while the number of reassigned cards (bars) drops to zero. (B) Top-\(k\) containment: fraction of cards whose released L3 family is among the \(k\) nearest family centroids (top-1 89.6\%, top-2 98.9\%, top-3 99.5\%, top-5 100\%); dashed lines mark the 90/95/97\% levels. (C) Stability under Gaussian embedding perturbation of scale \(\sigma\) (mean and 95\% band over 200 perturbations per \(\sigma\)); agreement with the unperturbed assignment stays \(\geq\)97\% to \(\sigma\approx0.05\). All panels use BGE-M3 embeddings of the released 182 cards under fixed seed 20260704.}
+\fignote{(A) The EM iteration converges in seven steps: the within-family mean cosine (objective) rises monotonically while the number of reassigned cards (bars) drops to zero. (B) Top-\(k\) containment: fraction of cards whose released L3 family is among the \(k\) nearest family centroids (top-1 89.6\%, top-2 98.9\%, top-3 99.5\%, top-5 100\%); dashed lines mark the 90/95/97\% levels. (C) Stability under Gaussian embedding perturbation of standard deviation \(\sigma\) (mean and 95\% band over 200 perturbations per \(\sigma\)); agreement with the unperturbed assignment stays \(\geq\)97\% to \(\sigma\approx0.05\). All panels use BGE-M3 embeddings of the released 182 cards under fixed seed 20260704.}
 \end{figure}
 
 \section{3H1R Alignment Framework and Taxonomy Design Principles}
@@ -1124,6 +1124,12 @@ Dempster, A. P., Laird, N. M., and Rubin, D. B. \textit{Maximum Likelihood from 
 \bibitem{dhillon2001}
 Dhillon, I. S., and Modha, D. S. \textit{Concept Decompositions for Large Sparse Text Data Using Clustering}. Machine Learning, 42(1--2), 143--175, 2001. \href{https://doi.org/10.1023/A:1007612920971}{doi:10.1023/A:1007612920971}.
 
+\bibitem{rousseeuw1987}
+Rousseeuw, P. J. \textit{Silhouettes: A graphical aid to the interpretation and validation of cluster analysis}. Journal of Computational and Applied Mathematics, 20, 53--65, 1987. \href{https://doi.org/10.1016/0377-0427(87)90125-7}{doi:10.1016/0377-0427(87)90125-7}.
+
+\bibitem{vonluxburg2010}
+von Luxburg, U. \textit{Clustering Stability: An Overview}. Foundations and Trends in Machine Learning, 2(3), 235--274, 2010. \href{https://doi.org/10.1561/2200000008}{doi:10.1561/2200000008}.
+
 \bibitem{kaplan1981}
 Kaplan, S., and Garrick, B. J. \textit{On the Quantitative Definition of Risk}. Risk Analysis, 1(1), 11--27, 1981. \href{https://doi.org/10.1111/j.1539-6924.1981.tb01350.x}{doi:10.1111/j.1539-6924.1981.tb01350.x}.
 
@@ -1132,7 +1138,6 @@ Collins, S., Ruina, A., Tedrake, R., and Wisse, M. \textit{Efficient Bipedal Rob
 
 \bibitem{anderson2018}
 Anderson, P., Chang, A., Chaplot, D. S., Dosovitskiy, A., Gupta, S., Koltun, V., Kosecka, J., Malik, J., Mottaghi, R., Savva, M., and Zamir, A. R. \textit{On Evaluation of Embodied Navigation Agents}. arXiv:1807.06757, 2018. \url{https://arxiv.org/abs/1807.06757}.
-
 \end{thebibliography}
 
 \end{document}
