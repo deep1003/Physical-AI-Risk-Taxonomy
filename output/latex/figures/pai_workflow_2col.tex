@@ -1,0 +1,68 @@
+\documentclass[border=12pt]{standalone}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setmainfont{Apple SD Gothic Neo}
+
+\definecolor{ink}{HTML}{111111}
+\definecolor{sub}{HTML}{555555}
+\definecolor{line}{HTML}{9A9A9A}
+\newcommand{\tg}[1]{{\scriptsize\color{sub}[#1]}}
+\newcommand{\refmark}[1]{\textsuperscript{\,#1}}
+\newcommand{\lab}[1]{{\scriptsize\color{sub}\textbf{#1}\ }}
+
+\begin{document}
+\begin{tikzpicture}[
+  card/.style={draw=line, line width=0.7pt, rounded corners=5pt, inner sep=7pt,
+               text width=11.1cm, align=left, font=\scriptsize, text=ink},
+  arr/.style={-{Stealth[length=3mm]}, draw=ink, line width=1.1pt},
+]
+
+% ===== Header =====
+\node[font=\bfseries\large, text=ink, anchor=south west] at (-12.0,2.55)
+  {5.3\ \ L4 리스크 매핑 · 수집–식별–매핑 워크플로우};
+\node[font=\footnotesize, text=sub, anchor=south west] at (-12.0,2.12)
+  {약 390만 건의 AI 문헌을 근거 기반 182개 리스크 카드로 정제 · 각 단계의 숫자 · 알고리즘 · 기준(로직)};
+
+% ===== Left column : (1)(2) =====
+\node[card, anchor=north west] (c1) at (-12.0,1.55)
+  {\textbf{\footnotesize ① 기초 데이터 수집}\ \tg{데이터셋}\\[2pt]
+   \lab{숫자} 전체 AI \textbf{3,906,767} · Physical AI \textbf{383,149} · 리스크 서브셋 \textbf{82,971}\\[1pt]
+   \lab{알고리즘} BGE-M3 임베딩 코사인 유사도 (다국어 · 영/한중일/독프스)\\[1pt]
+   \lab{기준·로직} Physical AI 정의 앵커(NVIDIA · NIST · ASIMOV)\refmark{1,2}와 코사인 \textbf{$>0.52$} + 키워드(\texttt{physical ai} · \texttt{humanoid} · \texttt{embodied ai} · \texttt{CPS}) 1차 식별. 이후 \texttt{risk} · \texttt{safety} · \texttt{failure} · \texttt{security} 용어 필터로 리스크 서브셋 선별. 출처 WoS · 정책 DB · PATSTAT (1950–2026).};
+
+\node[card, anchor=north west, below=0.75cm of c1.south west] (c2)
+  {\textbf{\footnotesize ② 리스크 식별 · 카드 생성}\ \tg{Algorithm 1}\\[2pt]
+   \lab{숫자} 고유 리스크 \textbf{182}\\[1pt]
+   \lab{알고리즘} HDBSCAN 군집화 \(\to\) c-TF-IDF 키프레이즈 \(\to\) BGE-M3 쌍별 코사인 \(\to\) iterative 통합\\[1pt]
+   \lab{기준·로직} 권위 소스(ISO · NIST · MITRE ATLAS)·벤치마크 논문을 \textbf{근거 $\geq 1$건} 가진 후보만 채택, 유사도 \textbf{$\geq 0.94$} 반복 통합 \(\to\) 182개 확정. 카드 = 고유 ID(예 \texttt{PHYSRISK-REF-0027}) · 한/영 정의 · 심각도 · 발생가능성 · Tier\,1/2 근거. \textbf{신규 카드(3조건)}: 독립 문헌 $\geq 3$ · 유사도 $<0.94$ · L2 귀속 가능.};
+
+% ===== Right column : (3)(4) =====
+\node[card, anchor=north west] (c3) at (0.5,1.55)
+  {\textbf{\footnotesize ③ 상위 카테고리 매핑}\ \tg{Algorithm 2}\\[2pt]
+   \lab{숫자} L3 하위범주 \textbf{24}\\[1pt]
+   \lab{알고리즘} BGE-M3 인코딩 \(\to\) 최근접 L3 귀속 · EM(기댓값 최대화) 반복\\[1pt]
+   \lab{기준·로직} \textbf{1안(현재)}: L3 24개 사전 정의 시 — L4를 인코딩해 최근접 L3에 자동 귀속, 경계 카드는 1·2순위와 동료 L4 비교로 결정. \textbf{2안}: 미정의 시 — 군집 $\geq 3$ L3 신설 · $\leq 2$ 통합, L3 중심 벡터 갱신하며 안정될 때까지 EM 반복.};
+
+\node[card, anchor=north west, below=0.75cm of c3.south west] (c4)
+  {\textbf{\footnotesize ④ L3 매핑 신뢰성 검증}\ \tg{Preliminary}\\[2pt]
+   \lab{숫자} 최근접 일치 \textbf{89.6\%} · 노이즈 안정 \textbf{97\%}\\[1pt]
+   \lab{알고리즘} EM 수렴 · 최근접 중심 일치 · 노이즈 섭동 안정성\\[1pt]
+   \lab{기준·로직} \textbf{수렴성} EM 7스텝 만에 평균 코사인 \textbf{0.811} 수렴(재배정 0). \textbf{일치성} 배정 L3가 최근접인 카드 \textbf{89.6\%}(경계 10.4\%). \textbf{안정성} $\sigma \leq 0.05$ 노이즈에도 \textbf{97\%} 일치.};
+
+% ===== connectors =====
+\draw[arr] (c1.south) -- (c2.north);
+\draw[arr] (c3.south) -- (c4.north);
+\draw[arr, line width=1.3pt] (c2.east) to[out=0,in=180] node[midway,above,font=\scriptsize,text=sub]{} (c3.west);
+
+% ===== Result strip + refs =====
+\node[draw=ink, dash pattern=on 2pt off 2pt, rounded corners=5pt, inner sep=6pt,
+      text width=23.4cm, align=left, font=\footnotesize, text=ink, anchor=north west]
+      (res) at (-12.0,-8.65)
+  {\textbf{결과 · 공개}\ \ L4 \textbf{182}개 = System Safety \textbf{91} · Interaction Safety \textbf{62} · Societal Safety \textbf{29}\ \ \textperiodcentered\ \ 공개: \texttt{pai\_risk\_taxonomy\_bilingual\_v2.0.html} (전체 페이지 · L4 카드 예시 탐색 가능)};
+
+\node[align=left, font=\scriptsize, text=sub, anchor=north west] at (-12.0,-9.9)
+  {\textbf{앵커 키워드 근거}\ \ [1] Sermanet et al., \textit{Generating Robot Constitutions \& Benchmarks for Semantic Safety} (ASIMOV, Google DeepMind), arXiv:2503.08663, 2025.\ \ [2] NVIDIA, \textit{NVIDIA Cosmos: Physical AI with World Foundation Models}, 2025.};
+
+\end{tikzpicture}
+\end{document}

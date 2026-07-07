@@ -1,0 +1,68 @@
+\documentclass[border=12pt]{standalone}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\setmainfont{Apple SD Gothic Neo}
+
+\definecolor{ink}{HTML}{111111}
+\definecolor{sub}{HTML}{4A4A4A}
+\definecolor{barfill}{HTML}{F2F2F2}
+\definecolor{barline}{HTML}{333333}
+
+\begin{document}
+\begin{tikzpicture}[
+  box/.style={rounded corners=6pt, draw=barline, fill=barfill, align=center, font=\large, text=ink, inner sep=5pt},
+  dark/.style={rounded corners=6pt, draw=ink, fill=ink, align=center, text=white, inner sep=5pt},
+  vbox/.style={rounded corners=6pt, draw=barline, fill=barfill, align=center, font=\small, text=ink, inner sep=5pt, text width=4.4cm, minimum height=1.5cm},
+  ann/.style={font=\small, text=sub, align=center},
+  stepline/.style={font=\small, text=ink, align=center},
+  arr/.style={-{Stealth[length=3.5mm]}, draw=ink, line width=1.2pt},
+  barr/.style={-{Stealth[length=4.2mm]}, draw=ink, line width=1.8pt},
+]
+
+% ===== Title =====
+\node[font=\LARGE\bfseries, text=ink] at (0,5.5) {L4 리스크 매핑 · 수집–식별–매핑 워크플로우};
+
+% ===== Row 1 : 문서 선별 (3 boxes in one line) =====
+\node[box, minimum width=5.6cm, minimum height=1.5cm] (A) at (-8.2,3.2) {AI 문헌 · 전체 수집\\[2pt]\textbf{\LARGE 3,610,449}};
+\node[box, minimum width=5.6cm, minimum height=1.5cm] (B) at (0,3.2)     {Physical AI 문헌\\[2pt]\textbf{\LARGE 416,387}};
+\node[box, minimum width=5.6cm, minimum height=1.5cm] (C) at (8.2,3.2)   {Physical AI Risks 문헌\\[2pt]\textbf{\LARGE 84,912}};
+\draw[arr] (A) -- (B);
+\draw[arr] (B) -- (C);
+\node[ann, text width=5.4cm] at (-4.1,4.5) {\bfseries\color{ink}① BGE-M3 임베딩 코사인 유사도 + 키워드};
+\node[ann, text width=5.4cm] at (4.1,4.5)  {\bfseries\color{ink}② 리스크 용어 필터\\ {\mdseries risk · safety · failure · security}};
+
+% ===== Row 2 : L4 카드 =====
+\node[stepline, text width=17.5cm] (s3) at (0,1.55)
+  {\textbf{\normalsize ③ 리스크 유형 압축 · 구조화}\ \ {\color{sub}HDBSCAN 군집화 + c-TF-IDF 키프레이즈 · BGE-M3 쌍별 유사도 $\geq 0.94$ 반복 통합}};
+\node[dark, minimum width=6.6cm, minimum height=1.7cm] (D) at (0,-0.15) {L4 리스크 카드\ \ \textbf{\fontsize{30}{30}\selectfont 182}};
+\draw[arr] (s3.south) -- (D.north);
+
+% ===== Row 3 : L3 매핑 · 전문가 검토 =====
+\node[stepline, text width=17.5cm] (s4) at (0,-1.95)
+  {\textbf{\normalsize ④ L3 매핑 · 전문가 검토}\ \ {\color{sub}BGE-M3 최근접 귀속 + EM 반복 · 전문가 검토(카드당 대표 근거 $\leq 5$)}};
+\node[box, minimum width=9.5cm, minimum height=1.45cm] (E) at (0,-3.55) {\textbf{L3 매핑 · 전문가 검토}\ \ (\textbf{\LARGE 24}개)};
+\draw[arr] (D.south) -- (s4.north);
+\draw[arr] (s4.south) -- (E.north);
+\node[box, minimum width=5.0cm, minimum height=1.35cm] (L2) at (-8.0,-3.55) {L2 상위 범주\\[2pt]{\normalsize 시스템 · 상호작용 · 환경}};
+\draw[arr] (L2.east) -- (E.west);
+
+% ===== Row 4 : 신뢰성 검증 (3 boxes in one line) =====
+\node[font=\normalsize\bfseries, text=ink] (s5) at (0,-4.95) {⑤ L3 매핑 신뢰성 검증};
+\node[vbox] (V1) at (-5.7,-6.5) {\textbf{\normalsize 수렴성}\\[2pt]EM 7스텝 수렴 · 코사인 \textbf{0.811}};
+\node[vbox] (V2) at (0,-6.5)    {\textbf{\normalsize 내부 일치성}\\[2pt]최근접 L3 일치 \textbf{89.6\%}};
+\node[vbox] (V3) at (5.7,-6.5)  {\textbf{\normalsize 안정성}\\[2pt]$\sigma\leq0.05$ 노이즈서 \textbf{97\%} 유지};
+\draw[arr] (E.south) -- (s5.north);
+\draw[barr] (s5.south) -- (V2.north);
+\draw[barr] (V2.west) -- (V1.east);
+\draw[barr] (V2.east) -- (V3.west);
+
+% ===== Result =====
+\node[align=left, font=\footnotesize, text=sub, anchor=north west, text width=23.2cm] at (-11.6,-7.95)
+  {\textbf{주(EM)}\ \ EM(Expectation–Maximization)은 잠재변수 모델의 최대우도추정 알고리즘. L4 배정(E-step)과 L3 중심 벡터 갱신(M-step)을 수렴할 때까지 반복한다.};
+
+\node[anchor=north west, font=\footnotesize, text=sub] at ([yshift=-4pt]A.south west)
+  {\textbf{원천 데이터 소스}\ \ Web of Science · OpenAlex(논문, 세계 최대 학술 DB) · EPO PATSTAT(특허) · 정책보고서(OECD · NIST · NKIS 국가정책연구포털)};
+
+\end{tikzpicture}
+\end{document}

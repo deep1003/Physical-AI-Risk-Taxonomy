@@ -1,0 +1,18 @@
+[16:47:46] stratum ai/papers: 1,749,071 rows -> sampled ~17,491
+[16:47:50] stratum ai/patents: 2,026,797 rows -> sampled ~20,268
+[16:47:50] stratum ai/policy_reports: 122,281 rows -> sampled ~1,223
+[16:47:51] stratum ai_infra/papers: 219,002 rows -> sampled ~2,190
+[16:47:52] stratum ai_infra/patents: 517,896 rows -> sampled ~5,179
+[16:47:52] stratum ai_infra/policy_reports: 341 rows -> sampled ~3
+[16:47:52] stratum physical_ai/papers: 31,386 rows -> sampled ~314
+[16:47:52] stratum physical_ai/patents: 347,660 rows -> sampled ~3,477
+[16:47:52] stratum physical_ai/policy_reports: 1,642 rows -> sampled ~16
+[16:47:52] stratum physical_ai_risks/papers: 50,375 rows -> sampled ~504
+[16:47:53] stratum physical_ai_risks/patents: 31,657 rows -> sampled ~317
+[16:47:53] stratum physical_ai_risks/policy_reports: 937 rows -> sampled ~9
+[16:47:53] total sampled with usable text: 50,991
+[16:48:00] loading BAAI/bge-m3 ...
+[16:48:07] embedding 50,991 texts (batch 32, normalized) ...
+[17:12:44] embeddings shape (50991, 1024); running UMAP (cosine) ...
+[17:13:42] wrote coords -> /Users/deep1003/data3/Physical-AI-Risk-Taxonomy/output/latex/figures/fig_recent_physical_ai_space_coords_full1pct.csv
+[17:13:45] plotted counts {'ai': 38982, 'ai_infra': 7372, 'physical_ai': 3807, 'physical_ai_risks': 830} -> /Users/deep1003/data3/Physical-AI-Risk-Taxonomy/output/latex/figures/fig_recent_physical_ai_space.pdf

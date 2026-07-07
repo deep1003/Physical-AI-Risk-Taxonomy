@@ -1,0 +1,82 @@
+\documentclass[border=12pt]{standalone}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\setmainfont{Apple SD Gothic Neo}
+
+\definecolor{ink}{HTML}{111111}
+\definecolor{sub}{HTML}{555555}
+\definecolor{band}{HTML}{ECECEC}
+\definecolor{line}{HTML}{9A9A9A}
+\newcommand{\tg}[1]{{\scriptsize\color{sub}[#1]}}
+\newcommand{\refmark}[1]{\textsuperscript{\,#1}}
+\def\CaL{-12.0}\def\CbL{-6.9}\def\CcL{-0.2}\def\CR{12.0}
+\def\Caw{4.7cm}\def\Cbw{6.2cm}\def\Ccw{11.6cm}
+
+\begin{document}
+\begin{tikzpicture}[
+  hdr/.style={font=\bfseries\footnotesize, text=ink, anchor=north west},
+  c1/.style={font=\footnotesize, text=ink, align=left, anchor=north west, text width=\Caw},
+  c2/.style={font=\scriptsize, text=sub, align=left, anchor=north west, text width=\Cbw},
+  c3/.style={font=\scriptsize, text=sub, align=left, anchor=north west, text width=\Ccw},
+  hsep/.style={draw=line, line width=0.6pt},
+  vsep/.style={draw=line!60, line width=0.4pt},
+  spine/.style={-{Stealth[length=2.4mm]}, draw=ink, line width=1pt},
+]
+\node[font=\bfseries\large, text=ink, anchor=south west] at (\CaL,2.5)
+  {5.3\ \ L4 리스크 매핑 · 수집–식별–매핑 워크플로우};
+\node[font=\footnotesize, text=sub, anchor=south west] at (\CaL,2.08)
+  {약 390만 건의 AI 문헌을 근거 기반 182개 리스크 카드로 정제 · 각 단계의 숫자 · 알고리즘 · 기준(로직)};
+
+\fill[band] (\CaL,1.75) rectangle (\CR,1.05);
+\node[hdr] at (\CaL+0.15,1.68) {단계 · 숫자};
+\node[hdr] at (\CbL+0.15,1.68) {알고리즘 · 모델};
+\node[hdr] at (\CcL+0.15,1.68) {기준 · 로직 (임계값 · 규칙)};
+
+\draw[hsep] (\CaL,1.05) -- (\CR,1.05);
+\draw[hsep] (\CaL,-1.0) -- (\CR,-1.0);
+\draw[hsep] (\CaL,-3.35) -- (\CR,-3.35);
+\draw[hsep] (\CaL,-5.35) -- (\CR,-5.35);
+\draw[hsep] (\CaL,-6.95) -- (\CR,-6.95);
+\draw[hsep] (\CaL,-7.85) -- (\CR,-7.85);
+\draw[vsep] (\CbL,1.75) -- (\CbL,-7.85);
+\draw[vsep] (\CcL,1.75) -- (\CcL,-7.85);
+
+% R1
+\node[c1] at (\CaL+0.15,0.9) {\textbf{① 기초 데이터 수집}\ \tg{데이터셋}\\[2pt]
+  전체 AI \ \textbf{\normalsize 3,906,767}\\ Physical AI \ \textbf{\normalsize 383,149}\\ 리스크 서브셋 \ \textbf{\normalsize 82,971}};
+\node[c2] at (\CbL+0.15,0.9) {BGE-M3 임베딩 코사인 유사도 (다국어 · 영/한중일/독프스)};
+\node[c3] at (\CcL+0.15,0.9) {Physical AI 정의 앵커(NVIDIA · NIST · ASIMOV)\refmark{1,2}와 코사인 유사도 \textbf{$>0.52$} + 명시적 키워드(\texttt{physical ai} · \texttt{humanoid} · \texttt{embodied ai} · \texttt{CPS})로 1차 식별. 이후 제목·초록에 \texttt{risk} · \texttt{safety} · \texttt{failure} · \texttt{security} 용어를 포함한 문헌만 리스크 서브셋으로 선별. 출처: Web of Science · 정책 DB · EPO PATSTAT (1950–2026).};
+
+% R2
+\node[c1] at (\CaL+0.15,-1.15) {\textbf{② 리스크 식별 · 카드 생성}\ \tg{Algorithm 1}\\[2pt]
+  고유 리스크 \ \textbf{\normalsize 182}};
+\node[c2] at (\CbL+0.15,-1.15) {HDBSCAN 군집화 \(\to\) c-TF-IDF 키프레이즈 \(\to\) BGE-M3 쌍별 코사인 \(\to\) iterative 통합};
+\node[c3] at (\CcL+0.15,-1.15) {권위 소스(ISO · NIST · MITRE ATLAS)·벤치마크 논문을 \textbf{근거 $\geq 1$건} 가진 후보만 채택. 유사도 \textbf{$\geq 0.94$}인 리스크를 반복 통합 \(\to\) 182개 확정. 카드 구성: 고유 ID(예 \texttt{PHYSRISK-REF-0027}) · 한/영 정의 · 계층 · 출처 · 심각도 · 발생가능성 · Tier\,1(동료심사)/Tier\,2(공신력 기관) 근거. \textbf{신규 카드 승인(3조건)}: 독립 참고문헌 $\geq 3$건 · 기존 카드와 유사도 $<0.94$ · L2 귀속 가능.};
+
+% R3
+\node[c1] at (\CaL+0.15,-3.5) {\textbf{③ 상위 카테고리 매핑}\ \tg{Algorithm 2}\\[2pt]
+  L3 하위범주 \ \textbf{\normalsize 24}};
+\node[c2] at (\CbL+0.15,-3.5) {BGE-M3 인코딩 \(\to\) 최근접 L3 귀속; EM(기댓값 최대화) 반복};
+\node[c3] at (\CcL+0.15,-3.5) {\textbf{1안(현재 적용)}: L3 24개가 사전 정의된 경우 — L4를 인코딩해 전체 L3 앵커와 코사인 비교 후 최근접에 자동 귀속. 복수 L3에 근접하면 1·2순위 후보와 확정된 동료 L4를 비교해 결정. \textbf{2안}: L3 미정의 시 — L4 군집 $\geq 3$이면 L3 신설, $\leq 2$이면 유사 L3에 통합. L3 중심 벡터를 갱신하며 안정될 때까지 EM 반복.};
+
+% R4
+\node[c1] at (\CaL+0.15,-5.5) {\textbf{④ L3 매핑 신뢰성 검증}\ \tg{Preliminary}\\[2pt]
+  최근접 일치 \ \textbf{\normalsize 89.6\%}\\ 노이즈 안정 \ \textbf{\normalsize 97\%}};
+\node[c2] at (\CbL+0.15,-5.5) {EM 수렴 · 최근접 중심 일치 · 노이즈 섭동 안정성};
+\node[c3] at (\CcL+0.15,-5.5) {\textbf{수렴성}: EM 7스텝 만에 패밀리 내 평균 코사인 \textbf{0.811} 수렴, 재배정 0. \textbf{내부 일치성}: 배정 L3가 임베딩상 최근접인 카드 \textbf{89.6\%} (경계성 10.4\%). \textbf{안정성}: 표준편차 $\sigma \leq 0.05$ 노이즈에도 원배정과 \textbf{97\%} 일치.};
+
+% Result
+\node[c1] at (\CaL+0.15,-7.1) {\textbf{결과 · 공개}};
+\node[font=\footnotesize, text=ink, align=left, anchor=north west, text width=17.8cm] at (\CbL+0.15,-7.1)
+  {L4 \textbf{182}개 = System Safety \textbf{91} · Interaction Safety \textbf{62} · Societal Safety \textbf{29}\ \ \textperiodcentered\ \ 공개: \texttt{pai\_risk\_taxonomy\_bilingual\_v2.0.html}};
+
+% spine arrows
+\draw[spine] (\CaL+0.5,-0.72) -- (\CaL+0.5,-1.2);
+\draw[spine] (\CaL+0.5,-3.07) -- (\CaL+0.5,-3.55);
+\draw[spine] (\CaL+0.5,-5.07) -- (\CaL+0.5,-5.55);
+
+\node[align=left, font=\scriptsize, text=sub, anchor=north west] at (\CaL,-8.05)
+  {\textbf{앵커 키워드 근거}\ \ [1] Sermanet et al., \textit{Generating Robot Constitutions \& Benchmarks for Semantic Safety} (ASIMOV, Google DeepMind), arXiv:2503.08663, 2025.\ \ [2] NVIDIA, \textit{NVIDIA Cosmos: Physical AI with World Foundation Models}, 2025.};
+\end{tikzpicture}
+\end{document}
