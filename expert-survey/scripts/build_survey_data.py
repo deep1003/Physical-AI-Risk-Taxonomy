@@ -13,8 +13,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE_CARDS = ROOT / "data" / "l4_cards.json"
 SOURCE_SUMMARY = ROOT / "data" / "taxonomy_summary.json"
+READABLE_L4 = ROOT / "expert-survey" / "data" / "readable-l4-ko.json"
 OUTPUT = ROOT / "expert-survey" / "data"
-RATERS = [f"A{i:02d}" for i in range(1, 10)]
+RATERS = [f"A{i:02d}" for i in range(1, 20)]
+ITEMS_PER_RATER = 30
 SEED = 20260710
 
 EASY_L3 = {
@@ -62,6 +64,11 @@ PLAIN_KOREAN_REPLACEMENTS = {
     "환각": "사실과 다른 정보 생성", "내비게이션": "이동 경로 탐색", "탈옥": "안전 제한 우회",
     "적대적": "공격성", "정렬 실패": "목표와 안전 원칙의 불일치", "책임·배상": "책임과 보상",
     "투명성·설명 가능성": "행동 과정과 이유의 설명", "프로토콜": "절차", "멀티 에이전트": "여러 에이전트",
+    "비안전": "안전하지 않은", "피지컬 세계": "현실의 물리 환경", "피지컬 행동": "물리적 행동",
+    "리스크": "위험", "구현체": "로봇 기종", "리타겟팅": "로봇 몸체에 맞게 변환",
+    "오프로드": "외부 서버 처리", "폴백": "비상 대체", "도메인 이동": "사용 환경 변화",
+    "적대적 입력": "공격자가 조작한 입력", "시퀀스": "연속 과정", "embodied": "물리적으로 행동하는",
+    "내비게이션": "이동 경로 탐색",
 }
 
 
@@ -91,7 +98,7 @@ def split_bilingual(value: str) -> tuple[str, str]:
 
 
 def allocate(cards: list[dict]) -> dict[str, list[str]]:
-    """Greedy L3-stratified assignment: 3 ratings/card, loads differ by <= 1."""
+    """Assign every card at least three times and fill 19 equal 30-item blocks."""
     rng = random.Random(SEED)
     by_family: dict[str, list[dict]] = defaultdict(list)
     for card in cards:
@@ -125,6 +132,28 @@ def allocate(cards: list[dict]) -> dict[str, list[str]]:
             for pair in ((trio[0], trio[1]), (trio[0], trio[2]), (trio[1], trio[2])):
                 pair_loads[pair] += 1
 
+    card_by_id = {card["card_id"]: card for card in cards}
+    while any(len(ids) < ITEMS_PER_RATER for ids in assignments.values()):
+        rater = min(RATERS, key=lambda r: (len(assignments[r]), r))
+        eligible = [
+            card for card in cards
+            if card["card_id"] not in assignments[rater]
+            and sum(card["card_id"] in ids for ids in assignments.values()) == 3
+        ]
+        card = min(
+            eligible,
+            key=lambda c: (
+                family_loads[rater][c["l3_id"]],
+                sum(
+                    family_loads[other][c["l3_id"]]
+                    for other in RATERS if c["card_id"] in assignments[other]
+                ),
+                hashlib.sha256(f"{rater}-{c['card_id']}".encode()).hexdigest(),
+            ),
+        )
+        assignments[rater].append(card["card_id"])
+        family_loads[rater][card["l3_id"]] += 1
+
     for rater, card_ids in assignments.items():
         random.Random(f"{SEED}-{rater}").shuffle(card_ids)
     return assignments
@@ -133,6 +162,7 @@ def allocate(cards: list[dict]) -> dict[str, list[str]]:
 def main() -> None:
     cards = json.loads(SOURCE_CARDS.read_text(encoding="utf-8"))
     summary = json.loads(SOURCE_SUMMARY.read_text(encoding="utf-8"))
+    readable_l4 = json.loads(READABLE_L4.read_text(encoding="utf-8"))
     families = []
     for l2 in summary["hierarchy"]:
         for l3 in l2["l3"]:
@@ -159,9 +189,9 @@ def main() -> None:
             {
                 "card_id": card["card_id"],
                 "display_id": f"V{index:03d}",
-                "label_ko": plain_korean(ko_label),
+                "label_ko": plain_korean(readable_l4[card["card_id"]]["label_ko"]),
                 "label_en": en_label,
-                "definition_ko": plain_korean(ko_definition),
+                "definition_ko": plain_korean(readable_l4[card["card_id"]]["definition_ko"]),
                 "definition_en": en_definition,
                 "pair_family_ids": [card["l3_id"], distractor_for(card)],
             }
@@ -171,13 +201,14 @@ def main() -> None:
     counts = Counter(card_id for ids in assignments.values() for card_id in ids)
     assert len(cards) == 182
     assert len(families) == 24
-    assert set(counts.values()) == {3}
+    assert set(counts.values()) == {3, 4}
+    assert sum(value == 4 for value in counts.values()) == 24
     loads = [len(ids) for ids in assignments.values()]
-    assert max(loads) - min(loads) <= 1
+    assert set(loads) == {ITEMS_PER_RATER}
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
     snapshot = {
-        "survey_version": "2.0.0-pairwise",
+        "survey_version": "2.1.0-pairwise-30items",
         "generated_on": "2026-07-10",
         "source_sha256": sha256(SOURCE_CARDS),
         "families": families,
@@ -187,7 +218,7 @@ def main() -> None:
         json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     assignment_payload = {
-        "assignment_version": "BIBD-20260710-v1",
+        "assignment_version": "BIBD-20260710-v2-30items",
         "seed": SEED,
         "raters": assignments,
     }

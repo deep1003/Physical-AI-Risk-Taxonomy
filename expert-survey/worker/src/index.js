@@ -21,7 +21,7 @@ function response(body, status, origin, env) {
 function validPayload(payload) {
   return payload
     && /^R-[a-f0-9]{12}$/.test(payload.respondent_id || "")
-    && /^A0[1-9]$/.test(payload.assignment_block || "")
+    && /^A(?:0[1-9]|1[0-9])$/.test(payload.assignment_block || "")
     && /^[a-f0-9-]{36}$/.test(payload.submission_id || "")
     && typeof payload.markdown === "string"
     && payload.markdown.length >= 500

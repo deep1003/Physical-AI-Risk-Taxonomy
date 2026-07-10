@@ -13,15 +13,15 @@ The primary objective is to test which of two candidate L3 families independent 
 ## 2. 연구 설계 / Study design
 
 - 평가 대상: L4 위험 카드 182개, L3 위험군 24개
-- 평가자: 독립 전문가 9명
-- 배정: 카드당 서로 다른 전문가 3명, 총 546건의 판단
-- 부담: 전문가당 60~61개 쌍대비교 문항; 제한시간 없음, 중단 후 재개 가능
+- 평가자: 독립 전문가 9명 이상 모집; 전체 카드의 최소 3회 평가를 위해 최소 19개 완주 응답을 목표로 함
+- 배정: 19개 균형 블록, 블록당 30문항, 총 570건의 계획 판단; 카드당 3회 또는 4회
+- 부담: 응답자당 30개 쌍대비교 문항; 제한시간 없음, 중단 후 재개 가능
 - 설계: L3 기준으로 층화한 균형 불완전 블록 설계
 - 맹검: 기존 L3 배정, 임베딩 예측, 유사도, 군집 ID 및 다른 평가자 응답 비공개
 - 후보 구성: 기존 L3와 같은 L2에 속하는 유사 대안 L3를 사전 규칙으로 매칭
 - 1차 평가변수: 기존 L3 선택률과 카드 단위 bootstrap 95% 신뢰구간
 
-The study uses a stratified balanced incomplete block design. Nine independent experts each complete 60 or 61 forced-choice pairwise items, and every card receives three independent ratings. For each card, the canonical L3 is paired with a prespecified, same-L2 hard negative; left/right order is randomized. The primary endpoint is the canonical-choice proportion with a card-level bootstrap 95% confidence interval.
+The study recruits at least nine independent experts and uses 19 balanced 30-item blocks. At least 19 completed responses are required to obtain a minimum of three ratings per card; 24 cards receive a fourth rating, yielding 570 planned judgments. Additional respondents receive repeated balanced blocks. For each card, the canonical L3 is paired with a prespecified, same-L2 hard negative; left/right order is randomized. The primary endpoint is the canonical-choice proportion with a card-level bootstrap 95% confidence interval.
 
 ## 3. 전문가 선정 / Expert eligibility
 
@@ -118,7 +118,7 @@ Responses are autosaved in browser localStorage and converted to structured Mark
 - 기존 expert-corrected 카드 대 비보정 카드 비교
 - cosine margin과 인간 불일치의 연관성(탐색적 분석)
 
-546개 개별 응답을 독립 표본으로 간주하지 않으며, 불확실성은 카드 수준에서 평가한다.
+570개 계획 판단을 독립 표본으로 간주하지 않으며, 불확실성은 카드 수준에서 평가한다. 9~18개 완주 응답은 전체 카드 검증을 위한 중간자료로만 취급한다.
 
 ## 11. 사전 의사결정 규칙 / Prespecified interpretation
 
@@ -142,6 +142,6 @@ If survey results are used to revise family definitions, the same observations w
 - 이중언어 연구계획서: Markdown, LaTeX, PDF
 - GitHub Pages 이중언어 설문
 - 24개 L3 codebook과 182개 L4 카드의 고정 JSON 스냅샷
-- A01~A09 균형 배정표
+- A01~A19 균형 배정표
 - Markdown 응답 파일
 - 데이터 사전 및 분석용 변환 명세
