@@ -1,0 +1,119 @@
+% !TEX program = xelatex
+\documentclass[11pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{fontspec}
+\usepackage[margin=24mm]{geometry}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\definecolor{navy}{HTML}{17324D}
+\definecolor{teal}{HTML}{147D75}
+\hypersetup{colorlinks=true,linkcolor=teal,urlcolor=teal}
+\setlist{nosep,leftmargin=1.6em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\fancyhf{}
+\lhead{Physical AI Expert Annotation Protocol}
+\rhead{Version 1.0}
+\cfoot{\thepage}
+\newcommand{\bisection}[2]{\section{#1 / \texorpdfstring{\color{teal}}{}#2}}
+\newcommand{\bisubsection}[2]{\subsection{#1 / #2}}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries\color{navy} Physical AI 위험 분류체계 독립 전문가 설문 계획서\par}
+\vspace{5pt}
+{\Large Protocol for Independent Expert Annotation of the Physical AI Risk Taxonomy\par}
+\vspace{10pt}
+Version 1.0 \quad | \quad 2026-07-10
+\end{center}
+
+\bisection{연구 목적}{Study objective}
+본 조사의 주목적은 사전에 정의된 24개 L3 위험군을 이용할 때 독립 전문가가 182개 L4 위험 카드를 일관되게 분류할 수 있는지 평가하는 것이다. 제안된 카드--위험군 배정의 재현성과 적용 가능성을 평가하며, 24개 위험군이 유일하거나 최적이라는 점을 검증하지 않는다.
+
+The primary objective is to assess whether independent experts can consistently classify 182 L4 risk cards using 24 predefined L3 risk families. This study evaluates reproducibility and applicability, not uniqueness or optimality.
+
+\bisection{연구 설계}{Study design}
+\begin{itemize}
+\item L4 카드 182개, L3 위험군 24개, 독립 전문가 9명
+\item 카드당 서로 다른 전문가 3명; 총 546건의 판단
+\item 전문가당 60--61개 카드, 두 세션으로 분할
+\item L3 기준 층화 균형 불완전 블록 설계
+\item 기존 label, 임베딩 결과, 유사도, 군집 ID 및 다른 평가자의 응답에 대한 맹검
+\item 1차 평가변수: nominal Krippendorff's alpha와 card-level bootstrap 95\% CI
+\end{itemize}
+
+\bisection{전문가 선정}{Expert eligibility}
+\bisubsection{포함 기준}{Inclusion criteria}
+관련 박사학위, 관련 박사과정 3년 이상, 산업·공공·표준화 분야 경력 5년 이상, 또는 Physical AI·로봇 안전·자율시스템 위험평가 경험 중 하나 이상을 요구한다.
+
+Eligible experts have a relevant doctorate, at least three years of doctoral training, at least five years of relevant professional experience, or substantive experience in Physical AI or robot-safety assessment.
+
+\bisubsection{제외 기준}{Exclusion criteria}
+공동저자, L3/L4 개발 참여자, 기존 label 열람자 및 독립성을 훼손하는 이해상충 보유자는 제외한다.
+
+\bisection{수집할 배경 정보}{Background variables}
+이름, 이메일, 성별, 연령, 정확한 소속기관은 수집하지 않는다. 익명 평가자 코드, 전문영역, 경력 구간, 소속 부문, 광역 지역권, 최종 학위, 위험평가 경험, 표준·규제 경험 및 독립성만 범주형으로 수집한다.
+
+No direct identifiers are collected. Only categorical variables necessary to characterize expertise, sector, broad region, education, experience, and independence are retained.
+
+\bisection{설문 절차}{Survey procedure}
+\begin{enumerate}
+\item 연구 안내, 개인정보 처리 안내 및 동의
+\item 적격성 및 배경 정보
+\item 이중언어 L3 codebook과 분류 규칙 검토
+\item 개인별 L4 카드에 대한 primary 및 선택적 secondary L3 분류
+\item 확신도, 모호성 원인 및 선택적 의견 기록
+\item 종료 평가 후 구조화된 Markdown 응답 저장
+\end{enumerate}
+`Unmappable'과 `Insufficient information'은 강제 분류를 피하기 위한 유효 응답이다.
+
+\bisection{카드 표시 및 맹검}{Card presentation and blinding}
+카드에는 무작위 표시 ID, L4 label 및 definition만 표시한다. 기존 L2/L3 배정, 심각도·확률, 참고문헌 수와 계산 결과는 공개하지 않는다. 카드 순서는 평가자 코드별 고정 seed로 무작위화한다.
+
+\bisection{카드별 문항}{Card-level items}
+\begin{enumerate}
+\item Primary classification: L3 하나, Unmappable 또는 Insufficient information
+\item Secondary classification: 선택적 두 번째 L3
+\item Confidence: 1(매우 낮음)--5(매우 높음)
+\item Ambiguity reason: 정보 부족, 복수 메커니즘, 정의 중첩, 경계 불명확, 누락, 전문지식 한계, 기타
+\item Optional comment
+\end{enumerate}
+
+\bisection{자료 보존}{Data retention}
+응답은 브라우저 localStorage에 자동 임시저장하고 완료 시 구조화된 Markdown으로 참가자 기기에 다운로드한다. GitHub 제출은 공개 가능성을 고지하고 참가자가 명시적으로 선택할 때만 수행한다. 연구팀은 수집 파일을 접근 제한 저장소로 이전해야 한다.
+
+\bisection{품질관리}{Quality control}
+불일치 자체를 이유로 평가자를 제외하지 않는다. 미완료, 독립성 위반, 기술적 손실 또는 사전 정의된 비성실 패턴만 제외 사유로 검토한다. 응답에는 설문 버전, 데이터 스냅샷 해시, 배정 버전과 익명 평가자 코드를 기록한다.
+
+\bisection{분석 계획}{Statistical analysis}
+\bisubsection{1차 분석}{Primary analysis}
+분석 단위는 L4 카드이며 primary L3를 명목척도로 취급한다. Krippendorff's alpha와 카드 단위 bootstrap 5,000회 95\% 신뢰구간을 산출한다. Unmappable과 Insufficient information은 별도 범주로 유지한다.
+
+\bisubsection{보조 분석}{Secondary analyses}
+Gwet's AC1, 완전 일치율, 다수결 형성률, release label과 다수결의 일치, family별 precision/recall/F1, macro- 및 worst-family F1, top-2 agreement, confusion matrix, 미분류 비율, 확신도별 일치도, singleton 비교와 margin--인간 불일치 관계를 보고한다. 546개 판단을 독립 표본으로 간주하지 않는다.
+
+\bisection{사전 의사결정 규칙}{Prespecified interpretation}
+\begin{longtable}{p{0.28\textwidth}p{0.64\textwidth}}
+\toprule
+결과 / Result & 해석 및 조치 / Interpretation and action\\
+\midrule
+$\alpha \ge 0.80$ & 높은 적용 재현성; 24-family schema 유지 가능\\
+$0.67 \le \alpha < 0.80$ & 잠정적 재현성; 경계 규칙 개선\\
+$\alpha < 0.67$ & 확정적 taxonomy 주장 완화\\
+Family majority agreement $<60\%$ & 해당 family 재정의 또는 병합 검토\\
+Unmappable $\ge10\%$ & taxonomy coverage 재검토\\
+Insufficient information $\ge10\%$ & L4 description 충실도 재검토\\
+\bottomrule
+\end{longtable}
+기준은 데이터 확인 전에 고정하며 사후 변경하지 않는다.
+
+\bisection{개정 정책}{Revision policy}
+설문 결과로 L3 정의를 수정한 경우 동일 응답으로 수정된 taxonomy의 성능을 확증하지 않는다. 별도 holdout 또는 신규 전문가로 재검증하거나 미검증 개정안으로 명시한다.
+
+\bisection{산출물}{Deliverables}
+이중언어 계획서(Markdown, LaTeX, PDF), GitHub Pages 설문, 24개 L3 및 182개 L4 고정 데이터 스냅샷, A01--A09 배정표, Markdown 응답과 데이터 사전을 제공한다.
+\end{document}
