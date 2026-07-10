@@ -86,16 +86,16 @@ Cards display only a randomized presentation ID, the bilingual L4 label, and the
 
 ## 8. 자료 보존 / Data retention
 
-응답은 브라우저의 localStorage에 자동 임시저장된다. 완료된 응답은 구조화된 Markdown으로 변환되어 공개 GitHub 응답 저장소에 자동 보존된다. 접속 telemetry는 응답 Markdown과 분리된 비공개 GitHub 저장소에 보존한다. 비공개 telemetry에는 설문 시작·종료·서버 수신 시각, 총 소요시간, 원본 IP, IP 기반 국가·대륙·지역·도시·우편번호·위도·경도, 시간대, ASN·네트워크 조직, Cloudflare 데이터센터, HTTP·TLS 정보, User-Agent, 언어 설정, referrer 및 화면·기기 메타데이터가 포함될 수 있다. 공개 응답에는 이 접속정보를 포함하지 않는다. 제한시간은 없다. 비공개 telemetry의 보유기간은 수집일로부터 1년으로 정한다.
+응답은 브라우저의 localStorage에 자동 임시저장된다. 완료된 응답은 구조화된 Markdown으로 변환되어 공개 GitHub 응답 저장소에 자동 보존된다. 설문 시작·종료 시각, 총 소요시간과 국가 수준의 접속지역은 응답 Markdown과 분리된 비공개 GitHub 저장소에 보존한다. 원본 IP와 더 세부적인 위치·접속·기기 정보는 저장하지 않는다. 공개 응답에는 시간 및 국가 정보를 포함하지 않는다. 제한시간은 없다. 비공개 운영 기록의 보유기간은 수집일로부터 1년으로 정한다.
 
-Responses are autosaved in browser localStorage and converted to structured Markdown for automatic retention in a public GitHub response repository. Connection telemetry is retained separately in a private GitHub repository and may include survey start, completion and server-receipt times, total duration, source IP, IP-derived geolocation, timezone, ASN and network organization, Cloudflare data centre, HTTP and TLS properties, User-Agent, language settings, referrer, screen and device metadata. The public response does not contain this connection telemetry. There is no time limit. Private telemetry is retained for one year from collection.
+Responses are autosaved in browser localStorage and converted to structured Markdown for automatic retention in a public GitHub response repository. Survey start and completion timestamps, total duration, and country-level access location are retained separately in a private GitHub repository. Source IP and finer-grained location, connection, or device metadata are not retained. The public response does not contain timing or country information. There is no time limit. Private administration records are retained for one year.
 
 ## 9. 품질관리 / Quality control
 
 - 평가 중 기존 label을 공개하지 않는다.
 - 불일치 자체를 근거로 평가자를 제외하지 않는다.
 - 미완료, 독립성 위반, 기술적 손실 또는 사전 정의된 비성실 패턴만 제외 사유로 검토한다.
-- 시작·종료·서버 수신 시각과 총 소요시간은 비공개 telemetry에만 저장하며 평가 또는 제외 기준으로 사용하지 않는다.
+- 시작·종료 시각, 총 소요시간과 국가 정보는 비공개 운영 기록에만 저장한다.
 - 설문 버전, 데이터 스냅샷 해시, 배정 버전과 평가자 코드를 응답 파일에 기록한다.
 
 ## 10. 분석 계획 / Statistical analysis

@@ -25,8 +25,7 @@ function validPayload(payload) {
     && /^[a-f0-9-]{36}$/.test(payload.submission_id || "")
     && typeof payload.markdown === "string"
     && payload.markdown.length >= 500
-    && payload.markdown.length <= 200_000
-    && JSON.stringify(payload.client_metadata || {}).length <= 20_000;
+    && payload.markdown.length <= 200_000;
 }
 
 function partition(dateValue) {
@@ -79,39 +78,15 @@ function buildTelemetry(payload, request, receivedAt) {
     assignment_block: payload.assignment_block,
     started_at_client: payload.started_at || null,
     completed_at_client: payload.submitted_at || null,
-    received_at_server: receivedAt,
     duration_seconds: durationSeconds,
-    ip_address: request.headers.get("cf-connecting-ip"),
     country: cf.country || null,
-    continent: cf.continent || null,
-    region: cf.region || null,
-    region_code: cf.regionCode || null,
-    city: cf.city || null,
-    postal_code: cf.postalCode || null,
-    latitude: cf.latitude || null,
-    longitude: cf.longitude || null,
-    timezone: cf.timezone || null,
-    asn: cf.asn || null,
-    as_organization: cf.asOrganization || null,
-    cloudflare_colo: cf.colo || null,
-    http_protocol: cf.httpProtocol || null,
-    tls_version: cf.tlsVersion || null,
-    tls_cipher: cf.tlsCipher || null,
-    client_tcp_rtt: cf.clientTcpRtt || null,
-    user_agent: request.headers.get("user-agent"),
-    accept_language: request.headers.get("accept-language"),
-    accept_encoding: request.headers.get("accept-encoding"),
-    referer: request.headers.get("referer"),
-    origin: request.headers.get("origin"),
-    cf_ray: request.headers.get("cf-ray"),
-    client_metadata: payload.client_metadata || {},
   };
   const lines = ["---"];
   for (const [key, value] of Object.entries(telemetry)) {
     lines.push(`${key}: ${yamlValue(value)}`);
   }
-  lines.push("---", "", "# Private Survey Connection Telemetry", "");
-  lines.push("This file contains access-restricted connection metadata separated from the public survey response.", "");
+  lines.push("---", "", "# Private Survey Administration Record", "");
+  lines.push("This file contains access-restricted timing and country-level information separated from the public survey response.", "");
   return lines.join("\n");
 }
 

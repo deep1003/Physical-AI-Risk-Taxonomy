@@ -138,7 +138,7 @@ function renderConsent() {
     <p class="english">This survey does not collect or request direct identifiers such as names, email addresses, exact age, or institutional affiliation. Age band and gender are collected categorically, with a prefer-not-to-say option for both. The survey contains 30 pairwise items, and progress is temporarily autosaved in this browser.</p>
     <div class="notice warning"><p><strong>제출된 익명 응답은 연구 재현성을 위해 공개 저장소에 보존됩니다.</strong></p><p class="english"><strong>Anonymous responses will be retained in a public repository for research reproducibility.</strong></p></div>
     <div class="notice"><p><strong>제한시간은 없습니다.</strong></p><p class="english"><strong>There is no time limit.</strong></p></div>
-    <div class="notice warning"><p><strong>설문 시작·종료·제출 수신 시각, 총 소요시간, 원본 IP, IP 기반 국가·지역·도시·좌표, 언어, 시간대, 브라우저·기기·네트워크·TLS 정보는 자동 수집되어 응답 Markdown과 분리된 비공개 저장소에 보관됩니다.</strong></p><p class="english"><strong>Survey start, completion and submission receipt times, total duration, source IP, IP-derived country, region, city and coordinates, language, timezone, browser, device, network and TLS metadata are collected automatically and retained in a private repository separate from the response Markdown.</strong></p></div>
+    <div class="notice warning"><p><strong>연구 운영을 위해 설문 참여 시점과 소요시간, 국가 수준의 접속지역 정보가 비공개로 기록됩니다.</strong></p><p class="english"><strong>For study administration, participation timestamps, response duration, and country-level access location are recorded privately.</strong></p></div>
     <label class="choice"><input id="consent" type="checkbox">위 내용을 이해했으며 자발적으로 참여하는 데 동의합니다. <span class="english">I understand the information above and voluntarily consent to participate.</span></label>
     <p id="consentError" class="error" role="alert"></p>
     <div class="actions"><span></span><button id="begin" class="primary">설문 시작 / Begin survey</button></div>
@@ -419,22 +419,6 @@ async function submitResponse() {
           0,
           Math.round((Date.parse(state.completedAt) - state.startedAt) / 1000),
         ),
-        client_metadata: {
-          language: navigator.language || null,
-          languages: navigator.languages || [],
-          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || null,
-          platform: navigator.platform || null,
-          cookie_enabled: navigator.cookieEnabled,
-          do_not_track: navigator.doNotTrack || null,
-          hardware_concurrency: navigator.hardwareConcurrency || null,
-          device_memory_gb: navigator.deviceMemory || null,
-          screen_width: screen.width,
-          screen_height: screen.height,
-          color_depth: screen.colorDepth,
-          viewport_width: window.innerWidth,
-          viewport_height: window.innerHeight,
-          device_pixel_ratio: window.devicePixelRatio,
-        },
         markdown: markdown(),
       }),
     });

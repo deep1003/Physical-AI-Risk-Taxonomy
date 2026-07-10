@@ -15,7 +15,7 @@ GitHub Pages에서 실행되는 한·영 병기 독립 전문가 쌍대 순위 �
 
 응답은 작성 중 브라우저 `localStorage`에 임시저장된다. 완료 시 Cloudflare Worker가 응답을 Markdown으로 변환해 공개 GitHub 응답 저장소의 `responses/YYYY/MM/` 디렉터리에 자동 커밋한다. 자동 저장이 실패하면 브라우저 임시자료를 유지하고 재시도한다.
 
-Worker는 동일한 익명 응답자 ID와 제출 ID를 사용해 시작·종료·수신 시각, 소요시간과 접속 telemetry를 비공개 `deep1003/Physical-AI-Risk-Survey-Telemetry` 저장소의 `telemetry/YYYY/MM/` 디렉터리에 별도 저장한다. 공개 응답에는 시간정보, 원본 IP나 정밀 접속정보를 포함하지 않는다.
+Worker는 동일한 익명 응답자 ID와 제출 ID를 사용해 시작·종료 시각, 소요시간과 국가 수준의 접속지역만 비공개 `deep1003/Physical-AI-Risk-Survey-Telemetry` 저장소의 `telemetry/YYYY/MM/` 디렉터리에 별도 저장한다. 원본 IP와 세부 접속정보는 저장하지 않으며 공개 응답에도 시간·국가 정보를 포함하지 않는다.
 
 익명 평가자 ID는 브라우저에서 자동 생성된다. 참가자 수에는 상한을 두지 않으며, 각 참가자는 A01~A19의 30문항 균형 블록 중 하나를 암호학적 난수로 배정받는다. 9명 이상을 모집하되 모든 카드에서 최소 3개 판단을 확보하려면 최소 19개 완주 응답이 필요하다.
 
