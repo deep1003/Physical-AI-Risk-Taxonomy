@@ -1,0 +1,63 @@
+:root {
+  --ink: #16212b;
+  --muted: #5c6b76;
+  --navy: #17324d;
+  --teal: #147d75;
+  --teal-soft: #e8f4f2;
+  --paper: #ffffff;
+  --ground: #f3f6f7;
+  --line: #d9e1e5;
+  --danger: #a53b3b;
+  --shadow: 0 12px 30px rgba(23, 50, 77, .08);
+  font-family: Inter, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: var(--ground); line-height: 1.55; }
+.site-header { display: flex; justify-content: space-between; gap: 2rem; align-items: end; padding: 2.2rem max(5vw, 1rem); color: white; background: linear-gradient(120deg, #102b46, #176c68); }
+h1 { margin: .15rem 0; font-size: clamp(1.65rem, 3vw, 2.6rem); line-height: 1.2; }
+h2, h3 { color: var(--navy); line-height: 1.3; }
+.eyebrow { margin: 0; text-transform: uppercase; letter-spacing: .11em; font-size: .75rem; opacity: .85; }
+.subtitle { margin: .4rem 0 0; opacity: .9; }
+.protocol-link { color: white; border: 1px solid rgba(255,255,255,.55); padding: .65rem .9rem; border-radius: .55rem; white-space: nowrap; text-decoration: none; }
+.shell { width: min(1050px, calc(100% - 2rem)); margin: 2rem auto; }
+.panel { background: var(--paper); border: 1px solid var(--line); border-radius: 1rem; padding: clamp(1.1rem, 3vw, 2rem); box-shadow: var(--shadow); margin-bottom: 1rem; }
+.notice { background: var(--teal-soft); border-left: 4px solid var(--teal); padding: .8rem 1rem; border-radius: .4rem; }
+.warning { background: #fff5e8; border-left-color: #d17b18; }
+.progress-wrap { display: grid; grid-template-columns: 1fr auto; gap: .75rem; align-items: center; margin-bottom: 1rem; }
+progress { width: 100%; height: .8rem; accent-color: var(--teal); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.field { margin: 1rem 0; }
+label, legend { font-weight: 700; }
+.help, .english, small { color: var(--muted); }
+.english { display: block; font-weight: 500; font-size: .92em; }
+input[type="text"], select, textarea { width: 100%; padding: .7rem .75rem; border: 1px solid #abb9c1; border-radius: .45rem; background: white; font: inherit; }
+textarea { min-height: 5.5rem; resize: vertical; }
+fieldset { border: 1px solid var(--line); border-radius: .65rem; padding: .8rem 1rem; margin: 1rem 0; }
+.choice { display: block; font-weight: 500; padding: .35rem 0; }
+.choice input { margin-right: .55rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .65rem; justify-content: space-between; margin-top: 1.5rem; }
+.actions-right { display: flex; flex-wrap: wrap; gap: .65rem; margin-left: auto; }
+button, .button { border: 0; border-radius: .5rem; padding: .72rem 1rem; font: inherit; font-weight: 750; cursor: pointer; text-decoration: none; display: inline-block; }
+.primary { color: white; background: var(--teal); }
+.secondary { color: var(--navy); background: #e6edf1; }
+.danger { color: white; background: var(--danger); }
+button:disabled { opacity: .45; cursor: not-allowed; }
+.card-id { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--teal); font-weight: 800; }
+.risk-card { border-top: 5px solid var(--teal); }
+.risk-title { font-size: 1.25rem; font-weight: 800; margin-bottom: .25rem; }
+.risk-definition { background: #f7f9fa; padding: .9rem; border-radius: .5rem; }
+.codebook details { border: 1px solid var(--line); border-radius: .55rem; margin: .55rem 0; padding: .6rem .8rem; }
+.codebook summary { cursor: pointer; font-weight: 800; color: var(--navy); }
+.l2-heading { margin-top: 1.5rem; padding-bottom: .35rem; border-bottom: 2px solid var(--teal); }
+.error { color: var(--danger); font-weight: 700; }
+.complete { text-align: center; padding: 2rem; }
+.stat { display: inline-block; margin: .35rem; padding: .55rem .8rem; border-radius: 2rem; background: var(--teal-soft); }
+footer { text-align: center; color: var(--muted); padding: 1rem 1rem 2.5rem; font-size: .88rem; }
+@media (max-width: 720px) {
+  .site-header { align-items: start; flex-direction: column; }
+  .grid { grid-template-columns: 1fr; }
+  .actions { flex-direction: column; }
+  .actions-right { margin-left: 0; }
+  button, .button { width: 100%; text-align: center; }
+}
+@media print { .site-header, footer, .actions { display: none; } body { background: white; } .panel { box-shadow: none; } }
