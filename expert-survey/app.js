@@ -3,7 +3,7 @@
 const CONFIG = {
   repo: "deep1003/Physical-AI-Risk-Taxonomy",
   apiUrl: "https://pai-risk-survey-api.deep1003-pai.workers.dev",
-  storagePrefix: "pai-expert-survey-v1",
+  storagePrefix: "pai-expert-survey-v2-pairwise30",
 };
 
 const app = document.querySelector("#app");
@@ -134,8 +134,8 @@ function renderConsent() {
   app.innerHTML = `<section class="panel">
     <h2>연구 안내 및 동의 <span class="english">Study information and consent</span></h2>
     <div class="notice"><p>이 연구는 182개 Physical AI 위험 카드를 24개 위험군으로 분류할 때 독립 전문가 판단의 재현성을 평가합니다.</p><p class="english">This study evaluates the reproducibility of independent expert assignments of 182 Physical AI risk cards to 24 predefined families.</p></div>
-    <p>이 설문은 이름, 이메일, 정확한 연령, 소속기관 등 직접 식별정보를 수집하거나 요구하지 않습니다. 연령대와 성별은 범주형으로 수집하며, 두 문항 모두 '응답하지 않음'을 선택할 수 있습니다. 설문은 약 60개의 두 후보 비교 문항으로 구성되며 브라우저에 자동 임시저장됩니다.</p>
-    <p class="english">This survey does not collect or request direct identifiers such as names, email addresses, exact age, or institutional affiliation. Age band and gender are collected categorically, with a prefer-not-to-say option for both. Approximately 60 pairwise items are assigned and progress is temporarily autosaved in this browser.</p>
+    <p>이 설문은 이름, 이메일, 정확한 연령, 소속기관 등 직접 식별정보를 수집하거나 요구하지 않습니다. 연령대와 성별은 범주형으로 수집하며, 두 문항 모두 '응답하지 않음'을 선택할 수 있습니다. 설문은 30개의 두 후보 비교 문항으로 구성되며 브라우저에 자동 임시저장됩니다.</p>
+    <p class="english">This survey does not collect or request direct identifiers such as names, email addresses, exact age, or institutional affiliation. Age band and gender are collected categorically, with a prefer-not-to-say option for both. The survey contains 30 pairwise items, and progress is temporarily autosaved in this browser.</p>
     <div class="notice warning"><p><strong>제출된 익명 응답은 연구 재현성을 위해 공개 저장소에 보존됩니다.</strong></p><p class="english"><strong>Anonymous responses will be retained in a public repository for research reproducibility.</strong></p></div>
     <div class="notice"><p><strong>제한시간은 없습니다.</strong></p><p class="english"><strong>There is no time limit.</strong></p></div>
     <div class="notice warning"><p><strong>설문 시작·종료·제출 수신 시각, 총 소요시간, 원본 IP, IP 기반 국가·지역·도시·좌표, 언어, 시간대, 브라우저·기기·네트워크·TLS 정보는 자동 수집되어 응답 Markdown과 분리된 비공개 저장소에 보관됩니다.</strong></p><p class="english"><strong>Survey start, completion and submission receipt times, total duration, source IP, IP-derived country, region, city and coordinates, language, timezone, browser, device, network and TLS metadata are collected automatically and retained in a private repository separate from the response Markdown.</strong></p></div>

@@ -23,9 +23,10 @@ def main() -> None:
     card_ids = {card["card_id"] for card in survey["cards"]}
     ratings = Counter(card_id for ids in assignment["raters"].values() for card_id in ids)
     assert set(ratings) == card_ids
-    assert set(ratings.values()) == {3}
+    assert set(ratings.values()) == {3, 4}
+    assert sum(value == 4 for value in ratings.values()) == 24
     loads = [len(ids) for ids in assignment["raters"].values()]
-    assert max(loads) - min(loads) <= 1
+    assert set(loads) == {30}
     for asset in ("index.html", "styles.css", "app.js", "protocol.md", "protocol.tex"):
         assert (ROOT / asset).stat().st_size > 100
     app_js = (ROOT / "app.js").read_text(encoding="utf-8")
