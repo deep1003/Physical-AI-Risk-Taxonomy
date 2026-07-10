@@ -42,6 +42,13 @@ textarea { min-height: 5.5rem; resize: vertical; }
 fieldset { border: 1px solid var(--line); border-radius: .65rem; padding: .8rem 1rem; margin: 1rem 0; }
 .choice { display: block; font-weight: 500; padding: .35rem 0; }
 .choice input { margin-right: .55rem; }
+.pairwise { display: grid; gap: .8rem; }
+.pair-option { display: grid; grid-template-columns: auto auto 1fr; gap: .7rem; align-items: start; padding: 1rem; border: 2px solid var(--line); border-radius: .7rem; font-weight: 500; cursor: pointer; }
+.pair-option:hover { border-color: #79aaa5; background: #f8fbfb; }
+.pair-option:has(input:checked) { border-color: var(--teal); background: var(--teal-soft); box-shadow: 0 0 0 1px var(--teal); }
+.pair-option input { margin-top: .35rem; }
+.pair-marker { display: inline-grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; color: white; background: var(--navy); font-weight: 800; }
+.pair-option small { display: block; margin-top: .35rem; font-weight: 400; line-height: 1.5; }
 .actions { display: flex; flex-wrap: wrap; gap: .65rem; justify-content: space-between; margin-top: 1.5rem; }
 .actions-right { display: flex; flex-wrap: wrap; gap: .65rem; margin-left: auto; }
 button, .button { border: 0; border-radius: .5rem; padding: .72rem 1rem; font: inherit; font-weight: 750; cursor: pointer; text-decoration: none; display: inline-block; }
