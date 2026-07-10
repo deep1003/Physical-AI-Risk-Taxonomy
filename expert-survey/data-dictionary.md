@@ -29,6 +29,6 @@
 | `Missing risks` | text, optional | 누락 위험영역 |
 | `Suggestions` | text, optional | 병합·분리·정의 개선 제안 |
 
-정확한 이름, 이메일, 성별, 연령 및 소속기관은 수집하지 않는다. 자유서술에는 개인식별정보를 입력하지 않도록 참가자에게 안내해야 한다.
+이 설문은 이름, 이메일, 성별, 연령, 소속기관 등 개인정보를 절대 수집하거나 요구하지 않는다. 자유서술에도 개인식별정보를 입력하지 않도록 참가자에게 안내한다.
 
-Exact names, email addresses, gender, age, and institutional affiliation are not collected. Participants should not enter personal identifiers in free-text fields.
+This survey never collects or requests personal information such as names, email addresses, gender, age, or institutional affiliation. Participants should not enter personal identifiers in free-text fields.

@@ -28,12 +28,12 @@ The study uses a stratified balanced incomplete block design. Nine independent e
 
 다음 중 하나 이상을 충족해야 한다.
 
-- 로봇공학, 자율시스템, 제어공학, HRI, 안전공학 또는 AI safety 관련 박사학위
-- 관련 박사과정 3년 이상
-- 관련 산업·공공·표준화 분야 경력 5년 이상
+- 로봇공학, 자율시스템, 제어공학, HRI, 안전공학 또는 AI safety 관련 학위
+- 관련 학위과정 1년 이상
+- 관련 산업·공공·표준화 분야 경력 1년 이상
 - Physical AI, 로봇 안전 또는 자율시스템 위험평가 경험
 
-Experts must satisfy at least one of the following: a relevant doctorate; at least three years of doctoral training; at least five years of relevant professional experience; or substantive experience in Physical AI, robot safety, or autonomous-system risk assessment.
+Experts must satisfy at least one of the following: a relevant degree; at least one year in a relevant degree programme; at least one year of relevant professional experience in industry, the public sector, or standardization; or substantive experience in Physical AI, robot safety, or autonomous-system risk assessment.
 
 ### 제외 기준 / Exclusion criteria
 
@@ -46,7 +46,7 @@ Co-authors, taxonomy developers, prior label reviewers, and persons with conflic
 
 ## 4. 수집할 배경 정보 / Background variables
 
-재식별 위험과 불필요한 개인정보 수집을 줄이기 위해 이름, 이메일, 성별, 연령, 정확한 소속기관은 수집하지 않는다. 다음의 범주형 정보만 수집한다.
+이 설문은 다음 정보를 절대 수집하거나 요구하지 않는다: 이름, 이메일, 성별, 연령, 소속기관 등 개인정보. 연구 목적상 필요한 다음의 범주형 정보만 수집한다.
 
 - 익명 평가자 코드
 - 주요 전문영역(복수선택)
@@ -58,7 +58,7 @@ Co-authors, taxonomy developers, prior label reviewers, and persons with conflic
 - 안전 표준·규제 업무 경험 여부
 - 분류체계 개발 참여 또는 기존 label 노출 여부
 
-No name, email address, gender, exact age, or exact institution is collected. Only categorical variables necessary to characterize expertise, sector, broad region, education, risk-assessment experience, standards experience, and independence are retained.
+This survey never collects or requests personal information such as names, email addresses, gender, age, or institutional affiliation. Only categorical variables necessary to characterize expertise, sector, broad region, education, risk-assessment experience, standards experience, and independence are retained.
 
 ## 5. 설문 절차 / Survey procedure
 

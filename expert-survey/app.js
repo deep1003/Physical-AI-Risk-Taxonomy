@@ -112,8 +112,8 @@ function renderConsent() {
   app.innerHTML = `<section class="panel">
     <h2>연구 안내 및 동의 <span class="english">Study information and consent</span></h2>
     <div class="notice"><p>이 연구는 182개 Physical AI 위험 카드를 24개 위험군으로 분류할 때 독립 전문가 판단의 재현성을 평가합니다.</p><p class="english">This study evaluates the reproducibility of independent expert assignments of 182 Physical AI risk cards to 24 predefined families.</p></div>
-    <p>이름, 이메일, 성별, 정확한 연령 및 정확한 소속기관은 수집하지 않습니다. 설문은 약 60개 카드로 구성되며 브라우저에 자동 임시저장됩니다.</p>
-    <p class="english">No name, email, gender, exact age, or exact institution is collected. Approximately 60 cards are assigned and progress is temporarily autosaved in this browser.</p>
+    <p>이 설문은 다음 정보를 절대 수집하거나 요구하지 않습니다: 이름, 이메일, 성별, 연령, 소속기관 등 개인정보. 설문은 약 60개 카드로 구성되며 브라우저에 자동 임시저장됩니다.</p>
+    <p class="english">This survey never collects or requests personal information such as names, email addresses, gender, age, or institutional affiliation. Approximately 60 cards are assigned and progress is temporarily autosaved in this browser.</p>
     <div class="notice warning"><p><strong>제출된 익명 응답은 연구 재현성을 위해 공개 저장소에 보존됩니다.</strong></p><p class="english"><strong>Anonymous responses will be retained in a public repository for research reproducibility.</strong></p></div>
     <label class="choice"><input id="consent" type="checkbox">위 내용을 이해했으며 자발적으로 참여하는 데 동의합니다. <span class="english">I understand the information above and voluntarily consent to participate.</span></label>
     <p id="consentError" class="error" role="alert"></p>
@@ -138,9 +138,9 @@ function renderDemographics() {
   const d = state.demographics;
   app.innerHTML = `<section class="panel">
     <h2>전문가 배경 정보 <span class="english">Expert background</span></h2>
-    <p class="help">직접 식별정보는 수집하지 않습니다. 별표 문항은 필수입니다. / No direct identifiers are collected. Asterisked items are required.</p>
+    <p class="help">이 설문은 이름, 이메일, 성별, 연령, 소속기관 등 개인정보를 절대 수집하거나 요구하지 않습니다. 별표 문항은 필수입니다. / This survey never collects or requests personal information such as names, email addresses, gender, age, or institutional affiliation. Asterisked items are required.</p>
     <div class="grid">
-      ${selectField("career", "관련 경력 구간*", "Relevant experience*", ["3년 미만 / Under 3 years", "3–5년 / 3–5 years", "6–10년 / 6–10 years", "11–15년 / 11–15 years", "16년 이상 / 16+ years"], d.career)}
+      ${selectField("career", "관련 경력 구간*", "Relevant experience*", ["1년 미만 / Under 1 year", "1–2년 / 1–2 years", "3–5년 / 3–5 years", "6–10년 / 6–10 years", "11–15년 / 11–15 years", "16년 이상 / 16+ years"], d.career)}
       ${selectField("sector", "현재 소속 부문*", "Current sector*", ["학계·연구 / Academia or research", "산업 / Industry", "공공·규제 / Government or regulatory", "표준화 / Standards organization", "기타 / Other"], d.sector)}
       ${selectField("region", "주요 활동 지역권*", "Primary region*", ["대한민국 / Republic of Korea", "아시아(한국 제외) / Asia excluding Korea", "유럽 / Europe", "북미 / North America", "기타 / Other", "응답하지 않음 / Prefer not to say"], d.region)}
       ${selectField("education", "최종 학위*", "Highest qualification*", ["박사 / Doctorate", "박사과정 / Doctoral candidate", "석사 / Master's", "학사 / Bachelor's", "전문자격·기타 / Professional or other"], d.education)}
@@ -148,7 +148,8 @@ function renderDemographics() {
       ${selectField("standardsExperience", "안전 표준·규제 경험*", "Safety standards or regulation experience*", ["없음 / No", "있음 / Yes"], d.standardsExperience)}
     </div>
     <fieldset><legend>주요 전문영역* <span class="english">Primary fields of expertise*</span></legend>${["Robotics", "Autonomous systems", "Control engineering", "Human–robot interaction", "Safety engineering", "AI safety", "Risk governance", "Standards or regulation"].map((x) => `<label class="choice"><input type="checkbox" name="expertise" value="${x}" ${checked((d.expertise || []).includes(x))}>${x}</label>`).join("")}</fieldset>
-    <fieldset><legend>독립성 확인* <span class="english">Independence check*</span></legend>
+    <fieldset><legend>적격성·독립성 확인* <span class="english">Eligibility and independence check*</span></legend>
+      <label class="choice"><input type="checkbox" id="eligibilityConfirmed" ${checked(d.eligibilityConfirmed)}>관련 학위, 관련 학위과정 1년 이상, 관련 산업·공공·표준화 경력 1년 이상 또는 관련 위험평가 경험 중 하나 이상을 충족합니다. <span class="english">I meet at least one criterion: a relevant degree, at least one year in a relevant degree programme, at least one year of relevant professional experience, or relevant risk-assessment experience.</span></label>
       <label class="choice"><input type="checkbox" id="independent" ${checked(d.independent)}>나는 공동저자가 아니며 L3/L4 개발 또는 기존 label 배정에 참여하지 않았습니다. <span class="english">I am not a co-author and did not develop the taxonomy or assign the existing labels.</span></label>
       <label class="choice"><input type="checkbox" id="notExposed" ${checked(d.notExposed)}>나는 기존 카드별 L3 label을 제공받지 않았습니다. <span class="english">I have not been given the existing card-level L3 labels.</span></label>
     </fieldset><p id="demoError" class="error"></p>
@@ -170,16 +171,20 @@ function renderDemographics() {
     next.expertise = [
       ...document.querySelectorAll('[name="expertise"]:checked'),
     ].map((el) => el.value);
+    next.eligibilityConfirmed = document.querySelector(
+      "#eligibilityConfirmed",
+    ).checked;
     next.independent = document.querySelector("#independent").checked;
     next.notExposed = document.querySelector("#notExposed").checked;
     if (
       required.some((id) => !next[id]) ||
       !next.expertise.length ||
+      !next.eligibilityConfirmed ||
       !next.independent ||
       !next.notExposed
     ) {
       document.querySelector("#demoError").textContent =
-        "모든 필수 항목과 독립성 확인이 필요합니다. / Complete all required fields and independence checks.";
+        "모든 필수 항목과 적격성·독립성 확인이 필요합니다. / Complete all required fields and eligibility/independence checks.";
       return;
     }
     state.demographics = next;
