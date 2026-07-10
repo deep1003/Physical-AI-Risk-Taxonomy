@@ -46,7 +46,7 @@ Co-authors, taxonomy developers, prior label reviewers, and persons with conflic
 
 ## 4. 수집할 배경 정보 / Background variables
 
-이 설문은 이름, 이메일, 정확한 연령, 소속기관 등 직접 식별정보를 수집하거나 요구하지 않는다. 다음 정보만 범주형으로 수집하며, 연령대와 성별에는 `응답하지 않음` 선택지를 제공한다.
+설문 문항은 이름, 이메일, 정확한 연령, 소속기관을 요구하지 않는다. 다음 응답 정보는 범주형으로 수집하며, 연령대와 성별에는 `응답하지 않음` 선택지를 제공한다.
 
 - 익명 평가자 코드
 - 연령대
@@ -57,7 +57,7 @@ Co-authors, taxonomy developers, prior label reviewers, and persons with conflic
 - 안전 표준·규제 업무 경험 여부
 - 분류체계 개발 참여 또는 기존 label 노출 여부
 
-This survey does not collect or request direct identifiers such as names, email addresses, exact age, or institutional affiliation. Only anonymous respondent code, age band, gender, expertise, experience band, risk-assessment experience, standards or regulatory experience, and independence are collected categorically. Age band and gender include a prefer-not-to-say option.
+The questionnaire does not request names, email addresses, exact age, or institutional affiliation. Anonymous respondent code, age band, gender, expertise, experience band, risk-assessment experience, standards or regulatory experience, and independence are collected categorically. Age band and gender include a prefer-not-to-say option.
 
 ## 5. 설문 절차 / Survey procedure
 
@@ -88,9 +88,9 @@ Cards display only a randomized presentation ID, the bilingual L4 label, and the
 
 ## 8. 자료 보존 / Data retention
 
-응답은 브라우저의 localStorage에 자동 임시저장된다. 완료된 응답은 구조화된 Markdown으로 변환되어 공개 GitHub 응답 저장소에 자동 보존된다. 제출된 익명 응답이 연구 재현성을 위해 공개 저장소에 보존된다는 사실을 동의문에 고지한다. 원자료에는 직접 식별정보를 포함하지 않는다.
+응답은 브라우저의 localStorage에 자동 임시저장된다. 완료된 응답은 구조화된 Markdown으로 변환되어 공개 GitHub 응답 저장소에 자동 보존된다. 접속 telemetry는 응답 Markdown과 분리된 비공개 GitHub 저장소에 보존한다. 비공개 telemetry에는 설문 시작·완료·서버 수신 시각, 총 소요시간, 원본 IP, IP 기반 국가·대륙·지역·도시·우편번호·위도·경도, 시간대, ASN·네트워크 조직, Cloudflare 데이터센터, HTTP·TLS 정보, User-Agent, 언어 설정, referrer 및 화면·기기 메타데이터가 포함될 수 있다. 공개 응답에는 이 접속정보를 포함하지 않는다. 비공개 telemetry의 보유기간은 수집일로부터 1년으로 정한다.
 
-Responses are autosaved in browser localStorage and converted to structured Markdown for automatic retention in a public GitHub response repository. The consent statement discloses that anonymous responses are publicly retained for research reproducibility.
+Responses are autosaved in browser localStorage and converted to structured Markdown for automatic retention in a public GitHub response repository. Connection telemetry is retained separately in a private GitHub repository and may include survey timing, source IP, IP-derived geolocation, timezone, ASN and network organization, Cloudflare data centre, HTTP and TLS properties, User-Agent, language settings, referrer, screen and device metadata. The public response does not contain this connection telemetry. Private telemetry is retained for one year from collection.
 
 ## 9. 품질관리 / Quality control
 

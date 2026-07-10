@@ -28,6 +28,10 @@
 | `Missing risks` | text, optional | 누락 위험영역 |
 | `Suggestions` | text, optional | 병합·분리·정의 개선 제안 |
 
-이 설문은 이름, 이메일, 정확한 연령, 소속기관 등 직접 식별정보를 수집하거나 요구하지 않는다. 연령대와 성별은 범주형으로 수집하고 `응답하지 않음` 선택지를 제공한다. 자유서술에도 개인식별정보를 입력하지 않도록 참가자에게 안내한다.
+설문 문항은 이름, 이메일, 정확한 연령, 소속기관을 요구하지 않는다. 연령대와 성별은 범주형으로 수집하고 `응답하지 않음` 선택지를 제공한다. 접속 telemetry는 별도의 비공개 저장소에 보관하며 공개 응답에는 포함하지 않는다.
 
-This survey does not collect or request direct identifiers such as names, email addresses, exact age, or institutional affiliation. Age band and gender are categorical and include a prefer-not-to-say option. Participants should not enter personal identifiers in free-text fields.
+The questionnaire does not request names, email addresses, exact age, or institutional affiliation. Age band and gender are categorical and include a prefer-not-to-say option. Connection telemetry is retained in a separate private repository and is not included in the public response.
+
+## Private telemetry fields
+
+The private telemetry record may contain client and server timestamps, duration, source IP, country, continent, region, city, postal code, latitude, longitude, timezone, ASN, network organization, Cloudflare data centre, HTTP and TLS properties, User-Agent, accepted languages and encodings, referrer, browser platform, screen and viewport dimensions, pixel ratio, device memory, processor concurrency, cookie status, and do-not-track preference.

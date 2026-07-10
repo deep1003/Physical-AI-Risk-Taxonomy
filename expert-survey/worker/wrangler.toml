@@ -7,4 +7,5 @@ preview_urls = false
 [vars]
 GH_OWNER = "deep1003"
 GH_REPO = "Physical-AI-Risk-Survey-Responses"
+GH_TELEMETRY_REPO = "Physical-AI-Risk-Survey-Telemetry"
 ALLOWED_ORIGIN = "https://deep1003.github.io"
