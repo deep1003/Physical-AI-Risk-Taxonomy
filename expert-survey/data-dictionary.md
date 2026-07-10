@@ -33,4 +33,4 @@ The questionnaire does not request names, email addresses, exact age, or institu
 
 ## Private telemetry fields
 
-The private telemetry record may contain survey start, completion and server-receipt timestamps; total duration; source IP; country, continent, region, city, postal code, latitude, longitude and timezone; ASN and network organization; Cloudflare data centre; HTTP and TLS properties; User-Agent; accepted languages and encodings; referrer; browser platform; screen and viewport dimensions; pixel ratio; device memory; processor concurrency; cookie status; and do-not-track preference. There is no time limit.
+The private study-administration record contains only the survey start timestamp, completion timestamp, total duration, and country-level access location. Source IP and finer-grained connection or device metadata are not retained. There is no time limit.
