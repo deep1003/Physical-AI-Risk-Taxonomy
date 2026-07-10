@@ -87,6 +87,13 @@ function assignedCards() {
   const lookup = new Map(surveyData.cards.map((card) => [card.card_id, card]));
   return ids.map((id) => lookup.get(id)).filter(Boolean);
 }
+function pairFamilies(card) {
+  const lookup = new Map(surveyData.families.map((family) => [family.id, family]));
+  return seededShuffle(
+    card.pair_family_ids,
+    `${state.raterCode}:${card.card_id}:pair`,
+  ).map((id) => lookup.get(id));
+}
 function familyOptions(value = "", includeSpecial = true) {
   const groups = groupBy(surveyData.families, (family) => family.l2_id);
   let html = '<option value="">선택 / Select</option>';
@@ -112,10 +119,11 @@ function renderConsent() {
   app.innerHTML = `<section class="panel">
     <h2>연구 안내 및 동의 <span class="english">Study information and consent</span></h2>
     <div class="notice"><p>이 연구는 182개 Physical AI 위험 카드를 24개 위험군으로 분류할 때 독립 전문가 판단의 재현성을 평가합니다.</p><p class="english">This study evaluates the reproducibility of independent expert assignments of 182 Physical AI risk cards to 24 predefined families.</p></div>
-    <p>이 설문은 이름, 이메일, 정확한 연령, 소속기관 등 직접 식별정보를 수집하거나 요구하지 않습니다. 연령대와 성별은 범주형으로 수집하며, 두 문항 모두 '응답하지 않음'을 선택할 수 있습니다. 설문은 약 60개 카드로 구성되며 브라우저에 자동 임시저장됩니다.</p>
-    <p class="english">This survey does not collect or request direct identifiers such as names, email addresses, exact age, or institutional affiliation. Age band and gender are collected categorically, with a prefer-not-to-say option for both. Approximately 60 cards are assigned and progress is temporarily autosaved in this browser.</p>
+    <p>이 설문은 이름, 이메일, 정확한 연령, 소속기관 등 직접 식별정보를 수집하거나 요구하지 않습니다. 연령대와 성별은 범주형으로 수집하며, 두 문항 모두 '응답하지 않음'을 선택할 수 있습니다. 설문은 약 60개의 두 후보 비교 문항으로 구성되며 브라우저에 자동 임시저장됩니다.</p>
+    <p class="english">This survey does not collect or request direct identifiers such as names, email addresses, exact age, or institutional affiliation. Age band and gender are collected categorically, with a prefer-not-to-say option for both. Approximately 60 pairwise items are assigned and progress is temporarily autosaved in this browser.</p>
     <div class="notice warning"><p><strong>제출된 익명 응답은 연구 재현성을 위해 공개 저장소에 보존됩니다.</strong></p><p class="english"><strong>Anonymous responses will be retained in a public repository for research reproducibility.</strong></p></div>
-    <div class="notice warning"><p><strong>설문 시작·완료·서버 수신 시각, 원본 IP, IP 기반 국가·지역·도시·좌표, 언어, 시간대, 브라우저·기기·네트워크·TLS 정보는 자동 수집되어 응답 Markdown과 분리된 비공개 저장소에 보관됩니다.</strong></p><p class="english"><strong>Survey timing, source IP, IP-derived country, region, city and coordinates, language, timezone, browser, device, network and TLS metadata are collected automatically and retained in a private repository separate from the response Markdown.</strong></p></div>
+    <div class="notice"><p><strong>제한시간은 없습니다.</strong></p><p class="english"><strong>There is no time limit.</strong></p></div>
+    <div class="notice warning"><p><strong>설문 시작·종료·제출 수신 시각, 총 소요시간, 원본 IP, IP 기반 국가·지역·도시·좌표, 언어, 시간대, 브라우저·기기·네트워크·TLS 정보는 자동 수집되어 응답 Markdown과 분리된 비공개 저장소에 보관됩니다.</strong></p><p class="english"><strong>Survey start, completion and submission receipt times, total duration, source IP, IP-derived country, region, city and coordinates, language, timezone, browser, device, network and TLS metadata are collected automatically and retained in a private repository separate from the response Markdown.</strong></p></div>
     <label class="choice"><input id="consent" type="checkbox">위 내용을 이해했으며 자발적으로 참여하는 데 동의합니다. <span class="english">I understand the information above and voluntarily consent to participate.</span></label>
     <p id="consentError" class="error" role="alert"></p>
     <div class="actions"><span></span><button id="begin" class="primary">설문 시작 / Begin survey</button></div>
@@ -127,6 +135,7 @@ function renderConsent() {
       return;
     }
     state.raterCode = randomRespondentId();
+    state.startedAt = Date.now();
     state.assignmentBlock = randomBlock();
     state.consent = true;
     state.page = "demographics";
@@ -207,13 +216,13 @@ function renderCodebook() {
           `<h3 class="l2-heading">${esc(fs[0].l2_name_ko)} / ${esc(fs[0].l2_name_en)}</h3>${fs.map((f) => `<details><summary>${f.id} · ${esc(f.name_ko)} / ${esc(f.name_en)}</summary><p>${esc(f.definition_ko)}</p><p class="english">${esc(f.definition_en)}</p></details>`).join("")}`,
       )
       .join("")}
-    <label class="choice"><input id="readCodebook" type="checkbox">분류 규칙과 24개 위험군을 검토했습니다. <span class="english">I have reviewed the classification rules and all 24 families.</span></label>
+    <label class="choice"><input id="readCodebook" type="checkbox">각 문항에서 두 후보 중 더 적합한 하나를 고르는 방식임을 이해했습니다. <span class="english">I understand that each item asks me to rank two candidates by choosing the better fit.</span></label>
     <p id="bookError" class="error"></p><div class="actions"><button class="secondary" data-back>이전 / Back</button><button id="startCards" class="primary">카드 분류 시작 / Start annotation</button></div></section>`;
   bindBack("demographics");
   document.querySelector("#startCards").onclick = () => {
     if (!document.querySelector("#readCodebook").checked) {
       document.querySelector("#bookError").textContent =
-        "Codebook 검토 확인이 필요합니다. / Please confirm codebook review.";
+        "쌍대 비교 방식의 확인이 필요합니다. / Please confirm the pairwise ranking procedure.";
       return;
     }
     state.page = "cards";
@@ -227,17 +236,16 @@ function renderCard() {
   const index = Math.min(state.cardIndex, cards.length - 1);
   const card = cards[index];
   const response = state.responses[card.card_id] || {};
+  const pair = pairFamilies(card);
   const completed = Object.values(state.responses).filter(
-    (r) => r.primary && r.confidence,
+    (r) => r.choice && r.confidence,
   ).length;
   app.innerHTML = `<div class="progress-wrap"><progress value="${completed}" max="${cards.length}"></progress><strong>${completed}/${cards.length}</strong></div>
   <section class="panel risk-card"><p class="card-id">${esc(card.display_id)} · ${index + 1}/${cards.length}</p>
     <p class="risk-title">${esc(card.label_ko)} <span class="english">${esc(card.label_en)}</span></p>
     <div class="risk-definition"><p>${esc(card.definition_ko)}</p><p class="english">${esc(card.definition_en)}</p></div>
-    <div class="field"><label for="primary">가장 적절한 Primary L3* <span class="english">Most appropriate primary L3*</span></label><select id="primary">${familyOptions(response.primary)}</select></div>
-    <div class="field"><label for="secondary">Secondary L3 (선택) <span class="english">Secondary L3 (optional)</span></label><select id="secondary">${familyOptions(response.secondary, false)}</select></div>
-    <fieldset><legend>Primary 판단 확신도* <span class="english">Confidence in primary assignment*</span></legend>${[1, 2, 3, 4, 5].map((n) => `<label class="choice"><input type="radio" name="confidence" value="${n}" ${checked(String(response.confidence) === String(n))}>${n} · ${["매우 낮음 / Very low", "낮음 / Low", "보통 / Moderate", "높음 / High", "매우 높음 / Very high"][n - 1]}</label>`).join("")}</fieldset>
-    <div class="field"><label for="ambiguity">모호성의 주된 원인 (해당 시) <span class="english">Primary source of ambiguity (if applicable)</span></label><select id="ambiguity"><option value="">해당 없음 / Not applicable</option>${["카드 정보 부족 / Insufficient card information", "복수 위험 메커니즘 / Multiple mechanisms", "정의 중첩 / Overlapping definitions", "경계 규칙 불명확 / Unclear boundary", "적합한 위험군 없음 / Missing family", "전문지식 한계 / Expertise limitation", "기타 / Other"].map((x) => `<option ${selected(response.ambiguity, x)}>${x}</option>`).join("")}</select></div>
+    <fieldset class="pairwise"><legend>이 위험 카드를 더 잘 설명하는 후보를 선택해 주세요.* <span class="english">Choose the candidate that better describes this risk card.*</span></legend>${pair.map((family, position) => `<label class="pair-option"><input type="radio" name="pair_choice" value="${family.id}" ${checked(response.choice === family.id)}><span class="pair-marker">${position === 0 ? "A" : "B"}</span><span><strong>${esc(family.name_ko)} <span class="english">${esc(family.name_en)}</span></strong><small>${esc(family.definition_ko)} <span class="english">${esc(family.definition_en)}</span></small></span></label>`).join("")}</fieldset>
+    <fieldset><legend>선택에 대한 확신도* <span class="english">Confidence in this ranking*</span></legend>${[1, 2, 3, 4, 5].map((n) => `<label class="choice"><input type="radio" name="confidence" value="${n}" ${checked(String(response.confidence) === String(n))}>${n} · ${["매우 낮음 / Very low", "낮음 / Low", "보통 / Moderate", "높음 / High", "매우 높음 / Very high"][n - 1]}</label>`).join("")}</fieldset>
     <div class="field"><label for="comment">선택적 의견 <span class="english">Optional comment</span></label><textarea id="comment">${esc(response.comment || "")}</textarea></div><p id="cardError" class="error"></p>
     <div class="actions"><button id="book" class="secondary">Codebook</button><div class="actions-right"><button id="previous" class="secondary" ${index === 0 ? "disabled" : ""}>이전 카드 / Previous</button><button id="next" class="primary">${index === cards.length - 1 ? "검토 / Review" : "다음 카드 / Next"}</button></div></div>
   </section>`;
@@ -263,25 +271,20 @@ function renderCard() {
 }
 
 function persistCard(card, validate = false) {
-  const primary = document.querySelector("#primary").value;
-  const secondary = document.querySelector("#secondary").value;
+  const choice =
+    document.querySelector('[name="pair_choice"]:checked')?.value || "";
   const confidence =
     document.querySelector('[name="confidence"]:checked')?.value || "";
-  if (
-    validate &&
-    (!primary || !confidence || (secondary && secondary === primary))
-  ) {
+  if (validate && (!choice || !confidence)) {
     document.querySelector("#cardError").textContent =
-      "Primary와 확신도는 필수이며 Secondary는 Primary와 달라야 합니다. / Primary and confidence are required; secondary must differ.";
+      "두 후보 중 하나와 확신도를 선택해 주세요. / Choose one candidate and a confidence rating.";
     return false;
   }
   state.responses[card.card_id] = {
-    primary,
-    secondary,
+    choice,
+    pair_order: pairFamilies(card).map((family) => family.id),
     confidence,
-    ambiguity: document.querySelector("#ambiguity").value,
     comment: document.querySelector("#comment").value.trim(),
-    elapsed_seconds: Math.round((Date.now() - state.startedAt) / 1000),
   };
   return true;
 }
@@ -304,7 +307,7 @@ function renderReview() {
   const cards = assignedCards();
   const missing = cards.filter(
     (c) =>
-      !state.responses[c.card_id]?.primary ||
+      !state.responses[c.card_id]?.choice ||
       !state.responses[c.card_id]?.confidence,
   );
   app.innerHTML = `<section class="panel"><h2>응답 검토 <span class="english">Review responses</span></h2>
@@ -361,7 +364,7 @@ function markdown() {
   const rows = assignedCards()
     .map((card) => {
       const r = state.responses[card.card_id] || {};
-      return `| ${card.display_id} | ${card.card_id} | ${r.primary || ""} | ${r.secondary || ""} | ${r.confidence || ""} | ${String(r.ambiguity || "").replaceAll("|", "/")} | ${String(
+      return `| ${card.display_id} | ${card.card_id} | ${r.pair_order?.[0] || ""} | ${r.pair_order?.[1] || ""} | ${r.choice || ""} | ${r.confidence || ""} | ${String(
         r.comment || "",
       )
         .replaceAll("|", "/")
@@ -370,7 +373,7 @@ function markdown() {
     .join("\n");
   const d = state.demographics,
     x = state.exit;
-  return `---\nsurvey_version: "${surveyData.survey_version}"\nassignment_version: "${assignments.assignment_version}"\nrespondent_id: "${state.raterCode}"\nassignment_block: "${state.assignmentBlock}"\ncompleted_at: "${state.completedAt || new Date().toISOString()}"\nsource_sha256: "${surveyData.source_sha256}"\n---\n\n# Physical AI Expert Annotation Response\n\n## Background / 배경 정보\n\n- Age band / 연령대: ${d.ageBand}\n- Gender / 성별: ${d.gender}\n- Expertise / 전문영역: ${(d.expertise || []).join(", ")}\n- Career / 경력: ${d.career}\n- Risk-assessment experience / 위험평가 경험: ${d.riskExperience}\n- Standards experience / 표준·규제 경험: ${d.standardsExperience}\n- Eligibility confirmed / 적격성 확인: ${d.eligibilityConfirmed}\n- Independence confirmed / 독립성 확인: ${d.independent && d.notExposed}\n\n## Card annotations / 카드 분류\n\n| Display ID | Card ID | Primary L3 | Secondary L3 | Confidence | Ambiguity | Comment |\n|---|---|---|---|---:|---|---|\n${rows}\n\n## Exit assessment / 종료 평가\n\n- Clarity / 명확성: ${x.clarity || ""}\n- Confusing pairs / 혼동 위험군: ${x.confusing || ""}\n- Missing risks / 누락 위험: ${x.missingRisk || ""}\n- Suggestions / 개선 제안: ${x.suggestion || ""}\n`;
+  return `---\nsurvey_version: "${surveyData.survey_version}"\nassignment_version: "${assignments.assignment_version}"\nrespondent_id: "${state.raterCode}"\nassignment_block: "${state.assignmentBlock}"\nsource_sha256: "${surveyData.source_sha256}"\n---\n\n# Physical AI Expert Pairwise Ranking Response\n\n## Background / 배경 정보\n\n- Age band / 연령대: ${d.ageBand}\n- Gender / 성별: ${d.gender}\n- Expertise / 전문영역: ${(d.expertise || []).join(", ")}\n- Career / 경력: ${d.career}\n- Risk-assessment experience / 위험평가 경험: ${d.riskExperience}\n- Standards experience / 표준·규제 경험: ${d.standardsExperience}\n- Eligibility confirmed / 적격성 확인: ${d.eligibilityConfirmed}\n- Independence confirmed / 독립성 확인: ${d.independent && d.notExposed}\n\n## Pairwise rankings / 쌍대 순위 선택\n\n| Display ID | Card ID | Candidate A | Candidate B | Selected L3 | Confidence | Comment |\n|---|---|---|---|---|---:|---|\n${rows}\n\n## Exit assessment / 종료 평가\n\n- Clarity / 명확성: ${x.clarity || ""}\n- Confusing pairs / 혼동 위험군: ${x.confusing || ""}\n- Missing risks / 누락 위험: ${x.missingRisk || ""}\n- Suggestions / 개선 제안: ${x.suggestion || ""}\n`;
 }
 
 function renderComplete() {

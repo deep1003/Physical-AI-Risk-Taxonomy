@@ -16,6 +16,10 @@ def main() -> None:
     assignment = json.loads((ROOT / "data" / "assignments.json").read_text(encoding="utf-8"))
     assert len(survey["families"]) == 24
     assert len(survey["cards"]) == 182
+    family_ids = {family["id"] for family in survey["families"]}
+    assert all(len(card["pair_family_ids"]) == 2 for card in survey["cards"])
+    assert all(len(set(card["pair_family_ids"])) == 2 for card in survey["cards"])
+    assert all(set(card["pair_family_ids"]) <= family_ids for card in survey["cards"])
     card_ids = {card["card_id"] for card in survey["cards"]}
     ratings = Counter(card_id for ids in assignment["raters"].values() for card_id in ids)
     assert set(ratings) == card_ids

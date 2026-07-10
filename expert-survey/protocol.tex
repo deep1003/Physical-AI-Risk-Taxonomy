@@ -32,18 +32,19 @@ Version 1.0 \quad | \quad 2026-07-10
 \end{center}
 
 \bisection{연구 목적}{Study objective}
-본 조사의 주목적은 사전에 정의된 24개 L3 위험군을 이용할 때 독립 전문가가 182개 L4 위험 카드를 일관되게 분류할 수 있는지 평가하는 것이다. 제안된 카드--위험군 배정의 재현성과 적용 가능성을 평가하며, 24개 위험군이 유일하거나 최적이라는 점을 검증하지 않는다.
+본 조사의 주목적은 각 L4 카드에 기존 L3와 유사 대안 L3를 쌍으로 제시하고 독립 전문가가 어느 후보를 더 적합하다고 판단하는지 검증하는 것이다. 카드--L3 연결의 판별 타당성을 평가하며, 24개 위험군이 유일하거나 최적이라는 점을 검증하지 않는다.
 
-The primary objective is to assess whether independent experts can consistently classify 182 L4 risk cards using 24 predefined L3 risk families. This study evaluates reproducibility and applicability, not uniqueness or optimality.
+The primary objective is to test whether independent experts prefer the canonical L3 over a closely matched alternative for each L4 card. This evaluates discriminant validity of the card--family links, not uniqueness or optimality of the taxonomy.
 
 \bisection{연구 설계}{Study design}
 \begin{itemize}
 \item L4 카드 182개, L3 위험군 24개, 독립 전문가 9명
 \item 카드당 서로 다른 전문가 3명; 총 546건의 판단
-\item 전문가당 60--61개 카드, 두 세션으로 분할
+\item 전문가당 60--61개 강제선택 쌍대비교; 제한시간 없음
 \item L3 기준 층화 균형 불완전 블록 설계
 \item 기존 label, 임베딩 결과, 유사도, 군집 ID 및 다른 평가자의 응답에 대한 맹검
-\item 1차 평가변수: nominal Krippendorff's alpha와 card-level bootstrap 95\% CI
+\item 기존 L3와 같은 L2의 유사 대안 L3를 사전 규칙으로 매칭
+\item 1차 평가변수: 기존 L3 선택률과 card-level bootstrap 95\% CI
 \end{itemize}
 
 \bisection{전문가 선정}{Expert eligibility}
@@ -65,48 +66,44 @@ The questionnaire does not request names, email addresses, exact age, or institu
 \item 연구 안내, 개인정보 처리 안내 및 동의
 \item 적격성 및 배경 정보
 \item 이중언어 L3 codebook과 분류 규칙 검토
-\item 개인별 L4 카드에 대한 primary 및 선택적 secondary L3 분류
-\item 확신도, 모호성 원인 및 선택적 의견 기록
+\item 각 L4 카드에 제시된 두 L3 후보 중 더 적합한 하나를 선택
+\item 확신도 및 선택적 의견 기록
 \item 종료 평가 후 구조화된 Markdown 응답 저장
 \end{enumerate}
-`Unmappable'과 `Insufficient information'은 강제 분류를 피하기 위한 유효 응답이다.
+후보 A/B의 표시 순서는 무작위화하며 동점 또는 판단 불가 선택지는 제공하지 않는다.
 
 \bisection{카드 표시 및 맹검}{Card presentation and blinding}
-카드에는 무작위 표시 ID, L4 label 및 definition만 표시한다. 기존 L2/L3 배정, 심각도·확률, 참고문헌 수와 계산 결과는 공개하지 않는다. 카드 순서는 평가자 코드별 고정 seed로 무작위화한다.
+카드에는 무작위 표시 ID, L4 label·definition 및 두 L3 후보를 표시한다. 어느 후보가 기존 배정인지, L2, 심각도·확률, 참고문헌 수와 계산 결과는 공개하지 않는다. 카드와 후보 순서는 평가자별로 재현 가능하게 무작위화한다.
 
 \bisection{카드별 문항}{Card-level items}
 \begin{enumerate}
-\item Primary classification: L3 하나, Unmappable 또는 Insufficient information
-\item Secondary classification: 선택적 두 번째 L3
+\item Pairwise ranking: 후보 A/B 중 L4를 더 잘 설명하는 L3 하나
 \item Confidence: 1(매우 낮음)--5(매우 높음)
-\item Ambiguity reason: 정보 부족, 복수 메커니즘, 정의 중첩, 경계 불명확, 누락, 전문지식 한계, 기타
 \item Optional comment
 \end{enumerate}
 
 \bisection{자료 보존}{Data retention}
-응답은 브라우저 localStorage에 자동 임시저장하고 완료 시 구조화된 Markdown으로 변환해 공개 GitHub 응답 저장소에 자동 보존한다. 원본 IP, IP 기반 위치, 접속 시각, 언어, 브라우저, 기기, 네트워크 및 TLS telemetry는 응답과 분리된 비공개 GitHub 저장소에 1년간 보존하며 공개 응답에는 포함하지 않는다.
+응답은 브라우저 localStorage에 자동 임시저장하고 완료 시 구조화된 Markdown으로 변환해 공개 GitHub 응답 저장소에 자동 보존한다. 설문 시작·종료·서버 수신 시각, 총 소요시간, 원본 IP, IP 기반 위치, 언어, 브라우저, 기기, 네트워크 및 TLS telemetry는 응답과 분리된 비공개 GitHub 저장소에 1년간 보존하며 공개 응답에는 포함하지 않는다. 제한시간은 없다.
 
 \bisection{품질관리}{Quality control}
 불일치 자체를 이유로 평가자를 제외하지 않는다. 미완료, 독립성 위반, 기술적 손실 또는 사전 정의된 비성실 패턴만 제외 사유로 검토한다. 응답에는 설문 버전, 데이터 스냅샷 해시, 배정 버전과 익명 평가자 코드를 기록한다.
 
 \bisection{분석 계획}{Statistical analysis}
 \bisubsection{1차 분석}{Primary analysis}
-분석 단위는 L4 카드이며 primary L3를 명목척도로 취급한다. Krippendorff's alpha와 카드 단위 bootstrap 5,000회 95\% 신뢰구간을 산출한다. Unmappable과 Insufficient information은 별도 범주로 유지한다.
+분석 단위는 L4 카드이다. 기존 L3 선택률과 카드 단위 bootstrap 5,000회 95\% 신뢰구간을 산출하며 선택확률 0.5를 귀무기준으로 사용한다.
 
 \bisubsection{보조 분석}{Secondary analyses}
-Gwet's AC1, 완전 일치율, 다수결 형성률, release label과 다수결의 일치, family별 precision/recall/F1, macro- 및 worst-family F1, top-2 agreement, confusion matrix, 미분류 비율, 확신도별 일치도, singleton 비교와 margin--인간 불일치 관계를 보고한다. 546개 판단을 독립 표본으로 간주하지 않는다.
+카드별 기존 L3 다수선택률과 완전일치율, family별 선택률, macro-average와 worst-family 결과, 후보쌍별 선택률, 확신도별 결과 및 margin--인간 선택 관계를 보고한다. 546개 판단을 독립 표본으로 간주하지 않는다.
 
 \bisection{사전 의사결정 규칙}{Prespecified interpretation}
 \begin{longtable}{p{0.28\textwidth}p{0.64\textwidth}}
 \toprule
 결과 / Result & 해석 및 조치 / Interpretation and action\\
 \midrule
-$\alpha \ge 0.80$ & 높은 적용 재현성; 24-family schema 유지 가능\\
-$0.67 \le \alpha < 0.80$ & 잠정적 재현성; 경계 규칙 개선\\
-$\alpha < 0.67$ & 확정적 taxonomy 주장 완화\\
-Family majority agreement $<60\%$ & 해당 family 재정의 또는 병합 검토\\
-Unmappable $\ge10\%$ & taxonomy coverage 재검토\\
-Insufficient information $\ge10\%$ & L4 description 충실도 재검토\\
+전체 선택률의 95\% CI 하한 $>0.50$ & 매칭 대안보다 기존 연결이 우세하다는 증거\\
+95\% CI가 0.50 포함 & 판별 근거 불충분; 확정적 타당화 주장 금지\\
+Family 선택률 $<60\%$ & family 정의·경계 또는 카드 연결 재검토\\
+3인 중 2인 이상 대안 선택 & 해당 카드--family 연결을 우선 재검토\\
 \bottomrule
 \end{longtable}
 기준은 데이터 확인 전에 고정하며 사후 변경하지 않는다.

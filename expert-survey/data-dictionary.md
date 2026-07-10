@@ -8,7 +8,6 @@
 | `assignment_version` | string | 카드 배정 버전 / Assignment version |
 | `respondent_id` | string | 자동 생성된 익명 응답자 ID / Automatically generated anonymous respondent ID |
 | `assignment_block` | string | 무작위 배정된 A01~A09 카드 블록 / Randomly assigned card block |
-| `completed_at` | ISO 8601 | 완료 시각 / Completion timestamp |
 | `source_sha256` | string | L4 원본 데이터 SHA-256 |
 | `Age band` | categorical | 연령대 / Age band; prefer-not-to-say available |
 | `Gender` | categorical | 성별 / Gender; prefer-not-to-say available |
@@ -18,10 +17,10 @@
 | `Standards experience` | binary | 표준·규제 경험 / Standards experience |
 | `Display ID` | string | 설문 표시용 카드 ID / Blinded display ID |
 | `Card ID` | string | 정식 L4 카드 ID / Canonical card ID |
-| `Primary L3` | nominal | 주 분류; L3, `UNMAPPABLE`, `INSUFFICIENT` |
-| `Secondary L3` | nominal, optional | 선택적 두 번째 L3 |
-| `Confidence` | integer 1–5 | 분류 확신도 / Assignment confidence |
-| `Ambiguity` | categorical, optional | 모호성 원인 / Source of ambiguity |
+| `Candidate A` | L3 ID | 먼저 표시된 후보 / First displayed candidate |
+| `Candidate B` | L3 ID | 두 번째로 표시된 후보 / Second displayed candidate |
+| `Selected L3` | L3 ID | 두 후보 중 선택된 L3 / Selected candidate |
+| `Confidence` | integer 1–5 | 순위 선택 확신도 / Ranking confidence |
 | `Comment` | text, optional | 카드별 의견 / Card-level comment |
 | `Clarity` | ordinal 1–5 | L3 정의의 전반적 명확성 |
 | `Confusing pairs` | text, optional | 혼동된 L3 쌍 |
@@ -34,4 +33,4 @@ The questionnaire does not request names, email addresses, exact age, or institu
 
 ## Private telemetry fields
 
-The private telemetry record may contain client and server timestamps, duration, source IP, country, continent, region, city, postal code, latitude, longitude, timezone, ASN, network organization, Cloudflare data centre, HTTP and TLS properties, User-Agent, accepted languages and encodings, referrer, browser platform, screen and viewport dimensions, pixel ratio, device memory, processor concurrency, cookie status, and do-not-track preference.
+The private telemetry record may contain survey start, completion and server-receipt timestamps; total duration; source IP; country, continent, region, city, postal code, latitude, longitude and timezone; ASN and network organization; Cloudflare data centre; HTTP and TLS properties; User-Agent; accepted languages and encodings; referrer; browser platform; screen and viewport dimensions; pixel ratio; device memory; processor concurrency; cookie status; and do-not-track preference. There is no time limit.

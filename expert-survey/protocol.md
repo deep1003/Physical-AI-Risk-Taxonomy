@@ -6,21 +6,22 @@
 
 ## 1. 연구 목적 / Study objective
 
-본 조사의 주목적은 사전에 정의된 24개 L3 위험군을 이용할 때 독립 전문가가 182개 L4 위험 카드를 일관되게 분류할 수 있는지 평가하는 것이다. 이 조사는 제안된 카드-위험군 배정의 재현성과 적용 가능성을 평가하며, 24개 위험군이 유일하거나 최적인 분류체계라는 점을 검증하지 않는다.
+본 조사의 주목적은 각 L4 위험 카드에 대해 기존 L3와 유사한 대안 L3를 쌍으로 제시했을 때, 독립 전문가가 어느 후보를 더 적합하다고 평가하는지 검증하는 것이다. 이 조사는 기존 카드-L3 연결의 판별 타당성을 평가하며, 24개 위험군 전체가 유일하거나 최적인 분류체계라는 점을 검증하지 않는다.
 
-The primary objective is to assess whether independent experts can consistently classify 182 L4 risk cards using 24 predefined L3 risk families. The study evaluates the reproducibility and applicability of the proposed card-to-family assignments; it does not establish that the 24-family structure is unique or optimal.
+The primary objective is to test which of two candidate L3 families independent experts judge to be the better fit for each L4 risk card: the canonical assignment or a closely matched alternative. The study evaluates the discriminant validity of existing card-to-family links; it does not establish that the complete 24-family structure is unique or optimal.
 
 ## 2. 연구 설계 / Study design
 
 - 평가 대상: L4 위험 카드 182개, L3 위험군 24개
 - 평가자: 독립 전문가 9명
 - 배정: 카드당 서로 다른 전문가 3명, 총 546건의 판단
-- 부담: 전문가당 60~61개 카드, 두 세션으로 분할
+- 부담: 전문가당 60~61개 쌍대비교 문항; 제한시간 없음, 중단 후 재개 가능
 - 설계: L3 기준으로 층화한 균형 불완전 블록 설계
 - 맹검: 기존 L3 배정, 임베딩 예측, 유사도, 군집 ID 및 다른 평가자 응답 비공개
-- 1차 평가변수: 명목척도 Krippendorff's alpha와 카드 단위 bootstrap 95% 신뢰구간
+- 후보 구성: 기존 L3와 같은 L2에 속하는 유사 대안 L3를 사전 규칙으로 매칭
+- 1차 평가변수: 기존 L3 선택률과 카드 단위 bootstrap 95% 신뢰구간
 
-The study uses a stratified balanced incomplete block design. Nine independent experts each annotate 60 or 61 cards in two sessions; every card receives three independent ratings. Existing labels and computational outputs remain blinded. The primary endpoint is nominal Krippendorff's alpha with a card-level bootstrap 95% confidence interval.
+The study uses a stratified balanced incomplete block design. Nine independent experts each complete 60 or 61 forced-choice pairwise items, and every card receives three independent ratings. For each card, the canonical L3 is paired with a prespecified, same-L2 hard negative; left/right order is randomized. The primary endpoint is the canonical-choice proportion with a card-level bootstrap 95% confidence interval.
 
 ## 3. 전문가 선정 / Expert eligibility
 
@@ -64,40 +65,37 @@ The questionnaire does not request names, email addresses, exact age, or institu
 1. 연구 설명, 개인정보 처리 안내 및 참여 동의
 2. 포함·제외 기준과 배경 정보 확인
 3. 이중언어 L3 codebook 및 분류 규칙 검토
-4. 개인별로 배정된 L4 카드의 독립 분류
-5. 각 카드에 대해 primary L3, 선택적 secondary L3, 확신도 및 모호성 원인 기록
-6. taxonomy로 분류할 수 없는 경우 `Unmappable`, 정보가 부족한 경우 `Insufficient information` 선택
-7. 전체 codebook의 명확성, 누락 위험 및 혼동되는 위험군에 대한 종료 의견
-8. 응답을 Markdown 파일로 다운로드하고 선택적으로 GitHub 제출
+4. 개인별로 배정된 L4 카드마다 두 L3 후보 중 더 적합한 하나를 선택
+5. 선택 확신도와 선택적 의견 기록
+6. 전체 codebook의 명확성, 누락 위험 및 혼동되는 위험군에 대한 종료 의견
+7. 응답을 Markdown으로 변환해 GitHub 응답 저장소에 제출
 
-Each expert reviews the bilingual codebook and independently assigns a primary family to each allocated card. A secondary family is optional. Experts also report confidence and, when applicable, the source of ambiguity. `Unmappable` and `Insufficient information` are valid responses rather than forced assignments.
+Each expert reviews the bilingual codebook and completes a forced-choice comparison between two L3 candidates for every allocated L4 card. Candidate order is randomized, and neither a tie nor an indeterminate option is provided. Experts also report confidence and may add a comment.
 
 ## 6. 카드 표시 및 맹검 / Card presentation and blinding
 
-카드에는 무작위 표시 ID, L4 label 및 definition만 표시한다. 기존 L3 ID·명칭, L2 상위범주, 심각도·확률, 참고문헌 수, 임베딩 결과는 공개하지 않는다. L3는 codebook의 선택지로만 제공한다. 카드 순서는 평가자 코드별로 고정된 seed를 사용해 무작위화한다.
+카드에는 무작위 표시 ID, L4 label·definition 및 두 L3 후보만 표시한다. 어느 후보가 기존 배정인지, L2 상위범주, 심각도·확률, 참고문헌 수와 계산 결과는 공개하지 않는다. 카드 순서와 후보 A/B 순서는 평가자별로 재현 가능한 방식으로 무작위화한다.
 
 Cards display only a randomized presentation ID, the bilingual L4 label, and the bilingual definition. Existing L2/L3 assignments, severity, probability, reference counts, and computational results are hidden.
 
 ## 7. 카드별 설문 문항 / Card-level items
 
-1. **Primary classification**: 가장 적절한 L3 위험군 하나, `Unmappable`, 또는 `Insufficient information`
-2. **Secondary classification**: 실질적으로 관련된 두 번째 L3 위험군(선택)
-3. **Confidence**: 1(매우 낮음)~5(매우 높음)
-4. **Ambiguity reason**: 낮은 확신도 또는 secondary 선택 시 카드 정보 부족, 복수 메커니즘, 정의 중첩, 경계 불명확, 누락된 위험군, 전문지식 한계, 기타
-5. **Comment**: 선택적 자유서술
+1. **Pairwise ranking**: 후보 A와 B 중 해당 L4 위험을 더 잘 설명하는 L3 하나를 반드시 선택
+2. **Confidence**: 1(매우 낮음)~5(매우 높음)
+3. **Comment**: 선택적 자유서술
 
 ## 8. 자료 보존 / Data retention
 
-응답은 브라우저의 localStorage에 자동 임시저장된다. 완료된 응답은 구조화된 Markdown으로 변환되어 공개 GitHub 응답 저장소에 자동 보존된다. 접속 telemetry는 응답 Markdown과 분리된 비공개 GitHub 저장소에 보존한다. 비공개 telemetry에는 설문 시작·완료·서버 수신 시각, 총 소요시간, 원본 IP, IP 기반 국가·대륙·지역·도시·우편번호·위도·경도, 시간대, ASN·네트워크 조직, Cloudflare 데이터센터, HTTP·TLS 정보, User-Agent, 언어 설정, referrer 및 화면·기기 메타데이터가 포함될 수 있다. 공개 응답에는 이 접속정보를 포함하지 않는다. 비공개 telemetry의 보유기간은 수집일로부터 1년으로 정한다.
+응답은 브라우저의 localStorage에 자동 임시저장된다. 완료된 응답은 구조화된 Markdown으로 변환되어 공개 GitHub 응답 저장소에 자동 보존된다. 접속 telemetry는 응답 Markdown과 분리된 비공개 GitHub 저장소에 보존한다. 비공개 telemetry에는 설문 시작·종료·서버 수신 시각, 총 소요시간, 원본 IP, IP 기반 국가·대륙·지역·도시·우편번호·위도·경도, 시간대, ASN·네트워크 조직, Cloudflare 데이터센터, HTTP·TLS 정보, User-Agent, 언어 설정, referrer 및 화면·기기 메타데이터가 포함될 수 있다. 공개 응답에는 이 접속정보를 포함하지 않는다. 제한시간은 없다. 비공개 telemetry의 보유기간은 수집일로부터 1년으로 정한다.
 
-Responses are autosaved in browser localStorage and converted to structured Markdown for automatic retention in a public GitHub response repository. Connection telemetry is retained separately in a private GitHub repository and may include survey timing, source IP, IP-derived geolocation, timezone, ASN and network organization, Cloudflare data centre, HTTP and TLS properties, User-Agent, language settings, referrer, screen and device metadata. The public response does not contain this connection telemetry. Private telemetry is retained for one year from collection.
+Responses are autosaved in browser localStorage and converted to structured Markdown for automatic retention in a public GitHub response repository. Connection telemetry is retained separately in a private GitHub repository and may include survey start, completion and server-receipt times, total duration, source IP, IP-derived geolocation, timezone, ASN and network organization, Cloudflare data centre, HTTP and TLS properties, User-Agent, language settings, referrer, screen and device metadata. The public response does not contain this connection telemetry. There is no time limit. Private telemetry is retained for one year from collection.
 
 ## 9. 품질관리 / Quality control
 
 - 평가 중 기존 label을 공개하지 않는다.
 - 불일치 자체를 근거로 평가자를 제외하지 않는다.
 - 미완료, 독립성 위반, 기술적 손실 또는 사전 정의된 비성실 패턴만 제외 사유로 검토한다.
-- 카드별 시작·종료 시각 대신 응답 소요시간을 초 단위로 저장하되 절대 시각은 최소화한다.
+- 시작·종료·서버 수신 시각과 총 소요시간은 비공개 telemetry에만 저장하며 평가 또는 제외 기준으로 사용하지 않는다.
 - 설문 버전, 데이터 스냅샷 해시, 배정 버전과 평가자 코드를 응답 파일에 기록한다.
 
 ## 10. 분석 계획 / Statistical analysis
@@ -105,21 +103,17 @@ Responses are autosaved in browser localStorage and converted to structured Mark
 ### 1차 분석 / Primary analysis
 
 - 단위: L4 카드
-- 척도: nominal primary L3 assignment
-- 지표: Krippendorff's alpha
+- 척도: 두 후보 간 강제선택
+- 지표: 기존 L3 선택률(canonical preference rate)
 - 신뢰구간: 카드 단위 bootstrap 5,000회
-- `Unmappable`과 `Insufficient information`은 별도 범주로 유지
+- 귀무가설: 기존 L3 선택확률 0.5
 
 ### 보조 분석 / Secondary analyses
 
-- Gwet's AC1
-- 3인 완전 일치율과 2인 이상 다수결 형성률
-- 기존 release label과 전문가 다수결의 일치율
-- family별 precision, recall, F1, macro-F1 및 worst-family F1
-- primary 또는 secondary를 허용한 top-2 agreement
-- family별 confusion matrix
-- `Unmappable` 및 `Insufficient information` 비율
-- 확신도별 일치도
+- 카드별 3인 중 기존 L3 다수선택률과 완전일치율
+- L3 family별 기존 L3 선택률, macro-average 및 worst-family 결과
+- 후보쌍별 선택률과 방향성
+- 확신도별 기존 L3 선택률
 - singleton 대 non-singleton L3 비교
 - 기존 expert-corrected 카드 대 비보정 카드 비교
 - cosine margin과 인간 불일치의 연관성(탐색적 분석)
@@ -130,12 +124,10 @@ Responses are autosaved in browser localStorage and converted to structured Mark
 
 | 결과 / Result | 해석 및 조치 / Interpretation and action |
 |---|---|
-| alpha >= 0.80 | 높은 적용 재현성; 24-family schema 유지 가능 / High reproducibility |
-| 0.67 <= alpha < 0.80 | 잠정적 재현성; 경계 규칙 개선 / Tentative reproducibility; revise boundaries |
-| alpha < 0.67 | 확정적 taxonomy 주장 완화 / Do not claim a validated definitive taxonomy |
-| family 다수결 일치율 < 60% | 해당 family 재정의 또는 병합 검토 / Redefine or consider merging |
-| Unmappable >= 10% | taxonomy coverage 재검토 / Reassess coverage |
-| Insufficient information >= 10% | L4 description 충실도 재검토 / Revise card descriptions |
+| 전체 기존 L3 선택률의 95% CI 하한 > 0.50 | 매칭된 대안보다 기존 연결이 우세하다는 증거 / Evidence favouring canonical links over matched alternatives |
+| 95% CI가 0.50 포함 | 판별 근거 불충분; 확정적 타당화 주장 금지 / Inconclusive discrimination; avoid definitive validation claims |
+| family 선택률 < 0.60 | 해당 family의 정의·경계 또는 카드 연결 재검토 / Review family boundaries or card links |
+| 카드에서 3인 중 2인 이상이 대안 선택 | 해당 카드 연결을 우선 재검토 / Prioritize the card-family link for review |
 
 기준은 데이터 확인 전에 고정하며 결과에 맞춰 사후 변경하지 않는다.
 
