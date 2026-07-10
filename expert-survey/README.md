@@ -13,7 +13,9 @@ GitHub Pages에서 실행되는 한·영 병기 독립 전문가 분류 설문�
 
 ## Storage model
 
-응답은 브라우저 `localStorage`에 자동 저장되고 완료 시 Markdown으로 다운로드된다. 선택적으로 Markdown을 복사해 GitHub Issue에 제출할 수 있으나, 공개 저장소의 Issue가 공개될 수 있음을 참가자에게 고지한다. 운영 연구에서는 다운로드 파일을 연구팀의 접근 제한 저장소로 전달하는 경로를 기본으로 사용한다.
+응답은 작성 중 브라우저 `localStorage`에 임시저장된다. 완료 시 Cloudflare Worker가 응답을 Markdown으로 변환해 공개 GitHub 응답 저장소의 `responses/YYYY/MM/` 디렉터리에 자동 커밋한다. 자동 저장이 실패하면 브라우저 임시자료를 유지하고 재시도한다.
+
+익명 평가자 ID는 브라우저에서 자동 생성된다. 참가자 수에는 상한을 두지 않으며, 각 참가자는 A01~A09의 균형 블록 중 하나를 암호학적 난수로 배정받는다.
 
 ## Rebuild
 

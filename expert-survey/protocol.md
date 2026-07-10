@@ -89,9 +89,9 @@ Cards display only a randomized presentation ID, the bilingual L4 label, and the
 
 ## 8. 자료 보존 / Data retention
 
-응답은 브라우저의 localStorage에 자동 임시저장된다. 완료된 응답은 구조화된 Markdown 파일로 참가자 기기에 다운로드한다. GitHub 제출은 공개 가능성을 고지한 뒤 참가자가 명시적으로 선택하는 경우에만 수행한다. 원자료에는 직접 식별정보를 포함하지 않는다. 연구팀은 수집된 파일을 접근 제한 저장소로 이전하고 분석용 익명 ID로 관리해야 한다.
+응답은 브라우저의 localStorage에 자동 임시저장된다. 완료된 응답은 구조화된 Markdown으로 변환되어 공개 GitHub 응답 저장소에 자동 보존된다. 제출된 익명 응답이 연구 재현성을 위해 공개 저장소에 보존된다는 사실을 동의문에 고지한다. 원자료에는 직접 식별정보를 포함하지 않는다.
 
-Responses are autosaved in browser localStorage and exported as structured Markdown. GitHub submission is optional and requires an explicit acknowledgement that a public repository may expose the response. The research team should move received files to access-controlled storage before analysis.
+Responses are autosaved in browser localStorage and converted to structured Markdown for automatic retention in a public GitHub response repository. The consent statement discloses that anonymous responses are publicly retained for research reproducibility.
 
 ## 9. 품질관리 / Quality control
 
