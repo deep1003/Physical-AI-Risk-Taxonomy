@@ -19,7 +19,6 @@ h1 { margin: .15rem 0; font-size: clamp(1.65rem, 3vw, 2.6rem); line-height: 1.2;
 h2, h3 { color: var(--navy); line-height: 1.3; }
 .eyebrow { margin: 0; text-transform: uppercase; letter-spacing: .11em; font-size: .75rem; opacity: .85; }
 .subtitle { margin: .4rem 0 0; opacity: .9; }
-.protocol-link { color: white; border: 1px solid rgba(255,255,255,.55); padding: .65rem .9rem; border-radius: .55rem; white-space: nowrap; text-decoration: none; }
 .shell { width: min(1050px, calc(100% - 2rem)); margin: 2rem auto; }
 .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 1rem; padding: clamp(1.1rem, 3vw, 2rem); box-shadow: var(--shadow); margin-bottom: 1rem; }
 .notice { background: var(--teal-soft); border-left: 4px solid var(--teal); padding: .8rem 1rem; border-radius: .4rem; }
