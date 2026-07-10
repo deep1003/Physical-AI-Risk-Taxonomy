@@ -46,19 +46,18 @@ Co-authors, taxonomy developers, prior label reviewers, and persons with conflic
 
 ## 4. 수집할 배경 정보 / Background variables
 
-이 설문은 다음 정보를 절대 수집하거나 요구하지 않는다: 이름, 이메일, 성별, 연령, 소속기관 등 개인정보. 연구 목적상 필요한 다음의 범주형 정보만 수집한다.
+이 설문은 이름, 이메일, 정확한 연령, 소속기관 등 직접 식별정보를 수집하거나 요구하지 않는다. 다음 정보만 범주형으로 수집하며, 연령대와 성별에는 `응답하지 않음` 선택지를 제공한다.
 
 - 익명 평가자 코드
+- 연령대
+- 성별
 - 주요 전문영역(복수선택)
 - 관련 경력 구간
-- 소속 부문: 학계·연구, 산업, 공공·규제, 표준화, 기타
-- 활동 지역권: 대한민국, 아시아(대한민국 제외), 유럽, 북미, 기타/응답하지 않음
-- 최종 학위 구간
 - Physical AI 또는 로봇 위험평가 경험 수준
 - 안전 표준·규제 업무 경험 여부
 - 분류체계 개발 참여 또는 기존 label 노출 여부
 
-This survey never collects or requests personal information such as names, email addresses, gender, age, or institutional affiliation. Only categorical variables necessary to characterize expertise, sector, broad region, education, risk-assessment experience, standards experience, and independence are retained.
+This survey does not collect or request direct identifiers such as names, email addresses, exact age, or institutional affiliation. Only anonymous respondent code, age band, gender, expertise, experience band, risk-assessment experience, standards or regulatory experience, and independence are collected categorically. Age band and gender include a prefer-not-to-say option.
 
 ## 5. 설문 절차 / Survey procedure
 
