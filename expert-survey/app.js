@@ -52,6 +52,21 @@ function restoreActive() {
   const raw = code && localStorage.getItem(`${CONFIG.storagePrefix}:${code}`);
   if (raw) state = { ...state, ...JSON.parse(raw) };
 }
+function startNewResponse() {
+  localStorage.removeItem(`${CONFIG.storagePrefix}:active`);
+  state = {
+    page: "consent",
+    raterCode: "",
+    assignmentBlock: "",
+    consent: false,
+    demographics: {},
+    responses: {},
+    exit: {},
+    cardIndex: 0,
+    startedAt: Date.now(),
+  };
+  render();
+}
 function randomRespondentId() {
   const bytes = crypto.getRandomValues(new Uint8Array(6));
   return `R-${[...bytes].map((value) => value.toString(16).padStart(2, "0")).join("")}`;
@@ -380,7 +395,10 @@ function renderComplete() {
   const stored = state.submission?.stored;
   app.innerHTML = `<section class="panel complete"><h2>${stored ? "응답 저장 완료" : "응답 저장 중"} <span class="english">${stored ? "Response stored" : "Saving response"}</span></h2>
     ${stored ? `<div class="notice"><p>익명 응답이 공개 GitHub 저장소에 Markdown으로 저장됐습니다.</p><p class="english">The anonymous response has been stored as Markdown in the public GitHub repository.</p><p><code>${esc(state.submission.path)}</code></p></div>` : `<p>창을 닫지 마십시오. / Please do not close this window.</p><p id="submitStatus" class="help">GitHub 저장소에 연결하고 있습니다. / Connecting to the GitHub repository…</p><button id="retry" class="secondary" hidden>다시 시도 / Retry</button>`}
-    ${stored ? `<a class="button secondary" target="_blank" rel="noopener" href="${esc(state.submission.url)}">저장된 응답 보기 / View stored response</a>` : ""}</section>`;
+    ${stored ? `<div class="actions"><a class="button secondary" target="_blank" rel="noopener" href="${esc(state.submission.url)}">저장된 응답 보기 / View stored response</a><button id="newResponse" class="primary">새 응답 시작 / Start a new response</button></div>` : ""}</section>`;
+  if (stored) {
+    document.querySelector("#newResponse").onclick = startNewResponse;
+  }
   if (!stored) submitResponse();
 }
 
