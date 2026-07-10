@@ -1,4 +1,4 @@
-# Physical AI Independent Expert Survey
+# Physical AI Domain Expert Survey
 
 GitHub Pages에서 실행되는 한·영 병기 독립 전문가 분류 설문이다.
 
