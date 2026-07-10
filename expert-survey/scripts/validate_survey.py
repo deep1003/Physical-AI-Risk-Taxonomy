@@ -26,7 +26,8 @@ def main() -> None:
         assert (ROOT / asset).stat().st_size > 100
     app_js = (ROOT / "app.js").read_text(encoding="utf-8")
     assert "l3_id" not in json.dumps(survey["cards"], ensure_ascii=False)
-    assert "localStorage" in app_js and "text/markdown" in app_js
+    assert "localStorage" in app_js and "submitResponse" in app_js
+    assert "randomRespondentId" in app_js and "randomBlock" in app_js
     print(f"OK families=24 cards=182 ratings={sum(loads)} rater_loads={loads}")
 
 

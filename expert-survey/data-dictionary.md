@@ -6,7 +6,8 @@
 |---|---|---|
 | `survey_version` | string | 설문 도구 버전 / Survey instrument version |
 | `assignment_version` | string | 카드 배정 버전 / Assignment version |
-| `rater_code` | string | A01~A09 익명 코드 / Anonymous rater code |
+| `respondent_id` | string | 자동 생성된 익명 응답자 ID / Automatically generated anonymous respondent ID |
+| `assignment_block` | string | 무작위 배정된 A01~A09 카드 블록 / Randomly assigned card block |
 | `completed_at` | ISO 8601 | 완료 시각 / Completion timestamp |
 | `source_sha256` | string | L4 원본 데이터 SHA-256 |
 | `Expertise` | categorical, multiple | 전문영역 / Fields of expertise |
