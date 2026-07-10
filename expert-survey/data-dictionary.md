@@ -10,11 +10,10 @@
 | `assignment_block` | string | 무작위 배정된 A01~A09 카드 블록 / Randomly assigned card block |
 | `completed_at` | ISO 8601 | 완료 시각 / Completion timestamp |
 | `source_sha256` | string | L4 원본 데이터 SHA-256 |
+| `Age band` | categorical | 연령대 / Age band; prefer-not-to-say available |
+| `Gender` | categorical | 성별 / Gender; prefer-not-to-say available |
 | `Expertise` | categorical, multiple | 전문영역 / Fields of expertise |
 | `Career` | ordinal category | 관련 경력 구간 / Experience band |
-| `Sector` | categorical | 소속 부문 / Employment sector |
-| `Region` | categorical | 광역 활동 지역 / Broad region |
-| `Education` | categorical | 최종 학위 / Highest qualification |
 | `Risk-assessment experience` | ordinal category | 위험평가 경험 / Risk-assessment experience |
 | `Standards experience` | binary | 표준·규제 경험 / Standards experience |
 | `Display ID` | string | 설문 표시용 카드 ID / Blinded display ID |
@@ -29,6 +28,6 @@
 | `Missing risks` | text, optional | 누락 위험영역 |
 | `Suggestions` | text, optional | 병합·분리·정의 개선 제안 |
 
-이 설문은 이름, 이메일, 성별, 연령, 소속기관 등 개인정보를 절대 수집하거나 요구하지 않는다. 자유서술에도 개인식별정보를 입력하지 않도록 참가자에게 안내한다.
+이 설문은 이름, 이메일, 정확한 연령, 소속기관 등 직접 식별정보를 수집하거나 요구하지 않는다. 연령대와 성별은 범주형으로 수집하고 `응답하지 않음` 선택지를 제공한다. 자유서술에도 개인식별정보를 입력하지 않도록 참가자에게 안내한다.
 
-This survey never collects or requests personal information such as names, email addresses, gender, age, or institutional affiliation. Participants should not enter personal identifiers in free-text fields.
+This survey does not collect or request direct identifiers such as names, email addresses, exact age, or institutional affiliation. Age band and gender are categorical and include a prefer-not-to-say option. Participants should not enter personal identifiers in free-text fields.

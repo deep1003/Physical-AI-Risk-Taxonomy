@@ -112,8 +112,8 @@ function renderConsent() {
   app.innerHTML = `<section class="panel">
     <h2>연구 안내 및 동의 <span class="english">Study information and consent</span></h2>
     <div class="notice"><p>이 연구는 182개 Physical AI 위험 카드를 24개 위험군으로 분류할 때 독립 전문가 판단의 재현성을 평가합니다.</p><p class="english">This study evaluates the reproducibility of independent expert assignments of 182 Physical AI risk cards to 24 predefined families.</p></div>
-    <p>이 설문은 다음 정보를 절대 수집하거나 요구하지 않습니다: 이름, 이메일, 성별, 연령, 소속기관 등 개인정보. 설문은 약 60개 카드로 구성되며 브라우저에 자동 임시저장됩니다.</p>
-    <p class="english">This survey never collects or requests personal information such as names, email addresses, gender, age, or institutional affiliation. Approximately 60 cards are assigned and progress is temporarily autosaved in this browser.</p>
+    <p>이 설문은 이름, 이메일, 정확한 연령, 소속기관 등 직접 식별정보를 수집하거나 요구하지 않습니다. 연령대와 성별은 범주형으로 수집하며, 두 문항 모두 '응답하지 않음'을 선택할 수 있습니다. 설문은 약 60개 카드로 구성되며 브라우저에 자동 임시저장됩니다.</p>
+    <p class="english">This survey does not collect or request direct identifiers such as names, email addresses, exact age, or institutional affiliation. Age band and gender are collected categorically, with a prefer-not-to-say option for both. Approximately 60 cards are assigned and progress is temporarily autosaved in this browser.</p>
     <div class="notice warning"><p><strong>제출된 익명 응답은 연구 재현성을 위해 공개 저장소에 보존됩니다.</strong></p><p class="english"><strong>Anonymous responses will be retained in a public repository for research reproducibility.</strong></p></div>
     <label class="choice"><input id="consent" type="checkbox">위 내용을 이해했으며 자발적으로 참여하는 데 동의합니다. <span class="english">I understand the information above and voluntarily consent to participate.</span></label>
     <p id="consentError" class="error" role="alert"></p>
@@ -138,12 +138,11 @@ function renderDemographics() {
   const d = state.demographics;
   app.innerHTML = `<section class="panel">
     <h2>전문가 배경 정보 <span class="english">Expert background</span></h2>
-    <p class="help">이 설문은 이름, 이메일, 성별, 연령, 소속기관 등 개인정보를 절대 수집하거나 요구하지 않습니다. 별표 문항은 필수입니다. / This survey never collects or requests personal information such as names, email addresses, gender, age, or institutional affiliation. Asterisked items are required.</p>
+    <p class="help">이름, 이메일, 정확한 연령, 소속기관은 수집하지 않습니다. 연령대와 성별은 범주형이며 '응답하지 않음'을 선택할 수 있습니다. 별표 문항은 필수입니다. / Names, email addresses, exact age, and institutional affiliation are not collected. Age band and gender are categorical and include a prefer-not-to-say option. Asterisked items are required.</p>
     <div class="grid">
+      ${selectField("ageBand", "연령대*", "Age band*", ["25세 미만 / Under 25", "25–34세 / 25–34", "35–44세 / 35–44", "45–54세 / 45–54", "55–64세 / 55–64", "65세 이상 / 65 or older", "응답하지 않음 / Prefer not to say"], d.ageBand)}
+      ${selectField("gender", "성별*", "Gender*", ["여성 / Woman", "남성 / Man", "논바이너리·기타 / Non-binary or another identity", "응답하지 않음 / Prefer not to say"], d.gender)}
       ${selectField("career", "관련 경력 구간*", "Relevant experience*", ["1년 미만 / Under 1 year", "1–2년 / 1–2 years", "3–5년 / 3–5 years", "6–10년 / 6–10 years", "11–15년 / 11–15 years", "16년 이상 / 16+ years"], d.career)}
-      ${selectField("sector", "현재 소속 부문*", "Current sector*", ["학계·연구 / Academia or research", "산업 / Industry", "공공·규제 / Government or regulatory", "표준화 / Standards organization", "기타 / Other"], d.sector)}
-      ${selectField("region", "주요 활동 지역권*", "Primary region*", ["대한민국 / Republic of Korea", "아시아(한국 제외) / Asia excluding Korea", "유럽 / Europe", "북미 / North America", "기타 / Other", "응답하지 않음 / Prefer not to say"], d.region)}
-      ${selectField("education", "최종 학위*", "Highest qualification*", ["박사 / Doctorate", "박사과정 / Doctoral candidate", "석사 / Master's", "학사 / Bachelor's", "전문자격·기타 / Professional or other"], d.education)}
       ${selectField("riskExperience", "Physical AI·로봇 위험평가 경험*", "Risk-assessment experience*", ["없음 / None", "제한적 / Limited", "반복적 / Repeated", "주요 업무 / Core responsibility"], d.riskExperience)}
       ${selectField("standardsExperience", "안전 표준·규제 경험*", "Safety standards or regulation experience*", ["없음 / No", "있음 / Yes"], d.standardsExperience)}
     </div>
@@ -158,10 +157,9 @@ function renderDemographics() {
   bindBack("consent");
   document.querySelector("#demoNext").onclick = () => {
     const required = [
+      "ageBand",
+      "gender",
       "career",
-      "sector",
-      "region",
-      "education",
       "riskExperience",
       "standardsExperience",
     ];
@@ -371,7 +369,7 @@ function markdown() {
     .join("\n");
   const d = state.demographics,
     x = state.exit;
-  return `---\nsurvey_version: "${surveyData.survey_version}"\nassignment_version: "${assignments.assignment_version}"\nrespondent_id: "${state.raterCode}"\nassignment_block: "${state.assignmentBlock}"\ncompleted_at: "${state.completedAt || new Date().toISOString()}"\nsource_sha256: "${surveyData.source_sha256}"\n---\n\n# Physical AI Expert Annotation Response\n\n## Background / 배경 정보\n\n- Expertise / 전문영역: ${(d.expertise || []).join(", ")}\n- Career / 경력: ${d.career}\n- Sector / 부문: ${d.sector}\n- Region / 지역권: ${d.region}\n- Education / 학위: ${d.education}\n- Risk-assessment experience / 위험평가 경험: ${d.riskExperience}\n- Standards experience / 표준 경험: ${d.stardsExperience || d.standardsExperience}\n- Independence confirmed / 독립성 확인: ${d.independent && d.notExposed}\n\n## Card annotations / 카드 분류\n\n| Display ID | Card ID | Primary L3 | Secondary L3 | Confidence | Ambiguity | Comment |\n|---|---|---|---|---:|---|---|\n${rows}\n\n## Exit assessment / 종료 평가\n\n- Clarity / 명확성: ${x.clarity || ""}\n- Confusing pairs / 혼동 위험군: ${x.confusing || ""}\n- Missing risks / 누락 위험: ${x.missingRisk || ""}\n- Suggestions / 개선 제안: ${x.suggestion || ""}\n`;
+  return `---\nsurvey_version: "${surveyData.survey_version}"\nassignment_version: "${assignments.assignment_version}"\nrespondent_id: "${state.raterCode}"\nassignment_block: "${state.assignmentBlock}"\ncompleted_at: "${state.completedAt || new Date().toISOString()}"\nsource_sha256: "${surveyData.source_sha256}"\n---\n\n# Physical AI Expert Annotation Response\n\n## Background / 배경 정보\n\n- Age band / 연령대: ${d.ageBand}\n- Gender / 성별: ${d.gender}\n- Expertise / 전문영역: ${(d.expertise || []).join(", ")}\n- Career / 경력: ${d.career}\n- Risk-assessment experience / 위험평가 경험: ${d.riskExperience}\n- Standards experience / 표준·규제 경험: ${d.standardsExperience}\n- Eligibility confirmed / 적격성 확인: ${d.eligibilityConfirmed}\n- Independence confirmed / 독립성 확인: ${d.independent && d.notExposed}\n\n## Card annotations / 카드 분류\n\n| Display ID | Card ID | Primary L3 | Secondary L3 | Confidence | Ambiguity | Comment |\n|---|---|---|---|---:|---|---|\n${rows}\n\n## Exit assessment / 종료 평가\n\n- Clarity / 명확성: ${x.clarity || ""}\n- Confusing pairs / 혼동 위험군: ${x.confusing || ""}\n- Missing risks / 누락 위험: ${x.missingRisk || ""}\n- Suggestions / 개선 제안: ${x.suggestion || ""}\n`;
 }
 
 function renderComplete() {
