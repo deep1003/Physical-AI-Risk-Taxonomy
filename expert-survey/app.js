@@ -3,7 +3,7 @@
 const CONFIG = {
   repo: "deep1003/Physical-AI-Risk-Taxonomy",
   apiUrl: "https://pai-risk-survey-api.deep1003-pai.workers.dev",
-  storagePrefix: "pai-expert-survey-v3-revision30",
+  storagePrefix: "pai-expert-survey-v4-reference-review30",
 };
 
 const app = document.querySelector("#app");
@@ -112,6 +112,8 @@ function pairFamilies(card) {
 function familyById(id) {
   return surveyData.families.find((family) => family.id === id);
 }
+const cleanCell = (value = "") => String(value).replaceAll("|", "/").replaceAll("\n", " ");
+const csvCell = (value = "") => `"${String(value).replaceAll('"', '""')}"`;
 function familyOptions(value = "", includeSpecial = true) {
   const groups = groupBy(surveyData.families, (family) => family.l2_id);
   let html = '<option value="">선택 / Select</option>';
@@ -355,15 +357,15 @@ function revisionCandidates() {
       return {
         card,
         response,
-        algorithmChoice: card.pair_family_ids[0],
+        referenceChoice: card.pair_family_ids[0],
         confidence: Number(response.confidence || 0),
       };
     })
     .filter(
       (item) =>
         item.response.choice &&
-        item.algorithmChoice &&
-        item.response.choice !== item.algorithmChoice,
+        item.referenceChoice &&
+        item.response.choice !== item.referenceChoice,
     )
     .sort((a, b) => {
       if (b.confidence !== a.confidence) return b.confidence - a.confidence;
@@ -375,9 +377,9 @@ function revisionCandidates() {
 function renderRevision() {
   const candidates = revisionCandidates();
   const items = candidates
-    .map(({ card, response, algorithmChoice }, index) => {
+    .map(({ card, response, referenceChoice }, index) => {
       const original = familyById(response.choice);
-      const algorithm = familyById(algorithmChoice);
+      const reference = familyById(referenceChoice);
       const revision = state.revisions[card.card_id] || {};
       const selectedChoice = revision.revised_choice || response.choice;
       return `<div class="revision-item">
@@ -385,31 +387,31 @@ function renderRevision() {
         <p class="risk-title">${esc(card.label_ko)} <span class="english">${esc(card.label_en)}</span></p>
         <div class="risk-definition"><p>${esc(card.definition_ko)}</p><p class="english">${esc(card.definition_en)}</p></div>
         <div class="compare-grid">
-          <div><h3>알고리즘 선택 <span class="english">Algorithm-selected answer</span></h3><p><strong>${esc(algorithm.id)} · ${esc(algorithm.name_ko)}</strong> <span class="english">${esc(algorithm.name_en)}</span></p><p>${esc(algorithm.definition_ko)}</p></div>
+          <div><h3>사전 지정 기준 배정 <span class="english">Pre-specified reference assignment</span></h3><p><strong>${esc(reference.id)} · ${esc(reference.name_ko)}</strong> <span class="english">${esc(reference.name_en)}</span></p><p>${esc(reference.definition_ko)}</p></div>
           <div><h3>본인의 원래 답변 <span class="english">Your original answer</span></h3><p><strong>${esc(original.id)} · ${esc(original.name_ko)}</strong> <span class="english">${esc(original.name_en)}</span></p><p>${esc(original.definition_ko)}</p><p class="help">원래 확신도 / Original confidence: ${esc(response.confidence)}</p></div>
         </div>
         <fieldset><legend>제출 전 최종 선택 <span class="english">Final selection before submission</span></legend>
           <label class="choice"><input type="radio" name="revision_${esc(card.card_id)}" value="${esc(response.choice)}" ${checked(selectedChoice === response.choice)}>원래 답변 유지 / Keep my original answer</label>
-          <label class="choice"><input type="radio" name="revision_${esc(card.card_id)}" value="${esc(algorithmChoice)}" ${checked(selectedChoice === algorithmChoice)}>알고리즘 선택으로 수정 / Change to the algorithm-selected answer</label>
+          <label class="choice"><input type="radio" name="revision_${esc(card.card_id)}" value="${esc(referenceChoice)}" ${checked(selectedChoice === referenceChoice)}>기준 배정으로 수정 / Change to the reference assignment</label>
         </fieldset>
       </div>`;
     })
     .join("");
   app.innerHTML = `<section class="panel"><h2>제출 전 재검토 <span class="english">Pre-submission reconsideration</span></h2>
-    ${candidates.length ? `<div class="notice"><p>아래 문항은 알고리즘 선택과 다르게 답한 문항 중 확신도가 가장 높았던 항목입니다. 원래 답변을 유지하거나 알고리즘 선택으로 수정할 수 있습니다.</p><p class="english">These are the highest-confidence items where your answer differed from the algorithm-selected answer. You may keep your original answer or change to the algorithm-selected answer.</p></div>${items}` : `<div class="notice"><p>알고리즘 선택과 다른 고확신 답변이 없어 재검토 문항이 없습니다.</p><p class="english">There are no high-confidence disagreements with the algorithm-selected answer to review.</p></div>`}
+    ${candidates.length ? `<div class="notice"><p>아래 문항은 사전 지정 기준 배정과 다르게 답한 문항 중 확신도가 가장 높았던 항목입니다. 원래 답변을 유지하거나 기준 배정으로 수정할 수 있습니다.</p><p class="english">These are the highest-confidence items where your answer differed from the pre-specified reference assignment. You may keep your original answer or change to the reference assignment.</p></div>${items}` : `<div class="notice"><p>사전 지정 기준 배정과 다른 고확신 답변이 없어 재검토 문항이 없습니다.</p><p class="english">There are no high-confidence disagreements with the pre-specified reference assignment to review.</p></div>`}
     <p id="revisionError" class="error"></p>
     <div class="actions"><button class="secondary" data-back>이전 / Back</button><button id="finish" class="primary">응답 완료 / Complete</button></div></section>`;
   bindBack("review");
   document.querySelector("#finish").onclick = () => {
     state.revisions = Object.fromEntries(
-      candidates.map(({ card, response, algorithmChoice }) => {
+      candidates.map(({ card, response, referenceChoice }) => {
         const revisedChoice =
           document.querySelector(`[name="revision_${card.card_id}"]:checked`)
             ?.value || response.choice;
         return [
           card.card_id,
           {
-            algorithm_choice: algorithmChoice,
+            reference_assignment: referenceChoice,
             original_choice: response.choice,
             original_confidence: response.confidence,
             revised_choice: revisedChoice,
@@ -426,31 +428,157 @@ function renderRevision() {
   };
 }
 
-function markdown() {
-  const rows = assignedCards()
-    .map((card) => {
-      const r = state.responses[card.card_id] || {};
-      return `| ${card.display_id} | ${card.card_id} | ${r.pair_order?.[0] || ""} | ${r.pair_order?.[1] || ""} | ${r.choice || ""} | ${r.confidence || ""} | ${String(
-        r.comment || "",
-      )
-        .replaceAll("|", "/")
-        .replaceAll("\n", " ")} |`;
-    })
-    .join("\n");
-  const revisionRows = Object.entries(state.revisions || {})
-    .map(([cardId, revision]) => {
-      const card = assignedCards().find((item) => item.card_id === cardId);
-      return `| ${card?.display_id || ""} | ${cardId} | ${revision.algorithm_choice || ""} | ${revision.original_choice || ""} | ${revision.original_confidence || ""} | ${revision.revised_choice || ""} | ${revision.changed ? "yes" : "no"} |`;
-    })
-    .join("\n");
+function structuredResponse() {
   const d = state.demographics;
-  return `---\nsurvey_version: "${surveyData.survey_version}"\nassignment_version: "${assignments.assignment_version}"\nrespondent_id: "${state.raterCode}"\nassignment_block: "${state.assignmentBlock}"\nsource_sha256: "${surveyData.source_sha256}"\n---\n\n# Physical AI Expert Pairwise Ranking Response\n\n## Background / 배경 정보\n\n- Age band / 연령대: ${d.ageBand}\n- Gender / 성별: ${d.gender}\n- Expertise / 전문영역: ${(d.expertise || []).join(", ")}\n- Career / 경력: ${d.career}\n- Risk-assessment experience / 위험평가 경험: ${d.riskExperience}\n- Standards experience / 표준·규제 경험: ${d.standardsExperience}\n- Eligibility confirmed / 적격성 확인: ${d.eligibilityConfirmed}\n- Independence confirmed / 독립성 확인: ${d.independent && d.notExposed}\n\n## Original pairwise rankings / 원래 쌍대 순위 선택\n\n| Display ID | Card ID | Candidate A | Candidate B | Original selected L3 | Confidence | Comment |\n|---|---|---|---|---|---:|---|\n${rows}\n\n## Pre-submission reconsideration / 제출 전 재검토\n\n| Display ID | Card ID | Algorithm-selected L3 | Original selected L3 | Original confidence | Revised selected L3 | Changed |\n|---|---|---|---|---:|---|---|\n${revisionRows || "|  |  |  |  |  |  |  |"}\n`;
+  const cards = assignedCards();
+  const original_rankings = cards.map((card) => {
+    const response = state.responses[card.card_id] || {};
+    return {
+      display_id: card.display_id,
+      card_id: card.card_id,
+      candidate_a: response.pair_order?.[0] || "",
+      candidate_b: response.pair_order?.[1] || "",
+      reference_assignment: card.pair_family_ids[0],
+      original_selected_l3: response.choice || "",
+      confidence: response.confidence || "",
+      comment: response.comment || "",
+    };
+  });
+  const reconsideration = Object.entries(state.revisions || {}).map(
+    ([cardId, revision]) => {
+      const card = cards.find((item) => item.card_id === cardId);
+      return {
+        display_id: card?.display_id || "",
+        card_id: cardId,
+        reference_assignment: revision.reference_assignment || "",
+        original_selected_l3: revision.original_choice || "",
+        original_confidence: revision.original_confidence || "",
+        revised_selected_l3: revision.revised_choice || "",
+        changed: Boolean(revision.changed),
+      };
+    },
+  );
+  return {
+    survey_version: surveyData.survey_version,
+    assignment_version: assignments.assignment_version,
+    respondent_id: state.raterCode,
+    assignment_block: state.assignmentBlock,
+    source_sha256: surveyData.source_sha256,
+    analysis_plan: {
+      primary_endpoint:
+        "original_response_agreement_with_pre_specified_reference_assignment",
+      reconsideration_role:
+        "secondary_analysis_of_high_confidence_disagreement_stability",
+      minimum_completed_responses: 20,
+      planned_summaries: [
+        "card_level_agreement_with_wilson_or_bootstrap_ci",
+        "family_level_macro_and_worst_family_agreement",
+        "respondent_level_completion_and_agreement_summary",
+        "switch_rate_from_original_expert_answer_to_reference_assignment",
+      ],
+      limitation:
+        "forced_choice_pairwise_design_excludes_unknown_or_unmappable_judgments",
+    },
+    demographics: {
+      age_band: d.ageBand,
+      gender: d.gender,
+      expertise: d.expertise || [],
+      career: d.career,
+      risk_assessment_experience: d.riskExperience,
+      standards_experience: d.standardsExperience,
+      eligibility_confirmed: Boolean(d.eligibilityConfirmed),
+      independence_confirmed: Boolean(d.independent && d.notExposed),
+    },
+    original_rankings,
+    pre_submission_reconsideration: reconsideration,
+  };
+}
+
+function markdown() {
+  const payload = structuredResponse();
+  const rows = payload.original_rankings
+    .map(
+      (row) =>
+        `| ${row.display_id} | ${row.card_id} | ${row.candidate_a} | ${row.candidate_b} | ${row.reference_assignment} | ${row.original_selected_l3} | ${row.confidence} | ${cleanCell(row.comment)} |`,
+    )
+    .join("\n");
+  const revisionRows = payload.pre_submission_reconsideration
+    .map(
+      (row) =>
+        `| ${row.display_id} | ${row.card_id} | ${row.reference_assignment} | ${row.original_selected_l3} | ${row.original_confidence} | ${row.revised_selected_l3} | ${row.changed ? "yes" : "no"} |`,
+    )
+    .join("\n");
+  const d = payload.demographics;
+  return `---\nsurvey_version: "${surveyData.survey_version}"\nassignment_version: "${assignments.assignment_version}"\nrespondent_id: "${state.raterCode}"\nassignment_block: "${state.assignmentBlock}"\nsource_sha256: "${surveyData.source_sha256}"\nprimary_endpoint: "original_response_agreement_with_pre_specified_reference_assignment"\nminimum_completed_responses: 20\n---\n\n# Physical AI Expert Pairwise Ranking Response\n\n## Analysis Plan Notes / 분석 계획 메모\n\n- Primary analysis uses original responses only. / 주 분석은 원래 응답만 사용한다.\n- Pre-submission reconsideration is secondary evidence about high-confidence disagreement stability. / 제출 전 재검토는 고확신 불일치 판단의 안정성을 보는 보조 분석이다.\n- Planned summaries are separated at card, family, and respondent levels. / 카드, family, 응답자 수준 요약을 분리한다.\n- The forced-choice design excludes unknown or unmappable judgments. / 강제선택 설계상 판단 불가 또는 분류 불가 판단은 배제된다.\n\n## Background / 배경 정보\n\n- Age band / 연령대: ${d.age_band}\n- Gender / 성별: ${d.gender}\n- Expertise / 전문영역: ${(d.expertise || []).join(", ")}\n- Career / 경력: ${d.career}\n- Risk-assessment experience / 위험평가 경험: ${d.risk_assessment_experience}\n- Standards experience / 표준·규제 경험: ${d.standards_experience}\n- Eligibility confirmed / 적격성 확인: ${d.eligibility_confirmed}\n- Independence confirmed / 독립성 확인: ${d.independence_confirmed}\n\n## Original pairwise rankings / 원래 쌍대 순위 선택\n\n| Display ID | Card ID | Candidate A | Candidate B | Reference assignment | Original selected L3 | Confidence | Comment |\n|---|---|---|---|---|---|---:|---|\n${rows}\n\n## Pre-submission reconsideration / 제출 전 재검토\n\n| Display ID | Card ID | Reference assignment | Original selected L3 | Original confidence | Revised selected L3 | Changed |\n|---|---|---|---|---:|---|---|\n${revisionRows || "|  |  |  |  |  |  |  |"}\n`;
+}
+
+function jsonResponse() {
+  return JSON.stringify(structuredResponse(), null, 2);
+}
+
+function csvResponse() {
+  const payload = structuredResponse();
+  const rows = [
+    [
+      "section",
+      "respondent_id",
+      "assignment_block",
+      "display_id",
+      "card_id",
+      "candidate_a",
+      "candidate_b",
+      "reference_assignment",
+      "original_selected_l3",
+      "confidence",
+      "comment",
+      "original_confidence",
+      "revised_selected_l3",
+      "changed",
+    ],
+  ];
+  for (const row of payload.original_rankings) {
+    rows.push([
+      "original",
+      payload.respondent_id,
+      payload.assignment_block,
+      row.display_id,
+      row.card_id,
+      row.candidate_a,
+      row.candidate_b,
+      row.reference_assignment,
+      row.original_selected_l3,
+      row.confidence,
+      row.comment,
+      "",
+      "",
+      "",
+    ]);
+  }
+  for (const row of payload.pre_submission_reconsideration) {
+    rows.push([
+      "reconsideration",
+      payload.respondent_id,
+      payload.assignment_block,
+      row.display_id,
+      row.card_id,
+      "",
+      "",
+      row.reference_assignment,
+      row.original_selected_l3,
+      "",
+      "",
+      row.original_confidence,
+      row.revised_selected_l3,
+      row.changed ? "yes" : "no",
+    ]);
+  }
+  return rows.map((row) => row.map(csvCell).join(",")).join("\n");
 }
 
 function renderComplete() {
   const stored = state.submission?.stored;
   app.innerHTML = `<section class="panel complete"><h2>${stored ? "응답 저장 완료" : "응답 저장 중"} <span class="english">${stored ? "Response stored" : "Saving response"}</span></h2>
-    ${stored ? `<div class="notice"><p>익명 응답이 공개 GitHub 저장소에 Markdown으로 저장됐습니다.</p><p class="english">The anonymous response has been stored as Markdown in the public GitHub repository.</p><p><code>${esc(state.submission.path)}</code></p></div>` : `<p>창을 닫지 마십시오. / Please do not close this window.</p><p id="submitStatus" class="help">GitHub 저장소에 연결하고 있습니다. / Connecting to the GitHub repository…</p><button id="retry" class="secondary" hidden>다시 시도 / Retry</button>`}
+    ${stored ? `<div class="notice"><p>익명 응답이 공개 GitHub 저장소에 Markdown, JSON, CSV로 저장됐습니다.</p><p class="english">The anonymous response has been stored as Markdown, JSON, and CSV in the public GitHub repository.</p><p><code>${esc(state.submission.path)}</code></p></div>` : `<p>창을 닫지 마십시오. / Please do not close this window.</p><p id="submitStatus" class="help">GitHub 저장소에 연결하고 있습니다. / Connecting to the GitHub repository…</p><button id="retry" class="secondary" hidden>다시 시도 / Retry</button>`}
     ${stored ? `<div class="actions"><span></span><button id="newResponse" class="primary">새로운 랜덤 문제 시작 / Start new random items</button></div>` : ""}</section>`;
   if (stored) {
     document.querySelector("#newResponse").onclick = startNewResponse;
@@ -476,6 +604,8 @@ async function submitResponse() {
           Math.round((Date.parse(state.completedAt) - state.startedAt) / 1000),
         ),
         markdown: markdown(),
+        json: jsonResponse(),
+        csv: csvResponse(),
       }),
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);

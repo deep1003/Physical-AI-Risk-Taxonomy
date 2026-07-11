@@ -32,20 +32,20 @@ Version 1.0 \quad | \quad 2026-07-10
 \end{center}
 
 \bisection{연구 목적}{Study objective}
-본 조사의 주목적은 각 L4 카드에 기존 L3와 유사 대안 L3를 쌍으로 제시하고 독립 전문가가 어느 후보를 더 적합하다고 판단하는지 검증하는 것이다. 카드--L3 연결의 판별 타당성을 평가하며, 24개 위험군이 유일하거나 최적이라는 점을 검증하지 않는다.
+본 조사의 주목적은 각 L4 카드에 사전 지정 기준 배정 L3와 유사 대안 L3를 쌍으로 제시하고 독립 전문가가 어느 후보를 더 적합하다고 판단하는지 검증하는 것이다. 카드--L3 연결의 제한적 판별 타당성을 평가하며, 24개 위험군이 유일하거나 최적이라는 점을 검증하지 않는다.
 
-The primary objective is to test whether independent experts prefer the canonical L3 over a closely matched alternative for each L4 card. This evaluates discriminant validity of the card--family links, not uniqueness or optimality of the taxonomy.
+The primary objective is to test whether independent experts prefer the pre-specified reference assignment over a closely matched alternative for each L4 card. This evaluates constrained discriminant validity of the card--family links, not uniqueness or optimality of the taxonomy.
 
 \bisection{연구 설계}{Study design}
 \begin{itemize}
-\item L4 카드 182개, L3 위험군 24개, 독립 전문가 9명 이상 모집
-\item 전체 카드의 최소 3회 평가를 위해 최소 19개 완주 응답 목표
+\item L4 카드 182개, L3 위험군 24개, 독립 전문가 최소 20명 이상 실시
+\item 19개 완주 응답 이후 전체 카드의 최소 3회 평가 확보
 \item A01--A19 균형 블록, 응답자당 정확히 30개 강제선택 쌍대비교
 \item 총 570건의 계획 판단; 카드당 3회 또는 4회 평가
 \item L3 기준 층화 균형 불완전 블록 설계
-\item 기존 label, 임베딩 결과, 유사도, 군집 ID 및 다른 평가자의 응답에 대한 맹검
-\item 기존 L3와 같은 L2의 유사 대안 L3를 사전 규칙으로 매칭
-\item 1차 평가변수: 기존 L3 선택률과 card-level bootstrap 95\% CI
+\item 사전 지정 기준 배정, 임베딩 결과, 유사도, 군집 ID 및 다른 평가자의 응답에 대한 맹검
+\item 사전 지정 기준 배정과 같은 L2의 유사 대안 L3를 사전 규칙으로 매칭
+\item 1차 평가변수: 원래 응답 기준 reference assignment 선택률과 Wilson 또는 bootstrap 95\% CI
 \end{itemize}
 
 \bisection{전문가 선정}{Expert eligibility}
@@ -69,9 +69,9 @@ The questionnaire does not request names, email addresses, exact age, or institu
 \item 이중언어 L3 codebook과 분류 규칙 검토
 \item 각 L4 카드에 제시된 두 L3 후보 중 더 적합한 하나를 선택
 \item 확신도 및 선택적 의견 기록
-\item 알고리즘 배정과 다른 고확신 응답을 최대 3개까지 재검토한 뒤 구조화된 Markdown 응답 저장
+\item 사전 지정 기준 배정과 다른 고확신 응답을 최대 3개까지 재검토한 뒤 구조화된 Markdown, JSON, CSV 응답 저장
 \end{enumerate}
-후보 A/B의 표시 순서는 무작위화하며 동점 또는 판단 불가 선택지는 제공하지 않는다.
+후보 A/B의 표시 순서는 무작위화하며 동점, 판단 불가, unknown 또는 unmappable 선택지는 제공하지 않는다.
 
 \bisection{카드 표시 및 맹검}{Card presentation and blinding}
 카드에는 무작위 표시 ID, L4 label·definition 및 두 L3 후보를 표시한다. 어느 후보가 기존 배정인지, L2, 심각도·확률, 참고문헌 수와 계산 결과는 공개하지 않는다. 카드와 후보 순서는 평가자별로 재현 가능하게 무작위화한다.
@@ -84,24 +84,24 @@ The questionnaire does not request names, email addresses, exact age, or institu
 \end{enumerate}
 
 \bisection{자료 보존}{Data retention}
-응답은 브라우저 localStorage에 자동 임시저장하고 완료 시 구조화된 Markdown으로 변환해 공개 GitHub 응답 저장소에 자동 보존한다. 설문 시작·종료 시각, 총 소요시간과 국가 수준의 접속지역은 응답과 분리된 비공개 GitHub 저장소에 1년간 보존한다. 원본 IP와 더 세부적인 위치·접속·기기 정보는 저장하지 않으며 공개 응답에는 시간 및 국가 정보를 포함하지 않는다. 제한시간은 없다.
+응답은 브라우저 localStorage에 자동 임시저장하고 완료 시 구조화된 Markdown, JSON, CSV로 변환해 공개 GitHub 응답 저장소에 자동 보존한다. 설문 시작·종료 시각, 총 소요시간과 국가 수준의 접속지역은 응답과 분리된 비공개 GitHub 저장소에 1년간 보존한다. 원본 IP와 더 세부적인 위치·접속·기기 정보는 저장하지 않으며 공개 응답에는 시간 및 국가 정보를 포함하지 않는다. 제한시간은 없다.
 
 \bisection{품질관리}{Quality control}
 불일치 자체를 이유로 평가자를 제외하지 않는다. 미완료, 독립성 위반, 기술적 손실 또는 사전 정의된 비성실 패턴만 제외 사유로 검토한다. 응답에는 설문 버전, 데이터 스냅샷 해시, 배정 버전과 익명 평가자 코드를 기록한다.
 
 \bisection{분석 계획}{Statistical analysis}
 \bisubsection{1차 분석}{Primary analysis}
-분석 단위는 L4 카드이다. 기존 L3 선택률과 카드 단위 bootstrap 5,000회 95\% 신뢰구간을 산출하며 선택확률 0.5를 귀무기준으로 사용한다.
+주 분석은 원래 응답만 사용한다. 분석 단위는 L4 카드이며, reference assignment 선택률과 카드별 Wilson 또는 카드 단위 bootstrap 5,000회 95\% 신뢰구간을 산출한다. 선택확률 0.5를 귀무기준으로 사용한다.
 
 \bisubsection{보조 분석}{Secondary analyses}
-카드별 기존 L3 다수선택률과 완전일치율, family별 선택률, macro-average와 worst-family 결과, 후보쌍별 선택률, 확신도별 결과 및 margin--인간 선택 관계를 보고한다. 570개 계획 판단을 독립 표본으로 간주하지 않는다. 9--18개 완주 응답은 전체 카드 검증을 위한 중간자료로만 취급한다.
+카드별 agreement 비율, family별 선택률, macro-average와 worst-family 결과, respondent-level 완료율과 평균 agreement, 후보쌍별 선택률, 확신도별 결과 및 margin--인간 선택 관계를 보고한다. 재검토 결과는 고확신 불일치 판단의 안정성과 원래 전문가 답변에서 reference assignment로 전환한 switch rate를 보는 보조 분석으로만 사용한다. 570개 계획 판단을 독립 표본으로 간주하지 않으며 card-level, family-level, respondent-level 요약을 분리한다. 19개 미만 완주 응답은 전체 카드 검증을 위한 중간자료로만 취급한다.
 
 \bisection{사전 의사결정 규칙}{Prespecified interpretation}
 \begin{longtable}{p{0.28\textwidth}p{0.64\textwidth}}
 \toprule
 결과 / Result & 해석 및 조치 / Interpretation and action\\
 \midrule
-전체 선택률의 95\% CI 하한 $>0.50$ & 매칭 대안보다 기존 연결이 우세하다는 증거\\
+전체 선택률의 95\% CI 하한 $>0.50$ & 매칭 대안보다 reference assignment가 우세하다는 증거\\
 95\% CI가 0.50 포함 & 판별 근거 불충분; 확정적 타당화 주장 금지\\
 Family 선택률 $<60\%$ & family 정의·경계 또는 카드 연결 재검토\\
 3인 중 2인 이상 대안 선택 & 해당 카드--family 연결을 우선 재검토\\
@@ -113,5 +113,5 @@ Family 선택률 $<60\%$ & family 정의·경계 또는 카드 연결 재검토\
 설문 결과로 L3 정의를 수정한 경우 동일 응답으로 수정된 taxonomy의 성능을 확증하지 않는다. 별도 holdout 또는 신규 전문가로 재검증하거나 미검증 개정안으로 명시한다.
 
 \bisection{산출물}{Deliverables}
-이중언어 계획서(Markdown, LaTeX, PDF), GitHub Pages 설문, 24개 L3 및 182개 L4 고정 데이터 스냅샷, A01--A19 배정표, Markdown 응답과 데이터 사전을 제공한다.
+이중언어 계획서(Markdown, LaTeX, PDF), GitHub Pages 설문, 24개 L3 및 182개 L4 고정 데이터 스냅샷, A01--A19 배정표, Markdown, JSON, CSV 응답과 데이터 사전을 제공한다.
 \end{document}

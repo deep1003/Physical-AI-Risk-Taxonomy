@@ -25,7 +25,13 @@ function validPayload(payload) {
     && /^[a-f0-9-]{36}$/.test(payload.submission_id || "")
     && typeof payload.markdown === "string"
     && payload.markdown.length >= 500
-    && payload.markdown.length <= 200_000;
+    && payload.markdown.length <= 200_000
+    && typeof payload.json === "string"
+    && payload.json.length >= 500
+    && payload.json.length <= 300_000
+    && typeof payload.csv === "string"
+    && payload.csv.length >= 500
+    && payload.csv.length <= 300_000;
 }
 
 function partition(dateValue) {
@@ -107,19 +113,41 @@ async function saveTelemetry(payload, request, receivedAt, env) {
 
 async function savePublicResponse(payload, env) {
   const { year, month } = partition(payload.submitted_at);
-  const filename = `${payload.respondent_id}_${payload.submission_id}.md`;
-  const path = `responses/${year}/${month}/${filename}`;
-  const stored = await putGitHubFile(
-    env.GH_REPO,
-    path,
-    payload.markdown,
-    `Add anonymous survey response ${payload.respondent_id}`,
-    env,
-  );
+  const stem = `${payload.respondent_id}_${payload.submission_id}`;
+  const path = `responses/${year}/${month}/${stem}.md`;
+  const jsonPath = `responses/${year}/${month}/${stem}.json`;
+  const csvPath = `responses/${year}/${month}/${stem}.csv`;
+  const [markdown, json, csv] = await Promise.all([
+    putGitHubFile(
+      env.GH_REPO,
+      path,
+      payload.markdown,
+      `Add anonymous survey response ${payload.respondent_id}`,
+      env,
+    ),
+    putGitHubFile(
+      env.GH_REPO,
+      jsonPath,
+      payload.json,
+      `Add anonymous survey JSON ${payload.respondent_id}`,
+      env,
+    ),
+    putGitHubFile(
+      env.GH_REPO,
+      csvPath,
+      payload.csv,
+      `Add anonymous survey CSV ${payload.respondent_id}`,
+      env,
+    ),
+  ]);
   return {
     path,
+    json_path: jsonPath,
+    csv_path: csvPath,
     url: `https://github.com/${env.GH_OWNER}/${env.GH_REPO}/blob/main/${path}`,
-    duplicate: stored.duplicate,
+    json_url: `https://github.com/${env.GH_OWNER}/${env.GH_REPO}/blob/main/${jsonPath}`,
+    csv_url: `https://github.com/${env.GH_OWNER}/${env.GH_REPO}/blob/main/${csvPath}`,
+    duplicate: markdown.duplicate && json.duplicate && csv.duplicate,
   };
 }
 
