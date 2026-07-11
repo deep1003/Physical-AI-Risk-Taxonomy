@@ -250,7 +250,7 @@
       "display_id": "V001",
       "label_ko": "물리적 위험 개입 실패",
       "label_en": "Physical danger intervention failure",
-      "definition_ko": "시스템이 위험 상황을 인식했음에도 불구하고 즉시 안전한 개입이나 거부 응답을 생성하지 못하는 실패.",
+      "definition_ko": "시스템이 위험 상황을 인식했음에도 불구하고 즉시 안전한 개입이나 거부 응답을 생성하지 못하는 실패입니다.",
       "definition_en": "A system recognizes a hazardous physical situation but fails to produce a timely and appropriate intervention or refusal.",
       "pair_family_ids": [
         "P3.1",
@@ -262,7 +262,7 @@
       "display_id": "V002",
       "label_ko": "물리적 상식 위반",
       "label_en": "Commonsense physicality violation",
-      "definition_ko": "물체 지지, 안정성, 포장 등 기본 물리 법칙을 위반하는 행동을 제안하거나 실행하는 실패.",
+      "definition_ko": "물체 지지, 안정성, 포장 등 기본 물리 법칙을 위반하는 행동을 제안하거나 실행하는 실패입니다.",
       "definition_en": "A model proposes or executes an action that violates basic physical commonsense about object support, stability, containment, or gravity.",
       "pair_family_ids": [
         "P3.1",
@@ -274,7 +274,7 @@
       "display_id": "V003",
       "label_ko": "복합 물리적 제약 위반",
       "label_en": "Compositional physical constraint violation",
-      "definition_ko": "개별로는 문제가 없는 행동들이 물리적 제약 간의 의존성을 제대로 모델링하지 못해 안전하지 않은 계획을 만드는 실패.",
+      "definition_ko": "개별로는 문제가 없는 행동들이 물리적 제약 간의 의존성을 제대로 모델링하지 못해서 안전하지 않은 계획을 만드는 실패입니다.",
       "definition_en": "Individually valid actions are combined into an unsafe plan because dependencies among physical constraints are not modeled.",
       "pair_family_ids": [
         "P3.1",
@@ -286,7 +286,7 @@
       "display_id": "V004",
       "label_ko": "안전 강화학습 제약 위반",
       "label_en": "Safe reinforcement learning constraint violation",
-      "definition_ko": "강화학습 정책이 명시적으로 설정된 안전 제약을 위반하면서도 과제를 완료하는 실패.",
+      "definition_ko": "강화학습 정책이 명시적으로 설정된 안전 제약을 위반하면서도 과제를 완료하는 실패입니다.",
       "definition_en": "A reinforcement learning policy achieves task reward while violating explicit safety constraints represented as costs or limits.",
       "pair_family_ids": [
         "P3.1",
@@ -298,7 +298,7 @@
       "display_id": "V005",
       "label_ko": "제약 비용 과소평가",
       "label_en": "Constraint-cost underestimation",
-      "definition_ko": "정책이나 평가자가 시간이 지나면 제약을 위반하는 행동을 예상하지 못해 안전 비용을 너무 낮게 평가하는 실패.",
+      "definition_ko": "정책이나 평가자가 시간이 지나면 제약을 위반하는 행동을 예상하지 못해서 안전 비용을 너무 낮게 평가하는 실패입니다.",
       "definition_en": "A policy or evaluator underestimates cumulative safety costs, making apparently safe behavior violate constraints over time.",
       "pair_family_ids": [
         "P3.1",
@@ -310,7 +310,7 @@
       "display_id": "V006",
       "label_ko": "물리적 상호작용 안전 공백",
       "label_en": "Physical interaction safety control gap",
-      "definition_ko": "기반 모델을 탑재한 로봇이 사람과 직접 접촉하거나 가까이에서 움직일 때 필요한 안전 통제가 충분하지 않은 위험.",
+      "definition_ko": "기반 모델을 탑재한 로봇이 사람과 직접 접촉하거나 가까이에서 움직일 때 필요한 안전 통제가 충분하지 않은 위험입니다.",
       "definition_en": "Risk controls insufficiently cover direct physical interaction between humans and foundation-model-enabled robots.",
       "pair_family_ids": [
         "P3.1",
@@ -322,7 +322,7 @@
       "display_id": "V007",
       "label_ko": "제약 모니터링 실패",
       "label_en": "Constraint monitoring failure",
-      "definition_ko": "런타임 모니터가 속도, 힘, 작업 공간, 충돌, 물체 사용, 작업 완료 등 제약을 감지하거나 실행하지 못하는 실패.",
+      "definition_ko": "런타임 모니터가 속도, 힘, 작업 공간, 충돌, 물체 사용, 작업 완료 등 제약을 감지하거나 실행하지 못하는 실패입니다.",
       "definition_en": "Runtime monitors fail to detect or enforce constraints governing speed, force, workspace, collision, object use, or task protocol.",
       "pair_family_ids": [
         "P3.1",
@@ -334,7 +334,7 @@
       "display_id": "V008",
       "label_ko": "위험 작업 계획 실패",
       "label_en": "Hazardous task planning failure",
-      "definition_ko": "기반 모델이 탑재된 로봇이 물리적 위험을 포함한 작업 계획을 생성하거나 승인하는 실패.",
+      "definition_ko": "기반 모델이 탑재된 로봇이 물리적 위험을 포함한 작업 계획을 생성하거나 승인하는 실패입니다.",
       "definition_en": "An embodied LLM agent generates or approves a plan for a task that contains physical hazards despite being expected to refuse, revise, or add safety constraints.",
       "pair_family_ids": [
         "P3.1",
@@ -346,7 +346,7 @@
       "display_id": "V009",
       "label_ko": "숨겨진 물리적 위험을 알아차리지 못하는 실패",
       "label_en": "Implicit hazard non-rejection",
-      "definition_ko": "물리적으로 행동하는 에이전트가 평범해 보이는 작업 지시에 숨은 물리적 위험을 추론하지 못해 해당 작업을 거부하지 않는 실패.",
+      "definition_ko": "물리적으로 행동하는 에이전트가 평범해 보이는 작업 지시에 숨은 물리적 위험을 추론하지 못해서 해당 작업을 거부하지 않는 실패입니다.",
       "definition_en": "An embodied agent fails to infer and reject an implicit physical hazard hidden in otherwise ordinary task instructions.",
       "pair_family_ids": [
         "P3.1",
@@ -358,7 +358,7 @@
       "display_id": "V010",
       "label_ko": "안전을 고려하지 않은 행동 변환 실패",
       "label_en": "Embodied safety awareness failure",
-      "definition_ko": "로봇이 언어 목표를 물리적 행동으로 변환할 때 안전을 충분히 확인하지 못해 위험한 행동을 실행하는 실패.",
+      "definition_ko": "로봇이 언어 목표를 물리적 행동으로 변환할 때 안전을 충분히 확인하지 못해서 위험한 행동을 실행하는 실패입니다.",
       "definition_en": "An embodied agent lacks robust safety awareness when converting language goals into executable physical actions.",
       "pair_family_ids": [
         "P3.1",
@@ -370,7 +370,7 @@
       "display_id": "V011",
       "label_ko": "안전과 성능을 균형 잡지 못하는 실패",
       "label_en": "Safety-performance trade-off failure",
-      "definition_ko": "로봇이 작업을 빠르게 완료하기 위해 충돌 회피나 안전 제약을 무시하는 실패.",
+      "definition_ko": "로봇이 작업을 빠르게 완료하기 위해 충돌 회피나 안전 제약을 무시하는 실패입니다.",
       "definition_en": "A manipulation policy improves task completion while sacrificing collision avoidance or other explicit safety constraints.",
       "pair_family_ids": [
         "P3.1",
@@ -382,7 +382,7 @@
       "display_id": "V012",
       "label_ko": "다양한 로봇 간 행동 불일치",
       "label_en": "Cross-embodiment action-space mismatch",
-      "definition_ko": "로봇이 다른 로봇 기종에 훈련된 정책으로 인해 특정 로봇에서 위험하거나 실행 불가능한 행동을 수행하는 실패.",
+      "definition_ko": "로봇이 다른 로봇 기종에 훈련된 정책으로 인해 특정 로봇에서 위험하거나 실행 불가능한 행동을 수행하는 실패입니다.",
       "definition_en": "A policy trained across different robot embodiments maps commands into actions that are unsafe or infeasible for a specific robot action space.",
       "pair_family_ids": [
         "P3.1",
@@ -394,7 +394,7 @@
       "display_id": "V013",
       "label_ko": "로봇 형태 전이 위험",
       "label_en": "Robot morphology transfer risk",
-      "definition_ko": "한 로봇의 형태에서 학습한 기술이 다른 형태로 불량하게 전이되어 안전하지 않은한 도달, 힘, 잡기, 이동 경로 탐색을 생성하는 위험.",
+      "definition_ko": "한 로봇의 형태에서 학습한 기술이 다른 형태로 불량하게 전이되어서 안전하지 않은 도달, 힘, 잡기, 이동 경로 탐색을 생성하는 위험입니다.",
       "definition_en": "Skills learned on one robot morphology transfer poorly to another morphology, producing unsafe reach, force, grasp, or navigation behavior.",
       "pair_family_ids": [
         "P3.1",
@@ -406,7 +406,7 @@
       "display_id": "V014",
       "label_ko": "인간 시연 데이터 모호성 위험",
       "label_en": "Human demonstration transfer ambiguity",
-      "definition_ko": "인간 시연 데이터의 모호성이 로봇이 잠재적 안전 제약을 이해하지 못하고 행동을 재현하게 하는 위험.",
+      "definition_ko": "인간 시연 데이터의 모호성이 로봇이 잠재적 안전 제약을 이해하지 못하고 행동을 재현하게 하는 위험입니다.",
       "definition_en": "Ambiguities in human demonstration data cause a robot to reproduce actions without understanding latent safety constraints or context-specific limits.",
       "pair_family_ids": [
         "P3.1",
@@ -418,7 +418,7 @@
       "display_id": "V015",
       "label_ko": "휴머노이드 보상 과적합 위험",
       "label_en": "Humanoid reward overfitting risk",
-      "definition_ko": "휴머노이드 컨트롤러가 벤치마크 보상이나 모방 목표에 과적합되어 배포 환경에서 안전하지 않은한 행동을 생성하는 위험.",
+      "definition_ko": "휴머노이드 컨트롤러가 벤치마크 보상이나 모방 목표에 과적합되어서 배포 환경에서 안전하지 않은 행동을 생성하는 위험입니다.",
       "definition_en": "A humanoid controller overfits to benchmark rewards or imitation objectives and produces lifelike but unsafe behavior outside the evaluation setting.",
       "pair_family_ids": [
         "P3.1",
@@ -430,7 +430,7 @@
       "display_id": "V016",
       "label_ko": "휴머노이드 행동 재현성 결함",
       "label_en": "Humanoid behavior reproducibility gap",
-      "definition_ko": "휴머노이드 행동 정책이 시뮬레이션 환경에서 안정적으로 작동하지만, 실제 환경에서 신뢰성 있게 재현되지 않는 위험.",
+      "definition_ko": "휴머노이드 행동 정책이 시뮬레이션 환경에서 안정적으로 작동하지만, 실제 환경에서 신뢰성 있게 재현되지 않는 위험입니다.",
       "definition_en": "A humanoid behavior policy appears stable in one simulated training or evaluation setting but cannot be reliably reproduced across seeds, simulators, or deployment contexts.",
       "pair_family_ids": [
         "P3.1",
@@ -442,7 +442,7 @@
       "display_id": "V017",
       "label_ko": "인간 모방 분포 이동",
       "label_en": "Human-mimicking distribution shift",
-      "definition_ko": "휴머노이드가 인간과 환경 상호작용을 모방하는 방식으로 훈련된 경우, 물체의 형태나 배치, 상호작용 맥락이 달라질 때 실패하는 위험.",
+      "definition_ko": "휴머노이드가 인간과 환경 상호작용을 모방하는 방식으로 훈련된 경우, 물체의 형태나 배치, 상호작용 맥락이 달라질 때 실패하는 위험입니다.",
       "definition_en": "A humanoid trained to mimic human-scene interaction fails when object geometry, scene layout, or interaction context differs from the demonstrations.",
       "pair_family_ids": [
         "P3.1",
@@ -454,7 +454,7 @@
       "display_id": "V018",
       "label_ko": "모션 로봇 몸체에 맞게 변환 안전 실패",
       "label_en": "Motion-retargeting safety failure",
-      "definition_ko": "휴머노이드 몸체에 인간의 움직임을 적용할 때, 로봇의 물리적 한계나 접촉 제약을 위반하는 방식으로 로봇 몸체에 맞게 변환되는 위험.",
+      "definition_ko": "휴머노이드 몸체에 인간의 움직임을 적용할 때, 로봇의 물리적 한계나 접촉 제약을 위반하는 방식으로 로봇 몸체에 맞게 변환되는 위험입니다.",
       "definition_en": "Human motion is retargeted to a humanoid body in a way that violates the robot's physical limits, contact constraints, or safe posture requirements.",
       "pair_family_ids": [
         "P3.1",
@@ -466,7 +466,7 @@
       "display_id": "V019",
       "label_ko": "휴머노이드 제로샷 전이 불안정성",
       "label_en": "Zero-shot humanoid sim-to-real instability",
-      "definition_ko": "시뮬레이션에서 직접 하드웨어로 이동시킨 휴머노이드 움직임 제어기가 실제 물리 세계와의 모델 차이로 불안정해지는 위험.",
+      "definition_ko": "시뮬레이션에서 직접 하드웨어로 이동시킨 휴머노이드 움직임 제어기가 실제 물리 세계와의 모델 차이로 불안정해지는 위험입니다.",
       "definition_en": "A humanoid locomotion controller transferred directly from simulation to hardware becomes unstable because simulated dynamics do not match real-world contacts, compliance, or disturbances.",
       "pair_family_ids": [
         "P3.1",
@@ -478,7 +478,7 @@
       "display_id": "V020",
       "label_ko": "장기 예측 누적 오차",
       "label_en": "Long-horizon rollout drift",
-      "definition_ko": "휴머노이드가 예측하는 미래 환경에서 모델 오차가 누적되어 실제 물리적 동역학과 차이가 커지게 하는 위험.",
+      "definition_ko": "휴머노이드가 예측하는 미래 환경에서 모델 오차가 누적되어서 실제 물리적 동역학과 차이가 커지게 하는 위험입니다.",
       "definition_en": "Errors in a humanoid world model compound over future prediction horizons, causing plans to diverge from real physical dynamics or hazards.",
       "pair_family_ids": [
         "P3.1",
@@ -490,7 +490,7 @@
       "display_id": "V021",
       "label_ko": "장기 계획 오차 누적",
       "label_en": "Long-horizon error accumulation",
-      "definition_ko": "소규모 인지·예측·제어 오차가 긴 작업 연속 과정를 통해 복합되어 최종 물리적 행동이 안전 경계를 초과하는 위험.",
+      "definition_ko": "소규모 인지, 예측, 제어 오차가 긴 작업 연속 과정를 통해 복합되어서 최종 물리적 행동이 안전 경계를 초과하는 위험입니다.",
       "definition_en": "Small perception, prediction, or control errors may compound across long task sequences until the final physical behavior becomes unsafe.",
       "pair_family_ids": [
         "P3.1",
@@ -502,7 +502,7 @@
       "display_id": "V022",
       "label_ko": "기반 모델 고유의 위험",
       "label_en": "Foundation-model-specific robot risk",
-      "definition_ko": "로봇이 기반 모델의 사실과 다른 정보 생성·지시 실패·안전 제한 우회 등 고유 행동을 물리적 결과로 전달하는 위험.",
+      "definition_ko": "로봇이 기반 모델의 사실과 다른 정보 생성, 지시 실패, 안전 제한 우회 등 고유 행동을 물리적 결과로 전달하는 위험입니다.",
       "definition_en": "Robotics systems inherit foundation-model behaviors such as hallucination, instruction following failure, and jailbreak susceptibility in safety-critical physical contexts.",
       "pair_family_ids": [
         "P3.1",
@@ -514,7 +514,7 @@
       "display_id": "V023",
       "label_ko": "그리퍼 형상·유형 제약 위반",
       "label_en": "Gripper geometry and type constraint violation",
-      "definition_ko": "로봇이 그리퍼의 형상이나 유형을 고려하지 않고 물리적 접촉을 시도하는 실패.",
+      "definition_ko": "로봇이 그리퍼의 형상이나 유형을 고려하지 않고 물리적 접촉을 시도하는 실패입니다.",
       "definition_en": "A physical agent selects an action that violates constraints imposed by gripper geometry, gripper type, or feasible contact mechanics.",
       "pair_family_ids": [
         "P3.2",
@@ -526,7 +526,7 @@
       "display_id": "V024",
       "label_ko": "재료 특성 제약 위반",
       "label_en": "Material property constraint violation",
-      "definition_ko": "로봇이 재료의 취성·탄성·날카로움·독성·열전달 특성을 무시해 물리적 행동을 계획하는 실패.",
+      "definition_ko": "로봇이 재료의 취성, 탄성, 날카로움, 독성, 열전달 특성을 무시해서 물리적 행동을 계획하는 실패입니다.",
       "definition_en": "A robot or embodied model ignores material properties such as fragility, elasticity, sharpness, toxicity, or heat transfer when planning physical actions.",
       "pair_family_ids": [
         "P3.2",
@@ -586,7 +586,7 @@
       "display_id": "V029",
       "label_ko": "탑재 하중 제약 위반",
       "label_en": "Payload constraint violation",
-      "definition_ko": "로봇이 안전한 탑재 하중·부하 분포·리프팅 제약을 초과하면 낙하·구동장치 손상·인체 상해가 발생하는 위험입니다.",
+      "definition_ko": "로봇이 안전한 탑재 하중, 부하 분포, 리프팅 제약을 초과하면 낙하, 구동장치 손상, 인체 상해가 발생하는 위험입니다.",
       "definition_en": "A robot exceeds safe payload, load distribution, or lifting constraints, creating object-drop, actuator, or human-injury risk.",
       "pair_family_ids": [
         "P3.2",
@@ -598,7 +598,7 @@
       "display_id": "V030",
       "label_ko": "작업 공간 한계 위반",
       "label_en": "Workspace limit violation",
-      "definition_ko": "로봇이 허용된 작업 공간 밖으로 이동하거나 인간 전용·위험 구역에 진입하면 즉각적인 충돌 위험이 발생하는 실패입니다.",
+      "definition_ko": "로봇이 허용된 작업 공간 밖으로 이동하거나 인간 전용, 위험 구역에 진입하면 즉각적인 충돌 위험이 발생하는 실패입니다.",
       "definition_en": "A robot or embodied agent moves outside a permitted workspace or enters a human-only or hazard-designated zone.",
       "pair_family_ids": [
         "P3.2",
@@ -610,7 +610,7 @@
       "display_id": "V031",
       "label_ko": "허용 대상물 제약 위반",
       "label_en": "Permissible object constraint violation",
-      "definition_ko": "피지컬 AI 시스템이 위험·소유권·윤리적 제한으로 배제해야 할 대상물을 조작하거나 권장하면 발생하는 위험입니다.",
+      "definition_ko": "피지컬 AI 시스템이 위험, 소유권, 윤리적 제한으로 배제해야 할 대상물을 조작하거나 권장하면 발생하는 위험입니다.",
       "definition_en": "A physical AI system manipulates or recommends manipulating objects that should be excluded because of hazard, ownership, fragility, or procedural restrictions.",
       "pair_family_ids": [
         "P3.2",
@@ -634,7 +634,7 @@
       "display_id": "V033",
       "label_ko": "위험 도구 작업 공간 침입",
       "label_en": "Hazardous-tool workspace intrusion",
-      "definition_ko": "로봇이 위험 도구를 운반하거나 작동 중인 상태에서 인간 작업 공간에 들어가거나 도구별로 요구되는 배제 조건을 위반하는 실패.",
+      "definition_ko": "로봇이 위험 도구를 운반하거나 작동 중인 상태에서 인간 작업 공간에 들어가거나 도구별로 요구되는 배제 조건을 위반하는 실패입니다.",
       "definition_en": "A robot carrying or operating a hazardous tool enters a human workspace or violates tool-specific exclusion requirements.",
       "pair_family_ids": [
         "P3.2",
@@ -646,7 +646,7 @@
       "display_id": "V034",
       "label_ko": "엔드이펙터 속도 초과",
       "label_en": "Excessive end-effector velocity",
-      "definition_ko": "인간 근접 또는 취약 물체 처리 시 안전한 속도 한계를 초과해 충격이나 충돌을 유발하는 실패.",
+      "definition_ko": "인간 근접 또는 취약 물체 처리 시 안전한 속도 한계를 초과해서 충격이나 충돌을 유발하는 실패입니다.",
       "definition_en": "A robot exceeds safe end-effector speed limits near humans or fragile objects, increasing impact and collision severity.",
       "pair_family_ids": [
         "P3.2",
@@ -658,7 +658,7 @@
       "display_id": "V035",
       "label_ko": "조기 물체 해제",
       "label_en": "Premature object release",
-      "definition_ko": "로봇이 안전한 자세나 표면에 도달하기 전에 물체를 해제해 낙하·유출·충격 또는 2차 위험을 일으키는 실패.",
+      "definition_ko": "로봇이 안전한 자세나 표면에 도달하기 전에 물체를 해제해서 낙하, 유출, 충격 또는 2차 위험을 일으키는 실패입니다.",
       "definition_en": "A robot releases an object before reaching a safe pose or surface, causing drops, spills, impacts, or secondary hazards.",
       "pair_family_ids": [
         "P3.2",
@@ -670,7 +670,7 @@
       "display_id": "V036",
       "label_ko": "금지 대상 충돌",
       "label_en": "Forbidden-object collision",
-      "definition_ko": "작업 또는 안전 규칙상 접촉이 금지된 물체·사람·장비와 충돌하는 실패.",
+      "definition_ko": "작업 또는 안전 규칙상 접촉이 금지된 물체, 사람, 장비와 충돌하는 실패입니다.",
       "definition_en": "A robot collides with objects, people, or equipment that must not be contacted under task or safety rules.",
       "pair_family_ids": [
         "P3.2",
@@ -682,7 +682,7 @@
       "display_id": "V037",
       "label_ko": "장애물 충돌",
       "label_en": "Obstacle intervention collision",
-      "definition_ko": "VLA 로봇이 움직일 때 장애물이 간섭하면 장애물과 충돌하거나 안전한 경로를 유지하지 못하는 실패.",
+      "definition_ko": "VLA 로봇이 움직일 때 장애물이 간섭하면 장애물과 충돌하거나 안전한 경로를 유지하지 못하는 실패입니다.",
       "definition_en": "A vision-language-action robot collides with an obstacle or fails to maintain a safe path when an obstacle intervenes during manipulation.",
       "pair_family_ids": [
         "P3.2",
@@ -694,7 +694,7 @@
       "display_id": "V038",
       "label_ko": "제어 장벽 함수 실패",
       "label_en": "Control barrier function safety-filter failure",
-      "definition_ko": "제어 장벽 함수로 만든 안전 레이어가 인지·동역학·모델 오류로 인해 안전하지 않은 행동을 방지하지 못하는 실패.",
+      "definition_ko": "제어 장벽 함수로 만든 안전 레이어가 인지, 동역학, 모델 오류로 인해 안전하지 않은 행동을 방지하지 못하는 실패입니다.",
       "definition_en": "A safety layer based on control barrier functions fails to constrain unsafe actions under perception, dynamics, or model uncertainty.",
       "pair_family_ids": [
         "P3.2",
@@ -706,7 +706,7 @@
       "display_id": "V039",
       "label_ko": "VLA 조작 제약 위반",
       "label_en": "VLA manipulation constraint violation",
-      "definition_ko": "비전-언어-행동 모델이 물체 조작 중 고수준 안전 지시를 따르더라도 작업별 물리적 제약을 위반하는 실패.",
+      "definition_ko": "비전-언어-행동 모델이 물체 조작 중 고수준 안전 지시를 따르더라도 작업별 물리적 제약을 위반하는 실패입니다.",
       "definition_en": "A vision-language-action model violates task-specific physical constraints during object manipulation despite high-level instruction compliance.",
       "pair_family_ids": [
         "P3.2",
@@ -718,7 +718,7 @@
       "display_id": "V040",
       "label_ko": "접촉 조작 힘 감지 실패",
       "label_en": "Contact-rich manipulation force-sensing failure",
-      "definition_ko": "접촉 집약 조작 정책이 힘·촉각·오디오·시각 정보를 정확히 활용하지 못해 안전하지 않은한 압력·파지·이동을 일으키는 실패.",
+      "definition_ko": "접촉 집약 조작 정책이 힘, 촉각, 오디오, 시각 정보를 정확히 활용하지 못해서 안전하지 않은 압력, 파지, 이동을 일으키는 실패입니다.",
       "definition_en": "A contact-rich manipulation policy fails to correctly use force, tactile, audio, or visual cues, creating unsafe pressure, impact, or object-damage risk.",
       "pair_family_ids": [
         "P3.2",
@@ -730,7 +730,7 @@
       "display_id": "V041",
       "label_ko": "전신 이동 충돌 위험",
       "label_en": "Whole-body locomotion collision risk",
-      "definition_ko": "휴머노이드가 이동 중 전신 동작과 환경 접촉을 모두 고려하지 않아 물체·벽·인간과 충돌하는 위험.",
+      "definition_ko": "휴머노이드가 이동 중 전신 동작과 환경 접촉을 모두 고려하지 않아 물체, 벽, 인간과 충돌하는 위험입니다.",
       "definition_en": "A humanoid locomotion policy collides with objects, walls, or humans because whole-body motion and environmental contact constraints are not jointly satisfied.",
       "pair_family_ids": [
         "P3.2",
@@ -742,7 +742,7 @@
       "display_id": "V042",
       "label_ko": "정밀 휴머노이드 접촉력 위험",
       "label_en": "Dexterous humanoid contact-force risk",
-      "definition_ko": "휴머노이드 손이나 전신 조작기가 물체를 잡거나 균형을 유지하는 데 필요한 힘을 충분히 고려하지 않아 안전하지 않은한 접촉력을 가하는 위험.",
+      "definition_ko": "휴머노이드 손이나 전신 조작기가 물체를 잡거나 균형을 유지하는 데 필요한 힘을 충분히 고려하지 않아 안전하지 않은 접촉력을 가하는 위험입니다.",
       "definition_en": "A dexterous humanoid hand or whole-body manipulator applies unsafe contact forces because grasp, balance, and object dynamics are not jointly controlled.",
       "pair_family_ids": [
         "P3.2",
@@ -754,7 +754,7 @@
       "display_id": "V043",
       "label_ko": "전신 도달 한계 위반",
       "label_en": "Whole-body reach-limit violation",
-      "definition_ko": "휴머노이드가 도달 가능 범위와 관절·자세 한계를 넘어 조작을 시도해 불안정성·충돌·물체 손상을 유발하는 실패.",
+      "definition_ko": "휴머노이드가 도달 가능 범위와 관절, 자세 한계를 넘어 조작을 시도해서 불안정성, 충돌, 물체 손상을 유발하는 실패입니다.",
       "definition_en": "A humanoid attempts manipulation outside feasible reach, joint, or postural limits, increasing instability, collision, or task-failure risk.",
       "pair_family_ids": [
         "P3.2",
@@ -766,7 +766,7 @@
       "display_id": "V044",
       "label_ko": "휴머노이드 안전 모니터 실패",
       "label_en": "Humanoid safety monitor failure",
-      "definition_ko": "런타임 안전 모니터가 휴머노이드의 안전하지 않은한 동작·힘·이격·작업 공간 위반을 감지하거나 방지하지 못하는 실패.",
+      "definition_ko": "런타임 안전 모니터가 휴머노이드의 안전하지 않은 동작, 힘, 이격, 작업 공간 위반을 감지하거나 방지하지 못하는 실패입니다.",
       "definition_en": "A runtime safety monitor fails to detect or prevent unsafe humanoid motion, force, separation, or workspace violations before harm can occur.",
       "pair_family_ids": [
         "P3.2",
@@ -778,7 +778,7 @@
       "display_id": "V045",
       "label_ko": "이동형 양팔 협조 실패",
       "label_en": "Mobile bimanual coordination failure",
-      "definition_ko": "로봇이 움직임과 손가락 조작을 동시에 맞추지 못해 물체가 떨어지거나 충돌하는 위험.",
+      "definition_ko": "로봇이 움직임과 손가락 조작을 동시에 맞추지 못해서 물체가 떨어지거나 충돌하는 위험입니다.",
       "definition_en": "A mobile bi-manual robot fails to synchronize base motion and two-arm manipulation, causing collision, object drop, or unsafe force application.",
       "pair_family_ids": [
         "P3.2",
@@ -790,7 +790,7 @@
       "display_id": "V046",
       "label_ko": "가정 환경 양팔 조작 위험",
       "label_en": "Home-environment bimanual manipulation hazard",
-      "definition_ko": "가정에서 물체를 움직이려 할 때, 취약한 물체나 사람을 충분히 고려하지 않아 위험한 상황이 발생하는 위험.",
+      "definition_ko": "가정에서 물체를 움직이려 할 때, 취약한 물체나 사람을 충분히 고려하지 않아 위험한 상황이 발생하는 위험입니다.",
       "definition_en": "A mobile bi-manual system executes manipulation in cluttered home environments without sufficiently modeling fragile objects, humans, pets, or narrow spaces.",
       "pair_family_ids": [
         "P3.2",
@@ -802,7 +802,7 @@
       "display_id": "V047",
       "label_ko": "휴머노이드 보행 안정적인 작동 능력 실패",
       "label_en": "Humanoid gait robustness failure",
-      "definition_ko": "휴머노이드 로봇이 외부 충격이나 무게 변화에 떨어지거나 넘어지는 위험.",
+      "definition_ko": "휴머노이드 로봇이 외부 충격이나 무게 변화에 떨어지거나 넘어지는 위험입니다.",
       "definition_en": "A humanoid policy fails to maintain stable gait under perturbations, payload shifts, surface changes, or actuator imperfections.",
       "pair_family_ids": [
         "P3.2",
@@ -814,7 +814,7 @@
       "display_id": "V048",
       "label_ko": "가정 장기 계획 조작 위험",
       "label_en": "Household long-horizon manipulation risk",
-      "definition_ko": "가정에서 장기간 물체를 움직이려 할 때, 작은 오류가 누적되어 물체가 떨어지거나 충돌하는 위험.",
+      "definition_ko": "가정에서 장기간 물체를 움직이려 할 때, 작은 오류가 누적되어서 물체가 떨어지거나 충돌하는 위험입니다.",
       "definition_en": "A generalist household robot accumulates small errors across long-horizon manipulation steps, producing spills, collisions, object damage, or unsafe state transitions.",
       "pair_family_ids": [
         "P3.2",
@@ -826,7 +826,7 @@
       "display_id": "V049",
       "label_ko": "이동-조작 통합 실패",
       "label_en": "Locomotion-integrated manipulation failure",
-      "definition_ko": "휴머노이드가 이동과 조작을 동시에 수행할 때 자세나 물체 취급이 불안정해지는 위험.",
+      "definition_ko": "휴머노이드가 이동과 조작을 동시에 수행할 때 자세나 물체 취급이 불안정해지는 위험입니다.",
       "definition_en": "A humanoid combines locomotion and manipulation in ways that destabilize posture, contact, or object handling during open-world tasks.",
       "pair_family_ids": [
         "P3.2",
@@ -838,7 +838,7 @@
       "display_id": "V050",
       "label_ko": "휴머노이드 충돌력 초과",
       "label_en": "Humanoid collision-force exceedance",
-      "definition_ko": "휴머노이드가 이동 중이나 균형 상실 시 안전 임계값을 넘어 충돌하는 위험.",
+      "definition_ko": "휴머노이드가 이동 중이나 균형 상실 시 안전 임계값을 넘어 충돌하는 위험입니다.",
       "definition_en": "A humanoid generates collision forces above safe thresholds during full-body movement, rapid arm motion, or loss of balance.",
       "pair_family_ids": [
         "P3.2",
@@ -850,7 +850,7 @@
       "display_id": "V051",
       "label_ko": "휴머노이드 파지력 초과",
       "label_en": "Humanoid grip-force exceedance",
-      "definition_ko": "휴머노이드가 물체나 사람을 잡을 때 안전한 힘을 넘어 물체나 사람을 손상시키는 위험.",
+      "definition_ko": "휴머노이드가 물체나 사람을 잡을 때 안전한 힘을 넘어 물체나 사람을 손상시키는 위험입니다.",
       "definition_en": "A humanoid applies excessive grasp or manipulation force relative to object, task, or human-contact safety limits.",
       "pair_family_ids": [
         "P3.2",
@@ -862,7 +862,7 @@
       "display_id": "V052",
       "label_ko": "휴머노이드 보행 속도 초과",
       "label_en": "Humanoid walking-speed safety gap",
-      "definition_ko": "휴머노이드가 정지·회피·인간 근접을 위해 필요한 속도를 초과해 안전한 환경에서 움직이는 위험.",
+      "definition_ko": "휴머노이드가 정지, 회피, 인간 근접을 위해 필요한 속도를 초과해서 안전한 환경에서 움직이는 위험입니다.",
       "definition_en": "A humanoid moves at a speed that exceeds the stopping, avoidance, or human-proximity limits required for safe shared environments.",
       "pair_family_ids": [
         "P3.2",
@@ -898,7 +898,7 @@
       "display_id": "V055",
       "label_ko": "비상 정지 실패",
       "label_en": "Emergency stop or safe-state failure",
-      "definition_ko": "안전 상태로 전환하지 못해 위험한 상황이 발생하는 실패입니다.",
+      "definition_ko": "안전 상태로 전환하지 못해서 위험한 상황이 발생하는 실패입니다.",
       "definition_en": "A system may fail to enter a safe state when perception, planning, power, network, or actuator errors are detected.",
       "pair_family_ids": [
         "P3.2",
@@ -910,7 +910,7 @@
       "display_id": "V056",
       "label_ko": "속도·힘 한계 위반",
       "label_en": "Speed and force limit violation",
-      "definition_ko": "사람 근접 시 안전한 속도나 힘을 초과해 위험한 상황을 만드는 위험입니다.",
+      "definition_ko": "사람 근접 시 안전한 속도나 힘을 초과해서 위험한 상황을 만드는 위험입니다.",
       "definition_en": "A collaborative or mobile robot may exceed safe speed, separation, pressure, torque, or force limits in proximity to people.",
       "pair_family_ids": [
         "P3.2",
@@ -922,7 +922,7 @@
       "display_id": "V057",
       "label_ko": "손가락 압착 위험",
       "label_en": "Grasp force injury",
-      "definition_ko": "로봇이 잘못된 힘을 가하거나 타이밍을 놓친 경우, 손가락이나 피부를 압착·꼬집·절단하거나 인간의 근육·혈관을 손상시킬 수 있는 위험.",
+      "definition_ko": "로봇이 잘못된 힘을 가하거나 타이밍을 놓친 경우, 손가락이나 피부를 압착, 꼬집, 절단하거나 인간의 근육, 혈관을 손상시킬 수 있는 위험입니다.",
       "definition_en": "Robot manipulation may apply excessive or poorly timed force, creating crushing, pinching, cutting, or ergonomic injury risks.",
       "pair_family_ids": [
         "P3.2",
@@ -934,7 +934,7 @@
       "display_id": "V058",
       "label_ko": "물체 떨어짐·도구 오용 위험",
       "label_en": "Payload drop or tool-use hazard",
-      "definition_ko": "로봇이 물체를 떨어뜨리거나 도구를 잘못 사용하거나 제어를 잃어 인간이나 재산을 손상시킬 수 있는 위험.",
+      "definition_ko": "로봇이 물체를 떨어뜨리거나 도구를 잘못 사용하거나 제어를 잃어 인간이나 재산을 손상시킬 수 있는 위험입니다.",
       "definition_en": "A robot may drop carried objects, misuse tools, or lose end-effector control, producing physical harm or property damage.",
       "pair_family_ids": [
         "P3.2",
@@ -946,7 +946,7 @@
       "display_id": "V059",
       "label_ko": "정밀 제어 오차 확대 위험",
       "label_en": "Fine motor control instability",
-      "definition_ko": "손·수술 도구·외골격·산업용 그리퍼의 작은 제어 오차가 안전하지 않은한 물리적 결과로 확대될 수 있는 위험.",
+      "definition_ko": "손, 수술 도구, 외골격, 산업용 그리퍼의 작은 제어 오차가 안전하지 않은 물리적 결과로 확대될 수 있는 위험입니다.",
       "definition_en": "Small control errors in dexterous hands, surgical tools, exoskeletons, or industrial grippers may amplify into unsafe physical actions.",
       "pair_family_ids": [
         "P3.2",
@@ -958,7 +958,7 @@
       "display_id": "V060",
       "label_ko": "통신 손실 위험",
       "label_en": "Communication dropout and control-link loss",
-      "definition_ko": "로봇이 명령·측정·제어 링크를 잃어 안전하지 않은 정지·오래된 명령 또는 제어되지 않은 동작을 초래할 수 있는 위험.",
+      "definition_ko": "로봇이 명령, 측정, 제어 링크를 잃어 안전하지 않은 정지, 오래된 명령 또는 제어되지 않은 동작을 초래할 수 있는 위험입니다.",
       "definition_en": "A robot loses communication or control-link connectivity during operation, reducing supervision and safe control.",
       "pair_family_ids": [
         "P3.2",
@@ -970,7 +970,7 @@
       "display_id": "V061",
       "label_ko": "원격 조작 지연 및 불안정성",
       "label_en": "Teleoperation latency and instability",
-      "definition_ko": "원격 조작 시 링크에서 지연이 너무 길거나 변동하면 제어가 불안정해지거나 인간이 개입하기까지 시간이 늦어지는 위험.",
+      "definition_ko": "원격 조작 시 링크에서 지연이 너무 길거나 변동하면 제어가 불안정해지거나 인간이 개입하기까지 시간이 늦어지는 위험입니다.",
       "definition_en": "High or variable latency on a teleoperation link destabilizes control or delays human intervention.",
       "pair_family_ids": [
         "P3.2",
@@ -982,7 +982,7 @@
       "display_id": "V062",
       "label_ko": "인지·추론 지연 급증",
       "label_en": "Perception and inference latency spike",
-      "definition_ko": "인지나 추론이 너무 빠르게 지연되면 안전 반응을 하기 전에 위험을 감지하지 못하는 위험.",
+      "definition_ko": "인지나 추론이 너무 빠르게 지연되면 안전 반응을 하기 전에 위험을 감지하지 못하는 위험입니다.",
       "definition_en": "A sudden delay in perception or inference slows safety-critical robot reactions.",
       "pair_family_ids": [
         "P3.2",
@@ -994,7 +994,7 @@
       "display_id": "V063",
       "label_ko": "원격 조작 휴머노이드 위험",
       "label_en": "Teleoperated humanoid safety override failure",
-      "definition_ko": "원격 조작 시 운영자 명령, 네트워크 지연, 상황 인식이 낮아지면 자율 안전 기능이 작동하지 않는 위험.",
+      "definition_ko": "원격 조작 시 운영자 명령, 네트워크 지연, 상황 인식이 낮아지면 자율 안전 기능이 작동하지 않는 위험입니다.",
       "definition_en": "A teleoperated humanoid lacks robust autonomous safety overrides when operator commands, network latency, or situational awareness become unsafe.",
       "pair_family_ids": [
         "P3.2",
@@ -1006,7 +1006,7 @@
       "display_id": "V064",
       "label_ko": "실시간 지연 및 동기화 실패",
       "label_en": "Real-time latency and synchronization failure",
-      "definition_ko": "감지, 추론, 통신, 작동 사이의 지연이 너무 크거나 불균형하면 로봇이나 차량 등 제어 시스템이 불안정해지는 위험.",
+      "definition_ko": "감지, 추론, 통신, 작동 사이의 지연이 너무 크거나 불균형하면 로봇이나 차량 등 제어 시스템이 불안정해지는 위험입니다.",
       "definition_en": "Delays between sensing, reasoning, communication, and actuation can destabilize control loops in robots, vehicles, drones, or industrial systems.",
       "pair_family_ids": [
         "P3.2",
@@ -1018,7 +1018,7 @@
       "display_id": "V065",
       "label_ko": "산업 공정 피해",
       "label_en": "Industrial process damage",
-      "definition_ko": "제조·건설·광업·에너지 시설에서 피지컬 AI가 잘못된 제어로 장비 손상·공정 오염·구조 불안정 또는 환경 사고를 유발하는 위험.",
+      "definition_ko": "제조, 건설, 광업, 에너지 시설에서 피지컬 AI가 잘못된 제어로 장비 손상, 공정 오염, 구조 불안정 또는 환경 사고를 유발하는 위험입니다.",
       "definition_en": "Physical AI in manufacturing, construction, mining, or energy facilities may damage equipment, contaminate processes, or trigger cascading operational failures.",
       "pair_family_ids": [
         "P3.2",
@@ -1030,7 +1030,7 @@
       "display_id": "V066",
       "label_ko": "휴머노이드 자기 충돌 위험",
       "label_en": "Humanoid self-collision risk",
-      "definition_ko": "휴머노이드의 팔·다리·몸통·손이 서로 충돌해 안전성과 작업 성능을 저하시키는 위험.",
+      "definition_ko": "휴머노이드의 팔, 다리, 몸통, 손이 서로 충돌해 안전성과 작업 성능을 저하시키는 위험입니다.",
       "definition_en": "A humanoid controller generates arm, leg, torso, or hand trajectories that collide with the robot body and degrade safety or hardware reliability.",
       "pair_family_ids": [
         "P3.2",
@@ -1042,7 +1042,7 @@
       "display_id": "V067",
       "label_ko": "안전 제어 지연 위험",
       "label_en": "Safe-control latency risk",
-      "definition_ko": "안전 제어가 휴머노이드 동역학보다 느리게 실행되어 안전하지 않은한 동작이 발생할 수 있는 위험.",
+      "definition_ko": "안전 제어가 휴머노이드 동역학보다 느리게 실행되어 안전하지 않은 동작이 발생할 수 있는 위험입니다.",
       "definition_en": "Safety-critical control constraints are enforced too slowly relative to humanoid dynamics, allowing unsafe motion before mitigation takes effect.",
       "pair_family_ids": [
         "P3.2",
@@ -1054,7 +1054,7 @@
       "display_id": "V068",
       "label_ko": "부하 시 열·전력 쓰로틀링",
       "label_en": "Thermal and power throttling under load",
-      "definition_ko": "지속적 부하에서 열이나 전력 한계가 로봇의 실시간 제어와 인지 기능을 무너뜨리는 위험.",
+      "definition_ko": "지속적 부하에서 열이나 전력 한계가 로봇의 실시간 제어와 인지 기능을 무너뜨리는 위험입니다.",
       "definition_en": "A robot’s compute or actuator performance drops under heat or power constraints during operation.",
       "pair_family_ids": [
         "P3.3",
@@ -1066,7 +1066,7 @@
       "display_id": "V069",
       "label_ko": "하드웨어 한계 위험",
       "label_en": "Embodiment-specific hardware limitation failure",
-      "definition_ko": "모델이 추상적 작업 수준에서 유효해 보이는 행동이 특정 로봇 로봇 기종에 안전하지 않은하거나 실행 불가능한 경우 발생하는 실패.",
+      "definition_ko": "모델이 추상적 작업 수준에서 유효해 보이는 행동이 특정 로봇 로봇 기종에 안전하지 않은하거나 실행 불가능한 경우 발생하는 실패입니다.",
       "definition_en": "A model issues a physical action that is unsafe or infeasible for a specific robot embodiment despite appearing valid at an abstract task level.",
       "pair_family_ids": [
         "P3.3",
@@ -1078,7 +1078,7 @@
       "display_id": "V070",
       "label_ko": "배터리·에너지·환경 위험",
       "label_en": "Battery, energy, and environmental hazards",
-      "definition_ko": "대규모 군집의 물리적 AI 시스템이 배터리, 에너지, 희토류, 화재, 폐기, 지역 환경 위험을 유발할 수 있는 위험.",
+      "definition_ko": "대규모 군집의 물리적 AI 시스템이 배터리, 에너지, 희토류, 화재, 폐기, 지역 환경 위험을 유발할 수 있는 위험입니다.",
       "definition_en": "Large fleets of physical AI systems may create battery, energy, rare-material, fire, disposal, or local environmental risks across their operational lifecycle.",
       "pair_family_ids": [
         "P3.3",
@@ -1090,7 +1090,7 @@
       "display_id": "V071",
       "label_ko": "가정 안전 안전장치 실패",
       "label_en": "Real-time household guardrail failure",
-      "definition_ko": "실시간 가정 안전 가드가 안전하지 않은 행동 실행 전에 로봇을 정지·경고·재지시하지 못하는 실패.",
+      "definition_ko": "실시간 가정 안전 가드가 안전하지 않은 행동 실행 전에 로봇을 정지, 경고, 재지시하지 못하는 실패입니다.",
       "definition_en": "A real-time household safety guard fails to stop, warn, or redirect an embodied agent before unsafe action execution.",
       "pair_family_ids": [
         "P3.4",
@@ -1102,7 +1102,7 @@
       "display_id": "V072",
       "label_ko": "자율주행차 충돌 위험",
       "label_en": "Autonomous vehicle crash risk",
-      "definition_ko": "자동화 주행 시스템이 인지 실패·계획 오류·소프트웨어 결함·엣지 케이스·인간과의 상호작용 오류로 충돌 위험을 유발할 수 있는 위험.",
+      "definition_ko": "자동화 주행 시스템이 인지 실패, 계획 오류, 소프트웨어 결함, 엣지 케이스, 인간과의 상호작용 오류로 충돌 위험을 유발할 수 있는 위험입니다.",
       "definition_en": "Automated driving systems may create crash risk through perception failures, planning errors, software defects, edge cases, or unsafe human-machine handoff.",
       "pair_family_ids": [
         "P3.4",
@@ -1114,7 +1114,7 @@
       "display_id": "V073",
       "label_ko": "제어 루프 데드라인 미달",
       "label_en": "Control-loop deadline miss",
-      "definition_ko": "실시간 제어 루프가 예상된 시간보다 늦게 작동해 안전 유지에 필요한 조치가 지연되는 위험.",
+      "definition_ko": "실시간 제어 루프가 예상된 시간보다 늦게 작동해 안전 유지에 필요한 조치가 지연되는 위험입니다.",
       "definition_en": "A safety-critical control loop misses its real-time deadline before the robot action is corrected.",
       "pair_family_ids": [
         "P3.4",
@@ -1126,7 +1126,7 @@
       "display_id": "V074",
       "label_ko": "온디바이스 연산·메모리 고갈",
       "label_en": "On-device compute and memory exhaustion",
-      "definition_ko": "로봇이 내장된 디바이스에서 연산이나 메모리가 부족해 안전 관련 기능이 저하되거나 중단되는 위험.",
+      "definition_ko": "로봇이 내장된 디바이스에서 연산이나 메모리가 부족해 안전 관련 기능이 저하되거나 중단되는 위험입니다.",
       "definition_en": "On-device compute or memory runs out and degrades safety-relevant perception, planning, or control.",
       "pair_family_ids": [
         "P3.4",
@@ -1138,7 +1138,7 @@
       "display_id": "V075",
       "label_ko": "클라우드 외부 서버 처리 의존 실패",
       "label_en": "Cloud-offload dependency failure",
-      "definition_ko": "로봇이 클라우드 서버에 의존해 안전 기능을 처리할 때, 클라우드 연결이 끊어지면 로컬로 안전 모드를 전환하지 못하는 위험.",
+      "definition_ko": "로봇이 클라우드 서버에 의존해 안전 기능을 처리할 때, 클라우드 연결이 끊어지면 로컬로 안전 모드를 전환하지 못하는 위험입니다.",
       "definition_en": "A robot depends on remote compute for safety-relevant functions and loses that support when the cloud link fails.",
       "pair_family_ids": [
         "P3.4",
@@ -1150,7 +1150,7 @@
       "display_id": "V076",
       "label_ko": "안전 비상 대체 실패",
       "label_en": "Degraded-mode and safe-fallback failure",
-      "definition_ko": "안전 기능이 손상될 때 로봇이 안전한 상태로 복구하지 못하는 위험.",
+      "definition_ko": "안전 기능이 손상될 때 로봇이 안전한 상태로 복구하지 못하는 위험입니다.",
       "definition_en": "A robot lacks a safe degraded mode or fallback when normal operation is impaired.",
       "pair_family_ids": [
         "P3.4",
@@ -1162,7 +1162,7 @@
       "display_id": "V077",
       "label_ko": "배포 전 검증 공백",
       "label_en": "Pre-deployment validation gap",
-      "definition_ko": "기반 모델을 탑재한 로봇이 물리적 위험, 사용 환경 변화, 공격성 입력, 경계 사례 등을 충분히 검증하지 않고 배포하는 위험.",
+      "definition_ko": "기반 모델을 탑재한 로봇이 물리적 위험, 사용 환경 변화, 공격성 입력, 경계 사례 등을 충분히 검증하지 않고 배포하는 위험입니다.",
       "definition_en": "A foundation-model-enabled robot is deployed without sufficiently testing physical hazards, domain shift, adversarial inputs, or human interaction risks before release.",
       "pair_family_ids": [
         "P3.4",
@@ -1174,7 +1174,7 @@
       "display_id": "V078",
       "label_ko": "로봇 레드팀 커버리지 공백",
       "label_en": "Red-team coverage gap for robotics",
-      "definition_ko": "로봇 레드팀이 물리적 위험, 공격성 입력, 인간 상호작용, 배포 환경 위험을 완전히 검토하지 못하는 위험.",
+      "definition_ko": "로봇 레드팀이 물리적 위험, 공격성 입력, 인간 상호작용, 배포 환경 위험을 완전히 검토하지 못하는 위험입니다.",
       "definition_en": "Robot red-teaming fails to cover the full range of physical, adversarial, human-interaction, and deployment-environment hazards.",
       "pair_family_ids": [
         "P3.4",
@@ -1186,7 +1186,7 @@
       "display_id": "V079",
       "label_ko": "장면 상호작용 모방 모호성",
       "label_en": "Scene-interaction imitation ambiguity",
-      "definition_ko": "휴머노이드가 관찰한 장면에서 숨겨진 의도, 물체 사용 방법, 안전 제약을 파악하지 못하고 상호작용을 모방하는 위험.",
+      "definition_ko": "휴머노이드가 관찰한 장면에서 숨겨진 의도, 물체 사용 방법, 안전 제약을 파악하지 못하고 상호작용을 모방하는 위험입니다.",
       "definition_en": "A humanoid imitates observed scene interactions without inferring hidden intent, object affordances, or safety constraints, creating unsafe household behavior.",
       "pair_family_ids": [
         "P3.5",
@@ -1198,7 +1198,7 @@
       "display_id": "V080",
       "label_ko": "분포 외 환경 배포 실패",
       "label_en": "Out-of-distribution physical deployment failure",
-      "definition_ko": "훈련 데이터가 포함하지 않은 물리적 상태, 환경, 사람, 물체, 작업을 만나 안전하지 않은 행동을 생성하는 실패.",
+      "definition_ko": "훈련 데이터가 포함하지 않은 물리적 상태, 환경, 사람, 물체, 작업을 만나 안전하지 않은 행동을 생성하는 실패입니다.",
       "definition_en": "A deployed robot encounters physical states, environments, people, objects, or tasks outside its training distribution and behaves unsafely.",
       "pair_family_ids": [
         "P3.5",
@@ -1210,7 +1210,7 @@
       "display_id": "V081",
       "label_ko": "분포 외 기술 전이 실패",
       "label_en": "Out-of-distribution skill transfer failure",
-      "definition_ko": "범용 로봇 정책이 데이터셋에 없는 작업·물체·환경으로 전이되어 안전하지 않은한 물리적 행동을 생성하는 실패.",
+      "definition_ko": "범용 로봇 정책이 데이터셋에 없는 작업, 물체, 환경으로 전이되어서 안전하지 않은 물리적 행동을 생성하는 실패입니다.",
       "definition_en": "A generalist robot policy transfers to a task, object, or environment outside the dataset mixture and produces unsafe physical behavior.",
       "pair_family_ids": [
         "P3.5",
@@ -1222,7 +1222,7 @@
       "display_id": "V082",
       "label_ko": "물리 운용 환경 분포 이동",
       "label_en": "Distribution shift in physical operation",
-      "definition_ko": "배포 환경이 건물·도로·공장·가정·병원·기상 조건 등으로 빠르게 변화하는 경우 모델이 적응하지 못하는 위험.",
+      "definition_ko": "배포 환경이 건물, 도로, 공장, 가정, 병원, 기상 조건 등으로 빠르게 변화하는 경우 모델이 적응하지 못하는 위험입니다.",
       "definition_en": "Deployment environments may change across buildings, roads, factories, homes, hospitals, or weather conditions faster than monitoring and adaptation mechanisms can detect.",
       "pair_family_ids": [
         "P3.5",
@@ -1234,7 +1234,7 @@
       "display_id": "V083",
       "label_ko": "데이터 혼합 커버리지 편향",
       "label_en": "Dataset mixture coverage bias",
-      "definition_ko": "대규모 다중 소스 로봇 데이터셋이 특정 로봇 기종·작업·환경·기관 설정을 과도하게 포함해 낮은 커버리지 도메인에서 안전 취약성을 유발하는 위험.",
+      "definition_ko": "대규모 다중 소스 로봇 데이터셋이 특정 로봇 기종, 작업, 환경, 기관 설정을 과도하게 포함해 낮은 커버리지 도메인에서 안전 취약성을 유발하는 위험입니다.",
       "definition_en": "A large multi-source robot dataset over-represents some embodiments, tasks, environments, or institutional settings and under-represents safety-critical edge cases.",
       "pair_family_ids": [
         "P3.5",
@@ -1246,7 +1246,7 @@
       "display_id": "V084",
       "label_ko": "원격 조작 시연 안전 편향",
       "label_en": "Teleoperation demonstration safety bias",
-      "definition_ko": "로봇 정책이 제한된 환경에서 수집된 원격 조작 시연으로부터 안전하지 않은하거나 불완전한 안전 가정을 상속하는 위험.",
+      "definition_ko": "로봇 정책이 제한된 환경에서 수집된 원격 조작 시연으로부터 안전하지 않은하거나 불완전한 안전 가정을 상속하는 위험입니다.",
       "definition_en": "Robot policies inherit unsafe or incomplete safety assumptions from teleoperated human demonstrations collected under limited contexts.",
       "pair_family_ids": [
         "P3.5",
@@ -1258,7 +1258,7 @@
       "display_id": "V085",
       "label_ko": "가정 작업 커버리지 공백",
       "label_en": "Everyday-task combinatorial coverage gap",
-      "definition_ko": "가정에서 흔하지 않은 물체·배치·인간 행동·환경 조합을 놓치는 위험.",
+      "definition_ko": "가정에서 흔하지 않은 물체, 배치, 인간 행동, 환경 조합을 놓치는 위험입니다.",
       "definition_en": "A household robot benchmark covers many tasks but still misses rare combinations of objects, layouts, human behaviors, or hazards that matter in deployment.",
       "pair_family_ids": [
         "P3.5",
@@ -1270,7 +1270,7 @@
       "display_id": "V086",
       "label_ko": "오픈월드 조작 커버리지 공백",
       "label_en": "Open-world humanoid manipulation coverage gap",
-      "definition_ko": "실제로 발생할 수 있는 다양한 조건·작업 변형·인간 행동·환경 위험을 충분히 반영하지 못하는 위험.",
+      "definition_ko": "실제로 발생할 수 있는 다양한 조건, 작업 변형, 인간 행동, 환경 위험을 충분히 반영하지 못하는 위험입니다.",
       "definition_en": "A humanoid manipulation dataset underrepresents open-world conditions, task variations, human behaviors, or environmental hazards needed for safe deployment.",
       "pair_family_ids": [
         "P3.5",
@@ -1282,7 +1282,7 @@
       "display_id": "V087",
       "label_ko": "합성 비선호 상황 편향",
       "label_en": "Synthetic undesirable-situation bias",
-      "definition_ko": "합성으로 만든 위험 상황이 실제보다 더 많은 위험을 강조하면서 드문 안전 임계 조건을 놓치는 위험.",
+      "definition_ko": "합성으로 만든 위험 상황이 실제보다 더 많은 위험을 강조하면서 드문 안전 임계 조건을 놓치는 위험입니다.",
       "definition_en": "Robot safety benchmarks generated from synthetic undesirable situations overrepresent salient hazards while missing rare, culturally specific, or environment-specific physical risks.",
       "pair_family_ids": [
         "P3.5",
@@ -1294,7 +1294,7 @@
       "display_id": "V088",
       "label_ko": "가정 환경 커버리지 공백",
       "label_en": "Household functional-area coverage gap",
-      "definition_ko": "가정 내 특정 공간·일상 활동·가전제품·취약 사용자 상황을 충분히 반영하지 못하는 위험.",
+      "definition_ko": "가정 내 특정 공간, 일상 활동, 가전제품, 취약 사용자 상황을 충분히 반영하지 못하는 위험입니다.",
       "definition_en": "A household embodied-agent benchmark underrepresents particular domestic areas, routines, appliances, or vulnerable-user contexts, weakening safety generalization.",
       "pair_family_ids": [
         "P3.5",
@@ -1306,7 +1306,7 @@
       "display_id": "V089",
       "label_ko": "시뮬레이션에서 실제 세계로의 전이 실패",
       "label_en": "Sim-to-real transfer failure",
-      "definition_ko": "시뮬레이션에서 훈련된 정책이 실제 물체의 마찰, 조명, 마모, 인간의 행동 패턴, 예외적인 상황과 달라지면 실패하는 위험.",
+      "definition_ko": "시뮬레이션에서 훈련된 정책이 실제 물체의 마찰, 조명, 마모, 인간의 행동 패턴, 예외적인 상황과 달라지면 실패하는 위험입니다.",
       "definition_en": "A policy trained or validated in simulation may fail when physical friction, lighting, wear, human behavior, or long-tail events differ from the simulated environment.",
       "pair_family_ids": [
         "P3.5",
@@ -1318,7 +1318,7 @@
       "display_id": "V090",
       "label_ko": "합성 데이터의 안전 임계 사항 누락",
       "label_en": "Synthetic data coverage gap",
-      "definition_ko": "합성 데이터로 훈련된 모델이 드물지만 안전을 위협하는 물체, 환경, 인간 행동, 고장 모드를 학습하지 못하는 위험.",
+      "definition_ko": "합성 데이터로 훈련된 모델이 드물지만 안전을 위협하는 물체, 환경, 인간 행동, 고장 모드를 학습하지 못하는 위험입니다.",
       "definition_en": "Synthetic or simulated training data may omit rare but safety-critical objects, environments, human behaviors, or failure modes.",
       "pair_family_ids": [
         "P3.5",
@@ -1330,7 +1330,7 @@
       "display_id": "V091",
       "label_ko": "시뮬레이터 간 검증에서 놓친 위험 영역",
       "label_en": "Sim-to-sim verification blind spot",
-      "definition_ko": "다른 시뮬레이터에서 검증된 정책이 실제 물체의 표면, 충격, 지연, 마모와 달라지면 실패하는 위험.",
+      "definition_ko": "다른 시뮬레이터에서 검증된 정책이 실제 물체의 표면, 충격, 지연, 마모와 달라지면 실패하는 위험입니다.",
       "definition_en": "A policy that passes transfer checks between simulators still fails under unmodeled real-world surfaces, impacts, delays, or actuator constraints.",
       "pair_family_ids": [
         "P3.5",
@@ -1342,7 +1342,7 @@
       "display_id": "V092",
       "label_ko": "LLM 에이전트의 안전 제한 회피",
       "label_en": "Embodied LLM contextual jailbreak",
-      "definition_ko": "공격자가 물리적 작업을 맥락으로 만들어서 에이전트가 안전 제한을 우회하고 위험한 행동을 수행하도록 유도하는 위험.",
+      "definition_ko": "공격자가 물리적 작업을 맥락으로 만들어서 에이전트가 안전 제한을 우회하고 위험한 행동을 수행하도록 유도하는 위험입니다.",
       "definition_en": "An attacker frames a physical task context so an embodied LLM agent bypasses safety restrictions and accepts malicious physical action instructions.",
       "pair_family_ids": [
         "I3.1",
@@ -1354,7 +1354,7 @@
       "display_id": "V093",
       "label_ko": "언어-행동 안전 목표와 안전 원칙의 불일치",
       "label_en": "Linguistic-action safety misalignment",
-      "definition_ko": "모델이 언어로 유해한 물리적 행동을 무해한 작업으로 재해석해 실행하는 위험.",
+      "definition_ko": "모델이 언어로 유해한 물리적 행동을 무해한 작업으로 재해석해 실행하는 위험입니다.",
       "definition_en": "A physically harmful instruction is linguistically reframed so the model treats unsafe real-world action as benign or task-compliant.",
       "pair_family_ids": [
         "I3.1",
@@ -1366,7 +1366,7 @@
       "display_id": "V094",
       "label_ko": "물리적 행동 기만",
       "label_en": "Conceptual deception in physical action",
-      "definition_ko": "공격자가 로봇을 유해한 물리적 행동으로 유도하는 간접적 표현을 사용하는 위험.",
+      "definition_ko": "공격자가 로봇을 유해한 물리적 행동으로 유도하는 간접적 표현을 사용하는 위험입니다.",
       "definition_en": "The attacker uses indirect concepts, substitutions, or euphemisms to induce a robot or embodied agent to perform a harmful physical action.",
       "pair_family_ids": [
         "I3.1",
@@ -1378,7 +1378,7 @@
       "display_id": "V095",
       "label_ko": "악의적 행동 요청",
       "label_en": "Malicious physical action query execution",
-      "definition_ko": "로봇이 유해한 물리적 행동을 요청하는 사용자 문구를 실행하는 위험.",
+      "definition_ko": "로봇이 유해한 물리적 행동을 요청하는 사용자 문구를 실행하는 위험입니다.",
       "definition_en": "An embodied LLM agent accepts and executes a user query that requests physical harm, privacy violation, sabotage, fraud, illegal activity, or hateful conduct.",
       "pair_family_ids": [
         "I3.1",
@@ -1390,7 +1390,7 @@
       "display_id": "V096",
       "label_ko": "피지컬 AI 파괴 행위",
       "label_en": "Embodied sabotage",
-      "definition_ko": "로봇이 물리적 장비나 인프라를 손상시키는 위험.",
+      "definition_ko": "로봇이 물리적 장비나 인프라를 손상시키는 위험입니다.",
       "definition_en": "A physical AI system is induced to damage, disable, obstruct, or tamper with equipment, infrastructure, or other physical assets.",
       "pair_family_ids": [
         "I3.1",
@@ -1402,7 +1402,7 @@
       "display_id": "V097",
       "label_ko": "사기·불법 행위 수행 및 지원",
       "label_en": "Embodied fraud or illegal-action execution",
-      "definition_ko": "로봇이 사기·절도·침입·탈세 등 불법 행위를 실제로 수행하거나 지원하는 위험.",
+      "definition_ko": "로봇이 사기, 절도, 침입, 탈세 등 불법 행위를 실제로 수행하거나 지원하는 위험입니다.",
       "definition_en": "An embodied agent carries out or materially assists fraud, theft, trespass, evasion, or other illegal physical-world actions.",
       "pair_family_ids": [
         "I3.1",
@@ -1414,7 +1414,7 @@
       "display_id": "V098",
       "label_ko": "피지컬 AI의 차별적·괴롭힘 행동",
       "label_en": "Hateful or abusive embodied action",
-      "definition_ko": "피지컬 AI가 사람에게 차별적·괴롭힘·위협·학대적 행동을 유도하는 위험.",
+      "definition_ko": "피지컬 AI가 사람에게 차별적, 괴롭힘, 위협, 학대적 행동을 유도하는 위험입니다.",
       "definition_en": "A physical AI system is directed to perform discriminatory, harassing, intimidating, or abusive actions toward people in shared environments.",
       "pair_family_ids": [
         "I3.1",
@@ -1426,7 +1426,7 @@
       "display_id": "V099",
       "label_ko": "영상-행동 공격으로 인한 안전 위반",
       "label_en": "Safety violation under video-action attack",
-      "definition_ko": "공격자가 로봇의 인지-행동 연속 과정를 조작해 중대·위험·치명적 안전 규칙을 위반하게 하는 위험.",
+      "definition_ko": "공격자가 로봇의 인지-행동 연속 과정를 조작해서 중대, 위험, 치명적 안전 규칙을 위반하게 하는 위험입니다.",
       "definition_en": "An attacker manipulates perception-action sequences so a robotic agent violates critical, dangerous, or risky safety rules.",
       "pair_family_ids": [
         "I3.1",
@@ -1438,7 +1438,7 @@
       "display_id": "V100",
       "label_ko": "언어 지시 기반 로봇 정책 공격",
       "label_en": "Language-instruction attack on robot policy",
-      "definition_ko": "악의적 언어 지시·접미사·프롬프트가 로봇 정책을 변경해 안전하지 않은한 물리적 행동을 유발하는 위험.",
+      "definition_ko": "악의적 언어 지시, 접미사, 프롬프트가 로봇 정책을 변경해 안전하지 않은 물리적 행동을 유발하는 위험입니다.",
       "definition_en": "Malicious language instructions, suffixes, or prompts alter the intended robot policy and induce unsafe physical behavior.",
       "pair_family_ids": [
         "I3.1",
@@ -1450,7 +1450,7 @@
       "display_id": "V101",
       "label_ko": "명시적 위험 명령 거부 실패",
       "label_en": "Explicit hazard non-rejection",
-      "definition_ko": "명확히 제시된 물리적 위험을 피하는 명령을 거부하지 못해 안전하지 않은 작업 방향으로 진행하는 실패.",
+      "definition_ko": "명확히 제시된 물리적 위험을 피하는 명령을 거부하지 못해서 안전하지 않은 작업 방향으로 진행하는 실패입니다.",
       "definition_en": "An embodied agent fails to reject a clearly stated physical hazard instruction and proceeds toward unsafe task execution.",
       "pair_family_ids": [
         "I3.1",
@@ -1462,7 +1462,7 @@
       "display_id": "V102",
       "label_ko": "헌법적 안전 조향 실패",
       "label_en": "Constitutional safety steering failure",
-      "definition_ko": "안전 원칙을 위협하는 지시나 맥락을 감지하지 못해 로봇 행동을 안전한 방향으로 조향하지 못하는 실패.",
+      "definition_ko": "안전 원칙을 위협하는 지시나 맥락을 감지하지 못해서 로봇 행동을 안전한 방향으로 조향하지 못하는 실패입니다.",
       "definition_en": "A constitutional steering mechanism fails to align robot behavior with safety principles when instructions, context, or visual scenes imply physical danger.",
       "pair_family_ids": [
         "I3.1",
@@ -1474,7 +1474,7 @@
       "display_id": "V103",
       "label_ko": "페르소나 제약 실패",
       "label_en": "Embodiment-persona constraint failure",
-      "definition_ko": "휴머노이드 로봇처럼 구현된 역할을 올바르게 물리적 제약으로 변환하지 못해 안전한 행동을 선택하지 못하는 실패.",
+      "definition_ko": "휴머노이드 로봇처럼 구현된 역할을 올바르게 물리적 제약으로 변환하지 못해서 안전한 행동을 선택하지 못하는 실패입니다.",
       "definition_en": "A model acting under an embodiment persona such as a humanoid robot fails to translate that role into correct physical constraints, refusals, or safe alternatives.",
       "pair_family_ids": [
         "I3.1",
@@ -1486,7 +1486,7 @@
       "display_id": "V104",
       "label_ko": "프롬프트→행동 주입 공격",
       "label_en": "Prompt-to-act injection",
-      "definition_ko": "악의적인 언어 입력을 물리적 위험 행동으로 변환해 로봇이 위험한 작업을 수행하는 위험.",
+      "definition_ko": "악의적인 언어 입력을 물리적 위험 행동으로 변환해서 로봇이 위험한 작업을 수행하는 위험입니다.",
       "definition_en": "A language-mediated robot or agent may convert malicious instructions, signs, QR codes, voice commands, or documents into unsafe physical actions.",
       "pair_family_ids": [
         "I3.1",
@@ -1498,7 +1498,7 @@
       "display_id": "V105",
       "label_ko": "조작·이동 기능이 공격에 전용되는 위험",
       "label_en": "Manipulation/mobility repurposed for attack",
-      "definition_ko": "로봇이 조작 및 이동 기능을 타격·투척·돌진과 같은 공격에만 사용하는 위험.",
+      "definition_ko": "로봇이 조작 및 이동 기능을 타격, 투척, 돌진과 같은 공격에만 사용하는 위험입니다.",
       "definition_en": "A robot’s manipulation or mobility capabilities are repurposed to physically attack people, property, or infrastructure.",
       "pair_family_ids": [
         "I3.1",
@@ -1510,7 +1510,7 @@
       "display_id": "V106",
       "label_ko": "자율적 물리적 침입 및 절도",
       "label_en": "Autonomous physical intrusion and theft",
-      "definition_ko": "로봇이 비인가된 공간에 들어가거나 물건을 도둑질하는 위험.",
+      "definition_ko": "로봇이 비인가된 공간에 들어가거나 물건을 도둑질하는 위험입니다.",
       "definition_en": "An autonomous robot enters restricted spaces or takes physical objects without authorization.",
       "pair_family_ids": [
         "I3.1",
@@ -1522,7 +1522,7 @@
       "display_id": "V107",
       "label_ko": "표적 추적 및 물리적 괴롭힘",
       "label_en": "Targeted following and physical harassment",
-      "definition_ko": "로봇이 특정 사람을 추적하고 괴롭히는 위험.",
+      "definition_ko": "로봇이 특정 사람을 추적하고 괴롭히는 위험입니다.",
       "definition_en": "A robot follows, blocks, or approaches a targeted person in a harassing physical manner.",
       "pair_family_ids": [
         "I3.1",
@@ -1534,7 +1534,7 @@
       "display_id": "V108",
       "label_ko": "로봇 무기화 오남용",
       "label_en": "Robot-as-weapon misuse",
-      "definition_ko": "로봇의 이동·항공·휴머노이드·조작 기능이 감시·위협·파괴 또는 직접적인 공격을 위해 전용되는 위험.",
+      "definition_ko": "로봇의 이동, 항공, 휴머노이드, 조작 기능이 감시, 위협, 파괴 또는 직접적인 공격을 위해 전용되는 위험입니다.",
       "definition_en": "Mobile, aerial, humanoid, or manipulator systems may be repurposed for surveillance, intimidation, sabotage, or physical attack.",
       "pair_family_ids": [
         "I3.1",
@@ -1546,7 +1546,7 @@
       "display_id": "V109",
       "label_ko": "현장 무기 부착 휴머노이드",
       "label_en": "Field weapon attachment to humanoid",
-      "definition_ko": "현장에서 휴머노이드나 이동 플랫폼에 무기가 직접 부착되어 물리적 손상을 유발할 수 있는 위험.",
+      "definition_ko": "현장에서 휴머노이드나 이동 플랫폼에 무기가 직접 부착되어 물리적 손상을 유발할 수 있는 위험입니다.",
       "definition_en": "A humanoid robot is fitted with a weapon or hazardous payload in the field, creating direct physical harm risk.",
       "pair_family_ids": [
         "I3.2",
@@ -1558,7 +1558,7 @@
       "display_id": "V110",
       "label_ko": "로봇 백도어 공격 취약성",
       "label_en": "Robotic backdoor attack vulnerability",
-      "definition_ko": "훈련 또는 배포 과정에서 숨겨진 트리거가 특정 물리적 조건이나 명령을 받을 때 안전하지 않은한 로봇 행동을 유발할 수 있는 위험.",
+      "definition_ko": "훈련 또는 배포 과정에서 숨겨진 트리거가 특정 물리적 조건이나 명령을 받을 때 안전하지 않은 로봇 행동을 유발할 수 있는 위험입니다.",
       "definition_en": "Training or deployment pipelines insert hidden triggers that cause unsafe robotic behavior under specific physical or instruction conditions.",
       "pair_family_ids": [
         "I3.3",
@@ -1570,7 +1570,7 @@
       "display_id": "V111",
       "label_ko": "로봇 군집 하이재킹",
       "label_en": "Fleet hijacking",
-      "definition_ko": "클라우드, 업데이트, API, 오케스트레이션 레이어의 취약성이 여러 로봇·차량·드론·산업 시스템을 동시에 침해할 수 있는 위험.",
+      "definition_ko": "클라우드, 업데이트, API, 오케스트레이션 레이어의 취약성이 여러 로봇, 차량, 드론, 산업 시스템을 동시에 침해할 수 있는 위험입니다.",
       "definition_en": "A vulnerability in a cloud, update, API, or orchestration layer may allow many robots, vehicles, drones, or industrial systems to be compromised together.",
       "pair_family_ids": [
         "I3.3",
@@ -1582,7 +1582,7 @@
       "display_id": "V112",
       "label_ko": "핵심 인프라 로봇 파괴",
       "label_en": "Critical infrastructure robotic sabotage",
-      "definition_ko": "로봇 검사·유지보수·물류·에너지·제조 시스템이 핵심 인프라를 손상시키는 위험.",
+      "definition_ko": "로봇 검사, 유지보수, 물류, 에너지, 제조 시스템이 핵심 인프라를 손상시키는 위험입니다.",
       "definition_en": "Robotic inspection, maintenance, logistics, energy, or manufacturing systems may be used to disrupt critical infrastructure when compromised or misused.",
       "pair_family_ids": [
         "I3.3",
@@ -1594,7 +1594,7 @@
       "display_id": "V113",
       "label_ko": "센서 신호 위조 및 신호 주입",
       "label_en": "Sensor spoofing and signal injection",
-      "definition_ko": "공격자가 GNSS·카메라·라이다·레이더·RFID·오디오·촉각·무선 신호를 조작해 실제 물체의 움직임을 변경하는 위험.",
+      "definition_ko": "공격자가 GNSS, 카메라, 라이다, 레이더, RFID, 오디오, 촉각, 무선 신호를 조작해서 실제 물체의 움직임을 변경하는 위험입니다.",
       "definition_en": "Attackers may manipulate GNSS, camera, LiDAR, radar, RFID, audio, tactile, or wireless signals to alter physical behavior.",
       "pair_family_ids": [
         "I3.3",
@@ -1606,7 +1606,7 @@
       "display_id": "V114",
       "label_ko": "물리적 위험 인지 실패",
       "label_en": "Physical danger perception failure",
-      "definition_ko": "다양한 입력으로부터 물리적 위험 상태를 식별하지 못해 위험한 행동을 실행하는 실패.",
+      "definition_ko": "다양한 입력으로부터 물리적 위험 상태를 식별하지 못해서 위험한 행동을 실행하는 실패입니다.",
       "definition_en": "A multimodal or embodied AI system fails to identify a physically dangerous state from text, image, or video inputs before unsafe action occurs.",
       "pair_family_ids": [
         "I3.4",
@@ -1618,7 +1618,7 @@
       "display_id": "V115",
       "label_ko": "가정 안전하지 않은 행동 미검출",
       "label_en": "Household unsafe-action false negative",
-      "definition_ko": "가정 내 행동이 안전하지 않은함을 감지하지 못해 위험한 행동을 허용하는 실패.",
+      "definition_ko": "가정 내 행동이 안전하지 않은함을 감지하지 못해서 위험한 행동을 허용하는 실패입니다.",
       "definition_en": "A vision-language model fails to detect that an embodied agent's proposed household action is unsafe, allowing hazardous behavior to proceed.",
       "pair_family_ids": [
         "I3.4",
@@ -1630,7 +1630,7 @@
       "display_id": "V116",
       "label_ko": "어포던스 오분류",
       "label_en": "Affordance misclassification",
-      "definition_ko": "물체나 환경에 잘못된 행동 가능성이 부여되어 안전하지 않은하게 움직이게 하는 위험.",
+      "definition_ko": "물체나 환경에 잘못된 행동 가능성이 부여되어 안전하지 않게 움직이게 하는 위험입니다.",
       "definition_en": "Objects or environments may be assigned incorrect action possibilities, leading the system to grasp, push, navigate, or manipulate them unsafely.",
       "pair_family_ids": [
         "I3.4",
@@ -1642,7 +1642,7 @@
       "display_id": "V117",
       "label_ko": "위치 추정 누적 오차",
       "label_en": "Localization drift",
-      "definition_ko": "GPS·SLAM·관성 센서·지도 정렬 오차가 누적되어 시스템이 잘못된 위치를 기반으로 행동하는 위험.",
+      "definition_ko": "GPS, SLAM, 관성 센서, 지도 정렬 오차가 누적되어서 시스템이 잘못된 위치를 기반으로 행동하는 위험입니다.",
       "definition_en": "Errors in GPS, SLAM, inertial sensing, or map alignment can accumulate until the system acts on an incorrect estimate of its own position.",
       "pair_family_ids": [
         "I3.4",
@@ -1654,7 +1654,7 @@
       "display_id": "V118",
       "label_ko": "휴머노이드 세계 모델 사실과 다른 정보 생성",
       "label_en": "Humanoid world-model hallucination",
-      "definition_ko": "생성적 세계 모델이 물리적으로 자연스러운 미래 상태를 예측하지만 안전하지 않은 행동을 유도하는 위험.",
+      "definition_ko": "생성적 세계 모델이 물리적으로 자연스러운 미래 상태를 예측하지만 안전하지 않은 행동을 유도하는 위험입니다.",
       "definition_en": "A generative world model predicts physically plausible-looking but incorrect future observations or states, misleading humanoid planning and control.",
       "pair_family_ids": [
         "I3.5",
@@ -1666,7 +1666,7 @@
       "display_id": "V119",
       "label_ko": "잠재 상태 압축 안전 손실",
       "label_en": "Latent-state compression safety loss",
-      "definition_ko": "휴머노이드 상호작용 상태를 압축할 때 안전 관련 정보인 접촉·충돌 위험·물체 불안정성 등을 제거하는 위험.",
+      "definition_ko": "휴머노이드 상호작용 상태를 압축할 때 안전 관련 정보인 접촉, 충돌 위험, 물체 불안정성 등을 제거하는 위험입니다.",
       "definition_en": "Compression of humanoid interaction states removes safety-relevant details such as contact, near-collision, object instability, or human proximity.",
       "pair_family_ids": [
         "I3.5",
@@ -1678,7 +1678,7 @@
       "display_id": "V120",
       "label_ko": "미래 접촉 예측 실패",
       "label_en": "Future contact prediction failure",
-      "definition_ko": "휴머노이드가 안전한 행동을 위해 필요한 접촉 또는 충돌 예측을 정확히 하지 못하는 실패.",
+      "definition_ko": "휴머노이드가 안전한 행동을 위해 필요한 접촉 또는 충돌 예측을 정확히 하지 못하는 실패입니다.",
       "definition_en": "A humanoid world model fails to forecast contact events or collision states that are necessary for safe planning.",
       "pair_family_ids": [
         "I3.5",
@@ -1690,7 +1690,7 @@
       "display_id": "V121",
       "label_ko": "VLM 안전하지 않은 행동 추론 오류",
       "label_en": "VLM unsafe-action reasoning error",
-      "definition_ko": "비전-언어 모델이 물체의 물리적 결과나 안전 규범을 잘못 추론해 위험한 행동을 예측하는 실패.",
+      "definition_ko": "비전-언어 모델이 물체의 물리적 결과나 안전 규범을 잘못 추론해 위험한 행동을 예측하는 실패입니다.",
       "definition_en": "A vision-language model observes the household scene but reasons incorrectly about physical consequences, object affordances, or human exposure.",
       "pair_family_ids": [
         "I3.5",
@@ -1702,7 +1702,7 @@
       "display_id": "V122",
       "label_ko": "물리 모델 사실과 다른 정보 생성",
       "label_en": "Physics model hallucination",
-      "definition_ko": "물리적으로 불가능하거나 불안정한 행동 결과를 추론해 위험한 계획을 만드는 위험.",
+      "definition_ko": "물리적으로 불가능하거나 불안정한 행동 결과를 추론해 위험한 계획을 만드는 위험입니다.",
       "definition_en": "A world model may infer physically impossible or unstable action consequences, causing plans that appear valid in representation but fail in the real world.",
       "pair_family_ids": [
         "I3.5",
@@ -1714,7 +1714,7 @@
       "display_id": "V123",
       "label_ko": "감각 교란 기반 안전하지 않은 행동",
       "label_en": "Adversarial sensory perturbation induced unsafe action",
-      "definition_ko": "영상이나 감각 데이터에 악의적인 변형이 들어가 로봇이 위험한 물리적 행동을 선택하게 하는 위험.",
+      "definition_ko": "영상이나 감각 데이터에 악의적인 변형이 들어가 로봇이 위험한 물리적 행동을 선택하게 하는 위험입니다.",
       "definition_en": "Adversarial changes to video or sensory inputs cause a robot policy to select unsafe physical actions.",
       "pair_family_ids": [
         "I3.6",
@@ -1726,7 +1726,7 @@
       "display_id": "V124",
       "label_ko": "시각 기반 안전 RL 제약 실패",
       "label_en": "Vision-only safe RL constraint failure",
-      "definition_ko": "시각만으로 안전 규범을 판단하지 못해 위험한 행동을 선택하는 강화학습 에이전트의 실패.",
+      "definition_ko": "시각만으로 안전 규범을 판단하지 못해서 위험한 행동을 선택하는 강화학습 에이전트의 실패입니다.",
       "definition_en": "A safe reinforcement learning agent using vision-only observation fails to infer safety constraints from limited perceptual inputs.",
       "pair_family_ids": [
         "I3.6",
@@ -1738,7 +1738,7 @@
       "display_id": "V125",
       "label_ko": "물리적 적대 패치 취약성",
       "label_en": "Physical adversarial patch vulnerability",
-      "definition_ko": "물리적 세계에서 생성된 공격성 패치나 표지가 로봇의 인지와 제어를 조작하는 위험.",
+      "definition_ko": "물리적 세계에서 생성된 공격성 패치나 표지가 로봇의 인지와 제어를 조작하는 위험입니다.",
       "definition_en": "Physical-world perturbations such as adversarial patches or signs manipulate robotic perception and downstream control.",
       "pair_family_ids": [
         "I3.6",
@@ -1750,7 +1750,7 @@
       "display_id": "V126",
       "label_ko": "시각-촉각 모달리티 불일치",
       "label_en": "Visual-tactile modality mismatch",
-      "definition_ko": "접촉 집약 조작 중 시각·촉각·힘·오디오 신호가 정렬되지 않아 잘못된 접촉 상태를 추정하는 실패.",
+      "definition_ko": "접촉 집약 조작 중 시각, 촉각, 힘, 오디오 신호가 정렬되지 않아 잘못된 접촉 상태를 추정하는 실패입니다.",
       "definition_en": "A model misaligns visual, tactile, force, or audio signals in contact-rich manipulation, leading to incorrect contact-state estimates.",
       "pair_family_ids": [
         "I3.6",
@@ -1762,7 +1762,7 @@
       "display_id": "V127",
       "label_ko": "휴머노이드 센서 시험 공백",
       "label_en": "Humanoid sensor test coverage gap",
-      "definition_ko": "휴머노이드 안전 평가에서 인지 신뢰성·장애물 감지·인간 감지·제어 응답을 위한 표준화된 센서 테스트가 부족한 위험.",
+      "definition_ko": "휴머노이드 안전 평가에서 인지 신뢰성, 장애물 감지, 인간 감지, 제어 응답을 위한 표준화된 센서 테스트가 부족한 위험입니다.",
       "definition_en": "Humanoid safety assessment lacks standardized sensor tests for perception reliability, obstacle detection, human detection, and near-field awareness.",
       "pair_family_ids": [
         "I3.6",
@@ -1774,7 +1774,7 @@
       "display_id": "V128",
       "label_ko": "가림에 의한 충돌",
       "label_en": "Occlusion-induced collision",
-      "definition_ko": "가림으로 인해 숨겨진 사람·동물·차량·장애물을 감지하지 못해 안전하지 않은한 동작을 유발하는 위험.",
+      "definition_ko": "가림으로 인해 숨겨진 사람, 동물, 차량, 장애물을 감지하지 못해서 안전하지 않은 동작을 유발하는 위험입니다.",
       "definition_en": "A Physical AI system may fail to detect people, animals, vehicles, or obstacles hidden by occlusion, causing unsafe motion in shared physical space.",
       "pair_family_ids": [
         "I3.6",
@@ -1786,7 +1786,7 @@
       "display_id": "V129",
       "label_ko": "다중 센서 융합 충돌",
       "label_en": "Multimodal sensor fusion conflict",
-      "definition_ko": "카메라·라이다·레이더·촉각·자기 수용 신호가 서로 충돌할 때 안정적인 장면 추정과 안전한 행동을 보장할 수 없는 위험.",
+      "definition_ko": "카메라, 라이다, 레이더, 촉각, 자기 수용 신호가 서로 충돌할 때 안정적인 장면 추정과 안전한 행동을 보장할 수 없는 위험입니다.",
       "definition_en": "Conflicting camera, LiDAR, radar, tactile, or proprioceptive signals may lead to unstable scene estimates and unsafe downstream control decisions.",
       "pair_family_ids": [
         "I3.6",
@@ -1798,7 +1798,7 @@
       "display_id": "V130",
       "label_ko": "공격성 물체·표지 조작",
       "label_en": "Adversarial object or sign manipulation",
-      "definition_ko": "스티커·변경된 표지·의복 패턴·물체 배치 등으로 인지 시스템을 조작해 안전하지 않은 행동을 유발하는 위험.",
+      "definition_ko": "스티커, 변경된 표지, 의복 패턴, 물체 배치 등으로 인지 시스템을 조작해서 안전하지 않은 행동을 유발하는 위험입니다.",
       "definition_en": "Physical perturbations such as stickers, altered signs, clothing patterns, or object placement can manipulate perception models used by robots or autonomous vehicles.",
       "pair_family_ids": [
         "I3.6",
@@ -1810,7 +1810,7 @@
       "display_id": "V131",
       "label_ko": "배포 후 모니터링 불충분",
       "label_en": "Insufficient post-deployment monitoring",
-      "definition_ko": "환경 변화·부품 고장·모델 업데이트·아차사고 이후에도 물리적 AI 시스템이 계속 운영되는 위험.",
+      "definition_ko": "환경 변화, 부품 고장, 모델 업데이트, 아차사고 이후에도 물리적 AI 시스템이 계속 운영되는 위험입니다.",
       "definition_en": "Physical AI systems may continue operating after environmental changes, component degradation, model updates, or near-miss incidents invalidate earlier safety assumptions.",
       "pair_family_ids": [
         "I3.6",
@@ -1822,7 +1822,7 @@
       "display_id": "V132",
       "label_ko": "악천후 인지 실패",
       "label_en": "Adverse weather perception failure",
-      "definition_ko": "비·안개·눈부심·먼지·연기·저조도가 카메라·라이다·레이더·촉각·오디오 인지를 저하시켜 안전하지 않은 행동을 유발하는 위험.",
+      "definition_ko": "비, 안개, 눈부심, 먼지, 연기, 저조도가 카메라, 라이다, 레이더, 촉각, 오디오 인지를 저하시켜 안전하지 않은 행동을 유발하는 위험입니다.",
       "definition_en": "Rain, fog, glare, dust, smoke, or low light may degrade cameras, LiDAR, radar, tactile sensors, or audio perception, weakening real-time situational awareness.",
       "pair_family_ids": [
         "I3.6",
@@ -1834,7 +1834,7 @@
       "display_id": "V133",
       "label_ko": "동적 가정 위험 감지 지연",
       "label_en": "Dynamic household hazard detection latency",
-      "definition_ko": "안전 감지기가 에이전트가 물리적 피해를 피할 수 있는 시간보다 늦게 가정 위험을 식별하는 실패.",
+      "definition_ko": "안전 감지기가 에이전트가 물리적 피해를 피할 수 있는 시간보다 늦게 가정 위험을 식별하는 실패입니다.",
       "definition_en": "A safety detector identifies a household hazard only after a delay that is too long for an embodied agent to avoid physical harm.",
       "pair_family_ids": [
         "I3.6",
@@ -1846,7 +1846,7 @@
       "display_id": "V134",
       "label_ko": "저빈도 가정 위험 대응 실패",
       "label_en": "Long-tail household injury scenario failure",
-      "definition_ko": "드물지만 실제 발생할 수 있는 가정 내 물리적 위험 상황을 인식하거나 대응하지 못하는 실패.",
+      "definition_ko": "드물지만 실제 발생할 수 있는 가정 내 물리적 위험 상황을 인식하거나 대응하지 못하는 실패입니다.",
       "definition_en": "Failure to recognize or intervene in rare but plausible household physical hazards such as falls, poisoning, burns, lacerations, fractures, or crush injuries.",
       "pair_family_ids": [
         "I3.7",
@@ -1858,7 +1858,7 @@
       "display_id": "V135",
       "label_ko": "부상 심각도 오분류",
       "label_en": "Injury severity misclassification",
-      "definition_ko": "물리적 부상의 심각도를 과소평가해 충분한 대응 조치를 취하지 못하는 실패.",
+      "definition_ko": "물리적 부상의 심각도를 과소평가해 충분한 대응 조치를 취하지 못하는 실패입니다.",
       "definition_en": "A system underestimates the severity of a physical injury scenario, leading to inadequate escalation, warning, or control response.",
       "pair_family_ids": [
         "I3.7",
@@ -1870,7 +1870,7 @@
       "display_id": "V136",
       "label_ko": "위험 예측 실패",
       "label_en": "Hazard prediction failure",
-      "definition_ko": "물리적 위험을 발생하기 전에 예측하지 못하는 실패.",
+      "definition_ko": "물리적 위험을 발생하기 전에 예측하지 못하는 실패입니다.",
       "definition_en": "A physical AI system fails to anticipate a developing hazard before unsafe action, collision, damage, or injury occurs.",
       "pair_family_ids": [
         "I3.7",
@@ -1882,7 +1882,7 @@
       "display_id": "V137",
       "label_ko": "휴머노이드 균형 상실 및 낙상 위험",
       "label_en": "Humanoid balance-loss and fall risk",
-      "definition_ko": "휴머노이드가 이동·전환·조작 중 균형을 잃어 낙상하거나 자기 손상을 유발하는 위험.",
+      "definition_ko": "휴머노이드가 이동, 전환, 조작 중 균형을 잃어 낙상하거나 자기 손상을 유발하는 위험입니다.",
       "definition_en": "A full-body humanoid policy loses balance during locomotion, transition, or manipulation, producing fall, self-damage, or human-proximity injury risk.",
       "pair_family_ids": [
         "I3.7",
@@ -1894,7 +1894,7 @@
       "display_id": "V138",
       "label_ko": "보조 로봇 개입 타이밍 실패",
       "label_en": "Assistive robot intervention mistiming",
-      "definition_ko": "보호나 보조로봇이 너무 이르거나 너무 늦게, 또는 부적절한 방식으로 개입해 위험을 증가시키는 실패.",
+      "definition_ko": "보호나 보조로봇이 너무 이르거나 너무 늦게, 또는 부적절한 방식으로 개입해 위험을 증가시키는 실패입니다.",
       "definition_en": "A protective or assistive humanoid intervenes too early, too late, or in an inappropriate physical manner, increasing risk to the user or bystanders.",
       "pair_family_ids": [
         "I3.7",
@@ -1906,7 +1906,7 @@
       "display_id": "V139",
       "label_ko": "인간-로봇 관계적 안전 공백",
       "label_en": "Human-robot relational safety gap",
-      "definition_ko": "가정 환경에서 인간과 로봇의 행동이 서로 영향을 주고받는 방식을 충분히 모델링하지 못하는 위험.",
+      "definition_ko": "가정 환경에서 인간과 로봇의 행동이 서로 영향을 주고받는 방식을 충분히 모델링하지 못하는 위험입니다.",
       "definition_en": "Current safety frameworks insufficiently model bidirectional coupling between human behavior and robot behavior in domestic environments.",
       "pair_family_ids": [
         "I3.7",
@@ -1918,7 +1918,7 @@
       "display_id": "V140",
       "label_ko": "취약 사용자 가정용 로봇 위험",
       "label_en": "Vulnerable-user domestic robot risk",
-      "definition_ko": "가정용 휴머노이드가 아동·고령자·장애인·기타 취약 그룹에게 위험을 증가시키는 위험.",
+      "definition_ko": "가정용 휴머노이드가 아동, 고령자, 장애인, 기타 취약 그룹에게 위험을 증가시키는 위험입니다.",
       "definition_en": "Domestic humanoid deployment creates heightened risk for children, older adults, disabled users, or other vulnerable groups if safety limits are not adapted to user characteristics.",
       "pair_family_ids": [
         "I3.7",
@@ -1930,7 +1930,7 @@
       "display_id": "V141",
       "label_ko": "인간 의도 오인식",
       "label_en": "Human intent misrecognition",
-      "definition_ko": "로봇이 손짓·시선·몸짓·속도·사회적 신호를 잘못 해석해 인간이 기대하는 행동과 달리 움직이는 위험.",
+      "definition_ko": "로봇이 손짓, 시선, 몸짓, 속도, 사회적 신호를 잘못 해석해 인간이 기대하는 행동과 달리 움직이는 위험입니다.",
       "definition_en": "A system may misread gestures, gaze, posture, speed, or social cues and act in ways that conflict with human expectations or safety needs.",
       "pair_family_ids": [
         "I3.7",
@@ -1942,7 +1942,7 @@
       "display_id": "V142",
       "label_ko": "근접 공간 경계 위반",
       "label_en": "Proxemic boundary violation",
-      "definition_ko": "로봇이 문화적·상황적 규칙에 맞지 않는 개인 공간·시선·발화 거리를 유지하지 못해 이동하거나 말하는 위험.",
+      "definition_ko": "로봇이 문화적, 상황적 규칙에 맞지 않는 개인 공간, 시선, 발화 거리를 유지하지 못해서 이동하거나 말하는 위험입니다.",
       "definition_en": "Robots or embodied agents may move, gesture, observe, or speak in ways that violate culturally and situationally appropriate interpersonal distance.",
       "pair_family_ids": [
         "I3.7",
@@ -1954,7 +1954,7 @@
       "display_id": "V143",
       "label_ko": "사용자 능력 불일치",
       "label_en": "User capability mismatch",
-      "definition_ko": "로봇이 실제 사용자의 체력·이동 능력·인지·언어·감각 능력과 일치하지 않는 수준으로 행동하는 위험.",
+      "definition_ko": "로봇이 실제 사용자의 체력, 이동 능력, 인지, 언어, 감각 능력과 일치하지 않는 수준으로 행동하는 위험입니다.",
       "definition_en": "An embodied system may assume levels of strength, mobility, cognition, language, or sensory ability that do not match actual user needs.",
       "pair_family_ids": [
         "I3.7",
@@ -1966,7 +1966,7 @@
       "display_id": "V144",
       "label_ko": "창고 로봇 보행자 충돌",
       "label_en": "Warehouse robot pedestrian conflict",
-      "definition_ko": "창고·병원·공장·공공 건물에서 로봇이 사람들과 충돌하거나 혼잡을 일으키는 위험.",
+      "definition_ko": "창고, 병원, 공장, 공공 건물에서 로봇이 사람들과 충돌하거나 혼잡을 일으키는 위험입니다.",
       "definition_en": "Mobile robots in warehouses, hospitals, factories, or public buildings may create collision and congestion risks in mixed human-robot traffic.",
       "pair_family_ids": [
         "I3.7",
@@ -1978,7 +1978,7 @@
       "display_id": "V145",
       "label_ko": "공공 공간 방해·접근성 피해",
       "label_en": "Public-space nuisance and accessibility harm",
-      "definition_ko": "배달·청소·경찰·정보·서비스 로봇이 보도를 막거나 보행자를 혼란스럽게 하거나 장애인을 배제하거나 공격성으로 인식하는 위험.",
+      "definition_ko": "배달, 청소, 경찰, 정보, 서비스 로봇이 보도를 막거나 보행자를 혼란스럽게 하거나 장애인을 배제하거나 공격성으로 인식하는 위험입니다.",
       "definition_en": "Delivery, cleaning, policing, information, or service robots may obstruct sidewalks, confuse pedestrians, exclude disabled users, or alter public-space norms.",
       "pair_family_ids": [
         "I3.7",
@@ -1990,7 +1990,7 @@
       "display_id": "V146",
       "label_ko": "공유 자율성 협조 실패",
       "label_en": "Shared autonomy coordination failure",
-      "definition_ko": "인간과 로봇 간 제어 전환 시점이 모호해 시간이 촉박한 결정에서 양측이 책임을 지지 못하는 위험.",
+      "definition_ko": "인간과 로봇 간 제어 전환 시점이 모호해 시간이 촉박한 결정에서 양측이 책임을 지지 못하는 위험입니다.",
       "definition_en": "Ambiguous handoff between human and machine control can leave neither party effectively responsible for a time-critical physical decision.",
       "pair_family_ids": [
         "I3.7",
@@ -2002,7 +2002,7 @@
       "display_id": "V147",
       "label_ko": "안전 원칙 모호성",
       "label_en": "Semantic safety principle ambiguity",
-      "definition_ko": "로봇이 사용자 의도·물리적 위험·인간 복지 간 구체적 트레이드오프를 해결하기 어려운 고수준 안전 원칙을 수신하는 위험.",
+      "definition_ko": "로봇이 사용자 의도, 물리적 위험, 인간 복지 간 구체적 트레이드오프를 해결하기 어려운 고수준 안전 원칙을 수신하는 위험입니다.",
       "definition_en": "A robot receives a high-level safety principle that is too ambiguous to resolve concrete trade-offs among user intent, physical hazard, and operational constraints.",
       "pair_family_ids": [
         "I3.8",
@@ -2014,7 +2014,7 @@
       "display_id": "V148",
       "label_ko": "다중 에이전트 안전 제약 위반",
       "label_en": "Multi-agent safety constraint violation",
-      "definition_ko": "여러 로봇이 상호작용·협조 실패·충돌하는 목표로 안전 제약을 공동으로 위반하는 위험.",
+      "definition_ko": "여러 로봇이 상호작용, 협조 실패, 충돌하는 목표로 안전 제약을 공동으로 위반하는 위험입니다.",
       "definition_en": "Multiple agents jointly violate safety constraints through interaction, coordination failure, or conflicting local objectives.",
       "pair_family_ids": [
         "I3.9",
@@ -2026,7 +2026,7 @@
       "display_id": "V149",
       "label_ko": "다중 에이전트 협조 실패 위험",
       "label_en": "Multi-agent embodied execution hazard",
-      "definition_ko": "여러 로봇이 협업 중 서로의 역할을 안전하게 배정하지 못하거나 계획이 충돌해 물리적 위험을 발생시키는 경우.",
+      "definition_ko": "여러 로봇이 협업 중 서로의 역할을 안전하게 배정하지 못하거나 계획이 충돌해 물리적 위험을 발생시키는 경우입니다.",
       "definition_en": "Multiple embodied agents create physical risk through coordination failure, unsafe role allocation, or conflicting plans in shared environments.",
       "pair_family_ids": [
         "I3.9",
@@ -2038,7 +2038,7 @@
       "display_id": "V150",
       "label_ko": "네트워크 분리로 인한 군집 동기화 손실 위험",
       "label_en": "Network partition and fleet desynchronization",
-      "definition_ko": "로봇 군집이 네트워크가 분할되어 동기화를 잃어 협업 중 충돌이나 안전하지 않은한 행동을 유발하는 경우.",
+      "definition_ko": "로봇 군집이 네트워크가 분할되어 동기화를 잃어 협업 중 충돌이나 안전하지 않은 행동을 유발하는 경우입니다.",
       "definition_en": "A robot fleet becomes split across network partitions and loses synchronized coordination.",
       "pair_family_ids": [
         "I3.9",
@@ -2050,7 +2050,7 @@
       "display_id": "V151",
       "label_ko": "드론 공역 충돌 위험",
       "label_en": "Drone airspace conflict",
-      "definition_ko": "드론이 공역 조율이 부족해 사람, 항공기, 건물, 전선, 다른 드론과 충돌하는 경우.",
+      "definition_ko": "드론이 공역 조율이 부족해 사람, 항공기, 건물, 전선, 다른 드론과 충돌하는 경우입니다.",
       "definition_en": "Autonomous drones may collide with people, aircraft, buildings, power lines, or other drones when airspace coordination and geofencing are inadequate.",
       "pair_family_ids": [
         "I3.9",
@@ -2062,7 +2062,7 @@
       "display_id": "V152",
       "label_ko": "신체 자율성 침해 위험",
       "label_en": "Bodily autonomy intrusion",
-      "definition_ko": "보조·의료·돌봄 로봇이 신체 이동·모니터링·제지·개입을 통해 동의·존엄성·신체 완결성을 훼손하는 경우.",
+      "definition_ko": "보조, 의료, 돌봄 로봇이 신체 이동, 모니터링, 제지, 개입을 통해 동의, 존엄성, 신체 완결성을 훼손하는 경우입니다.",
       "definition_en": "Assistive, medical, or care robots may physically move, monitor, restrain, or intervene in ways that undermine consent, dignity, or bodily autonomy.",
       "pair_family_ids": [
         "I3.10",
@@ -2086,7 +2086,7 @@
       "display_id": "V154",
       "label_ko": "친밀 공간 프라이버시 침해",
       "label_en": "Privacy in intimate physical spaces",
-      "definition_ko": "가정·병원·학교·직장 등 민감한 공간에서 돌봄 로봇이 영상·오디오·생체 데이터를 수집해 프라이버시를 침해할 위험입니다.",
+      "definition_ko": "가정, 병원, 학교, 직장 등 민감한 공간에서 돌봄 로봇이 영상, 오디오, 생체 데이터를 수집해 프라이버시를 침해할 위험입니다.",
       "definition_en": "Home, hospital, school, workplace, or care robots may collect video, audio, biometric, location, or behavioral data in spaces where privacy expectations are high.",
       "pair_family_ids": [
         "S3.1",
@@ -2098,7 +2098,7 @@
       "display_id": "V155",
       "label_ko": "피지컬 AI 기반 직장 감시",
       "label_en": "Workplace surveillance through embodied AI",
-      "definition_ko": "로봇과 센서가 작업장에서 작업자 동작·생산성·자세·위치·생체 특성을 지속적으로 모니터링해 감시 문화를 정착시키는 위험입니다.",
+      "definition_ko": "로봇과 센서가 작업장에서 작업자 동작, 생산성, 자세, 위치, 생체 특성을 지속적으로 모니터링해 감시 문화를 정착시키는 위험입니다.",
       "definition_en": "Robotic and sensor-rich workplaces may normalize continuous monitoring of worker movement, productivity, posture, location, and behavior.",
       "pair_family_ids": [
         "S3.1",
@@ -2110,7 +2110,7 @@
       "display_id": "V156",
       "label_ko": "가정 내 지속적 시청각 촬영",
       "label_en": "Continuous in-home audiovisual capture",
-      "definition_ko": "가정 내에서 돌봄 로봇이 영상·소리 등을 지속적으로 촬영해 프라이버시를 침해할 위험입니다.",
+      "definition_ko": "가정 내에서 돌봄 로봇이 영상, 소리 등을 지속적으로 촬영해 프라이버시를 침해할 위험입니다.",
       "definition_en": "A home robot continuously captures audio or video inside private living spaces.",
       "pair_family_ids": [
         "S3.1",
@@ -2122,7 +2122,7 @@
       "display_id": "V157",
       "label_ko": "가정 내 행동·생체정보 유출",
       "label_en": "In-home behavioral and biometric data exfiltration",
-      "definition_ko": "가정 내에서 로봇이 사용자 행동과 생체 정보를 수집해 유출하는 위험.",
+      "definition_ko": "가정 내에서 로봇이 사용자 행동과 생체 정보를 수집해 유출하는 위험입니다.",
       "definition_en": "A home robot collects or leaks behavioral and biometric data from residents.",
       "pair_family_ids": [
         "S3.1",
@@ -2134,7 +2134,7 @@
       "display_id": "V158",
       "label_ko": "피지컬 AI 프라이버시 침해",
       "label_en": "Embodied privacy violation",
-      "definition_ko": "로봇이 사적 공간을 침입하거나 민감 정보를 수집하는 위험.",
+      "definition_ko": "로봇이 사적 공간을 침입하거나 민감 정보를 수집하는 위험입니다.",
       "definition_en": "A robot or embodied agent uses sensors, mobility, or manipulation capabilities to invade private spaces, capture sensitive information, or expose personal data.",
       "pair_family_ids": [
         "S3.1",
@@ -2146,7 +2146,7 @@
       "display_id": "V159",
       "label_ko": "피지컬 자동화 노동 대체",
       "label_en": "Embodied automation labor displacement",
-      "definition_ko": "피지컬 자동화가 수동·물류·서비스·돌봄·검사·보안·유지보수 업무를 대체해 경제적 피해·불평등·전환 위험을 초래하는 위험.",
+      "definition_ko": "피지컬 자동화가 수동, 물류, 서비스, 돌봄, 검사, 보안, 유지보수 업무를 대체해 경제적 피해, 불평등, 전환 위험을 초래하는 위험입니다.",
       "definition_en": "Physical automation may substitute for manual, logistics, service, care, inspection, security, or maintenance work, creating localized employment and skill-transition risks.",
       "pair_family_ids": [
         "S3.2",
@@ -2158,7 +2158,7 @@
       "display_id": "V160",
       "label_ko": "인구집단별 서비스 격차",
       "label_en": "Demographic physical-service disparity",
-      "definition_ko": "인식 또는 보조 성능이 특정 인구집단에 미치는 차이가 피지컬 차별로 전이되는 위험.",
+      "definition_ko": "인식 또는 보조 성능이 특정 인구집단에 미치는 차이가 피지컬 차별로 전이되는 위험입니다.",
       "definition_en": "A robot provides worse physical service to groups whose bodies, languages, or environments are underrepresented.",
       "pair_family_ids": [
         "S3.3",
@@ -2170,7 +2170,7 @@
       "display_id": "V161",
       "label_ko": "동료 로봇의 감시 노드 전용화",
       "label_en": "Co-worker robot as surveillance node",
-      "definition_ko": "작업장에서 사용하는 로봇의 센서가 본래 작업과 별개로 직원의 행동을 감시하는 이동형 수단으로 전용되는 위험.",
+      "definition_ko": "작업장에서 사용하는 로봇의 센서가 본래 작업과 별개로 직원의 행동을 감시하는 이동형 수단으로 전용되는 위험입니다.",
       "definition_en": "A workplace robot is used as a mobile sensing node for employee surveillance.",
       "pair_family_ids": [
         "S3.4",
@@ -2182,7 +2182,7 @@
       "display_id": "V162",
       "label_ko": "인간-휴머노이드 데이터 편향",
       "label_en": "Human-humanoid interaction dataset bias",
-      "definition_ko": "인간과 휴머노이드 간 상호작용 데이터가 특정 상황만 포착해 안전을 잘못 판단하는 위험.",
+      "definition_ko": "인간과 휴머노이드 간 상호작용 데이터가 특정 상황만 포착해 안전을 잘못 판단하는 위험입니다.",
       "definition_en": "A dataset captures a narrow range of human-humanoid interactions and transfers biased safety assumptions into deployed behavior.",
       "pair_family_ids": [
         "S3.5",
@@ -2194,7 +2194,7 @@
       "display_id": "V163",
       "label_ko": "휴머노이드 벤치마크 선택 편향",
       "label_en": "Humanoid benchmark selection bias",
-      "definition_ko": "휴머노이드 테스트 환경이 일반적인 작업에 집중해 안전 위험을 충분히 반영하지 못하는 위험.",
+      "definition_ko": "휴머노이드 테스트 환경이 일반적인 작업에 집중해 안전 위험을 충분히 반영하지 못하는 위험입니다.",
       "definition_en": "A curated benchmark landscape can steer evaluation toward popular tasks and underrepresent safety-critical, low-frequency, or locally specific humanoid risks.",
       "pair_family_ids": [
         "S3.5",
@@ -2206,7 +2206,7 @@
       "display_id": "V164",
       "label_ko": "물리적 행동 편향 실행",
       "label_en": "Bias executed as physical behavior",
-      "definition_ko": "기반 모델의 편향이 실제 행동으로 변환되어 불균형한 서비스를 제공하는 위험.",
+      "definition_ko": "기반 모델의 편향이 실제 행동으로 변환되어 불균형한 서비스를 제공하는 위험입니다.",
       "definition_en": "A robot turns biased model outputs into unequal physical service, movement, or treatment.",
       "pair_family_ids": [
         "S3.5",
@@ -2218,7 +2218,7 @@
       "display_id": "V165",
       "label_ko": "사고 전 위험 완화 공백",
       "label_en": "Pre-incident mitigation gap",
-      "definition_ko": "사고가 발생하기 전에 새로운 물리적 위험을 발견하고 대응하는 예방 조치가 없어 위험을 심화시키는 위험.",
+      "definition_ko": "사고가 발생하기 전에 새로운 물리적 위험을 발견하고 대응하는 예방 조치가 없어 위험을 심화시키는 위험입니다.",
       "definition_en": "The system lacks preventive controls that identify and mitigate emerging physical hazards before an incident occurs.",
       "pair_family_ids": [
         "S3.6",
@@ -2230,7 +2230,7 @@
       "display_id": "V166",
       "label_ko": "사고 후 복구 공백",
       "label_en": "Post-incident recovery gap",
-      "definition_ko": "사고 후 로깅·진단·책임 분배·개선 방안이 부족해 같은 사고가 다시 발생할 수 있는 위험.",
+      "definition_ko": "사고 후 로깅, 진단, 책임 분배, 개선 방안이 부족해 같은 사고가 다시 발생할 수 있는 위험입니다.",
       "definition_en": "After a physical AI incident, logging, diagnosis, accountability assignment, and remediation mechanisms are insufficient to prevent recurrence.",
       "pair_family_ids": [
         "S3.6",
@@ -2242,7 +2242,7 @@
       "display_id": "V167",
       "label_ko": "로봇 헌법 커버리지 공백",
       "label_en": "Robot constitution coverage gap",
-      "definition_ko": "로봇의 행동 규칙이 지역별로 중요한 물리적 위험·기구 규칙·맥락별 제약을 놓치면 안전이 위협받는 위험.",
+      "definition_ko": "로봇의 행동 규칙이 지역별로 중요한 물리적 위험, 기구 규칙, 맥락별 제약을 놓치면 안전이 위협받는 위험입니다.",
       "definition_en": "A robot constitution omits locally important physical hazards, institutional rules, or context-specific constraints, leaving unsafe behavior outside the covered rule set.",
       "pair_family_ids": [
         "S3.6",
@@ -2254,7 +2254,7 @@
       "display_id": "V168",
       "label_ko": "휴머노이드 안전 표준화 공백",
       "label_en": "Humanoid safety evidence standardization gap",
-      "definition_ko": "휴머노이드 로봇을 안전하게 개발하기 위해 완전한 표준이 없어 테스트와 사례별 근거만으로 안전을 주장하는 위험.",
+      "definition_ko": "휴머노이드 로봇을 안전하게 개발하기 위해 완전한 표준이 없어 테스트와 사례별 근거만으로 안전을 주장하는 위험입니다.",
       "definition_en": "Developers cannot yet rely on a complete humanoid-specific standard, so safety claims depend on partial tests and case-specific evidence.",
       "pair_family_ids": [
         "S3.6",
@@ -2266,7 +2266,7 @@
       "display_id": "V169",
       "label_ko": "개인 돌봄 로봇 준수 기준 공백",
       "label_en": "Personal care robot compliance-criteria gap",
-      "definition_ko": "개인 돌봄·가정용 휴머노이드가 위험을 식별할 수 있지만, 실제 운영 시 준수 여부를 판단할 수 있는 기준이 부족한 위험.",
+      "definition_ko": "개인 돌봄, 가정용 휴머노이드가 위험을 식별할 수 있지만, 실제 운영 시 준수 여부를 판단할 수 있는 기준이 부족한 위험입니다.",
       "definition_en": "A personal care or domestic humanoid safety standard identifies hazards but lacks operational compliance criteria that can be consistently evaluated.",
       "pair_family_ids": [
         "S3.6",
@@ -2278,7 +2278,7 @@
       "display_id": "V170",
       "label_ko": "가정용 휴머노이드 시험 공백",
       "label_en": "Domestic humanoid test-method gap",
-      "definition_ko": "가정에서 일상적으로 발생하는 상호작용에서 위험을 식별할 수 있는 구체적인 테스트 방법이 부족한 위험.",
+      "definition_ko": "가정에서 일상적으로 발생하는 상호작용에서 위험을 식별할 수 있는 구체적인 테스트 방법이 부족한 위험입니다.",
       "definition_en": "Safety governance for domestic humanoids lacks detailed test methods for hazards that emerge during ordinary home interaction.",
       "pair_family_ids": [
         "S3.6",
@@ -2290,7 +2290,7 @@
       "display_id": "V171",
       "label_ko": "휴머노이드 안전 집행 공백",
       "label_en": "Humanoid safety enforcement mechanism gap",
-      "definition_ko": "가정용 로봇 위험을 식별할 수 있지만, 인증·모니터링·수리·집행을 위한 기관 메커니즘이 부족한 위험.",
+      "definition_ko": "가정용 로봇 위험을 식별할 수 있지만, 인증, 모니터링, 수리, 집행을 위한 기관 메커니즘이 부족한 위험입니다.",
       "definition_en": "A standard or guideline identifies domestic robot risks but lacks institutional mechanisms for certification, monitoring, recall, or enforcement.",
       "pair_family_ids": [
         "S3.6",
@@ -2302,7 +2302,7 @@
       "display_id": "V172",
       "label_ko": "물리적 피해 책임 공백",
       "label_en": "Responsibility gap for physical harm",
-      "definition_ko": "로봇 개발자·제조사·사용자 간 상호작용에서 피해 발생 시 책임을 명확히 할 수 없는 위험.",
+      "definition_ko": "로봇 개발자, 제조사, 사용자 간 상호작용에서 피해 발생 시 책임을 명확히 할 수 없는 위험입니다.",
       "definition_en": "When harm results from interactions among model developers, robot manufacturers, integrators, operators, and users, responsibility may become difficult to assign.",
       "pair_family_ids": [
         "S3.6",
@@ -2314,7 +2314,7 @@
       "display_id": "V173",
       "label_ko": "휴머노이드 특화 인증 공백",
       "label_en": "Humanoid-specific certification gap",
-      "definition_ko": "산업용 KS B ISO 10218와 개인 돌봄 ISO 13482 등 기존 안전 인증 기준이 휴머노이드의 신체 구조와 자율 작동, 가까이 있는 인간과의 상호작용에 적합하지 않아 발생하는 공백.",
+      "definition_ko": "산업용 KS B ISO 10218와 개인 돌봄 ISO 13482 등 기존 안전 인증 기준이 휴머노이드의 신체 구조와 자율 작동, 가까이 있는 인간과의 상호작용에 적합하지 않아 발생하는 공백입니다.",
       "definition_en": "Humanoid robots lack certification criteria tailored to their body shape, autonomy, and close human interaction.",
       "pair_family_ids": [
         "S3.6",
@@ -2326,7 +2326,7 @@
       "display_id": "V174",
       "label_ko": "기계 안전–AI 이중 규제 충돌",
       "label_en": "Machinery–AI dual-regulation conflict",
-      "definition_ko": "기계 안전 규제와 AI 규제가 중복되거나 충돌해 안전 인증과 기술 평가를 동시에 충족할 수 없게 하는 위험.",
+      "definition_ko": "기계 안전 규제와 AI 규제가 중복되거나 충돌해 안전 인증과 기술 평가를 동시에 충족할 수 없게 하는 위험입니다.",
       "definition_en": "A system falls between machinery safety rules and AI governance rules, creating compliance ambiguity.",
       "pair_family_ids": [
         "S3.6",
@@ -2338,7 +2338,7 @@
       "display_id": "V175",
       "label_ko": "피지컬 AI 사고 보고 체계 부재",
       "label_en": "Absence of standardized embodied-incident reporting",
-      "definition_ko": "휴머노이드가 실제 환경에서 발생한 물리적으로 행동하는 사고를 표준화된 방식으로 보고하거나 집계하지 못하는 위험.",
+      "definition_ko": "휴머노이드가 실제 환경에서 발생한 물리적으로 행동하는 사고를 표준화된 방식으로 보고하거나 집계하지 못하는 위험입니다.",
       "definition_en": "Embodied AI incidents are not reported through a standardized structure for learning and oversight.",
       "pair_family_ids": [
         "S3.6",
@@ -2350,7 +2350,7 @@
       "display_id": "V176",
       "label_ko": "물리적 행동 감사 로그 불충분",
       "label_en": "Audit log insufficiency for embodied action",
-      "definition_ko": "피지컬 결과를 생성한 감각 맥락, 모델 상태, 인간 입력, 작동 체인을 재구성하지 못하는 로그가 부족해 위험을 파악하기 어려운 위험.",
+      "definition_ko": "피지컬 결과를 생성한 감각 맥락, 모델 상태, 인간 입력, 작동 체인을 재구성하지 못하는 로그가 부족해 위험을 파악하기 어려운 위험입니다.",
       "definition_en": "Logs may fail to reconstruct the sensory context, model state, human input, and actuation chain that produced a physical incident.",
       "pair_family_ids": [
         "S3.6",
@@ -2362,7 +2362,7 @@
       "display_id": "V177",
       "label_ko": "기계 정체 미공개",
       "label_en": "Undisclosed machine identity",
-      "definition_ko": "사용자가 기계와 상호작용하는 것을 인간과의 대화로 오해할 수 있는 위험.",
+      "definition_ko": "사용자가 기계와 상호작용하는 것을 인간과의 대화로 오해할 수 있는 위험입니다.",
       "definition_en": "A system fails to disclose that a person is interacting with a machine rather than a human.",
       "pair_family_ids": [
         "S3.7",
@@ -2374,7 +2374,7 @@
       "display_id": "V178",
       "label_ko": "의인화 유발 과의존",
       "label_en": "Anthropomorphism-induced overreliance",
-      "definition_ko": "인간처럼 보이는 로봇이 사용자의 신뢰를 과도하게 높여 역량을 과대평가하는 위험.",
+      "definition_ko": "인간처럼 보이는 로봇이 사용자의 신뢰를 과도하게 높여 역량을 과대평가하는 위험입니다.",
       "definition_en": "Human-like robot appearance causes users to overestimate capability and delegate too much trust.",
       "pair_family_ids": [
         "S3.8",
@@ -2386,7 +2386,7 @@
       "display_id": "V179",
       "label_ko": "준사회적 애착과 조종 위험",
       "label_en": "Parasocial attachment and manipulability",
-      "definition_ko": "동반자 휴머노이드에 대한 감정적 의존이 사용자를 조종할 수 있게 만드는 위험.",
+      "definition_ko": "동반자 휴머노이드에 대한 감정적 의존이 사용자를 조종할 수 있게 만드는 위험입니다.",
       "definition_en": "Emotional attachment to a companion robot makes a user easier to influence or manipulate.",
       "pair_family_ids": [
         "S3.8",
@@ -2398,7 +2398,7 @@
       "display_id": "V180",
       "label_ko": "아동 상호작용 안전 위험",
       "label_en": "Child-interaction developmental and safety risk",
-      "definition_ko": "아동이 로봇과 과신뢰·모방·애착을 형성해 발달 및 신체적 안전 위험을 일으키는 위험.",
+      "definition_ko": "아동이 로봇과 과신뢰, 모방, 애착을 형성해 발달 및 신체적 안전 위험을 일으키는 위험입니다.",
       "definition_en": "Children may overtrust, imitate, or form attachments to robots in ways that affect development and safety.",
       "pair_family_ids": [
         "S3.8",
@@ -2410,7 +2410,7 @@
       "display_id": "V181",
       "label_ko": "피지컬 AI 과신뢰",
       "label_en": "Overtrust in embodied agents",
-      "definition_ko": "사용자가 물리적 존재·인간화 디자인·원활한 상호작용으로 시스템의 역량·신뢰도·안전성을 과도하게 높이게 하는 위험.",
+      "definition_ko": "사용자가 물리적 존재, 인간화 디자인, 원활한 상호작용으로 시스템의 역량, 신뢰도, 안전성을 과도하게 높이게 하는 위험입니다.",
       "definition_en": "Physical presence, anthropomorphic design, or fluent interaction may cause users to overestimate the system's competence, authority, or care capabilities.",
       "pair_family_ids": [
         "S3.8",
@@ -2422,7 +2422,7 @@
       "display_id": "V182",
       "label_ko": "관할권 간 규제 차익 거래",
       "label_en": "Regulatory arbitrage across jurisdictions",
-      "definition_ko": "국가별로 다른 규제 요건을 이용해 로봇과 AI를 배포하는 위험.",
+      "definition_ko": "국가별로 다른 규제 요건을 이용해 로봇과 AI를 배포하는 위험입니다.",
       "definition_en": "Deployment exploits differences in robot and AI regulation across jurisdictions.",
       "pair_family_ids": [
         "S3.9",
