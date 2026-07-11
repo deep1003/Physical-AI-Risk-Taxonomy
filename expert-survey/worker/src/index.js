@@ -117,29 +117,27 @@ async function savePublicResponse(payload, env) {
   const path = `responses/${year}/${month}/${stem}.md`;
   const jsonPath = `responses/${year}/${month}/${stem}.json`;
   const csvPath = `responses/${year}/${month}/${stem}.csv`;
-  const [markdown, json, csv] = await Promise.all([
-    putGitHubFile(
-      env.GH_REPO,
-      path,
-      payload.markdown,
-      `Add anonymous survey response ${payload.respondent_id}`,
-      env,
-    ),
-    putGitHubFile(
-      env.GH_REPO,
-      jsonPath,
-      payload.json,
-      `Add anonymous survey JSON ${payload.respondent_id}`,
-      env,
-    ),
-    putGitHubFile(
-      env.GH_REPO,
-      csvPath,
-      payload.csv,
-      `Add anonymous survey CSV ${payload.respondent_id}`,
-      env,
-    ),
-  ]);
+  const markdown = await putGitHubFile(
+    env.GH_REPO,
+    path,
+    payload.markdown,
+    `Add anonymous survey response ${payload.respondent_id}`,
+    env,
+  );
+  const json = await putGitHubFile(
+    env.GH_REPO,
+    jsonPath,
+    payload.json,
+    `Add anonymous survey JSON ${payload.respondent_id}`,
+    env,
+  );
+  const csv = await putGitHubFile(
+    env.GH_REPO,
+    csvPath,
+    payload.csv,
+    `Add anonymous survey CSV ${payload.respondent_id}`,
+    env,
+  );
   return {
     path,
     json_path: jsonPath,
