@@ -3,7 +3,7 @@
 const CONFIG = {
   repo: "deep1003/Physical-AI-Risk-Taxonomy",
   apiUrl: "https://pai-risk-survey-api.deep1003-pai.workers.dev",
-  storagePrefix: "pai-expert-survey-v2-pairwise30",
+  storagePrefix: "pai-expert-survey-v3-revision30",
 };
 
 const app = document.querySelector("#app");
@@ -16,7 +16,7 @@ let state = {
   consent: false,
   demographics: {},
   responses: {},
-  exit: {},
+  revisions: {},
   cardIndex: 0,
   startedAt: Date.now(),
 };
@@ -61,7 +61,7 @@ function startNewResponse() {
     consent: false,
     demographics: {},
     responses: {},
-    exit: {},
+    revisions: {},
     cardIndex: 0,
     startedAt: Date.now(),
   };
@@ -74,8 +74,8 @@ function randomRespondentId() {
 function randomBlock() {
   const byte = new Uint8Array(1);
   do crypto.getRandomValues(byte);
-  while (byte[0] >= 252);
-  return `A0${(byte[0] % 9) + 1}`;
+  while (byte[0] >= 247);
+  return `A${String((byte[0] % 19) + 1).padStart(2, "0")}`;
 }
 function seededShuffle(values, seedText) {
   let seed = 2166136261;
@@ -108,6 +108,9 @@ function pairFamilies(card) {
     card.pair_family_ids,
     `${state.raterCode}:${card.card_id}:pair`,
   ).map((id) => lookup.get(id));
+}
+function familyById(id) {
+  return surveyData.families.find((family) => family.id === id);
 }
 function familyOptions(value = "", includeSpecial = true) {
   const groups = groupBy(surveyData.families, (family) => family.l2_id);
@@ -327,8 +330,8 @@ function renderReview() {
   );
   app.innerHTML = `<section class="panel"><h2>응답 검토 <span class="english">Review responses</span></h2>
     <p><span class="stat">완료 / Complete: ${cards.length - missing.length}</span><span class="stat">미완료 / Missing: ${missing.length}</span></p>
-    ${missing.length ? `<p class="error">미완료 카드가 있습니다. / Some cards are incomplete.</p>` : `<p class="notice">모든 카드가 완료되었습니다. 종료 문항으로 이동할 수 있습니다. / All assigned cards are complete.</p>`}
-    <div class="actions"><button id="returnCards" class="secondary">카드로 돌아가기 / Return</button><button id="exitNext" class="primary" ${missing.length ? "disabled" : ""}>종료 문항 / Exit questions</button></div></section>`;
+    ${missing.length ? `<p class="error">미완료 카드가 있습니다. / Some cards are incomplete.</p>` : `<p class="notice">모든 카드가 완료되었습니다. 제출 전 재검토 단계로 이동할 수 있습니다. / All assigned cards are complete; you can proceed to the pre-submission review.</p>`}
+    <div class="actions"><button id="returnCards" class="secondary">카드로 돌아가기 / Return</button><button id="revisionNext" class="primary" ${missing.length ? "disabled" : ""}>재검토 / Review flagged items</button></div></section>`;
   document.querySelector("#returnCards").onclick = () => {
     state.page = "cards";
     if (missing.length)
@@ -338,35 +341,83 @@ function renderReview() {
     save();
     render();
   };
-  document.querySelector("#exitNext").onclick = () => {
-    state.page = "exit";
+  document.querySelector("#revisionNext").onclick = () => {
+    state.page = "revision";
     save();
     render();
   };
 }
 
-function renderExit() {
-  const x = state.exit;
-  app.innerHTML = `<section class="panel"><h2>종료 평가 <span class="english">Exit assessment</span></h2>
-    ${selectField("clarity", "L3 정의의 전반적 명확성*", "Overall clarity of L3 definitions*", ["1 매우 불명확 / Very unclear", "2 불명확 / Unclear", "3 보통 / Moderate", "4 명확 / Clear", "5 매우 명확 / Very clear"], x.clarity)}
-    <div class="field"><label for="confusing">가장 혼동된 위험군 쌍(최대 3쌍) <span class="english">Most confusing family pairs (up to three)</span></label><textarea id="confusing">${esc(x.confusing || "")}</textarea></div>
-    <div class="field"><label for="missingRisk">누락된 주요 위험영역 <span class="english">Important missing risk areas</span></label><textarea id="missingRisk">${esc(x.missingRisk || "")}</textarea></div>
-    <div class="field"><label for="suggestion">병합·분리·정의 개선 제안 <span class="english">Suggestions for merging, splitting, or redefining families</span></label><textarea id="suggestion">${esc(x.suggestion || "")}</textarea></div><p id="exitError" class="error"></p>
+function revisionCandidates() {
+  return assignedCards()
+    .map((card) => {
+      const response = state.responses[card.card_id] || {};
+      return {
+        card,
+        response,
+        algorithmChoice: card.pair_family_ids[0],
+        confidence: Number(response.confidence || 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.response.choice &&
+        item.algorithmChoice &&
+        item.response.choice !== item.algorithmChoice,
+    )
+    .sort((a, b) => {
+      if (b.confidence !== a.confidence) return b.confidence - a.confidence;
+      return a.card.display_id.localeCompare(b.card.display_id);
+    })
+    .slice(0, 3);
+}
+
+function renderRevision() {
+  const candidates = revisionCandidates();
+  const items = candidates
+    .map(({ card, response, algorithmChoice }, index) => {
+      const original = familyById(response.choice);
+      const algorithm = familyById(algorithmChoice);
+      const revision = state.revisions[card.card_id] || {};
+      const selectedChoice = revision.revised_choice || response.choice;
+      return `<div class="revision-item">
+        <p class="card-id">${esc(card.display_id)} · ${index + 1}/${candidates.length}</p>
+        <p class="risk-title">${esc(card.label_ko)} <span class="english">${esc(card.label_en)}</span></p>
+        <div class="risk-definition"><p>${esc(card.definition_ko)}</p><p class="english">${esc(card.definition_en)}</p></div>
+        <div class="compare-grid">
+          <div><h3>알고리즘 선택 <span class="english">Algorithm-selected answer</span></h3><p><strong>${esc(algorithm.id)} · ${esc(algorithm.name_ko)}</strong> <span class="english">${esc(algorithm.name_en)}</span></p><p>${esc(algorithm.definition_ko)}</p></div>
+          <div><h3>본인의 원래 답변 <span class="english">Your original answer</span></h3><p><strong>${esc(original.id)} · ${esc(original.name_ko)}</strong> <span class="english">${esc(original.name_en)}</span></p><p>${esc(original.definition_ko)}</p><p class="help">원래 확신도 / Original confidence: ${esc(response.confidence)}</p></div>
+        </div>
+        <fieldset><legend>제출 전 최종 선택 <span class="english">Final selection before submission</span></legend>
+          <label class="choice"><input type="radio" name="revision_${esc(card.card_id)}" value="${esc(response.choice)}" ${checked(selectedChoice === response.choice)}>원래 답변 유지 / Keep my original answer</label>
+          <label class="choice"><input type="radio" name="revision_${esc(card.card_id)}" value="${esc(algorithmChoice)}" ${checked(selectedChoice === algorithmChoice)}>알고리즘 선택으로 수정 / Change to the algorithm-selected answer</label>
+        </fieldset>
+      </div>`;
+    })
+    .join("");
+  app.innerHTML = `<section class="panel"><h2>제출 전 재검토 <span class="english">Pre-submission reconsideration</span></h2>
+    ${candidates.length ? `<div class="notice"><p>아래 문항은 알고리즘 선택과 다르게 답한 문항 중 확신도가 가장 높았던 항목입니다. 원래 답변을 유지하거나 알고리즘 선택으로 수정할 수 있습니다.</p><p class="english">These are the highest-confidence items where your answer differed from the algorithm-selected answer. You may keep your original answer or change to the algorithm-selected answer.</p></div>${items}` : `<div class="notice"><p>알고리즘 선택과 다른 고확신 답변이 없어 재검토 문항이 없습니다.</p><p class="english">There are no high-confidence disagreements with the algorithm-selected answer to review.</p></div>`}
+    <p id="revisionError" class="error"></p>
     <div class="actions"><button class="secondary" data-back>이전 / Back</button><button id="finish" class="primary">응답 완료 / Complete</button></div></section>`;
   bindBack("review");
   document.querySelector("#finish").onclick = () => {
-    const clarity = document.querySelector("#clarity").value;
-    if (!clarity) {
-      document.querySelector("#exitError").textContent =
-        "명확성 평가는 필수입니다. / Clarity rating is required.";
-      return;
-    }
-    state.exit = {
-      clarity,
-      confusing: document.querySelector("#confusing").value.trim(),
-      missingRisk: document.querySelector("#missingRisk").value.trim(),
-      suggestion: document.querySelector("#suggestion").value.trim(),
-    };
+    state.revisions = Object.fromEntries(
+      candidates.map(({ card, response, algorithmChoice }) => {
+        const revisedChoice =
+          document.querySelector(`[name="revision_${card.card_id}"]:checked`)
+            ?.value || response.choice;
+        return [
+          card.card_id,
+          {
+            algorithm_choice: algorithmChoice,
+            original_choice: response.choice,
+            original_confidence: response.confidence,
+            revised_choice: revisedChoice,
+            changed: revisedChoice !== response.choice,
+          },
+        ];
+      }),
+    );
     state.page = "complete";
     state.completedAt = new Date().toISOString();
     state.submissionId ||= crypto.randomUUID();
@@ -386,16 +437,21 @@ function markdown() {
         .replaceAll("\n", " ")} |`;
     })
     .join("\n");
-  const d = state.demographics,
-    x = state.exit;
-  return `---\nsurvey_version: "${surveyData.survey_version}"\nassignment_version: "${assignments.assignment_version}"\nrespondent_id: "${state.raterCode}"\nassignment_block: "${state.assignmentBlock}"\nsource_sha256: "${surveyData.source_sha256}"\n---\n\n# Physical AI Expert Pairwise Ranking Response\n\n## Background / 배경 정보\n\n- Age band / 연령대: ${d.ageBand}\n- Gender / 성별: ${d.gender}\n- Expertise / 전문영역: ${(d.expertise || []).join(", ")}\n- Career / 경력: ${d.career}\n- Risk-assessment experience / 위험평가 경험: ${d.riskExperience}\n- Standards experience / 표준·규제 경험: ${d.standardsExperience}\n- Eligibility confirmed / 적격성 확인: ${d.eligibilityConfirmed}\n- Independence confirmed / 독립성 확인: ${d.independent && d.notExposed}\n\n## Pairwise rankings / 쌍대 순위 선택\n\n| Display ID | Card ID | Candidate A | Candidate B | Selected L3 | Confidence | Comment |\n|---|---|---|---|---|---:|---|\n${rows}\n\n## Exit assessment / 종료 평가\n\n- Clarity / 명확성: ${x.clarity || ""}\n- Confusing pairs / 혼동 위험군: ${x.confusing || ""}\n- Missing risks / 누락 위험: ${x.missingRisk || ""}\n- Suggestions / 개선 제안: ${x.suggestion || ""}\n`;
+  const revisionRows = Object.entries(state.revisions || {})
+    .map(([cardId, revision]) => {
+      const card = assignedCards().find((item) => item.card_id === cardId);
+      return `| ${card?.display_id || ""} | ${cardId} | ${revision.algorithm_choice || ""} | ${revision.original_choice || ""} | ${revision.original_confidence || ""} | ${revision.revised_choice || ""} | ${revision.changed ? "yes" : "no"} |`;
+    })
+    .join("\n");
+  const d = state.demographics;
+  return `---\nsurvey_version: "${surveyData.survey_version}"\nassignment_version: "${assignments.assignment_version}"\nrespondent_id: "${state.raterCode}"\nassignment_block: "${state.assignmentBlock}"\nsource_sha256: "${surveyData.source_sha256}"\n---\n\n# Physical AI Expert Pairwise Ranking Response\n\n## Background / 배경 정보\n\n- Age band / 연령대: ${d.ageBand}\n- Gender / 성별: ${d.gender}\n- Expertise / 전문영역: ${(d.expertise || []).join(", ")}\n- Career / 경력: ${d.career}\n- Risk-assessment experience / 위험평가 경험: ${d.riskExperience}\n- Standards experience / 표준·규제 경험: ${d.standardsExperience}\n- Eligibility confirmed / 적격성 확인: ${d.eligibilityConfirmed}\n- Independence confirmed / 독립성 확인: ${d.independent && d.notExposed}\n\n## Original pairwise rankings / 원래 쌍대 순위 선택\n\n| Display ID | Card ID | Candidate A | Candidate B | Original selected L3 | Confidence | Comment |\n|---|---|---|---|---|---:|---|\n${rows}\n\n## Pre-submission reconsideration / 제출 전 재검토\n\n| Display ID | Card ID | Algorithm-selected L3 | Original selected L3 | Original confidence | Revised selected L3 | Changed |\n|---|---|---|---|---:|---|---|\n${revisionRows || "|  |  |  |  |  |  |  |"}\n`;
 }
 
 function renderComplete() {
   const stored = state.submission?.stored;
   app.innerHTML = `<section class="panel complete"><h2>${stored ? "응답 저장 완료" : "응답 저장 중"} <span class="english">${stored ? "Response stored" : "Saving response"}</span></h2>
     ${stored ? `<div class="notice"><p>익명 응답이 공개 GitHub 저장소에 Markdown으로 저장됐습니다.</p><p class="english">The anonymous response has been stored as Markdown in the public GitHub repository.</p><p><code>${esc(state.submission.path)}</code></p></div>` : `<p>창을 닫지 마십시오. / Please do not close this window.</p><p id="submitStatus" class="help">GitHub 저장소에 연결하고 있습니다. / Connecting to the GitHub repository…</p><button id="retry" class="secondary" hidden>다시 시도 / Retry</button>`}
-    ${stored ? `<div class="actions"><a class="button secondary" target="_blank" rel="noopener" href="${esc(state.submission.url)}">저장된 응답 보기 / View stored response</a><button id="newResponse" class="primary">새 응답 시작 / Start a new response</button></div>` : ""}</section>`;
+    ${stored ? `<div class="actions"><span></span><button id="newResponse" class="primary">새로운 랜덤 문제 시작 / Start new random items</button></div>` : ""}</section>`;
   if (stored) {
     document.querySelector("#newResponse").onclick = startNewResponse;
   }
@@ -448,7 +504,7 @@ function render() {
       codebook: renderCodebook,
       cards: renderCard,
       review: renderReview,
-      exit: renderExit,
+      revision: renderRevision,
       complete: renderComplete,
     })[state.page] || renderConsent
   )();

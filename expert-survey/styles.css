@@ -59,6 +59,9 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .risk-card { border-top: 5px solid var(--teal); }
 .risk-title { font-size: 1.25rem; font-weight: 800; margin-bottom: .25rem; }
 .risk-definition { background: #f7f9fa; padding: .9rem; border-radius: .5rem; }
+.revision-item { border-top: 4px solid var(--teal); padding-top: 1rem; margin-top: 1.25rem; }
+.compare-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1rem 0; }
+.compare-grid > div { border: 1px solid var(--line); border-radius: .55rem; padding: .9rem; background: #f7f9fa; }
 .codebook details { border: 1px solid var(--line); border-radius: .55rem; margin: .55rem 0; padding: .6rem .8rem; }
 .codebook summary { cursor: pointer; font-weight: 800; color: var(--navy); }
 .l2-heading { margin-top: 1.5rem; padding-bottom: .35rem; border-bottom: 2px solid var(--teal); }
@@ -69,6 +72,7 @@ footer { text-align: center; color: var(--muted); padding: 1rem 1rem 2.5rem; fon
 @media (max-width: 720px) {
   .site-header { align-items: start; flex-direction: column; }
   .grid { grid-template-columns: 1fr; }
+  .compare-grid { grid-template-columns: 1fr; }
   .actions { flex-direction: column; }
   .actions-right { margin-left: 0; }
   button, .button { width: 100%; text-align: center; }
