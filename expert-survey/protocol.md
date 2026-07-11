@@ -6,22 +6,22 @@
 
 ## 1. 연구 목적 / Study objective
 
-본 조사의 주목적은 각 L4 위험 카드에 대해 기존 L3와 유사한 대안 L3를 쌍으로 제시했을 때, 독립 전문가가 어느 후보를 더 적합하다고 평가하는지 검증하는 것이다. 이 조사는 기존 카드-L3 연결의 판별 타당성을 평가하며, 24개 위험군 전체가 유일하거나 최적인 분류체계라는 점을 검증하지 않는다.
+본 조사의 주목적은 각 L4 위험 카드에 대해 사전 지정 기준 배정 L3와 유사한 대안 L3를 쌍으로 제시했을 때, 독립 전문가가 어느 후보를 더 적합하다고 평가하는지 검증하는 것이다. 이 조사는 카드-L3 연결의 제한적 판별 타당성을 평가하며, 24개 위험군 전체가 유일하거나 최적인 분류체계라는 점을 검증하지 않는다.
 
-The primary objective is to test which of two candidate L3 families independent experts judge to be the better fit for each L4 risk card: the canonical assignment or a closely matched alternative. The study evaluates the discriminant validity of existing card-to-family links; it does not establish that the complete 24-family structure is unique or optimal.
+The primary objective is to test which of two candidate L3 families independent experts judge to be the better fit for each L4 risk card: the pre-specified reference assignment or a closely matched alternative. The study evaluates constrained discriminant validity of card-to-family links; it does not establish that the complete 24-family structure is unique or optimal.
 
 ## 2. 연구 설계 / Study design
 
 - 평가 대상: L4 위험 카드 182개, L3 위험군 24개
-- 평가자: 독립 전문가 9명 이상 모집; 전체 카드의 최소 3회 평가를 위해 최소 19개 완주 응답을 목표로 함
+- 평가자: 독립 전문가 최소 20명 이상 실시; 19개 완주 응답 이후 전체 카드의 최소 3회 평가 확보
 - 배정: 19개 균형 블록, 블록당 30문항, 총 570건의 계획 판단; 카드당 3회 또는 4회
 - 부담: 응답자당 30개 쌍대비교 문항; 제한시간 없음, 중단 후 재개 가능
 - 설계: L3 기준으로 층화한 균형 불완전 블록 설계
-- 맹검: 기존 L3 배정, 임베딩 예측, 유사도, 군집 ID 및 다른 평가자 응답 비공개
-- 후보 구성: 기존 L3와 같은 L2에 속하는 유사 대안 L3를 사전 규칙으로 매칭
-- 1차 평가변수: 기존 L3 선택률과 카드 단위 bootstrap 95% 신뢰구간
+- 맹검: 사전 지정 기준 배정, 임베딩 예측, 유사도, 군집 ID 및 다른 평가자 응답 비공개
+- 후보 구성: 사전 지정 기준 배정 L3와 같은 L2에 속하는 유사 대안 L3를 사전 규칙으로 매칭
+- 1차 평가변수: 원래 응답 기준의 reference assignment 선택률과 카드 단위 Wilson 또는 bootstrap 95% 신뢰구간
 
-The study recruits at least nine independent experts and uses 19 balanced 30-item blocks. At least 19 completed responses are required to obtain a minimum of three ratings per card; 24 cards receive a fourth rating, yielding 570 planned judgments. Additional respondents receive repeated balanced blocks. For each card, the canonical L3 is paired with a prespecified, same-L2 hard negative; left/right order is randomized. The primary endpoint is the canonical-choice proportion with a card-level bootstrap 95% confidence interval.
+The study recruits at least 20 independent experts and uses 19 balanced 30-item blocks. At least 19 completed responses are required to obtain a minimum of three ratings per card; 24 cards receive a fourth rating, yielding 570 planned judgments. Additional respondents receive repeated balanced blocks. For each card, the pre-specified reference assignment is paired with a same-L2 hard negative; left/right order is randomized. The primary endpoint uses original responses only and estimates the reference-assignment choice proportion with Wilson or bootstrap 95% confidence intervals.
 
 ## 3. 전문가 선정 / Expert eligibility
 
@@ -67,10 +67,10 @@ The questionnaire does not request names, email addresses, exact age, or institu
 3. 이중언어 L3 codebook 및 분류 규칙 검토
 4. 개인별로 배정된 L4 카드마다 두 L3 후보 중 더 적합한 하나를 선택
 5. 선택 확신도와 선택적 의견 기록
-6. 전체 codebook의 명확성, 누락 위험 및 혼동되는 위험군에 대한 종료 의견
-7. 응답을 Markdown으로 변환해 GitHub 응답 저장소에 제출
+6. 사전 지정 기준 배정과 다른 고확신 응답을 최대 3개까지 재검토
+7. 응답을 Markdown, JSON, CSV로 변환해 GitHub 응답 저장소에 제출
 
-Each expert reviews the bilingual codebook and completes a forced-choice comparison between two L3 candidates for every allocated L4 card. Candidate order is randomized, and neither a tie nor an indeterminate option is provided. Experts also report confidence and may add a comment.
+Each expert reviews the bilingual codebook and completes a forced-choice comparison between two L3 candidates for every allocated L4 card. Candidate order is randomized, and neither a tie nor an indeterminate, unknown, or unmappable option is provided. Experts also report confidence and may add a comment. Up to three highest-confidence disagreements with the pre-specified reference assignment are shown again before submission; original and revised responses are retained separately.
 
 ## 6. 카드 표시 및 맹검 / Card presentation and blinding
 
@@ -86,9 +86,9 @@ Cards display only a randomized presentation ID, the bilingual L4 label, and the
 
 ## 8. 자료 보존 / Data retention
 
-응답은 브라우저의 localStorage에 자동 임시저장된다. 완료된 응답은 구조화된 Markdown으로 변환되어 공개 GitHub 응답 저장소에 자동 보존된다. 설문 시작·종료 시각, 총 소요시간과 국가 수준의 접속지역은 응답 Markdown과 분리된 비공개 GitHub 저장소에 보존한다. 원본 IP와 더 세부적인 위치·접속·기기 정보는 저장하지 않는다. 공개 응답에는 시간 및 국가 정보를 포함하지 않는다. 제한시간은 없다. 비공개 운영 기록의 보유기간은 수집일로부터 1년으로 정한다.
+응답은 브라우저의 localStorage에 자동 임시저장된다. 완료된 응답은 구조화된 Markdown, JSON, CSV로 변환되어 공개 GitHub 응답 저장소에 자동 보존된다. 설문 시작·종료 시각, 총 소요시간과 국가 수준의 접속지역은 응답 파일과 분리된 비공개 GitHub 저장소에 보존한다. 원본 IP와 더 세부적인 위치·접속·기기 정보는 저장하지 않는다. 공개 응답에는 시간 및 국가 정보를 포함하지 않는다. 제한시간은 없다. 비공개 운영 기록의 보유기간은 수집일로부터 1년으로 정한다.
 
-Responses are autosaved in browser localStorage and converted to structured Markdown for automatic retention in a public GitHub response repository. Survey start and completion timestamps, total duration, and country-level access location are retained separately in a private GitHub repository. Source IP and finer-grained location, connection, or device metadata are not retained. The public response does not contain timing or country information. There is no time limit. Private administration records are retained for one year.
+Responses are autosaved in browser localStorage and converted to structured Markdown, JSON, and CSV for automatic retention in a public GitHub response repository. Survey start and completion timestamps, total duration, and country-level access location are retained separately in a private GitHub repository. Source IP and finer-grained location, connection, or device metadata are not retained. The public response does not contain timing or country information. There is no time limit. Private administration records are retained for one year.
 
 ## 9. 품질관리 / Quality control
 
@@ -104,27 +104,30 @@ Responses are autosaved in browser localStorage and converted to structured Mark
 
 - 단위: L4 카드
 - 척도: 두 후보 간 강제선택
-- 지표: 기존 L3 선택률(canonical preference rate)
-- 신뢰구간: 카드 단위 bootstrap 5,000회
-- 귀무가설: 기존 L3 선택확률 0.5
+- 지표: 원래 응답 기준 reference assignment 선택률
+- 신뢰구간: 카드별 Wilson 또는 카드 단위 bootstrap 5,000회 95% 신뢰구간
+- 귀무가설: reference assignment 선택확률 0.5
 
 ### 보조 분석 / Secondary analyses
 
-- 카드별 3인 중 기존 L3 다수선택률과 완전일치율
-- L3 family별 기존 L3 선택률, macro-average 및 worst-family 결과
+- 카드별 reference assignment agreement 비율과 신뢰구간
+- L3 family별 reference assignment 선택률, macro-average 및 worst-family 결과
+- respondent-level 완료율, 평균 agreement, 평균 confidence
 - 후보쌍별 선택률과 방향성
-- 확신도별 기존 L3 선택률
+- 확신도별 reference assignment 선택률
+- 원래 전문가 답변에서 reference assignment로 전환한 switch rate
+- 고확신 불일치 판단이 재검토 후에도 유지되는 비율
 - singleton 대 non-singleton L3 비교
 - 기존 expert-corrected 카드 대 비보정 카드 비교
 - cosine margin과 인간 불일치의 연관성(탐색적 분석)
 
-570개 계획 판단을 독립 표본으로 간주하지 않으며, 불확실성은 카드 수준에서 평가한다. 9~18개 완주 응답은 전체 카드 검증을 위한 중간자료로만 취급한다.
+570개 계획 판단을 독립 표본으로 간주하지 않으며, card-level, family-level, respondent-level 요약을 분리한다. 주 분석은 원래 응답만 사용한다. 재검토 결과는 고확신 불일치 판단의 안정성을 보는 보조 분석으로만 사용한다. 19개 미만 완주 응답은 전체 카드 검증을 위한 중간자료로만 취급한다. 강제선택 설계는 unknown 또는 unmappable 판단을 배제한다는 한계를 가진다.
 
 ## 11. 사전 의사결정 규칙 / Prespecified interpretation
 
 | 결과 / Result | 해석 및 조치 / Interpretation and action |
 |---|---|
-| 전체 기존 L3 선택률의 95% CI 하한 > 0.50 | 매칭된 대안보다 기존 연결이 우세하다는 증거 / Evidence favouring canonical links over matched alternatives |
+| 전체 reference assignment 선택률의 95% CI 하한 > 0.50 | 매칭된 대안보다 기준 배정이 우세하다는 증거 / Evidence favouring reference assignments over matched alternatives |
 | 95% CI가 0.50 포함 | 판별 근거 불충분; 확정적 타당화 주장 금지 / Inconclusive discrimination; avoid definitive validation claims |
 | family 선택률 < 0.60 | 해당 family의 정의·경계 또는 카드 연결 재검토 / Review family boundaries or card links |
 | 카드에서 3인 중 2인 이상이 대안 선택 | 해당 카드 연결을 우선 재검토 / Prioritize the card-family link for review |
@@ -143,5 +146,5 @@ If survey results are used to revise family definitions, the same observations w
 - GitHub Pages 이중언어 설문
 - 24개 L3 codebook과 182개 L4 카드의 고정 JSON 스냅샷
 - A01~A19 균형 배정표
-- Markdown 응답 파일
+- Markdown, JSON, CSV 응답 파일
 - 데이터 사전 및 분석용 변환 명세
