@@ -178,5 +178,66 @@
       ]
     },
     "review_basis": "Two-reviewer audit found no high-confidence individual L4 exceptions inside the moved L3 groups; moved L3 groups were therefore kept intact."
+  },
+  {
+    "date": "2026-07-31",
+    "decision_owner": "human-approved constrained EM audit",
+    "change": "Apply reviewed L4 wording and move only L3 candidates selected in at least 80% of 24 model-language-seed sensitivity conditions while preserving all 24 non-empty L3 categories.",
+    "method": {
+      "models": [
+        "bge-m3",
+        "mxbai-embed-large",
+        "nomic-embed-text"
+      ],
+      "text_modes": [
+        "bilingual",
+        "english"
+      ],
+      "l3_seed_weights": [
+        1,
+        3,
+        5,
+        10
+      ],
+      "bootstrap_replicates": 1000,
+      "release_threshold": "same target selected by constrained EM in at least 80% of 24 sensitivity conditions",
+      "constraint": "all 24 L3 categories retain at least one L4 risk"
+    },
+    "moves": [
+      {
+        "card_id": "PHYSBENCH-REF-0065",
+        "previous_l3": "I3.7",
+        "current_l3": "P3.2",
+        "em_support": "20/24"
+      },
+      {
+        "card_id": "PHYSBENCH-REF-0107",
+        "previous_l3": "I3.6",
+        "current_l3": "S3.6",
+        "em_support": "23/24"
+      }
+    ],
+    "retained_candidates": [
+      {
+        "card_id": "PHYSRISK-REF-0033",
+        "released_l3": "I3.6",
+        "reason": "EM selected S3.6 in only 10/24 sensitivity conditions."
+      },
+      {
+        "card_id": "PHYSRISK-REF-0037",
+        "released_l3": "P3.3",
+        "reason": "All 24 conditions preferred the released family over S3.9."
+      },
+      {
+        "card_id": "PHYSRISK-REF-0055",
+        "released_l3": "S3.9",
+        "reason": "Moving the only S3.9 card would violate the non-empty L3 constraint."
+      }
+    ],
+    "post_migration_l4_counts": {
+      "P2 System Safety": 92,
+      "I2 Interaction Safety": 60,
+      "S2 Societal Safety": 30
+    }
   }
 ]

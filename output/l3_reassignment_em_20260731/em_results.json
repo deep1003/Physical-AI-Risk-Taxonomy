@@ -1,0 +1,2791 @@
+{
+  "bge-m3": {
+    "bilingual": {
+      "1.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.8005433266087579
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.8009139209865225
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8047025712645222,
+            "macro_cohesion": 0.848951424514239,
+            "micro_margin": 0.05018215386061274,
+            "macro_margin": 0.10376263850583352,
+            "negative_margin_fraction": 0.11538461538461539,
+            "loo_micro_cohesion": 0.7560564020900479,
+            "loo_micro_margin": 0.0015359846861384386,
+            "loo_negative_margin_fraction": 0.47802197802197804,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.800220746786827,
+            "macro_cohesion": 0.8439205115610967,
+            "micro_margin": 0.049195647367467885,
+            "macro_margin": 0.0997860733152834,
+            "negative_margin_fraction": 0.11538461538461539,
+            "loo_micro_cohesion": 0.7497630726957835,
+            "loo_micro_margin": -0.0012620267235754813,
+            "loo_negative_margin_fraction": 0.4835164835164835,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8008132152955234,
+            "macro_cohesion": 0.8453604333130583,
+            "micro_margin": 0.050996003562855115,
+            "macro_margin": 0.10263771284638369,
+            "negative_margin_fraction": 0.08791208791208792,
+            "loo_micro_cohesion": 0.750766928461011,
+            "loo_micro_margin": 0.0009497167283425868,
+            "loo_negative_margin_fraction": 0.45054945054945056,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.8009139209865223,
+            "macro_cohesion": 0.8443502844063726,
+            "micro_margin": 0.050928352425867,
+            "macro_margin": 0.10043837538710565,
+            "negative_margin_fraction": 0.09340659340659341,
+            "loo_micro_cohesion": 0.7505992278014806,
+            "loo_micro_margin": 0.0006136592408251567,
+            "loo_negative_margin_fraction": 0.45054945054945056,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7339126647277905,
+            "target_similarity": 0.7755931795034366,
+            "target_minus_current": 0.04168051477564616,
+            "bootstrap_target_preference": 0.999
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6903741991665321,
+            "target_similarity": 0.8014339024338907,
+            "target_minus_current": 0.11105970326735859,
+            "bootstrap_target_preference": 0.998
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6943655018705728,
+            "target_similarity": 0.7324964261301956,
+            "target_minus_current": 0.038130924259622834,
+            "bootstrap_target_preference": 0.952
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.6675712217631514,
+            "target_similarity": 0.5898677397599108,
+            "target_minus_current": -0.07770348200324062,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.512163141793286,
+            "target_similarity": 0.6926691314917173,
+            "target_minus_current": 0.18050598969843124,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "3.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 3,
+            "objective": 0.7853114479475266
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.785819455487853
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "S3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.7899967501159716,
+            "macro_cohesion": 0.7995945376657311,
+            "micro_margin": 0.038492045797852974,
+            "macro_margin": 0.05809771776831357,
+            "negative_margin_fraction": 0.12087912087912088,
+            "loo_micro_cohesion": 0.752759523109986,
+            "loo_micro_margin": 0.0012548187918674568,
+            "loo_negative_margin_fraction": 0.489010989010989,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.7849339498266958,
+            "macro_cohesion": 0.7931216758989516,
+            "micro_margin": 0.03650907704795532,
+            "macro_margin": 0.05292096737757429,
+            "negative_margin_fraction": 0.12087912087912088,
+            "loo_micro_cohesion": 0.7462964695879607,
+            "loo_micro_margin": -0.002128403190779752,
+            "loo_negative_margin_fraction": 0.4835164835164835,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.7855211437469838,
+            "macro_cohesion": 0.7932908670266029,
+            "micro_margin": 0.038366811751636795,
+            "macro_margin": 0.054072450379836955,
+            "negative_margin_fraction": 0.09340659340659341,
+            "loo_micro_cohesion": 0.7473315813521889,
+            "loo_micro_margin": 0.00017724935684185601,
+            "loo_negative_margin_fraction": 0.46703296703296704,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.785819455487853,
+            "macro_cohesion": 0.7936555228186174,
+            "micro_margin": 0.03855452520127513,
+            "macro_margin": 0.05379620167255089,
+            "negative_margin_fraction": 0.0989010989010989,
+            "loo_micro_cohesion": 0.7473916616149902,
+            "loo_micro_margin": 0.0001267313284119413,
+            "loo_negative_margin_fraction": 0.46703296703296704,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7346334132723952,
+            "target_similarity": 0.7753882532442806,
+            "target_minus_current": 0.04075483997188545,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6726891710166828,
+            "target_similarity": 0.7810416986726527,
+            "target_minus_current": 0.10835252765596992,
+            "bootstrap_target_preference": 0.999
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6919299092780786,
+            "target_similarity": 0.7403015735284699,
+            "target_minus_current": 0.0483716642503913,
+            "bootstrap_target_preference": 0.997
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.6568116093737976,
+            "target_similarity": 0.5539190895741901,
+            "target_minus_current": -0.10289251979960745,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.512163141793286,
+            "target_similarity": 0.6825741503138281,
+            "target_minus_current": 0.17041100852054203,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "5.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 3,
+            "objective": 0.7728915373005616
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.7732973277837915
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "S3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.7778353890917897,
+            "macro_cohesion": 0.7732700581732436,
+            "micro_margin": 0.030630071868954195,
+            "macro_margin": 0.03686515046682543,
+            "negative_margin_fraction": 0.19230769230769232,
+            "loo_micro_cohesion": 0.7465537613086554,
+            "loo_micro_margin": -0.0006515559141801055,
+            "loo_negative_margin_fraction": 0.489010989010989,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.7723922587370485,
+            "macro_cohesion": 0.765812492249465,
+            "micro_margin": 0.027717040989281017,
+            "macro_margin": 0.029630952677529663,
+            "negative_margin_fraction": 0.1978021978021978,
+            "loo_micro_cohesion": 0.7399866856017228,
+            "loo_micro_margin": -0.004688532146044711,
+            "loo_negative_margin_fraction": 0.5054945054945055,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.7731214541903936,
+            "macro_cohesion": 0.7656255465242628,
+            "micro_margin": 0.02966888816772817,
+            "macro_margin": 0.030176741424295512,
+            "negative_margin_fraction": 0.18681318681318682,
+            "loo_micro_cohesion": 0.7411291803704757,
+            "loo_micro_margin": -0.0023233856521897144,
+            "loo_negative_margin_fraction": 0.4835164835164835,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.7732973277837912,
+            "macro_cohesion": 0.7662716942876321,
+            "micro_margin": 0.029786965112444108,
+            "macro_margin": 0.030578136446741098,
+            "negative_margin_fraction": 0.18681318681318682,
+            "loo_micro_cohesion": 0.7410923166328083,
+            "loo_micro_margin": -0.002418046038539066,
+            "loo_negative_margin_fraction": 0.4945054945054945,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7310675755476487,
+            "target_similarity": 0.7746295568548687,
+            "target_minus_current": 0.04356198130722,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6546743898463652,
+            "target_similarity": 0.7603336844219513,
+            "target_minus_current": 0.1056592945755861,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6843983703611058,
+            "target_similarity": 0.7411185571804031,
+            "target_minus_current": 0.05672018681929725,
+            "bootstrap_target_preference": 0.999
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.6441386260942756,
+            "target_similarity": 0.5341318075900268,
+            "target_minus_current": -0.11000681850424887,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.5121631417932859,
+            "target_similarity": 0.6702985245205375,
+            "target_minus_current": 0.15813538272725158,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "10.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 3,
+            "objective": 0.7495922440341984
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.7499094522637365
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "S3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.7546581221044745,
+            "macro_cohesion": 0.7388484652053243,
+            "micro_margin": 0.01798972607415663,
+            "macro_margin": 0.012346796532799936,
+            "negative_margin_fraction": 0.32967032967032966,
+            "loo_micro_cohesion": 0.7313071284178948,
+            "loo_micro_margin": -0.005361267612423057,
+            "loo_negative_margin_fraction": 0.5164835164835165,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.748876497052776,
+            "macro_cohesion": 0.7302081253425904,
+            "micro_margin": 0.013625866475409913,
+            "macro_margin": 0.002145872003889309,
+            "negative_margin_fraction": 0.3516483516483517,
+            "loo_micro_cohesion": 0.7248068204200606,
+            "loo_micro_margin": -0.010443810157305432,
+            "loo_negative_margin_fraction": 0.5384615384615384,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.7499208374938545,
+            "macro_cohesion": 0.7299202193188511,
+            "micro_margin": 0.015667496856198084,
+            "macro_margin": 0.002242486497060386,
+            "negative_margin_fraction": 0.31868131868131866,
+            "loo_micro_cohesion": 0.7261626681294437,
+            "loo_micro_margin": -0.008090672508212916,
+            "loo_negative_margin_fraction": 0.5164835164835165,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.7499094522637364,
+            "macro_cohesion": 0.7305963640171124,
+            "micro_margin": 0.015603063939196062,
+            "macro_margin": 0.0030703403909162924,
+            "negative_margin_fraction": 0.32967032967032966,
+            "loo_micro_cohesion": 0.7260125873605632,
+            "loo_micro_margin": -0.008293800963977315,
+            "loo_negative_margin_fraction": 0.521978021978022,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7178013108498345,
+            "target_similarity": 0.7711486257995663,
+            "target_minus_current": 0.05334731494973188,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6183882601954362,
+            "target_similarity": 0.7167747431002616,
+            "target_minus_current": 0.09838648290482532,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6634262085880942,
+            "target_similarity": 0.7330425303931407,
+            "target_minus_current": 0.06961632180504651,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.6271006706031508,
+            "target_similarity": 0.5140861803382573,
+            "target_minus_current": -0.11301449026489352,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.5121631417932859,
+            "target_similarity": 0.6416879601176143,
+            "target_minus_current": 0.12952481832432838,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      }
+    },
+    "english": {
+      "1.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.8085074414561818
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.8088557680455909
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8108460927427003,
+            "macro_cohesion": 0.8463692902244112,
+            "micro_margin": 0.04745335582231044,
+            "macro_margin": 0.09165590431674804,
+            "negative_margin_fraction": 0.10989010989010989,
+            "loo_micro_cohesion": 0.7611118919999051,
+            "loo_micro_margin": -0.002280844920484642,
+            "loo_negative_margin_fraction": 0.510989010989011,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8081615995207719,
+            "macro_cohesion": 0.8434715206634881,
+            "micro_margin": 0.04726907866498379,
+            "macro_margin": 0.08805143233020352,
+            "negative_margin_fraction": 0.11538461538461539,
+            "loo_micro_cohesion": 0.757318712388483,
+            "loo_micro_margin": -0.0035738084673049898,
+            "loo_negative_margin_fraction": 0.521978021978022,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.808795641433331,
+            "macro_cohesion": 0.8455508849449928,
+            "micro_margin": 0.04928842954042559,
+            "macro_margin": 0.09122115755416982,
+            "negative_margin_fraction": 0.0989010989010989,
+            "loo_micro_cohesion": 0.7585572204728253,
+            "loo_micro_margin": -0.0009499914200801597,
+            "loo_negative_margin_fraction": 0.4945054945054945,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.8088557680455909,
+            "macro_cohesion": 0.8438677805081443,
+            "micro_margin": 0.04903371420691924,
+            "macro_margin": 0.08888906480274161,
+            "negative_margin_fraction": 0.1043956043956044,
+            "loo_micro_cohesion": 0.7581428291932109,
+            "loo_micro_margin": -0.0016792246454606866,
+            "loo_negative_margin_fraction": 0.521978021978022,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7614062776218302,
+            "target_similarity": 0.8062818575051256,
+            "target_minus_current": 0.04487557988329538,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6780702210894646,
+            "target_similarity": 0.788065780587703,
+            "target_minus_current": 0.10999555949823847,
+            "bootstrap_target_preference": 0.998
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7275010108421651,
+            "target_similarity": 0.7343170230783813,
+            "target_minus_current": 0.006816012236216196,
+            "bootstrap_target_preference": 0.704
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.6361833516819746,
+            "target_similarity": 0.567093567660857,
+            "target_minus_current": -0.06908978402111765,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.4424189398899526,
+            "target_similarity": 0.6942202225232785,
+            "target_minus_current": 0.2518012826333259,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "3.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.7906503436928453
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.7908986767417857
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.7935895179534762,
+            "macro_cohesion": 0.7891148852344633,
+            "micro_margin": 0.034861148637968256,
+            "macro_margin": 0.04034742586254799,
+            "negative_margin_fraction": 0.12087912087912088,
+            "loo_micro_cohesion": 0.7553809359148158,
+            "loo_micro_margin": -0.0033474334006919847,
+            "loo_negative_margin_fraction": 0.47802197802197804,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.7902290727488865,
+            "macro_cohesion": 0.78413470311615,
+            "micro_margin": 0.03353281586117069,
+            "macro_margin": 0.03446357538628555,
+            "negative_margin_fraction": 0.14285714285714285,
+            "loo_micro_cohesion": 0.7510441024832263,
+            "loo_micro_margin": -0.005652154404489244,
+            "loo_negative_margin_fraction": 0.5,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.7908481099643482,
+            "macro_cohesion": 0.7849865591078098,
+            "micro_margin": 0.03531268054718,
+            "macro_margin": 0.03621555262772418,
+            "negative_margin_fraction": 0.14835164835164835,
+            "loo_micro_cohesion": 0.7521459022483308,
+            "loo_micro_margin": -0.003389527168837269,
+            "loo_negative_margin_fraction": 0.47802197802197804,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.7908986767417857,
+            "macro_cohesion": 0.7844642729202832,
+            "micro_margin": 0.03515821389837856,
+            "macro_margin": 0.035278454059822495,
+            "negative_margin_fraction": 0.14835164835164835,
+            "loo_micro_cohesion": 0.7518438335926302,
+            "loo_micro_margin": -0.003896629250776914,
+            "loo_negative_margin_fraction": 0.4945054945054945,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7577203429210211,
+            "target_similarity": 0.805959261665396,
+            "target_minus_current": 0.048238918744374915,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.659126654201173,
+            "target_similarity": 0.76988302449809,
+            "target_minus_current": 0.11075637029691698,
+            "bootstrap_target_preference": 0.999
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7262794876912784,
+            "target_similarity": 0.7365313930071073,
+            "target_minus_current": 0.01025190531582898,
+            "bootstrap_target_preference": 0.775
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.6355181127662468,
+            "target_similarity": 0.5230131756701402,
+            "target_minus_current": -0.11250493709610665,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.4424189398899525,
+            "target_similarity": 0.6838596428397012,
+            "target_minus_current": 0.24144070294974873,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "5.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.7759907721142263
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.7761549381399298
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.7793145690111906,
+            "macro_cohesion": 0.7583718949806667,
+            "micro_margin": 0.025319394367758735,
+            "macro_margin": 0.01524594314136656,
+            "negative_margin_fraction": 0.24725274725274726,
+            "loo_micro_cohesion": 0.7470985421405902,
+            "loo_micro_margin": -0.0068966325028414245,
+            "loo_negative_margin_fraction": 0.46703296703296704,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.7754877601137468,
+            "macro_cohesion": 0.7521580922587859,
+            "micro_margin": 0.023475425703927213,
+            "macro_margin": 0.006941490760815676,
+            "negative_margin_fraction": 0.23076923076923078,
+            "loo_micro_cohesion": 0.7424693222846089,
+            "loo_micro_margin": -0.009543012125210373,
+            "loo_negative_margin_fraction": 0.5384615384615384,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.7762474432862103,
+            "macro_cohesion": 0.7525999840862916,
+            "micro_margin": 0.025297037016012484,
+            "macro_margin": 0.008401052065433698,
+            "negative_margin_fraction": 0.23076923076923078,
+            "loo_micro_cohesion": 0.7436498430393206,
+            "loo_micro_margin": -0.007300563230877409,
+            "loo_negative_margin_fraction": 0.510989010989011,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.7761549381399298,
+            "macro_cohesion": 0.7524247875739195,
+            "micro_margin": 0.025058612779197416,
+            "macro_margin": 0.007851852245481137,
+            "negative_margin_fraction": 0.21978021978021978,
+            "loo_micro_cohesion": 0.743261206555893,
+            "loo_micro_margin": -0.007835118804839109,
+            "loo_negative_margin_fraction": 0.5164835164835165,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7495282333157152,
+            "target_similarity": 0.8050925956088072,
+            "target_minus_current": 0.05556436229309203,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6391874953557605,
+            "target_similarity": 0.7500570307300838,
+            "target_minus_current": 0.11086953537432331,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7180888568465861,
+            "target_similarity": 0.7324325526937858,
+            "target_minus_current": 0.014343695847199744,
+            "bootstrap_target_preference": 0.845
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.624880240497084,
+            "target_similarity": 0.49998997266094636,
+            "target_minus_current": -0.12489026783613766,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.4424189398899525,
+            "target_similarity": 0.670639406890287,
+            "target_minus_current": 0.2282204670003345,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "10.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.7486287822415411
+          },
+          {
+            "iteration": 2,
+            "changed": 1,
+            "objective": 0.7487203521791045
+          },
+          {
+            "iteration": 3,
+            "changed": 0,
+            "objective": 0.7488005084372432
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "S3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.7523993393622093,
+            "macro_cohesion": 0.718053830257143,
+            "micro_margin": 0.00886774000332118,
+            "macro_margin": -0.014033034244591255,
+            "negative_margin_fraction": 0.35714285714285715,
+            "loo_micro_cohesion": 0.7282474524207413,
+            "loo_micro_margin": -0.01528414693814667,
+            "loo_negative_margin_fraction": 0.5604395604395604,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.7479557710863274,
+            "macro_cohesion": 0.7103995964624996,
+            "micro_margin": 0.006116498562178347,
+            "macro_margin": -0.02562928162658687,
+            "negative_margin_fraction": 0.38461538461538464,
+            "loo_micro_cohesion": 0.7232685290528846,
+            "loo_micro_margin": -0.018570743471264646,
+            "loo_negative_margin_fraction": 0.5824175824175825,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.7490599742561918,
+            "macro_cohesion": 0.7106712251707007,
+            "micro_margin": 0.007989062618746092,
+            "macro_margin": -0.024834215033665688,
+            "negative_margin_fraction": 0.36813186813186816,
+            "loo_micro_cohesion": 0.7246837514986056,
+            "loo_micro_margin": -0.01638716013884004,
+            "loo_negative_margin_fraction": 0.5714285714285714,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.7488005084372432,
+            "macro_cohesion": 0.7105068585295088,
+            "micro_margin": 0.007688669819777495,
+            "macro_margin": -0.0250981141024627,
+            "negative_margin_fraction": 0.36813186813186816,
+            "loo_micro_cohesion": 0.7242559375909852,
+            "loo_micro_margin": -0.016855901026480456,
+            "loo_negative_margin_fraction": 0.5714285714285714,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7260736181603111,
+            "target_similarity": 0.8013659810571976,
+            "target_minus_current": 0.07529236289688646,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.5983035747540573,
+            "target_similarity": 0.7064494845035774,
+            "target_minus_current": 0.1081459097495201,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6935263204552752,
+            "target_similarity": 0.7149254309236446,
+            "target_minus_current": 0.021399110468369398,
+            "bootstrap_target_preference": 0.983
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.6088197795300158,
+            "target_similarity": 0.47717160532408986,
+            "target_minus_current": -0.1316481742059259,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.4424189398899525,
+            "target_similarity": 0.6390537935819891,
+            "target_minus_current": 0.1966348536920366,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      }
+    }
+  },
+  "mxbai-embed-large": {
+    "bilingual": {
+      "1.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 1,
+            "objective": 0.8580469481144194
+          },
+          {
+            "iteration": 2,
+            "changed": 1,
+            "objective": 0.8581946367956763
+          },
+          {
+            "iteration": 3,
+            "changed": 0,
+            "objective": 0.858397442709338
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "I3.7",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "S3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8589592711689515,
+            "macro_cohesion": 0.8900351440951887,
+            "micro_margin": 0.03441735661656613,
+            "macro_margin": 0.0691036765228694,
+            "negative_margin_fraction": 0.16483516483516483,
+            "loo_micro_cohesion": 0.8241108910258955,
+            "loo_micro_margin": -0.0004310235264899254,
+            "loo_negative_margin_fraction": 0.46153846153846156,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8579302347362355,
+            "macro_cohesion": 0.8882231684660461,
+            "micro_margin": 0.03443248903813596,
+            "macro_margin": 0.06776160492384907,
+            "negative_margin_fraction": 0.16483516483516483,
+            "loo_micro_cohesion": 0.822492533507228,
+            "loo_micro_margin": -0.0010052121908717508,
+            "loo_negative_margin_fraction": 0.46703296703296704,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8584556052414226,
+            "macro_cohesion": 0.888817193717081,
+            "micro_margin": 0.03502582782097246,
+            "macro_margin": 0.07028522147499507,
+            "negative_margin_fraction": 0.14835164835164835,
+            "loo_micro_cohesion": 0.8231105681025306,
+            "loo_micro_margin": -0.00031920931791947806,
+            "loo_negative_margin_fraction": 0.46153846153846156,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.858397442709338,
+            "macro_cohesion": 0.8884330130708721,
+            "micro_margin": 0.03496950553589073,
+            "macro_margin": 0.068011807478166,
+            "negative_margin_fraction": 0.15934065934065933,
+            "loo_micro_cohesion": 0.8230230200715474,
+            "loo_micro_margin": -0.00040491710189985826,
+            "loo_negative_margin_fraction": 0.46703296703296704,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7915565439313677,
+            "target_similarity": 0.8145832237274391,
+            "target_minus_current": 0.023026679796071425,
+            "bootstrap_target_preference": 0.98
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.8203053600042292,
+            "target_similarity": 0.872666041952824,
+            "target_minus_current": 0.05236068194859489,
+            "bootstrap_target_preference": 0.993
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7693379858548112,
+            "target_similarity": 0.8025299423057826,
+            "target_minus_current": 0.033191956450971394,
+            "bootstrap_target_preference": 0.964
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.7463656633611746,
+            "target_similarity": 0.6570134261848651,
+            "target_minus_current": -0.08935223717630947,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6834909430109982,
+            "target_similarity": 0.8227471302191884,
+            "target_minus_current": 0.13925618720819022,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "3.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 1,
+            "objective": 0.8462298542868378
+          },
+          {
+            "iteration": 2,
+            "changed": 1,
+            "objective": 0.8463936749670816
+          },
+          {
+            "iteration": 3,
+            "changed": 0,
+            "objective": 0.8465658532203968
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "I3.7",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "S3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8472630740526633,
+            "macro_cohesion": 0.8516099757894345,
+            "micro_margin": 0.025957820180896648,
+            "macro_margin": 0.034907287003098746,
+            "negative_margin_fraction": 0.1978021978021978,
+            "loo_micro_cohesion": 0.8201575263954904,
+            "loo_micro_margin": -0.0011477274762761351,
+            "loo_negative_margin_fraction": 0.47802197802197804,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8461157959580276,
+            "macro_cohesion": 0.850237334459004,
+            "micro_margin": 0.025890133722792207,
+            "macro_margin": 0.03395630652672792,
+            "negative_margin_fraction": 0.2087912087912088,
+            "loo_micro_cohesion": 0.8185731912739663,
+            "loo_micro_margin": -0.00165247096126901,
+            "loo_negative_margin_fraction": 0.489010989010989,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8464482246513264,
+            "macro_cohesion": 0.8486940143001872,
+            "micro_margin": 0.026297077741717377,
+            "macro_margin": 0.03413737198565797,
+            "negative_margin_fraction": 0.19230769230769232,
+            "loo_micro_cohesion": 0.8190840198507572,
+            "loo_micro_margin": -0.0010671270588516713,
+            "loo_negative_margin_fraction": 0.47802197802197804,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.8465658532203968,
+            "macro_cohesion": 0.8503897388552725,
+            "micro_margin": 0.02643821120458737,
+            "macro_margin": 0.034115082902471526,
+            "negative_margin_fraction": 0.2032967032967033,
+            "loo_micro_cohesion": 0.81909031461161,
+            "loo_micro_margin": -0.0010373274041994547,
+            "loo_negative_margin_fraction": 0.4835164835164835,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.789602596691882,
+            "target_similarity": 0.8138116670786754,
+            "target_minus_current": 0.02420907038679332,
+            "bootstrap_target_preference": 0.989
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.8077460110426711,
+            "target_similarity": 0.8569582515769711,
+            "target_minus_current": 0.04921224053430007,
+            "bootstrap_target_preference": 0.984
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7733756580685889,
+            "target_similarity": 0.8021535352846212,
+            "target_minus_current": 0.02877787721603231,
+            "bootstrap_target_preference": 0.961
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.7492090635672607,
+            "target_similarity": 0.6399490297736428,
+            "target_minus_current": -0.10926003379361793,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6834909430109981,
+            "target_similarity": 0.819929235226613,
+            "target_minus_current": 0.13643829221561488,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "5.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.8362693092544488
+          },
+          {
+            "iteration": 2,
+            "changed": 1,
+            "objective": 0.8364818261029809
+          },
+          {
+            "iteration": 3,
+            "changed": 0,
+            "objective": 0.8366353831198357
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "S3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.83741961954405,
+            "macro_cohesion": 0.8303472385972593,
+            "micro_margin": 0.01994795026797128,
+            "macro_margin": 0.01820590652539407,
+            "negative_margin_fraction": 0.24725274725274726,
+            "loo_micro_cohesion": 0.8143823138827493,
+            "loo_micro_margin": -0.003089355393329541,
+            "loo_negative_margin_fraction": 0.510989010989011,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8361431956431421,
+            "macro_cohesion": 0.8289492507057945,
+            "micro_margin": 0.019803356436843063,
+            "macro_margin": 0.016801200514824442,
+            "negative_margin_fraction": 0.2857142857142857,
+            "loo_micro_cohesion": 0.8127654051251179,
+            "loo_micro_margin": -0.0035744340811811703,
+            "loo_negative_margin_fraction": 0.5054945054945055,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8364989417216221,
+            "macro_cohesion": 0.8266537872112917,
+            "micro_margin": 0.020218737518914162,
+            "macro_margin": 0.016303799539031397,
+            "negative_margin_fraction": 0.26373626373626374,
+            "loo_micro_cohesion": 0.8133221915761555,
+            "loo_micro_margin": -0.0029580126265524994,
+            "loo_negative_margin_fraction": 0.4945054945054945,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.8366353831198357,
+            "macro_cohesion": 0.8291118564494724,
+            "micro_margin": 0.02043347547267654,
+            "macro_margin": 0.017009725952442073,
+            "negative_margin_fraction": 0.26373626373626374,
+            "loo_micro_cohesion": 0.8133636743668278,
+            "loo_micro_margin": -0.002838233280331331,
+            "loo_negative_margin_fraction": 0.4945054945054945,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7855293882171153,
+            "target_similarity": 0.81267350947621,
+            "target_minus_current": 0.02714412125909471,
+            "bootstrap_target_preference": 0.991
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7936060586285278,
+            "target_similarity": 0.8399141498989371,
+            "target_minus_current": 0.046308091270409246,
+            "bootstrap_target_preference": 0.993
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7712421225564517,
+            "target_similarity": 0.7971816189033126,
+            "target_minus_current": 0.02593949634686088,
+            "bootstrap_target_preference": 0.971
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.7428516994154322,
+            "target_similarity": 0.6283573866110641,
+            "target_minus_current": -0.11449431280436806,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6834909430109981,
+            "target_similarity": 0.8129820228906025,
+            "target_minus_current": 0.1294910798796044,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "10.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.8172056585018019
+          },
+          {
+            "iteration": 2,
+            "changed": 1,
+            "objective": 0.8174155220665197
+          },
+          {
+            "iteration": 3,
+            "changed": 0,
+            "objective": 0.8175661865472347
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "S3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8184900615561835,
+            "macro_cohesion": 0.8018183457969014,
+            "micro_margin": 0.008879883534427016,
+            "macro_margin": -0.0023511248522030325,
+            "negative_margin_fraction": 0.4175824175824176,
+            "loo_micro_cohesion": 0.8009888483013121,
+            "loo_micro_margin": -0.008621329720444541,
+            "loo_negative_margin_fraction": 0.5604395604395604,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8170306149765675,
+            "macro_cohesion": 0.8002481577353238,
+            "micro_margin": 0.00864533969605991,
+            "macro_margin": -0.004353917136962566,
+            "negative_margin_fraction": 0.4010989010989011,
+            "loo_micro_cohesion": 0.7993130001045733,
+            "loo_micro_margin": -0.009072275175934235,
+            "loo_negative_margin_fraction": 0.5384615384615384,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8175342782595714,
+            "macro_cohesion": 0.797426244161943,
+            "micro_margin": 0.00926216221910279,
+            "macro_margin": -0.0054517957654184835,
+            "negative_margin_fraction": 0.38461538461538464,
+            "loo_micro_cohesion": 0.7999993675372175,
+            "loo_micro_margin": -0.008272748503251156,
+            "loo_negative_margin_fraction": 0.554945054945055,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.8175661865472347,
+            "macro_cohesion": 0.8003320804604138,
+            "micro_margin": 0.009426609239182605,
+            "macro_margin": -0.0042803024385530625,
+            "negative_margin_fraction": 0.38461538461538464,
+            "loo_micro_cohesion": 0.7999486883017689,
+            "loo_micro_margin": -0.008190889006283019,
+            "loo_negative_margin_fraction": 0.5494505494505495,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7739523833410451,
+            "target_similarity": 0.8087996669149413,
+            "target_minus_current": 0.034847283573896215,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7630100668328271,
+            "target_similarity": 0.8018248756135017,
+            "target_minus_current": 0.03881480878067456,
+            "bootstrap_target_preference": 0.989
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7592768923489339,
+            "target_similarity": 0.7797974439098384,
+            "target_minus_current": 0.020520551560904488,
+            "bootstrap_target_preference": 0.98
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.732117489907439,
+            "target_similarity": 0.6158133519860218,
+            "target_minus_current": -0.11630413792141714,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6834909430109981,
+            "target_similarity": 0.7921099310952646,
+            "target_minus_current": 0.10861898808426651,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      }
+    },
+    "english": {
+      "1.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 1,
+            "objective": 0.8250277618606409
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.8252187094910655
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "I3.7",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8306656477120012,
+            "macro_cohesion": 0.8646217451683701,
+            "micro_margin": 0.044551018788793445,
+            "macro_margin": 0.08548207491519083,
+            "negative_margin_fraction": 0.14835164835164835,
+            "loo_micro_cohesion": 0.78719349049551,
+            "loo_micro_margin": 0.0010788615723021434,
+            "loo_negative_margin_fraction": 0.4835164835164835,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.824968073583258,
+            "macro_cohesion": 0.8592138225599051,
+            "micro_margin": 0.04634421533177948,
+            "macro_margin": 0.08588560480892699,
+            "negative_margin_fraction": 0.14285714285714285,
+            "loo_micro_cohesion": 0.7796943633955986,
+            "loo_micro_margin": 0.0010705051441202036,
+            "loo_negative_margin_fraction": 0.45054945054945056,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.825540084975844,
+            "macro_cohesion": 0.8605547268386574,
+            "micro_margin": 0.04737636558753465,
+            "macro_margin": 0.08872662685955264,
+            "negative_margin_fraction": 0.12087912087912088,
+            "loo_micro_cohesion": 0.7806258600968903,
+            "loo_micro_margin": 0.002462140708581036,
+            "loo_negative_margin_fraction": 0.43956043956043955,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.8252187094910655,
+            "macro_cohesion": 0.8593300402742209,
+            "micro_margin": 0.0467700051419295,
+            "macro_margin": 0.08610893965631379,
+            "negative_margin_fraction": 0.13736263736263737,
+            "loo_micro_cohesion": 0.779986547153899,
+            "loo_micro_margin": 0.0015378428047630613,
+            "loo_negative_margin_fraction": 0.45054945054945056,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7197760316656387,
+            "target_similarity": 0.7553496606361265,
+            "target_minus_current": 0.03557362897048777,
+            "bootstrap_target_preference": 0.997
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7778963757252532,
+            "target_similarity": 0.8278298161702591,
+            "target_minus_current": 0.04993344044500592,
+            "bootstrap_target_preference": 0.956
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6781566400237128,
+            "target_similarity": 0.7200078830609433,
+            "target_minus_current": 0.041851243037230534,
+            "bootstrap_target_preference": 0.956
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.7043133133537087,
+            "target_similarity": 0.5810188133009295,
+            "target_minus_current": -0.1232945000527792,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.503905056926554,
+            "target_similarity": 0.7658739211530605,
+            "target_minus_current": 0.26196886422650656,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "3.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.8093421448862166
+          },
+          {
+            "iteration": 2,
+            "changed": 1,
+            "objective": 0.8096356874385316
+          },
+          {
+            "iteration": 3,
+            "changed": 0,
+            "objective": 0.8099026648772147
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "S3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8152771384043528,
+            "macro_cohesion": 0.8121161804120965,
+            "micro_margin": 0.0342590262604856,
+            "macro_margin": 0.039340510907336396,
+            "negative_margin_fraction": 0.17582417582417584,
+            "loo_micro_cohesion": 0.7817213335193598,
+            "loo_micro_margin": 0.0007032213754927199,
+            "loo_negative_margin_fraction": 0.46153846153846156,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8092895353591788,
+            "macro_cohesion": 0.8069445071632259,
+            "micro_margin": 0.034966639970452074,
+            "macro_margin": 0.03995837018123624,
+            "negative_margin_fraction": 0.2032967032967033,
+            "loo_micro_cohesion": 0.7743799504034887,
+            "loo_micro_margin": 5.705501476199565e-05,
+            "loo_negative_margin_fraction": 0.46703296703296704,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8097620620835472,
+            "macro_cohesion": 0.8064052258179606,
+            "micro_margin": 0.03574799330937753,
+            "macro_margin": 0.04031742173762307,
+            "negative_margin_fraction": 0.19230769230769232,
+            "loo_micro_cohesion": 0.7752231484471633,
+            "loo_micro_margin": 0.0012090796729937066,
+            "loo_negative_margin_fraction": 0.46153846153846156,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.8099026648772146,
+            "macro_cohesion": 0.8074420508525256,
+            "micro_margin": 0.035654791269211485,
+            "macro_margin": 0.03987783641999961,
+            "negative_margin_fraction": 0.1978021978021978,
+            "loo_micro_cohesion": 0.7751748028986816,
+            "loo_micro_margin": 0.0009269292906784856,
+            "loo_negative_margin_fraction": 0.45604395604395603,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7155499770674161,
+            "target_similarity": 0.7546393706401908,
+            "target_minus_current": 0.039089393572774744,
+            "bootstrap_target_preference": 0.998
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.760642561314987,
+            "target_similarity": 0.8036030382517623,
+            "target_minus_current": 0.042960476936775294,
+            "bootstrap_target_preference": 0.936
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6837629607804452,
+            "target_similarity": 0.7174532924403914,
+            "target_minus_current": 0.03369033165994617,
+            "bootstrap_target_preference": 0.942
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.7011373764133599,
+            "target_similarity": 0.5382573352920562,
+            "target_minus_current": -0.16288004112130372,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.503905056926554,
+            "target_similarity": 0.7568616523911277,
+            "target_minus_current": 0.2529565954645737,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "5.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.7964285733718289
+          },
+          {
+            "iteration": 2,
+            "changed": 1,
+            "objective": 0.7967049631942353
+          },
+          {
+            "iteration": 3,
+            "changed": 0,
+            "objective": 0.7969703963449285
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "S3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8026306394935533,
+            "macro_cohesion": 0.784044898933062,
+            "micro_margin": 0.026506202776749425,
+            "macro_margin": 0.01704857156418176,
+            "negative_margin_fraction": 0.24725274725274726,
+            "loo_micro_cohesion": 0.77423620544029,
+            "loo_micro_margin": -0.0018882312765140922,
+            "loo_negative_margin_fraction": 0.46703296703296704,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.7963521814959597,
+            "macro_cohesion": 0.7786836482177554,
+            "micro_margin": 0.026884679670320568,
+            "macro_margin": 0.01759768595122863,
+            "negative_margin_fraction": 0.29120879120879123,
+            "loo_micro_cohesion": 0.7668641646305157,
+            "loo_micro_margin": -0.0026033371951234793,
+            "loo_negative_margin_fraction": 0.4945054945054945,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.7969316154610236,
+            "macro_cohesion": 0.7775537740164431,
+            "micro_margin": 0.028091522761255136,
+            "macro_margin": 0.01757009629578862,
+            "negative_margin_fraction": 0.2692307692307692,
+            "loo_micro_cohesion": 0.7678035772868648,
+            "loo_micro_margin": -0.0010365154129039112,
+            "loo_negative_margin_fraction": 0.4725274725274725,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.7969703963449285,
+            "macro_cohesion": 0.779126715537183,
+            "micro_margin": 0.027872599122976252,
+            "macro_margin": 0.0176899886690909,
+            "negative_margin_fraction": 0.2692307692307692,
+            "loo_micro_cohesion": 0.7676547072595786,
+            "loo_micro_margin": -0.0014430899623736058,
+            "loo_negative_margin_fraction": 0.4725274725274725,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7087201951894956,
+            "target_similarity": 0.7535637264869727,
+            "target_minus_current": 0.04484353129747709,
+            "bootstrap_target_preference": 0.999
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7427163502344702,
+            "target_similarity": 0.7778867793903318,
+            "target_minus_current": 0.03517042915586155,
+            "bootstrap_target_preference": 0.897
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6825844110167478,
+            "target_similarity": 0.7091466701541375,
+            "target_minus_current": 0.026562259137389632,
+            "bootstrap_target_preference": 0.934
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.688744620493561,
+            "target_similarity": 0.5164463077276132,
+            "target_minus_current": -0.17229831276594776,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.503905056926554,
+            "target_similarity": 0.743245983248169,
+            "target_minus_current": 0.23934092632161508,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "10.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 1,
+            "objective": 0.7721913659819499
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.7721291249990325
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "I3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.7787600713115342,
+            "macro_cohesion": 0.7473153438429176,
+            "micro_margin": 0.012428333040068374,
+            "macro_margin": -0.008857284253038689,
+            "negative_margin_fraction": 0.36813186813186816,
+            "loo_micro_cohesion": 0.7573409516111441,
+            "loo_micro_margin": -0.008990786660322018,
+            "loo_negative_margin_fraction": 0.5384615384615384,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.7720127826818212,
+            "macro_cohesion": 0.7415466870887873,
+            "micro_margin": 0.012485223909510526,
+            "macro_margin": -0.00839590706774186,
+            "negative_margin_fraction": 0.38461538461538464,
+            "loo_micro_cohesion": 0.7498511632897985,
+            "loo_micro_margin": -0.009676395482512349,
+            "loo_negative_margin_fraction": 0.5164835164835165,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.7728151046482244,
+            "macro_cohesion": 0.7401308356543813,
+            "micro_margin": 0.014011947703091488,
+            "macro_margin": -0.009417357382758484,
+            "negative_margin_fraction": 0.37362637362637363,
+            "loo_micro_cohesion": 0.7509330811929341,
+            "loo_micro_margin": -0.007870075752198773,
+            "loo_negative_margin_fraction": 0.5054945054945055,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.7721291249990325,
+            "macro_cohesion": 0.7415741797543244,
+            "micro_margin": 0.01318303114850761,
+            "macro_margin": -0.008065568064726962,
+            "negative_margin_fraction": 0.3791208791208791,
+            "loo_micro_cohesion": 0.7500240387136402,
+            "loo_micro_margin": -0.008922055136884823,
+            "loo_negative_margin_fraction": 0.510989010989011,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.6908878569807126,
+            "target_similarity": 0.749865295850965,
+            "target_minus_current": 0.05897743887025231,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7059308169592587,
+            "target_similarity": 0.7219149926330422,
+            "target_minus_current": 0.015984175673783407,
+            "bootstrap_target_preference": 0.777
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6719928811312805,
+            "target_similarity": 0.6832757375947751,
+            "target_minus_current": 0.011282856463494584,
+            "bootstrap_target_preference": 0.802
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.6704452250602424,
+            "target_similarity": 0.494741653614178,
+            "target_minus_current": -0.1757035714460644,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.503905056926554,
+            "target_similarity": 0.7079722876085819,
+            "target_minus_current": 0.20406723068202792,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      }
+    }
+  },
+  "nomic-embed-text": {
+    "bilingual": {
+      "1.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 1,
+            "objective": 0.879722331741694
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.8798645866892648
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "I3.7",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8807114558592387,
+            "macro_cohesion": 0.9048084554400245,
+            "micro_margin": 0.027260045844181645,
+            "macro_margin": 0.05631619132304635,
+            "negative_margin_fraction": 0.17582417582417584,
+            "loo_micro_cohesion": 0.8507258570806387,
+            "loo_micro_margin": -0.0027255529344183274,
+            "loo_negative_margin_fraction": 0.5054945054945055,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8795431958366339,
+            "macro_cohesion": 0.9036234460752981,
+            "micro_margin": 0.02784599774358877,
+            "macro_margin": 0.056062953671041416,
+            "negative_margin_fraction": 0.15384615384615385,
+            "loo_micro_cohesion": 0.8491532829833525,
+            "loo_micro_margin": -0.002543915109692908,
+            "loo_negative_margin_fraction": 0.5,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8799630331151423,
+            "macro_cohesion": 0.9046533467015182,
+            "micro_margin": 0.028933887934374583,
+            "macro_margin": 0.057761096162656046,
+            "negative_margin_fraction": 0.13736263736263737,
+            "loo_micro_cohesion": 0.8498296727695847,
+            "loo_micro_margin": -0.001199472411183026,
+            "loo_negative_margin_fraction": 0.4725274725274725,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.8798645866892648,
+            "macro_cohesion": 0.9038061356041518,
+            "micro_margin": 0.028382966315486632,
+            "macro_margin": 0.05636467217208364,
+            "negative_margin_fraction": 0.14285714285714285,
+            "loo_micro_cohesion": 0.8495302454359458,
+            "loo_micro_margin": -0.0019513749378324632,
+            "loo_negative_margin_fraction": 0.5054945054945055,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.8429827656582785,
+            "target_similarity": 0.8641178697476535,
+            "target_minus_current": 0.021135104089375023,
+            "bootstrap_target_preference": 0.99
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.8157096382938943,
+            "target_similarity": 0.8792405652846846,
+            "target_minus_current": 0.06353092699079033,
+            "bootstrap_target_preference": 0.998
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.8123631550135265,
+            "target_similarity": 0.8222893337630117,
+            "target_minus_current": 0.009926178749485204,
+            "bootstrap_target_preference": 0.709
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.8069443465687948,
+            "target_similarity": 0.7563395154499786,
+            "target_minus_current": -0.050604831118816196,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6816277111620764,
+            "target_similarity": 0.8302451525917465,
+            "target_minus_current": 0.14861744142967004,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "3.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.870005190191635
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.8701794829793505
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8712051675999575,
+            "macro_cohesion": 0.871850123480861,
+            "micro_margin": 0.020662275440412065,
+            "macro_margin": 0.02736441737856263,
+            "negative_margin_fraction": 0.2087912087912088,
+            "loo_micro_cohesion": 0.8481532341131094,
+            "loo_micro_margin": -0.0023896580464359616,
+            "loo_negative_margin_fraction": 0.4945054945054945,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8698160412970551,
+            "macro_cohesion": 0.8704754798873099,
+            "micro_margin": 0.02023896287046696,
+            "macro_margin": 0.02642079323214541,
+            "negative_margin_fraction": 0.22527472527472528,
+            "loo_micro_cohesion": 0.8463785606904817,
+            "loo_micro_margin": -0.003198517736106648,
+            "loo_negative_margin_fraction": 0.5164835164835165,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8701523702315874,
+            "macro_cohesion": 0.8705320281214064,
+            "micro_margin": 0.021187345124145242,
+            "macro_margin": 0.026613498619458397,
+            "negative_margin_fraction": 0.19230769230769232,
+            "loo_micro_cohesion": 0.8469395169485124,
+            "loo_micro_margin": -0.0020255081589297553,
+            "loo_negative_margin_fraction": 0.489010989010989,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.8701794829793502,
+            "macro_cohesion": 0.8706669468580698,
+            "micro_margin": 0.02094350853787484,
+            "macro_margin": 0.026627488091551636,
+            "negative_margin_fraction": 0.2032967032967033,
+            "loo_micro_cohesion": 0.8468113838070714,
+            "loo_micro_margin": -0.0024245906344042287,
+            "loo_negative_margin_fraction": 0.5054945054945055,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.840914737300148,
+            "target_similarity": 0.8636521236748271,
+            "target_minus_current": 0.022737386374679147,
+            "bootstrap_target_preference": 0.997
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.8072340135835098,
+            "target_similarity": 0.8668788883059699,
+            "target_minus_current": 0.05964487472246016,
+            "bootstrap_target_preference": 0.999
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.8170334323455585,
+            "target_similarity": 0.8223252888469413,
+            "target_minus_current": 0.005291856501382863,
+            "bootstrap_target_preference": 0.645
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.8084969693348164,
+            "target_similarity": 0.730710892733565,
+            "target_minus_current": -0.07778607660125136,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6816277111620764,
+            "target_similarity": 0.8230798953317092,
+            "target_minus_current": 0.1414521841696328,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "5.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.8620425006589201
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.8621746885561029
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8634065922235856,
+            "macro_cohesion": 0.8539540550934976,
+            "micro_margin": 0.015721416022117924,
+            "macro_margin": 0.013193259835237897,
+            "negative_margin_fraction": 0.27472527472527475,
+            "loo_micro_cohesion": 0.8439392372338262,
+            "loo_micro_margin": -0.003745938967641273,
+            "loo_negative_margin_fraction": 0.5164835164835165,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8618240542576254,
+            "macro_cohesion": 0.8522764479999413,
+            "micro_margin": 0.01512491811149627,
+            "macro_margin": 0.011596812168809409,
+            "negative_margin_fraction": 0.2967032967032967,
+            "loo_micro_cohesion": 0.8420216201332311,
+            "loo_micro_margin": -0.004677516012898029,
+            "loo_negative_margin_fraction": 0.5439560439560439,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8621881805096583,
+            "macro_cohesion": 0.8519539778257333,
+            "micro_margin": 0.016029910079987813,
+            "macro_margin": 0.011369235224148332,
+            "negative_margin_fraction": 0.2857142857142857,
+            "loo_micro_cohesion": 0.8425939421124965,
+            "loo_micro_margin": -0.003564328317173895,
+            "loo_negative_margin_fraction": 0.5054945054945055,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.862174688556103,
+            "macro_cohesion": 0.8524250701974015,
+            "micro_margin": 0.015833146682901447,
+            "macro_margin": 0.01185109974969921,
+            "negative_margin_fraction": 0.2967032967032967,
+            "loo_micro_cohesion": 0.842438733927275,
+            "loo_micro_margin": -0.0039028079459264594,
+            "loo_negative_margin_fraction": 0.5164835164835165,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.8367817961253623,
+            "target_similarity": 0.862929997939087,
+            "target_minus_current": 0.02614820181372468,
+            "bootstrap_target_preference": 0.998
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.796960360693939,
+            "target_similarity": 0.8542998950657148,
+            "target_minus_current": 0.05733953437177575,
+            "bootstrap_target_preference": 0.998
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.8160504830387028,
+            "target_similarity": 0.8193238975002077,
+            "target_minus_current": 0.0032734144615049754,
+            "bootstrap_target_preference": 0.605
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.8012600837035581,
+            "target_similarity": 0.7154651583415093,
+            "target_minus_current": -0.0857949253620488,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6816277111620764,
+            "target_similarity": 0.814607852724643,
+            "target_minus_current": 0.13298014156256655,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "10.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.8470570813460613
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.8471303909526625
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8486517902652752,
+            "macro_cohesion": 0.8302990219511198,
+            "micro_margin": 0.006821990081720043,
+            "macro_margin": -0.004203959670117058,
+            "negative_margin_fraction": 0.3956043956043956,
+            "loo_micro_cohesion": 0.8339695140865462,
+            "loo_micro_margin": -0.007860286097009105,
+            "loo_negative_margin_fraction": 0.5659340659340659,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8467674283770922,
+            "macro_cohesion": 0.8281405840230608,
+            "micro_margin": 0.005834001333411851,
+            "macro_margin": -0.0069134515626313705,
+            "negative_margin_fraction": 0.45604395604395603,
+            "loo_micro_cohesion": 0.8318404232909538,
+            "loo_micro_margin": -0.009093003752726527,
+            "loo_negative_margin_fraction": 0.554945054945055,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.847249737618969,
+            "macro_cohesion": 0.8275511246297721,
+            "micro_margin": 0.006804445076565512,
+            "macro_margin": -0.0070944036203263285,
+            "negative_margin_fraction": 0.4340659340659341,
+            "loo_micro_cohesion": 0.8324875150006062,
+            "loo_micro_margin": -0.00795777754179753,
+            "loo_negative_margin_fraction": 0.5494505494505495,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.8471303909526625,
+            "macro_cohesion": 0.8282222449539809,
+            "micro_margin": 0.006624870535384771,
+            "macro_margin": -0.006577417073610224,
+            "negative_margin_fraction": 0.44505494505494503,
+            "loo_micro_cohesion": 0.832262814864013,
+            "loo_micro_margin": -0.00824270555326482,
+            "loo_negative_margin_fraction": 0.5494505494505495,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.825035977931579,
+            "target_similarity": 0.86040064650473,
+            "target_minus_current": 0.035364668573151015,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7737189165729427,
+            "target_similarity": 0.8272512009540749,
+            "target_minus_current": 0.05353228438113222,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.8069480154509057,
+            "target_similarity": 0.8085089514374862,
+            "target_minus_current": 0.0015609359865805805,
+            "bootstrap_target_preference": 0.588
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.789411843286733,
+            "target_similarity": 0.6993748586287509,
+            "target_minus_current": -0.09003698465798204,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6816277111620764,
+            "target_similarity": 0.794695287174988,
+            "target_minus_current": 0.11306757601291162,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      }
+    },
+    "english": {
+      "1.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.830642675456481
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.830941490590211
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8319797903906373,
+            "macro_cohesion": 0.8654646615601584,
+            "micro_margin": 0.039523391171335485,
+            "macro_margin": 0.08147530341698501,
+            "negative_margin_fraction": 0.1813186813186813,
+            "loo_micro_cohesion": 0.7888531978882447,
+            "loo_micro_margin": -0.0036032013310571464,
+            "loo_negative_margin_fraction": 0.4945054945054945,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8303968956961836,
+            "macro_cohesion": 0.8647408497057752,
+            "micro_margin": 0.040362401103325174,
+            "macro_margin": 0.07977612210107905,
+            "negative_margin_fraction": 0.14835164835164835,
+            "loo_micro_cohesion": 0.78698276866,
+            "loo_micro_margin": -0.0030517259328580616,
+            "loo_negative_margin_fraction": 0.5164835164835165,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8310877550478432,
+            "macro_cohesion": 0.8656354767493689,
+            "micro_margin": 0.04197264417354816,
+            "macro_margin": 0.08288920881306623,
+            "negative_margin_fraction": 0.12087912087912088,
+            "loo_micro_cohesion": 0.7878700573044202,
+            "loo_micro_margin": -0.0012450535698745708,
+            "loo_negative_margin_fraction": 0.5054945054945055,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.830941490590211,
+            "macro_cohesion": 0.8650740403804109,
+            "micro_margin": 0.04149359804411643,
+            "macro_margin": 0.08037490032558926,
+            "negative_margin_fraction": 0.13736263736263737,
+            "loo_micro_cohesion": 0.7876332867732971,
+            "loo_micro_margin": -0.0018146057727974117,
+            "loo_negative_margin_fraction": 0.510989010989011,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7706034961104646,
+            "target_similarity": 0.8065272742186679,
+            "target_minus_current": 0.03592377810820324,
+            "bootstrap_target_preference": 0.998
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7353586797694198,
+            "target_similarity": 0.8237285887605595,
+            "target_minus_current": 0.08836990899113972,
+            "bootstrap_target_preference": 0.991
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.73188414999608,
+            "target_similarity": 0.7462927700685342,
+            "target_minus_current": 0.014408620072454248,
+            "bootstrap_target_preference": 0.726
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.7229817873151185,
+            "target_similarity": 0.6411092068123438,
+            "target_minus_current": -0.08187258050277468,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6059267508770734,
+            "target_similarity": 0.7912181509005491,
+            "target_minus_current": 0.18529140002347577,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "3.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.8162368367126779
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.8164572462890283
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.8176037788894925,
+            "macro_cohesion": 0.8161077805901115,
+            "micro_margin": 0.02965669158927932,
+            "macro_margin": 0.0384466899047272,
+            "negative_margin_fraction": 0.21978021978021978,
+            "loo_micro_cohesion": 0.784518729101666,
+            "loo_micro_margin": -0.0034283581985473247,
+            "loo_negative_margin_fraction": 0.489010989010989,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8159299751359642,
+            "macro_cohesion": 0.8165827326137602,
+            "micro_margin": 0.029711254180096375,
+            "macro_margin": 0.03755291524349649,
+            "negative_margin_fraction": 0.18681318681318682,
+            "loo_micro_cohesion": 0.7824659276980888,
+            "loo_micro_margin": -0.0037527932577792688,
+            "loo_negative_margin_fraction": 0.5164835164835165,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8164033084519274,
+            "macro_cohesion": 0.8151393123892001,
+            "micro_margin": 0.030973398571734763,
+            "macro_margin": 0.03785893151675886,
+            "negative_margin_fraction": 0.16483516483516483,
+            "loo_micro_cohesion": 0.7831982994364645,
+            "loo_micro_margin": -0.002231610443728345,
+            "loo_negative_margin_fraction": 0.5,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.816457246289028,
+            "macro_cohesion": 0.8168635591582768,
+            "micro_margin": 0.03078015825506837,
+            "macro_margin": 0.0379236660029331,
+            "negative_margin_fraction": 0.17582417582417584,
+            "loo_micro_cohesion": 0.7831027585579998,
+            "loo_micro_margin": -0.0025743294759597852,
+            "loo_negative_margin_fraction": 0.5,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7653069115807908,
+            "target_similarity": 0.8057319353800736,
+            "target_minus_current": 0.04042502379928281,
+            "bootstrap_target_preference": 0.999
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7173471872131841,
+            "target_similarity": 0.8045600444289591,
+            "target_minus_current": 0.08721285721577499,
+            "bootstrap_target_preference": 0.998
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7401364696705444,
+            "target_similarity": 0.7455492250235041,
+            "target_minus_current": 0.005412755352959708,
+            "bootstrap_target_preference": 0.616
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.7250871355415405,
+            "target_similarity": 0.6063487109220442,
+            "target_minus_current": -0.11873842461949624,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6059267508770732,
+            "target_similarity": 0.7813995727341807,
+            "target_minus_current": 0.17547282185710755,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "5.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.8043762612174737
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.8045334075141387
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.805867912646221,
+            "macro_cohesion": 0.789768482762199,
+            "micro_margin": 0.02242616856431549,
+            "macro_margin": 0.017876369739706424,
+            "negative_margin_fraction": 0.2857142857142857,
+            "loo_micro_cohesion": 0.7779882334315217,
+            "loo_micro_margin": -0.005453510650383858,
+            "loo_negative_margin_fraction": 0.5054945054945055,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.8040047186425419,
+            "macro_cohesion": 0.7903814823896113,
+            "micro_margin": 0.021729004716964637,
+            "macro_margin": 0.016514528200192155,
+            "negative_margin_fraction": 0.25824175824175827,
+            "loo_micro_cohesion": 0.7757652575339631,
+            "loo_micro_margin": -0.0065104563916140844,
+            "loo_negative_margin_fraction": 0.5384615384615384,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.8045092211780729,
+            "macro_cohesion": 0.7881034570780079,
+            "micro_margin": 0.02292425797957089,
+            "macro_margin": 0.01578981591851733,
+            "negative_margin_fraction": 0.25274725274725274,
+            "loo_micro_cohesion": 0.776540606636686,
+            "loo_micro_margin": -0.005044356561815894,
+            "loo_negative_margin_fraction": 0.5054945054945055,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.8045334075141387,
+            "macro_cohesion": 0.7906142960704635,
+            "micro_margin": 0.022885124111008542,
+            "macro_margin": 0.016862704255574002,
+            "negative_margin_fraction": 0.25274725274725274,
+            "loo_micro_cohesion": 0.7764009246197473,
+            "loo_micro_margin": -0.005247358783382842,
+            "loo_negative_margin_fraction": 0.521978021978022,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7576571702861064,
+            "target_similarity": 0.8045353142897319,
+            "target_minus_current": 0.046878144003625555,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6983092717670204,
+            "target_similarity": 0.7847648649508912,
+            "target_minus_current": 0.08645559318387075,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7395312615163148,
+            "target_similarity": 0.7401558301216057,
+            "target_minus_current": 0.0006245686052909205,
+            "bootstrap_target_preference": 0.505
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.7147433057971859,
+            "target_similarity": 0.587958998712403,
+            "target_minus_current": -0.12678430708478294,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6059267508770732,
+            "target_similarity": 0.768868799361032,
+            "target_minus_current": 0.16294204848395888,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      },
+      "10.0": {
+        "em_history": [
+          {
+            "iteration": 1,
+            "changed": 2,
+            "objective": 0.7821418668927295
+          },
+          {
+            "iteration": 2,
+            "changed": 0,
+            "objective": 0.7822297961104964
+          }
+        ],
+        "em_assignments": {
+          "PHYSBENCH-REF-0065": "P3.2",
+          "PHYSBENCH-REF-0107": "S3.6",
+          "PHYSRISK-REF-0033": "I3.6",
+          "PHYSRISK-REF-0037": "P3.3",
+          "PHYSRISK-REF-0055": "S3.9"
+        },
+        "metrics": {
+          "original_released": {
+            "micro_cohesion": 0.7838485921403865,
+            "macro_cohesion": 0.755407739103288,
+            "micro_margin": 0.0084746060887159,
+            "macro_margin": -0.007418162193840669,
+            "negative_margin_fraction": 0.41208791208791207,
+            "loo_micro_cohesion": 0.7629368893235678,
+            "loo_micro_margin": -0.012437096728102653,
+            "loo_negative_margin_fraction": 0.5494505494505495,
+            "min_family_size": 1
+          },
+          "revised_released": {
+            "micro_cohesion": 0.7816389660164405,
+            "macro_cohesion": 0.755874129268539,
+            "micro_margin": 0.006681305226761756,
+            "macro_margin": -0.010718369262267607,
+            "negative_margin_fraction": 0.45054945054945056,
+            "loo_micro_cohesion": 0.7604478388248092,
+            "loo_micro_margin": -0.014509821964869465,
+            "loo_negative_margin_fraction": 0.554945054945055,
+            "min_family_size": 1
+          },
+          "revised_proposed": {
+            "micro_cohesion": 0.7823285628107571,
+            "macro_cohesion": 0.7530120419162598,
+            "micro_margin": 0.008227707447583065,
+            "macro_margin": -0.011615448269107603,
+            "negative_margin_fraction": 0.4010989010989011,
+            "loo_micro_cohesion": 0.7613659298456107,
+            "loo_micro_margin": -0.012734925517563183,
+            "loo_negative_margin_fraction": 0.5494505494505495,
+            "min_family_size": 1
+          },
+          "revised_em": {
+            "micro_cohesion": 0.7822297961104963,
+            "macro_cohesion": 0.7560460496882042,
+            "micro_margin": 0.008037808317488284,
+            "macro_margin": -0.010053833342236767,
+            "negative_margin_fraction": 0.4230769230769231,
+            "loo_micro_cohesion": 0.7611356593513408,
+            "loo_micro_margin": -0.013056328441667358,
+            "loo_negative_margin_fraction": 0.5494505494505495,
+            "min_family_size": 1
+          }
+        },
+        "move_diagnostics": [
+          {
+            "card_id": "PHYSBENCH-REF-0065",
+            "current_l3": "I3.7",
+            "target_l3": "P3.2",
+            "current_similarity": 0.7383211496804585,
+            "target_similarity": 0.8004293412754284,
+            "target_minus_current": 0.06210819159496994,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSBENCH-REF-0107",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6587753234907147,
+            "target_similarity": 0.742279849031511,
+            "target_minus_current": 0.08350452554079635,
+            "bootstrap_target_preference": 1.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0033",
+            "current_l3": "I3.6",
+            "target_l3": "S3.6",
+            "current_similarity": 0.7274198028615132,
+            "target_similarity": 0.7220886394328077,
+            "target_minus_current": -0.005331163428705543,
+            "bootstrap_target_preference": 0.379
+          },
+          {
+            "card_id": "PHYSRISK-REF-0037",
+            "current_l3": "P3.3",
+            "target_l3": "S3.9",
+            "current_similarity": 0.6983631295164815,
+            "target_similarity": 0.569233388388177,
+            "target_minus_current": -0.12912974112830444,
+            "bootstrap_target_preference": 0.0
+          },
+          {
+            "card_id": "PHYSRISK-REF-0055",
+            "current_l3": "S3.9",
+            "target_l3": "S3.6",
+            "current_similarity": 0.6059267508770732,
+            "target_similarity": 0.7386189153875263,
+            "target_minus_current": 0.13269216451045318,
+            "bootstrap_target_preference": 1.0
+          }
+        ]
+      }
+    }
+  }
+}

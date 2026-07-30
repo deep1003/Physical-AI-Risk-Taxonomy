@@ -20,6 +20,8 @@ Human decision on 2026-06-28 moved `S3.10` Lack of Robustness in Unseen Environm
 
 Human decision on 2026-07-04 realigned the master L2/L3 structure. `P2` is now System Safety with 5 L3 categories, `I2` is Interaction Safety with 10 L3 categories, and `S2` is Societal Safety with 9 L3 categories. The L3 moves were applied at group level: all L4 cards under the moved L3 categories follow their L3 parent.
 
+On 2026-07-31, 84 L4 labels or definitions were revised after a full wording and boundary audit. Candidate L3 moves were then tested with constrained spherical EM across BGE-M3, mxbai-embed-large, and nomic-embed-text embeddings, bilingual and English-only card text, and L3 seed weights of 1, 3, 5, and 10. A move was released only when at least 80% of the 24 sensitivity conditions selected the same target and all 24 L3 categories remained non-empty. This rule moved `PHYSBENCH-REF-0065` from `I3.7` to `P3.2` in 20 of 24 conditions and `PHYSBENCH-REF-0107` from `I3.6` to `S3.6` in 23 of 24 conditions. The other candidates retained their released assignments.
+
 ## 2. 3H1R Alignment Rule
 
 The current 3H1R axis order is:
@@ -76,5 +78,8 @@ The key curation artifacts are:
 - `data/three_h_one_r_primary_exceptions_20260628.csv`
 - `scripts/add_unreferenced_corpus_refs_to_l4*.py`
 - `scripts/audit_low_relevance_l4_references.py`
+- `scripts/run_l3_reassignment_em_20260731.py`
+- `output/l3_reassignment_em_20260731/`
+- `expert-survey/analysis/l3_reassignment_em_sensitivity_report_20260731.md`
 
 These scripts assume the original local corpus paths used during construction. The published CSV/JSON files provide the reproducible public snapshot of the final taxonomy state.

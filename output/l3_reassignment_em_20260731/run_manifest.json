@@ -1,0 +1,33 @@
+{
+  "run_id": "PAI-L3-EM-20260731",
+  "seed": 20260731,
+  "source_l4_sha256": "116973e340f96bcfc5e6c8ffaa847845d2b581c33195d5104c5f9139b56e61fd",
+  "review_sha256": "1aef01a6030ae580a704d4f9ec4589c52858a0a0492d4191eceeab3f395ff864",
+  "n_cards": 182,
+  "n_families": 24,
+  "n_wording_revisions": 84,
+  "proposed_moves": {
+    "PHYSBENCH-REF-0065": "P3.2",
+    "PHYSBENCH-REF-0107": "S3.6",
+    "PHYSRISK-REF-0033": "S3.6",
+    "PHYSRISK-REF-0037": "S3.9",
+    "PHYSRISK-REF-0055": "S3.6"
+  },
+  "models": [
+    "bge-m3",
+    "mxbai-embed-large",
+    "nomic-embed-text"
+  ],
+  "text_modes": [
+    "bilingual",
+    "english"
+  ],
+  "seed_weights": [
+    1.0,
+    3.0,
+    5.0,
+    10.0
+  ],
+  "bootstrap_repeats": 1000,
+  "scope_note": "Internal semantic-cohesion and placement-sensitivity audit. It does not estimate external taxonomy validity."
+}

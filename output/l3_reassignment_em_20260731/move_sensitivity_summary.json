@@ -1,0 +1,52 @@
+{
+  "PHYSBENCH-REF-0065": {
+    "current_l3": "I3.7",
+    "target_l3": "P3.2",
+    "runs": 24,
+    "target_similarity_preferred_runs": 24,
+    "mean_target_minus_current": 0.0409061467044163,
+    "min_target_minus_current": 0.021135104089375023,
+    "max_target_minus_current": 0.07529236289688646,
+    "mean_bootstrap_target_preference": 0.9972916666666666
+  },
+  "PHYSBENCH-REF-0107": {
+    "current_l3": "I3.6",
+    "target_l3": "S3.6",
+    "runs": 24,
+    "target_similarity_preferred_runs": 24,
+    "mean_target_minus_current": 0.0738983430610785,
+    "min_target_minus_current": 0.015984175673783407,
+    "max_target_minus_current": 0.11105970326735859,
+    "mean_bootstrap_target_preference": 0.9792916666666667
+  },
+  "PHYSRISK-REF-0033": {
+    "current_l3": "I3.6",
+    "target_l3": "S3.6",
+    "runs": 24,
+    "target_similarity_preferred_runs": 23,
+    "mean_target_minus_current": 0.021776398298989797,
+    "min_target_minus_current": -0.005331163428705543,
+    "max_target_minus_current": 0.06961632180504651,
+    "mean_bootstrap_target_preference": 0.8140833333333335
+  },
+  "PHYSRISK-REF-0037": {
+    "current_l3": "P3.3",
+    "target_l3": "S3.9",
+    "runs": 24,
+    "target_similarity_preferred_runs": 0,
+    "mean_target_minus_current": -0.11108689549535594,
+    "min_target_minus_current": -0.1757035714460644,
+    "max_target_minus_current": -0.050604831118816196,
+    "mean_bootstrap_target_preference": 0.0
+  },
+  "PHYSRISK-REF-0055": {
+    "current_l3": "S3.9",
+    "target_l3": "S3.6",
+    "runs": 24,
+    "target_similarity_preferred_runs": 24,
+    "mean_target_minus_current": 0.17588868531992397,
+    "min_target_minus_current": 0.10861898808426651,
+    "max_target_minus_current": 0.26196886422650656,
+    "mean_bootstrap_target_preference": 1.0
+  }
+}

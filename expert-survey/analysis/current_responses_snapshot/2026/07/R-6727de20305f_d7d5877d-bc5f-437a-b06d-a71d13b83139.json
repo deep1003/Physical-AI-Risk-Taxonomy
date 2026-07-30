@@ -1,0 +1,364 @@
+{
+  "survey_version": "2.1.0-pairwise-30items",
+  "assignment_version": "BIBD-20260710-v2-30items",
+  "respondent_id": "R-6727de20305f",
+  "assignment_block": "A05",
+  "source_sha256": "116973e340f96bcfc5e6c8ffaa847845d2b581c33195d5104c5f9139b56e61fd",
+  "analysis_plan": {
+    "primary_endpoint": "original_response_agreement_with_pre_specified_reference_assignment",
+    "reconsideration_role": "secondary_analysis_of_high_confidence_disagreement_stability",
+    "minimum_completed_responses": 20,
+    "planned_summaries": [
+      "card_level_agreement_with_wilson_or_bootstrap_ci",
+      "family_level_macro_and_worst_family_agreement",
+      "respondent_level_completion_and_agreement_summary",
+      "switch_rate_from_original_expert_answer_to_reference_assignment"
+    ],
+    "limitation": "forced_choice_pairwise_design_excludes_unknown_or_unmappable_judgments"
+  },
+  "demographics": {
+    "age_band": "35–44세 / 35–44",
+    "gender": "여성 / Woman",
+    "expertise": [
+      "AI safety",
+      "Risk governance",
+      "Standards or regulation"
+    ],
+    "career": "1–2년 / 1–2 years",
+    "risk_assessment_experience": "없음 / None",
+    "standards_experience": "있음 / Yes",
+    "eligibility_confirmed": true,
+    "independence_confirmed": true
+  },
+  "original_rankings": [
+    {
+      "display_id": "V075",
+      "card_id": "PHYSCONN-REF-008",
+      "candidate_a": "P3.4",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.4",
+      "original_selected_l3": "P3.4",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V148",
+      "card_id": "PHYSBENCH-REF-0033",
+      "candidate_a": "I3.9",
+      "candidate_b": "I3.6",
+      "reference_assignment": "I3.9",
+      "original_selected_l3": "I3.9",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V069",
+      "card_id": "PHYSBENCH-REF-0016",
+      "candidate_a": "P3.3",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.3",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V089",
+      "card_id": "PHYSRISK-REF-0015",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.5",
+      "original_selected_l3": "P3.5",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V013",
+      "card_id": "PHYSBENCH-REF-0058",
+      "candidate_a": "P3.4",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.4",
+      "confidence": "2",
+      "comment": ""
+    },
+    {
+      "display_id": "V048",
+      "card_id": "PHYSBENCH-REF-0085",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": "의도하지 않은 피해 카테고리는 너무 광범위하여 분류에 혼란을 줄 수 있을 것으로 보임"
+    },
+    {
+      "display_id": "V018",
+      "card_id": "PHYSBENCH-REF-0077",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V112",
+      "card_id": "PHYSRISK-REF-0031",
+      "candidate_a": "I3.3",
+      "candidate_b": "I3.2",
+      "reference_assignment": "I3.3",
+      "original_selected_l3": "I3.2",
+      "confidence": "1",
+      "comment": ""
+    },
+    {
+      "display_id": "V052",
+      "card_id": "PHYSBENCH-REF-0106",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V037",
+      "card_id": "PHYSBENCH-REF-0053",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V160",
+      "card_id": "PHYSRISK-REF-0052",
+      "candidate_a": "S3.9",
+      "candidate_b": "S3.3",
+      "reference_assignment": "S3.3",
+      "original_selected_l3": "S3.3",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V035",
+      "card_id": "PHYSBENCH-REF-0028",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V046",
+      "card_id": "PHYSBENCH-REF-0080",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V171",
+      "card_id": "PHYSBENCH-REF-0113",
+      "candidate_a": "S3.7",
+      "candidate_b": "S3.6",
+      "reference_assignment": "S3.6",
+      "original_selected_l3": "S3.7",
+      "confidence": "1",
+      "comment": ""
+    },
+    {
+      "display_id": "V120",
+      "card_id": "PHYSBENCH-REF-0092",
+      "candidate_a": "I3.5",
+      "candidate_b": "I3.4",
+      "reference_assignment": "I3.5",
+      "original_selected_l3": "I3.4",
+      "confidence": "2",
+      "comment": ""
+    },
+    {
+      "display_id": "V157",
+      "card_id": "PHYSRISK-REF-0053",
+      "candidate_a": "S3.1",
+      "candidate_b": "S3.7",
+      "reference_assignment": "S3.1",
+      "original_selected_l3": "S3.1",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V107",
+      "card_id": "PHYSRISK-REF-0046",
+      "candidate_a": "I3.1",
+      "candidate_b": "I3.2",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.2",
+      "confidence": "1",
+      "comment": ""
+    },
+    {
+      "display_id": "V134",
+      "card_id": "PHYSBENCH-REF-0001",
+      "candidate_a": "I3.10",
+      "candidate_b": "I3.7",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.7",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V137",
+      "card_id": "PHYSBENCH-REF-0065",
+      "candidate_a": "I3.6",
+      "candidate_b": "I3.7",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.6",
+      "confidence": "2",
+      "comment": ""
+    },
+    {
+      "display_id": "V027",
+      "card_id": "PHYSBENCH-REF-0010",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.3",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V014",
+      "card_id": "PHYSBENCH-REF-0064",
+      "candidate_a": "P3.4",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.4",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V087",
+      "card_id": "PHYSBENCH-REF-0098",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.5",
+      "original_selected_l3": "P3.5",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V159",
+      "card_id": "PHYSRISK-REF-0036",
+      "candidate_a": "S3.9",
+      "candidate_b": "S3.2",
+      "reference_assignment": "S3.2",
+      "original_selected_l3": "S3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V062",
+      "card_id": "PHYSCONN-REF-005",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "2",
+      "comment": ""
+    },
+    {
+      "display_id": "V152",
+      "card_id": "PHYSRISK-REF-0024",
+      "candidate_a": "I3.10",
+      "candidate_b": "I3.7",
+      "reference_assignment": "I3.10",
+      "original_selected_l3": "I3.10",
+      "confidence": "2",
+      "comment": ""
+    },
+    {
+      "display_id": "V167",
+      "card_id": "PHYSBENCH-REF-0094",
+      "candidate_a": "S3.6",
+      "candidate_b": "S3.7",
+      "reference_assignment": "S3.6",
+      "original_selected_l3": "S3.7",
+      "confidence": "1",
+      "comment": ""
+    },
+    {
+      "display_id": "V131",
+      "card_id": "PHYSRISK-REF-0033",
+      "candidate_a": "I3.7",
+      "candidate_b": "I3.6",
+      "reference_assignment": "I3.6",
+      "original_selected_l3": "I3.6",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V096",
+      "card_id": "PHYSBENCH-REF-0022",
+      "candidate_a": "I3.4",
+      "candidate_b": "I3.1",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.4",
+      "confidence": "2",
+      "comment": ""
+    },
+    {
+      "display_id": "V020",
+      "card_id": "PHYSBENCH-REF-0090",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V102",
+      "card_id": "PHYSBENCH-REF-0095",
+      "candidate_a": "I3.3",
+      "candidate_b": "I3.1",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.1",
+      "confidence": "1",
+      "comment": ""
+    }
+  ],
+  "pre_submission_reconsideration": [
+    {
+      "display_id": "V014",
+      "card_id": "PHYSBENCH-REF-0064",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.4",
+      "original_confidence": "3",
+      "revised_selected_l3": "P3.1",
+      "changed": true
+    },
+    {
+      "display_id": "V018",
+      "card_id": "PHYSBENCH-REF-0077",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.2",
+      "original_confidence": "3",
+      "revised_selected_l3": "P3.1",
+      "changed": true
+    },
+    {
+      "display_id": "V020",
+      "card_id": "PHYSBENCH-REF-0090",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.2",
+      "original_confidence": "3",
+      "revised_selected_l3": "P3.2",
+      "changed": false
+    }
+  ]
+}

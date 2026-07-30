@@ -1,0 +1,655 @@
+"use strict";
+
+const CONFIG = {
+  repo: "deep1003/Physical-AI-Risk-Taxonomy",
+  apiUrl: "https://pai-risk-survey-api.deep1003-pai.workers.dev",
+  storagePrefix: "pai-expert-survey-v5-revised-wording-em-l3",
+};
+
+const app = document.querySelector("#app");
+let surveyData;
+let assignments;
+let state = {
+  page: "consent",
+  raterCode: "",
+  assignmentBlock: "",
+  consent: false,
+  demographics: {},
+  responses: {},
+  revisions: {},
+  cardIndex: 0,
+  startedAt: Date.now(),
+};
+
+const esc = (value = "") =>
+  String(value).replace(
+    /[&<>'"]/g,
+    (char) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[
+        char
+      ],
+  );
+const selected = (a, b) => (a === b ? "selected" : "");
+const checked = (value) => (value ? "checked" : "");
+function groupBy(items, keyFn) {
+  return items.reduce((groups, item) => {
+    const key = keyFn(item);
+    (groups[key] ||= []).push(item);
+    return groups;
+  }, {});
+}
+
+function storageKey() {
+  return `${CONFIG.storagePrefix}:${state.raterCode || "unassigned"}`;
+}
+function save() {
+  localStorage.setItem(storageKey(), JSON.stringify(state));
+  if (state.raterCode)
+    localStorage.setItem(`${CONFIG.storagePrefix}:active`, state.raterCode);
+}
+function restoreActive() {
+  const code = localStorage.getItem(`${CONFIG.storagePrefix}:active`);
+  const raw = code && localStorage.getItem(`${CONFIG.storagePrefix}:${code}`);
+  if (raw) state = { ...state, ...JSON.parse(raw) };
+}
+function startNewResponse() {
+  localStorage.removeItem(`${CONFIG.storagePrefix}:active`);
+  state = {
+    page: "consent",
+    raterCode: "",
+    assignmentBlock: "",
+    consent: false,
+    demographics: {},
+    responses: {},
+    revisions: {},
+    cardIndex: 0,
+    startedAt: Date.now(),
+  };
+  render();
+}
+function randomRespondentId() {
+  const bytes = crypto.getRandomValues(new Uint8Array(6));
+  return `R-${[...bytes].map((value) => value.toString(16).padStart(2, "0")).join("")}`;
+}
+function randomBlock() {
+  const byte = new Uint8Array(1);
+  do crypto.getRandomValues(byte);
+  while (byte[0] >= 247);
+  return `A${String((byte[0] % 19) + 1).padStart(2, "0")}`;
+}
+function seededShuffle(values, seedText) {
+  let seed = 2166136261;
+  for (const char of seedText) seed = Math.imul(seed ^ char.charCodeAt(0), 16777619);
+  const random = () => {
+    seed += 0x6d2b79f5;
+    let value = seed;
+    value = Math.imul(value ^ (value >>> 15), value | 1);
+    value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
+    return ((value ^ (value >>> 14)) >>> 0) / 4294967296;
+  };
+  const shuffled = [...values];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const target = Math.floor(random() * (index + 1));
+    [shuffled[index], shuffled[target]] = [shuffled[target], shuffled[index]];
+  }
+  return shuffled;
+}
+function assignedCards() {
+  const ids = seededShuffle(
+    assignments.raters[state.assignmentBlock] || [],
+    state.raterCode,
+  );
+  const lookup = new Map(surveyData.cards.map((card) => [card.card_id, card]));
+  return ids.map((id) => lookup.get(id)).filter(Boolean);
+}
+function pairFamilies(card) {
+  const lookup = new Map(surveyData.families.map((family) => [family.id, family]));
+  return seededShuffle(
+    card.pair_family_ids,
+    `${state.raterCode}:${card.card_id}:pair`,
+  ).map((id) => lookup.get(id));
+}
+function familyById(id) {
+  return surveyData.families.find((family) => family.id === id);
+}
+const cleanCell = (value = "") => String(value).replaceAll("|", "/").replaceAll("\n", " ");
+const csvCell = (value = "") => `"${String(value).replaceAll('"', '""')}"`;
+function familyOptions(value = "", includeSpecial = true) {
+  const groups = groupBy(surveyData.families, (family) => family.l2_id);
+  let html = '<option value="">선택 / Select</option>';
+  for (const families of Object.values(groups)) {
+    const first = families[0];
+    html += `<optgroup label="${esc(first.l2_name_ko)} / ${esc(first.l2_name_en)}">`;
+    html += families
+      .map(
+        (f) =>
+          `<option value="${f.id}" ${selected(value, f.id)}>${f.id} · ${esc(f.name_ko)} / ${esc(f.name_en)}</option>`,
+      )
+      .join("");
+    html += "</optgroup>";
+  }
+  if (includeSpecial) {
+    html += `<option value="UNMAPPABLE" ${selected(value, "UNMAPPABLE")}>현재 분류체계로 분류 불가 / Unmappable</option>`;
+    html += `<option value="INSUFFICIENT" ${selected(value, "INSUFFICIENT")}>정보 부족 / Insufficient information</option>`;
+  }
+  return html;
+}
+
+function renderConsent() {
+  app.innerHTML = `<section class="panel">
+    <h2>연구 안내 및 동의 <span class="english">Study information and consent</span></h2>
+    <div class="notice"><p>이 연구는 182개 Physical AI 위험 카드를 24개 위험군으로 분류할 때 독립 전문가 판단의 재현성을 평가합니다.</p><p class="english">This study evaluates the reproducibility of independent expert assignments of 182 Physical AI risk cards to 24 predefined families.</p></div>
+    <p>이 설문은 이름, 이메일, 정확한 연령, 소속기관 등 직접 식별정보를 수집하거나 요구하지 않습니다. 연령대와 성별은 범주형으로 수집하며, 두 문항 모두 '응답하지 않음'을 선택할 수 있습니다. 설문은 30개의 두 후보 비교 문항으로 구성되며 브라우저에 자동 임시저장됩니다.</p>
+    <p class="english">This survey does not collect or request direct identifiers such as names, email addresses, exact age, or institutional affiliation. Age band and gender are collected categorically, with a prefer-not-to-say option for both. The survey contains 30 pairwise items, and progress is temporarily autosaved in this browser.</p>
+    <div class="notice warning"><p><strong>제출된 익명 응답은 연구 재현성을 위해 공개 저장소에 보존됩니다.</strong></p><p class="english"><strong>Anonymous responses will be retained in a public repository for research reproducibility.</strong></p></div>
+    <div class="notice"><p><strong>제한시간은 없습니다.</strong></p><p class="english"><strong>There is no time limit.</strong></p></div>
+    <div class="notice warning"><p><strong>연구 운영을 위해 설문 참여 시점과 소요시간, 국가 수준의 접속지역 정보가 비공개로 기록됩니다.</strong></p><p class="english"><strong>For study administration, participation timestamps, response duration, and country-level access location are recorded privately.</strong></p></div>
+    <label class="choice"><input id="consent" type="checkbox">위 내용을 이해했으며 자발적으로 참여하는 데 동의합니다. <span class="english">I understand the information above and voluntarily consent to participate.</span></label>
+    <p id="consentError" class="error" role="alert"></p>
+    <div class="actions"><span></span><button id="begin" class="primary">설문 시작 / Begin survey</button></div>
+  </section>`;
+  document.querySelector("#begin").onclick = () => {
+    if (!document.querySelector("#consent").checked) {
+      document.querySelector("#consentError").textContent =
+        "참여 동의가 필요합니다. / Consent is required.";
+      return;
+    }
+    state.raterCode = randomRespondentId();
+    state.startedAt = Date.now();
+    state.assignmentBlock = randomBlock();
+    state.consent = true;
+    state.page = "demographics";
+    save();
+    render();
+  };
+}
+
+function renderDemographics() {
+  const d = state.demographics;
+  app.innerHTML = `<section class="panel">
+    <h2>전문가 배경 정보 <span class="english">Expert background</span></h2>
+    <p class="help">이름, 이메일, 정확한 연령, 소속기관은 수집하지 않습니다. 연령대와 성별은 범주형이며 '응답하지 않음'을 선택할 수 있습니다. 별표 문항은 필수입니다. / Names, email addresses, exact age, and institutional affiliation are not collected. Age band and gender are categorical and include a prefer-not-to-say option. Asterisked items are required.</p>
+    <div class="grid">
+      ${selectField("ageBand", "연령대*", "Age band*", ["25세 미만 / Under 25", "25–34세 / 25–34", "35–44세 / 35–44", "45–54세 / 45–54", "55–64세 / 55–64", "65세 이상 / 65 or older", "응답하지 않음 / Prefer not to say"], d.ageBand)}
+      ${selectField("gender", "성별*", "Gender*", ["여성 / Woman", "남성 / Man", "논바이너리·기타 / Non-binary or another identity", "응답하지 않음 / Prefer not to say"], d.gender)}
+      ${selectField("career", "관련 경력 구간*", "Relevant experience*", ["1년 미만 / Under 1 year", "1–2년 / 1–2 years", "3–5년 / 3–5 years", "6–10년 / 6–10 years", "11–15년 / 11–15 years", "16년 이상 / 16+ years"], d.career)}
+      ${selectField("riskExperience", "Physical AI·로봇 위험평가 경험*", "Risk-assessment experience*", ["없음 / None", "제한적 / Limited", "반복적 / Repeated", "주요 업무 / Core responsibility"], d.riskExperience)}
+      ${selectField("standardsExperience", "안전 표준·규제 경험*", "Safety standards or regulation experience*", ["없음 / No", "있음 / Yes"], d.standardsExperience)}
+    </div>
+    <fieldset><legend>주요 전문영역* <span class="english">Primary fields of expertise*</span></legend>${["Robotics", "Autonomous systems", "Control engineering", "Human–robot interaction", "Safety engineering", "AI safety", "Risk governance", "Standards or regulation"].map((x) => `<label class="choice"><input type="checkbox" name="expertise" value="${x}" ${checked((d.expertise || []).includes(x))}>${x}</label>`).join("")}</fieldset>
+    <fieldset><legend>적격성·독립성 확인* <span class="english">Eligibility and independence check*</span></legend>
+      <label class="choice"><input type="checkbox" id="eligibilityConfirmed" ${checked(d.eligibilityConfirmed)}>관련 학위, 관련 학위과정 1년 이상, 관련 산업·공공·표준화 경력 1년 이상 또는 관련 위험평가 경험 중 하나 이상을 충족합니다. <span class="english">I meet at least one criterion: a relevant degree, at least one year in a relevant degree programme, at least one year of relevant professional experience, or relevant risk-assessment experience.</span></label>
+      <label class="choice"><input type="checkbox" id="independent" ${checked(d.independent)}>나는 공동저자가 아니며 L3/L4 개발 또는 기존 label 배정에 참여하지 않았습니다. <span class="english">I am not a co-author and did not develop the taxonomy or assign the existing labels.</span></label>
+      <label class="choice"><input type="checkbox" id="notExposed" ${checked(d.notExposed)}>나는 기존 카드별 L3 label을 제공받지 않았습니다. <span class="english">I have not been given the existing card-level L3 labels.</span></label>
+    </fieldset><p id="demoError" class="error"></p>
+    <div class="actions"><button class="secondary" data-back>이전 / Back</button><button id="demoNext" class="primary">Codebook 보기 / View codebook</button></div>
+  </section>`;
+  bindBack("consent");
+  document.querySelector("#demoNext").onclick = () => {
+    const required = [
+      "ageBand",
+      "gender",
+      "career",
+      "riskExperience",
+      "standardsExperience",
+    ];
+    const next = Object.fromEntries(
+      required.map((id) => [id, document.querySelector(`#${id}`).value]),
+    );
+    next.expertise = [
+      ...document.querySelectorAll('[name="expertise"]:checked'),
+    ].map((el) => el.value);
+    next.eligibilityConfirmed = document.querySelector(
+      "#eligibilityConfirmed",
+    ).checked;
+    next.independent = document.querySelector("#independent").checked;
+    next.notExposed = document.querySelector("#notExposed").checked;
+    if (
+      required.some((id) => !next[id]) ||
+      !next.expertise.length ||
+      !next.eligibilityConfirmed ||
+      !next.independent ||
+      !next.notExposed
+    ) {
+      document.querySelector("#demoError").textContent =
+        "모든 필수 항목과 적격성·독립성 확인이 필요합니다. / Complete all required fields and eligibility/independence checks.";
+      return;
+    }
+    state.demographics = next;
+    state.page = "codebook";
+    save();
+    render();
+  };
+}
+
+function selectField(id, ko, en, options, value) {
+  return `<div class="field"><label for="${id}">${ko}<span class="english">${en}</span></label><select id="${id}"><option value="">선택 / Select</option>${options.map((x) => `<option ${selected(value, x)}>${x}</option>`).join("")}</select></div>`;
+}
+
+function renderCodebook() {
+  const groups = groupBy(surveyData.families, (f) => f.l2_id);
+  app.innerHTML = `<section class="panel codebook"><h2>L3 위험군 Codebook <span class="english">L3 risk-family codebook</span></h2>
+    <div class="notice"><p>위험의 결과보다 카드에 명시된 주요 발생 메커니즘을 우선하십시오. 카드에 없는 상황을 추론하지 마십시오.</p><p class="english">Prioritize the primary risk-generating mechanism stated in the card rather than consequence severity. Do not infer unstated circumstances.</p></div>
+    ${Object.values(groups)
+      .map(
+        (fs) =>
+          `<h3 class="l2-heading">${esc(fs[0].l2_name_ko)} / ${esc(fs[0].l2_name_en)}</h3>${fs.map((f) => `<details><summary>${f.id} · ${esc(f.name_ko)} / ${esc(f.name_en)}</summary><p>${esc(f.definition_ko)}</p><p class="english">${esc(f.definition_en)}</p></details>`).join("")}`,
+      )
+      .join("")}
+    <label class="choice"><input id="readCodebook" type="checkbox">각 문항에서 두 후보 중 더 적합한 하나를 고르는 방식임을 이해했습니다. <span class="english">I understand that each item asks me to rank two candidates by choosing the better fit.</span></label>
+    <p id="bookError" class="error"></p><div class="actions"><button class="secondary" data-back>이전 / Back</button><button id="startCards" class="primary">카드 분류 시작 / Start annotation</button></div></section>`;
+  bindBack("demographics");
+  document.querySelector("#startCards").onclick = () => {
+    if (!document.querySelector("#readCodebook").checked) {
+      document.querySelector("#bookError").textContent =
+        "쌍대 비교 방식의 확인이 필요합니다. / Please confirm the pairwise ranking procedure.";
+      return;
+    }
+    state.page = "cards";
+    save();
+    render();
+  };
+}
+
+function renderCard() {
+  const cards = assignedCards();
+  const index = Math.min(state.cardIndex, cards.length - 1);
+  const card = cards[index];
+  const response = state.responses[card.card_id] || {};
+  const pair = pairFamilies(card);
+  const completed = Object.values(state.responses).filter(
+    (r) => r.choice && r.confidence,
+  ).length;
+  app.innerHTML = `<div class="progress-wrap"><progress value="${completed}" max="${cards.length}"></progress><strong>${completed}/${cards.length}</strong></div>
+  <section class="panel risk-card"><p class="card-id">${esc(card.display_id)} · ${index + 1}/${cards.length}</p>
+    <p class="risk-title">${esc(card.label_ko)} <span class="english">${esc(card.label_en)}</span></p>
+    <div class="risk-definition"><p>${esc(card.definition_ko)}</p><p class="english">${esc(card.definition_en)}</p></div>
+    <fieldset class="pairwise"><legend>이 위험 카드를 더 잘 설명하는 후보를 선택해 주세요.* <span class="english">Choose the candidate that better describes this risk card.*</span></legend>${pair.map((family, position) => `<label class="pair-option"><input type="radio" name="pair_choice" value="${family.id}" ${checked(response.choice === family.id)}><span class="pair-marker">${position === 0 ? "A" : "B"}</span><span><strong>${esc(family.name_ko)} <span class="english">${esc(family.name_en)}</span></strong><small>${esc(family.definition_ko)} <span class="english">${esc(family.definition_en)}</span></small></span></label>`).join("")}</fieldset>
+    <fieldset><legend>선택에 대한 확신도* <span class="english">Confidence in this ranking*</span></legend>${[1, 2, 3, 4, 5].map((n) => `<label class="choice"><input type="radio" name="confidence" value="${n}" ${checked(String(response.confidence) === String(n))}>${n} · ${["매우 낮음 / Very low", "낮음 / Low", "보통 / Moderate", "높음 / High", "매우 높음 / Very high"][n - 1]}</label>`).join("")}</fieldset>
+    <div class="field"><label for="comment">선택적 의견 <span class="english">Optional comment</span></label><textarea id="comment">${esc(response.comment || "")}</textarea></div><p id="cardError" class="error"></p>
+    <div class="actions"><button id="book" class="secondary">Codebook</button><div class="actions-right"><button id="previous" class="secondary" ${index === 0 ? "disabled" : ""}>이전 카드 / Previous</button><button id="next" class="primary">${index === cards.length - 1 ? "검토 / Review" : "다음 카드 / Next"}</button></div></div>
+  </section>`;
+  document.querySelector("#book").onclick = () => {
+    persistCard(card);
+    state.page = "codebook-return";
+    save();
+    renderCodebookReturn();
+  };
+  document.querySelector("#previous").onclick = () => {
+    persistCard(card);
+    state.cardIndex = Math.max(0, index - 1);
+    save();
+    render();
+  };
+  document.querySelector("#next").onclick = () => {
+    if (!persistCard(card, true)) return;
+    if (index === cards.length - 1) state.page = "review";
+    else state.cardIndex = index + 1;
+    save();
+    render();
+  };
+}
+
+function persistCard(card, validate = false) {
+  const choice =
+    document.querySelector('[name="pair_choice"]:checked')?.value || "";
+  const confidence =
+    document.querySelector('[name="confidence"]:checked')?.value || "";
+  if (validate && (!choice || !confidence)) {
+    document.querySelector("#cardError").textContent =
+      "두 후보 중 하나와 확신도를 선택해 주세요. / Choose one candidate and a confidence rating.";
+    return false;
+  }
+  state.responses[card.card_id] = {
+    choice,
+    pair_order: pairFamilies(card).map((family) => family.id),
+    confidence,
+    comment: document.querySelector("#comment").value.trim(),
+  };
+  return true;
+}
+
+function renderCodebookReturn() {
+  renderCodebook();
+  document.querySelector("#readCodebook").closest("label").remove();
+  document.querySelector("#bookError").remove();
+  document.querySelector("#startCards").textContent =
+    "카드로 돌아가기 / Return to card";
+  document.querySelector("#startCards").onclick = () => {
+    state.page = "cards";
+    save();
+    render();
+  };
+  document.querySelector("[data-back]").remove();
+}
+
+function renderReview() {
+  const cards = assignedCards();
+  const missing = cards.filter(
+    (c) =>
+      !state.responses[c.card_id]?.choice ||
+      !state.responses[c.card_id]?.confidence,
+  );
+  app.innerHTML = `<section class="panel"><h2>응답 검토 <span class="english">Review responses</span></h2>
+    <p><span class="stat">완료 / Complete: ${cards.length - missing.length}</span><span class="stat">미완료 / Missing: ${missing.length}</span></p>
+    ${missing.length ? `<p class="error">미완료 카드가 있습니다. / Some cards are incomplete.</p>` : `<p class="notice">모든 카드가 완료되었습니다. 제출 전 재검토 단계로 이동할 수 있습니다. / All assigned cards are complete; you can proceed to the pre-submission review.</p>`}
+    <div class="actions"><button id="returnCards" class="secondary">카드로 돌아가기 / Return</button><button id="revisionNext" class="primary" ${missing.length ? "disabled" : ""}>재검토 / Review flagged items</button></div></section>`;
+  document.querySelector("#returnCards").onclick = () => {
+    state.page = "cards";
+    if (missing.length)
+      state.cardIndex = cards.findIndex(
+        (c) => c.card_id === missing[0].card_id,
+      );
+    save();
+    render();
+  };
+  document.querySelector("#revisionNext").onclick = () => {
+    state.page = "revision";
+    save();
+    render();
+  };
+}
+
+function revisionCandidates() {
+  return assignedCards()
+    .map((card) => {
+      const response = state.responses[card.card_id] || {};
+      return {
+        card,
+        response,
+        referenceChoice: card.pair_family_ids[0],
+        confidence: Number(response.confidence || 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.response.choice &&
+        item.referenceChoice &&
+        item.response.choice !== item.referenceChoice,
+    )
+    .sort((a, b) => {
+      if (b.confidence !== a.confidence) return b.confidence - a.confidence;
+      return a.card.display_id.localeCompare(b.card.display_id);
+    })
+    .slice(0, 3);
+}
+
+function renderRevision() {
+  const candidates = revisionCandidates();
+  const items = candidates
+    .map(({ card, response, referenceChoice }, index) => {
+      const original = familyById(response.choice);
+      const reference = familyById(referenceChoice);
+      const revision = state.revisions[card.card_id] || {};
+      const selectedChoice = revision.revised_choice || response.choice;
+      return `<div class="revision-item">
+        <p class="card-id">${esc(card.display_id)} · ${index + 1}/${candidates.length}</p>
+        <p class="risk-title">${esc(card.label_ko)} <span class="english">${esc(card.label_en)}</span></p>
+        <div class="risk-definition"><p>${esc(card.definition_ko)}</p><p class="english">${esc(card.definition_en)}</p></div>
+        <div class="compare-grid">
+          <div><h3>사전 지정 기준 배정 <span class="english">Pre-specified reference assignment</span></h3><p><strong>${esc(reference.id)} · ${esc(reference.name_ko)}</strong> <span class="english">${esc(reference.name_en)}</span></p><p>${esc(reference.definition_ko)}</p></div>
+          <div><h3>본인의 원래 답변 <span class="english">Your original answer</span></h3><p><strong>${esc(original.id)} · ${esc(original.name_ko)}</strong> <span class="english">${esc(original.name_en)}</span></p><p>${esc(original.definition_ko)}</p><p class="help">원래 확신도 / Original confidence: ${esc(response.confidence)}</p></div>
+        </div>
+        <fieldset><legend>제출 전 최종 선택 <span class="english">Final selection before submission</span></legend>
+          <label class="choice"><input type="radio" name="revision_${esc(card.card_id)}" value="${esc(response.choice)}" ${checked(selectedChoice === response.choice)}>원래 답변 유지 / Keep my original answer</label>
+          <label class="choice"><input type="radio" name="revision_${esc(card.card_id)}" value="${esc(referenceChoice)}" ${checked(selectedChoice === referenceChoice)}>기준 배정으로 수정 / Change to the reference assignment</label>
+        </fieldset>
+      </div>`;
+    })
+    .join("");
+  app.innerHTML = `<section class="panel"><h2>제출 전 재검토 <span class="english">Pre-submission reconsideration</span></h2>
+    ${candidates.length ? `<div class="notice"><p>아래 문항은 사전 지정 기준 배정과 다르게 답한 문항 중 확신도가 가장 높았던 항목입니다. 원래 답변을 유지하거나 기준 배정으로 수정할 수 있습니다.</p><p class="english">These are the highest-confidence items where your answer differed from the pre-specified reference assignment. You may keep your original answer or change to the reference assignment.</p></div>${items}` : `<div class="notice"><p>사전 지정 기준 배정과 다른 고확신 답변이 없어 재검토 문항이 없습니다.</p><p class="english">There are no high-confidence disagreements with the pre-specified reference assignment to review.</p></div>`}
+    <p id="revisionError" class="error"></p>
+    <div class="actions"><button class="secondary" data-back>이전 / Back</button><button id="finish" class="primary">응답 완료 / Complete</button></div></section>`;
+  bindBack("review");
+  document.querySelector("#finish").onclick = () => {
+    state.revisions = Object.fromEntries(
+      candidates.map(({ card, response, referenceChoice }) => {
+        const revisedChoice =
+          document.querySelector(`[name="revision_${card.card_id}"]:checked`)
+            ?.value || response.choice;
+        return [
+          card.card_id,
+          {
+            reference_assignment: referenceChoice,
+            original_choice: response.choice,
+            original_confidence: response.confidence,
+            revised_choice: revisedChoice,
+            changed: revisedChoice !== response.choice,
+          },
+        ];
+      }),
+    );
+    state.page = "complete";
+    state.completedAt = new Date().toISOString();
+    state.submissionId ||= crypto.randomUUID();
+    save();
+    render();
+  };
+}
+
+function structuredResponse() {
+  const d = state.demographics;
+  const cards = assignedCards();
+  const original_rankings = cards.map((card) => {
+    const response = state.responses[card.card_id] || {};
+    return {
+      display_id: card.display_id,
+      card_id: card.card_id,
+      candidate_a: response.pair_order?.[0] || "",
+      candidate_b: response.pair_order?.[1] || "",
+      reference_assignment: card.pair_family_ids[0],
+      original_selected_l3: response.choice || "",
+      confidence: response.confidence || "",
+      comment: response.comment || "",
+    };
+  });
+  const reconsideration = Object.entries(state.revisions || {}).map(
+    ([cardId, revision]) => {
+      const card = cards.find((item) => item.card_id === cardId);
+      return {
+        display_id: card?.display_id || "",
+        card_id: cardId,
+        reference_assignment: revision.reference_assignment || "",
+        original_selected_l3: revision.original_choice || "",
+        original_confidence: revision.original_confidence || "",
+        revised_selected_l3: revision.revised_choice || "",
+        changed: Boolean(revision.changed),
+      };
+    },
+  );
+  return {
+    survey_version: surveyData.survey_version,
+    assignment_version: assignments.assignment_version,
+    respondent_id: state.raterCode,
+    assignment_block: state.assignmentBlock,
+    source_sha256: surveyData.source_sha256,
+    analysis_plan: {
+      primary_endpoint:
+        "original_response_agreement_with_pre_specified_reference_assignment",
+      reconsideration_role:
+        "secondary_analysis_of_high_confidence_disagreement_stability",
+      minimum_completed_responses: 20,
+      planned_summaries: [
+        "card_level_agreement_with_wilson_or_bootstrap_ci",
+        "family_level_macro_and_worst_family_agreement",
+        "respondent_level_completion_and_agreement_summary",
+        "switch_rate_from_original_expert_answer_to_reference_assignment",
+      ],
+      limitation:
+        "forced_choice_pairwise_design_excludes_unknown_or_unmappable_judgments",
+    },
+    demographics: {
+      age_band: d.ageBand,
+      gender: d.gender,
+      expertise: d.expertise || [],
+      career: d.career,
+      risk_assessment_experience: d.riskExperience,
+      standards_experience: d.standardsExperience,
+      eligibility_confirmed: Boolean(d.eligibilityConfirmed),
+      independence_confirmed: Boolean(d.independent && d.notExposed),
+    },
+    original_rankings,
+    pre_submission_reconsideration: reconsideration,
+  };
+}
+
+function markdown() {
+  const payload = structuredResponse();
+  const rows = payload.original_rankings
+    .map(
+      (row) =>
+        `| ${row.display_id} | ${row.card_id} | ${row.candidate_a} | ${row.candidate_b} | ${row.reference_assignment} | ${row.original_selected_l3} | ${row.confidence} | ${cleanCell(row.comment)} |`,
+    )
+    .join("\n");
+  const revisionRows = payload.pre_submission_reconsideration
+    .map(
+      (row) =>
+        `| ${row.display_id} | ${row.card_id} | ${row.reference_assignment} | ${row.original_selected_l3} | ${row.original_confidence} | ${row.revised_selected_l3} | ${row.changed ? "yes" : "no"} |`,
+    )
+    .join("\n");
+  const d = payload.demographics;
+  return `---\nsurvey_version: "${surveyData.survey_version}"\nassignment_version: "${assignments.assignment_version}"\nrespondent_id: "${state.raterCode}"\nassignment_block: "${state.assignmentBlock}"\nsource_sha256: "${surveyData.source_sha256}"\nprimary_endpoint: "original_response_agreement_with_pre_specified_reference_assignment"\nminimum_completed_responses: 20\n---\n\n# Physical AI Expert Pairwise Ranking Response\n\n## Analysis Plan Notes / 분석 계획 메모\n\n- Primary analysis uses original responses only. / 주 분석은 원래 응답만 사용한다.\n- Pre-submission reconsideration is secondary evidence about high-confidence disagreement stability. / 제출 전 재검토는 고확신 불일치 판단의 안정성을 보는 보조 분석이다.\n- Planned summaries are separated at card, family, and respondent levels. / 카드, family, 응답자 수준 요약을 분리한다.\n- The forced-choice design excludes unknown or unmappable judgments. / 강제선택 설계상 판단 불가 또는 분류 불가 판단은 배제된다.\n\n## Background / 배경 정보\n\n- Age band / 연령대: ${d.age_band}\n- Gender / 성별: ${d.gender}\n- Expertise / 전문영역: ${(d.expertise || []).join(", ")}\n- Career / 경력: ${d.career}\n- Risk-assessment experience / 위험평가 경험: ${d.risk_assessment_experience}\n- Standards experience / 표준·규제 경험: ${d.standards_experience}\n- Eligibility confirmed / 적격성 확인: ${d.eligibility_confirmed}\n- Independence confirmed / 독립성 확인: ${d.independence_confirmed}\n\n## Original pairwise rankings / 원래 쌍대 순위 선택\n\n| Display ID | Card ID | Candidate A | Candidate B | Reference assignment | Original selected L3 | Confidence | Comment |\n|---|---|---|---|---|---|---:|---|\n${rows}\n\n## Pre-submission reconsideration / 제출 전 재검토\n\n| Display ID | Card ID | Reference assignment | Original selected L3 | Original confidence | Revised selected L3 | Changed |\n|---|---|---|---|---:|---|---|\n${revisionRows || "|  |  |  |  |  |  |  |"}\n`;
+}
+
+function jsonResponse() {
+  return JSON.stringify(structuredResponse(), null, 2);
+}
+
+function csvResponse() {
+  const payload = structuredResponse();
+  const rows = [
+    [
+      "section",
+      "respondent_id",
+      "assignment_block",
+      "display_id",
+      "card_id",
+      "candidate_a",
+      "candidate_b",
+      "reference_assignment",
+      "original_selected_l3",
+      "confidence",
+      "comment",
+      "original_confidence",
+      "revised_selected_l3",
+      "changed",
+    ],
+  ];
+  for (const row of payload.original_rankings) {
+    rows.push([
+      "original",
+      payload.respondent_id,
+      payload.assignment_block,
+      row.display_id,
+      row.card_id,
+      row.candidate_a,
+      row.candidate_b,
+      row.reference_assignment,
+      row.original_selected_l3,
+      row.confidence,
+      row.comment,
+      "",
+      "",
+      "",
+    ]);
+  }
+  for (const row of payload.pre_submission_reconsideration) {
+    rows.push([
+      "reconsideration",
+      payload.respondent_id,
+      payload.assignment_block,
+      row.display_id,
+      row.card_id,
+      "",
+      "",
+      row.reference_assignment,
+      row.original_selected_l3,
+      "",
+      "",
+      row.original_confidence,
+      row.revised_selected_l3,
+      row.changed ? "yes" : "no",
+    ]);
+  }
+  return rows.map((row) => row.map(csvCell).join(",")).join("\n");
+}
+
+function renderComplete() {
+  const stored = state.submission?.stored;
+  app.innerHTML = `<section class="panel complete"><h2>${stored ? "응답 저장 완료" : "응답 저장 중"} <span class="english">${stored ? "Response stored" : "Saving response"}</span></h2>
+    ${stored ? `<div class="notice"><p>익명 응답이 공개 GitHub 저장소에 Markdown, JSON, CSV로 저장됐습니다.</p><p class="english">The anonymous response has been stored as Markdown, JSON, and CSV in the public GitHub repository.</p><p><code>${esc(state.submission.path)}</code></p></div>` : `<p>창을 닫지 마십시오. / Please do not close this window.</p><p id="submitStatus" class="help">GitHub 저장소에 연결하고 있습니다. / Connecting to the GitHub repository…</p><button id="retry" class="secondary" hidden>다시 시도 / Retry</button>`}
+    ${stored ? `<div class="actions"><span></span><button id="newResponse" class="primary">새로운 랜덤 문제 시작 / Start new random items</button></div>` : ""}</section>`;
+  if (stored) {
+    document.querySelector("#newResponse").onclick = startNewResponse;
+  }
+  if (!stored) submitResponse();
+}
+
+async function submitResponse() {
+  const status = document.querySelector("#submitStatus");
+  const retry = document.querySelector("#retry");
+  try {
+    const response = await fetch(`${CONFIG.apiUrl}/submit`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        respondent_id: state.raterCode,
+        assignment_block: state.assignmentBlock,
+        submission_id: state.submissionId,
+        started_at: new Date(state.startedAt).toISOString(),
+        submitted_at: state.completedAt,
+        duration_seconds: Math.max(
+          0,
+          Math.round((Date.parse(state.completedAt) - state.startedAt) / 1000),
+        ),
+        markdown: markdown(),
+        json: jsonResponse(),
+        csv: csvResponse(),
+      }),
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    state.submission = await response.json();
+    save();
+    renderComplete();
+  } catch (error) {
+    status.textContent = `자동 저장에 실패했습니다. 브라우저에 안전하게 임시보존했습니다. / Automatic storage failed; the response remains in this browser. (${error.message})`;
+    retry.hidden = false;
+    retry.onclick = submitResponse;
+  }
+}
+
+function bindBack(page) {
+  document.querySelector("[data-back]").onclick = () => {
+    state.page = page;
+    save();
+    render();
+  };
+}
+function render() {
+  (
+    ({
+      consent: renderConsent,
+      demographics: renderDemographics,
+      codebook: renderCodebook,
+      cards: renderCard,
+      review: renderReview,
+      revision: renderRevision,
+      complete: renderComplete,
+    })[state.page] || renderConsent
+  )();
+}
+
+Promise.all([
+  fetch("data/survey-data.json").then((r) => r.json()),
+  fetch("data/assignments.json").then((r) => r.json()),
+])
+  .then(([data, allocation]) => {
+    surveyData = data;
+    assignments = allocation;
+    restoreActive();
+    render();
+  })
+  .catch((error) => {
+    app.innerHTML = `<section class="panel"><p class="error">설문 데이터를 불러오지 못했습니다. / Failed to load survey data.</p><pre>${esc(error.message)}</pre></section>`;
+  });

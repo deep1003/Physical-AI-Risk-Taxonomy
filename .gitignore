@@ -12,6 +12,7 @@ output/latex/*.fls
 output/latex/*.fdb_latexmk
 output/latex/*.xdv
 output/latex/*.pdf
+output/l3_reassignment_em_20260731/embeddings_*.npy
 output/latex/physical_ai_risk_taxonomy_methodology_*.png
 
 # Raw / record-level intermediate data (results-only policy)

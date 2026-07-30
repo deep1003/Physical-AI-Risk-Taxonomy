@@ -58,7 +58,7 @@
       "l2_korean_label": "시스템 안전성",
       "l2_description": "로봇 시스템의 하드웨어·소프트웨어·제어·강건성 한계에서 비롯되는 리스크",
       "l3_count": 5,
-      "l4_count": 91,
+      "l4_count": 92,
       "l3": [
         {
           "l3_id": "P3.1",
@@ -70,8 +70,8 @@
         {
           "l3_id": "P3.2",
           "l3_name": "로봇 제어(Robot Control)",
-          "declared_l4_count": 45,
-          "exported_l4_count": 45,
+          "declared_l4_count": 46,
+          "exported_l4_count": 46,
           "l3_description": "제어·액추에이터·모션·경로 계획 오류로 로봇이 의도치 않은 동작을 수행하고 충돌·피해를 유발하는 위험. (Control and planning failures cause unsafe robot motion.)"
         },
         {
@@ -103,7 +103,7 @@
       "l2_korean_label": "상호작용 안전성",
       "l2_description": "인간-로봇·로봇-로봇·환경·입력·공격 상호작용 과정에서 발생하는 리스크",
       "l3_count": 10,
-      "l4_count": 62,
+      "l4_count": 60,
       "l3": [
         {
           "l3_id": "I3.1",
@@ -143,15 +143,15 @@
         {
           "l3_id": "I3.6",
           "l3_name": "동적 환경 요인(Dynamic Environmental Factors)",
-          "declared_l4_count": 11,
-          "exported_l4_count": 11,
+          "declared_l4_count": 10,
+          "exported_l4_count": 10,
           "l3_description": "환경 변화·가림·날씨·교란이 센서 데이터와 상황 인식을 흔들어 잘못된 물리 행동으로 이어지는 위험. (Changing environments mislead perception and action.)"
         },
         {
           "l3_id": "I3.7",
           "l3_name": "인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures)",
-          "declared_l4_count": 13,
-          "exported_l4_count": 13,
+          "declared_l4_count": 12,
+          "exported_l4_count": 12,
           "l3_description": "협동 로봇·드론 등 인간과 함께 작동하는 시스템의 안전거리·개입 타이밍·프로토콜 실패가 인명 피해를 유발하는 위험. (Human-robot safety protocols fail in shared spaces.)"
         },
         {
@@ -183,7 +183,7 @@
       "l2_korean_label": "사회/경제/환경 안전성",
       "l2_description": "사회·경제·제도·환경적 맥락에서 발생하는 외부적 리스크",
       "l3_count": 9,
-      "l4_count": 29,
+      "l4_count": 30,
       "l3": [
         {
           "l3_id": "S3.1",
@@ -223,8 +223,8 @@
         {
           "l3_id": "S3.6",
           "l3_name": "책임·배상 부재(Lack of Accountability & Liability)",
-          "declared_l4_count": 12,
-          "exported_l4_count": 12,
+          "declared_l4_count": 13,
+          "exported_l4_count": 13,
           "l3_description": "자율 피지컬 사고에서 제조사·운영자·모델 제공자 책임과 배상 경로가 불명확해지는 위험. (Liability becomes unclear after physical harm.)"
         },
         {

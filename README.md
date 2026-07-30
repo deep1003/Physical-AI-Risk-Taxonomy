@@ -18,6 +18,8 @@ Live page:
 - `data/reference_quality_audit/` — low-relevance reference audit and cleanup logs.
 - `scripts/` — scripts used to add corpus references and audit reference relevance.
 - `methodology/methodology.md` — concise methodology and curation notes.
+- `expert-survey/` — frozen baseline expert survey, taxonomy version 2.1.
+- `expert-survey-revised/` — parallel survey using revised L4 wording and robust EM-supported L3 assignments, taxonomy version 2.2.
 
 ## Current Snapshot
 
@@ -25,7 +27,9 @@ Live page:
 - Evidence/justification entries: 360
 - Linked references: 353
 - Maximum references per L4 card: 5
-- L2 card counts: `P2 System Safety=91`, `I2 Interaction Safety=62`, `S2 Societal Safety=29`
+- L2 card counts: `P2 System Safety=92`, `I2 Interaction Safety=60`, `S2 Societal Safety=30`
+
+The 2026-07-31 wording audit revised 84 L4 labels or definitions. A constrained EM sensitivity analysis using three embedding models, bilingual and English-only inputs, four L3 seed weights, and 1,000 bootstrap replicates supported two L3 moves: `PHYSBENCH-REF-0065` from `I3.7` to `P3.2`, and `PHYSBENCH-REF-0107` from `I3.6` to `S3.6`. All 24 L3 categories remain populated.
 
 ## Taxonomy IDs
 

@@ -1,0 +1,7 @@
+respondent_id,block,format,n,agreement,agreement_rate,mean_confidence,expertise,career,risk_assessment_experience,standards_experience
+R-4e32b07fe24b,A01,json,30,30,1.0,3.8,AI safety,3–5년 / 3–5 years,없음 / None,있음 / Yes
+R-538c0ce57dff,A03,md_legacy,30,25,0.8333333333333334,3.533333333333333,AI safety; Risk governance,16년 이상 / 16+ years,주요 업무 / Core responsibility,있음 / Yes
+R-6727de20305f,A05,json,30,18,0.6,2.7,AI safety; Risk governance; Standards or regulation,1–2년 / 1–2 years,없음 / None,있음 / Yes
+R-951c8affb6d8,A04,json,30,23,0.7666666666666667,3.066666666666667,AI safety; Risk governance,3–5년 / 3–5 years,없음 / None,있음 / Yes
+R-a027ac600680,A08,json,30,24,0.8,3.2666666666666666,Autonomous systems; Human–robot interaction; AI safety; Risk governance; Standards or regulation,6–10년 / 6–10 years,제한적 / Limited,있음 / Yes
+R-ea6ca044ebf8,A12,json,30,21,0.7,3.8666666666666667,Safety engineering; AI safety; Risk governance; Standards or regulation,16년 이상 / 16+ years,주요 업무 / Core responsibility,있음 / Yes

@@ -1,0 +1,334 @@
+{
+  "survey_version": "2.1.0-pairwise-30items",
+  "assignment_version": "BIBD-20260710-v2-30items",
+  "respondent_id": "R-4e32b07fe24b",
+  "assignment_block": "A01",
+  "source_sha256": "116973e340f96bcfc5e6c8ffaa847845d2b581c33195d5104c5f9139b56e61fd",
+  "analysis_plan": {
+    "primary_endpoint": "original_response_agreement_with_pre_specified_reference_assignment",
+    "reconsideration_role": "secondary_analysis_of_high_confidence_disagreement_stability",
+    "minimum_completed_responses": 20,
+    "planned_summaries": [
+      "card_level_agreement_with_wilson_or_bootstrap_ci",
+      "family_level_macro_and_worst_family_agreement",
+      "respondent_level_completion_and_agreement_summary",
+      "switch_rate_from_original_expert_answer_to_reference_assignment"
+    ],
+    "limitation": "forced_choice_pairwise_design_excludes_unknown_or_unmappable_judgments"
+  },
+  "demographics": {
+    "age_band": "25–34세 / 25–34",
+    "gender": "남성 / Man",
+    "expertise": [
+      "AI safety"
+    ],
+    "career": "3–5년 / 3–5 years",
+    "risk_assessment_experience": "없음 / None",
+    "standards_experience": "있음 / Yes",
+    "eligibility_confirmed": true,
+    "independence_confirmed": true
+  },
+  "original_rankings": [
+    {
+      "display_id": "V035",
+      "card_id": "PHYSBENCH-REF-0028",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V163",
+      "card_id": "PHYSBENCH-REF-0093",
+      "candidate_a": "S3.5",
+      "candidate_b": "S3.3",
+      "reference_assignment": "S3.5",
+      "original_selected_l3": "S3.5",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V155",
+      "card_id": "PHYSRISK-REF-0035",
+      "candidate_a": "S3.1",
+      "candidate_b": "S3.4",
+      "reference_assignment": "S3.1",
+      "original_selected_l3": "S3.1",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V147",
+      "card_id": "PHYSBENCH-REF-0096",
+      "candidate_a": "I3.7",
+      "candidate_b": "I3.8",
+      "reference_assignment": "I3.8",
+      "original_selected_l3": "I3.8",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V007",
+      "card_id": "PHYSBENCH-REF-0045",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.1",
+      "confidence": "3",
+      "comment": "제약을 감지 못한 상황이고, 움직임/제어 오류는 제약을 감지하였으나 제어에 실패한 case이므로 의도하지 않은 피해에 가깝다고 판단"
+    },
+    {
+      "display_id": "V181",
+      "card_id": "PHYSRISK-REF-0022",
+      "candidate_a": "S3.1",
+      "candidate_b": "S3.8",
+      "reference_assignment": "S3.8",
+      "original_selected_l3": "S3.8",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V081",
+      "card_id": "PHYSBENCH-REF-0060",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.4",
+      "reference_assignment": "P3.5",
+      "original_selected_l3": "P3.5",
+      "confidence": "4",
+      "comment": "학습 데이터에 없는 환경에 대한 불확실성은 소프트웨어 설계 결함으로 보기 어려움 (예: MNIST 손글씨 분류 모델로 개/고양이 이미지 분류 시도)\n'범용' 로봇 정책이므로 낯선 환경 또는 예외 케이스에 대해서도 안전하게 동작하기를 기대해야 하므로, A가 적절하다고 판단"
+    },
+    {
+      "display_id": "V042",
+      "card_id": "PHYSBENCH-REF-0068",
+      "candidate_a": "P3.3",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V072",
+      "card_id": "PHYSRISK-REF-0038",
+      "candidate_a": "P3.4",
+      "candidate_b": "P3.3",
+      "reference_assignment": "P3.4",
+      "original_selected_l3": "P3.4",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V009",
+      "card_id": "PHYSBENCH-REF-0050",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.4",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.1",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V169",
+      "card_id": "PHYSBENCH-REF-0109",
+      "candidate_a": "S3.6",
+      "candidate_b": "S3.4",
+      "reference_assignment": "S3.6",
+      "original_selected_l3": "S3.6",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V016",
+      "card_id": "PHYSBENCH-REF-0071",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.1",
+      "confidence": "4",
+      "comment": "가상/현실 환경의 괴리로 의도하지 않은 피해 발생이므로 A"
+    },
+    {
+      "display_id": "V144",
+      "card_id": "PHYSRISK-REF-0040",
+      "candidate_a": "I3.8",
+      "candidate_b": "I3.7",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.7",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V119",
+      "card_id": "PHYSBENCH-REF-0091",
+      "candidate_a": "I3.4",
+      "candidate_b": "I3.5",
+      "reference_assignment": "I3.5",
+      "original_selected_l3": "I3.5",
+      "confidence": "3",
+      "comment": "compact시 중요 정보에 대한 우선순위 판별을 못한 상황으로, 그나마 B가 유사"
+    },
+    {
+      "display_id": "V030",
+      "card_id": "PHYSBENCH-REF-0014",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.3",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V116",
+      "card_id": "PHYSRISK-REF-0007",
+      "candidate_a": "I3.5",
+      "candidate_b": "I3.4",
+      "reference_assignment": "I3.4",
+      "original_selected_l3": "I3.4",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V131",
+      "card_id": "PHYSRISK-REF-0033",
+      "candidate_a": "I3.7",
+      "candidate_b": "I3.6",
+      "reference_assignment": "I3.6",
+      "original_selected_l3": "I3.6",
+      "confidence": "2",
+      "comment": "B가 그나마 비슷하나 주어진 상황을 완전히 설명(포괄)하지는 못함"
+    },
+    {
+      "display_id": "V145",
+      "card_id": "PHYSRISK-REF-0042",
+      "candidate_a": "I3.8",
+      "candidate_b": "I3.7",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.7",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V032",
+      "card_id": "PHYSBENCH-REF-0025",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "2",
+      "comment": ""
+    },
+    {
+      "display_id": "V028",
+      "card_id": "PHYSBENCH-REF-0011",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "2",
+      "comment": ""
+    },
+    {
+      "display_id": "V177",
+      "card_id": "PHYSRISK-REF-0048",
+      "candidate_a": "S3.7",
+      "candidate_b": "S3.1",
+      "reference_assignment": "S3.7",
+      "original_selected_l3": "S3.7",
+      "confidence": "2",
+      "comment": "과도한 의존에 가까워 두 선택지 모두 맞지 않으나, 그나마 A가 발생 가능한 risk"
+    },
+    {
+      "display_id": "V134",
+      "card_id": "PHYSBENCH-REF-0001",
+      "candidate_a": "I3.7",
+      "candidate_b": "I3.10",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.7",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V104",
+      "card_id": "PHYSRISK-REF-0028",
+      "candidate_a": "I3.1",
+      "candidate_b": "I3.2",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.1",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V097",
+      "card_id": "PHYSBENCH-REF-0023",
+      "candidate_a": "I3.3",
+      "candidate_b": "I3.1",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.1",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V106",
+      "card_id": "PHYSRISK-REF-0045",
+      "candidate_a": "I3.2",
+      "candidate_b": "I3.1",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.1",
+      "confidence": "2",
+      "comment": ""
+    },
+    {
+      "display_id": "V085",
+      "card_id": "PHYSBENCH-REF-0084",
+      "candidate_a": "P3.4",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.5",
+      "original_selected_l3": "P3.5",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V174",
+      "card_id": "PHYSKR-REF-016",
+      "candidate_a": "S3.6",
+      "candidate_b": "S3.4",
+      "reference_assignment": "S3.6",
+      "original_selected_l3": "S3.6",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V064",
+      "card_id": "PHYSRISK-REF-0020",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V026",
+      "card_id": "PHYSBENCH-REF-0009",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V149",
+      "card_id": "PHYSBENCH-REF-0051",
+      "candidate_a": "I3.9",
+      "candidate_b": "I3.7",
+      "reference_assignment": "I3.9",
+      "original_selected_l3": "I3.9",
+      "confidence": "5",
+      "comment": ""
+    }
+  ],
+  "pre_submission_reconsideration": []
+}

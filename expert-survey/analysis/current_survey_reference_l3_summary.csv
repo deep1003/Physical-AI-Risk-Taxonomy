@@ -1,0 +1,24 @@
+reference_l3,l3_name,n,agreement,agreement_rate,mean_confidence,unique_cards
+I3.1,의도적·악의적 피해(Purposeful / Malicious Harm),17,13,0.7647058823529411,3.3529411764705883,12
+I3.10,상호작용 에이전트의 윤리·안전 함의(Ethical & Safety Implications of Interactive Agents),2,2,1.0,3.5,2
+I3.2,물리적 공격(Physical Attacks),2,2,1.0,3,1
+I3.3,사이버보안 위협(Cybersecurity Threats),4,0,0.0,2.5,2
+I3.4,센서·입력 검증 실패(Sensor & Input Validation Failures),4,3,0.75,4,3
+I3.5,허위 정보(Misinformation),6,3,0.5,3.3333333333333335,4
+I3.6,동적 환경 요인(Dynamic Environmental Factors),8,7,0.875,2.5,6
+I3.7,인간 상호작용·안전 프로토콜 실패(Human Interaction & Safety Protocol Failures),13,11,0.8461538461538461,3.6153846153846154,8
+I3.8,지시 오해석(Instruction Misinterpretation),2,2,1.0,4,1
+I3.9,멀티 에이전트 협력(Multi-Agent Collaboration),5,4,0.8,3.8,4
+P3.1,우발적 피해(Accidental Harm),21,11,0.5238095238095238,3.4761904761904763,16
+P3.2,로봇 제어(Robot Control),43,38,0.8837209302325582,3.255813953488372,32
+P3.3,하드웨어·기계적 결함(Hardware & Mechanical Failures),2,1,0.5,2,2
+P3.4,소프트웨어 취약점·설계 결함(Software Vulnerabilities & Design Flaws),7,7,1.0,3.857142857142857,5
+P3.5,미학습 환경에서의 강건성 부재(Lack of Robustness in Unseen Environments),12,12,1.0,3.6666666666666665,9
+S3.1,프라이버시 침해(Privacy Violations),6,6,1.0,4.166666666666667,5
+S3.2,노동 대체(Labor Displacement),2,1,0.5,3.5,1
+S3.3,사회경제적 불평등(Socioeconomic Inequality),1,1,1.0,4,1
+S3.4,권력 집중(Power Concentration),2,0,0.0,4,1
+S3.5,편향·차별(Bias & Discrimination),3,3,1.0,4,2
+S3.6,책임·배상 부재(Lack of Accountability & Liability),12,8,0.6666666666666666,3,7
+S3.7,"투명성·설명 가능성·신뢰 부재(Lack of Transparency, Explainability & Trust)",2,2,1.0,1.5,1
+S3.8,인간-EAI의 해로운 관계(Unhealthy / Dangerous Human-EAI Relationships),4,4,1.0,3.5,3

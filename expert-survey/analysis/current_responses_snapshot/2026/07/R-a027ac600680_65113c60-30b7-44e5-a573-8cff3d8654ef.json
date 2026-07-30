@@ -1,0 +1,366 @@
+{
+  "survey_version": "2.1.0-pairwise-30items",
+  "assignment_version": "BIBD-20260710-v2-30items",
+  "respondent_id": "R-a027ac600680",
+  "assignment_block": "A08",
+  "source_sha256": "116973e340f96bcfc5e6c8ffaa847845d2b581c33195d5104c5f9139b56e61fd",
+  "analysis_plan": {
+    "primary_endpoint": "original_response_agreement_with_pre_specified_reference_assignment",
+    "reconsideration_role": "secondary_analysis_of_high_confidence_disagreement_stability",
+    "minimum_completed_responses": 20,
+    "planned_summaries": [
+      "card_level_agreement_with_wilson_or_bootstrap_ci",
+      "family_level_macro_and_worst_family_agreement",
+      "respondent_level_completion_and_agreement_summary",
+      "switch_rate_from_original_expert_answer_to_reference_assignment"
+    ],
+    "limitation": "forced_choice_pairwise_design_excludes_unknown_or_unmappable_judgments"
+  },
+  "demographics": {
+    "age_band": "45–54세 / 45–54",
+    "gender": "남성 / Man",
+    "expertise": [
+      "Autonomous systems",
+      "Human–robot interaction",
+      "AI safety",
+      "Risk governance",
+      "Standards or regulation"
+    ],
+    "career": "6–10년 / 6–10 years",
+    "risk_assessment_experience": "제한적 / Limited",
+    "standards_experience": "있음 / Yes",
+    "eligibility_confirmed": true,
+    "independence_confirmed": true
+  },
+  "original_rankings": [
+    {
+      "display_id": "V019",
+      "card_id": "PHYSBENCH-REF-0081",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V005",
+      "card_id": "PHYSBENCH-REF-0035",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.1",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V083",
+      "card_id": "PHYSBENCH-REF-0059",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.5",
+      "original_selected_l3": "P3.5",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V057",
+      "card_id": "PHYSRISK-REF-0012",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V107",
+      "card_id": "PHYSRISK-REF-0046",
+      "candidate_a": "I3.1",
+      "candidate_b": "I3.2",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.1",
+      "confidence": "2",
+      "comment": "설명된 시나리오는 고의적·악의적 이용으로 판단하기에는 침입자가 없으며, 로봇에 대한 물리적 공격은 목적어가 상이하기 때문에 적합하지 않습니다. 다른 선택 옵션이 필요합니다."
+    },
+    {
+      "display_id": "V151",
+      "card_id": "PHYSRISK-REF-0039",
+      "candidate_a": "I3.9",
+      "candidate_b": "I3.7",
+      "reference_assignment": "I3.9",
+      "original_selected_l3": "I3.7",
+      "confidence": "2",
+      "comment": "시나리오에서 autonomous drones 간 협업이 있었다면 '여러 로봇의 협력 실패'가 더 적합하며, 시나리오에서 사람이 아닌 물체들과의 충돌 내용 때문에 '사람과 함께 일할 때의 안전 실패'가 부적절해보입니다."
+    },
+    {
+      "display_id": "V129",
+      "card_id": "PHYSRISK-REF-0003",
+      "candidate_a": "I3.6",
+      "candidate_b": "I3.9",
+      "reference_assignment": "I3.6",
+      "original_selected_l3": "I3.6",
+      "confidence": "2",
+      "comment": "sensor fusion 주체가 누구인가에 대한 검토가 필요합니다. sensor fusion을 하는 주체가 하나의 agent 라면 '변화하는 환경에 대한 대응 실패'가 적합하며, 다양한 agent들로부터 주변 상황 정보를 취합하는 형태라면 '여러 로봇의 협력 실패'가 더 적합합니다."
+    },
+    {
+      "display_id": "V086",
+      "card_id": "PHYSBENCH-REF-0086",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.5",
+      "original_selected_l3": "P3.5",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V023",
+      "card_id": "PHYSBENCH-REF-0005",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V158",
+      "card_id": "PHYSBENCH-REF-0021",
+      "candidate_a": "S3.1",
+      "candidate_b": "S3.7",
+      "reference_assignment": "S3.1",
+      "original_selected_l3": "S3.1",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V074",
+      "card_id": "PHYSCONN-REF-006",
+      "candidate_a": "P3.3",
+      "candidate_b": "P3.4",
+      "reference_assignment": "P3.4",
+      "original_selected_l3": "P3.4",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V126",
+      "card_id": "PHYSBENCH-REF-0063",
+      "candidate_a": "I3.9",
+      "candidate_b": "I3.6",
+      "reference_assignment": "I3.6",
+      "original_selected_l3": "I3.9",
+      "confidence": "2",
+      "comment": "sensor fusion 주체에 대한 정보가 부족합니다. 전체 시스템 구조에 대한 이해가 바탕이 되어야 선택 가능합니다. 센서 정보를 다양한 agent로부터 얻는다면 여러 로봇의 협력 실패가 적합하며, 하나의 agent가 sensor fusion을 한다면 변화하는 환경에 대한 대응 실패, 또는 소프트웨어 설계 결함 등이 더 적합합니다."
+    },
+    {
+      "display_id": "V060",
+      "card_id": "PHYSCONN-REF-001",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V016",
+      "card_id": "PHYSBENCH-REF-0071",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.5",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V122",
+      "card_id": "PHYSRISK-REF-0017",
+      "candidate_a": "I3.5",
+      "candidate_b": "I3.8",
+      "reference_assignment": "I3.5",
+      "original_selected_l3": "I3.5",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V164",
+      "card_id": "PHYSRISK-REF-0051",
+      "candidate_a": "S3.3",
+      "candidate_b": "S3.5",
+      "reference_assignment": "S3.5",
+      "original_selected_l3": "S3.5",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V114",
+      "card_id": "PHYSBENCH-REF-0002",
+      "candidate_a": "I3.4",
+      "candidate_b": "I3.6",
+      "reference_assignment": "I3.4",
+      "original_selected_l3": "I3.4",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V040",
+      "card_id": "PHYSBENCH-REF-0061",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "1",
+      "comment": ""
+    },
+    {
+      "display_id": "V135",
+      "card_id": "PHYSBENCH-REF-0004",
+      "candidate_a": "I3.7",
+      "candidate_b": "I3.10",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.7",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V112",
+      "card_id": "PHYSRISK-REF-0031",
+      "candidate_a": "I3.2",
+      "candidate_b": "I3.3",
+      "reference_assignment": "I3.3",
+      "original_selected_l3": "I3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V175",
+      "card_id": "PHYSKR-REF-017",
+      "candidate_a": "S3.9",
+      "candidate_b": "S3.6",
+      "reference_assignment": "S3.6",
+      "original_selected_l3": "S3.9",
+      "confidence": "2",
+      "comment": ""
+    },
+    {
+      "display_id": "V165",
+      "card_id": "PHYSBENCH-REF-0037",
+      "candidate_a": "S3.6",
+      "candidate_b": "S3.9",
+      "reference_assignment": "S3.6",
+      "original_selected_l3": "S3.6",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V059",
+      "card_id": "PHYSRISK-REF-0014",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V109",
+      "card_id": "PHYSRISK-REF-0044",
+      "candidate_a": "I3.2",
+      "candidate_b": "I3.3",
+      "reference_assignment": "I3.2",
+      "original_selected_l3": "I3.2",
+      "confidence": "1",
+      "comment": ""
+    },
+    {
+      "display_id": "V092",
+      "card_id": "PHYSBENCH-REF-0017",
+      "candidate_a": "I3.1",
+      "candidate_b": "I3.3",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.1",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V027",
+      "card_id": "PHYSBENCH-REF-0010",
+      "candidate_a": "P3.3",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V145",
+      "card_id": "PHYSRISK-REF-0042",
+      "candidate_a": "I3.7",
+      "candidate_b": "I3.8",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.7",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V022",
+      "card_id": "PHYSBENCH-REF-0040",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.4",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.1",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V050",
+      "card_id": "PHYSBENCH-REF-0104",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.3",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V177",
+      "card_id": "PHYSRISK-REF-0048",
+      "candidate_a": "S3.1",
+      "candidate_b": "S3.7",
+      "reference_assignment": "S3.7",
+      "original_selected_l3": "S3.7",
+      "confidence": "1",
+      "comment": ""
+    }
+  ],
+  "pre_submission_reconsideration": [
+    {
+      "display_id": "V016",
+      "card_id": "PHYSBENCH-REF-0071",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.5",
+      "original_confidence": "4",
+      "revised_selected_l3": "P3.5",
+      "changed": false
+    },
+    {
+      "display_id": "V019",
+      "card_id": "PHYSBENCH-REF-0081",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.2",
+      "original_confidence": "4",
+      "revised_selected_l3": "P3.2",
+      "changed": false
+    },
+    {
+      "display_id": "V112",
+      "card_id": "PHYSRISK-REF-0031",
+      "reference_assignment": "I3.3",
+      "original_selected_l3": "I3.2",
+      "original_confidence": "3",
+      "revised_selected_l3": "I3.2",
+      "changed": false
+    }
+  ]
+}

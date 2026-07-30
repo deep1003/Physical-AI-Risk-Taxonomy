@@ -1,0 +1,365 @@
+{
+  "survey_version": "2.1.0-pairwise-30items",
+  "assignment_version": "BIBD-20260710-v2-30items",
+  "respondent_id": "R-ea6ca044ebf8",
+  "assignment_block": "A12",
+  "source_sha256": "116973e340f96bcfc5e6c8ffaa847845d2b581c33195d5104c5f9139b56e61fd",
+  "analysis_plan": {
+    "primary_endpoint": "original_response_agreement_with_pre_specified_reference_assignment",
+    "reconsideration_role": "secondary_analysis_of_high_confidence_disagreement_stability",
+    "minimum_completed_responses": 20,
+    "planned_summaries": [
+      "card_level_agreement_with_wilson_or_bootstrap_ci",
+      "family_level_macro_and_worst_family_agreement",
+      "respondent_level_completion_and_agreement_summary",
+      "switch_rate_from_original_expert_answer_to_reference_assignment"
+    ],
+    "limitation": "forced_choice_pairwise_design_excludes_unknown_or_unmappable_judgments"
+  },
+  "demographics": {
+    "age_band": "45–54세 / 45–54",
+    "gender": "남성 / Man",
+    "expertise": [
+      "Safety engineering",
+      "AI safety",
+      "Risk governance",
+      "Standards or regulation"
+    ],
+    "career": "16년 이상 / 16+ years",
+    "risk_assessment_experience": "주요 업무 / Core responsibility",
+    "standards_experience": "있음 / Yes",
+    "eligibility_confirmed": true,
+    "independence_confirmed": true
+  },
+  "original_rankings": [
+    {
+      "display_id": "V169",
+      "card_id": "PHYSBENCH-REF-0109",
+      "candidate_a": "S3.6",
+      "candidate_b": "S3.4",
+      "reference_assignment": "S3.6",
+      "original_selected_l3": "S3.6",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V002",
+      "card_id": "PHYSBENCH-REF-0007",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.1",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V065",
+      "card_id": "PHYSRISK-REF-0041",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.5",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V158",
+      "card_id": "PHYSBENCH-REF-0021",
+      "candidate_a": "S3.1",
+      "candidate_b": "S3.7",
+      "reference_assignment": "S3.1",
+      "original_selected_l3": "S3.1",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V153",
+      "card_id": "PHYSKR-REF-009",
+      "candidate_a": "I3.8",
+      "candidate_b": "I3.10",
+      "reference_assignment": "I3.10",
+      "original_selected_l3": "I3.10",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V049",
+      "card_id": "PHYSBENCH-REF-0088",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V062",
+      "card_id": "PHYSCONN-REF-005",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V096",
+      "card_id": "PHYSBENCH-REF-0022",
+      "candidate_a": "I3.1",
+      "candidate_b": "I3.4",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.4",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V071",
+      "card_id": "PHYSBENCH-REF-0103",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.4",
+      "reference_assignment": "P3.4",
+      "original_selected_l3": "P3.4",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V005",
+      "card_id": "PHYSBENCH-REF-0035",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.1",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V047",
+      "card_id": "PHYSBENCH-REF-0083",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V131",
+      "card_id": "PHYSRISK-REF-0033",
+      "candidate_a": "I3.7",
+      "candidate_b": "I3.6",
+      "reference_assignment": "I3.6",
+      "original_selected_l3": "I3.6",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V143",
+      "card_id": "PHYSRISK-REF-0025",
+      "candidate_a": "I3.8",
+      "candidate_b": "I3.7",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.7",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V119",
+      "card_id": "PHYSBENCH-REF-0091",
+      "candidate_a": "I3.4",
+      "candidate_b": "I3.5",
+      "reference_assignment": "I3.5",
+      "original_selected_l3": "I3.4",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V045",
+      "card_id": "PHYSBENCH-REF-0079",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V150",
+      "card_id": "PHYSCONN-REF-003",
+      "candidate_a": "I3.9",
+      "candidate_b": "I3.6",
+      "reference_assignment": "I3.9",
+      "original_selected_l3": "I3.9",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V114",
+      "card_id": "PHYSBENCH-REF-0002",
+      "candidate_a": "I3.4",
+      "candidate_b": "I3.6",
+      "reference_assignment": "I3.4",
+      "original_selected_l3": "I3.6",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V012",
+      "card_id": "PHYSBENCH-REF-0057",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.5",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V077",
+      "card_id": "PHYSBENCH-REF-0036",
+      "candidate_a": "P3.4",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.4",
+      "original_selected_l3": "P3.4",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V089",
+      "card_id": "PHYSRISK-REF-0015",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.5",
+      "original_selected_l3": "P3.5",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V082",
+      "card_id": "PHYSRISK-REF-0018",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.5",
+      "original_selected_l3": "P3.5",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V016",
+      "card_id": "PHYSBENCH-REF-0071",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.5",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V140",
+      "card_id": "PHYSBENCH-REF-0112",
+      "candidate_a": "I3.8",
+      "candidate_b": "I3.7",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.7",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V174",
+      "card_id": "PHYSKR-REF-016",
+      "candidate_a": "S3.4",
+      "candidate_b": "S3.6",
+      "reference_assignment": "S3.6",
+      "original_selected_l3": "S3.6",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V108",
+      "card_id": "PHYSRISK-REF-0030",
+      "candidate_a": "I3.1",
+      "candidate_b": "I3.2",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V094",
+      "card_id": "PHYSBENCH-REF-0019",
+      "candidate_a": "I3.3",
+      "candidate_b": "I3.1",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.1",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V034",
+      "card_id": "PHYSBENCH-REF-0027",
+      "candidate_a": "P3.3",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V033",
+      "card_id": "PHYSBENCH-REF-0026",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.1",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V178",
+      "card_id": "PHYSRISK-REF-0047",
+      "candidate_a": "S3.8",
+      "candidate_b": "S3.5",
+      "reference_assignment": "S3.8",
+      "original_selected_l3": "S3.8",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V161",
+      "card_id": "PHYSRISK-REF-0054",
+      "candidate_a": "S3.4",
+      "candidate_b": "S3.3",
+      "reference_assignment": "S3.4",
+      "original_selected_l3": "S3.3",
+      "confidence": "4",
+      "comment": ""
+    }
+  ],
+  "pre_submission_reconsideration": [
+    {
+      "display_id": "V012",
+      "card_id": "PHYSBENCH-REF-0057",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.5",
+      "original_confidence": "4",
+      "revised_selected_l3": "P3.1",
+      "changed": true
+    },
+    {
+      "display_id": "V033",
+      "card_id": "PHYSBENCH-REF-0026",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.1",
+      "original_confidence": "4",
+      "revised_selected_l3": "P3.2",
+      "changed": true
+    },
+    {
+      "display_id": "V065",
+      "card_id": "PHYSRISK-REF-0041",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.5",
+      "original_confidence": "4",
+      "revised_selected_l3": "P3.2",
+      "changed": true
+    }
+  ]
+}

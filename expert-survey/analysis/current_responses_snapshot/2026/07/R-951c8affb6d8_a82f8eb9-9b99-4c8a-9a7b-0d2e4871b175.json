@@ -1,0 +1,363 @@
+{
+  "survey_version": "2.1.0-pairwise-30items",
+  "assignment_version": "BIBD-20260710-v2-30items",
+  "respondent_id": "R-951c8affb6d8",
+  "assignment_block": "A04",
+  "source_sha256": "116973e340f96bcfc5e6c8ffaa847845d2b581c33195d5104c5f9139b56e61fd",
+  "analysis_plan": {
+    "primary_endpoint": "original_response_agreement_with_pre_specified_reference_assignment",
+    "reconsideration_role": "secondary_analysis_of_high_confidence_disagreement_stability",
+    "minimum_completed_responses": 20,
+    "planned_summaries": [
+      "card_level_agreement_with_wilson_or_bootstrap_ci",
+      "family_level_macro_and_worst_family_agreement",
+      "respondent_level_completion_and_agreement_summary",
+      "switch_rate_from_original_expert_answer_to_reference_assignment"
+    ],
+    "limitation": "forced_choice_pairwise_design_excludes_unknown_or_unmappable_judgments"
+  },
+  "demographics": {
+    "age_band": "25–34세 / 25–34",
+    "gender": "여성 / Woman",
+    "expertise": [
+      "AI safety",
+      "Risk governance"
+    ],
+    "career": "3–5년 / 3–5 years",
+    "risk_assessment_experience": "없음 / None",
+    "standards_experience": "있음 / Yes",
+    "eligibility_confirmed": true,
+    "independence_confirmed": true
+  },
+  "original_rankings": [
+    {
+      "display_id": "V051",
+      "card_id": "PHYSBENCH-REF-0105",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "2",
+      "comment": ""
+    },
+    {
+      "display_id": "V154",
+      "card_id": "PHYSRISK-REF-0026",
+      "candidate_a": "S3.1",
+      "candidate_b": "S3.7",
+      "reference_assignment": "S3.1",
+      "original_selected_l3": "S3.1",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V058",
+      "card_id": "PHYSRISK-REF-0013",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": "a는 b에 속함"
+    },
+    {
+      "display_id": "V110",
+      "card_id": "PHYSBENCH-REF-0043",
+      "candidate_a": "I3.3",
+      "candidate_b": "I3.4",
+      "reference_assignment": "I3.3",
+      "original_selected_l3": "I3.4",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V137",
+      "card_id": "PHYSBENCH-REF-0065",
+      "candidate_a": "I3.7",
+      "candidate_b": "I3.6",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.6",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V006",
+      "card_id": "PHYSBENCH-REF-0039",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.4",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.4",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V010",
+      "card_id": "PHYSBENCH-REF-0052",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.4",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.1",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V093",
+      "card_id": "PHYSBENCH-REF-0018",
+      "candidate_a": "I3.3",
+      "candidate_b": "I3.1",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.1",
+      "confidence": "4",
+      "comment": "모델이 언어로 유해한 물리적 행동을 무해한 작업으로 재해석해 실행하는 위험입니다. -> 표현이 어색함"
+    },
+    {
+      "display_id": "V059",
+      "card_id": "PHYSRISK-REF-0014",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V087",
+      "card_id": "PHYSBENCH-REF-0098",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.5",
+      "original_selected_l3": "P3.5",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V092",
+      "card_id": "PHYSBENCH-REF-0017",
+      "candidate_a": "I3.3",
+      "candidate_b": "I3.1",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.1",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V070",
+      "card_id": "PHYSRISK-REF-0037",
+      "candidate_a": "P3.4",
+      "candidate_b": "P3.3",
+      "reference_assignment": "P3.3",
+      "original_selected_l3": "P3.3",
+      "confidence": "1",
+      "comment": "둘다 아님(제안 : 신설된 L3_에너지 소비 및 환경 오염)"
+    },
+    {
+      "display_id": "V140",
+      "card_id": "PHYSBENCH-REF-0112",
+      "candidate_a": "I3.8",
+      "candidate_b": "I3.7",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.7",
+      "confidence": "1",
+      "comment": "둘다 아님 (제안 : 신설L3_공정성)"
+    },
+    {
+      "display_id": "V109",
+      "card_id": "PHYSRISK-REF-0044",
+      "candidate_a": "I3.3",
+      "candidate_b": "I3.2",
+      "reference_assignment": "I3.2",
+      "original_selected_l3": "I3.2",
+      "confidence": "5",
+      "comment": ""
+    },
+    {
+      "display_id": "V180",
+      "card_id": "PHYSRISK-REF-0050",
+      "candidate_a": "S3.5",
+      "candidate_b": "S3.8",
+      "reference_assignment": "S3.8",
+      "original_selected_l3": "S3.8",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V045",
+      "card_id": "PHYSBENCH-REF-0079",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V046",
+      "card_id": "PHYSBENCH-REF-0080",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.1",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.1",
+      "confidence": "3",
+      "comment": "a/b는 다른계위..포함관계?"
+    },
+    {
+      "display_id": "V025",
+      "card_id": "PHYSBENCH-REF-0008",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.5",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V031",
+      "card_id": "PHYSBENCH-REF-0015",
+      "candidate_a": "P3.3",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "1",
+      "comment": "둘다 아님 설계결함?"
+    },
+    {
+      "display_id": "V171",
+      "card_id": "PHYSBENCH-REF-0113",
+      "candidate_a": "S3.6",
+      "candidate_b": "S3.7",
+      "reference_assignment": "S3.6",
+      "original_selected_l3": "S3.6",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V102",
+      "card_id": "PHYSBENCH-REF-0095",
+      "candidate_a": "I3.3",
+      "candidate_b": "I3.1",
+      "reference_assignment": "I3.1",
+      "original_selected_l3": "I3.1",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V118",
+      "card_id": "PHYSBENCH-REF-0089",
+      "candidate_a": "I3.4",
+      "candidate_b": "I3.5",
+      "reference_assignment": "I3.5",
+      "original_selected_l3": "I3.4",
+      "confidence": "3",
+      "comment": "둘다 아닌 것 같음"
+    },
+    {
+      "display_id": "V174",
+      "card_id": "PHYSKR-REF-016",
+      "candidate_a": "S3.6",
+      "candidate_b": "S3.4",
+      "reference_assignment": "S3.6",
+      "original_selected_l3": "S3.6",
+      "confidence": "1",
+      "comment": "둘다 아닌것같음 & 이중규제 충돌이 어떤 상황이 있나요?"
+    },
+    {
+      "display_id": "V115",
+      "card_id": "PHYSBENCH-REF-0099",
+      "candidate_a": "I3.4",
+      "candidate_b": "I3.3",
+      "reference_assignment": "I3.4",
+      "original_selected_l3": "I3.4",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V012",
+      "card_id": "PHYSBENCH-REF-0057",
+      "candidate_a": "P3.1",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.1",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V072",
+      "card_id": "PHYSRISK-REF-0038",
+      "candidate_a": "P3.4",
+      "candidate_b": "P3.3",
+      "reference_assignment": "P3.4",
+      "original_selected_l3": "P3.4",
+      "confidence": "4",
+      "comment": ""
+    },
+    {
+      "display_id": "V127",
+      "card_id": "PHYSBENCH-REF-0107",
+      "candidate_a": "I3.6",
+      "candidate_b": "I3.9",
+      "reference_assignment": "I3.6",
+      "original_selected_l3": "I3.6",
+      "confidence": "1",
+      "comment": "둘다아님_ 설계결함"
+    },
+    {
+      "display_id": "V159",
+      "card_id": "PHYSRISK-REF-0036",
+      "candidate_a": "S3.9",
+      "candidate_b": "S3.2",
+      "reference_assignment": "S3.2",
+      "original_selected_l3": "S3.9",
+      "confidence": "3",
+      "comment": ""
+    },
+    {
+      "display_id": "V028",
+      "card_id": "PHYSBENCH-REF-0011",
+      "candidate_a": "P3.5",
+      "candidate_b": "P3.2",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.2",
+      "confidence": "1",
+      "comment": "둘다 아닌 것 같음"
+    },
+    {
+      "display_id": "V084",
+      "card_id": "PHYSBENCH-REF-0062",
+      "candidate_a": "P3.2",
+      "candidate_b": "P3.5",
+      "reference_assignment": "P3.5",
+      "original_selected_l3": "P3.5",
+      "confidence": "1",
+      "comment": "둘다 아닌것같음_ 학습 오류?"
+    }
+  ],
+  "pre_submission_reconsideration": [
+    {
+      "display_id": "V006",
+      "card_id": "PHYSBENCH-REF-0039",
+      "reference_assignment": "P3.1",
+      "original_selected_l3": "P3.4",
+      "original_confidence": "4",
+      "revised_selected_l3": "P3.4",
+      "changed": false
+    },
+    {
+      "display_id": "V137",
+      "card_id": "PHYSBENCH-REF-0065",
+      "reference_assignment": "I3.7",
+      "original_selected_l3": "I3.6",
+      "original_confidence": "4",
+      "revised_selected_l3": "I3.6",
+      "changed": false
+    },
+    {
+      "display_id": "V025",
+      "card_id": "PHYSBENCH-REF-0008",
+      "reference_assignment": "P3.2",
+      "original_selected_l3": "P3.5",
+      "original_confidence": "3",
+      "revised_selected_l3": "P3.5",
+      "changed": false
+    }
+  ]
+}
