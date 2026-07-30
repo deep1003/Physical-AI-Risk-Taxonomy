@@ -33,7 +33,7 @@ jobs:
           rm -rf _site
           mkdir -p _site
           cp index.html technical_report.html technical_report.pdf .nojekyll _site/
-          cp -R assets docs expert-survey _site/
+          cp -R assets docs expert-survey expert-survey-revised _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
